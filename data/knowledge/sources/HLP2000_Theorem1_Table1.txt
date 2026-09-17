@@ -1,0 +1,54 @@
+largest group of rational torsion heretofore known to exist on the Jacobian of a curve of genus 2
+was a group of order 30; for genus-3 curves, the largest group had order 64.
+In this paper we present many explicit families of curves of g enus 2 and 3 whose Jacobians possess
+large rational torsion subgroups. The strategy behind our c onstructions is to take a product of
+elliptic curves, each with large rational torsion, and to ﬁn d a curve whose Jacobian is isogenous to
+the given product. Thus it is no surprise that the groups we li st occur as torsion groups of abelian
+varieties; rather, the point of interest is that they occur a s torsion groups of Jacobian varieties.
+For curves of genus 2, we have the following result:
+Theorem 1. For every abstract groupG listed in the ﬁrst column of Table 1, there exists a family of
+curves over Q of genus 2, parameterized by the rational points on a non-empty Zarisk i-open subset
+of a variety of the type listed in the third column, whose Jaco bians contain a group of rational points
+isomorphic to G.
+When we say that a family is parameterized by the rational poi nts in a non-empty Zariski open
+subset U of a variety X, we mean in particular that the closure of the image of U in the moduli
+space of genus-2 curves is of the same dimension as X. Also, by “positive rank elliptic surface”
+we mean an elliptic surface over P1 with positive rank. Note that a family parameterized by the
+Date: 13 February 1997; revised 19 September 1998.
+1991 Mathematics Subject Classiﬁcation. Primary 14G05; Secondary 11G30, 14H25, 14H45.
+Key words and phrases. Torsion, Jacobian, elliptic diﬀerential.
+The ﬁrst author is supported partially by NSA Young Investig ator Grant MDA904-95-H-1044. The second author
+thanks the Max-Planck-Institut f¨ ur Mathematik of Bonn for its hospitality. The third author is supported by an
+NSF Mathematical Sciences Postdoctoral Research Fellowsh ip. The ﬁnal version of this paper has appeared in Forum
+Math. 12 (2000), 315–364.
+1
+2 EVERETT W. HOWE, FRANCK LEPR ´EVOST, AND BJORN POONEN
+G |G| Parameterizing variety
+Z/20Z 20 P2
+Z/21Z 21 P2
+Z/3Z × Z/9Z 27 P2
+Z/30Z 30 P2
+Z/35Z 35 positive rank elliptic curve
+Z/6Z × Z/6Z 36 P2
+Z/3Z × Z/12Z 36 P2
+Z/40Z 40 positive rank elliptic surface
+Z/45Z 45 positive rank elliptic curve
+Z/2Z × Z/24Z 48 P2
+Z/7Z × Z/7Z 49 P0
+Z/5Z × Z/10Z 50 positive rank elliptic surface
+Z/60Z 60 positive rank elliptic curve
+Z/63Z 63 P0
+Z/8Z × Z/8Z 64 P2
+Z/2Z × Z/4Z × Z/8Z 64 P2
+Z/6Z × Z/12Z 72 positive rank elliptic surface
+Z/2Z × Z/6Z × Z/6Z 72 positive rank elliptic surface
+Z/2Z × Z/2Z × Z/24Z 96 positive rank elliptic curve
+Z/2Z × Z/2Z × Z/4Z × Z/8Z 128 positive rank elliptic surface
+Table 1. Families of curves over Q of genus 2 such that G is contained in the
+torsion subgroup of the Jacobian.
+rational points in a non-empty open subset of P0 consists of a single curve. We will often refer to
+families parameterized by P1 and P2 as 1- and 2-parameter families.
+A similar table expresses our results for curves of genus 3.
+Theorem 2. For every abstract groupG listed in the ﬁrst column of Table 2, there exists a family of
+curves over Q of genus 3, parameterized by the rational points on a non-empty Zarisk i-open subset
+of a variety of the type listed in the third column, whose Jaco bians contain a group of rational

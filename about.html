@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="Conventions, certificates and sources of the census of rational torsion subgroups of genus 2 Jacobians over Q.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="about">
+<main>
+  <h2>About the census</h2>
+  <p>This site keeps a verified list of the finite abelian groups known to occur as the rational torsion subgroup
+    <span class="m">J(ℚ)<sub>tors</sub></span> of the Jacobian <span class="m">J</span> of a genus 2 curve over <span class="m">ℚ</span>, with a certified
+    example for each group in each of three classes of Jacobians. It is maintained by Filip Najman (University of Zagreb); the data, the
+    verification code and every certificate live in the GitHub organisation <a href="https://github.com/Genus-2-torsion">Genus-2-torsion</a>.
+    It is seeded with Tables 1 and 2 of Balakrishnan–Najman–Shnidman–Sutherland, <a href="https://arxiv.org/abs/2608.28543">Rational torsion on
+    simple genus two Jacobians</a> (2026), taken from the machine-readable tables of its
+    <a href="https://github.com/AndrewVSutherland/Genus2Torsion">certification repository</a>. Contributions of new curves are welcome — see
+    <a href="submit.html">submit a curve</a>.</p>
+
+  <h3>Conventions</h3>
+  <dl class="facts">
+    <dt>the curve</dt>
+    <dd>A smooth projective curve <span class="m">X</span> of genus 2 over <span class="m">ℚ</span>, given by an affine model
+      <span class="m">y² + h(x)y = f(x)</span> with <span class="m">deg f ≤ 6</span>, <span class="m">deg h ≤ 3</span>. Curves are recorded up to isomorphism
+      over <span class="m">ℚ</span>; the verifier works on the even model <span class="m">y² = 4f + h²</span>, made integral, and records the reduced minimal
+      Weierstrass model and the conductor when Magma can factor the discriminant quickly. The conductor exponent at 2 is computed by Magma with Ogg's
+      formula when <span class="m">v₂(Δ) ≥ 12</span>, without a correctness guarantee; this is flagged on the curve's page. Odd exponents are rigorous.</dd>
+    <dt>the group</dt>
+    <dd><span class="m">J(ℚ)<sub>tors</sub></span>, written as a list of invariant factors <span class="m">[n₁, …, n_r] = ℤ/n₁ ⊕ … ⊕ ℤ/n_r</span> with
+      <span class="m">n₁ | … | n_r</span>, <span class="m">[ ]</span> for the trivial group, as in the paper. The groups are listed in the paper's order:
+      by number of invariant factors, then lexicographically.</dd>
+    <dt>the three classes</dt>
+    <dd>Every curve is placed in exactly one of: <b>geometrically simple</b> (<span class="m">J</span> is isogenous to a product of elliptic curves over
+      no extension of <span class="m">ℚ</span>); <b>split over ℚ</b> (<span class="m">J</span> is isogenous over <span class="m">ℚ</span> to a product of two
+      elliptic curves over <span class="m">ℚ</span>); <b>simple over ℚ but split over ℚ̄</b> (for instance the Weil restriction of an elliptic curve over a
+      quadratic field, or <span class="m">J₁(13)</span>). The paper's Table 1 is the first class, its Table 2 the union of the other two. A curve enters a
+      class only with a certificate; otherwise it is listed as "class not certified", with the evidence.</dd>
+    <dt>one example per group and class</dt>
+    <dd>The home page shows, for each group and class, the known curve of smallest conductor; the group page lists all certified curves.
+      A submitted curve isomorphic over <span class="m">ℚ</span> to a census curve is rejected as a duplicate; geometrically isomorphic curves
+      (twists) are accepted and cross-referenced.</dd>
+  </dl>
+
+  <h3>How a curve is certified</h3>
+  <p>Every submission is verified from scratch by <code>pipeline/magma/verify_lib.m</code> (Magma V2.29) on Mordell.</p>
+  <ol class="steps">
+    <li><b>Torsion.</b> <span class="m">J(ℚ)<sub>tors</sub></span> is computed exactly with Magma's <code>TorsionSubgroup</code> (Stoll's algorithm with the
+      Müller–Stoll height bounds), on the Jacobian of the simplified model, and its generators are recorded in Mumford representation. As a check,
+      its order must divide the gcd of <span class="m">#J(𝔽<sub>p</sub>)</span> over a dozen good primes.</li>
+    <li><b>Geometric simplicity.</b> A good prime <span class="m">p</span> is <em>strict</em> if the characteristic polynomial <span class="m">χ<sub>p</sub></span> of
+      Frobenius on <span class="m">J mod p</span> is irreducible over <span class="m">ℚ</span> and, for a root <span class="m">π</span>, no power
+      <span class="m">πⁿ</span> with <span class="m">n ≤ 12</span> generates a proper subfield of <span class="m">ℚ(π)</span>. One strict prime proves that
+      <span class="m">J</span> is geometrically simple: if <span class="m">J</span> became isogenous to a product over an extension of <span class="m">ℚ</span>, so would
+      its reduction over an extension of <span class="m">𝔽<sub>p</sub></span>, which forces some ratio of Frobenius eigenvalues to be a root of unity; such a root of
+      unity lies in the Galois closure of the quartic CM field <span class="m">ℚ(π)</span>, a field of degree at most 8 with Galois group a subgroup of
+      <span class="m">D₄</span>, so its order divides 12, and the corresponding power of <span class="m">π</span> would show the degree drop. This is the criterion
+      of <code>verify_simple_certificates.m</code> in the paper's repository (Leprévost's root-power criterion). Primes up to 500 are tried.</li>
+    <li><b>Simplicity over ℚ.</b> If <span class="m">J ~ E × E′</span> over <span class="m">ℚ</span> then <span class="m">χ<sub>p</sub> = χ<sub>E,p</sub>·χ<sub>E′,p</sub></span>
+      is reducible at every good prime, so one irreducible <span class="m">χ<sub>p</sub></span> proves that <span class="m">J</span> is simple over <span class="m">ℚ</span>.</li>
+    <li><b>Splitness.</b> A certificate is an explicit geometric object, checked exactly: an involution of the curve over <span class="m">ℚ</span> other than the
+      hyperelliptic one (its quotient has genus 1, so <span class="m">J</span> is split over <span class="m">ℚ</span>); a chain of at most two Richelot
+      <span class="m">(2,2)</span>-isogenies over <span class="m">ℚ</span> (Magma's <code>RichelotIsogenousSurfaces</code>) reaching a product of two elliptic curves
+      over <span class="m">ℚ</span> (split over <span class="m">ℚ</span>) or the Weil restriction of an elliptic curve over a quadratic field (geometrically split);
+      more than one involution in the geometric automorphism group (bielliptic over <span class="m">ℚ̄</span>); such chains over quadratic fields
+      <span class="m">ℚ(√d)</span>; or a map <span class="m">(x, y) ↦ (p/q, y·hh/q²)</span> to a genus 1 curve supplied with the submission (the 18 covers of the
+      paper's Table 2 that are not reached by Richelot isogenies were transcribed from <code>verify_split_certificates.m</code>), verified by the polynomial
+      identity <span class="m">(e₃p³ + e₂p²q + e₁pq² + e₀q³)·q = g·hh²</span> with a nonzero Wronskian. A geometrically split Jacobian is placed in the class
+      "split over ℚ" when a certificate over <span class="m">ℚ</span> exists, and in "simple over ℚ, split over ℚ̄" when it is simple over <span class="m">ℚ</span> by 3.</li>
+    <li><b>Evidence, not proof.</b> When no certificate is found, the curve's page records the <em>split signature</em>: whether every good prime below 200
+      fails the strictness test. A geometrically split Jacobian always fails it, so this is strong evidence of splitness, but finitely many Frobenius
+      polynomials never prove that an endomorphism exists.</li>
+  </ol>
+  <p>Consistency checks abort the verification if both a simplicity and a splitness certificate are found, or if a certificate over <span class="m">ℚ</span>
+    coexists with an irreducible <span class="m">χ<sub>p</sub></span>. The torsion subgroups, geometric simplicity and geometric splitness of all 150 seed curves
+    were re-derived by this pipeline and agree with the paper's tables; the class over <span class="m">ℚ</span> of the split curves is new information
+    computed here.</p>
+
+  <h3>Infinitely many?</h3>
+  <p>For each group and each side of the census (geometrically simple; geometrically split) the census answers "are infinitely many such Jacobians known?"
+    with one of three grades. There is no "finitely many" grade: no group is known to be realised only finitely often, and no group is known not to be
+    realised at all (Question 3 of the paper).</p>
+  <dl class="facts">
+    <dt><span class="inf-badge exact">∞</span></dt>
+    <dd><b>Certified, exact.</b> Infinitely many pairwise non-isomorphic curves in the class whose Jacobian has torsion subgroup <em>exactly</em> the group.
+      On the simple side this follows the three-part standard of the record <a href="#src-Najman2026">Najman 2026 (unpublished)</a>:
+      (L1) a family over a rational base with a <em>marked</em> subgroup isomorphic to <span class="m">G</span> over the function field and one fiber with torsion exactly
+      <span class="m">G</span> (excess torsion being a closed condition, this makes the generic torsion exact); (L2) one fiber with a strict prime, which propagates
+      geometric simplicity to the generic fiber; (L3) fibers with pairwise distinct G2-invariants, so the family is not a family of twists. The families and
+      their fiber certificates are listed in the record (copied to <code>data/knowledge/sources/census_infinity_record.md</code>, with the Magma scripts in the
+      private repository it comes from); the trivial group was certified for this site (<code>trivial_torsion_family.log</code>). The literature source of a family is cited next to the record.</dd>
+    <dt><span class="inf-badge family">∞ ⊇</span></dt>
+    <dd><b>Family with containment.</b> A positive-dimensional family (infinitely many members in moduli) of curves in the class whose Jacobians have torsion
+      <em>containing</em> the group is proven in the cited source: the paper's Theorem 3.3 for <span class="m">[2,2,2,12]</span>, Leprévost's families with a class of
+      order 13, 17, 19 on the simple side; Theorem 1 / Table 1 of Howe–Leprévost–Poonen (2000) on the split side (their Jacobians are isogenous to products of
+      elliptic curves by construction). Whether infinitely many members have torsion exactly the group (and, on the simple side, are geometrically simple) is open.</dd>
+    <dt><span class="inf-badge open">?</span></dt>
+    <dd><b>Open.</b> No positive-dimensional construction is recorded; the group page gives the reason when the record has one (e.g. only isolated examples,
+      or every known example has real multiplication). On the split side, only Howe–Leprévost–Poonen's families are recorded so far; small groups certainly occur
+      infinitely often for split Jacobians, but nothing on this site is asserted without a source.</dd>
+  </dl>
+
+  <h3>LMFDB links</h3>
+  <p>A curve in the production <a href="https://www.lmfdb.org/Genus2Curve/Q/">LMFDB</a> (conductor <span class="m">≤ 10⁶</span>, discriminant
+    <span class="m">≤ 10⁶</span>) is linked by its label, a permalink. A curve of the extended Booker–Sutherland database, available in the
+    <a href="https://alpha.lmfdb.org/Genus2Curve/Q/">alpha LMFDB</a>, is linked by its equation (the LMFDB looks it up, matching any isomorphic model),
+    because labels there are not yet permanent; the snapshot label of the paper (2026-08) is kept as provenance. Other curves get a link that searches the
+    LMFDB by equation.</p>
+
+  <h3>Sources</h3>
+  <ul class="sources" id="sources"></ul>
+  <p class="src">Data last built: <span id="generated">…</span>.</p>
+
+  <h3>Workflow and reproducibility</h3>
+  <p>Submissions arrive as GitHub issues (or pull requests). A script on Mordell pulls them, runs the Magma verifier under a time and memory limit
+    (one job at a time), writes one JSON certificate per accepted curve to <code>data/curves/</code> together with the Magma logs in <code>data/logs/</code>,
+    rebuilds <code>data/groups.json</code> and <code>data/curves.json</code>, and pushes to GitHub, where this page is served. Each certificate records the
+    Magma version, the CPU time, the SHA-256 of the verification code, the strict prime and Frobenius polynomial or the splitness certificate, the
+    generators of the torsion subgroup, and a Magma snippet that reproduces the torsion computation. The whole repository, including rejected submissions
+    with the reason, is public.</p>
+
+  <h3>How to cite</h3>
+  <p>Please cite the original reference of a curve (given on its page) and, for the census itself, the repository
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io">Genus-2-torsion/Genus-2-torsion.github.io</a> together with
+    Balakrishnan–Najman–Shnidman–Sutherland, <a href="https://arxiv.org/abs/2608.28543">Rational torsion on simple genus two Jacobians</a>, arXiv:2608.28543.
+    The design of this site follows the census of <a href="https://x1mn-sporadic.github.io/">sporadic points on X₁(m,n)</a> and the
+    <a href="https://elliptic-rank.icarm.cloud/">Elliptic Curve Rank Leaderboard</a>.</p>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

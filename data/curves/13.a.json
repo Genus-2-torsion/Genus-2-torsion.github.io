@@ -1,0 +1,201 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "13.a",
+  "group": [
+    13
+  ],
+  "group_key": "13",
+  "group_bracket": "[13]",
+  "order": 13,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "0",
+      "0",
+      "-1",
+      "-1"
+    ],
+    "h": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "f_str": "-x^3 - x^2",
+    "h_str": "x^3 + x^2 + x + 1",
+    "g": [
+      "1",
+      "2",
+      "-1",
+      "0",
+      "3",
+      "2",
+      "1"
+    ],
+    "g_str": "x^6 + 2*x^5 + 3*x^4 - x^2 + 2*x + 1",
+    "g_scale": "1",
+    "discriminant": "1429504",
+    "discriminant_digits": 7,
+    "igusa_clebsch": [
+      "-32",
+      "3328",
+      "-93696",
+      "1429504"
+    ],
+    "g2_invariants": [
+      "-1024/349",
+      "2176/349",
+      "1984/349"
+    ],
+    "rational_weierstrass_points": 1,
+    "minimal_model": {
+      "f": [
+        "0",
+        "0",
+        "-1",
+        "-1"
+      ],
+      "h": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "349",
+    "minimal_discriminant_factored": "349",
+    "conductor": "349",
+    "conductor_factored": "349",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "349.a.349.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/349/a/349/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      13
+    ],
+    "order": 13,
+    "generators": [
+      {
+        "order": 13,
+        "mumford": [
+          "x + 1",
+          "x^3 + 1",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 13,
+    "point_count_primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41
+    ],
+    "claimed": [
+      13
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 3,
+    "chi": "T^4 + T^3 - T^2 + 3*T + 9",
+    "primes_tried_below": 500,
+    "admissible_primes": 1,
+    "reducible_chi": 0
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 + T^3 - T^2 + 3*T + 9"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 45,
+      "reducible_chi": 4
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Flynn 1990; Leprévost 1991 (order 13)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 13 (source: \\cite{Flynn1990,Leprevost1991a})",
+  "sources": [
+    "Flynn1990",
+    "Leprevost1991a"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "0",
+      "-1",
+      "-1"
+    ],
+    "h": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      13
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": "349.a.349.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-013",
+    "file": "table1.txt",
+    "line": 19,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:52:01 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.230000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/13.a.log",
+    "conductor_log": "data/logs/13.a.conductor.log",
+    "conductor_cputime_seconds": 0.1
+  }
+}

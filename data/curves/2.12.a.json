@@ -1,0 +1,214 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.12.a",
+  "group": [
+    2,
+    12
+  ],
+  "group_key": "2.12",
+  "group_bracket": "[2,12]",
+  "order": 24,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "0",
+      "-1",
+      "2",
+      "14",
+      "-8",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "x^5 - 8*x^4 + 14*x^3 + 2*x^2 - x",
+    "h_str": "x^2 + x",
+    "g": [
+      "0",
+      "-4",
+      "9",
+      "58",
+      "-31",
+      "4"
+    ],
+    "g_str": "4*x^5 - 31*x^4 + 58*x^3 + 9*x^2 - 4*x",
+    "g_scale": "1",
+    "discriminant": "21067776",
+    "discriminant_digits": 8,
+    "igusa_clebsch": [
+      "24008",
+      "820996",
+      "6480164616",
+      "337084416"
+    ],
+    "g2_invariants": [
+      "243405270090015001/82296",
+      "4955375073324349/41148",
+      "65790314289164/10287"
+    ],
+    "rational_weierstrass_points": 3,
+    "minimal_model": {
+      "f": [
+        "0",
+        "-1",
+        "2",
+        "14",
+        "-8",
+        "1"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "82296",
+    "minimal_discriminant_factored": "2^3 * 3^4 * 127",
+    "conductor": "762",
+    "conductor_factored": "2 * 3 * 127",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "762.a.82296.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/762/a/82296/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      12
+    ],
+    "order": 24,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 4*x",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 12,
+        "mumford": [
+          "x^2 - 5*x + 4",
+          "-2*x + 8",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 24,
+    "point_count_primes": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "claimed": [
+      2,
+      12
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 7,
+    "chi": "T^4 - T^3 + 6*T^2 - 7*T + 49",
+    "primes_tried_below": 500,
+    "admissible_primes": 2,
+    "reducible_chi": 0
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 5,
+    "chi": "T^4 + 3*T^3 + 4*T^2 + 15*T + 25"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 43,
+      "reducible_chi": 22
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 43 (source: \\cite{BSSVY})",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "-1",
+      "2",
+      "14",
+      "-8",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      12
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": "762.a.82296.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-043",
+    "file": "table1.txt",
+    "line": 49,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:52:28 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.240000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/2.12.a.log",
+    "conductor_log": "data/logs/2.12.a.conductor.log",
+    "conductor_cputime_seconds": 0.12
+  }
+}

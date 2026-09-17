@@ -1,0 +1,67 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      9,
+      -9,
+      -1,
+      -5,
+      5,
+      -1,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    36
+  ],
+  "class": "split",
+  "lmfdb_label": "4860.f.1",
+  "sources": [
+    "PP2012b",
+    "Platonov2014"
+  ],
+  "rm": false,
+  "discoverer": "Platonov–Petrunin 2012b; Platonov 2014",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 26 (source: \\cite{PP2012b,Platonov2014})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "COVER:8",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-026",
+    "file": "table2.txt",
+    "line": 32,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "cover": {
+    "field": "",
+    "cremona": "90c3",
+    "cubic": [],
+    "p": [
+      "-1890",
+      "1890",
+      "1647/2",
+      "-549"
+    ],
+    "q": [
+      "-6",
+      "6",
+      "-3/2",
+      "1"
+    ],
+    "hh": [
+      "46656",
+      "-69984",
+      "31104"
+    ],
+    "note": "degree-3 map to the elliptic curve 90c3 over Q [Genus2Torsion/verify_split_certificates.m, cover 8]"
+  }
+}

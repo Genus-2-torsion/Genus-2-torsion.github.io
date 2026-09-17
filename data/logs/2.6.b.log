@@ -1,0 +1,7 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x^2 + x) y = -2*x^5 + x^4 - 3*x^3 - 14*x^2 + 13*x - 23; working model y^2 = -8*x^5 + 5*x^4 - 10*x^3 - 55*x^2 + 52*x - 92
+[0.170000 s] J(Q)_tors = [ 2, 6 ] (0.160000 s)
+[0.780000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
+[0.780000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 5/2*z : 1/8*x^3 + 3/4*x^2*z + 3/2*x*z^2 + 27/8*y + 35/8*z^3 : -1/2*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
+[0.780000 s] class: qsplit
+[0.850000 s] VERIFY_DONE

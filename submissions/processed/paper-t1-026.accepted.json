@@ -1,0 +1,41 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      0,
+      0,
+      -3,
+      -3,
+      -3,
+      -12
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "group": [
+    26
+  ],
+  "class": "simple",
+  "lmfdb_label": "11016.g.1",
+  "sources": [
+    "Leprevost1993"
+  ],
+  "rm": false,
+  "discoverer": "Leprévost 1993",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 26 (source: \\cite{Leprevost1993})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "",
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-026",
+    "file": "table1.txt",
+    "line": 32,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  }
+}

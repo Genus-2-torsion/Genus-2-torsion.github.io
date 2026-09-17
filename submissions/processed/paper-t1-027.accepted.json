@@ -1,0 +1,42 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      0,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    [
+      1,
+      0,
+      0,
+      1
+    ]
+  ],
+  "group": [
+    27
+  ],
+  "class": "simple",
+  "lmfdb_label": "604.a.9664.2",
+  "sources": [
+    "Howe2015"
+  ],
+  "rm": false,
+  "discoverer": "Howe 2015",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 27 (source: \\cite{Howe2015})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "",
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-027",
+    "file": "table1.txt",
+    "line": 33,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  }
+}

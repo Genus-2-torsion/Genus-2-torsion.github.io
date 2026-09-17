@@ -1,0 +1,7 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x^2 + x) y = x^6 - 3*x^5 + 15*x^4 - 20*x^3 + 42*x^2 - 18*x; working model y^2 = 4*x^6 - 12*x^5 + 61*x^4 - 78*x^3 + 169*x^2 - 72*x
+[0.230000 s] J(Q)_tors = [ 2, 20 ] (0.220000 s)
+[1.04000 s] no strict prime below 500 (91 admissible primes, 91 with reducible chi)
+[1.23000 s] split over Q: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-125739)u + (62756262) over Q (the elliptic curve 462f1), (x,y) -> (p/q, y*hh/q^2) with p = -501*x^3 + 2505/2*x^2 - 654*x + 4509/2, q = x^3 - 5/2*x^2 + 10*x - 9/2, hh = 26136*x^2 - 58806*x + 58806; degree-3 map to the elliptic curve 462f1 over Q [Genus2Torsion/verify_split_certificates.m, cover 14]
+[1.24000 s] class: qsplit
+[1.35000 s] VERIFY_DONE

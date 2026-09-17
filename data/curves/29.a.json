@@ -1,0 +1,204 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "29.a",
+  "group": [
+    29
+  ],
+  "group_key": "29",
+  "group_bracket": "[29]",
+  "order": 29,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "0",
+      "0",
+      "-1",
+      "2",
+      "0",
+      "-2",
+      "1"
+    ],
+    "h": [
+      "1",
+      "1"
+    ],
+    "f_str": "x^6 - 2*x^5 + 2*x^3 - x^2",
+    "h_str": "x + 1",
+    "g": [
+      "1",
+      "2",
+      "-3",
+      "8",
+      "0",
+      "-8",
+      "4"
+    ],
+    "g_str": "4*x^6 - 8*x^5 + 8*x^3 - 3*x^2 + 2*x + 1",
+    "g_scale": "1",
+    "discriminant": "4093640704",
+    "discriminant_digits": 10,
+    "igusa_clebsch": [
+      "-1216",
+      "64768",
+      "-35181568",
+      "4093640704"
+    ],
+    "g2_invariants": [
+      "-4952198/61",
+      "-61731/61",
+      "551969/976"
+    ],
+    "rational_weierstrass_points": 1,
+    "minimal_model": {
+      "f": [
+        "1",
+        "2",
+        "0",
+        "-2",
+        "-1",
+        "-1"
+      ],
+      "h": [
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "999424",
+    "minimal_discriminant_factored": "2^14 * 61",
+    "conductor": "976",
+    "conductor_factored": "2^4 * 61",
+    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "976.a.999424.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/976/a/999424/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      29
+    ],
+    "order": 29,
+    "generators": [
+      {
+        "order": 29,
+        "mumford": [
+          "x^2 - x",
+          "3*x - 1",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 29,
+    "point_count_primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41
+    ],
+    "claimed": [
+      29
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 3,
+    "chi": "T^4 + 3*T^3 + 7*T^2 + 9*T + 9",
+    "primes_tried_below": 500,
+    "admissible_primes": 1,
+    "reducible_chi": 0
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 + 3*T^3 + 7*T^2 + 9*T + 9"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 44,
+      "reducible_chi": 3
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Leprévost 1993",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 29 (source: \\cite{Leprevost1993})",
+  "sources": [
+    "Leprevost1993"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "0",
+      "-1",
+      "2",
+      "0",
+      "-2",
+      "1"
+    ],
+    "h": [
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      29
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": "976.a.999424.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-029",
+    "file": "table1.txt",
+    "line": 35,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:52:18 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.310000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/29.a.log",
+    "conductor_log": "data/logs/29.a.conductor.log",
+    "conductor_cputime_seconds": 0.21
+  }
+}

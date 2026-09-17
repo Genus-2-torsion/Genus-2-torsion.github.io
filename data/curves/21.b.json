@@ -1,0 +1,234 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "21.b",
+  "group": [
+    21
+  ],
+  "group_key": "21",
+  "group_bracket": "[21]",
+  "order": 21,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "0",
+      "0",
+      "1",
+      "2",
+      "2",
+      "1"
+    ],
+    "h": [
+      "1",
+      "1",
+      "0",
+      "1"
+    ],
+    "f_str": "x^5 + 2*x^4 + 2*x^3 + x^2",
+    "h_str": "x^3 + x + 1",
+    "g": [
+      "1",
+      "2",
+      "5",
+      "10",
+      "10",
+      "4",
+      "1"
+    ],
+    "g_str": "x^6 + 4*x^5 + 10*x^4 + 10*x^3 + 5*x^2 + 2*x + 1",
+    "g_scale": "1",
+    "discriminant": "-2654208",
+    "discriminant_digits": 7,
+    "igusa_clebsch": [
+      "-120",
+      "3780",
+      "-18360",
+      "-2654208"
+    ],
+    "g2_invariants": [
+      "9375/8",
+      "-625/4",
+      "875/18"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "0",
+        "0",
+        "1",
+        "2",
+        "2",
+        "1"
+      ],
+      "h": [
+        "1",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-648",
+    "minimal_discriminant_factored": "-1 * 2^3 * 3^4",
+    "conductor": "324",
+    "conductor_factored": "2^2 * 3^4",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "324.a.648.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/324/a/648/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      21
+    ],
+    "order": 21,
+    "generators": [
+      {
+        "order": 21,
+        "mumford": [
+          "x^2 + x",
+          "-2*x - 1",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 21,
+    "point_count_primes": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "claimed": [
+      21
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 93,
+    "reducible_chi": 34
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 5,
+    "chi": "T^4 - 5*T^2 + 25"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "cover",
+      "over": "X^3 - 5175/4*X^2 + 50625/8*X - 421875/64",
+      "detail": "a nonconstant map of degree 2 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/795000*(4192*w^2 + 353700*w - 245625)) over X^3 - 5175/4*X^2 + 50625/8*X - 421875/64, (x,y) -> (p/q, y*hh/q^2) with p = 1/397500*(-16*w^2 + 64900*w + 50625)*x^2 + 1/99375*(24*w^2 - 15200*w + 73125)*x + 1/397500*(64*w^2 + 16000*w + 95625), q = x^2 + 1/298125*(256*w^2 - 328200*w + 978750)*x + 1/59625*(16*w^2 - 19320*w + 68625), hh = 1/33125*(-64*w^2 - 5400*w + 3750)*x + 1/19875*(-224*w^2 + 3360*w - 6750); degree-2 map to an elliptic curve over the field defined by X^3-5175/4*X^2+50625/8*X-421875/64; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/795000*(-4192*w^2-353700*w+245625) [Genus2Torsion/verify_split_certificates.m, cover 2]"
+    },
+    "cover_submitted": true,
+    "cover_accepted": true,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 44,
+      "reducible_chi": 20
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Ogg 1973",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 19 (source: \\cite{Ogg1973})",
+  "sources": [
+    "Ogg1973"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "0",
+      "1",
+      "2",
+      "2",
+      "1"
+    ],
+    "h": [
+      "1",
+      "1",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      21
+    ],
+    "claimed_class": "split",
+    "cover": {
+      "field": "X^3-5175/4*X^2+50625/8*X-421875/64",
+      "cremona": "",
+      "cubic": [
+        "4",
+        "0",
+        "-(w)",
+        "-(1/795000*(-4192*w^2-353700*w+245625))"
+      ],
+      "p": [
+        "1/397500*(64*w^2+16000*w+95625)",
+        "1/99375*(24*w^2-15200*w+73125)",
+        "1/397500*(-16*w^2+64900*w+50625)"
+      ],
+      "q": [
+        "1/59625*(16*w^2-19320*w+68625)",
+        "1/298125*(256*w^2-328200*w+978750)",
+        "1"
+      ],
+      "hh": [
+        "1/19875*(-224*w^2+3360*w-6750)",
+        "1/33125*(-64*w^2-5400*w+3750)"
+      ],
+      "note": "degree-2 map to an elliptic curve over the field defined by X^3-5175/4*X^2+50625/8*X-421875/64; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/795000*(-4192*w^2-353700*w+245625) [Genus2Torsion/verify_split_certificates.m, cover 2]"
+    },
+    "lmfdb_label_given": "324.a.648.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-019",
+    "file": "table2.txt",
+    "line": 25,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:55:53 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.22000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/21.b.log",
+    "conductor_log": "data/logs/21.b.conductor.log",
+    "conductor_cputime_seconds": 0.22
+  }
+}

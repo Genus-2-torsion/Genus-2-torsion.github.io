@@ -1,0 +1,71 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      0,
+      4,
+      20,
+      17,
+      9,
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "group": [
+    27
+  ],
+  "class": "split",
+  "lmfdb_label": "7776.e.2",
+  "sources": [
+    "Leprevost1995"
+  ],
+  "rm": false,
+  "discoverer": "Leprévost 1995",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 22 (source: \\cite{Leprevost1995})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "COVER:12",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-022",
+    "file": "table2.txt",
+    "line": 28,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "cover": {
+    "field": "X^2+138024*X-1767690864",
+    "cremona": "",
+    "cubic": [
+      "4",
+      "0",
+      "-(w)",
+      "-(93*w-1344276)"
+    ],
+    "p": [
+      "1/10368*(-5*w-438372)",
+      "1/10368*(7*w+1042956)",
+      "1/5184*(13*w-1342332)",
+      "1/648*(-w-4860)"
+    ],
+    "q": [
+      "1/93312*(w+162324)",
+      "1/93312*(5*w+904932)",
+      "1/46656*(-w-69012)",
+      "1"
+    ],
+    "hh": [
+      "1/72*(-w-162324)",
+      "1/72*(-w-208980)",
+      "1/72*(w-70956)",
+      "1/36*(-w+24300)"
+    ],
+    "note": "degree-3 map to an elliptic curve over the field defined by X^2+138024*X-1767690864; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 93*w-1344276 [Genus2Torsion/verify_split_certificates.m, cover 12]"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.18.b",
+  "group": [
+    2,
+    18
+  ],
+  "group_key": "2.18",
+  "group_bracket": "[2,18]",
+  "order": 36,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "36",
+      "66",
+      "12",
+      "-5",
+      "-3",
+      "-3",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "x^6 - 3*x^5 - 3*x^4 - 5*x^3 + 12*x^2 + 66*x + 36",
+    "h_str": "x^2 + x",
+    "g": [
+      "144",
+      "264",
+      "49",
+      "-18",
+      "-11",
+      "-12",
+      "4"
+    ],
+    "g_str": "4*x^6 - 12*x^5 - 11*x^4 - 18*x^3 + 49*x^2 + 264*x + 144",
+    "g_scale": "1",
+    "discriminant": "-429514854361989120",
+    "discriminant_digits": 18,
+    "igusa_clebsch": [
+      "-254392",
+      "536068420",
+      "-82604216222008",
+      "-429514854361989120"
+    ],
+    "g2_invariants": [
+      "32513768825556207758999/104862024990720",
+      "24483098474191432777/2184625520640",
+      "-319478150366747/1685667840"
+    ],
+    "rational_weierstrass_points": 2,
+    "minimal_model": {
+      "f": [
+        "36",
+        "66",
+        "12",
+        "-5",
+        "-3",
+        "-3",
+        "1"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-104862024990720",
+    "minimal_discriminant_factored": "-1 * 2^22 * 3^6 * 5 * 19^3",
+    "conductor": "64980",
+    "conductor_factored": "2^2 * 3^2 * 5 * 19^2",
+    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "64980.bo.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B36%2C66%2C12%2C-5%2C-3%2C-3%2C1%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": "64980.bo.1"
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      18
+    ],
+    "order": 36,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + x + 4",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 18,
+        "mumford": [
+          "x^2 - x - 4",
+          "2*x + 8",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 36,
+    "point_count_primes": [
+      7,
+      11,
+      13,
+      17,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53
+    ],
+    "claimed": [
+      2,
+      18
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 91,
+    "reducible_chi": 91
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "cover",
+      "over": "Q",
+      "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-10395)u + (31158) over Q (the elliptic curve 114a1), (x,y) -> (p/q, y*hh/q^2) with p = 147*x^3 - 615/2*x^2 + 156*x - 1656, q = x^3 - 13/2*x^2 + 4*x + 24, hh = 648*x^3 - 648*x^2 - 15552*x + 31104; degree-3 map to the elliptic curve 114a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 15]"
+    },
+    "cover_submitted": true,
+    "cover_accepted": true,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 42,
+      "reducible_chi": 42
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Booker–Sutherland (extended database)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 41 (source: \\cite{BookerSutherland})",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "36",
+      "66",
+      "12",
+      "-5",
+      "-3",
+      "-3",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      18
+    ],
+    "claimed_class": "split",
+    "cover": {
+      "field": "",
+      "cremona": "114a1",
+      "cubic": [],
+      "p": [
+        "-1656",
+        "156",
+        "-615/2",
+        "147"
+      ],
+      "q": [
+        "24",
+        "4",
+        "-13/2",
+        "1"
+      ],
+      "hh": [
+        "31104",
+        "-15552",
+        "-648",
+        "648"
+      ],
+      "note": "degree-3 map to the elliptic curve 114a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 15]"
+    },
+    "lmfdb_label_given": "64980.bo.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-041",
+    "file": "table2.txt",
+    "line": 47,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:57:25 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.10000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/2.18.b.log",
+    "conductor_log": "data/logs/2.18.b.conductor.log",
+    "conductor_cputime_seconds": 0.37
+  }
+}

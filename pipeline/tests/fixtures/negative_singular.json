@@ -1,0 +1,8 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^6 - 2*x^3 + 1",
+  "h": "0",
+  "group": [2],
+  "submitter": "test fixture",
+  "notes": "negative control: (x^3 - 1)^2 is not squarefree, the model is singular; must be REJECTED"
+}

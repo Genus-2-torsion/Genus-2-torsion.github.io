@@ -1,0 +1,45 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      18,
+      -54,
+      9,
+      71,
+      -40,
+      -5,
+      25
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    2,
+    6,
+    6
+  ],
+  "class": "split",
+  "lmfdb_label": "132300.eo.2",
+  "sources": [
+    "HLP2000"
+  ],
+  "rm": false,
+  "discoverer": "Howe–Leprévost–Poonen 2000",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 71 (source: \\cite{HLP2000})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "R1",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-071",
+    "file": "table2.txt",
+    "line": 77,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  }
+}

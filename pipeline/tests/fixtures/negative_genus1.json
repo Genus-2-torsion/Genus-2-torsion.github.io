@@ -1,0 +1,8 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^3 + 1",
+  "h": "0",
+  "group": [],
+  "submitter": "test fixture",
+  "notes": "negative control: a genus 1 curve; must be REJECTED"
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      4,
+      10,
+      -4,
+      -1,
+      5,
+      -3,
+      1
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    28
+  ],
+  "class": "split",
+  "lmfdb_label": "4732.c.1",
+  "sources": [
+    "PZP2013",
+    "Howe2015"
+  ],
+  "rm": false,
+  "discoverer": "Platonov–Zhgun–Petrunin 2013; Howe 2015",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 23 (source: \\cite{PZP2013,Howe2015})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "COVER:9",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-023",
+    "file": "table2.txt",
+    "line": 29,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "cover": {
+    "field": "",
+    "cremona": "182a1",
+    "cubic": [],
+    "p": [
+      "891",
+      "2853",
+      "-891",
+      "891"
+    ],
+    "q": [
+      "1",
+      "-1",
+      "-1",
+      "1"
+    ],
+    "hh": [
+      "-11232",
+      "0",
+      "-11232",
+      "22464"
+    ],
+    "note": "degree-3 map to the elliptic curve 182a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 9]"
+  }
+}

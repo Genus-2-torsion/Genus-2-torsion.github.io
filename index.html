@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="A census of the finite abelian groups known to occur as the rational torsion subgroup J(Q)_tors of the Jacobian of a genus 2 curve over Q, for geometrically simple and for split Jacobians, with the known examples, LMFDB links, and what is known about infinitely many realisations; every curve verified with Magma.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="index">
+<main>
+  <section class="hero">
+    <p class="lede">Which finite abelian groups occur as <span class="m">J(ℚ)<sub>tors</sub></span> for the Jacobian <span class="m">J</span> of a genus 2 curve over <span class="m">ℚ</span>?</p>
+    <p class="sub">Nobody knows the full list — unlike Mazur's theorem for elliptic curves, not even a conjectural one. This census records every group
+      for which a curve is known, separately for <b>geometrically simple</b> Jacobians (isogenous over <span class="m">ℚ̄</span> to no product of elliptic curves),
+      Jacobians <b>split over ℚ</b>, and Jacobians that are <b>simple over ℚ but split over ℚ̄</b>; it re-verifies every curve with Magma
+      (exact torsion subgroup, and a certificate of simplicity or splitness), links it to the LMFDB, and says for each group whether
+      infinitely many such Jacobians are known. Seeded with the tables of
+      <a href="https://arxiv.org/abs/2608.28543">Balakrishnan–Najman–Shnidman–Sutherland</a>.
+      <a href="submit.html">Submit a curve →</a></p>
+  </section>
+
+  <div class="stats">
+    <span><b id="stat-groups">…</b> groups</span>
+    <span><b id="stat-curves">…</b> certified curves</span>
+    <span><b id="stat-simple">…</b> groups for geometrically simple J</span>
+    <span><b id="stat-qsplit">…</b> for J split over ℚ</span>
+    <span><b id="stat-gsplit">…</b> for J simple over ℚ, split over ℚ̄</span>
+    <span><b id="stat-inf">…</b> groups with certified infinitely many simple J</span>
+    <span id="pending"></span>
+    <span class="muted">data built <span id="stat-generated">…</span></span>
+  </div>
+
+  <h2>The groups</h2>
+  <p>One row per torsion group <span class="m">[n₁, …, n_r] = ℤ/n₁ ⊕ … ⊕ ℤ/n_r</span>, in the order of the paper's tables (by number of invariant factors, then lexicographically).
+    Each class shows the known curve of smallest conductor (click it for the certificate, click the group for all curves and for what is known).
+    The <b>∞?</b> columns say whether infinitely many Jacobians of that kind with this torsion are known — hover for the reason; see <a href="about.html">about</a> for the conventions.</p>
+  <div class="controls">
+    <label><input type="checkbox" id="cls-simple" checked> geometrically simple</label>
+    <label><input type="checkbox" id="cls-qsplit" checked> split over ℚ</label>
+    <label><input type="checkbox" id="cls-gsplit" checked> simple over ℚ, split over ℚ̄</label>
+    <label><input type="checkbox" id="only-all"> only groups known in every checked class</label>
+    <label><input type="checkbox" id="show-inf" checked> show ∞? columns</label>
+    <label>sort: <select id="sort"><option value="table">as in the paper</option><option value="order">by order of the group</option></select></label>
+  </div>
+  <div class="legend">
+    <span><span class="inf-badge exact">∞</span> certified: infinitely many with exactly this group</span>
+    <span><span class="inf-badge family">∞ ⊇</span> a family with torsion containing the group is proven</span>
+    <span><span class="inf-badge open">?</span> open</span>
+    <span><a class="lmfdb" href="#" onclick="return false">label</a> LMFDB home page · <a class="lmfdb alpha" href="#" onclick="return false">alpha</a> extended database, linked by equation · <a class="lmfdb jump" href="#" onclick="return false">LMFDB?</a> not found, search by equation</span>
+  </div>
+  <div class="table-wrap">
+    <table class="data" id="groups">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

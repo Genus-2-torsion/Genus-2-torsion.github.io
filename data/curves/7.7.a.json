@@ -1,0 +1,214 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "7.7.a",
+  "group": [
+    7,
+    7
+  ],
+  "group_key": "7.7",
+  "group_bracket": "[7,7]",
+  "order": 49,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "869675859",
+      "0",
+      "3232987",
+      "0",
+      "3025",
+      "0",
+      "1"
+    ],
+    "h": [
+      "0"
+    ],
+    "f_str": "x^6 + 3025*x^4 + 3232987*x^2 + 869675859",
+    "h_str": "0",
+    "g": [
+      "3478703436",
+      "0",
+      "12931948",
+      "0",
+      "12100",
+      "0",
+      "4"
+    ],
+    "g_str": "4*x^6 + 12100*x^4 + 12931948*x^2 + 3478703436",
+    "g_scale": "1",
+    "discriminant": "-576386630760014045574471303713805712755962612469989376",
+    "discriminant_digits": 54,
+    "igusa_clebsch": [
+      "-5843180431360",
+      "25272297076858273398784",
+      "-35073570663235318199727678451351552",
+      "-576386630760014045574471303713805712755962612469989376"
+    ],
+    "g2_invariants": [
+      "189058724640202566877858229103396357889920153125/127983541711177216798505385789443014656",
+      "2190328392680325235597490832053495905479625/36012392588703096422498086114295808",
+      "280844873092297136402204005615675/82817965374161539011969024"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "13639248",
+        "202440",
+        "203197",
+        "1515",
+        "760",
+        "3",
+        "1"
+      ],
+      "h": []
+    },
+    "minimal_discriminant": "-131055146712245470001669515048389647007744",
+    "minimal_discriminant_factored": "-1 * 2^38 * 3^21 * 7^14 * 13^5 * 181",
+    "conductor": "56580108189696",
+    "conductor_factored": "2^22 * 3^2 * 7^2 * 13^2 * 181",
+    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B869675859%2C0%2C3232987%2C0%2C3025%2C0%2C1%5D%2C%5B0%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      7,
+      7
+    ],
+    "order": 49,
+    "generators": [
+      {
+        "order": 7,
+        "mumford": [
+          "x^2 + 91767/185",
+          "-87808/185*x",
+          "2"
+        ]
+      },
+      {
+        "order": 7,
+        "mumford": [
+          "x^2 - 337",
+          "48384",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 49,
+    "point_count_primes": [
+      5,
+      11,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53
+    ],
+    "claimed": [
+      7,
+      7
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 90,
+    "reducible_chi": 90
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "involution",
+      "over": "Q",
+      "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 41,
+      "reducible_chi": 41
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Howe–Leprévost–Poonen 2000",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 59 (source: \\cite{HLP2000})",
+  "sources": [
+    "HLP2000"
+  ],
+  "rm": false,
+  "notes": "HLP sec 3.6 curve / lane8",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "869675859",
+      "0",
+      "3232987",
+      "0",
+      "3025",
+      "0",
+      "1"
+    ],
+    "h": [
+      "0"
+    ],
+    "claimed_group": [
+      7,
+      7
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-059",
+    "file": "table2.txt",
+    "line": 65,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:57:52 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.35000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/7.7.a.log",
+    "conductor_log": "data/logs/7.7.a.conductor.log",
+    "conductor_cputime_seconds": 1.05
+  }
+}

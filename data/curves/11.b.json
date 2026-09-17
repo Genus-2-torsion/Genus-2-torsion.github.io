@@ -1,0 +1,191 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "11.b",
+  "group": [
+    11
+  ],
+  "group_key": "11",
+  "group_bracket": "[11]",
+  "order": 11,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "9471400",
+      "94188680",
+      "99564424",
+      "-65405928",
+      "31412066",
+      "-5109634",
+      "1204142"
+    ],
+    "h": [
+      "0"
+    ],
+    "f_str": "1204142*x^6 - 5109634*x^5 + 31412066*x^4 - 65405928*x^3 + 99564424*x^2 + 94188680*x + 9471400",
+    "h_str": "0",
+    "g": [
+      "37885600",
+      "376754720",
+      "398257696",
+      "-261623712",
+      "125648264",
+      "-20438536",
+      "4816568"
+    ],
+    "g_str": "4816568*x^6 - 20438536*x^5 + 125648264*x^4 - 261623712*x^3 + 398257696*x^2 + 376754720*x + 37885600",
+    "g_scale": "1",
+    "discriminant": "40362481003722871916398943024250359610553144532744438252830720000000000000000000000",
+    "discriminant_digits": 83,
+    "igusa_clebsch": [
+      "-741771862733271040",
+      "68835931289544665408400496200515584",
+      "-11833223631748266633450572454673882552189597519970304",
+      "40362481003722871916398943024250359610553144532744438252830720000000000000000000000"
+    ],
+    "g2_invariants": [
+      "-360191432142940735484084029162709907157/517904210209855242382812500000000",
+      "12026541516488943984249794828813000971571/414323368167884193906250000000000000",
+      "50843593944525540895616548260050688/252882915141530880069732666015625"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": null,
+    "minimal_discriminant": "",
+    "minimal_discriminant_factored": "",
+    "conductor": "",
+    "conductor_factored": "",
+    "conductor_note": "not computed by Magma within the time limit",
+    "conductor_source": ""
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B9471400%2C94188680%2C99564424%2C-65405928%2C31412066%2C-5109634%2C1204142%5D%2C%5B0%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      11
+    ],
+    "order": 11,
+    "generators": [
+      {
+        "order": 11,
+        "mumford": [
+          "x^2 + 882/293*x + 470/293",
+          "2926258720/85849*x + 2425359200/85849",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 11,
+    "point_count_primes": [
+      3,
+      7,
+      13,
+      17,
+      19,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53
+    ],
+    "claimed": [
+      11
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 91,
+    "reducible_chi": 50
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 + T^2 + 9"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(11)) (the surface is E x E^sigma)"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 42,
+      "reducible_chi": 24
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 11 (source: new)",
+  "sources": [
+    "BNSS2026"
+  ],
+  "rm": false,
+  "notes": "new: conjugate (2,2)-glue over Q(sqrt 11) of the X1(11) quadratic point s0=4/5; first split realization of [11] (simple-only since Ogg 1973)",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "9471400",
+      "94188680",
+      "99564424",
+      "-65405928",
+      "31412066",
+      "-5109634",
+      "1204142"
+    ],
+    "h": [
+      "0"
+    ],
+    "claimed_group": [
+      11
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-011",
+    "file": "table2.txt",
+    "line": 17,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:55:41 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.960000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/11.b.log",
+    "conductor_log": "",
+    "conductor_cputime_seconds": null
+  }
+}

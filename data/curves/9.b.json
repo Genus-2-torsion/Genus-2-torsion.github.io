@@ -1,0 +1,233 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "9.b",
+  "group": [
+    9
+  ],
+  "group_key": "9",
+  "group_bracket": "[9]",
+  "order": 9,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "-3",
+      "1",
+      "-5",
+      "1",
+      "-2",
+      "-1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "f_str": "-x^5 - 2*x^4 + x^3 - 5*x^2 + x - 3",
+    "h_str": "x^3 + x",
+    "g": [
+      "-12",
+      "4",
+      "-19",
+      "4",
+      "-6",
+      "-4",
+      "1"
+    ],
+    "g_str": "x^6 - 4*x^5 - 6*x^4 + 4*x^3 - 19*x^2 + 4*x - 12",
+    "g_scale": "1",
+    "discriminant": "1541599428608",
+    "discriminant_digits": 13,
+    "igusa_clebsch": [
+      "512",
+      "1957120",
+      "559897024",
+      "1541599428608"
+    ],
+    "g2_invariants": [
+      "134217728/47045881",
+      "-1835008/130321",
+      "-863744/130321"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "-3",
+        "1",
+        "-5",
+        "1",
+        "-2",
+        "-1"
+      ],
+      "h": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "376367048",
+    "minimal_discriminant_factored": "2^3 * 19^6",
+    "conductor": "722",
+    "conductor_factored": "2 * 19^2",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "722.a.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-3%2C1%2C-5%2C1%2C-2%2C-1%5D%2C%5B0%2C1%2C0%2C1%5D%5D",
+    "snapshot_label": "722.a.1"
+  },
+  "torsion": {
+    "invariants": [
+      9
+    ],
+    "order": 9,
+    "generators": [
+      {
+        "order": 9,
+        "mumford": [
+          "x^2 + x + 1",
+          "3*x + 5",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 9,
+    "point_count_primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "claimed": [
+      9
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 93,
+    "reducible_chi": 93
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "cover",
+      "over": "Q",
+      "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-12096)u + (-544752) over Q (the elliptic curve 19a1), (x,y) -> (p/q, y*hh/q^2) with p = 192*x^3 - 276*x^2 + 684*x - 84, q = x^3 - 5*x^2 - 4, hh = 2052*x^3 - 4104*x + 4104; degree-3 map to the elliptic curve 19a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 5]"
+    },
+    "cover_submitted": true,
+    "cover_accepted": true,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 44,
+      "reducible_chi": 44
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 9 (source: \\cite{BSSVY})",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "-3",
+      "1",
+      "-5",
+      "1",
+      "-2",
+      "-1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      9
+    ],
+    "claimed_class": "split",
+    "cover": {
+      "field": "",
+      "cremona": "19a1",
+      "cubic": [],
+      "p": [
+        "-84",
+        "684",
+        "-276",
+        "192"
+      ],
+      "q": [
+        "-4",
+        "0",
+        "-5",
+        "1"
+      ],
+      "hh": [
+        "4104",
+        "-4104",
+        "0",
+        "2052"
+      ],
+      "note": "degree-3 map to the elliptic curve 19a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 5]"
+    },
+    "lmfdb_label_given": "722.a.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-009",
+    "file": "table2.txt",
+    "line": 15,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:55:39 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.870000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/9.b.log",
+    "conductor_log": "data/logs/9.b.conductor.log",
+    "conductor_cputime_seconds": 0.18
+  }
+}

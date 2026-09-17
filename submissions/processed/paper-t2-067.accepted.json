@@ -1,0 +1,45 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      9,
+      -33,
+      3,
+      61,
+      3,
+      -33,
+      -11
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    2,
+    2,
+    16
+  ],
+  "class": "split",
+  "lmfdb_label": "69300.bu.1",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "discoverer": "Booker–Sutherland (extended database)",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 67 (source: \\cite{BookerSutherland})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "R1",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-067",
+    "file": "table2.txt",
+    "line": 73,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  }
+}

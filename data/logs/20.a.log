@@ -1,0 +1,7 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x + 1) y = -x^5; working model y^2 = -4*x^5 + x^2 + 2*x + 1
+[0.170000 s] J(Q)_tors = [ 20 ] (0.160000 s)
+[0.180000 s] geometrically simple: strict prime 7, chi = T^4 - T^3 - 2*T^2 - 7*T + 49
+[0.180000 s] Q-simple: chi irreducible at p = 3
+[0.250000 s] class: simple
+[0.260000 s] VERIFY_DONE

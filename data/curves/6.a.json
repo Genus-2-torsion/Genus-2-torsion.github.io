@@ -1,0 +1,203 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "6.a",
+  "group": [
+    6
+  ],
+  "group_key": "6",
+  "group_bracket": "[6]",
+  "order": 6,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "3",
+      "21",
+      "46",
+      "26",
+      "-12",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "x^5 - 12*x^4 + 26*x^3 + 46*x^2 + 21*x + 3",
+    "h_str": "x^2 + x",
+    "g": [
+      "12",
+      "84",
+      "185",
+      "106",
+      "-47",
+      "4"
+    ],
+    "g_str": "4*x^5 - 47*x^4 + 106*x^3 + 185*x^2 + 84*x + 12",
+    "g_scale": "1",
+    "discriminant": "265728",
+    "discriminant_digits": 6,
+    "igusa_clebsch": [
+      "219976",
+      "1339396",
+      "98660530696",
+      "4251648"
+    ],
+    "g2_invariants": [
+      "15719059879327073637257/1038",
+      "109111794064913809345/173",
+      "18168889743107727596/519"
+    ],
+    "rational_weierstrass_points": 1,
+    "minimal_model": {
+      "f": [
+        "0",
+        "-1",
+        "-12",
+        "-27",
+        "46",
+        "-21",
+        "3"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "1038",
+    "minimal_discriminant_factored": "2 * 3 * 173",
+    "conductor": "1038",
+    "conductor_factored": "2 * 3 * 173",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "1038.a.1038.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/1038/a/1038/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      6
+    ],
+    "order": 6,
+    "generators": [
+      {
+        "order": 6,
+        "mumford": [
+          "x^2 - 4*x - 2",
+          "-9*x - 4",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 12,
+    "point_count_primes": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "claimed": [
+      6
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 17,
+    "chi": "T^4 - 4*T^3 + 10*T^2 - 68*T + 289",
+    "primes_tried_below": 500,
+    "admissible_primes": 5,
+    "reducible_chi": 2
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 5,
+    "chi": "T^4 + 3*T^3 + 4*T^2 + 15*T + 25"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 43,
+      "reducible_chi": 13
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Flynn 1991",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 6 (source: \\cite{Flynn1991})",
+  "sources": [
+    "Flynn1991"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "3",
+      "21",
+      "46",
+      "26",
+      "-12",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      6
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": "1038.a.1038.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-006",
+    "file": "table1.txt",
+    "line": 12,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:51:57 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.310000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/6.a.log",
+    "conductor_log": "data/logs/6.a.conductor.log",
+    "conductor_cputime_seconds": 0.36
+  }
+}

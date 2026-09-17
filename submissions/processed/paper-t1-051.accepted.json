@@ -1,0 +1,42 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      3,
+      3,
+      7,
+      2,
+      4,
+      0,
+      1
+    ],
+    [
+      1
+    ]
+  ],
+  "group": [
+    3,
+    3
+  ],
+  "class": "simple",
+  "lmfdb_label": "5100.a.1",
+  "sources": [
+    "BFT2014"
+  ],
+  "rm": false,
+  "discoverer": "Bruin–Flynn–Testa 2014",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 51 (source: \\cite{BFT2014})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "",
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-051",
+    "file": "table1.txt",
+    "line": 57,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      1,
+      8,
+      13,
+      9,
+      14,
+      4,
+      2
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    25
+  ],
+  "class": "split",
+  "lmfdb_label": "42336.dw.1",
+  "sources": [
+    "Leprevost1995",
+    "PZP2013"
+  ],
+  "rm": false,
+  "discoverer": "Leprévost 1995; Platonov–Zhgun–Petrunin 2013",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 21 (source: \\cite{Leprevost1995,PZP2013})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "COVER:11",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-021",
+    "file": "table2.txt",
+    "line": 27,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "cover": {
+    "field": "X^2-32246250*X+2573441015625",
+    "cremona": "",
+    "cubic": [
+      "4",
+      "0",
+      "-(w)",
+      "-(1/52*(113515*w-9308159375))"
+    ],
+    "p": [
+      "1/92625*(2*w+4803750)",
+      "1/7125*(w+264375)",
+      "1/18525*(4*w+499375)",
+      "1/85500*(17*w+6631875)",
+      "1/17784*(5*w-587625)",
+      "1/39000*(17*w+1831875)"
+    ],
+    "q": [
+      "0",
+      "0",
+      "1/13893750*(w+2401875)",
+      "1/6946875*(w+7033125)",
+      "1/13893750*(w-2229375)",
+      "1"
+    ],
+    "hh": [
+      "0",
+      "1/55575*(-56*w+13695000)",
+      "1/2223*(-14*w+1200750)",
+      "1/55575*(-808*w+78510000)",
+      "1/55575*(-709*w+66208125)",
+      "1/18525*(23*w-331875)",
+      "1/18525*(601*w-47735625)",
+      "1/325*(11*w-879375)"
+    ],
+    "note": "degree-5 map to an elliptic curve over the field defined by X^2-32246250*X+2573441015625; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/52*(113515*w-9308159375) [Genus2Torsion/verify_split_certificates.m, cover 11]"
+  }
+}

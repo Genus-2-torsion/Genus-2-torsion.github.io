@@ -1,0 +1,41 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      2,
+      -23,
+      41,
+      75,
+      25,
+      -9
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "group": [
+    25
+  ],
+  "class": "simple",
+  "lmfdb_label": "168750.e.2",
+  "sources": [
+    "Nicholls2018"
+  ],
+  "rm": false,
+  "discoverer": "Nicholls 2018",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 25 (source: \\cite{Nicholls2018})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "",
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-025",
+    "file": "table1.txt",
+    "line": 31,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  }
+}

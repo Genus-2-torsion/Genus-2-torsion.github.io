@@ -1,0 +1,44 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      0,
+      -57510204598294806758400,
+      9819234969339333136,
+      -603825803380840,
+      16672898913,
+      -211210,
+      1
+    ],
+    [
+      0
+    ]
+  ],
+  "group": [
+    2,
+    2,
+    2,
+    12
+  ],
+  "class": "simple",
+  "lmfdb_label": "",
+  "sources": [
+    "BNSS2026"
+  ],
+  "rm": false,
+  "discoverer": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 72 (source: new)",
+  "notes": "new (this paper)",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "",
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-072",
+    "file": "table1.txt",
+    "line": 78,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  }
+}

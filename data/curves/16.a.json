@@ -1,0 +1,205 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "16.a",
+  "group": [
+    16
+  ],
+  "group_key": "16",
+  "group_bracket": "[16]",
+  "order": 16,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "1",
+      "1",
+      "-2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "h": [
+      "1",
+      "0",
+      "0",
+      "1"
+    ],
+    "f_str": "-x^5 + x^4 - 2*x^2 + x + 1",
+    "h_str": "x^3 + 1",
+    "g": [
+      "5",
+      "4",
+      "-8",
+      "2",
+      "4",
+      "-4",
+      "1"
+    ],
+    "g_str": "x^6 - 4*x^5 + 4*x^4 + 2*x^3 - 8*x^2 + 4*x + 5",
+    "g_scale": "1",
+    "discriminant": "-27197440",
+    "discriminant_digits": 8,
+    "igusa_clebsch": [
+      "-1304",
+      "17092",
+      "-10717752",
+      "-27197440"
+    ],
+    "g2_invariants": [
+      "115063617043/6640",
+      "4023263963/6640",
+      "-13842449/6640"
+    ],
+    "rational_weierstrass_points": 1,
+    "minimal_model": {
+      "f": [
+        "1",
+        "-1",
+        "-1",
+        "-1",
+        "-1"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-6640",
+    "minimal_discriminant_factored": "-1 * 2^4 * 5 * 83",
+    "conductor": "830",
+    "conductor_factored": "2 * 5 * 83",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "830.a.6640.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/830/a/6640/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      16
+    ],
+    "order": 16,
+    "generators": [
+      {
+        "order": 16,
+        "mumford": [
+          "x - 1",
+          "x^3 + 1",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 16,
+    "point_count_primes": [
+      3,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "claimed": [
+      16
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 3,
+    "chi": "T^4 + T^3 + 2*T^2 + 3*T + 9",
+    "primes_tried_below": 500,
+    "admissible_primes": 1,
+    "reducible_chi": 0
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 + T^3 + 2*T^2 + 3*T + 9"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 43,
+      "reducible_chi": 12
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 16 (source: \\cite{BSSVY})",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "1",
+      "1",
+      "-2",
+      "0",
+      "1",
+      "-1"
+    ],
+    "h": [
+      "1",
+      "0",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      16
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": "830.a.6640.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-016",
+    "file": "table1.txt",
+    "line": 22,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:52:02 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.310000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/16.a.log",
+    "conductor_log": "data/logs/16.a.conductor.log",
+    "conductor_cputime_seconds": 0.22
+  }
+}

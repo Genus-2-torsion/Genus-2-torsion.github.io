@@ -1,0 +1,8 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x^3 + x^2) y = 2*x^6 + 4*x^5 + 14*x^4 + 9*x^3 + 13*x^2 + 8*x + 1; working model y^2 = 9*x^6 + 18*x^5 + 57*x^4 + 36*x^3 + 52*x^2 + 32*x + 4
+[0.190000 s] J(Q)_tors = [ 25 ] (0.180000 s)
+[0.840000 s] no strict prime below 500 (92 admissible primes, 51 with reducible chi)
+[0.840000 s] Q-simple: chi irreducible at p = 5
+[0.890000 s] geometrically split: a nonconstant map of degree 5 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/52*(-113515*w + 9308159375)) over X^2 - 32246250*X + 2573441015625, (x,y) -> (p/q, y*hh/q^2) with p = 1/39000*(17*w + 1831875)*x^5 + 1/17784*(5*w - 587625)*x^4 + 1/85500*(17*w + 6631875)*x^3 + 1/18525*(4*w + 499375)*x^2 + 1/7125*(w + 264375)*x + 1/92625*(2*w + 4803750), q = x^5 + 1/13893750*(w - 2229375)*x^4 + 1/6946875*(w + 7033125)*x^3 + 1/13893750*(w + 2401875)*x^2, hh = 1/325*(11*w - 879375)*x^7 + 1/18525*(601*w - 47735625)*x^6 + 1/18525*(23*w - 331875)*x^5 + 1/55575*(-709*w + 66208125)*x^4 + 1/55575*(-808*w + 78510000)*x^3 + 1/2223*(-14*w + 1200750)*x^2 + 1/55575*(-56*w + 13695000)*x; degree-5 map to an elliptic curve over the field defined by X^2-32246250*X+2573441015625; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/52*(113515*w-9308159375) [Genus2Torsion/verify_split_certificates.m, cover 11]
+[0.890000 s] class: gsplit
+[0.960000 s] VERIFY_DONE

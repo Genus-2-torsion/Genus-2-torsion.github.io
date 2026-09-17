@@ -1,0 +1,4 @@
+[0.0200000 s] minimal model y^2 + (1) y = x^6 + 4*x^4 + 2*x^3 + 7*x^2 + 3*x + 3, discriminant -123930000
+[0.0200000 s] discriminant factored: -1 * 2^4 * 3^6 * 5^4 * 17
+[0.740000 s] conductor 5100 = 2^2 * 3 * 5^2 * 17
+[0.740000 s] CONDUCTOR_DONE

@@ -1,0 +1,207 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "15.b",
+  "group": [
+    15
+  ],
+  "group_key": "15",
+  "group_bracket": "[15]",
+  "order": 15,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "1",
+      "0",
+      "2",
+      "0",
+      "1"
+    ],
+    "h": [
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "f_str": "x^4 + 2*x^2 + 1",
+    "h_str": "x^3",
+    "g": [
+      "4",
+      "0",
+      "8",
+      "0",
+      "4",
+      "0",
+      "1"
+    ],
+    "g_str": "x^6 + 4*x^4 + 8*x^2 + 4",
+    "g_scale": "1",
+    "discriminant": "-7929856",
+    "discriminant_digits": 7,
+    "igusa_clebsch": [
+      "-1472",
+      "2368",
+      "-369152",
+      "-7929856"
+    ],
+    "g2_invariants": [
+      "13181630464/121",
+      "49057344/11",
+      "31824640/121"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "1",
+        "0",
+        "2",
+        "0",
+        "1"
+      ],
+      "h": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-1936",
+    "minimal_discriminant_factored": "-1 * 2^4 * 11^2",
+    "conductor": "484",
+    "conductor_factored": "2^2 * 11^2",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "484.a.1936.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/484/a/1936/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      15
+    ],
+    "order": 15,
+    "generators": [
+      {
+        "order": 15,
+        "mumford": [
+          "x",
+          "x^3 - 2",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 15,
+    "point_count_primes": [
+      3,
+      5,
+      7,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43
+    ],
+    "claimed": [
+      15
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 93,
+    "reducible_chi": 93
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "involution",
+      "over": "Q",
+      "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 44,
+      "reducible_chi": 44
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 14 (source: \\cite{BSSVY})",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "1",
+      "0",
+      "2",
+      "0",
+      "1"
+    ],
+    "h": [
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      15
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "484.a.1936.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-014",
+    "file": "table2.txt",
+    "line": 20,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:55:46 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.14000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/15.b.log",
+    "conductor_log": "data/logs/15.b.conductor.log",
+    "conductor_cputime_seconds": 0.19
+  }
+}

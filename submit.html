@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Submit — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="How to submit a genus 2 curve over Q with a new torsion subgroup of its Jacobian for verification with Magma.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="submit">
+<main>
+  <h2>Submit a curve</h2>
+  <p>Found a genus 2 curve over <span class="m">ℚ</span> whose Jacobian has a torsion subgroup that is not yet in the census — for
+    geometrically simple Jacobians, for Jacobians split over <span class="m">ℚ</span>, or for Jacobians that are simple over <span class="m">ℚ</span> but split over
+    <span class="m">ℚ̄</span>? Or a smaller-conductor example of a known group? Submit it here. Every submission is re-verified with Magma on the
+    Mordell workstation: the torsion subgroup is computed exactly, the Jacobian is certified geometrically simple or split (see below), and the curve
+    is added to the census with its certificate and log.</p>
+
+  <h3>1. Fill in the form</h3>
+  <p>Submissions are GitHub issues created from a form (a free GitHub account is all you need):</p>
+  <p><a class="btn" id="submit-any" href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/new?template=submit-curve.yml">Open the submission form ↗</a></p>
+  <p>You give the curve as <span class="m">y² + h(x)y = f(x)</span> with <span class="m">f, h ∈ ℚ[x]</span>, <span class="m">deg f ≤ 6</span>,
+    <span class="m">deg h ≤ 3</span> (leave <span class="m">h</span> empty for <span class="m">y² = f(x)</span>), either as polynomials in <code>x</code>
+    (Magma/Sage style, e.g. <code>x^5 - 8*x^4 + 16*x^3 - x</code>) or as coefficient lists in ascending degree (the LMFDB convention, e.g.
+    <code>[[0,-1,0,16,-8,1],[0,1]]</code>). Only digits, <code>x</code>, <code>+ - * / ^ ( )</code> and spaces are allowed — nothing else is ever evaluated.
+    Then the torsion group you expect as invariant factors, e.g. <code>[2,2,12]</code>, and whether you believe the Jacobian is geometrically simple or split.
+    Please say who found the curve and where it is published (or "new"); these are shown in the tables.</p>
+
+  <h3>2. What happens next</h3>
+  <ol class="steps">
+    <li>The issue is labelled <code>submission</code> and waits in the queue (the home page shows how many are waiting).</li>
+    <li>Periodically the queue is pulled to Mordell. Magma checks that the model is a smooth genus 2 curve, computes <span class="m">J(ℚ)<sub>tors</sub></span>
+      exactly (Stoll's algorithm, <code>TorsionSubgroup</code>), and cross-checks it against the orders of <span class="m">J(𝔽<sub>p</sub>)</span> at good primes.
+      If your group differs from the computed one, the curve is recorded with the computed group.</li>
+    <li>The class is certified: <b>geometrically simple</b> by a good prime whose Frobenius polynomial is irreducible with no degree drop of
+      <span class="m">πⁿ</span> for <span class="m">n ≤ 12</span>; <b>split over ℚ</b> by an extra involution over <span class="m">ℚ</span>, by a chain of at most two
+      Richelot <span class="m">(2,2)</span>-isogenies over <span class="m">ℚ</span> reaching a product of elliptic curves, or by a map to an elliptic curve over
+      <span class="m">ℚ</span> that you supply; <b>geometrically split</b> likewise over a quadratic field, or by more than one involution in the geometric
+      automorphism group; and <b>simple over ℚ</b> by an irreducible Frobenius polynomial. If none of the automatic certificates applies, the curve is still
+      listed, as <span class="chip undecided">verified · class not certified</span>, with the Frobenius evidence.</li>
+    <li>The reduced minimal model and the conductor are computed when the discriminant can be factored quickly; the curve is linked to the LMFDB
+      when it is there.</li>
+    <li>The result is posted as a comment on the issue, the issue is closed, and the curve appears on this site with its certificate and Magma log.
+      Duplicates (curves isomorphic over <span class="m">ℚ</span> to a census curve) and models that do not define a smooth genus 2 curve are rejected;
+      if a submission is rejected because of a data problem, just fix it and submit again.</li>
+  </ol>
+
+  <h3>Supplying a splitness certificate</h3>
+  <p>Jacobians that split only through an isogeny of odd degree, or over a field of degree <span class="m">&gt; 2</span>, are not found by the automatic
+    Richelot search. You can then supply an explicit nonconstant map <span class="m">(x, y) ↦ (p(x)/q(x), y·hh(x)/q(x)²)</span> from the even model
+    <span class="m">y² = g(x)</span>, <span class="m">g = 4f + h²</span>, to a genus 1 curve <span class="m">v² = e₃u³ + e₂u² + e₁u + e₀</span> over
+    <span class="m">ℚ</span> (give the elliptic curve by its Cremona label, or the cubic) or over a number field <span class="m">ℚ(w)</span> given by a
+    polynomial in <code>X</code>; the verifier checks the identity <span class="m">(e₃p³ + e₂p²q + e₁pq² + e₀q³)·q = g·hh²</span> and that the map is
+    nonconstant. In the form, paste it as JSON in the "splitness certificate" field:</p>
+<pre><code>{"cremona": "19a1", "p": [-84, 684, -276, 192], "q": [-4, 0, -5, 1], "hh": [4104, -4104, 0, 2052]}
+{"field": "X^2 - 32246250*X + 2573441015625", "cubic": ["4", "0", "-(w)", "-(1/52*(113515*w - 9308159375))"],
+ "p": ["1/92625*(2*w+4803750)", "..."], "q": ["0", "0", "..."], "hh": ["0", "..."]}</code></pre>
+  <p>Coefficient lists are in ascending degree; elements of the field are polynomials in <code>w</code>, a root of the field polynomial.
+    (The first example is the [9] curve of Table 2 of the paper, which covers the elliptic curve 19a1.)</p>
+
+  <h3>Bulk submissions</h3>
+  <p>For many curves at once, open a pull request adding files to <code>submissions/inbox/</code> of the
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io">repository</a>, one JSON file per curve:</p>
+<pre><code>{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^5 - 8*x^4 + 16*x^3 - x",
+  "h": "x",
+  "group": [2, 4],
+  "class": "simple",
+  "submitter": "Your Name", "affiliation": "Your institution", "github": "your-handle",
+  "discoverer": "J. Doe", "year": 2026,
+  "reference": "arXiv:XXXX.XXXXX, Theorem 3",
+  "notes": "anything the curators should know",
+  "cover": null
+}</code></pre>
+  <p>Instead of <code>"f"</code> and <code>"h"</code> you may give <code>"coeffs": [[f],[h]]</code>. <code>"class"</code> is <code>"simple"</code>,
+    <code>"split"</code> or empty; <code>"cover"</code> is the optional certificate above. The example values are the [2,4] curve 997.a.997.1.</p>
+
+  <h3>Families</h3>
+  <p>A proof that a group occurs for <em>infinitely many</em> Jacobians (a family) cannot be verified automatically. Open an
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues">issue</a> with the reference or the equations, and it will be
+    added to the <b>∞?</b> column by hand, with the source; see <a href="about.html">about</a> for what is required.</p>
+</main>
+<script src="assets/app.js"></script>
+</body>
+</html>

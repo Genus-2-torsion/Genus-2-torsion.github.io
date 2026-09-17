@@ -1,0 +1,45 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      -60,
+      -1,
+      59,
+      -1,
+      59,
+      0,
+      -60
+    ],
+    [
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    2,
+    2
+  ],
+  "class": "split",
+  "lmfdb_label": "256.a.2",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "discoverer": "LMFDB genus 2 database (BSSVY 2016)",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 33 (source: \\cite{BSSVY})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "Q2",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-033",
+    "file": "table2.txt",
+    "line": 39,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  }
+}

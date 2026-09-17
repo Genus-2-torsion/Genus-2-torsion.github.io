@@ -1,0 +1,66 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      -2,
+      -1,
+      10,
+      7,
+      -13,
+      -11
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "group": [
+    10
+  ],
+  "class": "split",
+  "lmfdb_label": "363.a.43923.1",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "discoverer": "LMFDB genus 2 database (BSSVY 2016)",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 10 (source: \\cite{BSSVY})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "COVER:10",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-010",
+    "file": "table2.txt",
+    "line": 16,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "cover": {
+    "field": "",
+    "cremona": "33a2",
+    "cubic": [],
+    "p": [
+      "192/11",
+      "156/11",
+      "-606/11",
+      "-57"
+    ],
+    "q": [
+      "-4/11",
+      "-4/11",
+      "10/11",
+      "1"
+    ],
+    "hh": [
+      "216/121",
+      "1404/121",
+      "216/11",
+      "108/11"
+    ],
+    "note": "degree-3 map to the elliptic curve 33a2 over Q [Genus2Torsion/verify_split_certificates.m, cover 10]"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.8.b",
+  "group": [
+    2,
+    8
+  ],
+  "group_key": "2.8",
+  "group_bracket": "[2,8]",
+  "order": 16,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "-214",
+      "465",
+      "-279",
+      "447",
+      "-305",
+      "60",
+      "-175"
+    ],
+    "h": [
+      "1",
+      "0",
+      "1"
+    ],
+    "f_str": "-175*x^6 + 60*x^5 - 305*x^4 + 447*x^3 - 279*x^2 + 465*x - 214",
+    "h_str": "x^2 + 1",
+    "g": [
+      "-855",
+      "1860",
+      "-1114",
+      "1788",
+      "-1219",
+      "240",
+      "-700"
+    ],
+    "g_str": "-700*x^6 + 240*x^5 - 1219*x^4 + 1788*x^3 - 1114*x^2 + 1860*x - 855",
+    "g_scale": "1",
+    "discriminant": "1095363939978431242017649459200000",
+    "discriminant_digits": 34,
+    "igusa_clebsch": [
+      "-128329792",
+      "1101430074347584",
+      "-34096508113765752980992",
+      "1095363939978431242017649459200000"
+    ],
+    "g2_invariants": [
+      "-259314958023705053365123465287944/65288778542186691881278125",
+      "67320092493903554368135318459/5803446981527705945002500",
+      "-46012277421517443109823744/32241372119598366361125"
+    ],
+    "rational_weierstrass_points": 2,
+    "minimal_model": {
+      "f": [
+        "-214",
+        "465",
+        "-279",
+        "447",
+        "-305",
+        "60",
+        "-175"
+      ],
+      "h": [
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "267422836908796689945715200000",
+    "minimal_discriminant_factored": "2^12 * 3^10 * 5^5 * 29^12",
+    "conductor": "230400",
+    "conductor_factored": "2^10 * 3^2 * 5^2",
+    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "225.a.8",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-214%2C465%2C-279%2C447%2C-305%2C60%2C-175%5D%2C%5B1%2C0%2C1%5D%5D",
+    "snapshot_label": "225.a.8"
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      8
+    ],
+    "order": 16,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 54/35*x + 19/35",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 8,
+        "mumford": [
+          "x^2 + 7/16*x + 81/80",
+          "-2409/128*x - 15087/640",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 64,
+    "point_count_primes": [
+      11,
+      13,
+      17,
+      19,
+      23,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59
+    ],
+    "claimed": [
+      2,
+      8
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 90,
+    "reducible_chi": 90
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "involution",
+      "over": "Q",
+      "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 30/11*z : 8364/1331*x^3 + 14444/1331*x^2*z + 11526/1331*x*z^2 + 24389/1331*y + 17810/1331*z^3 : -24/11*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 41,
+      "reducible_chi": 41
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 36 (source: \\cite{BSSVY})",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "-214",
+      "465",
+      "-279",
+      "447",
+      "-305",
+      "60",
+      "-175"
+    ],
+    "h": [
+      "1",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      8
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "225.a.8"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-036",
+    "file": "table2.txt",
+    "line": 42,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:57:17 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.930000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/2.8.b.log",
+    "conductor_log": "data/logs/2.8.b.conductor.log",
+    "conductor_cputime_seconds": 0.18
+  }
+}

@@ -1,0 +1,7 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (x^3 + 1) y = -3*x^6 - 4*x^5 + 2*x^4 + 7*x^3 + 2*x^2 - 4*x - 3; working model y^2 = -11*x^6 - 16*x^5 + 8*x^4 + 30*x^3 + 8*x^2 - 16*x - 11
+[0.130000 s] J(Q)_tors = [ 7 ] (0.120000 s)
+[0.930000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
+[0.950000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
+[0.950000 s] class: qsplit
+[1.02000 s] VERIFY_DONE

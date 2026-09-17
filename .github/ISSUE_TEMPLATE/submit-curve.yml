@@ -1,0 +1,79 @@
+name: Submit a genus 2 curve
+description: Submit a genus 2 curve over Q for verification of its Jacobian's torsion subgroup and inclusion in the census.
+title: "Genus 2 curve with torsion [...]"
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to the census. Give the curve as y^2 + h(x) y = f(x) with f, h in Q[x], deg f <= 6, deg h <= 3.
+        Polynomials are written Magma/Sage style in `x` (e.g. `x^5 - 8*x^4 + 16*x^3 - x`) or as coefficient lists in ascending degree
+        (e.g. `[0,-1,0,16,-8,1]`). Only digits, `x`, `+ - * / ^ ( )` and spaces are accepted.
+        Your submission will be verified with Magma on the Mordell workstation; the result is posted here as a comment.
+        See https://genus-2-torsion.github.io/submit.html for details.
+  - type: input
+    id: f
+    attributes:
+      label: f(x)
+      description: The polynomial f in y^2 + h(x) y = f(x), or its ascending coefficient list.
+      placeholder: "x^5 - 8*x^4 + 16*x^3 - x"
+    validations:
+      required: true
+  - type: input
+    id: h
+    attributes:
+      label: h(x)
+      description: The polynomial h (leave empty for y^2 = f(x)).
+      placeholder: "x"
+  - type: input
+    id: group
+    attributes:
+      label: Torsion group
+      description: J(Q)_tors as invariant factors, e.g. [2,2,12]; [] for the trivial group. The verifier recomputes it.
+      placeholder: "[2,4]"
+    validations:
+      required: true
+  - type: dropdown
+    id: class
+    attributes:
+      label: Class of the Jacobian
+      description: What you believe about J; the verifier certifies it.
+      options:
+        - geometrically simple
+        - geometrically split (over Q or over an extension)
+        - unknown
+      default: 2
+  - type: textarea
+    id: cover
+    attributes:
+      label: Splitness certificate (optional)
+      description: For split Jacobians not found by the automatic Richelot search, a map (x,y) -> (p/q, y*hh/q^2) from y^2 = 4f + h^2 to a genus 1 curve, as JSON (see the submit page).
+      placeholder: '{"cremona": "19a1", "p": [-84, 684, -276, 192], "q": [-4, 0, -5, 1], "hh": [4104, -4104, 0, 2052]}'
+  - type: input
+    id: discoverer
+    attributes:
+      label: Discovered by
+      description: Who found the curve (as it should be credited on the site).
+      placeholder: "N. D. Elkies"
+  - type: input
+    id: year
+    attributes:
+      label: Year of discovery
+      placeholder: "2026"
+  - type: input
+    id: reference
+    attributes:
+      label: Reference
+      description: Where the curve is published (arXiv number, DOI, paper, web page), or "new".
+      placeholder: "arXiv:2608.28543, Table 1"
+  - type: input
+    id: name
+    attributes:
+      label: Your name and affiliation
+      description: For attribution on the site (your GitHub handle is recorded automatically).
+      placeholder: "Jane Doe, University of Somewhere"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything the curators should know (how the curve was found, related curves, a family it belongs to, ...).

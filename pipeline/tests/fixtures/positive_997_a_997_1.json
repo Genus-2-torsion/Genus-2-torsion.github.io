@@ -1,0 +1,9 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^5 - 8*x^4 + 16*x^3 - x",
+  "h": "x",
+  "group": [2, 4],
+  "class": "simple",
+  "submitter": "test fixture", "reference": "LMFDB 997.a.997.1",
+  "notes": "known positive: the [2,4] curve of Table 1; expected class simple, strict prime found"
+}

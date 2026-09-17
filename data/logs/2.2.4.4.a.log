@@ -1,0 +1,7 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (0) y = x^5 + 26065*x^4 + 173387808*x^3 + 414985109760*x^2 + 300512487407616*x; working model y^2 = 4*x^5 + 104260*x^4 + 693551232*x^3 + 1659940439040*x^2 + 1202049949630464*x
+[0.170000 s] J(Q)_tors = [ 2, 2, 4, 4 ] (0.160000 s)
+[0.190000 s] geometrically simple: strict prime 37, chi = T^4 - 4*T^3 - 2*T^2 - 148*T + 1369
+[0.190000 s] Q-simple: chi irreducible at p = 37
+[0.260000 s] class: simple
+[0.310000 s] VERIFY_DONE

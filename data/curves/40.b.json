@@ -1,0 +1,207 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "40.b",
+  "group": [
+    40
+  ],
+  "group_key": "40",
+  "group_bracket": "[40]",
+  "order": 40,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "66",
+      "0",
+      "12",
+      "0",
+      "2"
+    ],
+    "h": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "f_str": "2*x^4 + 12*x^2 + 66",
+    "h_str": "x^3 + x",
+    "g": [
+      "264",
+      "0",
+      "49",
+      "0",
+      "10",
+      "0",
+      "1"
+    ],
+    "g_str": "x^6 + 10*x^4 + 49*x^2 + 264",
+    "g_scale": "1",
+    "discriminant": "-11916368249094144",
+    "discriminant_digits": 17,
+    "igusa_clebsch": [
+      "-71200",
+      "66989632",
+      "-1515605756416",
+      "-11916368249094144"
+    ],
+    "g2_invariants": [
+      "54531830556640625/2841083586",
+      "597251939828125/947027862",
+      "283532195000/14348907"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "66",
+        "0",
+        "12",
+        "0",
+        "2"
+      ],
+      "h": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-2909269592064",
+    "minimal_discriminant_factored": "-1 * 2^11 * 3^17 * 11",
+    "conductor": "3168",
+    "conductor_factored": "2^5 * 3^2 * 11",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "3168.i.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B66%2C0%2C12%2C0%2C2%5D%2C%5B0%2C1%2C0%2C1%5D%5D",
+    "snapshot_label": "3168.i.1"
+  },
+  "torsion": {
+    "invariants": [
+      40
+    ],
+    "order": 40,
+    "generators": [
+      {
+        "order": 40,
+        "mumford": [
+          "x^2 - 9/2*x + 25/2",
+          "-45/4*x + 207/4",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 80,
+    "point_count_primes": [
+      5,
+      7,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47
+    ],
+    "claimed": [
+      40
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 92,
+    "reducible_chi": 92
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "involution",
+      "over": "Q",
+      "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 43,
+      "reducible_chi": 43
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Howe–Leprévost–Poonen 2000",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 27 (source: \\cite{HLP2000})",
+  "sources": [
+    "HLP2000"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "66",
+      "0",
+      "12",
+      "0",
+      "2"
+    ],
+    "h": [
+      "0",
+      "1",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      40
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "3168.i.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-027",
+    "file": "table2.txt",
+    "line": 33,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:57:04 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.15000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/40.b.log",
+    "conductor_log": "data/logs/40.b.conductor.log",
+    "conductor_cputime_seconds": 0.22
+  }
+}

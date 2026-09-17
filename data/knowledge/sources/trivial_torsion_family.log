@@ -1,0 +1,9 @@
+t = 1: x^5 + x + t reducible, rational 2-torsion, skipped
+t = 2: x^5 + x + t reducible, rational 2-torsion, skipped
+t = 3: y^2 = T^5 + T + 3, J(Q)_tors = [], strict prime 7, chi = T^4 + 3*T^3 + 7*T^2 + 21*T + 49, G2 = [ 12800000/253381, 960000/253381, -32000/253381 ]
+t = 4: y^2 = T^5 + T + 4, J(Q)_tors = [], strict prime 7, chi = T^4 - 3*T^3 + 7*T^2 - 21*T + 49, G2 = [ 25000/1563, 625/521, -125/3126 ]
+t = 5: y^2 = T^5 + T + 5, J(Q)_tors = [], strict prime 7, chi = T^4 - 2*T^3 - 14*T + 49, G2 = [ 12800000/1953381, 320000/651127, -32000/1953381 ]
+t = 6: x^5 + x + t reducible, rational 2-torsion, skipped
+t = 7: y^2 = T^5 + T + 7, J(Q)_tors = [], strict prime 13, chi = T^4 - 3*T^3 + 10*T^2 - 39*T + 169, G2 = [ 12800000/7503381, 320000/2501127, -32000/7503381 ]
+t = 8: y^2 = T^5 + T + 8, J(Q)_tors = [], strict prime 13, chi = T^4 - T^3 + 4*T^2 - 13*T + 169, G2 = [ 50000/50001, 1250/16667, -125/50001 ]
+TRIVIAL_TORSION_FAMILY_CERTIFIED: 5 fibers of y^2 = x^5 + x + t, all with trivial torsion, geometrically simple, pairwise distinct G2-invariants

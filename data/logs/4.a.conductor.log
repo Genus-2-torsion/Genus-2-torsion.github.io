@@ -1,0 +1,4 @@
+[0.0200000 s] minimal model y^2 + (x^3 + 1) y = x^3 - x, discriminant -2140
+[0.0200000 s] discriminant factored: -1 * 2^2 * 5 * 107
+[0.200000 s] conductor 1070 = 2 * 5 * 107
+[0.200000 s] CONDUCTOR_DONE

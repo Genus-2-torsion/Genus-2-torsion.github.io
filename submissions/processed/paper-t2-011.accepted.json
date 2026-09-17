@@ -1,0 +1,41 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      9471400,
+      94188680,
+      99564424,
+      -65405928,
+      31412066,
+      -5109634,
+      1204142
+    ],
+    [
+      0
+    ]
+  ],
+  "group": [
+    11
+  ],
+  "class": "split",
+  "lmfdb_label": "",
+  "sources": [
+    "BNSS2026"
+  ],
+  "rm": false,
+  "discoverer": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 11 (source: new)",
+  "notes": "new: conjugate (2,2)-glue over Q(sqrt 11) of the X1(11) quadratic point s0=4/5; first split realization of [11] (simple-only since Ogg 1973)",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "R1",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-011",
+    "file": "table2.txt",
+    "line": 17,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  }
+}

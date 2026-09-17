@@ -1,0 +1,8 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [[0, 1, 1, -5, -4, 6], [1, 1]],
+  "group": [2, 2, 8],
+  "class": "split",
+  "submitter": "test fixture", "reference": "LMFDB 360.a.6480.1",
+  "notes": "known positive: the [2,2,8] curve of Table 2 (route R1); expected class qsplit"
+}

@@ -1,0 +1,7 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (x^3 + x) y = x^3 - 2*x^2 - x + 1; working model y^2 = x^6 + 2*x^4 + 4*x^3 - 7*x^2 - 4*x + 4
+[0.120000 s] J(Q)_tors = [ 22 ] (0.110000 s)
+[0.130000 s] geometrically simple: strict prime 3, chi = T^4 + 2*T^3 + 4*T^2 + 6*T + 9
+[0.130000 s] Q-simple: chi irreducible at p = 3
+[0.210000 s] class: simple
+[0.220000 s] VERIFY_DONE

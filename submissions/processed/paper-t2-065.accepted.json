@@ -1,0 +1,69 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "coeffs": [
+    [
+      -20,
+      -12,
+      66,
+      -2,
+      -45,
+      3,
+      9
+    ],
+    [
+      0,
+      1,
+      1
+    ]
+  ],
+  "group": [
+    2,
+    2,
+    10
+  ],
+  "class": "split",
+  "lmfdb_label": "30492.q.1",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "discoverer": "Booker–Sutherland (extended database)",
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 65 (source: \\cite{BookerSutherland})",
+  "notes": "",
+  "submitter": "seed import from the Genus2Torsion repository",
+  "affiliation": "",
+  "github": "",
+  "date": "2026-08-30",
+  "route": "COVER:16",
+  "source": {
+    "kind": "import",
+    "name": "paper-t2-065",
+    "file": "table2.txt",
+    "line": 71,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table2.txt"
+  },
+  "cover": {
+    "field": "",
+    "cremona": "66c1",
+    "cubic": [],
+    "p": [
+      "643/2",
+      "-4",
+      "-209/2",
+      "3"
+    ],
+    "q": [
+      "-5/6",
+      "-4/3",
+      "7/6",
+      "1"
+    ],
+    "hh": [
+      "-432",
+      "432",
+      "972",
+      "324"
+    ],
+    "note": "degree-3 map to the elliptic curve 66c1 over Q [Genus2Torsion/verify_split_certificates.m, cover 16]"
+  }
+}

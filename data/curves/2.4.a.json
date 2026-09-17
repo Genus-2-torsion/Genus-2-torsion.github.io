@@ -1,0 +1,211 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.4.a",
+  "group": [
+    2,
+    4
+  ],
+  "group_key": "2.4",
+  "group_bracket": "[2,4]",
+  "order": 8,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": true,
+  "new_for_class": true,
+  "curve": {
+    "f": [
+      "0",
+      "-1",
+      "0",
+      "16",
+      "-8",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1"
+    ],
+    "f_str": "x^5 - 8*x^4 + 16*x^3 - x",
+    "h_str": "x",
+    "g": [
+      "0",
+      "-4",
+      "1",
+      "64",
+      "-32",
+      "4"
+    ],
+    "g_str": "4*x^5 - 32*x^4 + 64*x^3 + x^2 - 4*x",
+    "g_scale": "1",
+    "discriminant": "255232",
+    "discriminant_digits": 6,
+    "igusa_clebsch": [
+      "24448",
+      "769024",
+      "6279257536",
+      "4083712"
+    ],
+    "g2_invariants": [
+      "266542673508171776/997",
+      "10877317101649920/997",
+      "578694117523712/997"
+    ],
+    "rational_weierstrass_points": 3,
+    "minimal_model": {
+      "f": [
+        "0",
+        "-1",
+        "0",
+        "16",
+        "-8",
+        "1"
+      ],
+      "h": [
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "997",
+    "minimal_discriminant_factored": "997",
+    "conductor": "997",
+    "conductor_factored": "997",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "997.a.997.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/997/a/997/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      4
+    ],
+    "order": 8,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 4,
+        "mumford": [
+          "x^2 - 4*x + 1",
+          "x",
+          "2"
+        ]
+      }
+    ],
+    "point_count_gcd": 16,
+    "point_count_primes": [
+      3,
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41
+    ],
+    "claimed": [
+      2,
+      4
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 3,
+    "chi": "T^4 + T^3 + 2*T^2 + 3*T + 9",
+    "primes_tried_below": 500,
+    "admissible_primes": 1,
+    "reducible_chi": 0
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 + T^3 + 2*T^2 + 3*T + 9"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 45,
+      "reducible_chi": 12
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": ""
+  },
+  "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 39 (source: \\cite{BSSVY})",
+  "sources": [
+    "BSSVY"
+  ],
+  "rm": false,
+  "notes": "",
+  "submitter": {
+    "name": "seed import from the Genus2Torsion repository",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "-1",
+      "0",
+      "16",
+      "-8",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      4
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": "997.a.997.1"
+  },
+  "source": {
+    "kind": "import",
+    "name": "paper-t1-039",
+    "file": "table1.txt",
+    "line": 45,
+    "url": "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/table1.txt"
+  },
+  "dates": {
+    "submitted": "2026-08-30",
+    "verified": "2026-09-17 13:52:26 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.330000",
+    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "log": "data/logs/2.4.a.log",
+    "conductor_log": "data/logs/2.4.a.conductor.log",
+    "conductor_cputime_seconds": 0.13
+  }
+}

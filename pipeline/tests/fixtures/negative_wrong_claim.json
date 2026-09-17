@@ -1,0 +1,9 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^5 - 8*x^4 + 16*x^3 - x",
+  "h": "x",
+  "group": [2, 2, 12],
+  "class": "split",
+  "submitter": "test fixture",
+  "notes": "negative control: the [2,4] curve claimed with group [2,2,12] and class split; with --require-claim it must be REJECTED, without it accepted as [2,4] simple"
+}

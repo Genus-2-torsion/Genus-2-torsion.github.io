@@ -1,0 +1,13 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^5 + 10*x^4 + 31*x^3 + 34*x^2 + 9*x",
+  "h": "0",
+  "group": [
+    2,
+    4
+  ],
+  "class": "simple",
+  "submitter": "test fixture",
+  "reference": "fiber t = 3 of the [2,4] family of census_infinity_record.md",
+  "notes": "negative control for the acceptance rule: a second geometrically simple [2,4] curve, conductor 49920 > 997; processed after positive_997_a_997_1, it must be REJECTED"
+}

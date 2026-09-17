@@ -11,12 +11,13 @@ import_paper.py (seed tables)
 |---|---|
 | `run_cycle.sh` | the whole cycle: `git pull` → `fetch_issues.py` → `verify.py` → `build.py` → commit → push. Uses a lock file; cron-able. |
 | `fetch_issues.py` | turns open GitHub issues labelled `submission` into `submissions/inbox/issue-<n>.json`. |
-| `verify.py` | validates a submission, runs `magma/verify_lib.m` and `magma/conductor_lib.m` under time limits, writes the certificate, comments on and closes the issue. `--require-claim` rejects a curve whose computed group differs from the claimed one (used for validation runs). |
+| `verify.py` | validates a submission, runs `magma/verify_lib.m` and `magma/conductor_lib.m` under time limits, applies the acceptance rule (`acceptance()`: new (group, class), or smaller conductor than every census curve with that group and class; `"historical": true` in an inbox file bypasses it), writes the certificate, comments on and closes the issue. `--require-claim` rejects a curve whose computed group differs from the claimed one (used for validation runs). |
 | `build.py` | rebuilds the JSON files the site reads from `data/curves/` and `knowledge.py`. `--check` fails if they are stale (used by CI). |
 | `knowledge.py` | curated, cited facts: the bibliography, and the "infinitely many?" record for every group on the simple and the split side. |
 | `import_paper.py` | converts the paper's `table1.txt` / `table2.txt` (in `data/knowledge/sources/`) into seed submissions; `transcribe_covers.py` extracted the 18 explicit covers of the paper's `verify_split_certificates.m` into `Genus2Torsion_covers.json`. |
 | `magma/verify_lib.m` | the Magma checks (see its header): torsion subgroup, strict-prime certificate of geometric simplicity, irreducible-χ certificate of ℚ-simplicity, splitness certificates (involutions, Richelot isogenies over ℚ and quadratic fields, geometric automorphism group, submitted covers), the split signature, invariants, ℚ-isomorphism with census curves. |
 | `magma/conductor_lib.m` | reduced minimal model, factored discriminant, conductor (separate job: needs the discriminant factored; slow for split Jacobians whose curve has bad reduction where the Jacobian does not). |
+| `magma/prepare_submission.m` | for submitters: run locally, prints the submission JSON (curve, torsion group + generators on the even model, class guess, conductor). |
 | `magma/trivial_torsion_family.m` | the family certificate for the trivial group (log in `data/knowledge/sources/`). |
 | `tests/` | `test_pipeline.py` (Python contract tests, run by CI), `run_magma_tests.sh` + `fixtures/` (known positives and negative controls for the Magma verifier; run by hand). |
 

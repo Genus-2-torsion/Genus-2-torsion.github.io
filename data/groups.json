@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17 14:00 UTC",
+  "generated": "2026-09-17 15:52 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -97,7 +97,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 1 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -146,7 +150,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 1 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -158,6 +166,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -231,7 +251,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 2 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -283,7 +307,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 2 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -295,6 +323,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -366,7 +406,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 3 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -419,7 +463,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 3 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -430,6 +478,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": null,
+        "gsplit": "BSSVY",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -502,7 +562,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 4 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -554,7 +618,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 4 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -566,6 +634,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -637,7 +717,11 @@
             ],
             "rm": false,
             "discovered_by": "Ogg 1973",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Ogg1973",
+            "first_source_year": 1973,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 5 (source: \\cite{Ogg1973})",
             "new_group": true,
             "new_for_class": true,
@@ -686,7 +770,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 5 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -698,6 +786,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Ogg1973",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -771,7 +871,11 @@
             ],
             "rm": false,
             "discovered_by": "Flynn 1991",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Flynn1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 6 (source: \\cite{Flynn1991})",
             "new_group": true,
             "new_for_class": true,
@@ -822,7 +926,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 6 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -834,6 +942,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Flynn1991",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -908,7 +1028,11 @@
             ],
             "rm": false,
             "discovered_by": "Ogg 1973",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Ogg1973",
+            "first_source_year": 1973,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 7 (source: \\cite{Ogg1973})",
             "new_group": true,
             "new_for_class": true,
@@ -960,7 +1084,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 7 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -972,6 +1100,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Ogg1973",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1045,7 +1185,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 8 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -1095,7 +1239,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 8 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -1107,6 +1255,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1180,7 +1340,11 @@
             ],
             "rm": false,
             "discovered_by": "Flynn 1991",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Flynn1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 9 (source: \\cite{Flynn1991})",
             "new_group": true,
             "new_for_class": true,
@@ -1231,7 +1395,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 9 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -1243,6 +1411,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Flynn1991",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1317,7 +1497,11 @@
             ],
             "rm": false,
             "discovered_by": "Flynn 1991",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Flynn1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 10 (source: \\cite{Flynn1991})",
             "new_group": true,
             "new_for_class": true,
@@ -1367,7 +1551,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 10 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -1379,6 +1567,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Flynn1991",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1450,7 +1650,11 @@
             ],
             "rm": false,
             "discovered_by": "Ogg 1973",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Ogg1973",
+            "first_source_year": 1973,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 11 (source: \\cite{Ogg1973})",
             "new_group": true,
             "new_for_class": true,
@@ -1500,7 +1704,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 11 (source: new)",
             "new_group": false,
             "new_for_class": true,
@@ -1511,6 +1719,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Ogg1973",
+        "qsplit": null,
+        "gsplit": "BNSS2026",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1583,7 +1803,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 12 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -1633,7 +1857,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 12 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -1645,6 +1873,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1718,7 +1958,11 @@
             ],
             "rm": false,
             "discovered_by": "Flynn 1990; Leprévost 1991 (order 13)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Flynn1990",
+            "first_source_year": 1990,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 13 (source: \\cite{Flynn1990,Leprevost1991a})",
             "new_group": true,
             "new_for_class": true,
@@ -1731,6 +1975,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Flynn1990",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1803,7 +2059,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2012",
+            "first_source_year": 2012,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 14 (source: \\cite{PP2012,PZP2013})",
             "new_group": true,
             "new_for_class": true,
@@ -1854,7 +2114,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 13 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -1866,6 +2130,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "PP2012",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -1937,7 +2213,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 15 (source: \\cite{Leprevost1991})",
             "new_group": true,
             "new_for_class": true,
@@ -1987,7 +2267,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 14 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -1999,6 +2283,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1991",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2073,7 +2369,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 16 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -2125,7 +2425,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 15 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -2137,6 +2441,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2209,7 +2525,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 17 (source: \\cite{Leprevost1991})",
             "new_group": true,
             "new_for_class": true,
@@ -2222,6 +2542,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1991",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2296,7 +2628,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2012",
+            "first_source_year": 2012,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 18 (source: \\cite{PP2012,PZP2013})",
             "new_group": true,
             "new_for_class": true,
@@ -2347,7 +2683,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 16 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -2359,6 +2699,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "PP2012",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2434,7 +2786,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21); Platonov–Zhgun–Petrunin 2013",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 19 (source: \\cite{Leprevost1991,PZP2013})",
             "new_group": true,
             "new_for_class": true,
@@ -2484,7 +2840,11 @@
             ],
             "rm": false,
             "discovered_by": "Mazur–Tate 1973; Ogg 1973",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "MazurTate1973",
+            "first_source_year": 1973,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 17 (source: \\cite{MazurTate1973,Ogg1973})",
             "new_group": false,
             "new_for_class": true,
@@ -2495,6 +2855,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1991",
+        "qsplit": null,
+        "gsplit": "MazurTate1973",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2567,7 +2939,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1997",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1997",
+            "first_source_year": 1997,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 20 (source: \\cite{Leprevost1997})",
             "new_group": true,
             "new_for_class": true,
@@ -2618,7 +2994,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 18 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -2630,6 +3010,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1997",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2705,7 +3097,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1991",
+            "first_source_year": 1991,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 21 (source: \\cite{Leprevost1991})",
             "new_group": true,
             "new_for_class": true,
@@ -2757,7 +3153,11 @@
             ],
             "rm": false,
             "discovered_by": "Ogg 1973",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Ogg1973",
+            "first_source_year": 1973,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 19 (source: \\cite{Ogg1973})",
             "new_group": false,
             "new_for_class": true,
@@ -2768,6 +3168,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1991",
+        "qsplit": null,
+        "gsplit": "Ogg1973",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2843,7 +3255,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1993",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1993",
+            "first_source_year": 1993,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 22 (source: \\cite{Leprevost1993})",
             "new_group": true,
             "new_for_class": true,
@@ -2856,6 +3272,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1993",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -2930,7 +3358,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1993",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1993",
+            "first_source_year": 1993,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 23 (source: \\cite{Leprevost1993})",
             "new_group": true,
             "new_for_class": true,
@@ -2943,6 +3375,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1993",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3017,7 +3461,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1993",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1993",
+            "first_source_year": 1993,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 24 (source: \\cite{Leprevost1993})",
             "new_group": true,
             "new_for_class": true,
@@ -3067,7 +3515,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1995",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1995",
+            "first_source_year": 1995,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 20 (source: \\cite{Leprevost1995})",
             "new_group": false,
             "new_for_class": true,
@@ -3079,6 +3531,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1993",
+        "qsplit": "Leprevost1995",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3149,7 +3613,11 @@
             ],
             "rm": false,
             "discovered_by": "Nicholls 2018",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Nicholls2018",
+            "first_source_year": 2018,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 25 (source: \\cite{Nicholls2018})",
             "new_group": true,
             "new_for_class": true,
@@ -3203,7 +3671,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1995; Platonov–Zhgun–Petrunin 2013",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1995",
+            "first_source_year": 1995,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 21 (source: \\cite{Leprevost1995,PZP2013})",
             "new_group": false,
             "new_for_class": true,
@@ -3214,6 +3686,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Nicholls2018",
+        "qsplit": null,
+        "gsplit": "Leprevost1995",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3284,7 +3768,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1993",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1993",
+            "first_source_year": 1993,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 26 (source: \\cite{Leprevost1993})",
             "new_group": true,
             "new_for_class": true,
@@ -3297,6 +3785,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1993",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3370,7 +3870,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe 2015",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Howe2015",
+            "first_source_year": 2015,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 27 (source: \\cite{Howe2015})",
             "new_group": true,
             "new_for_class": true,
@@ -3421,7 +3925,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1995",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1995",
+            "first_source_year": 1995,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 22 (source: \\cite{Leprevost1995})",
             "new_group": false,
             "new_for_class": true,
@@ -3432,6 +3940,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Howe2015",
+        "qsplit": null,
+        "gsplit": "Leprevost1995",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3505,7 +4025,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2012",
+            "first_source_year": 2012,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 28 (source: \\cite{PP2012,PZP2013})",
             "new_group": true,
             "new_for_class": true,
@@ -3557,7 +4081,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Zhgun–Petrunin 2013; Howe 2015",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PZP2013",
+            "first_source_year": 2013,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 23 (source: \\cite{PZP2013,Howe2015})",
             "new_group": false,
             "new_for_class": true,
@@ -3569,6 +4097,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "PP2012",
+        "qsplit": "PZP2013",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3642,7 +4182,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1993",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1993",
+            "first_source_year": 1993,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 29 (source: \\cite{Leprevost1993})",
             "new_group": true,
             "new_for_class": true,
@@ -3655,6 +4199,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1993",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3728,7 +4284,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2015",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2015",
+            "first_source_year": 2015,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 30 (source: \\cite{PP2015})",
             "new_group": true,
             "new_for_class": true,
@@ -3780,7 +4340,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 24 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -3792,6 +4356,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "PP2015",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3868,7 +4444,11 @@
             ],
             "rm": true,
             "discovered_by": "Costa et al. (ModularAbelianSurfaces)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "costa",
+            "first_source_year": 2022,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 31 (source: \\cite{costa}$^{\\text{RM}}$)",
             "new_group": true,
             "new_for_class": true,
@@ -3881,6 +4461,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "costa",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -3956,7 +4548,11 @@
             ],
             "rm": false,
             "discovered_by": "Elkies 2002",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Elkies2002",
+            "first_source_year": 2002,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 32 (source: \\cite{Elkies2002})",
             "new_group": true,
             "new_for_class": true,
@@ -3969,6 +4565,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Elkies2002",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -4045,7 +4653,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2012b; Platonov–Zhgun–Petrunin 2013",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2012b",
+            "first_source_year": 2012,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 33 (source: \\cite{PP2012b,PZP2013})",
             "new_group": true,
             "new_for_class": true,
@@ -4058,6 +4670,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "PP2012b",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -4130,7 +4754,11 @@
             ],
             "rm": false,
             "discovered_by": "Elkies 2002",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Elkies2002",
+            "first_source_year": 2002,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 34 (source: \\cite{Elkies2002})",
             "new_group": true,
             "new_for_class": true,
@@ -4143,6 +4771,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Elkies2002",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -4216,7 +4856,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 25 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -4228,6 +4872,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -4301,7 +4957,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2015",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2015",
+            "first_source_year": 2015,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 35 (source: \\cite{PP2015})",
             "new_group": true,
             "new_for_class": true,
@@ -4353,7 +5013,11 @@
             ],
             "rm": false,
             "discovered_by": "Platonov–Petrunin 2012b; Platonov 2014",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2012b",
+            "first_source_year": 2012,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 26 (source: \\cite{PP2012b,Platonov2014})",
             "new_group": false,
             "new_for_class": true,
@@ -4365,6 +5029,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "PP2015",
+        "qsplit": "PP2012b",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -4436,7 +5112,11 @@
             ],
             "rm": false,
             "discovered_by": "Elkies 2002",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Elkies2002",
+            "first_source_year": 2002,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 36 (source: \\cite{Elkies2002})",
             "new_group": true,
             "new_for_class": true,
@@ -4449,6 +5129,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Elkies2002",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -4519,7 +5211,11 @@
             ],
             "rm": false,
             "discovered_by": "Elkies 2002",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Elkies2002",
+            "first_source_year": 2002,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 37 (source: \\cite{Elkies2002})",
             "new_group": true,
             "new_for_class": true,
@@ -4569,7 +5265,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 27 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -4581,6 +5281,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Elkies2002",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -4654,7 +5366,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 28 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -4666,6 +5382,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -4742,7 +5470,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe 2015; Platonov–Petrunin 2012b; Platonov 2014",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "PP2012b",
+            "first_source_year": 2012,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 29 (source: \\cite{Howe2015, PP2012b,Platonov2014})",
             "new_group": true,
             "new_for_class": true,
@@ -4754,6 +5486,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "PP2012b",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -4827,7 +5571,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 30 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -4839,6 +5587,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -4912,7 +5672,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 31 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -4924,6 +5688,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -4997,7 +5773,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe 2015",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Howe2015",
+            "first_source_year": 2015,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 32 (source: \\cite{Howe2015})",
             "new_group": true,
             "new_for_class": true,
@@ -5009,6 +5789,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "Howe2015",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -5080,7 +5872,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 38 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5133,7 +5929,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 33 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -5144,6 +5944,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": null,
+        "gsplit": "BSSVY",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -5217,7 +6029,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 39 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5267,7 +6083,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 34 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -5279,6 +6099,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -5351,7 +6183,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 40 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5401,7 +6237,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 35 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -5413,6 +6253,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -5486,7 +6338,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 41 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5537,7 +6393,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 36 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -5549,6 +6409,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -5622,7 +6494,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 42 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5674,7 +6550,11 @@
             ],
             "rm": false,
             "discovered_by": "Ogg 1973",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Ogg1973",
+            "first_source_year": 1973,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 37 (source: \\cite{Ogg1973})",
             "new_group": false,
             "new_for_class": true,
@@ -5685,6 +6565,18 @@
           }
         ],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": null,
+        "gsplit": "Ogg1973",
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -5760,7 +6652,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 43 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5811,7 +6707,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 38 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -5823,6 +6723,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -5897,7 +6809,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 44 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -5948,7 +6864,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 39 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -5960,6 +6880,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6033,7 +6965,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 45 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6085,7 +7021,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 40 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -6097,6 +7037,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6170,7 +7122,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 46 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6221,7 +7177,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 41 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -6233,6 +7193,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6306,7 +7278,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 47 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6357,7 +7333,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 42 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -6369,6 +7349,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6444,7 +7436,11 @@
             ],
             "rm": true,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 48 (source: \\cite{BookerSutherland}$^{\\rm RM}$)",
             "new_group": true,
             "new_for_class": true,
@@ -6457,6 +7453,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6533,7 +7541,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 43 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -6545,6 +7557,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -6620,7 +7644,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 49 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6633,6 +7661,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6706,7 +7746,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 50 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6719,6 +7763,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -6793,7 +7849,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 44 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6805,6 +7865,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -6879,7 +7951,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 45 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -6891,6 +7967,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -6962,7 +8050,11 @@
             ],
             "rm": false,
             "discovered_by": "Bruin–Flynn–Testa 2014",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BFT2014",
+            "first_source_year": 2014,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 51 (source: \\cite{BFT2014})",
             "new_group": true,
             "new_for_class": true,
@@ -7011,7 +8103,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 46 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -7023,6 +8119,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BFT2014",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -7099,7 +8207,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 52 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -7150,7 +8262,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 47 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -7162,6 +8278,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -7236,7 +8364,11 @@
             ],
             "rm": false,
             "discovered_by": "Leprévost 1995",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Leprevost1995",
+            "first_source_year": 1995,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 53 (source: \\cite{Leprevost1995})",
             "new_group": true,
             "new_for_class": true,
@@ -7287,7 +8419,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 48 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -7299,6 +8435,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Leprevost1995",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -7377,7 +8525,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 49 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -7389,6 +8541,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -7465,7 +8629,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 50 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -7477,6 +8645,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -7550,7 +8730,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 54 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -7601,7 +8785,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 51 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -7613,6 +8801,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -7687,7 +8887,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 55 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -7736,7 +8940,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 52 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -7748,6 +8956,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -7824,7 +9044,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 53 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -7836,6 +9060,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -7909,7 +9145,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 54 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -7921,6 +9161,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -7995,7 +9247,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 55 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -8007,6 +9263,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -8081,7 +9349,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 56 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -8093,6 +9365,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -8165,7 +9449,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 56 (source: new)",
             "new_group": true,
             "new_for_class": true,
@@ -8216,7 +9504,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 57 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -8228,6 +9520,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BNSS2026",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -8304,7 +9608,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 58 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -8316,6 +9624,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -8390,7 +9710,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 59 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -8402,6 +9726,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -8476,7 +9812,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 60 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -8488,6 +9828,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -8562,7 +9914,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 57 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -8611,7 +9967,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 61 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -8623,6 +9983,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -8698,7 +10070,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 58 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -8750,7 +10126,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 62 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -8762,6 +10142,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -8837,7 +10229,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 59 (source: \\cite{BSSVY})",
             "new_group": true,
             "new_for_class": true,
@@ -8888,7 +10284,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 63 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -8900,6 +10300,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BSSVY",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -8973,7 +10385,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 60 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -9022,7 +10438,11 @@
             ],
             "rm": false,
             "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 64 (source: \\cite{BSSVY})",
             "new_group": false,
             "new_for_class": true,
@@ -9034,6 +10454,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BSSVY",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -9109,7 +10541,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 61 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -9160,7 +10596,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 65 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -9172,6 +10612,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -9249,7 +10701,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 62 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -9299,7 +10755,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 66 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -9311,6 +10771,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -9384,7 +10856,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database); Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 63 (source: \\cite{BookerSutherland}, new)",
             "new_group": true,
             "new_for_class": true,
@@ -9397,6 +10873,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -9472,7 +10960,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 67 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -9484,6 +10976,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -9556,7 +11060,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 64 (source: new)",
             "new_group": true,
             "new_for_class": true,
@@ -9569,6 +11077,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BNSS2026",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -9644,7 +11164,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 68 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -9656,6 +11180,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -9731,7 +11267,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 65 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -9780,7 +11320,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 69 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -9792,6 +11336,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -9865,7 +11421,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 66 (source: new)",
             "new_group": true,
             "new_for_class": true,
@@ -9915,7 +11475,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 70 (source: \\cite{HLP2000})",
             "new_group": false,
             "new_for_class": true,
@@ -9927,6 +11491,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BNSS2026",
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10006,7 +11582,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 71 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -10018,6 +11598,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,
@@ -10094,7 +11686,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 67 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -10145,7 +11741,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 72 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": false,
@@ -10155,6 +11755,18 @@
             "source_kind": "import"
           }
         ]
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": "BookerSutherland"
       },
       "known": {
         "simple": true,
@@ -10231,7 +11843,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 68 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -10281,7 +11897,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 73 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -10293,6 +11913,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10370,7 +12002,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 69 (source: \\cite{BookerSutherland})",
             "new_group": true,
             "new_for_class": true,
@@ -10420,7 +12056,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 74 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -10432,6 +12072,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BookerSutherland",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10506,7 +12158,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 70 (source: new)",
             "new_group": true,
             "new_for_class": true,
@@ -10557,7 +12213,11 @@
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 75 (source: \\cite{BookerSutherland})",
             "new_group": false,
             "new_for_class": true,
@@ -10569,6 +12229,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BNSS2026",
+        "qsplit": "BookerSutherland",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10645,7 +12317,11 @@
             ],
             "rm": false,
             "discovered_by": "Elkies 2024",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "Elkies2024",
+            "first_source_year": 2024,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 71 (source: \\cite{Elkies2024})",
             "new_group": true,
             "new_for_class": true,
@@ -10658,6 +12334,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "Elkies2024",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10734,7 +12422,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 72 (source: new)",
             "new_group": true,
             "new_for_class": true,
@@ -10747,6 +12439,18 @@
         "qsplit": [],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BNSS2026",
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10822,7 +12526,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 73 (source: new)",
             "new_group": true,
             "new_for_class": true,
@@ -10872,7 +12580,11 @@
             ],
             "rm": false,
             "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "BNSS2026",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 76 (source: new)",
             "new_group": false,
             "new_for_class": true,
@@ -10884,6 +12596,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": "BNSS2026",
+        "qsplit": "BNSS2026",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": true,
@@ -10960,7 +12684,11 @@
             ],
             "rm": false,
             "discovered_by": "Howe–Leprévost–Poonen 2000",
-            "year": "",
+            "year": null,
+            "historical": false,
+            "first_source": "HLP2000",
+            "first_source_year": 2000,
+            "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 77 (source: \\cite{HLP2000})",
             "new_group": true,
             "new_for_class": true,
@@ -10972,6 +12700,18 @@
         ],
         "gsplit": [],
         "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": "HLP2000",
+        "gsplit": null,
+        "undecided": null
       },
       "known": {
         "simple": false,

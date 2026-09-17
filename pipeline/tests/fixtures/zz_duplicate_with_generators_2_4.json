@@ -1,0 +1,25 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^5 - 8*x^4 + 16*x^3 - x",
+  "h": "x",
+  "group": [
+    2,
+    4
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x",
+      "0",
+      1
+    ],
+    [
+      "x^2 - 4*x + 1",
+      "x",
+      2
+    ]
+  ],
+  "submitter": "test fixture",
+  "reference": "LMFDB 997.a.997.1",
+  "notes": "known positive with submitted generators but a non-sharp point-count bound (16 > 8): TorsionSubgroup must run; as a Q-duplicate of positive_997_a_997_1 (processed earlier) it must be REJECTED as a duplicate"
+}

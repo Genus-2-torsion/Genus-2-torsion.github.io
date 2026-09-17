@@ -69,6 +69,7 @@
   const infBadge = (rec) => el("span", { class: "inf-badge " + rec.grade,
     title: GRADE_TEXT[rec.grade] + (rec.note ? " — " + rec.note : "") }, GRADE[rec.grade]);
   const discovery = (by, year) => (by ? by + (year ? " (" + year + ")" : "") : (year ? String(year) : "—"));
+  const srcYear = (src) => (src.short.includes(String(src.year)) ? "" : " (" + src.year + ")");
 
   function lmfdbLink(l, long) {
     if (!l || !l.url) return null;
@@ -140,22 +141,39 @@
     return out;
   }
 
-  function exampleCell(list, sources, g, cls) {
-    if (!list.length) return el("td", { class: "ex none" }, "—");
-    const c = list[0];
+  function exampleCell(list, sources, g, cls, mode) {
+    const side = cls === "simple" || cls === "qsplit" || (cls === "gsplit" && !$("#cls-qsplit").checked) ? " side-start" : "";
+    if (!list.length) return el("td", { class: "ex none" + side }, "—");
+    let c = list[0], dim = false;
     const meta = [];
+    if (mode === "first") {
+      const i = g.first_dated[cls];
+      if (i === null || i === undefined) {
+        // no curve of this class carries a discovery date: show the smallest-conductor curve, dimmed,
+        // with the source the paper credits for the first realisation of the group
+        dim = true;
+        const fs = g.first_source[cls], src = fs && sources[fs];
+        if (src) meta.push(el("span", { title: "the source credited for the first realisation of this group in this class; the curve shown is the smallest-conductor example, whose own discovery is not dated" },
+          "first known: ", el("a", { href: "about.html#src-" + fs, title: src.cite }, src.short), srcYear(src)));
+      } else {
+        c = list[i];
+        meta.push(el("span", null, discovery(c.discovered_by, c.year)));
+      }
+    }
     const lm = lmfdbLink(c.lmfdb);
     if (lm) meta.push(lm);
     if (c.conductor) meta.push(el("span", { title: c.conductor_note || "conductor" }, "N = " + c.conductor));
-    if (c.sources && c.sources.length) meta.push(el("span", null, sourceLinks(sources, c.sources)));
-    else if (c.discovered_by) meta.push(el("span", null, c.discovered_by));
+    if (mode !== "first") {
+      if (c.sources && c.sources.length) meta.push(el("span", null, sourceLinks(sources, c.sources)));
+      else if (c.discovered_by) meta.push(el("span", null, discovery(c.discovered_by, c.year)));
+    }
     if (c.rm) meta.push(el("span", { title: "the Jacobian has real multiplication" }, "RM"));
     if (c.status !== "certified") meta.push(chip(c.status));
     if (list.length > 1) meta.push(el("a", { href: "group.html?g=" + g.key }, "+" + (list.length - 1) + " more"));
     const metaNodes = [];
     meta.forEach((m, i) => { if (i) metaNodes.push(el("span", { class: "sep" }, "·")); metaNodes.push(m); });
-    return el("td", { class: "ex" + (cls === "simple" || cls === "qsplit" ? " side-start" : "") },
-      el("p", { class: "eq" }, el("a", { href: "curve.html?id=" + encodeURIComponent(c.id), html: eqHtml(c.equation) })),
+    return el("td", { class: "ex" + side },
+      el("p", { class: "eq" + (dim ? " dim" : "") }, el("a", { href: "curve.html?id=" + encodeURIComponent(c.id), html: eqHtml(c.equation) })),
       el("span", { class: "meta" }, metaNodes));
   }
 
@@ -172,8 +190,9 @@
     const tbody = $("#groups tbody");
     const boxes = { simple: $("#cls-simple"), qsplit: $("#cls-qsplit"), gsplit: $("#cls-gsplit") };
     const onlyAll = $("#only-all"), showInf = $("#show-inf");
-    const sortSel = $("#sort");
+    const sortSel = $("#sort"), modeSel = $("#example-mode");
     function draw() {
+      const mode = modeSel.value;
       const shown = CLASSES.map(([k]) => k).filter((k) => boxes[k].checked);
       const showSimple = shown.includes("simple"), showSplit = shown.includes("qsplit") || shown.includes("gsplit");
       // header
@@ -185,7 +204,7 @@
         el("th", { class: "num sortable" }, "order"));
       if (showSimple) {
         sup.append(el("th", { class: "side-simple", colspan: showInf.checked ? 2 : 1 }, "geometrically simple"));
-        cols.append(el("th", { class: "side-start", title: "smallest-conductor known curve with geometrically simple Jacobian and this torsion" }, "example"));
+        cols.append(el("th", { class: "side-start", title: mode === "first" ? "earliest known curve with geometrically simple Jacobian and this torsion" : "smallest-conductor known curve with geometrically simple Jacobian and this torsion" }, mode === "first" ? "first example" : "smallest conductor"));
         if (showInf.checked) cols.append(el("th", { class: "sortable", title: "infinitely many geometrically simple Jacobians with this torsion? ∞ certified exact · ∞ ⊇ family with torsion containing the group · ? open" }, "∞?"));
       }
       if (showSplit) {
@@ -209,12 +228,12 @@
             el("span", { class: "lbl" }, g.label, undec ? [" · ", el("a", { href: "group.html?g=" + g.key, class: "muted" }, undec + " curve" + (undec > 1 ? "s" : "") + " with undecided class")] : null)),
           el("td", { class: "num" }, g.order));
         if (showSimple) {
-          tr.append(exampleCell(g.classes.simple, sources, g, "simple"));
+          tr.append(exampleCell(g.classes.simple, sources, g, "simple", mode));
           if (showInf.checked) tr.append(el("td", { class: "inf", "data-sort": { exact: 0, family: 1, open: 2 }[g.infinite.simple.grade] }, infBadge(g.infinite.simple)));
         }
         if (showSplit) {
-          if (shown.includes("qsplit")) tr.append(exampleCell(g.classes.qsplit, sources, g, "qsplit"));
-          if (shown.includes("gsplit")) tr.append(exampleCell(g.classes.gsplit, sources, g, shown.includes("qsplit") ? "gsplit" : "qsplit"));
+          if (shown.includes("qsplit")) tr.append(exampleCell(g.classes.qsplit, sources, g, "qsplit", mode));
+          if (shown.includes("gsplit")) tr.append(exampleCell(g.classes.gsplit, sources, g, "gsplit", mode));
           if (showInf.checked) tr.append(el("td", { class: "inf", "data-sort": { exact: 0, family: 1, open: 2 }[g.infinite.split.grade] }, infBadge(g.infinite.split)));
         }
         tbody.append(tr);
@@ -222,7 +241,7 @@
       makeSortable($("#groups"));
     }
     Object.values(boxes).forEach((b) => b.addEventListener("change", draw));
-    onlyAll.addEventListener("change", draw); showInf.addEventListener("change", draw); sortSel.addEventListener("change", draw);
+    onlyAll.addEventListener("change", draw); showInf.addEventListener("change", draw); sortSel.addEventListener("change", draw); modeSel.addEventListener("change", draw);
     draw();
     loadPending();
   }
@@ -248,14 +267,15 @@
       el("thead", null, el("tr", null,
         el("th", { class: "sortable" }, "id"), el("th", null, "curve"),
         el("th", { class: "num sortable", title: "conductor of the Jacobian (blank when the discriminant could not be factored)" }, "N"),
-        el("th", null, "LMFDB"), el("th", { class: "sortable" }, "source / discovered by"),
+        el("th", null, "LMFDB"), el("th", { class: "sortable" }, "source / discovered by"), el("th", { class: "num sortable", title: "year of discovery, when recorded" }, "year"),
         el("th", null, "certificate"), el("th", null, "status"))),
       el("tbody", null, list.map((c) => el("tr", { class: "row-link", onclick: (e) => { if (e.target.tagName !== "A") location.href = "curve.html?id=" + encodeURIComponent(c.id); } },
         el("td", null, el("a", { class: "id", href: "curve.html?id=" + encodeURIComponent(c.id) }, c.id)),
         el("td", { class: "poly", html: eqHtml(c.equation) }),
         el("td", { class: "num", "data-sort": c.conductor_sort === null ? 1e300 : c.conductor_sort, title: c.conductor_note || "" }, c.conductor || "—"),
         el("td", null, lmfdbLink(c.lmfdb) || el("span", { class: "empty" }, "—")),
-        el("td", null, c.sources && c.sources.length ? sourceLinks(sources, c.sources) : discovery(c.discovered_by, c.year), c.rm ? el("span", { class: "muted" }, " · RM") : null),
+        el("td", null, c.sources && c.sources.length ? sourceLinks(sources, c.sources) : (c.discovered_by || "—"), c.rm ? el("span", { class: "muted" }, " · RM") : null, c.historical ? el("span", { class: "muted" }, " · historical example") : null),
+        el("td", { class: "num", "data-sort": c.year === null ? 9999 : c.year }, c.year === null ? "" : c.year),
         el("td", { class: "muted", style: "max-width: 22rem; font-size: 0.85rem" }, c.certificate),
         el("td", null, chip(c.status), c.new_group ? [" ", el("span", { class: "chip new", title: "first curve in the census with this group" }, "new group")] : null)))));
     makeSortable(table);
@@ -289,7 +309,11 @@
     if (nU) body.append(el("p", { class: "notice" }, nU + " curve" + (nU > 1 ? "s" : "") + " with this torsion group " + (nU > 1 ? "have" : "has") + " a verified torsion subgroup but no certificate of simplicity or splitness (see below)."));
     for (const [cls, name] of CLASSES) {
       if (!g.classes[cls].length) continue;
-      body.append(el("h3", null, name), curvesTable(g.classes[cls], sources));
+      const fs = g.first_source[cls], src = fs && sources[fs];
+      body.append(el("h3", null, name),
+        el("p", null, "Sorted by conductor. ", src ? ["First realisation credited to ", el("a", { href: "about.html#src-" + fs, title: src.cite }, src.short), srcYear(src),
+          g.first_dated[cls] === null ? "; the curves below are the smallest-conductor examples, not necessarily the curve of that source." : "."] : null),
+        curvesTable(g.classes[cls], sources));
     }
     if (nU) body.append(el("h3", null, "class not certified"), curvesTable(g.classes.undecided, sources));
   }

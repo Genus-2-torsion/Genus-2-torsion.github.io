@@ -16,6 +16,22 @@
     <span class="m">ℚ̄</span>? Or a smaller-conductor example of a known group? Submit it here. Every submission is re-verified with Magma on the
     Mordell workstation: the torsion subgroup is computed exactly, the Jacobian is certified geometrically simple or split (see below), and the curve
     is added to the census with its certificate and log.</p>
+  <p class="notice"><b>What is accepted.</b> A curve enters the census if its torsion group is new for its class (geometrically simple / split over ℚ /
+    simple over ℚ but split over ℚ̄), or if its conductor is <em>strictly smaller</em> than that of every census curve with the same group and class.
+    Curves isomorphic over ℚ to a census curve are duplicates and rejected; so is a curve of a known group whose conductor Magma cannot compute
+    within the time limit (it cannot be compared). Earliest-known historical examples of a group, which usually have a larger conductor, are added by
+    the curators — open an <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues">issue</a> with the reference.</p>
+
+  <h3>0. Run the preparation script on your machine (recommended)</h3>
+  <p><a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/pipeline/magma/prepare_submission.m"><code>pipeline/magma/prepare_submission.m</code></a>
+    computes, with your own Magma (V2.28-9 or later), everything the verifier needs: the torsion subgroup with its generators in Mumford representation
+    <span class="m">⟨a(x), b(x), d⟩</span> on the even model <span class="m">y² = 4f + h²</span>, the point-count bound, a strict prime or the split signature,
+    the conductor, and it prints the submission as JSON:</p>
+<pre><code>magma -b f:="x^5 - 8*x^4 + 16*x^3 - x" h:="x" pipeline/magma/prepare_submission.m</code></pre>
+  <p>Paste the generators into the form (or the whole JSON into a bulk submission). When the order of the group they generate equals the gcd of
+    <span class="m">#J(𝔽<sub>p</sub>)</span> over good primes — the case for about 60% of the census curves — Mordell certifies the torsion from the
+    generators alone, without running Stoll's algorithm; otherwise it runs it, so nothing is lost by supplying them. The script is not required: the
+    verifier recomputes everything anyway.</p>
 
   <h3>1. Fill in the form</h3>
   <p>Submissions are GitHub issues created from a form (a free GitHub account is all you need):</p>
@@ -27,12 +43,17 @@
     Then the torsion group you expect as invariant factors, e.g. <code>[2,2,12]</code>, and whether you believe the Jacobian is geometrically simple or split.
     Please say who found the curve and where it is published (or "new"); these are shown in the tables.</p>
 
+  <p>Optionally give the generators of the torsion subgroup (as printed by the script above) as a JSON list of Mumford triples
+    <code>[["a(x)", "b(x)", d], …]</code> on the even model <span class="m">y² = 4f + h²</span>; they must be independent torsion points, or the
+    submission is rejected.</p>
+
   <h3>2. What happens next</h3>
   <ol class="steps">
     <li>The issue is labelled <code>submission</code> and waits in the queue (the home page shows how many are waiting).</li>
-    <li>Periodically the queue is pulled to Mordell. Magma checks that the model is a smooth genus 2 curve, computes <span class="m">J(ℚ)<sub>tors</sub></span>
-      exactly (Stoll's algorithm, <code>TorsionSubgroup</code>), and cross-checks it against the orders of <span class="m">J(𝔽<sub>p</sub>)</span> at good primes.
-      If your group differs from the computed one, the curve is recorded with the computed group.</li>
+    <li>Periodically the queue is pulled to Mordell. Magma checks that the model is a smooth genus 2 curve and computes the gcd of
+      <span class="m">#J(𝔽<sub>p</sub>)</span> over good primes, a bound for <span class="m">#J(ℚ)<sub>tors</sub></span>. If you gave generators that are independent
+      torsion points generating a group of that order, the torsion subgroup is certified; otherwise it is computed exactly (Stoll's algorithm,
+      <code>TorsionSubgroup</code>). If your group differs from the computed one, the curve is recorded with the computed group.</li>
     <li>The class is certified: <b>geometrically simple</b> by a good prime whose Frobenius polynomial is irreducible with no degree drop of
       <span class="m">πⁿ</span> for <span class="m">n ≤ 12</span>; <b>split over ℚ</b> by an extra involution over <span class="m">ℚ</span>, by a chain of at most two
       Richelot <span class="m">(2,2)</span>-isogenies over <span class="m">ℚ</span> reaching a product of elliptic curves, or by a map to an elliptic curve over
@@ -41,9 +62,9 @@
       listed, as <span class="chip undecided">verified · class not certified</span>, with the Frobenius evidence.</li>
     <li>The reduced minimal model and the conductor are computed when the discriminant can be factored quickly; the curve is linked to the LMFDB
       when it is there.</li>
-    <li>The result is posted as a comment on the issue, the issue is closed, and the curve appears on this site with its certificate and Magma log.
-      Duplicates (curves isomorphic over <span class="m">ℚ</span> to a census curve) and models that do not define a smooth genus 2 curve are rejected;
-      if a submission is rejected because of a data problem, just fix it and submit again.</li>
+    <li>The acceptance rule above is applied (new group for the class, or smaller conductor). The result is posted as a comment on the issue, the
+      issue is closed, and an accepted curve appears on this site with its certificate and Magma log. If a submission is rejected because of a data
+      problem, just fix it and submit again.</li>
   </ol>
 
   <h3>Supplying a splitness certificate</h3>
@@ -72,10 +93,13 @@
   "discoverer": "J. Doe", "year": 2026,
   "reference": "arXiv:XXXX.XXXXX, Theorem 3",
   "notes": "anything the curators should know",
+  "generators": [["x", "0", 1], ["x^2 - 4*x + 1", "x", 2]],
   "cover": null
 }</code></pre>
   <p>Instead of <code>"f"</code> and <code>"h"</code> you may give <code>"coeffs": [[f],[h]]</code>. <code>"class"</code> is <code>"simple"</code>,
-    <code>"split"</code> or empty; <code>"cover"</code> is the optional certificate above. The example values are the [2,4] curve 997.a.997.1.</p>
+    <code>"split"</code> or empty; <code>"generators"</code> and <code>"cover"</code> are optional. The example values are the [2,4] curve
+    997.a.997.1 (already in the census, so this exact submission would be rejected as a duplicate). Curators may add <code>"historical": true</code>
+    with a <code>"year"</code> to record the earliest known example of a group regardless of its conductor.</p>
 
   <h3>Families</h3>
   <p>A proof that a group occurs for <em>infinitely many</em> Jacobians (a family) cannot be verified automatically. Open an

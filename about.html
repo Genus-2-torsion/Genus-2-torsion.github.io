@@ -38,18 +38,33 @@
       elliptic curves over <span class="m">ℚ</span>); <b>simple over ℚ but split over ℚ̄</b> (for instance the Weil restriction of an elliptic curve over a
       quadratic field, or <span class="m">J₁(13)</span>). The paper's Table 1 is the first class, its Table 2 the union of the other two. A curve enters a
       class only with a certificate; otherwise it is listed as "class not certified", with the evidence.</dd>
-    <dt>one example per group and class</dt>
-    <dd>The home page shows, for each group and class, the known curve of smallest conductor; the group page lists all certified curves.
-      A submitted curve isomorphic over <span class="m">ℚ</span> to a census curve is rejected as a duplicate; geometrically isomorphic curves
-      (twists) are accepted and cross-referenced.</dd>
+    <dt>which curves are recorded</dt>
+    <dd>For each group and class the census keeps the known curve of smallest conductor: a submitted curve is accepted when its (group, class) is new,
+      or when its conductor is strictly smaller than that of every census curve with the same group and class (a curve whose conductor cannot be computed
+      is then rejected, as it cannot be compared). Earlier curves stay in the census, so the group page shows the history of the record. In addition the
+      curators may enter the <em>earliest known</em> curve of a group with its discovery year ("historical example"), whatever its conductor.
+      A curve isomorphic over <span class="m">ℚ</span> to a census curve is a duplicate and rejected; geometrically isomorphic curves (twists) are
+      accepted and cross-referenced.</dd>
+    <dt>smallest conductor / first example</dt>
+    <dd>The home page shows, for each group and class, either the curve of smallest conductor or — with the toggle — the earliest curve with a recorded
+      discovery year. The seed curves have no year of their own: the paper's tables give the smallest-conductor example and credit the <em>first
+      source</em> of a realisation of the group, which need not be that curve (for [5] it credits Ogg 1973, whose curve is a modular curve of larger
+      conductor). In the "first example" view such cells show the smallest-conductor curve dimmed, with "first known: source (year)"; submitting the
+      original curves is welcome.</dd>
   </dl>
 
   <h3>How a curve is certified</h3>
   <p>Every submission is verified from scratch by <code>pipeline/magma/verify_lib.m</code> (Magma V2.29) on Mordell.</p>
   <ol class="steps">
-    <li><b>Torsion.</b> <span class="m">J(ℚ)<sub>tors</sub></span> is computed exactly with Magma's <code>TorsionSubgroup</code> (Stoll's algorithm with the
-      Müller–Stoll height bounds), on the Jacobian of the simplified model, and its generators are recorded in Mumford representation. As a check,
-      its order must divide the gcd of <span class="m">#J(𝔽<sub>p</sub>)</span> over a dozen good primes.</li>
+    <li><b>Torsion.</b> First the gcd of <span class="m">#J(𝔽<sub>p</sub>)</span> over 25 good primes <span class="m">p ≥ 3</span> is computed (reduction is injective on
+      torsion, so <span class="m">#J(ℚ)<sub>tors</sub></span> divides it). If the submitter gave generators — points of the Jacobian of the even model
+      <span class="m">y² = 4f + h²</span> in Mumford representation — Magma checks that they are torsion points and independent (all sums of multiples are
+      distinct); if the order of the group they generate equals the gcd, that group is <span class="m">J(ℚ)<sub>tors</sub></span> and no search is needed
+      (method "generators"). Otherwise <span class="m">J(ℚ)<sub>tors</sub></span> is computed exactly with Magma's <code>TorsionSubgroup</code> (Stoll's algorithm
+      with the Müller–Stoll height bounds), and its generators are recorded. The Frobenius polynomials behind the gcd and the certificates below are
+      computed by brute-force point counting (<code>Al := "Naive"</code>): Magma V2.29-4's default algorithm returns a wrong polynomial for a small
+      proportion of genus 2 curves over <span class="m">𝔽₃, 𝔽₅, 𝔽₇</span>; every polynomial is cross-checked against Magma's point count, the functional
+      equation and the Weil bounds.</li>
     <li><b>Geometric simplicity.</b> A good prime <span class="m">p</span> is <em>strict</em> if the characteristic polynomial <span class="m">χ<sub>p</sub></span> of
       Frobenius on <span class="m">J mod p</span> is irreducible over <span class="m">ℚ</span> and, for a root <span class="m">π</span>, no power
       <span class="m">πⁿ</span> with <span class="m">n ≤ 12</span> generates a proper subfield of <span class="m">ℚ(π)</span>. One strict prime proves that

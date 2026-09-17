@@ -24,8 +24,12 @@ For each submission the script
      logs under data/logs/, and
   6. comments on / closes the GitHub issue the submission came from (unless --no-github).
 
-Every verified curve is accepted (a duplicate over Q of a census curve is rejected); the
-certificate records whether its (group, class) was new to the census at verification time.
+A verified curve is accepted when its (group, class) is new to the census, or when its conductor
+is strictly smaller than that of every census curve with the same group and class (duplicates
+over Q are rejected); a submission flagged "historical": true (inbox/PR only, for the earliest
+known example of a group) is accepted regardless of its conductor.  Submitted generators of the
+torsion subgroup (see pipeline/magma/prepare_submission.m) let Magma certify the torsion without
+running TorsionSubgroup when the point-count bound is sharp.
 Magma exits with status 0 even after an error, so success is judged from the JSON it wrote
 (`ok: true`) and the VERIFY_DONE marker in the log, never from the exit code.
 """
@@ -44,7 +48,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import knowledge  # noqa: E402
-from common import (CLASSES, CURVES_DIR, LOGS, LOGS_DIR, MAX_STRING, RE_ELEMENT_W, RE_POLY_X_UPPER,  # noqa: E402
+from common import (CLASSES, CURVES_DIR, LOGS, LOGS_DIR, MAX_STRING, RE_ELEMENT_W, RE_POLY_X, RE_POLY_X_UPPER,  # noqa: E402
                     REJECTED_DIR, SCHEMA_CERTIFICATE, SCHEMA_REJECTED, SITE_URL, SUBMISSIONS_INBOX,
                     SUBMISSIONS_PROCESSED, UNDECIDED, WORK, coeff_lists_from_submission, github_request,
                     github_token, group_bracket, group_key, group_order, is_invariant_factors, lmfdb_jump_url,
@@ -124,7 +128,33 @@ def validate(sub: dict) -> dict:
         out["cover"] = {"field": fld, "cremona": cremona, "cubic": cubic,
                         "p": _coeff_strings("cover.p", cov.get("p")), "q": _coeff_strings("cover.q", cov.get("q")),
                         "hh": _coeff_strings("cover.hh", cov.get("hh")), "note": str(cov.get("note", "") or "")[:500]}
-    for k in ("submitter", "github", "reference", "notes", "date", "source", "affiliation", "discoverer", "year",
+    gens = sub.get("generators")
+    if gens:
+        if not isinstance(gens, list) or len(gens) > 4:
+            raise Reject("generators must be a list of at most 4 Mumford triples [a(x), b(x), d]")
+        out["generators"] = []
+        for i, gen in enumerate(gens):
+            if not isinstance(gen, list) or len(gen) != 3:
+                raise Reject(f"generator {i+1} must be [a(x), b(x), d]")
+            a, b, d = str(gen[0]).replace(" ", ""), str(gen[1]).replace(" ", ""), gen[2]
+            for name, val in (("a", a), ("b", b)):
+                if not val or len(val) > MAX_STRING or not RE_POLY_X.match(val):
+                    raise Reject(f"generator {i+1}: {name}(x) contains characters outside the allowed set")
+            try:
+                d = int(d)
+            except Exception:
+                raise Reject(f"generator {i+1}: d must be 1 or 2")
+            if d not in (1, 2):
+                raise Reject(f"generator {i+1}: d must be 1 or 2")
+            out["generators"].append([a, b, d])
+    yr = sub.get("year")
+    if yr not in (None, ""):
+        try:
+            out["year"] = int(str(yr).strip())
+        except ValueError:
+            raise Reject("year must be an integer")
+    out["historical"] = bool(sub.get("historical", False))
+    for k in ("submitter", "github", "reference", "notes", "date", "source", "affiliation", "discoverer",
               "lmfdb_label", "sources", "rm", "route"):
         if k in sub:
             out[k] = sub[k]
@@ -152,6 +182,9 @@ def write_job(v: dict, jobdir: Path, mem_gb: int, existing) -> Path:
         lines.append("ClaimedGroup := [" + ", ".join(str(n) for n in v["group"]) + "];")
     if v.get("route") == "Q2":
         lines.append("QuadDiscs := [2];")
+    if v.get("generators"):
+        lines.append("Generators := [* " + ", ".join(
+            "< " + magma_string(a) + ", " + magma_string(b) + ", " + str(d) + " >" for a, b, d in v["generators"]) + " *];")
     if v.get("cover"):
         c = v["cover"]
         lines.append("Cover := < " + ", ".join([magma_string(c["field"]), magma_list(c["cubic"]), magma_list(c["p"]),
@@ -224,6 +257,41 @@ def next_id(key: str, curves) -> str:
         k += 1
 
 
+def acceptance(cert_class: str, certified: bool, inv, cond: str, curves, historical: bool):
+    """Decide whether a verified curve enters the census.  Returns (accept, reason, best_existing).
+    Rule: a curve is accepted if its (group, class) is new, or if its conductor is strictly smaller
+    than that of every census curve with the same group and class; `historical` (inbox/PR only)
+    admits an earlier-known curve regardless of its conductor.  A curve without a certified class
+    is accepted only for a group with no curve of a compatible class yet."""
+    key = group_key(inv)
+    same_group = [c for c in curves if c["group_key"] == key]
+    if certified:
+        rivals = [c for c in same_group if c["class"] == cert_class]
+    elif cert_class == "split_undecided_over_Q":
+        rivals = [c for c in same_group if c["class"] != "simple"]
+    else:
+        rivals = same_group
+    if not rivals:
+        return True, "new group" if not same_group else "new for this class", None
+    if historical:
+        return True, "historical example (added by the curators)", None
+    if not certified:
+        return False, ("the census already has curves with this torsion group, and the class of this curve could not be certified; "
+                       "a curve without a certified class is only accepted for a group that is not in the census yet"), rivals[0]
+    with_cond = [c for c in rivals if str(c["curve"].get("conductor") or "").isdigit()]
+    if not with_cond:
+        return True, "no census curve of this group and class has a known conductor", None
+    best = min(with_cond, key=lambda c: int(c["curve"]["conductor"]))
+    best_n = int(best["curve"]["conductor"])
+    if not str(cond or "").isdigit():
+        return False, (f"the conductor could not be computed within the time limit, so the curve cannot be compared with the census "
+                       f"curve {best['id']} of conductor {best_n} with the same group and class; only curves of smaller conductor are accepted"), best
+    if int(cond) < best_n:
+        return True, f"conductor {cond} < {best_n} of the census curve {best['id']}", best
+    return False, (f"the census already has the curve {best['id']} with this torsion group and class and conductor {best_n} ≤ {cond}; "
+                   "only curves of smaller conductor are accepted"), best
+
+
 def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -259,6 +327,7 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
         "status": "certified" if certified else "verified",
         "new_group": not known_any,
         "new_for_class": certified and cls not in known_classes,
+        "accepted_because": v.get("_accepted_because", ""),
         "curve": curve,
         "lmfdb": lmfdb,
         "torsion": res["torsion"],
@@ -266,7 +335,7 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
         "q_simple": res["q_simple"],
         "split": res["split"],
         "geometrically_isomorphic_to": res.get("same_g2", []),
-        "discovery": {"by": v.get("discoverer", ""), "year": v.get("year", "")},
+        "discovery": {"by": v.get("discoverer", ""), "year": v.get("year"), "historical": bool(v.get("historical", False))},
         "reference": v.get("reference", ""),
         "sources": sources,
         "rm": bool(v.get("rm", False)),
@@ -390,6 +459,11 @@ def process(path: Path, args) -> str:
                 log("  conductor not computed" + (" (timed out)" if ctimed else ""))
         lmfdb = lmfdb_record(v, res, not args.no_lmfdb)
         log(f"  LMFDB: {lmfdb['label'] or '-'} ({lmfdb['kind']})")
+        cond_str = cond["conductor"] if cond else (lmfdb["label"].split(".")[0] if lmfdb.get("label") else "")
+        accept, why, rival = acceptance(res["class"], res["class"] in CLASSES, inv, cond_str, curves, v.get("historical", False))
+        if not accept:
+            raise Reject(why)
+        v["_accepted_because"] = why
         now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
         pid = next_id(group_key(inv), curves)
         cert = build_certificate(v, res, cond, curves, pid, now, lmfdb)
@@ -399,7 +473,8 @@ def process(path: Path, args) -> str:
         if cond and (jobdir / "conductor.log").exists():
             shutil.copy(jobdir / "conductor.log", LOGS_DIR / f"{pid}.conductor.log")
         log(f"  ACCEPTED as {pid} [{cert['status']}] {group_bracket(inv)} class={cert['class']}"
-            + (" NEW GROUP" if cert["new_group"] else " new for this class" if cert["new_for_class"] else ""))
+            + (" NEW GROUP" if cert["new_group"] else " new for this class" if cert["new_for_class"] else " (" + why + ")")
+            + (f" torsion by {res['torsion']['method']}" if res['torsion'].get('method') == 'generators' else ""))
         cls_line = (f"- **class: {cert['class_text']}**" + (" (certified)" if cert["class_certified"] else " — not certified; the torsion is"))
         cert_txt = ""
         if cert["simplicity"]["geometrically_simple"]:
@@ -412,6 +487,8 @@ def process(path: Path, args) -> str:
                 + (f"- LMFDB: {lmfdb['url']}\n" if lmfdb['url'] else "")
                 + (f"- conductor {cond['conductor']}\n" if cond else "")
                 + (f"\nNote: {claim_note}.\n" if claim_note else "")
+                + (f"\nAccepted: {why}.\n" if not (cert["new_group"] or cert["new_for_class"]) else "")
+                + (f"\nNote: {res['torsion']['generators_note']}.\n" if res['torsion'].get('generators_note') else "")
                 + ("\nThis is the first curve in the census with this torsion group.\n" if cert["new_group"]
                    else "\nThis is the first curve in the census with this torsion group in this class.\n" if cert["new_for_class"] else "")
                 + f"\nPage: {site_url(pid)}")

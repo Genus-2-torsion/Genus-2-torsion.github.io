@@ -23,7 +23,8 @@ from common import (SCHEMA_SUBMISSION, SUBMISSION_LABEL, SUBMISSIONS_INBOX, SUBM
 
 LABELS = {
     "f(x)": "f", "h(x)": "h", "torsion group": "group", "class of the jacobian": "class",
-    "splitness certificate (optional)": "cover", "discovered by": "discoverer", "year of discovery": "year",
+    "splitness certificate (optional)": "cover", "generators of the torsion subgroup (optional, recommended)": "generators",
+    "discovered by": "discoverer", "year of discovery": "year",
     "reference": "reference", "your name and affiliation": "name", "notes": "notes",
 }
 DONE_LABELS = {"certified", "verified", "rejected"}
@@ -71,6 +72,13 @@ def to_submission(issue: dict) -> dict:
         sub["group"] = grp
     cls = f.get("class", "").strip().lower()
     sub["class"] = "simple" if cls.startswith("geometrically simple") else "split" if cls.startswith("geometrically split") else ""
+    gens = f.get("generators", "").strip()
+    if gens:
+        gens = re.sub(r"^```(json)?\s*|\s*```$", "", gens)
+        try:
+            sub["generators"] = json.loads(gens)
+        except Exception:
+            sub["generators"] = [["invalid", gens, 0]]
     cov = f.get("cover", "").strip()
     if cov:
         cov = re.sub(r"^```(json)?\s*|\s*```$", "", cov)

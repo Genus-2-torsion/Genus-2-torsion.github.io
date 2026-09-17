@@ -2,8 +2,9 @@
 """Build the static data files the web site reads.
 
   data/groups.json   one record per torsion group: its curves in each of the three classes (and the
-                     undecided ones), the "infinitely many?" answers for the simple and the split
-                     side (from pipeline/knowledge.py), and counts;
+                     undecided ones) sorted by conductor, the index of the earliest-dated curve and
+                     the earliest source credited for the class, the "infinitely many?" answers for
+                     the simple and the split side (from pipeline/knowledge.py), and counts;
   data/curves.json   every accepted curve (the certificates in data/curves/, verbatim);
   data/sources.json  the bibliography.
 
@@ -64,7 +65,12 @@ def curve_summary(c: dict) -> dict:
         "conductor_note": c["curve"].get("conductor_note", ""),
         "discriminant_digits": c["curve"].get("discriminant_digits"),
         "lmfdb": c["lmfdb"], "sources": c.get("sources", []), "rm": c.get("rm", False),
-        "discovered_by": c["discovery"]["by"], "year": c["discovery"]["year"], "reference": c.get("reference", ""),
+        "discovered_by": c["discovery"]["by"], "year": c["discovery"]["year"] if isinstance(c["discovery"].get("year"), int) else None,
+        "historical": bool(c["discovery"].get("historical", False)),
+        "first_source": knowledge.first_source(c.get("sources", [])),
+        "first_source_year": (knowledge.SOURCES[knowledge.first_source(c.get("sources", []))]["year"] if knowledge.first_source(c.get("sources", [])) else None),
+        "torsion_method": c["torsion"].get("method", "TorsionSubgroup"),
+        "reference": c.get("reference", ""),
         "new_group": c.get("new_group", False), "new_for_class": c.get("new_for_class", False),
         "certificate": cert_summary(c), "verified": c["dates"]["verified"], "submitted": c["dates"]["submitted"],
         "source_kind": (c.get("source") or {}).get("kind", ""),
@@ -86,12 +92,20 @@ def build():
         for c in mine:
             cls = c["class"] if c["class"] in CLASSES else "undecided"
             classes[cls].append(curve_summary(c))
+        first = {}
+        first_source = {}
         for cls in classes:
             classes[cls].sort(key=lambda s: (s["conductor_sort"] is None, s["conductor_sort"] or 0, s["id"]))
+            dated = [i for i, s in enumerate(classes[cls]) if s["year"] is not None]
+            first[cls] = min(dated, key=lambda i: (classes[cls][i]["year"], i)) if dated else None
+            srcs = [(s["first_source_year"], s["first_source"]) for s in classes[cls] if s["first_source"]]
+            first_source[cls] = min(srcs)[1] if srcs else None
         rec = {
             "key": key, "group": inv, "bracket": group_bracket(inv), "label": group_label(inv),
             "order": group_order(inv), "rank": len(inv),
             "classes": classes,
+            "first_dated": first,
+            "first_source": first_source,
             "known": {cls: bool(classes[cls]) for cls in classes},
             "n_curves": len(mine),
             "infinite": {"simple": knowledge.infinite_record("simple", key), "split": knowledge.infinite_record("split", key)},

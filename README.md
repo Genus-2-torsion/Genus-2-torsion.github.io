@@ -24,11 +24,16 @@ taken from the machine-readable tables of its certification repository
 
 ## Submitting a curve
 
-Open the [submission form](https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/new?template=submit-curve.yml)
+Run `pipeline/magma/prepare_submission.m` with your own Magma to get the submission JSON (curve,
+torsion group with generators, class, conductor), then open the
+[submission form](https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/new?template=submit-curve.yml)
 (a GitHub issue), or add JSON files to `submissions/inbox/` in a pull request.  See
 [submit.html](https://genus-2-torsion.github.io/submit.html) for the formats, including how to supply an
 explicit map to an elliptic curve as a splitness certificate.  Submissions are pulled to Mordell,
-verified with Magma, and the outcome is posted on the issue.
+verified with Magma, and the outcome is posted on the issue.  A curve is accepted when its
+(group, class) is new to the census or when its conductor is smaller than that of every census
+curve with the same group and class; supplied generators of the torsion subgroup let the verifier
+certify the torsion without a search when the point-count bound is sharp.
 
 ## Layout
 

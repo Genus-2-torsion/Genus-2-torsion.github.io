@@ -34,7 +34,9 @@
 
   <h2>The groups</h2>
   <p>One row per torsion group <span class="m">[n₁, …, n_r] = ℤ/n₁ ⊕ … ⊕ ℤ/n_r</span>, in the order of the paper's tables (by number of invariant factors, then lexicographically).
-    Each class shows the known curve of smallest conductor (click it for the certificate, click the group for all curves and for what is known).
+    Each class shows the known curve of smallest conductor, or — with the toggle below — the earliest known curve, where the census has a dated one
+    (the seed curves come with the source the paper credits for the first realisation of the group, which is not necessarily the displayed curve).
+    Click a curve for its certificate, click the group for all curves and for what is known.
     The <b>∞?</b> columns say whether infinitely many Jacobians of that kind with this torsion are known — hover for the reason; see <a href="about.html">about</a> for the conventions.</p>
   <div class="controls">
     <label><input type="checkbox" id="cls-simple" checked> geometrically simple</label>
@@ -42,6 +44,7 @@
     <label><input type="checkbox" id="cls-gsplit" checked> simple over ℚ, split over ℚ̄</label>
     <label><input type="checkbox" id="only-all"> only groups known in every checked class</label>
     <label><input type="checkbox" id="show-inf" checked> show ∞? columns</label>
+    <label>example shown: <select id="example-mode"><option value="smallest">smallest conductor</option><option value="first">first historical example</option></select></label>
     <label>sort: <select id="sort"><option value="table">as in the paper</option><option value="order">by order of the group</option></select></label>
   </div>
   <div class="legend">

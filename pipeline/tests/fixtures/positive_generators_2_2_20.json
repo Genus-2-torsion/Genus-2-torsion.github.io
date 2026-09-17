@@ -1,0 +1,31 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "-1566684*x^6 + 7579404*x^5 + 27387697*x^4 - 60534098*x^3 + 15616273*x^2 + 10501344*x + 1016064",
+  "h": "0",
+  "group": [
+    2,
+    2,
+    20
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x^2 - 5/6*x - 1/6",
+      "0",
+      2
+    ],
+    [
+      "x^2 + 5/2*x - 7/2",
+      "0",
+      2
+    ],
+    [
+      "x^2 - 17512/2707*x - 2688/2707",
+      "19266760359/7327849*x + 2165615760/7327849",
+      2
+    ]
+  ],
+  "submitter": "test fixture",
+  "reference": "BNSS2026, Table 1 ([2,2,20])",
+  "notes": "known positive with submitted generators: the point-count bound is 80 = |<generators>|, so the torsion must be certified by the 'generators' method"
+}

@@ -96,6 +96,33 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(knowledge.parse_source_column(r"\cite{costa}$^{\text{RM}}$"), (["costa"], True))
 
 
+class AcceptanceTests(unittest.TestCase):
+    def curve(self, key, cls, cond):
+        return {"group_key": key, "class": cls, "curve": {"conductor": cond}, "id": f"{key}.{cls[:1]}"}
+
+    def test_rule(self):
+        C = [self.curve("2.4", "simple", "997"), self.curve("2.4", "qsplit", "225"), self.curve("5", "simple", "")]
+        acc = lambda cls, cert, inv, cond, hist=False: verify.acceptance(cls, cert, inv, cond, C, hist)[0]
+        self.assertTrue(acc("simple", True, [2, 6], "5000"))          # new group
+        self.assertTrue(acc("gsplit", True, [2, 4], "5000"))          # new for this class
+        self.assertTrue(acc("simple", True, [2, 4], "996"))           # smaller conductor
+        self.assertFalse(acc("simple", True, [2, 4], "997"))          # not smaller
+        self.assertFalse(acc("simple", True, [2, 4], ""))             # conductor unknown, cannot compare
+        self.assertTrue(acc("simple", True, [2, 4], "", True))        # historical flag
+        self.assertTrue(acc("simple", True, [5], "12345"))            # known curve has no conductor
+        self.assertFalse(acc("undecided", False, [2, 4], "10"))       # uncertified class, group known
+        self.assertTrue(acc("undecided", False, [7], "10"))           # uncertified class, group new
+        self.assertFalse(acc("split_undecided_over_Q", False, [2, 4], "10"))
+        self.assertTrue(acc("split_undecided_over_Q", False, [5], "10"))
+
+    def test_generators_validation(self):
+        v = verify.validate({"f": "x^5+1", "generators": [["x", "0", 1], ["x^2 - 4*x + 1", "x", 2]]})
+        self.assertEqual(v["generators"], [["x", "0", 1], ["x^2-4*x+1", "x", 2]])
+        for bad in ([["x", "0", 3]], [["x", "0"]], [["x; quit", "0", 1]], [["x", "0", 1]] * 5):
+            with self.assertRaises(verify.Reject):
+                verify.validate({"f": "x^5+1", "generators": bad})
+
+
 class CertificateTests(unittest.TestCase):
     def test_certificates_consistent(self):
         """Every certificate in data/curves/ is internally consistent."""

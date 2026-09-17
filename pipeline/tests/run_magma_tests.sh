@@ -19,6 +19,10 @@ check "positive [2,2,8] split over Q accepted" "ACCEPTED as 2.2.8.a \[certified\
 check "singular model rejected"                "negative_singular.json: rejected"
 check "wrong claim rejected (--require-claim)" "negative_wrong_claim.json: rejected"
 check "genus 1 rejected"                       "negative_genus1.json: rejected"
+check "generators fast path certifies [2,2,20]"  "ACCEPTED as 2.2.20.a \[certified\] \[2,2,20\] class=simple.*torsion by generators"
+check "larger conductor [2,4] rejected"        "zz_larger_conductor_2_4.json: rejected"
+check "Q-duplicate rejected"                   "zz_duplicate_with_generators_2_4.json: rejected"
+grep -q "conductor 49920" data/rejected/zz_larger_conductor_2_4.json && echo "PASS: conductor rule reason recorded" || { echo "FAIL: conductor rule reason"; fail=1; }
 grep -q "singular" data/rejected/negative_singular.json && echo "PASS: singular reason recorded" || { echo "FAIL: singular reason"; fail=1; }
 grep -q "genus 1" data/rejected/negative_genus1.json && echo "PASS: genus reason recorded" || { echo "FAIL: genus reason"; fail=1; }
 exit $fail

@@ -10,6 +10,9 @@ body:
         Polynomials are written Magma/Sage style in `x` (e.g. `x^5 - 8*x^4 + 16*x^3 - x`) or as coefficient lists in ascending degree
         (e.g. `[0,-1,0,16,-8,1]`). Only digits, `x`, `+ - * / ^ ( )` and spaces are accepted.
         Your submission will be verified with Magma on the Mordell workstation; the result is posted here as a comment.
+        A curve is accepted when its (group, class) is new to the census or when its conductor is smaller than that of every
+        census curve with the same group and class. Running pipeline/magma/prepare_submission.m on your machine gives you
+        everything to paste below (including the generators, which spare Mordell the torsion computation).
         See https://genus-2-torsion.github.io/submit.html for details.
   - type: input
     id: f
@@ -43,6 +46,12 @@ body:
         - geometrically split (over Q or over an extension)
         - unknown
       default: 2
+  - type: textarea
+    id: generators
+    attributes:
+      label: Generators of the torsion subgroup (optional, recommended)
+      description: Mumford triples [a(x), b(x), d] on the even model y^2 = 4f + h^2, as printed by pipeline/magma/prepare_submission.m (run it on your machine). When their group's order equals the point-count bound, Mordell certifies the torsion without any search.
+      placeholder: '[["x", "0", 1], ["x^2 - 4*x + 1", "x", 2]]'
   - type: textarea
     id: cover
     attributes:

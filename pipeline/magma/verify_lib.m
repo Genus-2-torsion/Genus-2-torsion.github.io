@@ -18,14 +18,22 @@
                         coefficients ascending, elements of the field as polynomials in "w"
      ExistingModels   : list of < id, fcoeffs, hcoeffs > (optional): curves already in the census
                         with the same G2-invariants, tested for Q-isomorphism
+     Generators       : optional list of < a (string in x), b (string in x), d (integer) >: generators of
+                        J(Q)_tors in Mumford representation on the even model y^2 = 4f + h^2 (Magma's
+                        SimplifiedModel), as printed by pipeline/magma/prepare_submission.m.  When they
+                        are given, are torsion points, are independent, and the order of the group they
+                        generate equals the gcd of #J(F_p) over good primes, J(Q)_tors is certified
+                        without running TorsionSubgroup (the "generators" method); otherwise
+                        TorsionSubgroup is run as usual.
 
    Every string that reaches `eval` was whitelisted by verify.py (digits, w/X, + - * / ^ ( ) spaces).
 
    What is verified (everything the certificate relies on is recomputed here):
      1. the model defines a smooth curve of genus 2 over Q; the even model y^2 = g, g = 4f + h^2
         (made integral by scaling) is the working model;
-     2. J(Q)_tors, exactly (Stoll's algorithm as implemented in Magma: TorsionSubgroup), its
-        generators in Mumford representation, and the gcd of #J(F_p) over good primes as a check;
+     2. J(Q)_tors, exactly: from submitted generators when their group's order equals the gcd of
+        #J(F_p) over good primes (see Generators above), else by Stoll's algorithm as implemented
+        in Magma (TorsionSubgroup); generators in Mumford representation on y^2 = 4f + h^2;
      3. geometric simplicity (Frobenius polynomials by brute-force point counting, see ChiAt):
         a good prime p with chi_p irreducible and no degree drop of pi^n for
         n <= 12 ("strict" prime; a geometrically split or CM surface shows a drop at every good
@@ -58,6 +66,8 @@ if not assigned RichelotDepth then RichelotDepth := 2; end if;
 if not assigned QuadDiscs then QuadDiscs := []; end if;
 if not assigned ClaimedGroup then ClaimedGroup := []; end if;
 if not assigned ExistingModels then ExistingModels := [* *]; end if;
+if not assigned Generators then Generators := [* *]; end if;
+if not assigned MaxGeneratedOrder then MaxGeneratedOrder := 20000; end if;
 
 T0 := Cputime();
 procedure Log(s)
@@ -255,16 +265,7 @@ Log(Sprintf("curve: y^2 + (%o) y = %o; working model y^2 = %o", hpol, fpol, g));
 
 // ---------------------------------------------------------------- 2. torsion
 Js := Jacobian(SimplifiedModel(C));
-t1 := Cputime();
-Tg, mT := TorsionSubgroup(Js);
-inv := Invariants(Tg);
-Log(Sprintf("J(Q)_tors = %o (%o s)", inv, RealField(6)!Cputime(t1)));
-gens := [* *];
-for i in [1..Ngens(Tg)] do
-  P := mT(Tg.i);
-  Append(~gens, [* <"order", Order(Tg.i)>, <"mumford", [Sprint(P[1]), Sprint(P[2]), Sprint(P[3])]> *]);
-end for;
-// check: #J(Q)_tors divides gcd of #J(F_p) over good primes
+// upper bound: #J(Q)_tors divides gcd of #J(F_p) over good primes p >= 3 (reduction is injective on torsion)
 gcdJ := 0; usedp := [];
 chis := AssociativeArray();
 procedure ChiInto(~chis, g, D, p)
@@ -277,10 +278,80 @@ for p in PrimesInInterval(3, 200) do
   if chi eq 0 then continue; end if;
   gcdJ := GCD(gcdJ, Z!Evaluate(chi, 1));
   Append(~usedp, p);
-  if #usedp ge 12 then break; end if;
+  if #usedp ge 25 then break; end if;
 end for;
-if gcdJ ne 0 and gcdJ mod #Tg ne 0 then
-  Fail(Sprintf("internal inconsistency: #J(Q)_tors = %o does not divide gcd #J(F_p) = %o", #Tg, gcdJ), [* *]); quit;
+Log(Sprintf("#J(Q)_tors divides gcd #J(F_p) = %o (p = %o)", gcdJ, usedp));
+
+tors_method := "";
+gens := [* *];
+inv := [];
+ntors := 0;
+gen_note := "";
+if #Generators gt 0 then
+  // fast path: submitted generators
+  ok := true; msg := "";
+  pts := [];
+  try
+    for gen in Generators do
+      a := R!(eval gen[1]); b := R!(eval gen[2]); d := gen[3];
+      if Type(d) eq MonStgElt then d := StringToInteger(d); end if;
+      Append(~pts, elt<Js | a, b, d>);
+    end for;
+  catch e
+    ok := false; msg := "a submitted generator is not a point of the Jacobian of y^2 = 4f + h^2: " cat Sprint(e`Object);
+  end try;
+  if ok then
+    orders := [Order(P) : P in pts];
+    if exists{o : o in orders | o eq 0} then
+      ok := false; msg := "a submitted generator has infinite order";
+    elif exists{o : o in orders | o eq 1} then
+      ok := false; msg := "a submitted generator is the identity";
+    end if;
+  end if;
+  if ok then
+    N := &*orders;
+    if N gt MaxGeneratedOrder then
+      ok := false; msg := Sprintf("the submitted generators would generate a group of order %o; too large to check", N);
+    end if;
+  end if;
+  if ok then
+    // independence: the map Z/o_1 x ... x Z/o_r -> J is injective iff all N sums are distinct
+    S := {};
+    tuples := CartesianProduct([[0..o-1] : o in orders]);
+    for t in tuples do
+      Include(~S, &+[Js | t[i]*pts[i] : i in [1..#pts]]);
+    end for;
+    if #S ne N then
+      ok := false; msg := Sprintf("the submitted generators are not independent (they generate a group of order %o, not %o)", #S, N);
+    end if;
+  end if;
+  if not ok then
+    Fail("generators rejected: " cat msg, [* *]); quit;
+  end if;
+  invg := Invariants(AbelianGroup(orders));
+  if gcdJ eq N then
+    inv := invg; ntors := N; tors_method := "generators";
+    for i in [1..#pts] do
+      Append(~gens, [* <"order", orders[i]>, <"mumford", [Sprint(pts[i][1]), Sprint(pts[i][2]), Sprint(pts[i][3])]> *]);
+    end for;
+    Log(Sprintf("J(Q)_tors = %o: the %o submitted generators are independent torsion points generating a group of order %o = gcd #J(F_p)", inv, #pts, N));
+  else
+    gen_note := Sprintf("the submitted generators generate a subgroup of order %o, but the point-count bound is %o; TorsionSubgroup was run", N, gcdJ);
+    Log(gen_note);
+  end if;
+end if;
+if tors_method eq "" then
+  t1 := Cputime();
+  Tg, mT := TorsionSubgroup(Js);
+  inv := Invariants(Tg); ntors := #Tg; tors_method := "TorsionSubgroup";
+  Log(Sprintf("J(Q)_tors = %o (TorsionSubgroup, %o s)", inv, RealField(6)!Cputime(t1)));
+  for i in [1..Ngens(Tg)] do
+    P := mT(Tg.i);
+    Append(~gens, [* <"order", Order(Tg.i)>, <"mumford", [Sprint(P[1]), Sprint(P[2]), Sprint(P[3])]> *]);
+  end for;
+  if gcdJ ne 0 and gcdJ mod ntors ne 0 then
+    Fail(Sprintf("internal inconsistency: #J(Q)_tors = %o does not divide gcd #J(F_p) = %o", ntors, gcdJ), [* *]); quit;
+  end if;
 end if;
 claim_ok := #ClaimedGroup eq 0 or [Z | c : c in ClaimedGroup] eq inv;
 
@@ -548,7 +619,8 @@ Emit([*
       <"rational_weierstrass_points", nW>
   *]>,
   <"torsion", [*
-      <"invariants", inv>, <"order", #Tg>, <"generators", gens>,
+      <"invariants", inv>, <"order", ntors>, <"generators", gens>,
+      <"method", tors_method>, <"generators_note", gen_note>, <"generators_submitted", #Generators>,
       <"point_count_gcd", gcdJ>, <"point_count_primes", usedp>,
       <"claimed", ClaimedGroup>, <"claim_matches", claim_ok>
   *]>,

@@ -51,7 +51,7 @@ the source tables go to `data/knowledge/sources/` with a line in `PROVENANCE.md`
 ## Seed import
 
 The 150 curves of the paper's tables were imported with `import_paper.py` and verified with
-`verify.py --require-claim --no-github --no-lmfdb` (log: `pipeline/logs/seed_import.log`): every row
+`verify.py --require-claim --no-github --no-lmfdb` (log: `data/knowledge/seed_import.log`): every row
 reproduced the paper's torsion group, the Table 1 rows were certified geometrically simple, and the
 Table 2 rows geometrically split (with the class over ℚ decided by the certificates found here).
 LMFDB labels of the seed rows are those of the tables (production labels are permalinks, extended-

@@ -1,0 +1,602 @@
+== paper-t1-001.json
+  conductor 277
+  LMFDB: 277.a.3 (alpha-snapshot)
+  ACCEPTED as 1.a [certified] [] class=simple NEW GROUP
+== paper-t1-002.json
+  conductor 295
+  LMFDB: 295.a.295.2 (production)
+  ACCEPTED as 2.a [certified] [2] class=simple NEW GROUP
+== paper-t1-003.json
+  conductor 997
+  LMFDB: 997.b.997.1 (production)
+  ACCEPTED as 3.a [certified] [3] class=simple NEW GROUP
+== paper-t1-004.json
+  conductor 1070
+  LMFDB: 1070.a.2140.1 (production)
+  ACCEPTED as 4.a [certified] [4] class=simple NEW GROUP
+== paper-t1-005.json
+  conductor 277
+  LMFDB: 277.a.277.2 (production)
+  ACCEPTED as 5.a [certified] [5] class=simple NEW GROUP
+== paper-t1-006.json
+  conductor 1038
+  LMFDB: 1038.a.1038.1 (production)
+  ACCEPTED as 6.a [certified] [6] class=simple NEW GROUP
+== paper-t1-007.json
+  conductor 461
+  LMFDB: 461.a.461.1 (production)
+  ACCEPTED as 7.a [certified] [7] class=simple NEW GROUP
+== paper-t1-008.json
+  conductor 464
+  LMFDB: 464.a.464.1 (production)
+  ACCEPTED as 8.a [certified] [8] class=simple NEW GROUP
+== paper-t1-009.json
+  conductor 713
+  LMFDB: 713.b.713.1 (production)
+  ACCEPTED as 9.a [certified] [9] class=simple NEW GROUP
+== paper-t1-010.json
+  conductor 389
+  LMFDB: 389.a.389.1 (production)
+  ACCEPTED as 10.a [certified] [10] class=simple NEW GROUP
+== paper-t1-011.json
+  conductor 353
+  LMFDB: 353.a.353.1 (production)
+  ACCEPTED as 11.a [certified] [11] class=simple NEW GROUP
+== paper-t1-012.json
+  conductor 762
+  LMFDB: 762.a.3048.1 (production)
+  ACCEPTED as 12.a [certified] [12] class=simple NEW GROUP
+== paper-t1-013.json
+  conductor 349
+  LMFDB: 349.a.349.1 (production)
+  ACCEPTED as 13.a [certified] [13] class=simple NEW GROUP
+== paper-t1-014.json
+  conductor 249
+  LMFDB: 249.a.249.1 (production)
+  ACCEPTED as 14.a [certified] [14] class=simple NEW GROUP
+== paper-t1-015.json
+  conductor 277
+  LMFDB: 277.a.277.1 (production)
+  ACCEPTED as 15.a [certified] [15] class=simple NEW GROUP
+== paper-t1-016.json
+  conductor 830
+  LMFDB: 830.a.6640.1 (production)
+  ACCEPTED as 16.a [certified] [16] class=simple NEW GROUP
+== paper-t1-017.json
+  conductor 1996
+  LMFDB: 1996.b.510976.1 (production)
+  ACCEPTED as 17.a [certified] [17] class=simple NEW GROUP
+== paper-t1-018.json
+  conductor 1180
+  LMFDB: 1180.a.18880.1 (production)
+  ACCEPTED as 18.a [certified] [18] class=simple NEW GROUP
+== paper-t1-019.json
+  conductor 1468
+  LMFDB: 1468.b.1 (alpha-snapshot)
+  ACCEPTED as 19.a [certified] [19] class=simple NEW GROUP
+== paper-t1-020.json
+  conductor 394
+  LMFDB: 394.a.3152.1 (production)
+  ACCEPTED as 20.a [certified] [20] class=simple NEW GROUP
+== paper-t1-021.json
+  conductor 388
+  LMFDB: 388.a.776.1 (production)
+  ACCEPTED as 21.a [certified] [21] class=simple NEW GROUP
+== paper-t1-022.json
+  conductor 1192
+  LMFDB: 1192.a.19072.1 (production)
+  ACCEPTED as 22.a [certified] [22] class=simple NEW GROUP
+== paper-t1-023.json
+  conductor 1696
+  LMFDB: 1696.c.1 (alpha-snapshot)
+  ACCEPTED as 23.a [certified] [23] class=simple NEW GROUP
+== paper-t1-024.json
+  conductor 1908
+  LMFDB: 1908.a.183168.1 (production)
+  ACCEPTED as 24.a [certified] [24] class=simple NEW GROUP
+== paper-t1-025.json
+  conductor 168750
+  LMFDB: 168750.e.2 (alpha-snapshot)
+  ACCEPTED as 25.a [certified] [25] class=simple NEW GROUP
+== paper-t1-026.json
+  conductor 11016
+  LMFDB: 11016.g.1 (alpha-snapshot)
+  ACCEPTED as 26.a [certified] [26] class=simple NEW GROUP
+== paper-t1-027.json
+  conductor 604
+  LMFDB: 604.a.9664.2 (production)
+  ACCEPTED as 27.a [certified] [27] class=simple NEW GROUP
+== paper-t1-028.json
+  conductor 249
+  LMFDB: 249.a.6723.1 (production)
+  ACCEPTED as 28.a [certified] [28] class=simple NEW GROUP
+== paper-t1-029.json
+  conductor 976
+  LMFDB: 976.a.999424.1 (production)
+  ACCEPTED as 29.a [certified] [29] class=simple NEW GROUP
+== paper-t1-030.json
+  conductor 8694
+  LMFDB: 8694.e.1 (alpha-snapshot)
+  ACCEPTED as 30.a [certified] [30] class=simple NEW GROUP
+== paper-t1-031.json
+  conductor 3348900
+  LMFDB: - (jump)
+  ACCEPTED as 31.a [certified] [31] class=simple NEW GROUP
+== paper-t1-032.json
+  conductor 66852
+  LMFDB: 66852.b.1 (alpha-snapshot)
+  ACCEPTED as 32.a [certified] [32] class=simple NEW GROUP
+== paper-t1-033.json
+  conductor 13716
+  LMFDB: 13716.a.1 (alpha-snapshot)
+  ACCEPTED as 33.a [certified] [33] class=simple NEW GROUP
+== paper-t1-034.json
+  conductor 17856
+  LMFDB: 17856.m.1 (alpha-snapshot)
+  ACCEPTED as 34.a [certified] [34] class=simple NEW GROUP
+== paper-t1-035.json
+  conductor 59040
+  LMFDB: 59040.r.3 (alpha-snapshot)
+  ACCEPTED as 36.a [certified] [36] class=simple NEW GROUP
+== paper-t1-036.json
+  conductor 1116
+  LMFDB: 1116.a.214272.1 (production)
+  ACCEPTED as 39.a [certified] [39] class=simple NEW GROUP
+== paper-t1-037.json
+  conductor 1206
+  LMFDB: 1206.b.1 (alpha-snapshot)
+  ACCEPTED as 40.a [certified] [40] class=simple NEW GROUP
+== paper-t1-038.json
+  conductor 464
+  LMFDB: 464.a.29696.2 (production)
+  ACCEPTED as 2.2.a [certified] [2,2] class=simple NEW GROUP
+== paper-t1-039.json
+  conductor 997
+  LMFDB: 997.a.997.1 (production)
+  ACCEPTED as 2.4.a [certified] [2,4] class=simple NEW GROUP
+== paper-t1-040.json
+  conductor 704
+  LMFDB: 704.a.45056.1 (production)
+  ACCEPTED as 2.6.a [certified] [2,6] class=simple NEW GROUP
+== paper-t1-041.json
+  conductor 464
+  LMFDB: 464.a.29696.1 (production)
+  ACCEPTED as 2.8.a [certified] [2,8] class=simple NEW GROUP
+== paper-t1-042.json
+  conductor 555
+  LMFDB: 555.a.8325.1 (production)
+  ACCEPTED as 2.10.a [certified] [2,10] class=simple NEW GROUP
+== paper-t1-043.json
+  conductor 762
+  LMFDB: 762.a.82296.1 (production)
+  ACCEPTED as 2.12.a [certified] [2,12] class=simple NEW GROUP
+== paper-t1-044.json
+  conductor 1416
+  LMFDB: 1416.b.135936.1 (production)
+  ACCEPTED as 2.14.a [certified] [2,14] class=simple NEW GROUP
+== paper-t1-045.json
+  conductor 4392
+  LMFDB: 4392.a.1 (alpha-snapshot)
+  ACCEPTED as 2.16.a [certified] [2,16] class=simple NEW GROUP
+== paper-t1-046.json
+  conductor 4428
+  LMFDB: 4428.a.2 (alpha-snapshot)
+  ACCEPTED as 2.18.a [certified] [2,18] class=simple NEW GROUP
+== paper-t1-047.json
+  conductor 936600
+  LMFDB: 936600.b.1 (alpha-snapshot)
+  ACCEPTED as 2.20.a [certified] [2,20] class=simple NEW GROUP
+== paper-t1-048.json
+  conductor 19044
+  LMFDB: 19044.h.2 (alpha-snapshot)
+  ACCEPTED as 2.22.a [certified] [2,22] class=simple NEW GROUP
+== paper-t1-049.json
+  conductor 8136
+  LMFDB: 8136.c.1 (alpha-snapshot)
+  ACCEPTED as 2.26.a [certified] [2,26] class=simple NEW GROUP
+== paper-t1-050.json
+  conductor 28200
+  LMFDB: 28200.e.1 (alpha-snapshot)
+  ACCEPTED as 2.28.a [certified] [2,28] class=simple NEW GROUP
+== paper-t1-051.json
+  conductor 5100
+  LMFDB: 5100.a.1 (alpha-snapshot)
+  ACCEPTED as 3.3.a [certified] [3,3] class=simple NEW GROUP
+== paper-t1-052.json
+  conductor 3780
+  LMFDB: 3780.b.1 (alpha-snapshot)
+  ACCEPTED as 3.6.a [certified] [3,6] class=simple NEW GROUP
+== paper-t1-053.json
+  conductor 8436
+  LMFDB: 8436.a.2 (alpha-snapshot)
+  ACCEPTED as 3.9.a [certified] [3,9] class=simple NEW GROUP
+== paper-t1-054.json
+  conductor 1575
+  LMFDB: 1575.c.14 (alpha-snapshot)
+  ACCEPTED as 4.4.a [certified] [4,4] class=simple NEW GROUP
+== paper-t1-055.json
+  conductor 913500
+  LMFDB: 913500.cf.3 (alpha-snapshot)
+  ACCEPTED as 4.8.a [certified] [4,8] class=simple NEW GROUP
+== paper-t1-056.json
+  conductor 17506967961600
+  LMFDB: - (jump)
+  ACCEPTED as 6.6.a [certified] [6,6] class=simple NEW GROUP
+== paper-t1-057.json
+  conductor 2600
+  LMFDB: 2600.a.338000.1 (production)
+  ACCEPTED as 2.2.2.a [certified] [2,2,2] class=simple NEW GROUP
+== paper-t1-058.json
+  conductor 3978
+  LMFDB: 3978.a.930852.1 (production)
+  ACCEPTED as 2.2.4.a [certified] [2,2,4] class=simple NEW GROUP
+== paper-t1-059.json
+  conductor 816
+  LMFDB: 816.a.39168.1 (production)
+  ACCEPTED as 2.2.6.a [certified] [2,2,6] class=simple NEW GROUP
+== paper-t1-060.json
+  conductor 3942
+  LMFDB: 3942.b.3 (alpha-snapshot)
+  ACCEPTED as 2.2.8.a [certified] [2,2,8] class=simple NEW GROUP
+== paper-t1-061.json
+  conductor 10512
+  LMFDB: 10512.n.1 (alpha-snapshot)
+  ACCEPTED as 2.2.10.a [certified] [2,2,10] class=simple NEW GROUP
+== paper-t1-062.json
+  conductor 12300
+  LMFDB: 12300.e.2 (alpha-snapshot)
+  ACCEPTED as 2.2.12.a [certified] [2,2,12] class=simple NEW GROUP
+== paper-t1-063.json
+  conductor 38200383011700
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.14.a [certified] [2,2,14] class=simple NEW GROUP
+== paper-t1-064.json
+  conductor 16897247339672700
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.20.a [certified] [2,2,20] class=simple NEW GROUP
+== paper-t1-065.json
+  conductor 172260
+  LMFDB: 172260.bj.3 (alpha-snapshot)
+  ACCEPTED as 2.4.4.a [certified] [2,4,4] class=simple NEW GROUP
+== paper-t1-066.json
+  conductor 10033323300
+  LMFDB: - (jump)
+  ACCEPTED as 2.4.8.a [certified] [2,4,8] class=simple NEW GROUP
+== paper-t1-067.json
+  conductor 1575
+  LMFDB: 1575.c.1 (alpha-snapshot)
+  ACCEPTED as 2.2.2.2.a [certified] [2,2,2,2] class=simple NEW GROUP
+== paper-t1-068.json
+  conductor 9450
+  LMFDB: 9450.b.2 (alpha-snapshot)
+  ACCEPTED as 2.2.2.4.a [certified] [2,2,2,4] class=simple NEW GROUP
+== paper-t1-069.json
+  conductor 39600
+  LMFDB: 39600.dq.1 (alpha-snapshot)
+  ACCEPTED as 2.2.2.6.a [certified] [2,2,2,6] class=simple NEW GROUP
+== paper-t1-070.json
+  conductor 71089200
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.2.8.a [certified] [2,2,2,8] class=simple NEW GROUP
+== paper-t1-071.json
+  conductor 319360204800
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.2.10.a [certified] [2,2,2,10] class=simple NEW GROUP
+== paper-t1-072.json
+  conductor 4778692469215148637760180473900
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.2.12.a [certified] [2,2,2,12] class=simple NEW GROUP
+== paper-t1-073.json
+  conductor 53430369300
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.4.4.a [certified] [2,2,4,4] class=simple NEW GROUP
+== paper-t2-001.json
+  conductor 1083
+  LMFDB: 1083.b.390963.1 (production)
+  ACCEPTED as 1.b [certified] [] class=qsplit new for this class
+== paper-t2-002.json
+  conductor 336
+  LMFDB: 336.a.172032.1 (production)
+  ACCEPTED as 2.b [certified] [2] class=qsplit new for this class
+== paper-t2-003.json
+  conductor 324
+  LMFDB: 324.a.2 (alpha-snapshot)
+  ACCEPTED as 3.b [certified] [3] class=gsplit new for this class
+== paper-t2-004.json
+  conductor not computed (timed out)
+  LMFDB: 289.a.2 (alpha-snapshot)
+  ACCEPTED as 4.b [certified] [4] class=qsplit new for this class
+== paper-t2-005.json
+  conductor 126877696
+  LMFDB: 121.a.2 (alpha-snapshot)
+  ACCEPTED as 5.b [certified] [5] class=qsplit new for this class
+== paper-t2-006.json
+  conductor 196
+  LMFDB: 196.a.3 (alpha-snapshot)
+  ACCEPTED as 6.b [certified] [6] class=qsplit new for this class
+== paper-t2-007.json
+  conductor 676
+  LMFDB: 676.b.3 (alpha-snapshot)
+  ACCEPTED as 7.b [certified] [7] class=qsplit new for this class
+== paper-t2-008.json
+  conductor 300
+  LMFDB: 300.a.2 (alpha-snapshot)
+  ACCEPTED as 8.b [certified] [8] class=qsplit new for this class
+== paper-t2-009.json
+  conductor 722
+  LMFDB: 722.a.1 (alpha-snapshot)
+  ACCEPTED as 9.b [certified] [9] class=qsplit new for this class
+== paper-t2-010.json
+  conductor 363
+  LMFDB: 363.a.43923.1 (production)
+  ACCEPTED as 10.b [certified] [10] class=qsplit new for this class
+== paper-t2-011.json
+  conductor not computed
+  LMFDB: - (jump)
+  ACCEPTED as 11.b [certified] [11] class=gsplit new for this class
+== paper-t2-012.json
+  conductor 294
+  LMFDB: 294.a.294.1 (production)
+  ACCEPTED as 12.b [certified] [12] class=qsplit new for this class
+== paper-t2-013.json
+  conductor 1352
+  LMFDB: 1352.a.1 (alpha-snapshot)
+  ACCEPTED as 14.b [certified] [14] class=qsplit new for this class
+== paper-t2-014.json
+  conductor 484
+  LMFDB: 484.a.1936.1 (production)
+  ACCEPTED as 15.b [certified] [15] class=qsplit new for this class
+== paper-t2-015.json
+  conductor 2700
+  LMFDB: 2700.d.1 (alpha-snapshot)
+  ACCEPTED as 16.b [certified] [16] class=qsplit new for this class
+== paper-t2-016.json
+  conductor 490
+  LMFDB: 490.a.1 (alpha-snapshot)
+  ACCEPTED as 18.b [certified] [18] class=qsplit new for this class
+== paper-t2-017.json
+  conductor 169
+  LMFDB: 169.a.169.1 (production)
+  ACCEPTED as 19.b [certified] [19] class=gsplit new for this class
+== paper-t2-018.json
+  conductor 363
+  LMFDB: 363.a.3 (alpha-snapshot)
+  ACCEPTED as 20.b [certified] [20] class=qsplit new for this class
+== paper-t2-019.json
+  conductor 324
+  LMFDB: 324.a.648.1 (production)
+  ACCEPTED as 21.b [certified] [21] class=gsplit new for this class
+== paper-t2-020.json
+  conductor 300
+  LMFDB: 300.a.1 (alpha-snapshot)
+  ACCEPTED as 24.b [certified] [24] class=qsplit new for this class
+== paper-t2-021.json
+  conductor 42336
+  LMFDB: 42336.dw.1 (alpha-snapshot)
+  ACCEPTED as 25.b [certified] [25] class=gsplit new for this class
+== paper-t2-022.json
+  conductor 7776
+  LMFDB: 7776.e.2 (alpha-snapshot)
+  ACCEPTED as 27.b [certified] [27] class=gsplit new for this class
+== paper-t2-023.json
+  conductor 4732
+  LMFDB: 4732.c.1 (alpha-snapshot)
+  ACCEPTED as 28.b [certified] [28] class=qsplit new for this class
+== paper-t2-024.json
+  conductor 4356
+  LMFDB: 4356.j.1 (alpha-snapshot)
+  ACCEPTED as 30.b [certified] [30] class=qsplit new for this class
+== paper-t2-025.json
+  conductor 7436
+  LMFDB: 7436.a.2 (alpha-snapshot)
+  ACCEPTED as 35.a [certified] [35] class=qsplit NEW GROUP
+== paper-t2-026.json
+  conductor 4860
+  LMFDB: 4860.f.1 (alpha-snapshot)
+  ACCEPTED as 36.b [certified] [36] class=qsplit new for this class
+== paper-t2-027.json
+  conductor 3168
+  LMFDB: 3168.i.1 (alpha-snapshot)
+  ACCEPTED as 40.b [certified] [40] class=qsplit new for this class
+== paper-t2-028.json
+  conductor 602835300
+  LMFDB: - (jump)
+  ACCEPTED as 45.a [certified] [45] class=qsplit NEW GROUP
+== paper-t2-029.json
+  conductor 1764
+  LMFDB: 1764.a.1 (alpha-snapshot)
+  ACCEPTED as 48.a [certified] [48] class=qsplit NEW GROUP
+== paper-t2-030.json
+  conductor 13500
+  LMFDB: 13500.r.4 (alpha-snapshot)
+  ACCEPTED as 60.a [certified] [60] class=qsplit NEW GROUP
+== paper-t2-031.json
+  conductor 63693396
+  LMFDB: - (jump)
+  ACCEPTED as 63.a [certified] [63] class=qsplit NEW GROUP
+== paper-t2-032.json
+  conductor 56628
+  LMFDB: - (jump)
+  ACCEPTED as 70.a [certified] [70] class=qsplit NEW GROUP
+== paper-t2-033.json
+  conductor 256
+  LMFDB: 256.a.2 (alpha-snapshot)
+  ACCEPTED as 2.2.b [certified] [2,2] class=gsplit new for this class
+== paper-t2-034.json
+  conductor 230400
+  LMFDB: 225.a.1 (alpha-snapshot)
+  ACCEPTED as 2.4.b [certified] [2,4] class=qsplit new for this class
+== paper-t2-035.json
+  conductor 196
+  LMFDB: 196.a.2 (alpha-snapshot)
+  ACCEPTED as 2.6.b [certified] [2,6] class=qsplit new for this class
+== paper-t2-036.json
+  conductor 230400
+  LMFDB: 225.a.8 (alpha-snapshot)
+  ACCEPTED as 2.8.b [certified] [2,8] class=qsplit new for this class
+== paper-t2-037.json
+  conductor 256
+  LMFDB: 256.a.512.1 (production)
+  ACCEPTED as 2.10.b [certified] [2,10] class=gsplit new for this class
+== paper-t2-038.json
+  conductor 450
+  LMFDB: 450.a.36450.1 (production)
+  ACCEPTED as 2.12.b [certified] [2,12] class=qsplit new for this class
+== paper-t2-039.json
+  conductor 86436
+  LMFDB: 86436.z.3 (alpha-snapshot)
+  ACCEPTED as 2.14.b [certified] [2,14] class=qsplit new for this class
+== paper-t2-040.json
+  conductor 4608
+  LMFDB: 4608.h.5 (alpha-snapshot)
+  ACCEPTED as 2.16.b [certified] [2,16] class=qsplit new for this class
+== paper-t2-041.json
+  conductor 64980
+  LMFDB: 64980.bo.1 (alpha-snapshot)
+  ACCEPTED as 2.18.b [certified] [2,18] class=qsplit new for this class
+== paper-t2-042.json
+  conductor 30492
+  LMFDB: 30492.q.2 (alpha-snapshot)
+  ACCEPTED as 2.20.b [certified] [2,20] class=qsplit new for this class
+== paper-t2-043.json
+  conductor 1440
+  LMFDB: 1440.c.2 (alpha-snapshot)
+  ACCEPTED as 2.24.a [certified] [2,24] class=qsplit NEW GROUP
+== paper-t2-044.json
+  conductor 13068
+  LMFDB: 13068.f.2 (alpha-snapshot)
+  ACCEPTED as 2.30.a [certified] [2,30] class=qsplit NEW GROUP
+== paper-t2-045.json
+  conductor 18900
+  LMFDB: 18900.e.2 (alpha-snapshot)
+  ACCEPTED as 2.48.a [certified] [2,48] class=qsplit NEW GROUP
+== paper-t2-046.json
+  conductor not computed
+  LMFDB: 361.a.1 (alpha-snapshot)
+  ACCEPTED as 3.3.b [certified] [3,3] class=qsplit new for this class
+== paper-t2-047.json
+  conductor 196
+  LMFDB: 196.a.4 (alpha-snapshot)
+  ACCEPTED as 3.6.b [certified] [3,6] class=qsplit new for this class
+== paper-t2-048.json
+  conductor 2916
+  LMFDB: 2916.e.2 (alpha-snapshot)
+  ACCEPTED as 3.9.b [certified] [3,9] class=qsplit new for this class
+== paper-t2-049.json
+  conductor 2700
+  LMFDB: 2700.c.1 (alpha-snapshot)
+  ACCEPTED as 3.12.a [certified] [3,12] class=qsplit NEW GROUP
+== paper-t2-050.json
+  conductor 8100
+  LMFDB: 8100.e.4 (alpha-snapshot)
+  ACCEPTED as 3.24.a [certified] [3,24] class=qsplit NEW GROUP
+== paper-t2-051.json
+  conductor 230400
+  LMFDB: 225.a.6 (alpha-snapshot)
+  ACCEPTED as 4.4.b [certified] [4,4] class=qsplit new for this class
+== paper-t2-052.json
+  conductor 230400
+  LMFDB: 225.a.2 (alpha-snapshot)
+  ACCEPTED as 4.8.b [certified] [4,8] class=qsplit new for this class
+== paper-t2-053.json
+  conductor 8100
+  LMFDB: 8100.j.1 (alpha-snapshot)
+  ACCEPTED as 4.12.a [certified] [4,12] class=qsplit NEW GROUP
+== paper-t2-054.json
+  conductor 50400
+  LMFDB: 50400.dj.1 (alpha-snapshot)
+  ACCEPTED as 4.16.a [certified] [4,16] class=qsplit NEW GROUP
+== paper-t2-055.json
+  conductor 123904
+  LMFDB: 121.a.1 (alpha-snapshot)
+  ACCEPTED as 5.5.a [certified] [5,5] class=qsplit NEW GROUP
+== paper-t2-056.json
+  conductor 85500
+  LMFDB: 85500.cj.1 (alpha-snapshot)
+  ACCEPTED as 5.10.a [certified] [5,10] class=qsplit NEW GROUP
+== paper-t2-057.json
+  conductor 196
+  LMFDB: 196.a.21952.1 (production)
+  ACCEPTED as 6.6.b [certified] [6,6] class=qsplit new for this class
+== paper-t2-058.json
+  conductor 18900
+  LMFDB: - (jump)
+  ACCEPTED as 6.12.a [certified] [6,12] class=qsplit NEW GROUP
+== paper-t2-059.json
+  conductor 56580108189696
+  LMFDB: - (jump)
+  ACCEPTED as 7.7.a [certified] [7,7] class=qsplit NEW GROUP
+== paper-t2-060.json
+  conductor 17243100
+  LMFDB: - (jump)
+  ACCEPTED as 8.8.a [certified] [8,8] class=qsplit NEW GROUP
+== paper-t2-061.json
+  conductor 322560
+  LMFDB: 315.a.2 (alpha-snapshot)
+  ACCEPTED as 2.2.2.b [certified] [2,2,2] class=qsplit new for this class
+== paper-t2-062.json
+  conductor not computed (timed out)
+  LMFDB: 225.a.3 (alpha-snapshot)
+  ACCEPTED as 2.2.4.b [certified] [2,2,4] class=qsplit new for this class
+== paper-t2-063.json
+  conductor 600
+  LMFDB: 600.a.18000.1 (production)
+  ACCEPTED as 2.2.6.b [certified] [2,2,6] class=qsplit new for this class
+== paper-t2-064.json
+  conductor 360
+  LMFDB: 360.a.6480.1 (production)
+  ACCEPTED as 2.2.8.b [certified] [2,2,8] class=qsplit new for this class
+== paper-t2-065.json
+  conductor 30492
+  LMFDB: 30492.q.1 (alpha-snapshot)
+  ACCEPTED as 2.2.10.b [certified] [2,2,10] class=qsplit new for this class
+== paper-t2-066.json
+  conductor 1350
+  LMFDB: 1350.d.1 (alpha-snapshot)
+  ACCEPTED as 2.2.12.b [certified] [2,2,12] class=qsplit new for this class
+== paper-t2-067.json
+  conductor 69300
+  LMFDB: 69300.bu.1 (alpha-snapshot)
+  ACCEPTED as 2.2.16.a [certified] [2,2,16] class=qsplit NEW GROUP
+== paper-t2-068.json
+  conductor 206076647700
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.24.a [certified] [2,2,24] class=qsplit NEW GROUP
+== paper-t2-069.json
+  conductor 230400
+  LMFDB: 225.a.5 (alpha-snapshot)
+  ACCEPTED as 2.4.4.b [certified] [2,4,4] class=qsplit new for this class
+== paper-t2-070.json
+  conductor 573300
+  LMFDB: 573300.ir.1 (alpha-snapshot)
+  ACCEPTED as 2.4.8.b [certified] [2,4,8] class=qsplit new for this class
+== paper-t2-071.json
+  conductor 132300
+  LMFDB: 132300.eo.2 (alpha-snapshot)
+  ACCEPTED as 2.6.6.a [certified] [2,6,6] class=qsplit NEW GROUP
+== paper-t2-072.json
+  conductor 784
+  LMFDB: 784.c.1 (alpha-snapshot)
+  ACCEPTED as 2.2.2.2.b [verified] [2,2,2,2] class=split_undecided_over_Q
+== paper-t2-073.json
+  conductor 882
+  LMFDB: 882.a.5 (alpha-snapshot)
+  ACCEPTED as 2.2.2.4.b [certified] [2,2,2,4] class=qsplit new for this class
+== paper-t2-074.json
+  conductor 900
+  LMFDB: 900.b.2 (alpha-snapshot)
+  ACCEPTED as 2.2.2.6.b [certified] [2,2,2,6] class=qsplit new for this class
+== paper-t2-075.json
+  conductor 4410
+  LMFDB: 4410.d.2 (alpha-snapshot)
+  ACCEPTED as 2.2.2.8.b [certified] [2,2,2,8] class=qsplit new for this class
+== paper-t2-076.json
+  conductor 485100
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.4.4.b [certified] [2,2,4,4] class=qsplit new for this class
+== paper-t2-077.json
+  conductor 1584038398842900
+  LMFDB: - (jump)
+  ACCEPTED as 2.2.4.8.a [certified] [2,2,4,8] class=qsplit NEW GROUP
+summary: paper-t1-001.json: accepted, paper-t1-002.json: accepted, paper-t1-003.json: accepted, paper-t1-004.json: accepted, paper-t1-005.json: accepted, paper-t1-006.json: accepted, paper-t1-007.json: accepted, paper-t1-008.json: accepted, paper-t1-009.json: accepted, paper-t1-010.json: accepted, paper-t1-011.json: accepted, paper-t1-012.json: accepted, paper-t1-013.json: accepted, paper-t1-014.json: accepted, paper-t1-015.json: accepted, paper-t1-016.json: accepted, paper-t1-017.json: accepted, paper-t1-018.json: accepted, paper-t1-019.json: accepted, paper-t1-020.json: accepted, paper-t1-021.json: accepted, paper-t1-022.json: accepted, paper-t1-023.json: accepted, paper-t1-024.json: accepted, paper-t1-025.json: accepted, paper-t1-026.json: accepted, paper-t1-027.json: accepted, paper-t1-028.json: accepted, paper-t1-029.json: accepted, paper-t1-030.json: accepted, paper-t1-031.json: accepted, paper-t1-032.json: accepted, paper-t1-033.json: accepted, paper-t1-034.json: accepted, paper-t1-035.json: accepted, paper-t1-036.json: accepted, paper-t1-037.json: accepted, paper-t1-038.json: accepted, paper-t1-039.json: accepted, paper-t1-040.json: accepted, paper-t1-041.json: accepted, paper-t1-042.json: accepted, paper-t1-043.json: accepted, paper-t1-044.json: accepted, paper-t1-045.json: accepted, paper-t1-046.json: accepted, paper-t1-047.json: accepted, paper-t1-048.json: accepted, paper-t1-049.json: accepted, paper-t1-050.json: accepted, paper-t1-051.json: accepted, paper-t1-052.json: accepted, paper-t1-053.json: accepted, paper-t1-054.json: accepted, paper-t1-055.json: accepted, paper-t1-056.json: accepted, paper-t1-057.json: accepted, paper-t1-058.json: accepted, paper-t1-059.json: accepted, paper-t1-060.json: accepted, paper-t1-061.json: accepted, paper-t1-062.json: accepted, paper-t1-063.json: accepted, paper-t1-064.json: accepted, paper-t1-065.json: accepted, paper-t1-066.json: accepted, paper-t1-067.json: accepted, paper-t1-068.json: accepted, paper-t1-069.json: accepted, paper-t1-070.json: accepted, paper-t1-071.json: accepted, paper-t1-072.json: accepted, paper-t1-073.json: accepted, paper-t2-001.json: accepted, paper-t2-002.json: accepted, paper-t2-003.json: accepted, paper-t2-004.json: accepted, paper-t2-005.json: accepted, paper-t2-006.json: accepted, paper-t2-007.json: accepted, paper-t2-008.json: accepted, paper-t2-009.json: accepted, paper-t2-010.json: accepted, paper-t2-011.json: accepted, paper-t2-012.json: accepted, paper-t2-013.json: accepted, paper-t2-014.json: accepted, paper-t2-015.json: accepted, paper-t2-016.json: accepted, paper-t2-017.json: accepted, paper-t2-018.json: accepted, paper-t2-019.json: accepted, paper-t2-020.json: accepted, paper-t2-021.json: accepted, paper-t2-022.json: accepted, paper-t2-023.json: accepted, paper-t2-024.json: accepted, paper-t2-025.json: accepted, paper-t2-026.json: accepted, paper-t2-027.json: accepted, paper-t2-028.json: accepted, paper-t2-029.json: accepted, paper-t2-030.json: accepted, paper-t2-031.json: accepted, paper-t2-032.json: accepted, paper-t2-033.json: accepted, paper-t2-034.json: accepted, paper-t2-035.json: accepted, paper-t2-036.json: accepted, paper-t2-037.json: accepted, paper-t2-038.json: accepted, paper-t2-039.json: accepted, paper-t2-040.json: accepted, paper-t2-041.json: accepted, paper-t2-042.json: accepted, paper-t2-043.json: accepted, paper-t2-044.json: accepted, paper-t2-045.json: accepted, paper-t2-046.json: accepted, paper-t2-047.json: accepted, paper-t2-048.json: accepted, paper-t2-049.json: accepted, paper-t2-050.json: accepted, paper-t2-051.json: accepted, paper-t2-052.json: accepted, paper-t2-053.json: accepted, paper-t2-054.json: accepted, paper-t2-055.json: accepted, paper-t2-056.json: accepted, paper-t2-057.json: accepted, paper-t2-058.json: accepted, paper-t2-059.json: accepted, paper-t2-060.json: accepted, paper-t2-061.json: accepted, paper-t2-062.json: accepted, paper-t2-063.json: accepted, paper-t2-064.json: accepted, paper-t2-065.json: accepted, paper-t2-066.json: accepted, paper-t2-067.json: accepted, paper-t2-068.json: accepted, paper-t2-069.json: accepted, paper-t2-070.json: accepted, paper-t2-071.json: accepted, paper-t2-072.json: accepted, paper-t2-073.json: accepted, paper-t2-074.json: accepted, paper-t2-075.json: accepted, paper-t2-076.json: accepted, paper-t2-077.json: accepted
+150 processed, 0 rejected

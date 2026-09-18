@@ -1,7 +1,8 @@
-[0.000000 s] start
+[0.0100000 s] start
 [0.0100000 s] curve: y^2 + (x^2 + x) y = 60*x^5 + 1000*x^4 - 671*x^3 - 5657*x^2 + 867*x + 4913; working model y^2 = 240*x^5 + 4001*x^4 - 2682*x^3 - 22627*x^2 + 3468*x + 19652
-[0.250000 s] J(Q)_tors = [ 2, 2, 4, 4 ] (0.240000 s)
-[1.07000 s] no strict prime below 500 (89 admissible primes, 89 with reducible chi)
-[1.09000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : 8/289*x^3 + 16/17*x^2*z + y : -1/17*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
-[1.09000 s] class: qsplit
-[1.23000 s] VERIFY_DONE
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 64 (p = [ 13, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127 ])
+[0.300000 s] J(Q)_tors = [ 2, 2, 4, 4 ] (TorsionSubgroup, 0.250000 s)
+[1.08000 s] no strict prime below 500 (89 admissible primes, 89 with reducible chi)
+[1.10000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : 8/289*x^3 + 16/17*x^2*z + y : -1/17*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
+[1.19000 s] class: qsplit
+[1.34000 s] VERIFY_DONE

@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "0",
@@ -103,12 +104,15 @@
       {
         "order": 20,
         "mumford": [
-          "x^2 - 2*x - 2",
-          "-11*x - 22",
+          "x^2 - 3/2*x",
+          "11*x",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 40,
     "point_count_primes": [
       5,
@@ -122,7 +126,20 @@
       41,
       43,
       47,
-      53
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
     ],
     "claimed": [
       2,
@@ -151,6 +168,7 @@
       "over": "Q",
       "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-125739)u + (62756262) over Q (the elliptic curve 462f1), (x,y) -> (p/q, y*hh/q^2) with p = -501*x^3 + 2505/2*x^2 - 654*x + 4509/2, q = x^3 - 5/2*x^2 + 10*x - 9/2, hh = 26136*x^2 - 58806*x + 58806; degree-3 map to the elliptic curve 462f1 over Q [Genus2Torsion/verify_split_certificates.m, cover 14]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -163,7 +181,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Booker–Sutherland (extended database)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 42 (source: \\cite{BookerSutherland})",
   "sources": [
@@ -230,13 +249,13 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:57:26 UTC"
+    "verified": "2026-09-18 17:37:48 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.35000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.34000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.20.b.log",
     "conductor_log": "data/logs/2.20.b.conductor.log",
     "conductor_cputime_seconds": 0.25

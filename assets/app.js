@@ -66,7 +66,7 @@
     const text = status === "certified" ? "certified" : status === "verified" ? "verified · class not certified" : status;
     return el("span", { class: "chip " + (status === "verified" ? "undecided" : status) }, text);
   };
-  const infBadge = (rec) => el("span", { class: "inf-badge " + rec.grade,
+  const infBadge = (rec) => el("span", { class: "inf-badge " + rec.grade + (rec.inherited_from ? " inherited" : ""),
     title: GRADE_TEXT[rec.grade] + (rec.note ? " — " + rec.note : "") }, GRADE[rec.grade]);
   const discovery = (by, year) => (by ? by + (year ? " (" + year + ")" : "") : (year ? String(year) : "—"));
   const srcYear = (src) => (src.short.includes(String(src.year)) ? "" : " (" + src.year + ")");
@@ -225,7 +225,7 @@
         const tr = el("tr", null,
           el("td", { class: "grp", "data-sort": String(g.rank).padStart(2, "0") + g.group.map((n) => String(n).padStart(4, "0")).join("") },
             el("a", { class: "g", href: "group.html?g=" + g.key }, g.bracket),
-            el("span", { class: "lbl" }, g.label, undec ? [" · ", el("a", { href: "group.html?g=" + g.key, class: "muted" }, undec + " curve" + (undec > 1 ? "s" : "") + " with undecided class")] : null)),
+            el("span", { class: "lbl" }, g.label, undec ? [" · ", el("a", { href: "group.html?g=" + g.key, class: "muted", title: "certified torsion, but the class (or the splitting field) could not be certified" }, undec + " curve" + (undec > 1 ? "s" : "") + " with undecided class")] : null)),
           el("td", { class: "num" }, g.order));
         if (showSimple) {
           tr.append(exampleCell(g.classes.simple, sources, g, "simple", mode));
@@ -302,11 +302,16 @@
         inf.note ? ". " + inf.note : null,
         inf.sources && inf.sources.length ? [" (", sourceLinks(sources, inf.sources), ")"] : null),
       extra || null);
-    const nS = g.classes.simple.length, nQ = g.classes.qsplit.length, nG = g.classes.gsplit.length, nU = g.classes.undecided.length;
+    const nS = g.classes.simple.length, nQ = g.classes.qsplit.length, nG = g.classes.gsplit.length;
+    const undecSplit = g.classes.undecided.filter((c) => c.class === "split_undecided_over_Q"), undecAll = g.classes.undecided.filter((c) => c.class !== "split_undecided_over_Q");
+    const nSp = nQ + nG + undecSplit.length;
     body.append(el("div", { class: "class-cols" },
       sideBox("geometrically simple", nS ? nS + " curve" + (nS > 1 ? "s" : "") : "no example known", g.infinite.simple),
-      sideBox("geometrically split", (nQ + nG) ? [(nQ + nG) + " curve" + (nQ + nG > 1 ? "s" : ""), el("span", { class: "muted", style: "font-size:0.9rem; font-family: var(--sans)" }, " (" + nQ + " split over ℚ, " + nG + " simple over ℚ)")] : "no example known", g.infinite.split)));
-    if (nU) body.append(el("p", { class: "notice" }, nU + " curve" + (nU > 1 ? "s" : "") + " with this torsion group " + (nU > 1 ? "have" : "has") + " a verified torsion subgroup but no certificate of simplicity or splitness (see below)."));
+      sideBox("geometrically split", nSp ? [nSp + " curve" + (nSp > 1 ? "s" : ""), el("span", { class: "muted", style: "font-size:0.9rem; font-family: var(--sans)" },
+          " (" + nQ + " split over ℚ, " + nG + " simple over ℚ" + (undecSplit.length ? ", " + undecSplit.length + " undecided over ℚ" : "") + ")")] : "no example known", g.infinite.split)));
+    if (undecSplit.length) body.append(el("p", { class: "notice" }, undecSplit.length + " curve" + (undecSplit.length > 1 ? "s" : "") + " with this torsion group " + (undecSplit.length > 1 ? "are" : "is") +
+      " certified geometrically split, but neither a certificate of splitness over ℚ nor one of simplicity over ℚ was found (see below)."));
+    if (undecAll.length) body.append(el("p", { class: "notice" }, undecAll.length + " curve" + (undecAll.length > 1 ? "s" : "") + " with this torsion group " + (undecAll.length > 1 ? "have" : "has") + " a verified torsion subgroup but no certificate of simplicity or splitness (see below)."));
     for (const [cls, name] of CLASSES) {
       if (!g.classes[cls].length) continue;
       const fs = g.first_source[cls], src = fs && sources[fs];
@@ -315,7 +320,8 @@
           g.first_dated[cls] === null ? "; the curves below are the smallest-conductor examples, not necessarily the curve of that source." : "."] : null),
         curvesTable(g.classes[cls], sources));
     }
-    if (nU) body.append(el("h3", null, "class not certified"), curvesTable(g.classes.undecided, sources));
+    if (undecSplit.length) body.append(el("h3", null, "geometrically split, undecided over ℚ"), curvesTable(undecSplit, sources));
+    if (undecAll.length) body.append(el("h3", null, "class not certified"), curvesTable(undecAll, sources));
   }
 
   // ---------------------------------------------------------------- curve page

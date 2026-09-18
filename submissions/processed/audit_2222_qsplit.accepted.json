@@ -1,0 +1,24 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^6 - 54*x^4 + 249*x^2 - 196",
+  "h": "0",
+  "group": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "class": "split",
+  "submitter": "curators (from the audit of 2026-09-18)",
+  "affiliation": "",
+  "github": "",
+  "discoverer": "audit of 2026-09-18",
+  "year": 2026,
+  "reference": "notes/audit_2026-09-18/report.md, item 4: y^2 = (x^2-1)(x^2-4)(x^2-49), split over Q by the involution x -> -x, elliptic quotients of conductors 45 and 630",
+  "notes": "first example of [2,2,2,2] for a Jacobian split over Q in the census; the involution x -> -x gives the two elliptic quotients v^2 = (u-1)(u-4)(u-49) and v^2 = u(u-1)(u-4)(u-49)",
+  "date": "2026-09-18",
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/audit_2222_qsplit.json"
+  }
+}

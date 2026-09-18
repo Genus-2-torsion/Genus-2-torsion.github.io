@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "-54",
@@ -101,6 +102,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 21,
     "point_count_primes": [
       7,
@@ -114,7 +118,20 @@
       37,
       41,
       47,
-      53
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
     ],
     "claimed": [
       3
@@ -142,6 +159,7 @@
       "over": "X^3 - 53859375/4*X^2 + 116033291015625/8*X - 138877345184326171875/64",
       "detail": "a nonconstant map of degree 2 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/37405695000*(-1548256*w^2 - 6254107537500*w + 623782079912109375)) over X^3 - 53859375/4*X^2 + 116033291015625/8*X - 138877345184326171875/64, (x,y) -> (p/q, y*hh/q^2) with p = 1/58446398437500*(624*w^2 - 12088437500*w - 5401994326171875)*x^2 + 1/29223199218750*(1312*w^2 - 24895000000*w + 17443671416015625)*x + 1/58446398437500*(-3376*w^2 + 32794375000*w - 31187170107421875), q = x^2 + 1/73057998046875*(-32*w^2 + 440450000*w - 352397402343750)*x + 1/43834798828125*(16*w^2 - 203947500*w + 190810300781250), hh = 1/14611599609375*(-16*w^2 + 301612500*w - 322314697265625)*x + 1/14611599609375*(64*w^2 - 718125000*w + 631736806640625); degree-2 map to an elliptic curve over the field defined by X^3-53859375/4*X^2+116033291015625/8*X-138877345184326171875/64; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/37405695000*(1548256*w^2+6254107537500*w-623782079912109375) [Genus2Torsion/verify_split_certificates.m, cover 18]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -154,7 +172,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "LMFDB genus 2 database (BSSVY 2016)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 3 (source: \\cite{BSSVY})",
   "sources": [
@@ -223,15 +242,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:53:01 UTC"
+    "verified": "2026-09-18 17:33:17 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.14000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.21000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/3.b.log",
     "conductor_log": "data/logs/3.b.conductor.log",
-    "conductor_cputime_seconds": 0.5
+    "conductor_cputime_seconds": 0.48
   }
 }

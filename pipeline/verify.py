@@ -317,6 +317,21 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
             curve["conductor"] = lmfdb["label"].split(".")[0]
             curve["conductor_note"] = "taken from the LMFDB label " + lmfdb["label"] + " (Magma did not finish the conductor computation within the time limit)"
     curve["conductor_source"] = "magma" if cond else ("lmfdb label" if curve["conductor"] else "")
+    prod = res["split"].get("isogenous_product")
+    if prod:
+        # rigorous: the conductor is an isogeny invariant and multiplicative in products
+        magma_val = curve["conductor"]
+        curve["conductor_magma"] = cond["conductor"] if cond else ""
+        curve["conductor"] = prod["conductor"]
+        curve["conductor_factored"] = " * ".join(prod["conductors"]) + (" (product of the elliptic conductors)")
+        curve["conductor_source"] = "isogenous product of elliptic curves"
+        if magma_val and magma_val != prod["conductor"]:
+            curve["conductor_note"] = (f"Magma's genus-2 Conductor gave {magma_val} (Ogg's formula at 2, no correctness guarantee); "
+                                       f"the rigorous value is N(E1) N(E2) = {prod['conductors'][0]} * {prod['conductors'][1]} for the elliptic curves "
+                                       f"{prod['ainvs'][0]} and {prod['ainvs'][1]} to whose product J is isogenous over Q")
+        else:
+            curve["conductor_note"] = (f"N(E1) N(E2) = {prod['conductors'][0]} * {prod['conductors'][1]} for the elliptic curves {prod['ainvs'][0]} and "
+                                       f"{prod['ainvs'][1]} to whose product J is isogenous over Q" + (" (Magma's genus-2 Conductor agrees)" if magma_val else ""))
     sources = v.get("sources") or []
     return {
         "schema": SCHEMA_CERTIFICATE,
@@ -422,9 +437,14 @@ def process(path: Path, args) -> str:
             return "dry"
         rc, timed_out = run_magma(job, args.timeout)
         result_file = jobdir / "result.json"
-        if timed_out or not result_file.exists():
+        if timed_out:
             raise Reject("Magma did not finish within the time limit "
                          f"({args.timeout} s); the torsion computation or the certificates took too long")
+        if not result_file.exists():
+            tail = ""
+            if job.with_suffix(".stdout").exists():
+                tail = job.with_suffix(".stdout").read_text()[-600:].strip()
+            raise Reject("Magma produced no result (internal error in the verifier): " + tail)
         res = denull(read_json(result_file))
         if not res.get("ok"):
             raise Reject("verification failed: " + res.get("error", "unknown error"))

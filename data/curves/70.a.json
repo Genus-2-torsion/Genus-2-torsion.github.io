@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "179",
@@ -91,12 +92,15 @@
       {
         "order": 70,
         "mumford": [
-          "x^2 - 6*x + 8",
-          "3*x + 60",
+          "x^2 - 10*x - 12",
+          "177*x + 48",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 70,
     "point_count_primes": [
       5,
@@ -110,7 +114,20 @@
       41,
       43,
       47,
-      53
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
     ],
     "claimed": [
       70
@@ -138,6 +155,7 @@
       "over": "Q",
       "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-7483623723)u + (249446508217254) over Q (the elliptic curve 858k1), (x,y) -> (p/q, y*hh/q^2) with p = -15693*x^3 + 78465*x^2 - 5487933/4*x + 4954371, q = x^3 - 5*x^2 - 55/4*x + 89, hh = 9526572*x^3 - 80975862*x^2 + 190531440*x - 161951724; degree-3 map to the elliptic curve 858k1 over Q [Genus2Torsion/verify_split_certificates.m, cover 17]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -150,7 +168,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Howe 2015",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 32 (source: \\cite{Howe2015})",
   "sources": [
@@ -215,15 +234,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:57:13 UTC"
+    "verified": "2026-09-18 17:37:33 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.05000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.910000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/70.a.log",
     "conductor_log": "data/logs/70.a.conductor.log",
-    "conductor_cputime_seconds": 0.33
+    "conductor_cputime_seconds": 0.24
   }
 }

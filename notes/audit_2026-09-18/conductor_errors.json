@@ -1,0 +1,120 @@
+[
+  {
+    "id": "5.b",
+    "group": [
+      5
+    ],
+    "reported": 126877696,
+    "actual": 121,
+    "factors": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": "2.4.b",
+    "group": [
+      2,
+      4
+    ],
+    "reported": 230400,
+    "actual": 225,
+    "factors": [
+      15,
+      15
+    ]
+  },
+  {
+    "id": "2.8.b",
+    "group": [
+      2,
+      8
+    ],
+    "reported": 230400,
+    "actual": 225,
+    "factors": [
+      15,
+      15
+    ]
+  },
+  {
+    "id": "4.4.b",
+    "group": [
+      4,
+      4
+    ],
+    "reported": 230400,
+    "actual": 225,
+    "factors": [
+      15,
+      15
+    ]
+  },
+  {
+    "id": "4.8.b",
+    "group": [
+      4,
+      8
+    ],
+    "reported": 230400,
+    "actual": 225,
+    "factors": [
+      15,
+      15
+    ]
+  },
+  {
+    "id": "5.5.a",
+    "group": [
+      5,
+      5
+    ],
+    "reported": 123904,
+    "actual": 121,
+    "factors": [
+      11,
+      11
+    ]
+  },
+  {
+    "id": "7.7.a",
+    "group": [
+      7,
+      7
+    ],
+    "reported": 56580108189696,
+    "actual": 53958996,
+    "factors": [
+      98826,
+      546
+    ]
+  },
+  {
+    "id": "2.2.2.b",
+    "group": [
+      2,
+      2,
+      2
+    ],
+    "reported": 322560,
+    "actual": 315,
+    "factors": [
+      15,
+      21
+    ]
+  },
+  {
+    "id": "2.4.4.b",
+    "group": [
+      2,
+      4,
+      4
+    ],
+    "reported": 230400,
+    "actual": 225,
+    "factors": [
+      15,
+      15
+    ]
+  }
+]

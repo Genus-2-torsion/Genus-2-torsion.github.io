@@ -1,0 +1,51 @@
+FAMILY [2] t=1 expected=[ 2 ] got=[ 2 ] strict(0)=not requested
+FAMILY [2] t=2 expected=[ 2 ] got=[ 2 ] strict(17)=true
+FAMILY [2] t=3 expected=[ 2 ] got=[] strict(0)=not requested
+FAMILY [2] t=4 expected=[ 2 ] got=[] strict(0)=not requested
+FAMILY [2] t=5 expected=[ 2 ] got=[] strict(0)=not requested
+FAMILY [2,2] t=3 expected=[ 2, 2 ] got=[ 2, 2 ] strict(11)=true
+FAMILY [2,2,2] t=3 expected=[ 2, 2, 2 ] got=[ 2, 2, 2 ] strict(29)=true
+FAMILY [2,2,2,2] t=5 expected=[ 2, 2, 2, 2 ] got=[ 2, 2, 2, 2 ] strict(11)=true
+FAMILY [3] t=2 expected=[ 3 ] got=[ 3 ] strict(13)=true
+FAMILY [10] a=1 expected=[ 10 ] got=[ 10 ] strict(17)=true
+FAMILY [10] a=2 expected=[ 10 ] got=[ 10 ] strict(17)=true
+FAMILY [10] a=3 expected=[ 10 ] got=[ 10 ] strict(13)=true
+FAMILY [10] a=-3 expected=[ 10 ] got=[ 10 ] strict(11)=true
+FAMILY [10] a=5 expected=[ 10 ] got=[ 10 ] strict(23)=true
+FAMILY [10] a=1/2 expected=[ 10 ] got=[ 10 ] strict(11)=true
+FAMILY [10] a=7 expected=[ 10 ] got=[ 10 ] strict(19)=true
+FAMILY [10] a=-5 expected=[ 10 ] got=[ 10 ] strict(11)=true
+FAMILY [4] s=1 expected=[ 4 ] got=[ 4 ] strict(19)=true
+FAMILY [4] s=2 expected=[ 4 ] got=[ 4 ] strict(17)=true
+FAMILY [4] s=3 expected=[ 4 ] got=[ 4 ] strict(19)=true
+FAMILY [4] s=-1 expected=[ 4 ] got=[ 4 ] strict(19)=true
+FAMILY [4] s=-2 expected=[ 4 ] got=[ 4 ] strict(17)=true
+FAMILY [4] s=1/2 expected=[ 4 ] got=[ 4 ] strict(11)=true
+FAMILY [4] s=5 expected=[ 4 ] got=[ 4 ] strict(11)=true
+FAMILY [4] s=-3 expected=[ 4 ] got=[ 4 ] strict(19)=true
+FAMILY [2,4] t=3 expected=[ 2, 4 ] got=[ 2, 4 ] strict(17)=true
+FAMILY [2,4] t=5 expected=[ 2, 4 ] got=[ 2, 4 ] strict(11)=true
+FAMILY [2,4] t=7 expected=[ 2, 4 ] got=[ 2, 4 ] strict(11)=true
+FAMILY [2,4] t=-2 expected=[ 2, 4 ] got=[ 2, 4 ] strict(13)=true
+FAMILY [2,4] t=1/2 expected=[ 2, 4 ] got=[ 2, 4 ] strict(29)=true
+FAMILY [2,4] t=-4 expected=[ 2, 4 ] got=[ 2, 4 ] strict(11)=true
+FAMILY [2,4] t=11 expected=[ 2, 4 ] got=[ 2, 4 ] strict(13)=true
+FAMILY [2,4] t=13 expected=[ 2, 4 ] got=[ 2, 4 ] strict(37)=true
+FAMILY [2,2,4] t=1 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(13)=true
+FAMILY [2,2,4] t=3 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(19)=true
+FAMILY [2,2,4] t=-2 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(17)=true
+FAMILY [2,2,4] t=5 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(13)=true
+FAMILY [2,2,4] t=1/2 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(29)=true
+FAMILY [2,2,4] t=-4 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(17)=true
+FAMILY [2,2,4] t=7 expected=[ 2, 2, 4 ] got=[ 2, 2, 4 ] strict(17)=true
+FAMILY [2,2,2,4] t=5 expected=[ 2, 2, 2, 4 ] got=[ 2, 2, 2, 4 ] strict(59)=true
+FAMILY [2,2,2,8] t=2 expected=[ 2, 2, 2, 8 ] got=[ 2, 2, 2, 8 ] strict(31)=true
+FAMILY [2,2,2,6] <25, -26, -15> expected=[ 2, 2, 2, 6 ] got=[ 2, 2, 2, 6 ] strict(23)=true
+FAMILY [2,2,2,6] <7, 2, 1> expected=[ 2, 2, 2, 6 ] got=[ 2, 2, 2, 6 ] strict(47)=true
+FAMILY [2,2,2,6] <3, -2, 5> expected=[ 2, 2, 2, 6 ] got=[ 2, 2, 2, 6 ] strict(41)=true
+FAMILY [2,2,2,6] <11, 4, -3> expected=[ 2, 2, 2, 6 ] got=[ 2, 2, 2, 6 ] strict(23)=true
+FAMILY [2,2,2,6] <5, 7, 2> expected=[ 2, 2, 2, 6 ] got=[ 2, 2, 2, 6 ] strict(67)=true
+FAMILY [11] Flynn t=2 expected=[ 11 ] got=[ 11 ] strict(0)=not requested
+FAMILY [11] Flynn t=3 expected=[ 11 ] got=[ 11 ] strict(0)=not requested
+FAMILY [11] Flynn t=4 expected=[ 11 ] got=[ 11 ] strict(0)=not requested
+FAMILY_AUDIT_COMPLETE

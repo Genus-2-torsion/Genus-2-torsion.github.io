@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "0",
@@ -86,20 +87,23 @@
       {
         "order": 6,
         "mumford": [
-          "x^2 - 511/156*x + 5/3",
-          "3465/13*x - 230",
+          "x^2 - 17/52*x + 15/13",
+          "635/13*x + 30/13",
           "2"
         ]
       },
       {
         "order": 6,
         "mumford": [
-          "x^2 - 9/4*x + 195/4",
-          "365*x + 4290",
+          "x^2 + 149/156*x + 25/52",
+          "-1175/13*x - 1200/13",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 36,
     "point_count_primes": [
       7,
@@ -113,7 +117,20 @@
       53,
       59,
       61,
-      67
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131
     ],
     "claimed": [
       6,
@@ -138,6 +155,7 @@
     "geometrically_split": false,
     "split_over_Q": false,
     "certificate": null,
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -150,7 +168,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 56 (source: new)",
   "sources": [
@@ -192,15 +211,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:52:39 UTC"
+    "verified": "2026-09-18 17:32:54 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.370000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.360000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/6.6.a.log",
     "conductor_log": "data/logs/6.6.a.conductor.log",
-    "conductor_cputime_seconds": 0.52
+    "conductor_cputime_seconds": 0.51
   }
 }

@@ -15,7 +15,8 @@ realised only finitely often, and no group is known not to be realised at all):
              certificates are in that record.
   family  -- a positive-dimensional family of curves with J(Q)_tors *containing* G is proven in
              the cited source (infinitely many members in moduli); exactness of the torsion, or
-             the class, for infinitely many members is not certified.
+             the class, for infinitely many members is not certified.  A group inherits this grade
+             from any recorded group containing it (is_subgroup).
   open    -- no positive-dimensional construction is recorded.
 """
 
@@ -42,11 +43,17 @@ SOURCES = {
         "url": "data/knowledge/sources/census_infinity_record.md",
         "used_for": "the 'exact' grade of the ∞ column on the simple side (39 groups), and the notes on the open ones",
     },
+    "Audit2026": {
+        "short": "audit of 2026-09-18", "year": 2026,
+        "cite": "Audit of https://genus-2-torsion.github.io/ (18 September 2026): report and Magma scripts in notes/audit_2026-09-18/. Its findings were re-verified here (see the notes).",
+        "url": "notes/audit_2026-09-18/report.md",
+        "used_for": "the corrected conductors of nine split curves, the corrected [2] family, the exact-infinitude argument for [2,2,2,12], the split [2,2,2,2] example, the DOI corrections",
+    },
     "ThisSite": {
         "short": "this site (Magma log)", "year": 2026,
         "cite": "Computation for this census on the Mordell workstation (Magma V2.29-4); script and log in the repository.",
-        "url": "data/knowledge/sources/trivial_torsion_family.log",
-        "used_for": "the trivial group: fibers of y² = x⁵ + x + t",
+        "url": "data/knowledge/sources/",
+        "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log (scripts in pipeline/magma/)",
     },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
@@ -74,32 +81,32 @@ SOURCES = {
     },
     "Ogg1973": {"short": "Ogg 1973", "year": 1973, "cite": "A. Ogg, Rational points on certain elliptic modular curves, in Proc. Sympos. Pure Math. XXIV, AMS, 1973, 221–231.", "url": "", "used_for": "seed curves"},
     "MazurTate1973": {"short": "Mazur–Tate 1973", "year": 1973, "cite": "B. Mazur and J. Tate, Points of order 13 on elliptic curves, Invent. Math. 22 (1973), 41–49.", "url": "https://doi.org/10.1007/BF01425572", "used_for": "the [19] split curve J₁(13)"},
-    "Flynn1990": {"short": "Flynn 1990", "year": 1990, "cite": "E. V. Flynn, Large rational torsion on abelian varieties, J. Number Theory 36 (1990), 257–265.", "url": "https://doi.org/10.1016/0022-314X(90)90036-Q", "used_for": "seed curves"},
-    "Flynn1991": {"short": "Flynn 1991", "year": 1991, "cite": "E. V. Flynn, Sequences of rational torsions on abelian varieties, Invent. Math. 106 (1991), 433–442.", "url": "https://doi.org/10.1007/BF01243920", "used_for": "seed curves"},
+    "Flynn1990": {"short": "Flynn 1990", "year": 1990, "cite": "E. V. Flynn, Large rational torsion on abelian varieties, J. Number Theory 36 (1990), 257–265.", "url": "https://doi.org/10.1016/0022-314X(90)90089-A", "used_for": "seed curves"},
+    "Flynn1991": {"short": "Flynn 1991", "year": 1991, "cite": "E. V. Flynn, Sequences of rational torsions on abelian varieties, Invent. Math. 106 (1991), 433–442.", "url": "https://doi.org/10.1007/BF01243919", "used_for": "seed curves"},
     "Leprevost1991a": {"short": "Leprévost 1991 (order 13)", "year": 1991, "cite": "F. Leprévost, Famille de courbes de genre 2 munies d'une classe de diviseurs rationnels d'ordre 13, C. R. Acad. Sci. Paris Sér. I Math. 313 (1991), 451–454.", "url": "", "used_for": "seed curves; the family with a class of order 13"},
     "Leprevost1991": {"short": "Leprévost 1991 (orders 15, 17, 19, 21)", "year": 1991, "cite": "F. Leprévost, Familles de courbes de genre 2 munies d'une classe de diviseurs rationnels d'ordre 15, 17, 19 ou 21, C. R. Acad. Sci. Paris Sér. I Math. 313 (1991), 771–774.", "url": "", "used_for": "seed curves; the families with classes of order 15, 17, 19, 21"},
     "Leprevost1993": {"short": "Leprévost 1993", "year": 1993, "cite": "F. Leprévost, Points rationnels de torsion de jacobiennes de certaines courbes de genre 2, C. R. Acad. Sci. Paris Sér. I 316 (1993), 819–821.", "url": "", "used_for": "seed curves"},
-    "Leprevost1995": {"short": "Leprévost 1995", "year": 1995, "cite": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306.", "url": "https://doi.org/10.5802/jtnb.145", "used_for": "seed curves"},
+    "Leprevost1995": {"short": "Leprévost 1995", "year": 1995, "cite": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306.", "url": "https://doi.org/10.5802/jtnb.144", "used_for": "seed curves"},
     "Leprevost1997": {"short": "Leprévost 1997", "year": 1997, "cite": "F. Leprévost, Sur certains sous-groupes de torsion de jacobiennes de courbes hyperelliptiques de genre g ≥ 1, Manuscripta Math. 92 (1997), 47–63.", "url": "https://doi.org/10.1007/BF02678180", "used_for": "seed curves"},
     "Elkies2002": {"short": "Elkies 2002", "year": 2002, "cite": "N. D. Elkies, Curves of genus 2 over ℚ whose Jacobians are absolutely simple abelian surfaces with torsion points of high order, https://people.math.harvard.edu/~elkies/g2_tors.html, 2001–2002, updated 2010.", "url": "https://people.math.harvard.edu/~elkies/g2_tors.html", "used_for": "seed curves; the order-32 component"},
     "Elkies2024": {"short": "Elkies 2024", "year": 2024, "cite": "N. D. Elkies, Families of genus-2 curves with 5-torsion, in LuCaNT: LMFDB, Computation, and Number Theory, Contemp. Math. 796, AMS, 2024, 165–185.", "url": "https://doi.org/10.1090/conm/796", "used_for": "the two-parameter [2,2,2,10] family and the 5-torsion chart behind the [2,10], [2,2,10] families"},
-    "Howe2015": {"short": "Howe 2015", "year": 2015, "cite": "E. W. Howe, Genus-2 Jacobians with torsion points of large order, Bull. London Math. Soc. 47 (2015), 127–135.", "url": "https://doi.org/10.1112/blms/bdu110", "used_for": "seed curves"},
-    "PP2012": {"short": "Platonov–Petrunin 2012a", "year": 2012, "cite": "V. P. Platonov and M. M. Petrunin, New orders of torsion points in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 85 (2012), 286–288.", "url": "https://doi.org/10.1134/S1064562412020366", "used_for": "seed curves"},
-    "PP2012b": {"short": "Platonov–Petrunin 2012b", "year": 2012, "cite": "V. P. Platonov and M. M. Petrunin, On the torsion problem in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 86 (2012), 642–643.", "url": "https://doi.org/10.1134/S1064562412050146", "used_for": "seed curves"},
-    "PP2015": {"short": "Platonov–Petrunin 2015", "year": 2015, "cite": "V. P. Platonov and M. M. Petrunin, New curves of genus 2 over the field of rational numbers whose Jacobians contain torsion points of high order, Dokl. Math. 91 (2015), 220–221.", "url": "https://doi.org/10.1134/S1064562415020222", "used_for": "seed curves"},
+    "Howe2015": {"short": "Howe 2015", "year": 2015, "cite": "E. W. Howe, Genus-2 Jacobians with torsion points of large order, Bull. London Math. Soc. 47 (2015), 127–135.", "url": "https://doi.org/10.1112/blms/bdu107", "used_for": "seed curves; Theorem 3.2 / Remark 3.3: a family of genus-2 curves whose Jacobians have a rational point of order 48, parametrised by an elliptic curve of rank 2 (split, by 2-gluing)"},
+    "PP2012": {"short": "Platonov–Petrunin 2012a", "year": 2012, "cite": "V. P. Platonov and M. M. Petrunin, New orders of torsion points in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 85 (2012), 286–288.", "url": "https://doi.org/10.1134/S1064562412020330", "used_for": "seed curves"},
+    "PP2012b": {"short": "Platonov–Petrunin 2012b", "year": 2012, "cite": "V. P. Platonov and M. M. Petrunin, On the torsion problem in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 86 (2012), 642–643.", "url": "https://doi.org/10.1134/S1064562412050304", "used_for": "seed curves"},
+    "PP2015": {"short": "Platonov–Petrunin 2015", "year": 2015, "cite": "V. P. Platonov and M. M. Petrunin, New curves of genus 2 over the field of rational numbers whose Jacobians contain torsion points of high order, Dokl. Math. 91 (2015), 220–221.", "url": "https://doi.org/10.1134/S1064562415020325", "used_for": "seed curves"},
     "PZP2013": {"short": "Platonov–Zhgun–Petrunin 2013", "year": 2013, "cite": "V. P. Platonov, V. S. Zhgun, M. M. Petrunin, On the simplicity of Jacobians for hyperelliptic curves of genus 2 over the field of rational numbers with torsion points of high order, Dokl. Math. 87 (2013), 318–321.", "url": "https://doi.org/10.1134/S1064562413030216", "used_for": "seed curves"},
     "Platonov2014": {"short": "Platonov 2014", "year": 2014, "cite": "V. P. Platonov, Number-theoretic properties of hyperelliptic fields and the torsion problem in Jacobians of hyperelliptic curves over the rational number field, Russian Math. Surveys 69 (2014), no. 1, 1–34.", "url": "https://doi.org/10.1070/RM2014v069n01ABEH004877", "used_for": "seed curves"},
     "BFT2014": {"short": "Bruin–Flynn–Testa 2014", "year": 2014, "cite": "N. Bruin, E. V. Flynn, D. Testa, Descent via (3,3)-isogeny on Jacobians of genus 2 curves, Acta Arith. 165 (2014), 201–223.", "url": "https://doi.org/10.4064/aa165-3-1", "used_for": "seed curve; Theorem 6, the rational parametrization behind the [3,3] family"},
-    "Nicholls2018": {"short": "Nicholls 2018", "year": 2018, "cite": "C. Nicholls, Descent methods and torsion on Jacobians of higher genus curves, DPhil thesis, University of Oxford, 2018.", "url": "https://ora.ox.ac.uk/objects/uuid:0a2a3c5f-6c7f-4d0d-9b21-4c9a2d1e6d64", "used_for": "seed curve ([25])"},
+    "Nicholls2018": {"short": "Nicholls 2018", "year": 2018, "cite": "C. Nicholls, Descent methods and torsion on Jacobians of higher genus curves, DPhil thesis, University of Oxford, 2018.", "url": "https://doi.org/10.5287/ora-z58j05keq", "used_for": "seed curve ([25])"},
     "costa": {"short": "Costa et al. (ModularAbelianSurfaces)", "year": 2022, "cite": "E. Costa, N. D. Elkies, S. Hashimoto, A. Jha, K. Martin, B. Poonen, J. Voight, ModularAbelianSurfaces GitHub repository, https://github.com/edgarcosta/ModularAbelianSurfaces, 2022.", "url": "https://github.com/edgarcosta/ModularAbelianSurfaces", "used_for": "the [31] curve (attached to the newform 1830.2.a.q)"},
     "EpochAI": {"short": "Epoch AI 2026", "year": 2026, "cite": "Epoch AI, A genus 2 curve over the rationals with a rational torsion point of prime order at least 31, https://epoch.ai/frontiermath/open-problems/genus-2-jacobian-torsion, 2026.", "url": "https://epoch.ai/frontiermath/open-problems/genus-2-jacobian-torsion", "used_for": "identification of the [31] curve"},
     "AlessandriCoppola": {"short": "Alessandrì–Coppola 2026", "year": 2026, "cite": "J. Alessandrì and N. Coppola, Torsion points on GL₂-type abelian varieties, arXiv:2602.21047 (2026).", "url": "https://arxiv.org/abs/2602.21047", "used_for": "the 31-torsion candidate 1830.2.a.q"},
-    "DaowsudSchmidt": {"short": "Daowsud–Schmidt 2018", "year": 2018, "cite": "K. Daowsud and T. A. Schmidt, Continued fractions for rational torsion, J. Number Theory 189 (2018), 115–130; corrigendum J. Number Theory 246 (2023), 326–327.", "url": "https://doi.org/10.1016/j.jnt.2017.11.001", "used_for": "the order-11 family (and Flynn's older order-11 family quoted there)"},
+    "DaowsudSchmidt": {"short": "Daowsud–Schmidt 2018", "year": 2018, "cite": "K. Daowsud and T. A. Schmidt, Continued fractions for rational torsion, J. Number Theory 189 (2018), 115–130; corrigendum J. Number Theory 246 (2023), 326–327.", "url": "https://doi.org/10.1016/j.jnt.2017.11.014", "used_for": "the order-11 family (and Flynn's older order-11 family quoted there)"},
     "KuruSadek": {"short": "Kuru–Sadek 2024", "year": 2024, "cite": "H. Kuru and M. Sadek, Quadratic torsion orders on Jacobian varieties, arXiv:2410.14455 (2024).", "url": "https://arxiv.org/abs/2410.14455", "used_for": "the order-23 family (genus-2 specialization)"},
     "Choudhry": {"short": "Choudhry 2016", "year": 2016, "cite": "A. Choudhry, Equal sums of like powers with minimum number of terms, Integers 16 (2016), Paper No. A77.", "url": "", "used_for": "the genus-1 curve on the [2,2,2,12] surface (Theorem 3.3 of BNSS2026)"},
     "Stoll1999": {"short": "Stoll 1999", "year": 1999, "cite": "M. Stoll, On the height constant for curves of genus two, Acta Arith. 90 (1999), 183–201.", "url": "https://doi.org/10.4064/aa-90-2-183-201", "used_for": "the algorithm behind Magma's TorsionSubgroup for genus-2 Jacobians over ℚ"},
     "MullerStoll2016": {"short": "Müller–Stoll 2016", "year": 2016, "cite": "J. S. Müller and M. Stoll, Canonical heights on genus-2 Jacobians, Algebra Number Theory 10 (2016), 2153–2234; errata, published online 2023.", "url": "https://doi.org/10.2140/ant.2016.10.2153", "used_for": "the height bounds used by Magma's TorsionSubgroup"},
-    "Zywina2022": {"short": "Zywina 2022", "year": 2022, "cite": "D. Zywina, Determining monodromy groups of abelian varieties, Res. Number Theory 8 (2022), article 89.", "url": "https://doi.org/10.1007/s40993-022-00389-x", "used_for": "background for the Frobenius criteria (End = ℤ certificates in the Genus2Torsion scripts; not used here)"},
+    "Zywina2022": {"short": "Zywina 2022", "year": 2022, "cite": "D. Zywina, Determining monodromy groups of abelian varieties, Res. Number Theory 8 (2022), article 89.", "url": "https://doi.org/10.1007/s40993-022-00391-0", "used_for": "background for the Frobenius criteria (End = ℤ certificates in the Genus2Torsion scripts; not used here)"},
     "Lombardo2019": {"short": "Lombardo 2019", "year": 2019, "cite": "D. Lombardo, Computing the geometric endomorphism ring of a genus-2 Jacobian, Math. Comp. 88 (2019), 889–929.", "url": "https://doi.org/10.1090/mcom/3358", "used_for": "the endomorphism-algebra criterion cited by the paper for geometric simplicity"},
     "Magma": {"short": "Magma", "year": 2026, "cite": "W. Bosma, J. J. Cannon, C. Fieker, A. Steel (eds.), Handbook of Magma functions, Edition 2.29 (2026).", "url": "http://magma.maths.usyd.edu.au/magma/", "used_for": "all verifications (TorsionSubgroup, RichelotIsogenousSurfaces, AutomorphismGroup, EulerFactor, Conductor)"},
 }
@@ -146,7 +153,7 @@ RECORD = "Najman2026"
 # simple side: certified 'exact' families (census_infinity_record.md, sections 2 and 3)
 _SIMPLE_EXACT = {
     "1": ("y² = x⁵ + x + t (t = 3, 4, 5, 7, 8: trivial torsion, strict primes 7, 7, 7, 13, 13, distinct G2-invariants)", ["ThisSite"]),
-    "2": ("y² = x(x⁵ + x + t); exact and strict fiber t = 2 (p = 17)", [RECORD]),
+    "2": ("y² = x(x⁴ + x + t): the class [(0,0) − ∞] is a rational 2-torsion point for every t (checked over ℚ(t)); fibers t = 1, 2, 3, 5, 7 have torsion exactly [2], a strict prime and distinct G2-invariants (family_2_certificate.log). The record's family y² = x(x⁵ + x + t) has no rational 2-torsion generically (x⁵ + x + t is irreducible over ℚ(t)); its fiber t = 2 is exact [2] only by an accidental extra root — found by the audit of 2026-09-18", ["ThisSite", "Audit2026"]),
     "2.2": ("y² = x(x−1)(x−2)(x³ + x + t); t = 3 (p = 11)", [RECORD]),
     "2.2.2": ("y² = x(x−1)(x−2)(x² + x + t); t = 3 (p = 29)", [RECORD]),
     "2.2.2.2": ("y² = x(x−1)(x−2)(x−3)(x−t); t = 5 (p = 11)", [RECORD]),
@@ -174,7 +181,6 @@ _SIMPLE_EXACT = {
     "14": ("rational-root subfamily of the contact-7 chart", [RECORD]),
     "18": ("rational-root subfamily of the contact-9 chart", [RECORD]),
     "5": ("five-torsion families (see the record)", [RECORD]),
-    "15": ("inherited from the cyclic [30] family (see the record for the exactness discussion)", [RECORD]),
     "20": ("the contact-5 + 4-torsion family", [RECORD]),
     "2.20": ("the extra-2 loci of the contact-5 + 4-torsion family", [RECORD]),
     "21": ("Leprévost's 1991 one-parameter degree-5 family f₂₁ = A₂₁² − k₂₁x³(x−1)²; marked class of order 21 verified symbolically over ℚ(t)", [RECORD, "Leprevost1991"]),
@@ -185,6 +191,7 @@ _SIMPLE_EXACT = {
     "3.3": ("Bruin–Flynn–Testa 2014, Theorem 6: rational parametrization of the pointwise A(3,3) chart", [RECORD, "BFT2014"]),
     "4.8": ("the tangent-cover family", [RECORD]),
     "2.2.2.10": ("Elkies 2024: the Clebsch–Klein full-level-2 plus 5-torsion two-parameter family", [RECORD, "Elkies2024"]),
+    "2.2.2.12": ("BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18)", ["ThisSite", "Audit2026", "BNSS2026", "Choudhry"]),
 }
 
 # simple side: a family with J(Q)_tors ⊇ G is proven, but not exactness/simplicity of infinitely many members
@@ -192,7 +199,7 @@ _SIMPLE_FAMILY = {
     "13": ("Leprévost 1991: a family of genus-2 curves with a rational divisor class of order 13 (formulas not transcribed into the record; exactness and geometric simplicity of infinitely many members not certified)", ["Leprevost1991a"]),
     "17": ("Leprévost 1991: a family with a rational divisor class of order 17 (not transcribed; open legs as for [13])", ["Leprevost1991"]),
     "19": ("Leprévost 1991: a family with a rational divisor class of order 19 (not transcribed; open legs as for [13])", ["Leprevost1991"]),
-    "2.2.2.12": ("BNSS2026, Theorem 3.3: infinitely many genus-2 Jacobians over ℚ with J(ℚ)tors ⊇ [2,2,2,12], from a genus-1 curve of rank 1 on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴; whether infinitely many of them have torsion exactly [2,2,2,12] and are geometrically simple is open", ["BNSS2026", "Choudhry"]),
+    "15": ("the record lists [15] as inherited from the cyclic [30] family, which only gives torsion ⊇ [30] ⊇ [15]; no family with generic torsion exactly [15] is recorded (audit of 2026-09-18)", [RECORD, "Audit2026"]),
 }
 
 # simple side: open, with a note from the record
@@ -219,14 +226,49 @@ _SPLIT_FAMILY = {
     "8.8": "ℙ²", "2.4.8": "ℙ²", "6.12": "positive rank elliptic surface", "2.6.6": "positive rank elliptic surface",
     "2.2.24": "positive rank elliptic curve", "2.2.4.8": "positive rank elliptic surface",
 }
+_SPLIT_FAMILY_OTHER = {
+    "48": ("Howe 2015, Theorem 3.2 and Remark 3.3: a family of genus-2 curves whose Jacobians have a rational point of order 48, parametrised by an elliptic curve of rank 2; the Jacobians are split over ℚ by the 2-gluing construction", ["Howe2015"]),
+}
 _SPLIT_OPEN_NOTES = {
     "7.7": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)",
     "63": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)",
 }
 
 
-def infinite_record(side: str, key: str) -> dict:
-    """The ∞ answer for a group key on a side ('simple' or 'split')."""
+def _p_part(inv, p):
+    """Exponents of p in the invariant factors, sorted decreasingly (the partition of the p-part)."""
+    out = []
+    for n in inv:
+        e = 0
+        while n % p == 0:
+            n //= p; e += 1
+        if e:
+            out.append(e)
+    return sorted(out, reverse=True)
+
+
+def is_subgroup(g, h) -> bool:
+    """Does the finite abelian group with invariant factors g embed in the one with invariant factors h?
+    (For each prime p the partition of the p-part of g must be dominated term by term by that of h.)"""
+    primes = set()
+    for n in list(g) + list(h):
+        d = 2
+        while d * d <= n:
+            if n % d == 0:
+                primes.add(d)
+                while n % d == 0:
+                    n //= d
+            d += 1
+        if n > 1:
+            primes.add(n)
+    for p in primes:
+        a, b = _p_part(g, p), _p_part(h, p)
+        if len(a) > len(b) or any(a[i] > b[i] for i in range(len(a))):
+            return False
+    return True
+
+
+def _direct_record(side: str, key: str):
     if side == "simple":
         if key in _SIMPLE_EXACT:
             fam, src = _SIMPLE_EXACT[key]
@@ -234,21 +276,54 @@ def infinite_record(side: str, key: str) -> dict:
         if key in _SIMPLE_FAMILY:
             fam, src = _SIMPLE_FAMILY[key]
             return {"grade": "family", "sources": src, "note": fam}
-        if key in _SIMPLE_OPEN_NOTES:
-            src = ["BNSS2026", RECORD] if key in ("31", "2.22", "2.2.20") else [RECORD]
-            return {"grade": "open", "sources": src, "note": _SIMPLE_OPEN_NOTES[key]}
-        return {"grade": "open", "sources": [], "note": ""}
+        return None
     if side == "split":
         if key in _SPLIT_FAMILY:
             return {"grade": "family", "sources": ["HLP2000"],
                     "note": f"HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a {_SPLIT_FAMILY[key]}"}
-        return {"grade": "open", "sources": ["HLP2000"] if key in _SPLIT_OPEN_NOTES else [], "note": _SPLIT_OPEN_NOTES.get(key, "")}
+        if key in _SPLIT_FAMILY_OTHER:
+            fam, src = _SPLIT_FAMILY_OTHER[key]
+            return {"grade": "family", "sources": src, "note": fam}
+        return None
     raise ValueError(side)
+
+
+def _recorded_keys(side: str):
+    if side == "simple":
+        return list(_SIMPLE_EXACT) + list(_SIMPLE_FAMILY)
+    return list(_SPLIT_FAMILY) + list(_SPLIT_FAMILY_OTHER)
+
+
+def infinite_record(side: str, key: str) -> dict:
+    """The ∞ answer for a group key on a side ('simple' or 'split').  A group without a record of its
+    own inherits the grade 'family' from any recorded group containing it as a subgroup (a family with
+    torsion containing H ⊇ G is a family with torsion containing G)."""
+    from common import key_to_group, group_bracket
+    rec = _direct_record(side, key)
+    if rec:
+        rec["inherited_from"] = None
+        return rec
+    g = key_to_group(key)
+    parents = [k for k in _recorded_keys(side) if k != key and is_subgroup(g, key_to_group(k))]
+    if parents:
+        # prefer an exact parent, then the smallest one
+        parents.sort(key=lambda k: (0 if _direct_record(side, k)["grade"] == "exact" else 1, len(key_to_group(k)), key_to_group(k)))
+        h = parents[0]
+        prec = _direct_record(side, h)
+        return {"grade": "family", "sources": prec["sources"],
+                "note": f"inherited: the group is a subgroup of {group_bracket(key_to_group(h))}, for which a family with torsion containing it is recorded"
+                        + (" with exact torsion" if prec["grade"] == "exact" else "") + " (see that group)",
+                "inherited_from": h}
+    notes = _SIMPLE_OPEN_NOTES if side == "simple" else _SPLIT_OPEN_NOTES
+    if key in notes:
+        src = ["BNSS2026", RECORD] if key in ("31", "2.22", "2.2.20") else ([RECORD] if side == "simple" else ["HLP2000"])
+        return {"grade": "open", "sources": src, "note": notes[key], "inherited_from": None}
+    return {"grade": "open", "sources": [], "note": "", "inherited_from": None}
 
 
 GRADE_LABEL = {"exact": "∞", "family": "∞ ⊇", "open": "?"}
 GRADE_TEXT = {
     "exact": "infinitely many, with this exact torsion group (certified)",
     "family": "a positive-dimensional family with torsion containing the group is proven; exactness for infinitely many members is open",
-    "open": "no positive-dimensional family is recorded",
+    "open": "no positive-dimensional family is recorded (this is not a claim that none exists)",
 }

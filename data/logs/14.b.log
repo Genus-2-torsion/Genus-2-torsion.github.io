@@ -1,7 +1,8 @@
 [0.000000 s] start
 [0.0100000 s] curve: y^2 + (x^3 + x^2) y = -x^5 + x^4 - 3*x^3 + x^2 - 4*x; working model y^2 = x^6 - 2*x^5 + 5*x^4 - 12*x^3 + 4*x^2 - 16*x
-[0.180000 s] J(Q)_tors = [ 14 ] (0.170000 s)
-[1.02000 s] no strict prime below 500 (93 admissible primes, 93 with reducible chi)
-[1.07000 s] split over Q: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-3483)u + (121014) over Q (the elliptic curve 26b1), (x,y) -> (p/q, y*hh/q^2) with p = -45*x^3 - 144*x^2 - 36*x - 144, q = x^3 + 4*x, hh = 432*x^3 - 432*x - 864; degree-3 map to the elliptic curve 26b1 over Q [Genus2Torsion/verify_split_certificates.m, cover 3]
-[1.08000 s] class: qsplit
-[1.16000 s] VERIFY_DONE
+[0.0400000 s] #J(Q)_tors divides gcd #J(F_p) = 14 (p = [ 3, 5, 7, 11, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103 ])
+[0.210000 s] J(Q)_tors = [ 14 ] (TorsionSubgroup, 0.170000 s)
+[0.860000 s] no strict prime below 500 (93 admissible primes, 93 with reducible chi)
+[0.910000 s] split over Q: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-3483)u + (121014) over Q (the elliptic curve 26b1), (x,y) -> (p/q, y*hh/q^2) with p = -45*x^3 - 144*x^2 - 36*x - 144, q = x^3 + 4*x, hh = 432*x^3 - 432*x - 864; degree-3 map to the elliptic curve 26b1 over Q [Genus2Torsion/verify_split_certificates.m, cover 3]
+[0.910000 s] class: qsplit
+[0.960000 s] VERIFY_DONE

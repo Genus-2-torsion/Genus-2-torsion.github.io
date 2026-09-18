@@ -1,7 +1,8 @@
-[0.0100000 s] start
+[0.000000 s] start
 [0.0100000 s] curve: y^2 + (x^3) y = x^4 + 2*x^2 + 1; working model y^2 = x^6 + 4*x^4 + 8*x^2 + 4
-[0.180000 s] J(Q)_tors = [ 15 ] (0.170000 s)
-[1.05000 s] no strict prime below 500 (93 admissible primes, 93 with reducible chi)
+[0.0400000 s] #J(Q)_tors divides gcd #J(F_p) = 15 (p = [ 3, 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103 ])
+[0.200000 s] J(Q)_tors = [ 15 ] (TorsionSubgroup, 0.160000 s)
+[1.04000 s] no strict prime below 500 (93 admissible primes, 93 with reducible chi)
 [1.06000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
-[1.06000 s] class: qsplit
-[1.14000 s] VERIFY_DONE
+[1.07000 s] class: qsplit
+[1.17000 s] VERIFY_DONE

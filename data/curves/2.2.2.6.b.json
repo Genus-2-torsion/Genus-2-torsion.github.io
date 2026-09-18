@@ -16,6 +16,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "0",
@@ -74,9 +75,10 @@
     "minimal_discriminant": "10090298369529000000",
     "minimal_discriminant_factored": "2^6 * 3^6 * 5^6 * 7^12",
     "conductor": "900",
-    "conductor_factored": "2^2 * 3^2 * 5^2",
-    "conductor_note": "",
-    "conductor_source": "magma"
+    "conductor_factored": "30 * 30 (product of the elliptic conductors)",
+    "conductor_note": "N(E1) N(E2) = 30 * 30 for the elliptic curves ['1', '0', '1', '-334', '-2368'] and ['1', '0', '1', '-19', '26'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "isogenous product of elliptic curves",
+    "conductor_magma": "900"
   },
   "lmfdb": {
     "label": "900.b.2",
@@ -96,23 +98,23 @@
       {
         "order": 2,
         "mumford": [
-          "x^2 + 1/40*x - 3/8",
-          "0",
-          "2"
-        ]
-      },
-      {
-        "order": 2,
-        "mumford": [
-          "x^2 + 5/8*x",
-          "0",
-          "2"
-        ]
-      },
-      {
-        "order": 2,
-        "mumford": [
           "x^2 + 31/15*x - 8/5",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x - 3/5",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + x",
           "0",
           "2"
         ]
@@ -120,12 +122,15 @@
       {
         "order": 6,
         "mumford": [
-          "x^2 + 7/27*x - 10/27",
-          "-200/81*x - 370/81",
+          "x^2 - 3/2*x + 5/2",
+          "-55/2*x - 65/2",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 144,
     "point_count_primes": [
       11,
@@ -139,7 +144,20 @@
       41,
       43,
       47,
-      53
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
     ],
     "claimed": [
       2,
@@ -170,6 +188,30 @@
       "over": "Q",
       "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 3/5*z : -12/25*x^3 + 2/25*x^2*z + 38/25*x*z^2 + 343/125*y + 12/25*z^3 : -8/5*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
     },
+    "isogenous_product": {
+      "ainvs": [
+        [
+          "1",
+          "0",
+          "1",
+          "-334",
+          "-2368"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "-19",
+          "26"
+        ]
+      ],
+      "conductors": [
+        "30",
+        "30"
+      ],
+      "conductor": "900",
+      "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -182,7 +224,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Booker–Sutherland (extended database)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 74 (source: \\cite{BookerSutherland})",
   "sources": [
@@ -228,15 +271,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 14:00:51 UTC"
+    "verified": "2026-09-18 17:41:14 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.870000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.15000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.2.2.6.b.log",
     "conductor_log": "data/logs/2.2.2.6.b.conductor.log",
-    "conductor_cputime_seconds": 0.14
+    "conductor_cputime_seconds": 0.15
   }
 }

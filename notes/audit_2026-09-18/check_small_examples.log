@@ -1,0 +1,23 @@
+SMALL_EXAMPLE which=1 p=3 chi=x^4 - x^3 + 2*x^2 - 3*x + 9 #J=8 gcd=8
+SMALL_EXAMPLE which=1 p=5 chi=x^4 - x^3 - 5*x + 25 #J=20 gcd=4
+SMALL_EXAMPLE which=1 p=7 chi=x^4 - 4*x^3 + 10*x^2 - 28*x + 49 #J=28 gcd=4
+SMALL_EXAMPLE which=1 p=11 chi=x^4 + x^3 - 6*x^2 + 11*x + 121 #J=128 gcd=4
+SMALL_EXAMPLE which=1 p=13 chi=x^4 + 2*x^3 + 18*x^2 + 26*x + 169 #J=216 gcd=4
+SMALL_EXAMPLE which=1 p=17 chi=x^4 + 3*x^3 + 4*x^2 + 51*x + 289 #J=348 gcd=4
+SMALL_EXAMPLE which=1 p=19 chi=x^4 - 5*x^3 + 34*x^2 - 95*x + 361 #J=296 gcd=4
+SMALL_EXAMPLE which=1 p=23 chi=x^4 + 4*x^3 + 38*x^2 + 92*x + 529 #J=664 gcd=4
+SMALL_EXAMPLE which=1 p=29 chi=x^4 + 22*x^2 + 841 #J=864 gcd=4
+SMALL_EXAMPLE which=1 p=31 chi=x^4 - 14*x^3 + 98*x^2 - 434*x + 961 #J=612 gcd=4
+SMALL_EXAMPLE which=1 p=37 chi=x^4 + 4*x^3 + 18*x^2 + 148*x + 1369 #J=1540 gcd=4
+SMALL_EXAMPLE which=1 p=41 chi=x^4 - 4*x^3 - 18*x^2 - 164*x + 1681 #J=1496 gcd=4
+SMALL_EXAMPLE which=1 p=43 chi=x^4 - x^3 - 6*x^2 - 43*x + 1849 #J=1800 gcd=4
+SMALL_EXAMPLE which=2 p=11 chi=x^4 + 6*x^2 + 121 #J=128 gcd=128
+SMALL_EXAMPLE which=2 p=13 chi=x^4 + 4*x^3 + 30*x^2 + 52*x + 169 #J=256 gcd=128
+SMALL_EXAMPLE which=2 p=17 chi=x^4 + 4*x^3 + 38*x^2 + 68*x + 289 #J=400 gcd=16
+SMALL_EXAMPLE which=2 p=19 chi=x^4 + 22*x^2 + 361 #J=384 gcd=16
+SMALL_EXAMPLE which=2 p=23 chi=x^4 - 8*x^3 + 46*x^2 - 184*x + 529 #J=384 gcd=16
+SMALL_EXAMPLE which=2 p=29 chi=x^4 + 4*x^3 + 46*x^2 + 116*x + 841 #J=1008 gcd=16
+SMALL_EXAMPLE which=2 p=31 chi=x^4 + 8*x^3 + 62*x^2 + 248*x + 961 #J=1280 gcd=16
+SMALL_EXAMPLE which=2 p=37 chi=x^4 + 12*x^3 + 94*x^2 + 444*x + 1369 #J=1920 gcd=16
+SMALL_EXAMPLE which=2 p=41 chi=x^4 + 12*x^3 + 102*x^2 + 492*x + 1681 #J=2288 gcd=16
+SMALL_EXAMPLE which=2 p=43 chi=x^4 + 8*x^3 + 38*x^2 + 344*x + 1849 #J=2240 gcd=16

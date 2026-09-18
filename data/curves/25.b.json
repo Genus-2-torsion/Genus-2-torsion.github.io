@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "1",
@@ -93,12 +94,15 @@
       {
         "order": 25,
         "mumford": [
-          "x^2 + x",
-          "8*x + 2",
+          "x^2 - 2/3*x - 2/3",
+          "32/3*x + 20/3",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 25,
     "point_count_primes": [
       5,
@@ -112,7 +116,20 @@
       37,
       41,
       43,
-      47
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
     ],
     "claimed": [
       25
@@ -140,6 +157,7 @@
       "over": "X^2 - 32246250*X + 2573441015625",
       "detail": "a nonconstant map of degree 5 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/52*(-113515*w + 9308159375)) over X^2 - 32246250*X + 2573441015625, (x,y) -> (p/q, y*hh/q^2) with p = 1/39000*(17*w + 1831875)*x^5 + 1/17784*(5*w - 587625)*x^4 + 1/85500*(17*w + 6631875)*x^3 + 1/18525*(4*w + 499375)*x^2 + 1/7125*(w + 264375)*x + 1/92625*(2*w + 4803750), q = x^5 + 1/13893750*(w - 2229375)*x^4 + 1/6946875*(w + 7033125)*x^3 + 1/13893750*(w + 2401875)*x^2, hh = 1/325*(11*w - 879375)*x^7 + 1/18525*(601*w - 47735625)*x^6 + 1/18525*(23*w - 331875)*x^5 + 1/55575*(-709*w + 66208125)*x^4 + 1/55575*(-808*w + 78510000)*x^3 + 1/2223*(-14*w + 1200750)*x^2 + 1/55575*(-56*w + 13695000)*x; degree-5 map to an elliptic curve over the field defined by X^2-32246250*X+2573441015625; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/52*(113515*w-9308159375) [Genus2Torsion/verify_split_certificates.m, cover 11]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -152,7 +170,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Leprévost 1995; Platonov–Zhgun–Petrunin 2013",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 21 (source: \\cite{Leprevost1995,PZP2013})",
   "sources": [
@@ -234,15 +253,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:56:02 UTC"
+    "verified": "2026-09-18 17:36:19 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.950000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.880000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/25.b.log",
     "conductor_log": "data/logs/25.b.conductor.log",
-    "conductor_cputime_seconds": 7.31
+    "conductor_cputime_seconds": 7.12
   }
 }

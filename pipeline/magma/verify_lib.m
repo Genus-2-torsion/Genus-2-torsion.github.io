@@ -53,7 +53,8 @@
         nonzero Wronskian and nonzero discriminant of the cubic;
      6. the "split signature" (evidence only): at every good prime below 200 the strictness
         test fails;
-     7. invariants: Igusa-Clebsch and G2-invariants, the discriminant of the working model.
+     7. invariants: Igusa-Clebsch and G2-invariants, the discriminant of the working model; for a
+        Jacobian isogenous over Q to E1 x E2 (Richelot search), the conductor N(E1) N(E2).
    The reduced minimal Weierstrass model and the conductor are computed by conductor_lib.m in a
    separate job (they need the discriminant factored, which may not terminate quickly).
 */
@@ -393,6 +394,7 @@ end for;
 
 // ---------------------------------------------------------------- 4. splitness certificates
 cert := Null; geom_split := false; q_split := false;
+product := 0;   // [* E1, E2 *] when J is isogenous over Q to E1 x E2 (Richelot search), else 0
 function SetCert(kind, over, detail)
   return [* <"kind", kind>, <"over", over>, <"detail", detail> *];
 end function;
@@ -425,8 +427,10 @@ if strictp eq 0 then
   end try;
   // (b) Richelot isogenies over Q: collect the degenerate codomains at depth <= RichelotDepth and
   //     prefer a product over Q, then a Weil restriction of a curve that descends to Q, then any
-  //     Weil restriction (geometrically split only)
-  if not q_split then
+  //     Weil restriction (geometrically split only).  Run even after an involution certificate:
+  //     a product E1 x E2 over Q gives the conductor N(E1) N(E2) rigorously (the conductor is an
+  //     isogeny invariant), whereas Magma's genus-2 Conductor uses Ogg's formula at 2.
+  if true then
     try
       J := Jacobian(SimplifiedModel(C));
       L := RichelotIsogenousSurfaces(J);
@@ -451,7 +455,13 @@ if strictp eq 0 then
         if r gt bestrank then bestrank := r; best := nd; bestE0 := E0; end if;
         if r eq 3 then break; end if;
       end for;
-      if bestrank gt 0 then
+      if bestrank eq 3 then
+        product := [* best[2][1], best[2][2] *];
+      elif bestrank eq 2 then
+        K0 := BaseRing(best[2]); D0 := Discriminant(MaximalOrder(K0));
+        product := [* bestE0, QuadraticTwist(bestE0, D0) *];
+      end if;
+      if bestrank gt 0 and not q_split then
         depth := best[1]; s := best[2];
         geom_split := true;
         how := depth eq 1 select "(2,2)-isogenous over Q to a " else "a chain of two (2,2)-isogenies over Q reaches a ";
@@ -607,6 +617,8 @@ v1, v2, v3 := GetVersion();
 ver := Sprintf("%o.%o-%o", v1, v2, v3);
 
 // ---------------------------------------------------------------- 6. output
+emitted := false;
+try
 Emit([*
   <"ok", true>,
   <"magma_version", ver>,
@@ -634,6 +646,10 @@ Emit([*
   <"split", [*
       <"geometrically_split", geom_split>, <"split_over_Q", q_split>,
       <"certificate", cert>,
+      <"isogenous_product", Type(product) eq List select [* <"ainvs", [[Sprint(a) : a in aInvariants(MinimalModel(product[i]))] : i in [1..2]]>,
+          <"conductors", [Sprint(Conductor(product[i])) : i in [1..2]]>,
+          <"conductor", Sprint(Conductor(product[1])*Conductor(product[2]))>,
+          <"note", "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"> *] else Null>,
       <"cover_submitted", cover_checked>, <"cover_accepted", cover_ok>, <"cover_error", cover_msg>,
       <"signature", [* <"all_good_primes_fail_strictness", sig_all_fail>, <"primes_checked", sig_n>,
                        <"reducible_chi", sig_red> *]>
@@ -642,4 +658,8 @@ Emit([*
   <"duplicates_over_Q", dups>,
   <"cputime", RealField(6)!Cputime(T0)>
 *]);
-Log("VERIFY_DONE");
+emitted := true;
+catch e
+  Fail("could not write the result: " cat Sprint(e`Object), [* *]);
+end try;
+if emitted then Log("VERIFY_DONE"); end if;

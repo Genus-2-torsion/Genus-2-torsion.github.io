@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "4",
@@ -75,9 +76,10 @@
     "minimal_discriminant": "-26873856000",
     "minimal_discriminant_factored": "-1 * 2^15 * 3^8 * 5^3",
     "conductor": "8100",
-    "conductor_factored": "2^2 * 3^4 * 5^2",
-    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-    "conductor_source": "magma"
+    "conductor_factored": "90 * 90 (product of the elliptic conductors)",
+    "conductor_note": "N(E1) N(E2) = 90 * 90 for the elliptic curves ['1', '-1', '1', '-122', '1721'] and ['1', '-1', '1', '-8', '11'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "isogenous product of elliptic curves",
+    "conductor_magma": "8100"
   },
   "lmfdb": {
     "label": "8100.e.4",
@@ -103,12 +105,15 @@
       {
         "order": 24,
         "mumford": [
-          "x^2 + x",
-          "10*x + 4",
+          "x^2 - 2*x",
+          "-5*x + 4",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 72,
     "point_count_primes": [
       7,
@@ -122,7 +127,20 @@
       37,
       41,
       43,
-      47
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
     ],
     "claimed": [
       3,
@@ -151,6 +169,30 @@
       "over": "Q",
       "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - z : x^2*z - x*z^2 + y + z^3 : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
     },
+    "isogenous_product": {
+      "ainvs": [
+        [
+          "1",
+          "-1",
+          "1",
+          "-122",
+          "1721"
+        ],
+        [
+          "1",
+          "-1",
+          "1",
+          "-8",
+          "11"
+        ]
+      ],
+      "conductors": [
+        "90",
+        "90"
+      ],
+      "conductor": "8100",
+      "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -163,7 +205,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Booker–Sutherland (extended database)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 50 (source: \\cite{BookerSutherland})",
   "sources": [
@@ -208,15 +251,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:57:37 UTC"
+    "verified": "2026-09-18 17:38:00 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.12000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.18000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/3.24.a.log",
     "conductor_log": "data/logs/3.24.a.conductor.log",
-    "conductor_cputime_seconds": 0.34
+    "conductor_cputime_seconds": 0.3
   }
 }

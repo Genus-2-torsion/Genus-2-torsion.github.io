@@ -1,0 +1,9 @@
+L1: over Q(t) the class [(0,0) - infinity] on y^2 = x(x^4 + x + t) has order 2
+t = 1: J(Q)_tors = [ 2 ], strict prime 3, G2 = [ 12800000/229, 960000/229, -25600/229 ]
+t = 2: J(Q)_tors = [ 2 ], strict prime 3, G2 = [ 102400000/2021, 7680000/2021, -249600/2021 ]
+t = 3: J(Q)_tors = [ 2 ], strict prime 19, G2 = [ 2560000/51, 64000/17, -171520/1377 ]
+t = 5: J(Q)_tors = [ 2 ], strict prime 3, G2 = [ 1600000000/31973, 120000000/31973, -3993600/31973 ]
+t = 7: J(Q)_tors = [ 2 ], strict prime 3, G2 = [ 4390400000/87781, 329280000/87781, -10969600/87781 ]
+L2, L3: every fiber is exact [2] and geometrically simple; the five G2-invariants are distinct
+L4: fiber t = 1, good primes p = 3, q = 5: #J_t(Q)_tors divides B = gcd(#J_1(F_p), #J_1(F_q)) = 4 for all t = 1 mod 15
+FAMILY_2_CERTIFIED

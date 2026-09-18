@@ -1,7 +1,8 @@
 [0.000000 s] start
-[0.000000 s] curve: y^2 + (0) y = -8*x^6 - 36*x^5 + 14*x^4 + 17*x^3 - 334*x^2 + 348*x - 344; working model y^2 = -32*x^6 - 144*x^5 + 56*x^4 + 68*x^3 - 1336*x^2 + 1392*x - 1376
-[0.230000 s] J(Q)_tors = [ 5 ] (0.220000 s)
-[1.07000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
-[1.08000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 11/4*z : 343/64*y : -3/4*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
-[1.08000 s] class: qsplit
-[1.15000 s] VERIFY_DONE
+[0.0100000 s] curve: y^2 + (0) y = -8*x^6 - 36*x^5 + 14*x^4 + 17*x^3 - 334*x^2 + 348*x - 344; working model y^2 = -32*x^6 - 144*x^5 + 56*x^4 + 68*x^3 - 1336*x^2 + 1392*x - 1376
+[0.0400000 s] #J(Q)_tors divides gcd #J(F_p) = 25 (p = [ 3, 5, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107 ])
+[0.270000 s] J(Q)_tors = [ 5 ] (TorsionSubgroup, 0.230000 s)
+[0.920000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
+[0.920000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 11/4*z : 343/64*y : -3/4*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
+[0.930000 s] class: qsplit
+[0.980000 s] VERIFY_DONE

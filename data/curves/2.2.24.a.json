@@ -15,6 +15,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "0",
@@ -72,9 +73,10 @@
     "minimal_discriminant": "-891234716919100996302158225554840110141749815144761640901908681598151333676225427520000000000000",
     "minimal_discriminant_factored": "-1 * 2^18 * 3^24 * 5^13 * 7^4 * 11^2 * 29^2 * 41^6 * 61 * 79^12 * 191^12",
     "conductor": "206076647700",
-    "conductor_factored": "2^2 * 3^2 * 5^2 * 7 * 11 * 29 * 41^2 * 61",
-    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-    "conductor_source": "magma"
+    "conductor_factored": "825330 * 249690 (product of the elliptic conductors)",
+    "conductor_note": "N(E1) N(E2) = 825330 * 249690 for the elliptic curves ['1', '0', '0', '-1362433018010', '-603188297771007900'] and ['1', '0', '0', '-673039570', '-5895575919100'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "isogenous product of elliptic curves",
+    "conductor_magma": "206076647700"
   },
   "lmfdb": {
     "label": "",
@@ -93,17 +95,17 @@
       {
         "order": 2,
         "mumford": [
-          "x^2 + 3969/2500*x",
+          "x + 3969/2500",
           "0",
-          "2"
+          "1"
         ]
       },
       {
         "order": 2,
         "mumford": [
-          "x + 3969/2500",
+          "x^2 - 859/810*x + 255881/32400",
           "0",
-          "1"
+          "2"
         ]
       },
       {
@@ -115,6 +117,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 192,
     "point_count_primes": [
       13,
@@ -128,7 +133,20 @@
       53,
       59,
       67,
-      71
+      71,
+      73,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137,
+      139
     ],
     "claimed": [
       2,
@@ -158,6 +176,30 @@
       "over": "Q",
       "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 3969/2500*z : 1826585575424/962966796875*y : 52316/156025*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
     },
+    "isogenous_product": {
+      "ainvs": [
+        [
+          "1",
+          "0",
+          "0",
+          "-1362433018010",
+          "-603188297771007900"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "-673039570",
+          "-5895575919100"
+        ]
+      ],
+      "conductors": [
+        "825330",
+        "249690"
+      ],
+      "conductor": "206076647700",
+      "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -170,7 +212,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Howe–Leprévost–Poonen 2000",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 68 (source: \\cite{HLP2000})",
   "sources": [
@@ -213,15 +256,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 14:00:36 UTC"
+    "verified": "2026-09-18 17:40:58 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.00000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.26000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.2.24.a.log",
     "conductor_log": "data/logs/2.2.24.a.conductor.log",
-    "conductor_cputime_seconds": 0.39
+    "conductor_cputime_seconds": 0.45
   }
 }

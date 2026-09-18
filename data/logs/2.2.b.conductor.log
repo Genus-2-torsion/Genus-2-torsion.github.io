@@ -1,4 +1,4 @@
-[0.0100000 s] minimal model y^2 + (x^3 + x^2 + x + 1) y = -60*x^6 + 59*x^4 - x^3 + 59*x^2 - x - 60, discriminant -11928619582710272
+[0.0200000 s] minimal model y^2 + (x^3 + x^2 + x + 1) y = -60*x^6 + 59*x^4 - x^3 + 59*x^2 - x - 60, discriminant -11928619582710272
 [0.0200000 s] discriminant factored: -1 * 2^9 * 13^12
 [0.130000 s] conductor 256 = 2^8
 [0.130000 s] CONDUCTOR_DONE

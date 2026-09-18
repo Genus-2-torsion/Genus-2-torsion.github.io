@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17 15:52 UTC",
+  "generated": "2026-09-18 17:41 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -22,12 +22,19 @@
       "url": "data/knowledge/sources/census_infinity_record.md",
       "used_for": "the 'exact' grade of the ∞ column on the simple side (39 groups), and the notes on the open ones"
     },
+    "Audit2026": {
+      "short": "audit of 2026-09-18",
+      "year": 2026,
+      "cite": "Audit of https://genus-2-torsion.github.io/ (18 September 2026): report and Magma scripts in notes/audit_2026-09-18/. Its findings were re-verified here (see the notes).",
+      "url": "notes/audit_2026-09-18/report.md",
+      "used_for": "the corrected conductors of nine split curves, the corrected [2] family, the exact-infinitude argument for [2,2,2,12], the split [2,2,2,2] example, the DOI corrections"
+    },
     "ThisSite": {
       "short": "this site (Magma log)",
       "year": 2026,
       "cite": "Computation for this census on the Mordell workstation (Magma V2.29-4); script and log in the repository.",
-      "url": "data/knowledge/sources/trivial_torsion_family.log",
-      "used_for": "the trivial group: fibers of y² = x⁵ + x + t"
+      "url": "data/knowledge/sources/",
+      "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log (scripts in pipeline/magma/)"
     },
     "HLP2000": {
       "short": "Howe–Leprévost–Poonen 2000",
@@ -75,14 +82,14 @@
       "short": "Flynn 1990",
       "year": 1990,
       "cite": "E. V. Flynn, Large rational torsion on abelian varieties, J. Number Theory 36 (1990), 257–265.",
-      "url": "https://doi.org/10.1016/0022-314X(90)90036-Q",
+      "url": "https://doi.org/10.1016/0022-314X(90)90089-A",
       "used_for": "seed curves"
     },
     "Flynn1991": {
       "short": "Flynn 1991",
       "year": 1991,
       "cite": "E. V. Flynn, Sequences of rational torsions on abelian varieties, Invent. Math. 106 (1991), 433–442.",
-      "url": "https://doi.org/10.1007/BF01243920",
+      "url": "https://doi.org/10.1007/BF01243919",
       "used_for": "seed curves"
     },
     "Leprevost1991a": {
@@ -110,7 +117,7 @@
       "short": "Leprévost 1995",
       "year": 1995,
       "cite": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306.",
-      "url": "https://doi.org/10.5802/jtnb.145",
+      "url": "https://doi.org/10.5802/jtnb.144",
       "used_for": "seed curves"
     },
     "Leprevost1997": {
@@ -138,28 +145,28 @@
       "short": "Howe 2015",
       "year": 2015,
       "cite": "E. W. Howe, Genus-2 Jacobians with torsion points of large order, Bull. London Math. Soc. 47 (2015), 127–135.",
-      "url": "https://doi.org/10.1112/blms/bdu110",
-      "used_for": "seed curves"
+      "url": "https://doi.org/10.1112/blms/bdu107",
+      "used_for": "seed curves; Theorem 3.2 / Remark 3.3: a family of genus-2 curves whose Jacobians have a rational point of order 48, parametrised by an elliptic curve of rank 2 (split, by 2-gluing)"
     },
     "PP2012": {
       "short": "Platonov–Petrunin 2012a",
       "year": 2012,
       "cite": "V. P. Platonov and M. M. Petrunin, New orders of torsion points in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 85 (2012), 286–288.",
-      "url": "https://doi.org/10.1134/S1064562412020366",
+      "url": "https://doi.org/10.1134/S1064562412020330",
       "used_for": "seed curves"
     },
     "PP2012b": {
       "short": "Platonov–Petrunin 2012b",
       "year": 2012,
       "cite": "V. P. Platonov and M. M. Petrunin, On the torsion problem in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 86 (2012), 642–643.",
-      "url": "https://doi.org/10.1134/S1064562412050146",
+      "url": "https://doi.org/10.1134/S1064562412050304",
       "used_for": "seed curves"
     },
     "PP2015": {
       "short": "Platonov–Petrunin 2015",
       "year": 2015,
       "cite": "V. P. Platonov and M. M. Petrunin, New curves of genus 2 over the field of rational numbers whose Jacobians contain torsion points of high order, Dokl. Math. 91 (2015), 220–221.",
-      "url": "https://doi.org/10.1134/S1064562415020222",
+      "url": "https://doi.org/10.1134/S1064562415020325",
       "used_for": "seed curves"
     },
     "PZP2013": {
@@ -187,7 +194,7 @@
       "short": "Nicholls 2018",
       "year": 2018,
       "cite": "C. Nicholls, Descent methods and torsion on Jacobians of higher genus curves, DPhil thesis, University of Oxford, 2018.",
-      "url": "https://ora.ox.ac.uk/objects/uuid:0a2a3c5f-6c7f-4d0d-9b21-4c9a2d1e6d64",
+      "url": "https://doi.org/10.5287/ora-z58j05keq",
       "used_for": "seed curve ([25])"
     },
     "costa": {
@@ -215,7 +222,7 @@
       "short": "Daowsud–Schmidt 2018",
       "year": 2018,
       "cite": "K. Daowsud and T. A. Schmidt, Continued fractions for rational torsion, J. Number Theory 189 (2018), 115–130; corrigendum J. Number Theory 246 (2023), 326–327.",
-      "url": "https://doi.org/10.1016/j.jnt.2017.11.001",
+      "url": "https://doi.org/10.1016/j.jnt.2017.11.014",
       "used_for": "the order-11 family (and Flynn's older order-11 family quoted there)"
     },
     "KuruSadek": {
@@ -250,7 +257,7 @@
       "short": "Zywina 2022",
       "year": 2022,
       "cite": "D. Zywina, Determining monodromy groups of abelian varieties, Res. Number Theory 8 (2022), article 89.",
-      "url": "https://doi.org/10.1007/s40993-022-00389-x",
+      "url": "https://doi.org/10.1007/s40993-022-00391-0",
       "used_for": "background for the Frobenius criteria (End = ℤ certificates in the Genus2Torsion scripts; not used here)"
     },
     "Lombardo2019": {

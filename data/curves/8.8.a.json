@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "84285504",
@@ -73,9 +74,10 @@
     "minimal_discriminant": "52561940892724075764583621835522035428873153802475520000000000",
     "minimal_discriminant_factored": "2^20 * 3^8 * 5^10 * 7^2 * 17^2 * 23 * 1913^12",
     "conductor": "17243100",
-    "conductor_factored": "2^2 * 3^2 * 5^2 * 7^2 * 17 * 23",
-    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-    "conductor_source": "magma"
+    "conductor_factored": "82110 * 210 (product of the elliptic conductors)",
+    "conductor_note": "N(E1) N(E2) = 82110 * 210 for the elliptic curves ['1', '0', '0', '-49423080', '130545230400'] and ['1', '0', '0', '-1070', '7812'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "isogenous product of elliptic curves",
+    "conductor_magma": "17243100"
   },
   "lmfdb": {
     "label": "",
@@ -93,20 +95,23 @@
       {
         "order": 8,
         "mumford": [
-          "x^2 - 239/508*x + 189/127",
-          "60087765/129032*x - 305523735/32258",
+          "x^2 + 195/47*x + 1638/47",
+          "4391240/2209*x - 8192130/2209",
           "2"
         ]
       },
       {
         "order": 8,
         "mumford": [
-          "x^2 + 1240/367*x + 1392/367",
-          "166227513/134689*x + 1536965784/134689",
+          "x^2 - 1751/604*x - 1035/604",
+          "133903839/182408*x + 1752282519/182408",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 256,
     "point_count_primes": [
       13,
@@ -120,7 +125,20 @@
       59,
       61,
       67,
-      71
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137
     ],
     "claimed": [
       8,
@@ -149,6 +167,30 @@
       "over": "Q",
       "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 8151/925*z : 7000755497/791453125*y : -344/925*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
     },
+    "isogenous_product": {
+      "ainvs": [
+        [
+          "1",
+          "0",
+          "0",
+          "-49423080",
+          "130545230400"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "-1070",
+          "7812"
+        ]
+      ],
+      "conductors": [
+        "82110",
+        "210"
+      ],
+      "conductor": "17243100",
+      "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -161,7 +203,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Howe–Leprévost–Poonen 2000",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 60 (source: \\cite{HLP2000})",
   "sources": [
@@ -204,15 +247,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:57:53 UTC"
+    "verified": "2026-09-18 17:38:16 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.26000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.24000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/8.8.a.log",
     "conductor_log": "data/logs/8.8.a.conductor.log",
-    "conductor_cputime_seconds": 0.39
+    "conductor_cputime_seconds": 0.3
   }
 }

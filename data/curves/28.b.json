@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "4",
@@ -99,6 +100,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 28,
     "point_count_primes": [
       3,
@@ -112,7 +116,20 @@
       37,
       41,
       43,
-      47
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
     ],
     "claimed": [
       28
@@ -140,6 +157,7 @@
       "over": "Q",
       "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (1122741)u + (310814982) over Q (the elliptic curve 182a1), (x,y) -> (p/q, y*hh/q^2) with p = 891*x^3 - 891*x^2 + 2853*x + 891, q = x^3 - x^2 - x + 1, hh = 22464*x^3 - 11232*x^2 - 11232; degree-3 map to the elliptic curve 182a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 9]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -152,7 +170,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Platonov–Zhgun–Petrunin 2013; Howe 2015",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 23 (source: \\cite{PZP2013,Howe2015})",
   "sources": [
@@ -220,15 +239,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:56:58 UTC"
+    "verified": "2026-09-18 17:37:19 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.890000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.12000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/28.b.log",
     "conductor_log": "data/logs/28.b.conductor.log",
-    "conductor_cputime_seconds": 0.28
+    "conductor_cputime_seconds": 0.37
   }
 }

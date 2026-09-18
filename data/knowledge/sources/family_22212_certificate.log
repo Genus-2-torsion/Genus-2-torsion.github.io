@@ -1,0 +1,7 @@
+psi(2Q) = P_1 = [ 120, 143, 266, 218, 241 ], J(Q)_tors = [2,2,2,12]
+p = 29: ord(Q mod p) = 16, #J(F_p) = 864, chi = x^4 + 22*x^2 + 841
+p = 37: ord(Q mod p) = 10, #J(F_p) = 1344, chi = x^4 - 26*x^2 + 1369
+p = 71: ord(Q mod p) = 14, #J(F_p) = 4512, chi = x^4 - 8*x^3 + 46*x^2 - 568*x + 5041 (strict)
+gcd(#J(F_29), #J(F_37)) = 96 = #[2,2,2,12]; G2-invariants at psi(2Q) and psi(4Q) differ
+psi(562 Q) = psi(2Q) in P^4(F_p) for p = 29, 37, 71 (sanity check of the congruence)
+FAMILY_22212_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,2,12]

@@ -81,8 +81,12 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(len(t1), 73)
         recorded = set(knowledge._SIMPLE_EXACT) | set(knowledge._SIMPLE_FAMILY) | set(knowledge._SIMPLE_OPEN_NOTES)
         self.assertTrue(recorded <= set(t1), recorded - set(t1))
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 40)   # 39 of the record + the trivial group
-        self.assertEqual(len(knowledge._SIMPLE_FAMILY), 4)
+        # 39 of the record, minus [15] (containment only), plus the trivial group and [2,2,2,12] (certified here)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 40)
+        self.assertEqual(len(knowledge._SIMPLE_FAMILY), 4)   # [13], [17], [19], [15]
+        self.assertEqual(knowledge.infinite_record("simple", "15")["grade"], "family")
+        self.assertEqual(knowledge.infinite_record("simple", "2.2.2.12")["grade"], "exact")
+        self.assertEqual(knowledge.infinite_record("simple", "16")["inherited_from"], "32")
         t2 = []
         for line in (KNOWLEDGE_DIR / "sources" / "table2.txt").read_text().splitlines():
             if line and not line.startswith("#"):
@@ -90,6 +94,12 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(len(t2), 77)
         self.assertTrue(set(knowledge._SPLIT_FAMILY) <= set(t2))
         self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
+        self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
+        self.assertEqual(knowledge.infinite_record("split", "2")["grade"], "family")             # inherited
+
+    def test_subgroups(self):
+        self.assertTrue(knowledge.is_subgroup([16], [32]) and knowledge.is_subgroup([2, 2, 6], [2, 2, 2, 6]) and knowledge.is_subgroup([], [2]))
+        self.assertFalse(knowledge.is_subgroup([3, 3, 3], [3, 3]) or knowledge.is_subgroup([4], [2, 2]) or knowledge.is_subgroup([2, 2, 2, 2, 2], [2, 2, 2, 2]))
 
     def test_cite_parsing(self):
         self.assertEqual(knowledge.parse_source_column(r"\cite{BookerSutherland}, new"), (["BookerSutherland", "BNSS2026"], False))
@@ -137,6 +147,9 @@ class CertificateTests(unittest.TestCase):
                 self.assertTrue(c["simplicity"]["geometrically_simple"] and not c["split"]["geometrically_split"])
             if c["class"] == "qsplit":
                 self.assertTrue(c["split"]["split_over_Q"] and not c["q_simple"]["certified"])
+                if c["split"].get("isogenous_product"):
+                    self.assertEqual(c["curve"]["conductor"], c["split"]["isogenous_product"]["conductor"])
+                    self.assertEqual(c["curve"]["conductor_source"], "isogenous product of elliptic curves")
             if c["class"] == "gsplit":
                 self.assertTrue(c["split"]["geometrically_split"] and c["q_simple"]["certified"] and not c["split"]["split_over_Q"])
             self.assertTrue((ROOT / c["verification"]["log"]).exists(), c["verification"]["log"])

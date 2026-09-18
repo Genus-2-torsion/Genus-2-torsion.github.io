@@ -1,8 +1,9 @@
-[0.000000 s] start
-[0.000000 s] curve: y^2 + (x + 1) y = x^6 + 9*x^4 + 17*x^3 + 20*x^2 + 4*x; working model y^2 = 4*x^6 + 36*x^4 + 68*x^3 + 81*x^2 + 18*x + 1
-[0.130000 s] J(Q)_tors = [ 27 ] (0.120000 s)
-[0.960000 s] no strict prime below 500 (93 admissible primes, 55 with reducible chi)
-[0.960000 s] Q-simple: chi irreducible at p = 7
-[1.03000 s] geometrically split: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (-93*w + 1344276) over X^2 + 138024*X - 1767690864, (x,y) -> (p/q, y*hh/q^2) with p = 1/648*(-w - 4860)*x^3 + 1/5184*(13*w - 1342332)*x^2 + 1/10368*(7*w + 1042956)*x + 1/10368*(-5*w - 438372), q = x^3 + 1/46656*(-w - 69012)*x^2 + 1/93312*(5*w + 904932)*x + 1/93312*(w + 162324), hh = 1/36*(-w + 24300)*x^3 + 1/72*(w - 70956)*x^2 + 1/72*(-w - 208980)*x + 1/72*(-w - 162324); degree-3 map to an elliptic curve over the field defined by X^2+138024*X-1767690864; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 93*w-1344276 [Genus2Torsion/verify_split_certificates.m, cover 12]
-[1.03000 s] class: gsplit
-[1.11000 s] VERIFY_DONE
+[0.0100000 s] start
+[0.0100000 s] curve: y^2 + (x + 1) y = x^6 + 9*x^4 + 17*x^3 + 20*x^2 + 4*x; working model y^2 = 4*x^6 + 36*x^4 + 68*x^3 + 81*x^2 + 18*x + 1
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 27 (p = [ 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103 ])
+[0.200000 s] J(Q)_tors = [ 27 ] (TorsionSubgroup, 0.150000 s)
+[1.04000 s] no strict prime below 500 (93 admissible primes, 55 with reducible chi)
+[1.04000 s] Q-simple: chi irreducible at p = 7
+[1.10000 s] geometrically split: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (-93*w + 1344276) over X^2 + 138024*X - 1767690864, (x,y) -> (p/q, y*hh/q^2) with p = 1/648*(-w - 4860)*x^3 + 1/5184*(13*w - 1342332)*x^2 + 1/10368*(7*w + 1042956)*x + 1/10368*(-5*w - 438372), q = x^3 + 1/46656*(-w - 69012)*x^2 + 1/93312*(5*w + 904932)*x + 1/93312*(w + 162324), hh = 1/36*(-w + 24300)*x^3 + 1/72*(w - 70956)*x^2 + 1/72*(-w - 208980)*x + 1/72*(-w - 162324); degree-3 map to an elliptic curve over the field defined by X^2+138024*X-1767690864; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 93*w-1344276 [Genus2Torsion/verify_split_certificates.m, cover 12]
+[1.10000 s] class: gsplit
+[1.20000 s] VERIFY_DONE

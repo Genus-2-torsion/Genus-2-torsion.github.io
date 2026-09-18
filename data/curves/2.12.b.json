@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "-5",
@@ -75,9 +76,10 @@
     "minimal_discriminant": "36450",
     "minimal_discriminant_factored": "2 * 3^6 * 5^2",
     "conductor": "450",
-    "conductor_factored": "2 * 3^2 * 5^2",
-    "conductor_note": "",
-    "conductor_source": "magma"
+    "conductor_factored": "15 * 30 (product of the elliptic conductors)",
+    "conductor_note": "N(E1) N(E2) = 15 * 30 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '0', '1', '-19', '26'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "isogenous product of elliptic curves",
+    "conductor_magma": "450"
   },
   "lmfdb": {
     "label": "450.a.36450.1",
@@ -95,7 +97,7 @@
       {
         "order": 2,
         "mumford": [
-          "x^2 + x - 1",
+          "x^2 + 4*x - 4",
           "0",
           "2"
         ]
@@ -109,6 +111,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 96,
     "point_count_primes": [
       7,
@@ -122,7 +127,20 @@
       37,
       41,
       43,
-      47
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
     ],
     "claimed": [
       2,
@@ -151,6 +169,30 @@
       "over": "Q",
       "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -x^3 + 2*x^2*z + y : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
     },
+    "isogenous_product": {
+      "ainvs": [
+        [
+          "1",
+          "1",
+          "1",
+          "-5",
+          "2"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "-19",
+          "26"
+        ]
+      ],
+      "conductors": [
+        "15",
+        "30"
+      ],
+      "conductor": "450",
+      "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -163,7 +205,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Howe–Leprévost–Poonen 2000",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 38 (source: \\cite{HLP2000})",
   "sources": [
@@ -208,15 +251,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:57:20 UTC"
+    "verified": "2026-09-18 17:37:41 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.11000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.17000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.12.b.log",
     "conductor_log": "data/logs/2.12.b.conductor.log",
-    "conductor_cputime_seconds": 0.14
+    "conductor_cputime_seconds": 0.2
   }
 }

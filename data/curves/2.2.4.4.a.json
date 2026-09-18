@@ -16,6 +16,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "0",
@@ -94,7 +95,7 @@
       {
         "order": 2,
         "mumford": [
-          "x^2 + 3249*x",
+          "x^2 + 17424*x",
           "0",
           "2"
         ]
@@ -102,28 +103,31 @@
       {
         "order": 2,
         "mumford": [
-          "x^2 + 5392*x + 5308416",
+          "x + 3249",
           "0",
+          "1"
+        ]
+      },
+      {
+        "order": 4,
+        "mumford": [
+          "x^2 + 2520*x - 590976",
+          "31320*x + 286623360",
           "2"
         ]
       },
       {
         "order": 4,
         "mumford": [
-          "x^2 - 10512*x - 17335296",
-          "2505888*x + 3761759232",
-          "2"
-        ]
-      },
-      {
-        "order": 4,
-        "mumford": [
-          "x^2 + 12720*x + 29804544",
-          "702240*x + 2065029120",
+          "x^2 + 11928*x + 17335296",
+          "598488*x + 814758912",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 64,
     "point_count_primes": [
       13,
@@ -137,7 +141,20 @@
       59,
       61,
       67,
-      71
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137
     ],
     "claimed": [
       2,
@@ -164,6 +181,7 @@
     "geometrically_split": false,
     "split_over_Q": false,
     "certificate": null,
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -176,7 +194,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 73 (source: new)",
   "sources": [
@@ -220,15 +239,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:52:56 UTC"
+    "verified": "2026-09-18 17:33:12 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.310000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.350000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.2.4.4.a.log",
     "conductor_log": "data/logs/2.2.4.4.a.conductor.log",
-    "conductor_cputime_seconds": 0.23
+    "conductor_cputime_seconds": 0.29
   }
 }

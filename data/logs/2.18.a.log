@@ -1,7 +1,8 @@
 [0.000000 s] start
-[0.0100000 s] curve: y^2 + (x^2 + x) y = x^6 - x^5 - 5*x^4 + 3*x^3 + x^2 + 2*x + 7; working model y^2 = 4*x^6 - 4*x^5 - 19*x^4 + 14*x^3 + 5*x^2 + 8*x + 28
-[0.190000 s] J(Q)_tors = [ 2, 18 ] (0.180000 s)
+[0.000000 s] curve: y^2 + (x^2 + x) y = x^6 - x^5 - 5*x^4 + 3*x^3 + x^2 + 2*x + 7; working model y^2 = 4*x^6 - 4*x^5 - 19*x^4 + 14*x^3 + 5*x^2 + 8*x + 28
+[0.0400000 s] #J(Q)_tors divides gcd #J(F_p) = 36 (p = [ 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107 ])
+[0.200000 s] J(Q)_tors = [ 2, 18 ] (TorsionSubgroup, 0.160000 s)
 [0.210000 s] geometrically simple: strict prime 17, chi = T^4 + T^3 + 16*T^2 + 17*T + 289
 [0.210000 s] Q-simple: chi irreducible at p = 13
-[0.310000 s] class: simple
-[0.350000 s] VERIFY_DONE
+[0.280000 s] class: simple
+[0.320000 s] VERIFY_DONE

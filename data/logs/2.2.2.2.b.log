@@ -1,7 +1,8 @@
 [0.000000 s] start
 [0.000000 s] curve: y^2 + (x + 1) y = -4*x^5 + 25*x^4 - 30*x^3 - 44*x^2 + 41*x + 26; working model y^2 = -16*x^5 + 100*x^4 - 120*x^3 - 175*x^2 + 166*x + 105
-[0.130000 s] J(Q)_tors = [ 2, 2, 2, 2 ] (0.120000 s)
-[0.740000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
-[0.850000 s] geometrically split: (2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma)
-[0.850000 s] class: split_undecided_over_Q
-[0.940000 s] VERIFY_DONE
+[0.0300000 s] #J(Q)_tors divides gcd #J(F_p) = 16 (p = [ 5, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107 ])
+[0.150000 s] J(Q)_tors = [ 2, 2, 2, 2 ] (TorsionSubgroup, 0.120000 s)
+[0.800000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
+[0.950000 s] geometrically split: (2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma)
+[0.950000 s] class: split_undecided_over_Q
+[1.04000 s] VERIFY_DONE

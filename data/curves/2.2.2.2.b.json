@@ -16,6 +16,7 @@
   "status": "verified",
   "new_group": false,
   "new_for_class": false,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "26",
@@ -94,17 +95,25 @@
       {
         "order": 2,
         "mumford": [
-          "x^2 - 13/2*x + 21/2",
+          "x - 5/4",
           "0",
-          "2"
+          "1"
         ]
       },
       {
         "order": 2,
         "mumford": [
-          "x^2 - 5/2*x - 3/2",
+          "x + 1/2",
           "0",
-          "2"
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x - 3",
+          "0",
+          "1"
         ]
       },
       {
@@ -114,16 +123,11 @@
           "0",
           "2"
         ]
-      },
-      {
-        "order": 2,
-        "mumford": [
-          "x^2 - 19/4*x + 35/8",
-          "0",
-          "2"
-        ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 16,
     "point_count_primes": [
       5,
@@ -137,7 +141,20 @@
       37,
       41,
       43,
-      47
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
     ],
     "claimed": [
       2,
@@ -168,6 +185,7 @@
       "over": "Q",
       "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma)"
     },
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -180,7 +198,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Booker–Sutherland (extended database)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 72 (source: \\cite{BookerSutherland})",
   "sources": [
@@ -225,15 +244,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 14:00:49 UTC"
+    "verified": "2026-09-18 17:41:11 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.940000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.04000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.2.2.2.b.log",
     "conductor_log": "data/logs/2.2.2.2.b.conductor.log",
-    "conductor_cputime_seconds": 7.69
+    "conductor_cputime_seconds": 7.58
   }
 }

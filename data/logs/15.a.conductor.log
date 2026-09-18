@@ -1,4 +1,4 @@
-[0.0200000 s] minimal model y^2 + (x^3 + x^2 + x + 1) y = -x^2 - x, discriminant 277
-[0.0200000 s] discriminant factored: 277
+[0.0100000 s] minimal model y^2 + (x^3 + x^2 + x + 1) y = -x^2 - x, discriminant 277
+[0.0100000 s] discriminant factored: 277
 [0.100000 s] conductor 277 = 277
 [0.100000 s] CONDUCTOR_DONE

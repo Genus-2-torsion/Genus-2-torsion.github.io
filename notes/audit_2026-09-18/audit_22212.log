@@ -1,0 +1,15 @@
+MODULI_NONCONSTANT_VERIFIED
+PSI(2Q) [ 120/169, 11/13, 266/169, 218/169, 241/169 ]
+SAMPLE_EXACT_TORSION [ 2, 2, 2, 12 ]
+P1 p=29 chi=x^4 + 22*x^2 + 841 #J=864 gcd=864 strict=false Epointorder=16
+P1 p=31 chi=x^4 - 4*x^3 + 30*x^2 - 124*x + 961 #J=864 gcd=864 strict=false Epointorder=14
+P1 p=37 chi=x^4 - 26*x^2 + 1369 #J=1344 gcd=96 strict=false Epointorder=10
+P1 p=43 chi=x^4 - 8*x^3 + 38*x^2 - 344*x + 1849 #J=1536 gcd=96 strict=false Epointorder=10
+P1 p=47 chi=x^4 + 94*x^2 + 2209 #J=2304 gcd=96 strict=false Epointorder=14
+P1 p=53 chi=x^4 - 12*x^3 + 142*x^2 - 636*x + 2809 #J=2304 gcd=96 strict=false Epointorder=32
+P1 p=59 chi=x^4 + 70*x^2 + 3481 #J=3552 gcd=96 strict=false Epointorder=7
+P1 p=61 chi=x^4 - 74*x^2 + 3721 #J=3648 gcd=96 strict=false Epointorder=14
+P1 p=67 chi=x^4 + 8*x^3 + 150*x^2 + 536*x + 4489 #J=5184 gcd=96 strict=false Epointorder=8
+P1 p=71 chi=x^4 - 8*x^3 + 46*x^2 - 568*x + 5041 #J=4512 gcd=96 strict=true Epointorder=14
+EXACT_INFINITY_LOCAL_DATA_VERIFIED
+GENERIC_2_FAMILY_QUINTIC_IRREDUCIBLE

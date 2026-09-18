@@ -1,4 +1,4 @@
-[0.0200000 s] minimal model y^2 + (x^3 + x) y = x^5 + x^4 + 2*x^3 + x^2 + x, discriminant 464
-[0.0200000 s] discriminant factored: 2^4 * 29
+[0.0100000 s] minimal model y^2 + (x^3 + x) y = x^5 + x^4 + 2*x^3 + x^2 + x, discriminant 464
+[0.0100000 s] discriminant factored: 2^4 * 29
 [0.130000 s] conductor 464 = 2^4 * 29
 [0.130000 s] CONDUCTOR_DONE

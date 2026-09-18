@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "3",
@@ -91,8 +92,8 @@
       {
         "order": 3,
         "mumford": [
-          "x - 1",
-          "-2*x^3 - 7",
+          "x^2 + 1",
+          "-2*x - 1",
           "2"
         ]
       },
@@ -105,6 +106,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 9,
     "point_count_primes": [
       7,
@@ -118,7 +122,20 @@
       41,
       43,
       47,
-      53
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
     ],
     "claimed": [
       3,
@@ -143,6 +160,7 @@
     "geometrically_split": false,
     "split_over_Q": false,
     "certificate": null,
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -155,7 +173,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Bruin–Flynn–Testa 2014",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 51 (source: \\cite{BFT2014})",
   "sources": [
@@ -198,15 +217,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:52:34 UTC"
+    "verified": "2026-09-18 17:32:49 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
     "cputime_seconds": "0.370000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/3.3.a.log",
     "conductor_log": "data/logs/3.3.a.conductor.log",
-    "conductor_cputime_seconds": 0.74
+    "conductor_cputime_seconds": 0.55
   }
 }

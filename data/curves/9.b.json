@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "-3",
@@ -99,6 +100,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 9,
     "point_count_primes": [
       3,
@@ -112,7 +116,20 @@
       31,
       37,
       41,
-      43
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103
     ],
     "claimed": [
       9
@@ -140,6 +157,7 @@
       "over": "Q",
       "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-12096)u + (-544752) over Q (the elliptic curve 19a1), (x,y) -> (p/q, y*hh/q^2) with p = 192*x^3 - 276*x^2 + 684*x - 84, q = x^3 - 5*x^2 - 4, hh = 2052*x^3 - 4104*x + 4104; degree-3 map to the elliptic curve 19a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 5]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -152,7 +170,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "LMFDB genus 2 database (BSSVY 2016)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 9 (source: \\cite{BSSVY})",
   "sources": [
@@ -219,15 +238,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:55:39 UTC"
+    "verified": "2026-09-18 17:35:56 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.870000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.28000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/9.b.log",
     "conductor_log": "data/logs/9.b.conductor.log",
-    "conductor_cputime_seconds": 0.18
+    "conductor_cputime_seconds": 0.17
   }
 }

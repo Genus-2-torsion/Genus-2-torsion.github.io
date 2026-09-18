@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": false,
   "new_for_class": true,
+  "accepted_because": "new for this class",
   "curve": {
     "f": [
       "0",
@@ -99,6 +100,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 21,
     "point_count_primes": [
       5,
@@ -112,7 +116,20 @@
       31,
       37,
       41,
-      43
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103
     ],
     "claimed": [
       21
@@ -140,6 +157,7 @@
       "over": "X^3 - 5175/4*X^2 + 50625/8*X - 421875/64",
       "detail": "a nonconstant map of degree 2 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/795000*(4192*w^2 + 353700*w - 245625)) over X^3 - 5175/4*X^2 + 50625/8*X - 421875/64, (x,y) -> (p/q, y*hh/q^2) with p = 1/397500*(-16*w^2 + 64900*w + 50625)*x^2 + 1/99375*(24*w^2 - 15200*w + 73125)*x + 1/397500*(64*w^2 + 16000*w + 95625), q = x^2 + 1/298125*(256*w^2 - 328200*w + 978750)*x + 1/59625*(16*w^2 - 19320*w + 68625), hh = 1/33125*(-64*w^2 - 5400*w + 3750)*x + 1/19875*(-224*w^2 + 3360*w - 6750); degree-2 map to an elliptic curve over the field defined by X^3-5175/4*X^2+50625/8*X-421875/64; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/795000*(-4192*w^2-353700*w+245625) [Genus2Torsion/verify_split_certificates.m, cover 2]"
     },
+    "isogenous_product": null,
     "cover_submitted": true,
     "cover_accepted": true,
     "cover_error": "",
@@ -152,7 +170,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Ogg 1973",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 19 (source: \\cite{Ogg1973})",
   "sources": [
@@ -220,15 +239,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:55:53 UTC"
+    "verified": "2026-09-18 17:36:10 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "1.22000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "1.10000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/21.b.log",
     "conductor_log": "data/logs/21.b.conductor.log",
-    "conductor_cputime_seconds": 0.22
+    "conductor_cputime_seconds": 0.21
   }
 }

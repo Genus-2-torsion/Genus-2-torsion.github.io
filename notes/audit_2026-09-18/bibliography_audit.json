@@ -1,0 +1,150 @@
+[
+  {
+    "key": "MazurTate1973",
+    "doi": "10.1007/BF01425572",
+    "resolved_title": [
+      "Points of order 13 on elliptic curves"
+    ],
+    "author": [
+      "Mazur",
+      "Tate"
+    ],
+    "expected_cite": "B. Mazur and J. Tate, Points of order 13 on elliptic curves, Invent. Math. 22 (1973), 41\u201349."
+  },
+  {
+    "key": "Flynn1990",
+    "doi": "10.1016/0022-314X(90)90036-Q",
+    "error": "HTTP Error 404: Not Found",
+    "expected_cite": "E. V. Flynn, Large rational torsion on abelian varieties, J. Number Theory 36 (1990), 257\u2013265."
+  },
+  {
+    "key": "Flynn1991",
+    "doi": "10.1007/BF01243920",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "E. V. Flynn, Sequences of rational torsions on abelian varieties, Invent. Math. 106 (1991), 433\u2013442."
+  },
+  {
+    "key": "Leprevost1995",
+    "doi": "10.5802/jtnb.145",
+    "resolved_title": [
+      "Structures galoisiennes et courbes elliptiques"
+    ],
+    "author": [
+      "Cassou-Nogues",
+      "Taylor"
+    ],
+    "expected_cite": "F. Lepr\u00e9vost, Jacobiennes de certaines courbes de genre 2: torsion et simplicit\u00e9, J. Th\u00e9or. Nombres Bordeaux 7 (1995), 283\u2013306."
+  },
+  {
+    "key": "Leprevost1997",
+    "doi": "10.1007/BF02678180",
+    "resolved_title": [
+      "Sur certains sous-groupes de torsion de jacobiennes de courbes hyperelliptiques de genreg \u2265 1"
+    ],
+    "author": [
+      "Lepr\u00e9vost"
+    ],
+    "expected_cite": "F. Lepr\u00e9vost, Sur certains sous-groupes de torsion de jacobiennes de courbes hyperelliptiques de genre g \u2265 1, Manuscripta Math. 92 (1997), 47\u201363."
+  },
+  {
+    "key": "Elkies2024",
+    "doi": "10.1090/conm/796",
+    "resolved_title": [
+      "LuCaNT: LMFDB, Computation, and Number Theory"
+    ],
+    "author": [],
+    "expected_cite": "N. D. Elkies, Families of genus-2 curves with 5-torsion, in LuCaNT: LMFDB, Computation, and Number Theory, Contemp. Math. 796, AMS, 2024, 165\u2013185."
+  },
+  {
+    "key": "Howe2015",
+    "doi": "10.1112/blms/bdu110",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "E. W. Howe, Genus-2 Jacobians with torsion points of large order, Bull. London Math. Soc. 47 (2015), 127\u2013135."
+  },
+  {
+    "key": "PP2012",
+    "doi": "10.1134/S1064562412020366",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "V. P. Platonov and M. M. Petrunin, New orders of torsion points in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 85 (2012), 286\u2013288."
+  },
+  {
+    "key": "PP2012b",
+    "doi": "10.1134/S1064562412050146",
+    "resolved_title": [
+      "Exact stabilization conditions for the solutions of the Cauchy problem for a nondivergent parabolic equation with decreasing lower-order coefficients"
+    ],
+    "author": [
+      "Denisov"
+    ],
+    "expected_cite": "V. P. Platonov and M. M. Petrunin, On the torsion problem in Jacobians of curves of genus 2 over the rational number field, Dokl. Math. 86 (2012), 642\u2013643."
+  },
+  {
+    "key": "PP2015",
+    "doi": "10.1134/S1064562415020222",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "V. P. Platonov and M. M. Petrunin, New curves of genus 2 over the field of rational numbers whose Jacobians contain torsion points of high order, Dokl. Math. 91 (2015), 220\u2013221."
+  },
+  {
+    "key": "PZP2013",
+    "doi": "10.1134/S1064562413030216",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "V. P. Platonov, V. S. Zhgun, M. M. Petrunin, On the simplicity of Jacobians for hyperelliptic curves of genus 2 over the field of rational numbers with torsion points of high order, Dokl. Math. 87 (2013), 318\u2013321."
+  },
+  {
+    "key": "Platonov2014",
+    "doi": "10.1070/RM2014v069n01ABEH004877",
+    "resolved_title": [
+      "Number-theoretic properties of hyperelliptic fields and the torsion problem in Jacobians of hyperelliptic curves over the rational number field"
+    ],
+    "author": [
+      "Platonov"
+    ],
+    "expected_cite": "V. P. Platonov, Number-theoretic properties of hyperelliptic fields and the torsion problem in Jacobians of hyperelliptic curves over the rational number field, Russian Math. Surveys 69 (2014), no. 1, 1\u201334."
+  },
+  {
+    "key": "BFT2014",
+    "doi": "10.4064/aa165-3-1",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "N. Bruin, E. V. Flynn, D. Testa, Descent via (3,3)-isogeny on Jacobians of genus 2 curves, Acta Arith. 165 (2014), 201\u2013223."
+  },
+  {
+    "key": "DaowsudSchmidt",
+    "doi": "10.1016/j.jnt.2017.11.001",
+    "resolved_title": [
+      "On the DLW conjectures"
+    ],
+    "author": [
+      "Hou"
+    ],
+    "expected_cite": "K. Daowsud and T. A. Schmidt, Continued fractions for rational torsion, J. Number Theory 189 (2018), 115\u2013130; corrigendum J. Number Theory 246 (2023), 326\u2013327."
+  },
+  {
+    "key": "Stoll1999",
+    "doi": "10.4064/aa-90-2-183-201",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "M. Stoll, On the height constant for curves of genus two, Acta Arith. 90 (1999), 183\u2013201."
+  },
+  {
+    "key": "MullerStoll2016",
+    "doi": "10.2140/ant.2016.10.2153",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "J. S. M\u00fcller and M. Stoll, Canonical heights on genus-2 Jacobians, Algebra Number Theory 10 (2016), 2153\u20132234; errata, published online 2023."
+  },
+  {
+    "key": "Zywina2022",
+    "doi": "10.1007/s40993-022-00389-x",
+    "error": "HTTP Error 429: Too Many Requests",
+    "expected_cite": "D. Zywina, Determining monodromy groups of abelian varieties, Res. Number Theory 8 (2022), article 89."
+  },
+  {
+    "key": "Lombardo2019",
+    "doi": "10.1090/mcom/3358",
+    "resolved_title": [
+      "Computing the geometric endomorphism ring of a genus-2 Jacobian"
+    ],
+    "author": [
+      "Lombardo"
+    ],
+    "expected_cite": "D. Lombardo, Computing the geometric endomorphism ring of a genus-2 Jacobian, Math. Comp. 88 (2019), 889\u2013929."
+  }
+]

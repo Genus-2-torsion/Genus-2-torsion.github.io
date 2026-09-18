@@ -1,7 +1,8 @@
 [0.000000 s] start
-[0.0100000 s] curve: y^2 + (x) y = 4*x^5 + 33*x^4 + 72*x^3 + 16*x^2 + x; working model y^2 = 16*x^5 + 132*x^4 + 288*x^3 + 65*x^2 + 4*x
-[0.200000 s] J(Q)_tors = [ 2, 2 ] (0.190000 s)
-[0.210000 s] geometrically simple: strict prime 3, chi = T^4 + T^3 + 2*T^2 + 3*T + 9
-[0.210000 s] Q-simple: chi irreducible at p = 3
-[0.310000 s] class: simple
-[0.350000 s] VERIFY_DONE
+[0.000000 s] curve: y^2 + (x) y = 4*x^5 + 33*x^4 + 72*x^3 + 16*x^2 + x; working model y^2 = 16*x^5 + 132*x^4 + 288*x^3 + 65*x^2 + 4*x
+[0.0300000 s] #J(Q)_tors divides gcd #J(F_p) = 16 (p = [ 3, 5, 7, 11, 13, 17, 19, 23, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103 ])
+[0.180000 s] J(Q)_tors = [ 2, 2 ] (TorsionSubgroup, 0.150000 s)
+[0.180000 s] geometrically simple: strict prime 3, chi = T^4 + T^3 + 2*T^2 + 3*T + 9
+[0.180000 s] Q-simple: chi irreducible at p = 3
+[0.270000 s] class: simple
+[0.300000 s] VERIFY_DONE

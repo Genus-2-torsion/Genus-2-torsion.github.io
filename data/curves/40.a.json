@@ -13,6 +13,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "0",
@@ -96,6 +97,9 @@
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 40,
     "point_count_primes": [
       5,
@@ -109,7 +113,20 @@
       31,
       37,
       41,
-      43
+      43,
+      47,
+      53,
+      59,
+      61,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
     ],
     "claimed": [
       40
@@ -133,6 +150,7 @@
     "geometrically_split": false,
     "split_over_Q": false,
     "certificate": null,
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -145,7 +163,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Elkies 2002",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 37 (source: \\cite{Elkies2002})",
   "sources": [
@@ -187,15 +206,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:52:25 UTC"
+    "verified": "2026-09-18 17:32:40 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.350000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.280000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/40.a.log",
     "conductor_log": "data/logs/40.a.conductor.log",
-    "conductor_cputime_seconds": 0.27
+    "conductor_cputime_seconds": 0.29
   }
 }

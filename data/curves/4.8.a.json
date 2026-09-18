@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "164",
@@ -92,20 +93,23 @@
       {
         "order": 4,
         "mumford": [
-          "x^2 + 61/9*x - 124/9",
-          "-440*x + 800",
+          "x^2 + 19/36*x - 1/36",
+          "-65*x - 25",
           "2"
         ]
       },
       {
         "order": 8,
         "mumford": [
-          "x^2 - 56/81*x - 16/81",
-          "3535/81*x + 1820/81",
+          "x^2 + 73/9*x - 100/9",
+          "548*x - 584",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 32,
     "point_count_primes": [
       11,
@@ -119,7 +123,20 @@
       43,
       47,
       53,
-      59
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113
     ],
     "claimed": [
       4,
@@ -144,6 +161,7 @@
     "geometrically_split": false,
     "split_over_Q": false,
     "certificate": null,
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -156,7 +174,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Booker–Sutherland (extended database)",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 55 (source: \\cite{BookerSutherland})",
   "sources": [
@@ -200,15 +219,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:52:38 UTC"
+    "verified": "2026-09-18 17:32:53 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.330000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.400000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/4.8.a.log",
     "conductor_log": "data/logs/4.8.a.conductor.log",
-    "conductor_cputime_seconds": 0.31
+    "conductor_cputime_seconds": 0.35
   }
 }

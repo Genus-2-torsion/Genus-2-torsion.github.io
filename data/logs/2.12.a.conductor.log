@@ -1,4 +1,4 @@
-[0.0200000 s] minimal model y^2 + (x^2 + x) y = x^5 - 8*x^4 + 14*x^3 + 2*x^2 - x, discriminant 82296
-[0.0200000 s] discriminant factored: 2^3 * 3^4 * 127
-[0.120000 s] conductor 762 = 2 * 3 * 127
+[0.0100000 s] minimal model y^2 + (x^2 + x) y = x^5 - 8*x^4 + 14*x^3 + 2*x^2 - x, discriminant 82296
+[0.0100000 s] discriminant factored: 2^3 * 3^4 * 127
+[0.130000 s] conductor 762 = 2 * 3 * 127
 [0.130000 s] CONDUCTOR_DONE

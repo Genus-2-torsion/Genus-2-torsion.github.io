@@ -14,6 +14,7 @@
   "status": "certified",
   "new_group": true,
   "new_for_class": true,
+  "accepted_because": "new group",
   "curve": {
     "f": [
       "326",
@@ -97,20 +98,23 @@
       {
         "order": 3,
         "mumford": [
-          "x^2 - 5/2*x - 3/4",
-          "100*x - 75/8",
+          "x^2 + 5/2*x + 3",
+          "25/4*x - 75/2",
           "2"
         ]
       },
       {
         "order": 9,
         "mumford": [
-          "x^2 - 5/13*x - 6/13",
-          "-175/13*x + 375/13",
+          "x^2 + 5/4*x - 3/4",
+          "-275/16*x - 375/16",
           "2"
         ]
       }
     ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
     "point_count_gcd": 27,
     "point_count_primes": [
       7,
@@ -124,7 +128,20 @@
       47,
       53,
       59,
-      61
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127
     ],
     "claimed": [
       3,
@@ -149,6 +166,7 @@
     "geometrically_split": false,
     "split_over_Q": false,
     "certificate": null,
+    "isogenous_product": null,
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -161,7 +179,8 @@
   "geometrically_isomorphic_to": [],
   "discovery": {
     "by": "Leprévost 1995",
-    "year": ""
+    "year": null,
+    "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 53 (source: \\cite{Leprevost1995})",
   "sources": [
@@ -207,15 +226,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-17 13:52:36 UTC"
+    "verified": "2026-09-18 17:32:51 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.29-4",
-    "cputime_seconds": "0.410000",
-    "verify_lib_sha256": "5d37ac9dec531338827b71739650fa5c02bd5092d747557021501235aef3088b",
+    "cputime_seconds": "0.350000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/3.9.a.log",
     "conductor_log": "data/logs/3.9.a.conductor.log",
-    "conductor_cputime_seconds": 0.56
+    "conductor_cputime_seconds": 0.55
   }
 }

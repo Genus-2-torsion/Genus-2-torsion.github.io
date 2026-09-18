@@ -126,7 +126,8 @@ def build():
         "n_certified": sum(1 for c in curves if c["status"] == "certified"),
         "n_verified": sum(1 for c in curves if c["status"] == "verified"),
         "n_groups_by_class": counts,
-        "n_groups_any_split": sum(1 for g in groups if g["known"]["qsplit"] or g["known"]["gsplit"]),
+        "n_groups_any_split": sum(1 for g in groups if g["known"]["qsplit"] or g["known"]["gsplit"]
+                                  or any(c["class"] == "split_undecided_over_Q" for c in g["classes"]["undecided"])),
         "n_infinite": {side: {grade: sum(1 for g in groups if g["infinite"][side]["grade"] == grade) for grade in ("exact", "family", "open")}
                        for side in ("simple", "split")},
         "n_rejected": len(list(REJECTED_DIR.glob("*.json"))),

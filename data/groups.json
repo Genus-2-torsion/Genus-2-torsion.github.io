@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17 15:52 UTC",
+  "generated": "2026-09-18 17:41 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -15,7 +15,7 @@
       "grades": {
         "exact": "infinitely many, with this exact torsion group (certified)",
         "family": "a positive-dimensional family with torsion containing the group is proven; exactness for infinitely many members is open",
-        "open": "no positive-dimensional family is recorded"
+        "open": "no positive-dimensional family is recorded (this is not a claim that none exists)"
       },
       "labels": {
         "exact": "∞",
@@ -26,26 +26,26 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 95,
-  "n_curves": 150,
-  "n_certified": 149,
+  "n_curves": 151,
+  "n_certified": 150,
   "n_verified": 1,
   "n_groups_by_class": {
     "simple": 73,
-    "qsplit": 68,
+    "qsplit": 69,
     "gsplit": 8,
     "undecided": 1
   },
-  "n_groups_any_split": 76,
+  "n_groups_any_split": 77,
   "n_infinite": {
     "simple": {
       "exact": 40,
-      "family": 4,
-      "open": 51
+      "family": 9,
+      "open": 46
     },
     "split": {
       "exact": 0,
-      "family": 18,
-      "open": 77
+      "family": 53,
+      "open": 42
     }
   },
   "n_rejected": 0,
@@ -106,7 +106,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 + 3*T^2 - 7*T + 49)",
-            "verified": "2026-09-17 13:51:54 UTC",
+            "verified": "2026-09-18 17:32:10 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -137,7 +137,7 @@
             },
             "conductor": "1083",
             "conductor_sort": 1083,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 57 * 19 for the elliptic curves ['0', '1', '1', '-4390', '-113432'] and ['0', '1', '1', '-769', '-8470'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 10,
             "lmfdb": {
               "label": "1083.b.390963.1",
@@ -159,7 +159,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - z : y + z^3 : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:52:57 UTC",
+            "verified": "2026-09-18 17:33:14 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -192,12 +192,16 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "y² = x⁵ + x + t (t = 3, 4, 5, 7, 8: trivial torsion, strict primes 7, 7, 7, 13, 13, distinct G2-invariants)"
+          "note": "y² = x⁵ + x + t (t = 3, 4, 5, 7, 8: trivial torsion, strict primes 7, 7, 7, 13, 13, distinct G2-invariants)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "20"
         }
       }
     },
@@ -260,7 +264,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 - 7*T + 49)",
-            "verified": "2026-09-17 13:51:55 UTC",
+            "verified": "2026-09-18 17:32:11 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -294,7 +298,7 @@
             },
             "conductor": "336",
             "conductor_sort": 336,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 14 * 24 for the elliptic curves ['1', '0', '1', '-2731', '-55146'] and ['0', '-1', '0', '-384', '-2772'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 9,
             "lmfdb": {
               "label": "336.a.172032.1",
@@ -316,7 +320,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:52:59 UTC",
+            "verified": "2026-09-18 17:33:15 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -347,14 +351,19 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "ThisSite",
+            "Audit2026"
           ],
-          "note": "y² = x(x⁵ + x + t); exact and strict fiber t = 2 (p = 17)"
+          "note": "y² = x(x⁴ + x + t): the class [(0,0) − ∞] is a rational 2-torsion point for every t (checked over ℚ(t)); fibers t = 1, 2, 3, 5, 7 have torsion exactly [2], a strict prime and distinct G2-invariants (family_2_certificate.log). The record's family y² = x(x⁵ + x + t) has no rational 2-torsion generically (x⁵ + x + t is irreducible over ℚ(t)); its fiber t = 2 is exact [2] only by an accidental extra root — found by the audit of 2026-09-18",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "20"
         }
       }
     },
@@ -415,7 +424,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + 3*T^3 + 5*T^2 + 9*T + 9)",
-            "verified": "2026-09-17 13:51:55 UTC",
+            "verified": "2026-09-18 17:32:11 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -472,7 +481,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 2 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/37405695000*(-1548256*w^2 - 6254107537500*w + 623782079912109375)) over X^3 - 53859375/4*X^2 + 116033291015625/8*X - 138877345184326171875/64, (x,y) -> (p/q, y*hh/q^2) with p = 1/58446398437500*(624*w^2 - 12088437500*w - 5401994326171875)*x^2 + 1/29223199218750*(1312*w^2 - 24895000000*w + 17443671416015625)*x + 1/58446398437500*(-3376*w^2 + 32794375000*w - 31187170107421875), q = x^2 + 1/73057998046875*(-32*w^2 + 440450000*w - 352397402343750)*x + 1/43834798828125*(16*w^2 - 203947500*w + 190810300781250), hh = 1/14611599609375*(-16*w^2 + 301612500*w - 322314697265625)*x + 1/14611599609375*(64*w^2 - 718125000*w + 631736806640625); degree-2 map to an elliptic curve over the field defined by X^3-53859375/4*X^2+116033291015625/8*X-138877345184326171875/64; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/37405695000*(1548256*w^2+6254107537500*w-623782079912109375) [Genus2Torsion/verify_split_certificates.m, cover 18]; simple over ℚ: χ_7 = T^4 + 2*T^3 - 3*T^2 + 14*T + 49 is irreducible",
-            "verified": "2026-09-17 13:53:01 UTC",
+            "verified": "2026-09-18 17:33:17 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -504,12 +513,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = (x³+x+1)² − t(x²+1)³ (contact form f = h² − λQ³); t = 2 (p = 13)"
+          "note": "y² = (x³+x+1)² − t(x²+1)³ (contact form f = h² − λQ³); t = 2 (p = 13)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [21], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "21"
         }
       }
     },
@@ -571,7 +584,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + 4*T^3 + 6*T^2 + 68*T + 289)",
-            "verified": "2026-09-17 13:51:56 UTC",
+            "verified": "2026-09-18 17:32:12 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -605,7 +618,7 @@
             },
             "conductor": "289",
             "conductor_sort": 289,
-            "conductor_note": "taken from the LMFDB label 289.a.2 (Magma did not finish the conductor computation within the time limit)",
+            "conductor_note": "N(E1) N(E2) = 17 * 17 for the elliptic curves ['1', '-1', '1', '-1', '0'] and ['1', '-1', '1', '-91', '-310'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 34,
             "lmfdb": {
               "label": "289.a.2",
@@ -627,7 +640,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 24/11*z : 312/1331*x^3 - 3120/1331*x^2*z - 7176/1331*x*z^2 + 2197/1331*y - 3744/1331*z^3 : 2/11*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:32 UTC",
+            "verified": "2026-09-18 17:35:49 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -660,12 +673,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = x·Q₄(x), Q₄ the norm from ℚ(√2) of the automatic-halving quadratic q_{α,β}, α = 1 + s√2, β = 1; eight exact fibers"
+          "note": "y² = x·Q₄(x), Q₄ the norm from ℚ(√2) of the automatic-halving quadratic q_{α,β}, α = 1 + s√2, β = 1; eight exact fibers",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "20"
         }
       }
     },
@@ -726,7 +743,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:51:56 UTC",
+            "verified": "2026-09-18 17:32:12 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -755,9 +772,9 @@
               "h": "0",
               "text": "y^2 = -8*x^6 - 36*x^5 + 14*x^4 + 17*x^3 - 334*x^2 + 348*x - 344"
             },
-            "conductor": "126877696",
-            "conductor_sort": 126877696,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "121",
+            "conductor_sort": 121,
+            "conductor_note": "Magma's genus-2 Conductor gave 126877696 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 11 * 11 for the elliptic curves ['0', '-1', '1', '0', '0'] and ['0', '-1', '1', '-7820', '-263580'] to whose product J is isogenous over Q",
             "discriminant_digits": 24,
             "lmfdb": {
               "label": "121.a.2",
@@ -779,7 +796,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 11/4*z : 343/64*y : -3/4*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:34 UTC",
+            "verified": "2026-09-18 17:35:50 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -812,12 +829,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "five-torsion families (see the record)"
+          "note": "five-torsion families (see the record)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "20"
         }
       }
     },
@@ -880,7 +901,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 - 4*T^3 + 10*T^2 - 68*T + 289)",
-            "verified": "2026-09-17 13:51:57 UTC",
+            "verified": "2026-09-18 17:32:13 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -913,7 +934,7 @@
             },
             "conductor": "196",
             "conductor_sort": 196,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 14 * 14 for the elliptic curves ['1', '0', '1', '-2731', '-55146'] and ['1', '0', '1', '-11', '12'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 16,
             "lmfdb": {
               "label": "196.a.3",
@@ -935,7 +956,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 8*z : -3*x^3 + 72*x^2*z + 174*x*z^2 + 125*y + 36*z^3 : -3*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:35 UTC",
+            "verified": "2026-09-18 17:35:52 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -968,12 +989,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the plain M(12) chart T₁₂ = ax² − x + r, h = (x−r)(T₁₂+1), f = ax²T₁₂(T₁₂+1)"
+          "note": "the plain M(12) chart T₁₂ = ax² − x + r, h = (x−r)(T₁₂+1), f = ax²T₁₂(T₁₂+1)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [30], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "30"
         }
       }
     },
@@ -1037,7 +1062,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 - T^3 + T^2 - 5*T + 25)",
-            "verified": "2026-09-17 13:51:58 UTC",
+            "verified": "2026-09-18 17:32:14 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1071,7 +1096,7 @@
             },
             "conductor": "676",
             "conductor_sort": 676,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 26 * 26 for the elliptic curves ['1', '0', '1', '-460', '-3830'] and ['1', '-1', '1', '-3', '3'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 11,
             "lmfdb": {
               "label": "676.b.3",
@@ -1093,7 +1118,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:36 UTC",
+            "verified": "2026-09-18 17:35:53 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1126,12 +1151,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "contact-7 chart: h = 1 − (7/2)x + ax² + bx³, f = (h² + (x−1)⁷)/x²"
+          "note": "contact-7 chart: h = 1 − (7/2)x + ax² + bx³, f = (h² + (x−1)⁷)/x²",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [21], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "21"
         }
       }
     },
@@ -1194,7 +1223,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 2*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:51:58 UTC",
+            "verified": "2026-09-18 17:32:14 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1226,7 +1255,7 @@
             },
             "conductor": "300",
             "conductor_sort": 300,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 15 * 20 for the elliptic curves ['1', '1', '1', '35', '-28'] and ['0', '1', '0', '-36', '-140'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 15,
             "lmfdb": {
               "label": "300.a.2",
@@ -1248,7 +1277,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:38 UTC",
+            "verified": "2026-09-18 17:35:54 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1281,12 +1310,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the A(8) chart, slice p = 2, r = 3 with free parameter t; t = 2 (p = 13)"
+          "note": "the A(8) chart, slice p = 2, r = 3 with free parameter t; t = 2 (p = 13)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [40], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "40"
         }
       }
     },
@@ -1349,7 +1382,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + T^3 - 4*T^2 + 7*T + 49)",
-            "verified": "2026-09-17 13:51:59 UTC",
+            "verified": "2026-09-18 17:32:15 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1404,7 +1437,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-12096)u + (-544752) over Q (the elliptic curve 19a1), (x,y) -> (p/q, y*hh/q^2) with p = 192*x^3 - 276*x^2 + 684*x - 84, q = x^3 - 5*x^2 - 4, hh = 2052*x^3 - 4104*x + 4104; degree-3 map to the elliptic curve 19a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 5]",
-            "verified": "2026-09-17 13:55:39 UTC",
+            "verified": "2026-09-18 17:35:56 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1437,12 +1470,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "contact-9 chart: h = 1 − (9/2)x + (63/8)x² − (105/16)x³ + ax⁴, f = (h² + (x−1)⁹)/x⁴"
+          "note": "contact-9 chart: h = 1 − (9/2)x + (63/8)x² − (105/16)x³ + ax⁴, f = (h² + (x−1)⁹)/x⁴",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [45], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "45"
         }
       }
     },
@@ -1506,7 +1543,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 - T^3 - 5*T + 25)",
-            "verified": "2026-09-17 13:51:59 UTC",
+            "verified": "2026-09-18 17:32:15 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1560,7 +1597,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-8451)u + (-296514) over Q (the elliptic curve 33a2), (x,y) -> (p/q, y*hh/q^2) with p = -57*x^3 - 606/11*x^2 + 156/11*x + 192/11, q = x^3 + 10/11*x^2 - 4/11*x - 4/11, hh = 108/11*x^3 + 216/11*x^2 + 1404/121*x + 216/121; degree-3 map to the elliptic curve 33a2 over Q [Genus2Torsion/verify_split_certificates.m, cover 10]",
-            "verified": "2026-09-17 13:55:40 UTC",
+            "verified": "2026-09-18 17:35:57 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1593,12 +1630,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "contact-5 chart at b = 1: y² = (1 + ax + x²)² − (a+2)²x⁵; eight exact fibers"
+          "note": "contact-5 chart at b = 1: y² = (1 + ax + x²)² − (a+2)²x⁵; eight exact fibers",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "20"
         }
       }
     },
@@ -1659,7 +1700,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + 2*T^3 + 4*T^2 + 6*T + 9)",
-            "verified": "2026-09-17 13:52:00 UTC",
+            "verified": "2026-09-18 17:32:16 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1713,7 +1754,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(11)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 + T^2 + 9 is irreducible",
-            "verified": "2026-09-17 13:55:41 UTC",
+            "verified": "2026-09-18 17:35:59 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1746,12 +1787,14 @@
             "Najman2026",
             "DaowsudSchmidt"
           ],
-          "note": "Flynn's family y² = x⁶ + 2x⁵ + (2t+3)x⁴ + 2x³ + (t²+1)x² + 2t(1−t)x + t² and the Daowsud–Schmidt continued-fraction family"
+          "note": "Flynn's family y² = x⁶ + 2x⁵ + (2t+3)x⁴ + 2x³ + (t²+1)x² + 2t(1−t)x + t² and the Daowsud–Schmidt continued-fraction family",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -1812,7 +1855,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 + 6*T^2 - 7*T + 49)",
-            "verified": "2026-09-17 13:52:00 UTC",
+            "verified": "2026-09-18 17:32:16 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1844,7 +1887,7 @@
             },
             "conductor": "294",
             "conductor_sort": 294,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 14 * 21 for the elliptic curves ['1', '0', '1', '-1', '0'] and ['1', '0', '0', '1', '0'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 7,
             "lmfdb": {
               "label": "294.a.294.1",
@@ -1866,7 +1909,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:43 UTC",
+            "verified": "2026-09-18 17:36:00 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -1899,12 +1942,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the rational-Weierstrass subchart a = (1−z²)/(4(r+1)) of the M(12) chart"
+          "note": "the rational-Weierstrass subchart a = (1−z²)/(4(r+1)) of the M(12) chart",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "Howe2015"
+          ],
+          "note": "inherited: the group is a subgroup of [48], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "48"
         }
       }
     },
@@ -1967,7 +2014,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 - T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:01 UTC",
+            "verified": "2026-09-18 17:32:17 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2001,12 +2048,14 @@
           "sources": [
             "Leprevost1991a"
           ],
-          "note": "Leprévost 1991: a family of genus-2 curves with a rational divisor class of order 13 (formulas not transcribed into the record; exactness and geometric simplicity of infinitely many members not certified)"
+          "note": "Leprévost 1991: a family of genus-2 curves with a rational divisor class of order 13 (formulas not transcribed into the record; exactness and geometric simplicity of infinitely many members not certified)",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -2068,7 +2117,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + T^3 - 2*T^2 + 7*T + 49)",
-            "verified": "2026-09-17 13:52:01 UTC",
+            "verified": "2026-09-18 17:32:17 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2123,7 +2172,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-3483)u + (121014) over Q (the elliptic curve 26b1), (x,y) -> (p/q, y*hh/q^2) with p = -45*x^3 - 144*x^2 - 36*x - 144, q = x^3 + 4*x, hh = 432*x^3 - 432*x - 864; degree-3 map to the elliptic curve 26b1 over Q [Genus2Torsion/verify_split_certificates.m, cover 3]",
-            "verified": "2026-09-17 13:55:44 UTC",
+            "verified": "2026-09-18 17:36:01 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2156,12 +2205,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "rational-root subfamily of the contact-7 chart"
+          "note": "rational-root subfamily of the contact-7 chart",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -2222,7 +2273,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:02 UTC",
+            "verified": "2026-09-18 17:32:18 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2254,7 +2305,7 @@
             },
             "conductor": "484",
             "conductor_sort": 484,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 11 * 44 for the elliptic curves ['0', '-1', '1', '0', '0'] and ['0', '1', '0', '3', '-1'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 7,
             "lmfdb": {
               "label": "484.a.1936.1",
@@ -2276,7 +2327,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:46 UTC",
+            "verified": "2026-09-18 17:36:03 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2305,16 +2356,21 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "exact",
+          "grade": "family",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "Audit2026"
           ],
-          "note": "inherited from the cyclic [30] family (see the record for the exactness discussion)"
+          "note": "the record lists [15] as inherited from the cyclic [30] family, which only gives torsion ⊇ [30] ⊇ [15]; no family with generic torsion exactly [15] is recorded (audit of 2026-09-18)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [30], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "30"
         }
       }
     },
@@ -2378,7 +2434,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 2*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:02 UTC",
+            "verified": "2026-09-18 17:32:18 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2412,7 +2468,7 @@
             },
             "conductor": "2700",
             "conductor_sort": 2700,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 15 * 180 for the elliptic curves ['1', '1', '1', '35', '-28'] and ['0', '0', '0', '33', '-74'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 13,
             "lmfdb": {
               "label": "2700.d.1",
@@ -2434,7 +2490,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:47 UTC",
+            "verified": "2026-09-18 17:36:04 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2463,16 +2519,21 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "family",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "Elkies2002"
           ],
-          "note": "the record traces no positive-dimensional construction with generic torsion exactly [16] (the reconstructed Elkies [32] component contains [16] as 2D, but its generic torsion is [32])"
+          "note": "inherited: the group is a subgroup of [32], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "32"
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "Howe2015"
+          ],
+          "note": "inherited: the group is a subgroup of [48], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "48"
         }
       }
     },
@@ -2534,7 +2595,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 3*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:03 UTC",
+            "verified": "2026-09-18 17:32:19 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2568,12 +2629,14 @@
           "sources": [
             "Leprevost1991"
           ],
-          "note": "Leprévost 1991: a family with a rational divisor class of order 17 (not transcribed; open legs as for [13])"
+          "note": "Leprévost 1991: a family with a rational divisor class of order 17 (not transcribed; open legs as for [13])",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -2637,7 +2700,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + T^3 - 4*T^2 + 7*T + 49)",
-            "verified": "2026-09-17 13:52:03 UTC",
+            "verified": "2026-09-18 17:32:19 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2692,7 +2755,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (11232)u + (-78192) over Q (the elliptic curve 35a1), (x,y) -> (p/q, y*hh/q^2) with p = 48*x^3 + 60*x^2 - 12*x - 36, q = x^3 - 4*x^2 + 5*x - 6, hh = 756*x^3 - 2268*x^2 + 3780*x - 756; degree-3 map to the elliptic curve 35a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 6]",
-            "verified": "2026-09-17 13:55:48 UTC",
+            "verified": "2026-09-18 17:36:06 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2725,12 +2788,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "rational-root subfamily of the contact-9 chart"
+          "note": "rational-root subfamily of the contact-9 chart",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -2795,7 +2860,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 5*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:04 UTC",
+            "verified": "2026-09-18 17:32:20 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2849,7 +2914,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 2 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/4205989997374997986989046056*(272112803100608279040*w^5 + 395664740768467375261056*w^4 - 29647589653215861439432320*w^3 + 477245639866772050871629032*w^2 + 195733771623786479752709040*w + 207843556759852706226835301)) over X^6 + 2925/2*X^5 - 13931515/144*X^4 + 555105005/864*X^3 + 741300755/1152*X^2 - 59482995065/62208*X - 2129491223327/2985984, (x,y) -> (p/q, y*hh/q^2) with p = 1/1401996665791665995663015352*(15990842261263127814144*w^5 + 23367448923609665432475648*w^4 - 1575054550234548111640212288*w^3 + 12162386878499496157273057680*w^2 - 4320129434415791253147032064*w - 8711193399793278371297110063)*x^2 + 1/175249583223958249457876919*(1181047455487212756480*w^5 + 1725717953028064158570240*w^4 - 116547640063212079646312544*w^3 + 913046320206876174333647256*w^2 - 421538903357027186361600372*w - 655021524942587374393280381)*x + 1/350499166447916498915753838*(-1047400442066319243264*w^5 - 1530244557357870304783296*w^4 + 103639941866199892102086384*w^3 - 827402670280905916142666448*w^2 + 497327212158924622832114979*w + 825849916525810185225936473), q = x^2 + 1/1518829721274304828634933298*(16541103711402026827776*w^5 + 24166552645798839366764544*w^4 - 1636558488650062614742432704*w^3 + 13063575221221494738458433744*w^2 - 7641246715946420125902252744*w - 11882728243714815255723273527)*x + 1/1518829721274304828634933298*(62752690556056115767296*w^5 + 91701242410418949541259520*w^4 - 6180068925644118438615566976*w^3 + 47674259218659743345753384112*w^2 - 17057854345563835128788883108*w - 34299957341643443052026541793), hh = 1/155777407310185110629223928*(-12657327167462518499328*w^5 - 18495495027938281568656896*w^4 + 1247708735528258120286326976*w^3 - 9694015543269686983981601520*w^2 + 3966652048288737212257203624*w + 7357662702216901913155444543)*x + 1/467332221930555331887671784*(-263143200386260062268416*w^5 - 384520483678913448260359680*w^4 + 25935239216690935277561086464*w^3 - 201243384412403003124237441216*w^2 + 80517482866691594749291161324*w + 150570853786333685914255361549); degree-2 map to an elliptic curve over the field defined by X^6+2925/2*X^5-13931515/144*X^4+555105005/864*X^3+741300755/1152*X^2-59482995065/62208*X-2129491223327/2985984; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/4205989997374997986989046056*(-272112803100608279040*w^5-395664740768467375261056*w^4+29647589653215861439432320*w^3-477245639866772050871629032*w^2-195733771623786479752709040*w-207843556759852706226835301) [Genus2Torsion/verify_split_certificates.m, cover 1]; simple over ℚ: χ_3 = T^4 + 2*T^3 + T^2 + 6*T + 9 is irreducible",
-            "verified": "2026-09-17 13:55:50 UTC",
+            "verified": "2026-09-18 17:36:07 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -2881,12 +2946,14 @@
           "sources": [
             "Leprevost1991"
           ],
-          "note": "Leprévost 1991: a family with a rational divisor class of order 19 (not transcribed; open legs as for [13])"
+          "note": "Leprévost 1991: a family with a rational divisor class of order 19 (not transcribed; open legs as for [13])",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -2948,7 +3015,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 - 2*T^2 - 7*T + 49)",
-            "verified": "2026-09-17 13:52:05 UTC",
+            "verified": "2026-09-18 17:32:21 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3003,7 +3070,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-13392)u + (-1080432) over Q (the elliptic curve 11a1), (x,y) -> (p/q, y*hh/q^2) with p = 564*x^3 - 1536*x^2 + 2100*x - 156, q = x^3 + 5*x^2 - 4*x - 8, hh = 13068*x^3 - 52272*x^2 + 52272*x - 26136; degree-3 map to the elliptic curve 11a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 7]",
-            "verified": "2026-09-17 13:55:51 UTC",
+            "verified": "2026-09-18 17:36:08 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3036,14 +3103,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the contact-5 + 4-torsion family"
+          "note": "the contact-5 + 4-torsion family",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -3106,7 +3175,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 + 2*T^3 + 4*T^2 + 10*T + 25)",
-            "verified": "2026-09-17 13:52:05 UTC",
+            "verified": "2026-09-18 17:32:21 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3162,7 +3231,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 2 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/795000*(4192*w^2 + 353700*w - 245625)) over X^3 - 5175/4*X^2 + 50625/8*X - 421875/64, (x,y) -> (p/q, y*hh/q^2) with p = 1/397500*(-16*w^2 + 64900*w + 50625)*x^2 + 1/99375*(24*w^2 - 15200*w + 73125)*x + 1/397500*(64*w^2 + 16000*w + 95625), q = x^2 + 1/298125*(256*w^2 - 328200*w + 978750)*x + 1/59625*(16*w^2 - 19320*w + 68625), hh = 1/33125*(-64*w^2 - 5400*w + 3750)*x + 1/19875*(-224*w^2 + 3360*w - 6750); degree-2 map to an elliptic curve over the field defined by X^3-5175/4*X^2+50625/8*X-421875/64; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/795000*(-4192*w^2-353700*w+245625) [Genus2Torsion/verify_split_certificates.m, cover 2]; simple over ℚ: χ_5 = T^4 - 5*T^2 + 25 is irreducible",
-            "verified": "2026-09-17 13:55:53 UTC",
+            "verified": "2026-09-18 17:36:10 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3195,14 +3264,16 @@
             "Najman2026",
             "Leprevost1991"
           ],
-          "note": "Leprévost's 1991 one-parameter degree-5 family f₂₁ = A₂₁² − k₂₁x³(x−1)²; marked class of order 21 verified symbolically over ℚ(t)"
+          "note": "Leprévost's 1991 one-parameter degree-5 family f₂₁ = A₂₁² − k₂₁x³(x−1)²; marked class of order 21 verified symbolically over ℚ(t)",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -3264,7 +3335,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + 2*T^3 + 4*T^2 + 6*T + 9)",
-            "verified": "2026-09-17 13:52:05 UTC",
+            "verified": "2026-09-18 17:32:22 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3298,12 +3369,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "rational-branch subfamilies of the order-11 families"
+          "note": "rational-branch subfamilies of the order-11 families",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -3367,7 +3440,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + 2*T^3 + 5*T^2 + 6*T + 9)",
-            "verified": "2026-09-17 13:52:06 UTC",
+            "verified": "2026-09-18 17:32:22 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3402,12 +3475,14 @@
             "Najman2026",
             "KuruSadek"
           ],
-          "note": "the Kuru–Sadek quadratic-order construction, genus-2 specialization"
+          "note": "the Kuru–Sadek quadratic-order construction, genus-2 specialization",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -3470,7 +3545,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + T^3 - 20*T^2 + 17*T + 289)",
-            "verified": "2026-09-17 13:52:07 UTC",
+            "verified": "2026-09-18 17:32:23 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3502,7 +3577,7 @@
             },
             "conductor": "300",
             "conductor_sort": 300,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 15 * 20 for the elliptic curves ['1', '1', '1', '35', '-28'] and ['0', '1', '0', '4', '4'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 11,
             "lmfdb": {
               "label": "300.a.1",
@@ -3524,7 +3599,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:55:54 UTC",
+            "verified": "2026-09-18 17:36:11 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3555,12 +3630,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "Howe2015"
+          ],
+          "note": "inherited: the group is a subgroup of [48], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "48"
         }
       }
     },
@@ -3622,7 +3701,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 11 is strict (χ = T^4 - 5*T^3 + 13*T^2 - 55*T + 121)",
-            "verified": "2026-09-17 13:52:14 UTC",
+            "verified": "2026-09-18 17:32:31 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3680,7 +3759,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 5 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (1/52*(-113515*w + 9308159375)) over X^2 - 32246250*X + 2573441015625, (x,y) -> (p/q, y*hh/q^2) with p = 1/39000*(17*w + 1831875)*x^5 + 1/17784*(5*w - 587625)*x^4 + 1/85500*(17*w + 6631875)*x^3 + 1/18525*(4*w + 499375)*x^2 + 1/7125*(w + 264375)*x + 1/92625*(2*w + 4803750), q = x^5 + 1/13893750*(w - 2229375)*x^4 + 1/6946875*(w + 7033125)*x^3 + 1/13893750*(w + 2401875)*x^2, hh = 1/325*(11*w - 879375)*x^7 + 1/18525*(601*w - 47735625)*x^6 + 1/18525*(23*w - 331875)*x^5 + 1/55575*(-709*w + 66208125)*x^4 + 1/55575*(-808*w + 78510000)*x^3 + 1/2223*(-14*w + 1200750)*x^2 + 1/55575*(-56*w + 13695000)*x; degree-5 map to an elliptic curve over the field defined by X^2-32246250*X+2573441015625; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 1/52*(113515*w-9308159375) [Genus2Torsion/verify_split_certificates.m, cover 11]; simple over ℚ: χ_5 = T^4 - T^2 + 25 is irreducible",
-            "verified": "2026-09-17 13:56:02 UTC",
+            "verified": "2026-09-18 17:36:19 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3710,12 +3789,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -3777,7 +3858,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 11 is strict (χ = T^4 + 4*T^3 + 12*T^2 + 44*T + 121)",
-            "verified": "2026-09-17 13:52:16 UTC",
+            "verified": "2026-09-18 17:32:32 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3811,12 +3892,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified"
+          "note": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -3879,7 +3962,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + 3*T^3 + 5*T^2 + 9*T + 9)",
-            "verified": "2026-09-17 13:52:16 UTC",
+            "verified": "2026-09-18 17:32:33 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3934,7 +4017,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (4)u^3 + (0)u^2 + (-w)u + (-93*w + 1344276) over X^2 + 138024*X - 1767690864, (x,y) -> (p/q, y*hh/q^2) with p = 1/648*(-w - 4860)*x^3 + 1/5184*(13*w - 1342332)*x^2 + 1/10368*(7*w + 1042956)*x + 1/10368*(-5*w - 438372), q = x^3 + 1/46656*(-w - 69012)*x^2 + 1/93312*(5*w + 904932)*x + 1/93312*(w + 162324), hh = 1/36*(-w + 24300)*x^3 + 1/72*(w - 70956)*x^2 + 1/72*(-w - 208980)*x + 1/72*(-w - 162324); degree-3 map to an elliptic curve over the field defined by X^2+138024*X-1767690864; E: v^2 = 4u^3 - g2 u - g3 with g2 = w, g3 = 93*w-1344276 [Genus2Torsion/verify_split_certificates.m, cover 12]; simple over ℚ: χ_7 = T^4 + 4*T^2 + 49 is irreducible",
-            "verified": "2026-09-17 13:56:56 UTC",
+            "verified": "2026-09-18 17:37:17 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3964,12 +4047,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4034,7 +4119,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + T^3 - 2*T^2 + 7*T + 49)",
-            "verified": "2026-09-17 13:52:17 UTC",
+            "verified": "2026-09-18 17:32:33 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4090,7 +4175,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (1122741)u + (310814982) over Q (the elliptic curve 182a1), (x,y) -> (p/q, y*hh/q^2) with p = 891*x^3 - 891*x^2 + 2853*x + 891, q = x^3 - x^2 - x + 1, hh = 22464*x^3 - 11232*x^2 - 11232; degree-3 map to the elliptic curve 182a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 9]",
-            "verified": "2026-09-17 13:56:58 UTC",
+            "verified": "2026-09-18 17:37:19 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4123,12 +4208,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified"
+          "note": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4191,7 +4278,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + 3*T^3 + 7*T^2 + 9*T + 9)",
-            "verified": "2026-09-17 13:52:18 UTC",
+            "verified": "2026-09-18 17:32:34 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4223,12 +4310,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4293,7 +4382,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 13 is strict (χ = T^4 - 2*T^3 + 8*T^2 - 26*T + 169)",
-            "verified": "2026-09-17 13:52:19 UTC",
+            "verified": "2026-09-18 17:32:35 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4327,7 +4416,7 @@
             },
             "conductor": "4356",
             "conductor_sort": 4356,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 66 * 66 for the elliptic curves ['1', '0', '0', '-45', '81'] and ['1', '0', '1', '-6', '4'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 12,
             "lmfdb": {
               "label": "4356.j.1",
@@ -4349,7 +4438,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:56:59 UTC",
+            "verified": "2026-09-18 17:37:20 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4382,14 +4471,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the simultaneous contact-5 / contact-6 family"
+          "note": "the simultaneous contact-5 / contact-6 family",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -4453,7 +4544,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 11 is strict (χ = T^4 - 8*T^3 + 36*T^2 - 88*T + 121)",
-            "verified": "2026-09-17 13:52:20 UTC",
+            "verified": "2026-09-18 17:32:36 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4488,12 +4579,14 @@
             "BNSS2026",
             "Najman2026"
           ],
-          "note": "every known example has real multiplication (by ℤ[√2]); a single curve is known"
+          "note": "every known example has real multiplication (by ℤ[√2]); a single curve is known",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4557,7 +4650,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + T^3 + 6*T^2 + 7*T + 49)",
-            "verified": "2026-09-17 13:52:20 UTC",
+            "verified": "2026-09-18 17:32:36 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4592,12 +4685,14 @@
             "Najman2026",
             "Elkies2002"
           ],
-          "note": "the reconstructed Elkies order-32 component"
+          "note": "the reconstructed Elkies order-32 component",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4662,7 +4757,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 13 is strict (χ = T^4 - 2*T^3 - 10*T^2 - 26*T + 169)",
-            "verified": "2026-09-17 13:52:22 UTC",
+            "verified": "2026-09-18 17:32:37 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4694,12 +4789,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4763,7 +4860,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 + T^3 + 2*T^2 + 5*T + 25)",
-            "verified": "2026-09-17 13:52:22 UTC",
+            "verified": "2026-09-18 17:32:38 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4795,12 +4892,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -4843,7 +4942,7 @@
             },
             "conductor": "7436",
             "conductor_sort": 7436,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 286 * 26 for the elliptic curves ['1', '1', '1', '280', '393'] and ['1', '-1', '1', '-3', '3'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 28,
             "lmfdb": {
               "label": "7436.a.2",
@@ -4865,7 +4964,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + z : x^2*z + x*z^2 + y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:00 UTC",
+            "verified": "2026-09-18 17:37:22 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -4896,14 +4995,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve",
+          "inherited_from": null
         }
       }
     },
@@ -4966,7 +5067,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 11 is strict (χ = T^4 - 2*T^3 + 10*T^2 - 22*T + 121)",
-            "verified": "2026-09-17 13:52:23 UTC",
+            "verified": "2026-09-18 17:32:39 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5022,7 +5123,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-157707)u + (78888006) over Q (the elliptic curve 90c3), (x,y) -> (p/q, y*hh/q^2) with p = -549*x^3 + 1647/2*x^2 + 1890*x - 1890, q = x^3 - 3/2*x^2 + 6*x - 6, hh = 31104*x^2 - 69984*x + 46656; degree-3 map to the elliptic curve 90c3 over Q [Genus2Torsion/verify_split_certificates.m, cover 8]",
-            "verified": "2026-09-17 13:57:02 UTC",
+            "verified": "2026-09-18 17:37:23 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5053,12 +5154,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -5121,7 +5224,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 + 2*T^3 + T^2 + 10*T + 25)",
-            "verified": "2026-09-17 13:52:24 UTC",
+            "verified": "2026-09-18 17:32:40 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5153,12 +5256,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -5220,7 +5325,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + T^3 + 12*T^2 + 17*T + 289)",
-            "verified": "2026-09-17 13:52:25 UTC",
+            "verified": "2026-09-18 17:32:40 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5252,7 +5357,7 @@
             },
             "conductor": "3168",
             "conductor_sort": 3168,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 66 * 48 for the elliptic curves ['1', '0', '0', '115', '561'] and ['0', '1', '0', '16', '180'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 17,
             "lmfdb": {
               "label": "3168.i.1",
@@ -5274,7 +5379,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:04 UTC",
+            "verified": "2026-09-18 17:37:24 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5305,14 +5410,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface",
+          "inherited_from": null
         }
       }
     },
@@ -5353,7 +5460,7 @@
             },
             "conductor": "602835300",
             "conductor_sort": 602835300,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 15810 * 38130 for the elliptic curves ['1', '0', '0', '-35358150', '80924422500'] and ['1', '0', '0', '176730', '-43451388'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 97,
             "lmfdb": {
               "label": "",
@@ -5375,7 +5482,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:06 UTC",
+            "verified": "2026-09-18 17:37:26 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5406,14 +5513,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve",
+          "inherited_from": null
         }
       }
     },
@@ -5455,7 +5564,7 @@
             },
             "conductor": "1764",
             "conductor_sort": 1764,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 21 * 84 for the elliptic curves ['1', '0', '0', '-39', '90'] and ['0', '1', '0', '-28', '-28'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 13,
             "lmfdb": {
               "label": "1764.a.1",
@@ -5479,7 +5588,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:07 UTC",
+            "verified": "2026-09-18 17:37:27 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5510,12 +5619,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "Howe2015"
+          ],
+          "note": "Howe 2015, Theorem 3.2 and Remark 3.3: a family of genus-2 curves whose Jacobians have a rational point of order 48, parametrised by an elliptic curve of rank 2; the Jacobians are split over ℚ by the 2-gluing construction",
+          "inherited_from": null
         }
       }
     },
@@ -5558,7 +5671,7 @@
             },
             "conductor": "13500",
             "conductor_sort": 13500,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 150 * 90 for the elliptic curves ['1', '0', '0', '-28', '272'] and ['1', '-1', '1', '-122', '1721'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 18,
             "lmfdb": {
               "label": "13500.r.4",
@@ -5580,7 +5693,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:09 UTC",
+            "verified": "2026-09-18 17:37:29 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5611,14 +5724,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve",
+          "inherited_from": null
         }
       }
     },
@@ -5659,7 +5774,7 @@
             },
             "conductor": "63693396",
             "conductor_sort": 63693396,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 42978 * 1482 for the elliptic curves ['1', '0', '0', '-459769306', '3796241996132'] and ['1', '0', '0', '12948', '421776'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 74,
             "lmfdb": {
               "label": "",
@@ -5681,7 +5796,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:11 UTC",
+            "verified": "2026-09-18 17:37:32 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5712,14 +5827,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)"
+          "note": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)",
+          "inherited_from": null
         }
       }
     },
@@ -5782,7 +5899,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-7483623723)u + (249446508217254) over Q (the elliptic curve 858k1), (x,y) -> (p/q, y*hh/q^2) with p = -15693*x^3 + 78465*x^2 - 5487933/4*x + 4954371, q = x^3 - 5*x^2 - 55/4*x + 89, hh = 9526572*x^3 - 80975862*x^2 + 190531440*x - 161951724; degree-3 map to the elliptic curve 858k1 over Q [Genus2Torsion/verify_split_certificates.m, cover 17]",
-            "verified": "2026-09-17 13:57:13 UTC",
+            "verified": "2026-09-18 17:37:33 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5813,12 +5930,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -5881,7 +6000,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 2*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:25 UTC",
+            "verified": "2026-09-18 17:32:41 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5938,7 +6057,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "the geometric automorphism group has order 8 (5 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_3 = T^4 + 2*T^3 + 2*T^2 + 6*T + 9 is irreducible",
-            "verified": "2026-09-17 13:57:14 UTC",
+            "verified": "2026-09-18 17:37:34 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -5970,12 +6089,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = x(x−1)(x−2)(x³ + x + t); t = 3 (p = 11)"
+          "note": "y² = x(x−1)(x−2)(x³ + x + t); t = 3 (p = 11)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.24"
         }
       }
     },
@@ -6038,7 +6161,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 2*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:26 UTC",
+            "verified": "2026-09-18 17:32:42 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6068,9 +6191,9 @@
               "h": "x^2 + 1",
               "text": "y^2 + (x^2 + 1)*y = 3*x^5 + x^4 + 11*x^3 - 6*x^2 + 6*x - 16"
             },
-            "conductor": "230400",
-            "conductor_sort": 230400,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "225",
+            "conductor_sort": 225,
+            "conductor_note": "Magma's genus-2 Conductor gave 230400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 15 * 15 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '1', '1', '-135', '-660'] to whose product J is isogenous over Q",
             "discriminant_digits": 10,
             "lmfdb": {
               "label": "225.a.1",
@@ -6092,7 +6215,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 3*z : -x^3 + 3*x^2*z - 3*x*z^2 + 8*y + 9*z^3 : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:15 UTC",
+            "verified": "2026-09-18 17:37:36 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6125,12 +6248,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = x(x² + (2t+1)x + t²)(x² + 3x + 1); eight exact fibers"
+          "note": "y² = x(x² + (2t+1)x + t²)(x² + 3x + 1); eight exact fibers",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.24"
         }
       }
     },
@@ -6192,7 +6319,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 23 is strict (χ = T^4 - 3*T^3 - 2*T^2 - 69*T + 529)",
-            "verified": "2026-09-17 13:52:27 UTC",
+            "verified": "2026-09-18 17:32:42 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6224,7 +6351,7 @@
             },
             "conductor": "196",
             "conductor_sort": 196,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 14 * 14 for the elliptic curves ['1', '0', '1', '-1', '0'] and ['1', '0', '1', '-171', '-874'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 13,
             "lmfdb": {
               "label": "196.a.2",
@@ -6246,7 +6373,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 5/2*z : 1/8*x^3 + 3/4*x^2*z + 3/2*x*z^2 + 27/8*y + 35/8*z^3 : -1/2*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:16 UTC",
+            "verified": "2026-09-18 17:37:37 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6279,12 +6406,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "contact-6 chart: f = h² − (x−1)⁶, h cubic"
+          "note": "contact-6 chart: f = h² − (x−1)⁶, h cubic",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.24"
         }
       }
     },
@@ -6347,7 +6478,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 3 is strict (χ = T^4 + T^3 + 2*T^2 + 3*T + 9)",
-            "verified": "2026-09-17 13:52:27 UTC",
+            "verified": "2026-09-18 17:32:43 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6378,9 +6509,9 @@
               "h": "x^2 + 1",
               "text": "y^2 + (x^2 + 1)*y = -175*x^6 + 60*x^5 - 305*x^4 + 447*x^3 - 279*x^2 + 465*x - 214"
             },
-            "conductor": "230400",
-            "conductor_sort": 230400,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "225",
+            "conductor_sort": 225,
+            "conductor_note": "Magma's genus-2 Conductor gave 230400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 15 * 15 for the elliptic curves ['1', '1', '1', '-135', '-660'] and ['1', '1', '1', '-10', '-10'] to whose product J is isogenous over Q",
             "discriminant_digits": 34,
             "lmfdb": {
               "label": "225.a.8",
@@ -6402,7 +6533,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 30/11*z : 8364/1331*x^3 + 14444/1331*x^2*z + 11526/1331*x*z^2 + 24389/1331*y + 17810/1331*z^3 : -24/11*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:17 UTC",
+            "verified": "2026-09-18 17:37:39 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6435,12 +6566,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "Richelot partner #4 of the [2,2,2,8] family (fibers t = 2, 3, 5, 7)"
+          "note": "Richelot partner #4 of the [2,2,2,8] family (fibers t = 2, 3, 5, 7)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.24"
         }
       }
     },
@@ -6503,7 +6638,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 - 2*T^2 - 7*T + 49)",
-            "verified": "2026-09-17 13:52:28 UTC",
+            "verified": "2026-09-18 17:32:43 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6559,7 +6694,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "the geometric automorphism group has order 8 (5 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_3 = T^4 + 2*T^3 + 2*T^2 + 6*T + 9 is irreducible",
-            "verified": "2026-09-17 13:57:19 UTC",
+            "verified": "2026-09-18 17:37:40 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6592,12 +6727,14 @@
             "Najman2026",
             "Elkies2024"
           ],
-          "note": "Elkies' 5-torsion chart with three rational Weierstrass points, slice (t, 2, 3); five exact fibers"
+          "note": "Elkies' 5-torsion chart with three rational Weierstrass points, slice (t, 2, 3); five exact fibers",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -6661,7 +6798,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 + 6*T^2 - 7*T + 49)",
-            "verified": "2026-09-17 13:52:28 UTC",
+            "verified": "2026-09-18 17:32:44 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6694,7 +6831,7 @@
             },
             "conductor": "450",
             "conductor_sort": 450,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 15 * 30 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '0', '1', '-19', '26'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 9,
             "lmfdb": {
               "label": "450.a.36450.1",
@@ -6716,7 +6853,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -x^3 + 2*x^2*z + y : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:20 UTC",
+            "verified": "2026-09-18 17:37:41 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6749,12 +6886,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the line a = (1−r)/4 in the M(12) chart"
+          "note": "the line a = (1−r)/4 in the M(12) chart",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.24"
         }
       }
     },
@@ -6818,7 +6959,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 - 4*T^3 + 6*T^2 - 68*T + 289)",
-            "verified": "2026-09-17 13:52:28 UTC",
+            "verified": "2026-09-18 17:32:44 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6873,7 +7014,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-182763)u + (31201254) over Q (the elliptic curve 294b2), (x,y) -> (p/q, y*hh/q^2) with p = 435*x^3 - 367/2*x^2 - 148*x + 509/2, q = x^3 - 7/6*x^2 - 4/3*x + 5/6, hh = 972*x^3 - 324*x^2 - 216*x - 216; degree-3 map to the elliptic curve 294b2 over Q [Genus2Torsion/verify_split_certificates.m, cover 13]",
-            "verified": "2026-09-17 13:57:22 UTC",
+            "verified": "2026-09-18 17:37:43 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -6904,12 +7045,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -6974,7 +7117,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 + T^3 + 5*T + 25)",
-            "verified": "2026-09-17 13:52:29 UTC",
+            "verified": "2026-09-18 17:32:45 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7008,7 +7151,7 @@
             },
             "conductor": "4608",
             "conductor_sort": 4608,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 48 * 96 for the elliptic curves ['0', '1', '0', '16', '180'] and ['0', '1', '0', '8', '8'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 13,
             "lmfdb": {
               "label": "4608.h.5",
@@ -7030,7 +7173,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:23 UTC",
+            "verified": "2026-09-18 17:37:45 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7061,12 +7204,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7131,7 +7276,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + T^3 + 16*T^2 + 17*T + 289)",
-            "verified": "2026-09-17 13:52:30 UTC",
+            "verified": "2026-09-18 17:32:46 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7186,7 +7331,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-10395)u + (31158) over Q (the elliptic curve 114a1), (x,y) -> (p/q, y*hh/q^2) with p = 147*x^3 - 615/2*x^2 + 156*x - 1656, q = x^3 - 13/2*x^2 + 4*x + 24, hh = 648*x^3 - 648*x^2 - 15552*x + 31104; degree-3 map to the elliptic curve 114a1 over Q [Genus2Torsion/verify_split_certificates.m, cover 15]",
-            "verified": "2026-09-17 13:57:25 UTC",
+            "verified": "2026-09-18 17:37:46 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7217,12 +7362,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7287,7 +7434,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 - 3*T^3 + 4*T^2 - 51*T + 289)",
-            "verified": "2026-09-17 13:52:31 UTC",
+            "verified": "2026-09-18 17:32:46 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7342,7 +7489,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-125739)u + (62756262) over Q (the elliptic curve 462f1), (x,y) -> (p/q, y*hh/q^2) with p = -501*x^3 + 2505/2*x^2 - 654*x + 4509/2, q = x^3 - 5/2*x^2 + 10*x - 9/2, hh = 26136*x^2 - 58806*x + 58806; degree-3 map to the elliptic curve 462f1 over Q [Genus2Torsion/verify_split_certificates.m, cover 14]",
-            "verified": "2026-09-17 13:57:26 UTC",
+            "verified": "2026-09-18 17:37:48 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7375,12 +7522,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the extra-2 loci of the contact-5 + 4-torsion family"
+          "note": "the extra-2 loci of the contact-5 + 4-torsion family",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7445,7 +7594,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 5 is strict (χ = T^4 + 2*T^3 + 6*T^2 + 10*T + 25)",
-            "verified": "2026-09-17 13:52:31 UTC",
+            "verified": "2026-09-18 17:32:47 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7480,12 +7629,14 @@
             "BNSS2026",
             "Najman2026"
           ],
-          "note": "every known example has real multiplication (by ℤ[φ], φ² = φ + 1); two curves are known"
+          "note": "every known example has real multiplication (by ℤ[φ], φ² = φ + 1); two curves are known",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7528,7 +7679,7 @@
             },
             "conductor": "1440",
             "conductor_sort": 1440,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 30 * 48 for the elliptic curves ['1', '0', '1', '-19', '26'] and ['0', '1', '0', '-24', '36'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 12,
             "lmfdb": {
               "label": "1440.c.2",
@@ -7550,7 +7701,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:28 UTC",
+            "verified": "2026-09-18 17:37:49 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7581,14 +7732,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -7653,7 +7806,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 23 is strict (χ = T^4 + 3*T^3 + 22*T^2 + 69*T + 529)",
-            "verified": "2026-09-17 13:52:32 UTC",
+            "verified": "2026-09-18 17:32:48 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7685,12 +7838,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7755,7 +7910,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + T^3 - 2*T^2 + 7*T + 49)",
-            "verified": "2026-09-17 13:52:33 UTC",
+            "verified": "2026-09-18 17:32:48 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7787,12 +7942,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7836,7 +7993,7 @@
             },
             "conductor": "13068",
             "conductor_sort": 13068,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 66 * 198 for the elliptic curves ['1', '0', '0', '-45', '81'] and ['1', '-1', '1', '-725', '7661'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 16,
             "lmfdb": {
               "label": "13068.f.2",
@@ -7858,7 +8015,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -x^3 + 2*x^2*z + y : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:29 UTC",
+            "verified": "2026-09-18 17:37:51 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7889,12 +8046,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -7938,7 +8097,7 @@
             },
             "conductor": "18900",
             "conductor_sort": 18900,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 210 * 90 for the elliptic curves ['1', '0', '0', '-1070', '7812'] and ['1', '-1', '1', '-3002', '63929'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 21,
             "lmfdb": {
               "label": "18900.e.2",
@@ -7960,7 +8119,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:30 UTC",
+            "verified": "2026-09-18 17:37:53 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -7991,12 +8150,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -8059,7 +8220,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 19 is strict (χ = T^4 - 4*T^3 + 15*T^2 - 76*T + 361)",
-            "verified": "2026-09-17 13:52:34 UTC",
+            "verified": "2026-09-18 17:32:49 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8090,7 +8251,7 @@
             },
             "conductor": "361",
             "conductor_sort": 361,
-            "conductor_note": "taken from the LMFDB label 361.a.1 (Magma did not finish the conductor computation within the time limit)",
+            "conductor_note": "N(E1) N(E2) = 19 * 19 for the elliptic curves ['0', '1', '1', '-9', '-15'] and ['0', '1', '1', '1', '0'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 15,
             "lmfdb": {
               "label": "361.a.1",
@@ -8112,7 +8273,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - z : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:31 UTC",
+            "verified": "2026-09-18 17:37:54 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8146,12 +8307,16 @@
             "Najman2026",
             "BFT2014"
           ],
-          "note": "Bruin–Flynn–Testa 2014, Theorem 6: rational parametrization of the pointwise A(3,3) chart"
+          "note": "Bruin–Flynn–Testa 2014, Theorem 6: rational parametrization of the pointwise A(3,3) chart",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [3,9], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "3.9"
         }
       }
     },
@@ -8216,7 +8381,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 13 is strict (χ = T^4 + 2*T^3 + 26*T + 169)",
-            "verified": "2026-09-17 13:52:35 UTC",
+            "verified": "2026-09-18 17:32:50 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8249,7 +8414,7 @@
             },
             "conductor": "196",
             "conductor_sort": 196,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 14 * 14 for the elliptic curves ['1', '0', '1', '-36', '-70'] and ['1', '0', '1', '-11', '12'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 20,
             "lmfdb": {
               "label": "196.a.4",
@@ -8271,7 +8436,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 3/2*z : 5/72*x^3 + 5/8*x^2*z + 15/8*x*z^2 + 27/8*y + 15/8*z^3 : -5/6*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:33 UTC",
+            "verified": "2026-09-18 17:37:55 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8302,12 +8467,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [3,12], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "3.12"
         }
       }
     },
@@ -8373,7 +8542,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 - 3*T^3 + 7*T^2 - 51*T + 289)",
-            "verified": "2026-09-17 13:52:36 UTC",
+            "verified": "2026-09-18 17:32:51 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8406,7 +8575,7 @@
             },
             "conductor": "2916",
             "conductor_sort": 2916,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 54 * 54 for the elliptic curves ['1', '-1', '1', '-14', '29'] and ['1', '-1', '0', '-3', '3'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 9,
             "lmfdb": {
               "label": "2916.e.2",
@@ -8428,7 +8597,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + z : x^2*z + x*z^2 + y + z^3 : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:35 UTC",
+            "verified": "2026-09-18 17:37:57 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8461,14 +8630,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "only isolated examples; (2,2)-isogenies cannot create 3-power structure"
+          "note": "only isolated examples; (2,2)-isogenies cannot create 3-power structure",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -8512,7 +8683,7 @@
             },
             "conductor": "2700",
             "conductor_sort": 2700,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 90 * 30 for the elliptic curves ['1', '-1', '1', '-122', '1721'] and ['1', '0', '1', '1', '2'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 14,
             "lmfdb": {
               "label": "2700.c.1",
@@ -8534,7 +8705,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + z : x^2*z + x*z^2 + y + z^3 : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:36 UTC",
+            "verified": "2026-09-18 17:37:59 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8565,14 +8736,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -8616,7 +8789,7 @@
             },
             "conductor": "8100",
             "conductor_sort": 8100,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 90 * 90 for the elliptic curves ['1', '-1', '1', '-122', '1721'] and ['1', '-1', '1', '-8', '11'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 15,
             "lmfdb": {
               "label": "8100.e.4",
@@ -8638,7 +8811,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - z : x^2*z - x*z^2 + y + z^3 : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:37 UTC",
+            "verified": "2026-09-18 17:38:00 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8669,12 +8842,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -8739,7 +8914,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 31 is strict (χ = T^4 + 4*T^3 - 2*T^2 + 124*T + 961)",
-            "verified": "2026-09-17 13:52:37 UTC",
+            "verified": "2026-09-18 17:32:52 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8770,9 +8945,9 @@
               "h": "x^2",
               "text": "y^2 + x^2*y = 7*x^6 - 2*x^4 - 7*x^2 + 448"
             },
-            "conductor": "230400",
-            "conductor_sort": 230400,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "225",
+            "conductor_sort": 225,
+            "conductor_note": "Magma's genus-2 Conductor gave 230400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 15 * 15 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '1', '1', '-5', '2'] to whose product J is isogenous over Q",
             "discriminant_digits": 29,
             "lmfdb": {
               "label": "225.a.6",
@@ -8794,7 +8969,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : 1/16*x^2*z - 1/8*x*z^2 + 1/8*y : 1/4*x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:39 UTC",
+            "verified": "2026-09-18 17:38:01 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8827,12 +9002,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "Richelot partner #5 of the [2,2,4,4] family (fibers s = 3, 5, 7, 9, 11)"
+          "note": "Richelot partner #5 of the [2,2,4,4] family (fibers s = 3, 5, 7, 9, 11)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -8896,7 +9075,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 53 is strict (χ = T^4 - 4*T^3 + 62*T^2 - 212*T + 2809)",
-            "verified": "2026-09-17 13:52:38 UTC",
+            "verified": "2026-09-18 17:32:53 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8925,9 +9104,9 @@
               "h": "x^3 + x",
               "text": "y^2 + (x^3 + x)*y = -5*x^3 - 5*x^2 - 15*x"
             },
-            "conductor": "230400",
-            "conductor_sort": 230400,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "225",
+            "conductor_sort": 225,
+            "conductor_note": "Magma's genus-2 Conductor gave 230400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 15 * 15 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '1', '1', '-10', '-10'] to whose product J is isogenous over Q",
             "discriminant_digits": 13,
             "lmfdb": {
               "label": "225.a.2",
@@ -8949,7 +9128,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 3*z : 3*x^3 + 5*x^2*z - 7*x*z^2 + 8*y + 15*z^3 : -x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:40 UTC",
+            "verified": "2026-09-18 17:38:03 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -8982,12 +9161,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the tangent-cover family"
+          "note": "the tangent-cover family",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -9031,7 +9214,7 @@
             },
             "conductor": "8100",
             "conductor_sort": 8100,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 90 * 90 for the elliptic curves ['1', '-1', '1', '13', '-61'] and ['1', '-1', '1', '-122', '1721'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 16,
             "lmfdb": {
               "label": "8100.j.1",
@@ -9053,7 +9236,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -x^3 + 2*x^2*z + y : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:41 UTC",
+            "verified": "2026-09-18 17:38:04 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9084,12 +9267,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -9132,7 +9317,7 @@
             },
             "conductor": "50400",
             "conductor_sort": 50400,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 210 * 240 for the elliptic curves ['1', '0', '0', '-1070', '7812'] and ['0', '1', '0', '-160', '308'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 20,
             "lmfdb": {
               "label": "50400.dj.1",
@@ -9154,7 +9339,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:43 UTC",
+            "verified": "2026-09-18 17:38:06 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9185,12 +9370,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -9232,9 +9419,9 @@
               "h": "x^3 + x^2 + x + 1",
               "text": "y^2 + (x^3 + x^2 + x + 1)*y = x^5 + 2*x^4 + 5*x^3 + 2*x^2 + 4*x - 2"
             },
-            "conductor": "123904",
-            "conductor_sort": 123904,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "121",
+            "conductor_sort": 121,
+            "conductor_note": "Magma's genus-2 Conductor gave 123904 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 11 * 11 for the elliptic curves ['0', '-1', '1', '0', '0'] and ['0', '-1', '1', '-10', '-20'] to whose product J is isogenous over Q",
             "discriminant_digits": 12,
             "lmfdb": {
               "label": "121.a.1",
@@ -9256,7 +9443,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 3*z : 2*x^3 - 2*x^2*z - 10*x*z^2 + 8*y - 6*z^3 : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:44 UTC",
+            "verified": "2026-09-18 17:38:07 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9287,12 +9474,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [5,10], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "5.10"
         }
       }
     },
@@ -9336,7 +9527,7 @@
             },
             "conductor": "85500",
             "conductor_sort": 85500,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 150 * 570 for the elliptic curves ['1', '0', '0', '-28', '272'] and ['1', '0', '0', '9335', '-737383'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 27,
             "lmfdb": {
               "label": "85500.cj.1",
@@ -9358,7 +9549,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -2/9*x^3 + 4/3*x^2*z + y : 1/3*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:46 UTC",
+            "verified": "2026-09-18 17:38:09 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9389,14 +9580,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface",
+          "inherited_from": null
         }
       }
     },
@@ -9458,7 +9651,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 37 is strict (χ = T^4 - 10*T^3 + 54*T^2 - 370*T + 1369)",
-            "verified": "2026-09-17 13:52:39 UTC",
+            "verified": "2026-09-18 17:32:54 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9491,7 +9684,7 @@
             },
             "conductor": "196",
             "conductor_sort": 196,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 14 * 14 for the elliptic curves ['1', '0', '1', '-1', '0'] and ['1', '0', '1', '4', '-6'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 8,
             "lmfdb": {
               "label": "196.a.21952.1",
@@ -9513,7 +9706,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:47 UTC",
+            "verified": "2026-09-18 17:38:11 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9546,14 +9739,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the contact-6 × contact-6 locus is positive-dimensional with one certified point, but no rational curve on it is known"
+          "note": "the contact-6 × contact-6 locus is positive-dimensional with one certified point, but no rational curve on it is known",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -9595,7 +9790,7 @@
             },
             "conductor": "18900",
             "conductor_sort": 18900,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 630 * 30 for the elliptic curves ['1', '-1', '1', '-197573', '33848381'] and ['1', '0', '1', '-19', '26'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 46,
             "lmfdb": {
               "label": "",
@@ -9617,7 +9812,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + z : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:49 UTC",
+            "verified": "2026-09-18 17:38:12 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9648,14 +9843,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface",
+          "inherited_from": null
         }
       }
     },
@@ -9695,9 +9892,9 @@
               "h": "0",
               "text": "y^2 = x^6 + 3025*x^4 + 3232987*x^2 + 869675859"
             },
-            "conductor": "56580108189696",
-            "conductor_sort": 56580108189696,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "53958996",
+            "conductor_sort": 53958996,
+            "conductor_note": "Magma's genus-2 Conductor gave 56580108189696 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 98826 * 546 for the elliptic curves ['1', '0', '0', '-3333198596', '103601868154512'] and ['1', '0', '0', '714', '-82908'] to whose product J is isogenous over Q",
             "discriminant_digits": 54,
             "lmfdb": {
               "label": "",
@@ -9719,7 +9916,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:52 UTC",
+            "verified": "2026-09-18 17:38:14 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9750,14 +9947,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)"
+          "note": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)",
+          "inherited_from": null
         }
       }
     },
@@ -9799,7 +9998,7 @@
             },
             "conductor": "17243100",
             "conductor_sort": 17243100,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 82110 * 210 for the elliptic curves ['1', '0', '0', '-49423080', '130545230400'] and ['1', '0', '0', '-1070', '7812'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 72,
             "lmfdb": {
               "label": "",
@@ -9821,7 +10020,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 8151/925*z : 7000755497/791453125*y : -344/925*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:53 UTC",
+            "verified": "2026-09-18 17:38:16 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9852,14 +10051,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -9923,7 +10124,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 11 is strict (χ = T^4 + 4*T^3 + 6*T^2 + 44*T + 121)",
-            "verified": "2026-09-17 13:52:39 UTC",
+            "verified": "2026-09-18 17:32:55 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -9952,9 +10153,9 @@
               "h": "x",
               "text": "y^2 + x*y = 16*x^5 + 129*x^4 + 268*x^3 + 32*x^2 + x"
             },
-            "conductor": "322560",
-            "conductor_sort": 322560,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "315",
+            "conductor_sort": 315,
+            "conductor_note": "Magma's genus-2 Conductor gave 322560 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 15 * 21 for the elliptic curves ['1', '1', '1', '-135', '-660'] and ['1', '0', '0', '-49', '-136'] to whose product J is isogenous over Q",
             "discriminant_digits": 9,
             "lmfdb": {
               "label": "315.a.2",
@@ -9976,7 +10177,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : -8*x^2*z + 4*x*z^2 + 8*y : 4*x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 13:57:55 UTC",
+            "verified": "2026-09-18 17:38:17 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10009,12 +10210,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = x(x−1)(x−2)(x² + x + t); t = 3 (p = 29)"
+          "note": "y² = x(x−1)(x−2)(x² + x + t); t = 3 (p = 29)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.24"
         }
       }
     },
@@ -10079,7 +10284,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 23 is strict (χ = T^4 - 2*T^3 + 30*T^2 - 46*T + 529)",
-            "verified": "2026-09-17 13:52:40 UTC",
+            "verified": "2026-09-18 17:32:55 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10113,7 +10318,7 @@
             },
             "conductor": "225",
             "conductor_sort": 225,
-            "conductor_note": "taken from the LMFDB label 225.a.3 (Magma did not finish the conductor computation within the time limit)",
+            "conductor_note": "N(E1) N(E2) = 15 * 15 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '1', '1', '-10', '-10'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 19,
             "lmfdb": {
               "label": "225.a.3",
@@ -10135,7 +10340,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 5/7*z : 53/343*x^3 + 243/343*x^2*z - 73/343*x*z^2 + 512/343*y + 185/343*z^3 : -3/7*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:26 UTC",
+            "verified": "2026-09-18 17:40:49 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10168,12 +10373,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = x(x+4)(x+9)(x² + (2t+1)x + t²); seven exact fibers"
+          "note": "y² = x(x+4)(x+9)(x² + (2t+1)x + t²); seven exact fibers",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.24"
         }
       }
     },
@@ -10238,7 +10447,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 29 is strict (χ = T^4 - 8*T^3 + 46*T^2 - 232*T + 841)",
-            "verified": "2026-09-17 13:52:40 UTC",
+            "verified": "2026-09-18 17:32:56 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10293,7 +10502,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-1728)u + (19008) over Q (the elliptic curve 20a2), (x,y) -> (p/q, y*hh/q^2) with p = 12*x^3 + 60*x^2 + 12*x + 36, q = x^3 + 5*x^2 + 4*x, hh = 216*x^2 + 648*x + 216; degree-3 map to the elliptic curve 20a2 over Q [Genus2Torsion/verify_split_certificates.m, cover 4]",
-            "verified": "2026-09-17 14:00:27 UTC",
+            "verified": "2026-09-18 17:40:50 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10322,14 +10531,20 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "Najman2026"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.6"
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.24"
         }
       }
     },
@@ -10394,7 +10609,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 + 2*T^3 - 2*T^2 + 14*T + 49)",
-            "verified": "2026-09-17 13:52:41 UTC",
+            "verified": "2026-09-18 17:32:57 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10425,7 +10640,7 @@
             },
             "conductor": "360",
             "conductor_sort": 360,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 24 * 15 for the elliptic curves ['0', '-1', '0', '-4', '4'] and ['1', '1', '1', '-5', '2'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 5,
             "lmfdb": {
               "label": "360.a.6480.1",
@@ -10447,7 +10662,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : 2*x^3 + 4*x^2*z + 3*x*z^2 + y + z^3 : -2*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:29 UTC",
+            "verified": "2026-09-18 17:40:51 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10476,16 +10691,21 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "family",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "BNSS2026"
           ],
-          "note": "no positive-dimensional construction found (a second-level halving criterion was designed but not derived)"
+          "note": "inherited: the group is a subgroup of [2,2,2,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.8"
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.24"
         }
       }
     },
@@ -10550,7 +10770,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + 2*T^3 - 6*T^2 + 34*T + 289)",
-            "verified": "2026-09-17 13:52:42 UTC",
+            "verified": "2026-09-18 17:32:57 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10605,7 +10825,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (0)u^2 + (-58347)u + (3954150) over Q (the elliptic curve 66c1), (x,y) -> (p/q, y*hh/q^2) with p = 3*x^3 - 209/2*x^2 - 4*x + 643/2, q = x^3 + 7/6*x^2 - 4/3*x - 5/6, hh = 324*x^3 + 972*x^2 + 432*x - 432; degree-3 map to the elliptic curve 66c1 over Q [Genus2Torsion/verify_split_certificates.m, cover 16]",
-            "verified": "2026-09-17 14:00:31 UTC",
+            "verified": "2026-09-18 17:40:53 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10639,12 +10859,14 @@
             "Najman2026",
             "Elkies2024"
           ],
-          "note": "Elkies' 5-torsion chart with four rational Weierstrass points on the nodal cubic a³ + 5a² − (5/9)ab² + (1/3)b² = 0 (parametrised by τ); five exact fibers"
+          "note": "Elkies' 5-torsion chart with four rational Weierstrass points on the nodal cubic a³ + 5a² − (5/9)ab² + (1/3)b² = 0 (parametrised by τ); five exact fibers",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -10710,7 +10932,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 19 is strict (χ = T^4 + 2*T^3 - 18*T^2 + 38*T + 361)",
-            "verified": "2026-09-17 13:52:42 UTC",
+            "verified": "2026-09-18 17:32:58 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10742,7 +10964,7 @@
             },
             "conductor": "1350",
             "conductor_sort": 1350,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 15 * 90 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '-1', '1', '-3002', '63929'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 8,
             "lmfdb": {
               "label": "1350.d.1",
@@ -10764,7 +10986,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -6*x^3 + 4*x^2*z + y : 3*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:33 UTC",
+            "verified": "2026-09-18 17:40:54 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10793,14 +11015,23 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "ThisSite",
+            "Audit2026",
+            "BNSS2026",
+            "Choudhry"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,2,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.12"
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.24"
         }
       }
     },
@@ -10865,7 +11096,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 - 4*T^3 + 6*T^2 - 68*T + 289)",
-            "verified": "2026-09-17 13:52:43 UTC",
+            "verified": "2026-09-18 17:32:59 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -10897,12 +11128,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -10947,7 +11180,7 @@
             },
             "conductor": "69300",
             "conductor_sort": 69300,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 210 * 330 for the elliptic curves ['1', '0', '0', '-1070', '7812'] and ['1', '0', '0', '-75', '225'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 17,
             "lmfdb": {
               "label": "69300.bu.1",
@@ -10969,7 +11202,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + z : x^2*z + x*z^2 + y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:35 UTC",
+            "verified": "2026-09-18 17:40:56 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11000,12 +11233,14 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -11069,7 +11304,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 71 is strict (χ = T^4 + 2*T^3 + 14*T^2 + 142*T + 5041)",
-            "verified": "2026-09-17 13:52:45 UTC",
+            "verified": "2026-09-18 17:33:00 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11104,12 +11339,14 @@
             "BNSS2026",
             "Najman2026"
           ],
-          "note": "the displayed curve is the unique one in its one-parameter family (BNSS2026, §'A second order-80 group', by Chabauty); Elkies' family gives infinitely many Jacobians of order 80, but with group [2,2,2,10]"
+          "note": "the displayed curve is the unique one in its one-parameter family (BNSS2026, §'A second order-80 group', by Chabauty); Elkies' family gives infinitely many Jacobians of order 80, but with group [2,2,2,10]",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -11151,7 +11388,7 @@
             },
             "conductor": "206076647700",
             "conductor_sort": 206076647700,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 825330 * 249690 for the elliptic curves ['1', '0', '0', '-1362433018010', '-603188297771007900'] and ['1', '0', '0', '-673039570', '-5895575919100'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 117,
             "lmfdb": {
               "label": "",
@@ -11173,7 +11410,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 3969/2500*z : 1826585575424/962966796875*y : 52316/156025*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:36 UTC",
+            "verified": "2026-09-18 17:40:58 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11204,14 +11441,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic curve",
+          "inherited_from": null
         }
       }
     },
@@ -11276,7 +11515,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 37 is strict (χ = T^4 - 4*T^3 - 2*T^2 - 148*T + 1369)",
-            "verified": "2026-09-17 13:52:45 UTC",
+            "verified": "2026-09-18 17:33:01 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11305,9 +11544,9 @@
               "h": "x",
               "text": "y^2 + x*y = -240*x^5 + 161*x^4 + 40*x^2 + 15*x"
             },
-            "conductor": "230400",
-            "conductor_sort": 230400,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "225",
+            "conductor_sort": 225,
+            "conductor_note": "Magma's genus-2 Conductor gave 230400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(E1) N(E2) = 15 * 15 for the elliptic curves ['1', '1', '1', '-5', '2'] and ['1', '1', '1', '-5', '2'] to whose product J is isogenous over Q",
             "discriminant_digits": 21,
             "lmfdb": {
               "label": "225.a.5",
@@ -11329,7 +11568,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 15/16*z : -225/32*x^3 + 1455/512*x^2*z + 8001/1024*x*z^2 + 4913/512*y + 15/32*z^3 : -15/4*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:37 UTC",
+            "verified": "2026-09-18 17:40:59 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11358,16 +11597,21 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "family",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "BNSS2026"
           ],
-          "note": "no positive-dimensional construction found; provably not a Richelot image of the [2,2,4,4] family"
+          "note": "inherited: the group is a subgroup of [2,2,4,4], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.4.4"
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,4,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.4.8"
         }
       }
     },
@@ -11430,7 +11674,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 47 is strict (χ = T^4 - 4*T^3 + 30*T^2 - 188*T + 2209)",
-            "verified": "2026-09-17 13:52:46 UTC",
+            "verified": "2026-09-18 17:33:02 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11462,7 +11706,7 @@
             },
             "conductor": "573300",
             "conductor_sort": 573300,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 2730 * 210 for the elliptic curves ['1', '1', '1', '-349440', '79361697'] and ['1', '0', '0', '-1070', '7812'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 34,
             "lmfdb": {
               "label": "573300.ir.1",
@@ -11484,7 +11728,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 63/19*z : 24/361*x^3 + 11892/6859*x^2*z + 50058/6859*x*z^2 + 50653/6859*y + 2583/361*z^3 : -16/19*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:39 UTC",
+            "verified": "2026-09-18 17:41:01 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11517,14 +11761,16 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "one verified exact hit on the one-split tangent subcover; the genus/rank of its base curve was not computed"
+          "note": "one verified exact hit on the one-split tangent subcover; the genus/rank of its base curve was not computed",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "inherited_from": null
         }
       }
     },
@@ -11569,7 +11815,7 @@
             },
             "conductor": "132300",
             "conductor_sort": 132300,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 210 * 630 for the elliptic curves ['1', '0', '1', '-578', '2756'] and ['1', '-1', '0', '-24309', '1426113'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 23,
             "lmfdb": {
               "label": "132300.eo.2",
@@ -11591,7 +11837,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : -x^3 + 2*x^2*z + y : x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:40 UTC",
+            "verified": "2026-09-18 17:41:02 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11622,14 +11868,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface",
+          "inherited_from": null
         }
       }
     },
@@ -11695,12 +11943,62 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 31 is strict (χ = T^4 + 4*T^3 - 2*T^2 + 124*T + 961)",
-            "verified": "2026-09-17 13:52:47 UTC",
+            "verified": "2026-09-18 17:33:02 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
         ],
-        "qsplit": [],
+        "qsplit": [
+          {
+            "id": "2.2.2.2.c",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "-196",
+              "0",
+              "249",
+              "0",
+              "-54",
+              "0",
+              "1"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "x^6 - 54*x^4 + 249*x^2 - 196",
+              "h": "0",
+              "text": "y^2 = x^6 - 54*x^4 + 249*x^2 - 196"
+            },
+            "conductor": "28350",
+            "conductor_sort": 28350,
+            "conductor_note": "N(E1) N(E2) = 630 * 45 for the elliptic curves ['1', '-1', '0', '-630', '4900'] and ['1', '-1', '0', '-45', '-104'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+            "discriminant_digits": 26,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-196%2C0%2C249%2C0%2C-54%2C0%2C1%5D%2C%5B0%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "audit of 2026-09-18",
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "notes/audit_2026-09-18/report.md, item 4: y^2 = (x^2-1)(x^2-4)(x^2-49), split over Q by the involution x -> -x, elliptic quotients of conductors 45 and 630",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
+            "verified": "2026-09-18 17:41:21 UTC",
+            "submitted": "2026-09-18",
+            "source_kind": "file"
+          }
+        ],
         "gsplit": [],
         "undecided": [
           {
@@ -11750,7 +12048,7 @@
             "new_group": false,
             "new_for_class": false,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma)",
-            "verified": "2026-09-17 14:00:49 UTC",
+            "verified": "2026-09-18 17:41:11 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11758,7 +12056,7 @@
       },
       "first_dated": {
         "simple": null,
-        "qsplit": null,
+        "qsplit": 0,
         "gsplit": null,
         "undecided": null
       },
@@ -11770,23 +12068,27 @@
       },
       "known": {
         "simple": true,
-        "qsplit": false,
+        "qsplit": true,
         "gsplit": false,
         "undecided": true
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
           "sources": [
             "Najman2026"
           ],
-          "note": "y² = x(x−1)(x−2)(x−3)(x−t); t = 5 (p = 11)"
+          "note": "y² = x(x−1)(x−2)(x−3)(x−t); t = 5 (p = 11)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.4.8"
         }
       }
     },
@@ -11852,7 +12154,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 - 4*T^3 + 6*T^2 - 68*T + 289)",
-            "verified": "2026-09-17 13:52:48 UTC",
+            "verified": "2026-09-18 17:33:03 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11884,7 +12186,7 @@
             },
             "conductor": "882",
             "conductor_sort": 882,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 42 * 21 for the elliptic curves ['1', '1', '1', '-84', '261'] and ['1', '0', '0', '-4', '-1'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 16,
             "lmfdb": {
               "label": "882.a.5",
@@ -11906,7 +12208,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 3/4*z : 3/32*x^3 + 3/8*x^2*z + 1/2*x*z^2 + 125/64*y + 21/32*z^3 : -3/4*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:50 UTC",
+            "verified": "2026-09-18 17:41:12 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -11940,12 +12242,16 @@
             "Najman2026",
             "BNSS2026"
           ],
-          "note": "y² = x(x+1)(x+4)(x+9)(x+t²) (the square-branch chart of BNSS2026, Lemma 2.3); t = 5 (p = 59)"
+          "note": "y² = x(x+1)(x+4)(x+9)(x+t²) (the square-branch chart of BNSS2026, Lemma 2.3); t = 5 (p = 59)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.4.8"
         }
       }
     },
@@ -12011,7 +12317,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 23 is strict (χ = T^4 - 4*T^3 - 2*T^2 - 92*T + 529)",
-            "verified": "2026-09-17 13:52:48 UTC",
+            "verified": "2026-09-18 17:33:04 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12043,7 +12349,7 @@
             },
             "conductor": "900",
             "conductor_sort": 900,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 30 * 30 for the elliptic curves ['1', '0', '1', '-334', '-2368'] and ['1', '0', '1', '-19', '26'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 19,
             "lmfdb": {
               "label": "900.b.2",
@@ -12065,7 +12371,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x - 3/5*z : -12/25*x^3 + 2/25*x^2*z + 38/25*x*z^2 + 343/125*y + 12/25*z^3 : -8/5*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:51 UTC",
+            "verified": "2026-09-18 17:41:14 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12098,12 +12404,14 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the M(2,2,2,6) chart: y² = x(x+2s²−sn)(x+2s²+sm−2sn−mn)(x+2s²+sm−sn−mn)(2x−mn)(2x+4s²−4sn−mn); five exact fibers"
+          "note": "the M(2,2,2,6) chart: y² = x(x+2s²−sn)(x+2s²+sm−2sn−mn)(x+2s²+sm−sn−mn)(2x−mn)(2x+4s²−4sn−mn); five exact fibers",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -12167,7 +12475,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 41 is strict (χ = T^4 + 4*T^3 + 6*T^2 + 164*T + 1681)",
-            "verified": "2026-09-17 13:52:49 UTC",
+            "verified": "2026-09-18 17:33:04 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12200,7 +12508,7 @@
             },
             "conductor": "4410",
             "conductor_sort": 4410,
-            "conductor_note": "",
+            "conductor_note": "N(E1) N(E2) = 210 * 21 for the elliptic curves ['1', '0', '0', '-1070', '7812'] and ['1', '0', '0', '-4', '-1'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 15,
             "lmfdb": {
               "label": "4410.d.2",
@@ -12222,7 +12530,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + z : x^2*z + x*z^2 + y : -z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:52 UTC",
+            "verified": "2026-09-18 17:41:15 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12256,12 +12564,16 @@
             "Najman2026",
             "BNSS2026"
           ],
-          "note": "the rational curve on the K3 surface M(2,2,2,8) of BNSS2026, Theorem 4.7: (a,b,c,d) = (4t²(t+1)/(t²+t+1)², t/(t+1), −1, −t) on y² = x(x+a²)(x+b²)(x+c²)(x+d²); t = 2 (p = 31)"
+          "note": "the rational curve on the K3 surface M(2,2,2,8) of BNSS2026, Theorem 4.7: (a,b,c,d) = (4t²(t+1)/(t²+t+1)², t/(t+1), −1, −t) on y² = x(x+a²)(x+b²)(x+c²)(x+d²); t = 2 (p = 31)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.4.8"
         }
       }
     },
@@ -12326,7 +12638,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 11 is strict (χ = T^4 - 4*T^3 + 6*T^2 - 44*T + 121)",
-            "verified": "2026-09-17 13:52:50 UTC",
+            "verified": "2026-09-18 17:33:05 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12361,12 +12673,14 @@
             "Najman2026",
             "Elkies2024"
           ],
-          "note": "Elkies 2024: the Clebsch–Klein full-level-2 plus 5-torsion two-parameter family"
+          "note": "Elkies 2024: the Clebsch–Klein full-level-2 plus 5-torsion two-parameter family",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -12431,7 +12745,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 71 is strict (χ = T^4 - 8*T^3 + 46*T^2 - 568*T + 5041)",
-            "verified": "2026-09-17 13:52:56 UTC",
+            "verified": "2026-09-18 17:33:12 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12461,17 +12775,21 @@
       "n_curves": 1,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
+            "ThisSite",
+            "Audit2026",
             "BNSS2026",
             "Choudhry"
           ],
-          "note": "BNSS2026, Theorem 3.3: infinitely many genus-2 Jacobians over ℚ with J(ℚ)tors ⊇ [2,2,2,12], from a genus-1 curve of rank 1 on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴; whether infinitely many of them have torsion exactly [2,2,2,12] and are geometrically simple is open"
+          "note": "BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18)",
+          "inherited_from": null
         },
         "split": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         }
       }
     },
@@ -12535,7 +12853,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "geometrically simple: Frobenius at p = 37 is strict (χ = T^4 - 4*T^3 - 2*T^2 - 148*T + 1369)",
-            "verified": "2026-09-17 13:52:56 UTC",
+            "verified": "2026-09-18 17:33:12 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12567,7 +12885,7 @@
             },
             "conductor": "485100",
             "conductor_sort": 485100,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 210 * 2310 for the elliptic curves ['1', '1', '1', '-70', '-205'] and ['1', '1', '1', '-5575730', '5065104575'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 33,
             "lmfdb": {
               "label": "",
@@ -12589,7 +12907,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : 8/289*x^3 + 16/17*x^2*z + y : -1/17*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:54 UTC",
+            "verified": "2026-09-18 17:41:17 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12623,12 +12941,16 @@
             "Najman2026",
             "BNSS2026"
           ],
-          "note": "the rational curve in A(2,2,4,4) of BNSS2026, Proposition 4.4; s = 3 (p = 37)"
+          "note": "the rational curve in A(2,2,4,4) of BNSS2026, Proposition 4.4; s = 3 (p = 37)",
+          "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": ""
+          "grade": "family",
+          "sources": [
+            "HLP2000"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
+          "inherited_from": "2.2.4.8"
         }
       }
     },
@@ -12671,7 +12993,7 @@
             },
             "conductor": "1584038398842900",
             "conductor_sort": 1584038398842900,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(E1) N(E2) = 19291662390 * 82110 for the elliptic curves ['1', '0', '0', '-165217981313574668360', '595398048987105563975142081600'] and ['1', '0', '0', '-49423080', '130545230400'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 233,
             "lmfdb": {
               "label": "",
@@ -12693,7 +13015,7 @@
             "new_group": true,
             "new_for_class": true,
             "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 708122250000*z : 20867285562291/925975574812709*y : -1/769516682841*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
-            "verified": "2026-09-17 14:00:56 UTC",
+            "verified": "2026-09-18 17:41:19 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -12724,14 +13046,16 @@
         "simple": {
           "grade": "open",
           "sources": [],
-          "note": ""
+          "note": "",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
             "HLP2000"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface"
+          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a positive rank elliptic surface",
+          "inherited_from": null
         }
       }
     }

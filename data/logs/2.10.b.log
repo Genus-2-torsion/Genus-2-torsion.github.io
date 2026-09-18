@@ -1,8 +1,9 @@
 [0.000000 s] start
 [0.000000 s] curve: y^2 + (x^3 + x^2 + x + 1) y = -x^5 - x^4 - x^3 - x^2; working model y^2 = x^6 - 2*x^5 - x^4 - x^2 + 2*x + 1
-[0.160000 s] J(Q)_tors = [ 2, 10 ] (0.150000 s)
-[0.880000 s] no strict prime below 500 (94 admissible primes, 33 with reducible chi)
-[0.880000 s] Q-simple: chi irreducible at p = 3
-[0.900000 s] geometrically split: the geometric automorphism group has order 8 (5 involutions), so the curve is bielliptic over Qbar
-[0.900000 s] class: gsplit
-[1.00000 s] VERIFY_DONE
+[0.0300000 s] #J(Q)_tors divides gcd #J(F_p) = 20 (p = [ 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101 ])
+[0.190000 s] J(Q)_tors = [ 2, 10 ] (TorsionSubgroup, 0.160000 s)
+[1.00000 s] no strict prime below 500 (94 admissible primes, 33 with reducible chi)
+[1.00000 s] Q-simple: chi irreducible at p = 3
+[1.03000 s] geometrically split: the geometric automorphism group has order 8 (5 involutions), so the curve is bielliptic over Qbar
+[1.03000 s] class: gsplit
+[1.13000 s] VERIFY_DONE

@@ -1,4 +1,5 @@
 :root {
+  --page-width: 1480px;   /* tables need the room on a desktop; paragraphs stay at 68ch */
   color-scheme: light dark;
   --bg: #f8f9fc;
   --fg: #1b2030;
@@ -91,7 +92,7 @@ header.site {
   color: var(--header-fg);
 }
 header.site .inner {
-  max-width: 980px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
@@ -115,7 +116,7 @@ header.site nav a:hover, header.site nav a[aria-current="page"] { color: #fff; }
 
 /* ------------------------------------------------------------------ main */
 main {
-  max-width: 980px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 1.75rem 1.5rem 3rem;
 }
@@ -271,7 +272,7 @@ table.data tr.group th {
 table.data tr.row-link { cursor: pointer; }
 table.data tr.row-link:hover td { background: var(--panel-soft); }
 table.data tr.dim td { color: var(--muted); }
-table.data td.poly { font-family: var(--math); font-size: 0.95rem; min-width: 13rem; max-width: 26rem; overflow-wrap: anywhere; }
+table.data td.poly { font-family: var(--math); font-size: 0.95rem; min-width: 13rem; max-width: 44rem; overflow-wrap: anywhere; }
 table.data td.num { white-space: nowrap; }
 table.data a.id { font-family: var(--mono); font-size: 0.9rem; text-decoration: none; }
 table.data a.id:hover { text-decoration: underline; }
@@ -385,7 +386,7 @@ ol.steps li, ul.plain li { margin: 0.35rem 0; }
 
 /* ------------------------------------------------------------------ footer */
 footer.site {
-  max-width: 980px;
+  max-width: var(--page-width);
   margin: 0 auto;
   padding: 1.5rem 1.5rem 2.5rem;
   border-top: 1px solid var(--border);
@@ -418,7 +419,7 @@ table.data td.grp { white-space: nowrap; }
 table.data td.grp a.g { font-family: var(--math); font-size: 1.05rem; text-decoration: none; color: var(--fg); }
 table.data td.grp a.g:hover { color: var(--accent); text-decoration: underline; }
 table.data td.grp .lbl { display: block; font-size: 0.78rem; color: var(--muted); }
-table.data td.ex { min-width: 15rem; max-width: 28rem; }
+table.data td.ex { min-width: 15rem; max-width: 40rem; }
 table.data td.ex .eq { font-family: var(--math); font-size: 0.95rem; text-align: left; margin: 0; overflow-wrap: anywhere; color: var(--fg); }
 table.data td.ex .eq a { color: inherit; text-decoration: none; }
 table.data td.ex .eq a:hover { color: var(--accent); }

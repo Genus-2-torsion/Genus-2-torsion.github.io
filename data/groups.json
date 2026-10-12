@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12 15:04 UTC",
+  "generated": "2026-10-12 17:58 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {

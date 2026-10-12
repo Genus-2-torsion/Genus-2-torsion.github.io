@@ -1,0 +1,8 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x^3) y = 4*x^6 + 45*x^5 + 121*x^4 + 75*x^3 + 295*x^2 - 264*x + 428; working model y^2 = 17*x^6 + 180*x^5 + 484*x^4 + 300*x^3 + 1180*x^2 - 1056*x + 1712
+[0.0400000 s] #J(Q)_tors divides gcd #J(F_p) = 25 (p = [ 5, 13, 19, 23, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131 ])
+[0.0500000 s] J(Q)_tors = [ 5, 5 ]: the 2 submitted generators are independent torsion points generating a group of order 25 = gcd #J(F_p)
+[0.0500000 s] geometrically simple: strict prime 23, chi = T^4 + 2*T^3 - 3*T^2 + 46*T + 529
+[0.0500000 s] Q-simple: chi irreducible at p = 23
+[0.100000 s] class: simple
+[0.210000 s] VERIFY_DONE

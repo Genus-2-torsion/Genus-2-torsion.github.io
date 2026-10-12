@@ -1,0 +1,35 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "4*x^6 + 45*x^5 + 121*x^4 + 75*x^3 + 295*x^2 - 264*x + 428",
+  "h": "x^3",
+  "group": [
+    5,
+    5
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x^2 + 3/4*x - 53/2",
+      "-1569/16*x - 4113/8",
+      2
+    ],
+    [
+      "x^2 + 36*x - 28",
+      "4674*x - 3516",
+      2
+    ]
+  ],
+  "submitter": "Filip Najman",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "reference": "new",
+  "discoverer": "F. Najman",
+  "year": 2026,
+  "notes": "First example of [5,5] = Z/5 x Z/5 for a geometrically simple genus 2 Jacobian over Q (the smallest group listed as unrealized in arXiv:2608.28543, Open Question 1).\n\nOutput of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [5,5]; gcd of #J(F_p) over 25 good primes = 25 (sharp); strict prime 23, chi = x^4 + 2*x^3 - 3*x^2 + 46*x + 529. Also strict at p = 17 (chi = x^4 - x^3 + 3*x^2 - 17*x + 289), with 25 strict primes below 200. Independent PARI/GP check (hyperellcharpoly): 25 | #J(F_p) for all 71 good odd p < 400, gcd 25. No RM over Q (the squarefree part of a1^2 - 4(a2 - 2p) varies with p), so End_Q(J) = Z. #Aut(C) = 2.\n\nConductor: the odd part is 623007 = 3^2*7*11*29*31 (PARI genus2red; Neron component groups [5,5] at 3, [5] at 7 and 29). At 2, Magma's Conductor gives 2^11 (N = 1275918336) using Ogg's formula, which Magma does not guarantee here because v_2(disc) = 17.\n\nHow it was found: by a sieve over Elkies' universal 5-torsion family y^2 + H y = Q^2 Q', with Q = q2 x^2 + q1 x + q0, Q' = Q - x and H = Q' - x Q. The sieve kept parameters with Frobenius polynomial = (x-1)^2 (x-p)^2 mod 5 and 25 | #J(F_p) at good primes. The curve is at (q0,q1,q2) = (21/50, -23/50, 3/25). All other [5,5] points the sieve found at that height are bielliptic and split over Q.",
+  "date": "2026-10-12",
+  "source": {
+    "kind": "issue",
+    "number": 1,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/1"
+  }
+}

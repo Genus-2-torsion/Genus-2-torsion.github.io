@@ -1,0 +1,236 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "5.5.b",
+  "group": [
+    5,
+    5
+  ],
+  "group_key": "5.5",
+  "group_bracket": "[5,5]",
+  "order": 25,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "428",
+      "-264",
+      "295",
+      "75",
+      "121",
+      "45",
+      "4"
+    ],
+    "h": [
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "f_str": "4*x^6 + 45*x^5 + 121*x^4 + 75*x^3 + 295*x^2 - 264*x + 428",
+    "h_str": "x^3",
+    "g": [
+      "1712",
+      "-1056",
+      "1180",
+      "300",
+      "484",
+      "180",
+      "17"
+    ],
+    "g_str": "17*x^6 + 180*x^5 + 484*x^4 + 300*x^3 + 1180*x^2 - 1056*x + 1712",
+    "g_scale": "1",
+    "discriminant": "-3726636128673542353918623744",
+    "discriminant_digits": 28,
+    "igusa_clebsch": [
+      "-23186080",
+      "20319452591104",
+      "-134251546924553146368",
+      "-3726636128673542353918623744"
+    ],
+    "g2_invariants": [
+      "9736363260162577365625/43317870228864",
+      "34800018676231693841125/9401375190316032",
+      "-2236111235794087285825/38330323338295296"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "428",
+        "-264",
+        "295",
+        "75",
+        "121",
+        "45",
+        "4"
+      ],
+      "h": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-909823273601939051249664",
+    "minimal_discriminant_factored": "-1 * 2^17 * 3^10 * 7^5 * 11 * 29^5 * 31",
+    "conductor": "1275918336",
+    "conductor_factored": "2^11 * 3^2 * 7 * 11 * 29 * 31",
+    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B428%2C-264%2C295%2C75%2C121%2C45%2C4%5D%2C%5B0%2C0%2C0%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      5,
+      5
+    ],
+    "order": 25,
+    "generators": [
+      {
+        "order": 5,
+        "mumford": [
+          "x^2 + 3/4*x - 53/2",
+          "-1569/16*x - 4113/8",
+          "2"
+        ]
+      },
+      {
+        "order": 5,
+        "mumford": [
+          "x^2 + 36*x - 28",
+          "4674*x - 3516",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 2,
+    "point_count_gcd": 25,
+    "point_count_primes": [
+      5,
+      13,
+      19,
+      23,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131
+    ],
+    "claimed": [
+      5,
+      5
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 23,
+    "chi": "T^4 + 2*T^3 - 3*T^2 + 46*T + 529",
+    "primes_tried_below": 500,
+    "admissible_primes": 4,
+    "reducible_chi": 3
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 23,
+    "chi": "T^4 + 2*T^3 - 3*T^2 + 46*T + 529"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 39,
+      "reducible_chi": 14
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "F. Najman",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "new",
+  "sources": [],
+  "rm": false,
+  "notes": "First example of [5,5] = Z/5 x Z/5 for a geometrically simple genus 2 Jacobian over Q (the smallest group listed as unrealized in arXiv:2608.28543, Open Question 1).\n\nOutput of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [5,5]; gcd of #J(F_p) over 25 good primes = 25 (sharp); strict prime 23, chi = x^4 + 2*x^3 - 3*x^2 + 46*x + 529. Also strict at p = 17 (chi = x^4 - x^3 + 3*x^2 - 17*x + 289), with 25 strict primes below 200. Independent PARI/GP check (hyperellcharpoly): 25 | #J(F_p) for all 71 good odd p < 400, gcd 25. No RM over Q (the squarefree part of a1^2 - 4(a2 - 2p) varies with p), so End_Q(J) = Z. #Aut(C) = 2.\n\nConductor: the odd part is 623007 = 3^2*7*11*29*31 (PARI genus2red; Neron component groups [5,5] at 3, [5] at 7 and 29). At 2, Magma's Conductor gives 2^11 (N = 1275918336) using Ogg's formula, which Magma does not guarantee here because v_2(disc) = 17.\n\nHow it was found: by a sieve over Elkies' universal 5-torsion family y^2 + H y = Q^2 Q', with Q = q2 x^2 + q1 x + q0, Q' = Q - x and H = Q' - x Q. The sieve kept parameters with Frobenius polynomial = (x-1)^2 (x-p)^2 mod 5 and 25 | #J(F_p) at good primes. The curve is at (q0,q1,q2) = (21/50, -23/50, 3/25). All other [5,5] points the sieve found at that height are bielliptic and split over Q.",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "428",
+      "-264",
+      "295",
+      "75",
+      "121",
+      "45",
+      "4"
+    ],
+    "h": [
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      5,
+      5
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "issue",
+    "number": 1,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/1"
+  },
+  "dates": {
+    "submitted": "2026-10-12",
+    "verified": "2026-10-12 15:04:49 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.200000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/5.5.b.log",
+    "conductor_log": "data/logs/5.5.b.conductor.log",
+    "conductor_cputime_seconds": 0.44
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18 17:41 UTC",
+  "generated": "2026-10-12 15:04 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -26,11 +26,11 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 95,
-  "n_curves": 151,
-  "n_certified": 150,
+  "n_curves": 152,
+  "n_certified": 151,
   "n_verified": 1,
   "n_groups_by_class": {
-    "simple": 73,
+    "simple": 74,
     "qsplit": 69,
     "gsplit": 8,
     "undecided": 1
@@ -9392,7 +9392,60 @@
       "order": 25,
       "rank": 2,
       "classes": {
-        "simple": [],
+        "simple": [
+          {
+            "id": "5.5.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "428",
+              "-264",
+              "295",
+              "75",
+              "121",
+              "45",
+              "4"
+            ],
+            "h": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "4*x^6 + 45*x^5 + 121*x^4 + 75*x^3 + 295*x^2 - 264*x + 428",
+              "h": "x^3",
+              "text": "y^2 + x^3*y = 4*x^6 + 45*x^5 + 121*x^4 + 75*x^3 + 295*x^2 - 264*x + 428"
+            },
+            "conductor": "1275918336",
+            "conductor_sort": 1275918336,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 28,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B428%2C-264%2C295%2C75%2C121%2C45%2C4%5D%2C%5B0%2C0%2C0%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 23 is strict (χ = T^4 + 2*T^3 - 3*T^2 + 46*T + 529)",
+            "verified": "2026-10-12 15:04:49 UTC",
+            "submitted": "2026-10-12",
+            "source_kind": "issue"
+          }
+        ],
         "qsplit": [
           {
             "id": "5.5.a",
@@ -9452,7 +9505,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -9464,12 +9517,12 @@
         "undecided": null
       },
       "known": {
-        "simple": false,
+        "simple": true,
         "qsplit": true,
         "gsplit": false,
         "undecided": false
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "open",

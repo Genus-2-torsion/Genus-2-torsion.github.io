@@ -1,0 +1,35 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "229392*x^6 + 475068*x^5 - 1261612*x^4 - 7653746*x^3 + 231383*x^2 + 10277505*x + 19644345",
+  "h": "x^2 + x",
+  "group": [
+    3,
+    12
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x^2 + 291/11*x - 126/11",
+      "-78907308/121*x + 34796076/121",
+      2
+    ],
+    [
+      "x^2 - 65/46*x - 189/46",
+      "3164229/1058*x - 5336373/1058",
+      2
+    ]
+  ],
+  "submitter": "Filip Najman",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "reference": "new",
+  "discoverer": "F. Najman",
+  "year": 2026,
+  "notes": "First example of [3,12] = Z/3 x Z/12 for a geometrically simple genus 2 Jacobian over Q (previously known only for Jacobians split over Q).\n\nOutput of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [3,12]; gcd of #J(F_p) over 25 good primes = 36 (sharp); strict prime 37, chi = x^4 - x^3 - 37*x + 1369. Independent PARI/GP check (hyperellcharpoly): gcd 36 over 71 good odd p < 400, 16 strict primes below 200. Sage/Lombardo: End(J_Qbar) = Z. #Aut(C) = 2. Conductor: the odd part is 3^5*5^2*7^2*17*47 (PARI genus2red); the exponent at 2 is not computed.\n\nHow it was found: by a sieve over the order-12 chart A(12), written in coordinates (A,z,B) = (p^2, z, p*r). The sieve kept points with Frobenius polynomial = (x-1)^2 (x-p)^2 mod 3 and 36 | #J(F_p) at good primes. The curve is at (A,z,B) = (-2/3, 5, -10). On the line (A,B) = (-2/3,-10), the extra rational 3-torsion point exists exactly over the rational points of the rank-1 elliptic curve w^2 = (3z^2+25)(3z^2+121) (conductor 990). This gives infinitely many geometrically simple Jacobians with torsion exactly [3,12] (a computational proof, independently re-verified). Six further non-isomorphic simple [3,12] curves were found.",
+  "date": "2026-10-12",
+  "source": {
+    "kind": "issue",
+    "number": 2,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/2"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12 17:58 UTC",
+  "generated": "2026-10-12 18:02 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -26,11 +26,11 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 95,
-  "n_curves": 152,
-  "n_certified": 151,
+  "n_curves": 153,
+  "n_certified": 152,
   "n_verified": 1,
   "n_groups_by_class": {
-    "simple": 74,
+    "simple": 75,
     "qsplit": 69,
     "gsplit": 8,
     "undecided": 1
@@ -8654,7 +8654,59 @@
       "order": 36,
       "rank": 2,
       "classes": {
-        "simple": [],
+        "simple": [
+          {
+            "id": "3.12.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "19644345",
+              "10277505",
+              "231383",
+              "-7653746",
+              "-1261612",
+              "475068",
+              "229392"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "229392*x^6 + 475068*x^5 - 1261612*x^4 - 7653746*x^3 + 231383*x^2 + 10277505*x + 19644345",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 229392*x^6 + 475068*x^5 - 1261612*x^4 - 7653746*x^3 + 231383*x^2 + 10277505*x + 19644345"
+            },
+            "conductor": "951369300",
+            "conductor_sort": 951369300,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 75,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B19644345%2C10277505%2C231383%2C-7653746%2C-1261612%2C475068%2C229392%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 37 is strict (χ = T^4 - T^3 - 37*T + 1369)",
+            "verified": "2026-10-12 18:02:46 UTC",
+            "submitted": "2026-10-12",
+            "source_kind": "issue"
+          }
+        ],
         "qsplit": [
           {
             "id": "3.12.a",
@@ -8714,7 +8766,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -8726,12 +8778,12 @@
         "undecided": null
       },
       "known": {
-        "simple": false,
+        "simple": true,
         "qsplit": true,
         "gsplit": false,
         "undecided": false
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "open",

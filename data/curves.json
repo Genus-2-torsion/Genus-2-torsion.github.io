@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12 17:58 UTC",
+  "generated": "2026-10-12 18:02 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -24358,6 +24358,239 @@
         "log": "data/logs/3.12.a.log",
         "conductor_log": "data/logs/3.12.a.conductor.log",
         "conductor_cputime_seconds": 0.27
+      }
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "3.12.b",
+      "group": [
+        3,
+        12
+      ],
+      "group_key": "3.12",
+      "group_bracket": "[3,12]",
+      "order": 36,
+      "class": "simple",
+      "class_certified": true,
+      "class_text": "geometrically simple",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "19644345",
+          "10277505",
+          "231383",
+          "-7653746",
+          "-1261612",
+          "475068",
+          "229392"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "f_str": "229392*x^6 + 475068*x^5 - 1261612*x^4 - 7653746*x^3 + 231383*x^2 + 10277505*x + 19644345",
+        "h_str": "x^2 + x",
+        "g": [
+          "78577380",
+          "41110020",
+          "925533",
+          "-30614982",
+          "-5046447",
+          "1900272",
+          "917568"
+        ],
+        "g_str": "917568*x^6 + 1900272*x^5 - 5046447*x^4 - 30614982*x^3 + 925533*x^2 + 41110020*x + 78577380",
+        "g_scale": "1",
+        "discriminant": "332044463560069793610209703254495927995614958486684933354547835637334016000",
+        "discriminant_digits": 75,
+        "igusa_clebsch": [
+          "-8480819472962040",
+          "23262720633981746097751718090244",
+          "-46660782332481755543015380104303346690374147576",
+          "332044463560069793610209703254495927995614958486684933354547835637334016000"
+        ],
+        "g2_invariants": [
+          "-4381385463391418683164385967030389024203833744475/265282498890203682024091290083429809884495872",
+          "11908852197936782766234702306598590163615837629/4145039045159432531626426407553590779445248",
+          "30948504982057486410937110471854831614431849/323831175403080666533314563090124279644160"
+        ],
+        "rational_weierstrass_points": 0,
+        "minimal_model": {
+          "f": [
+            "19644345",
+            "10277505",
+            "231383",
+            "-7653746",
+            "-1261612",
+            "475068",
+            "229392"
+          ],
+          "h": [
+            "0",
+            "1",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "81065542861345164455617603333617169920804433224288313807262655184896000",
+        "minimal_discriminant_factored": "2^45 * 3^14 * 5^3 * 7^4 * 17 * 47^3 * 59^22",
+        "conductor": "951369300",
+        "conductor_factored": "2^2 * 3^5 * 5^2 * 7^2 * 17 * 47",
+        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "",
+        "kind": "jump",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B19644345%2C10277505%2C231383%2C-7653746%2C-1261612%2C475068%2C229392%5D%2C%5B0%2C1%2C1%5D%5D",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          3,
+          12
+        ],
+        "order": 36,
+        "generators": [
+          {
+            "order": 3,
+            "mumford": [
+              "x^2 + 291/11*x - 126/11",
+              "-78907308/121*x + 34796076/121",
+              "2"
+            ]
+          },
+          {
+            "order": 12,
+            "mumford": [
+              "x^2 - 65/46*x - 189/46",
+              "3164229/1058*x - 5336373/1058",
+              "2"
+            ]
+          }
+        ],
+        "method": "generators",
+        "generators_note": "",
+        "generators_submitted": 2,
+        "point_count_gcd": 36,
+        "point_count_primes": [
+          11,
+          13,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          53,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107,
+          109,
+          113,
+          127,
+          131
+        ],
+        "claimed": [
+          3,
+          12
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": true,
+        "strict_prime": 37,
+        "chi": "T^4 - T^3 - 37*T + 1369",
+        "primes_tried_below": 500,
+        "admissible_primes": 7,
+        "reducible_chi": 6
+      },
+      "q_simple": {
+        "certified": true,
+        "prime": 37,
+        "chi": "T^4 - T^3 - 37*T + 1369"
+      },
+      "split": {
+        "geometrically_split": false,
+        "split_over_Q": false,
+        "certificate": null,
+        "isogenous_product": null,
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": false,
+          "primes_checked": 39,
+          "reducible_chi": 21
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "F. Najman",
+        "year": 2026,
+        "historical": false
+      },
+      "reference": "new",
+      "sources": [],
+      "rm": false,
+      "notes": "First example of [3,12] = Z/3 x Z/12 for a geometrically simple genus 2 Jacobian over Q (previously known only for Jacobians split over Q).\n\nOutput of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [3,12]; gcd of #J(F_p) over 25 good primes = 36 (sharp); strict prime 37, chi = x^4 - x^3 - 37*x + 1369. Independent PARI/GP check (hyperellcharpoly): gcd 36 over 71 good odd p < 400, 16 strict primes below 200. Sage/Lombardo: End(J_Qbar) = Z. #Aut(C) = 2. Conductor: the odd part is 3^5*5^2*7^2*17*47 (PARI genus2red); the exponent at 2 is not computed.\n\nHow it was found: by a sieve over the order-12 chart A(12), written in coordinates (A,z,B) = (p^2, z, p*r). The sieve kept points with Frobenius polynomial = (x-1)^2 (x-p)^2 mod 3 and 36 | #J(F_p) at good primes. The curve is at (A,z,B) = (-2/3, 5, -10). On the line (A,B) = (-2/3,-10), the extra rational 3-torsion point exists exactly over the rational points of the rank-1 elliptic curve w^2 = (3z^2+25)(3z^2+121) (conductor 990). This gives infinitely many geometrically simple Jacobians with torsion exactly [3,12] (a computational proof, independently re-verified). Six further non-isomorphic simple [3,12] curves were found.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "19644345",
+          "10277505",
+          "231383",
+          "-7653746",
+          "-1261612",
+          "475068",
+          "229392"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          3,
+          12
+        ],
+        "claimed_class": "simple",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "issue",
+        "number": 2,
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/2"
+      },
+      "dates": {
+        "submitted": "2026-10-12",
+        "verified": "2026-10-12 18:02:46 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.29-4",
+        "cputime_seconds": "0.270000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/3.12.b.log",
+        "conductor_log": "data/logs/3.12.b.conductor.log",
+        "conductor_cputime_seconds": 218.13
       }
     },
     {

@@ -1,0 +1,8 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x^2 + x) y = 229392*x^6 + 475068*x^5 - 1261612*x^4 - 7653746*x^3 + 231383*x^2 + 10277505*x + 19644345; working model y^2 = 917568*x^6 + 1900272*x^5 - 5046447*x^4 - 30614982*x^3 + 925533*x^2 + 41110020*x + 78577380
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 36 (p = [ 11, 13, 19, 23, 29, 31, 37, 41, 43, 53, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131 ])
+[0.0600000 s] J(Q)_tors = [ 3, 12 ]: the 2 submitted generators are independent torsion points generating a group of order 36 = gcd #J(F_p)
+[0.0600000 s] geometrically simple: strict prime 37, chi = T^4 - T^3 - 37*T + 1369
+[0.0600000 s] Q-simple: chi irreducible at p = 37
+[0.120000 s] class: simple
+[0.270000 s] VERIFY_DONE

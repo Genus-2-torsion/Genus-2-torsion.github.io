@@ -1,0 +1,9 @@
+over Q(E): lambda^4 f - l u^3 = G^2 with G a cubic in Q(E)[x], so Q3 = [u, G] has order 3
+over Q(z): P12 has order exactly 12
+z = 5: <P12, Q3> = Z/12 x Z/3; the fiber is census curve 3.12.b
+E = [ 1, -1, 0, -675, -6075 ], conductor 990, rank 1, P = (-15 : 30 : 1); ord(P mod 37) = 10, ord(P mod 41) = 22
+sanity: z(110 P) has 4925 digits and is = 5 mod 37 and mod 41
+p = 37: #J(F_p) = 1332, chi = X^4 - X^3 - 37*X + 1369 (strict)
+p = 41: #J(F_p) = 1980, chi = X^4 + 6*X^3 + 46*X^2 + 246*X + 1681 (strict)
+gcd(#J(F_37), #J(F_41)) = 36 = #[3,12]; G2-invariants at z = 5 and z = 13/21 differ
+FAMILY_312_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [3,12]

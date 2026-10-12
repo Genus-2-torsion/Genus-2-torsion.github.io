@@ -80,9 +80,11 @@ class KnowledgeTests(unittest.TestCase):
                 t1.append(group_key(ast.literal_eval(line.split("|")[0])))
         self.assertEqual(len(t1), 73)
         recorded = set(knowledge._SIMPLE_EXACT) | set(knowledge._SIMPLE_FAMILY) | set(knowledge._SIMPLE_OPEN_NOTES)
-        self.assertTrue(recorded <= set(t1), recorded - set(t1))
-        # 39 of the record, minus [15] (containment only), plus the trivial group and [2,2,2,12] (certified here)
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 40)
+        # groups first realized for simple Jacobians after the paper, with a family certified here
+        after_paper = {"3.12"}
+        self.assertTrue(recorded <= set(t1) | after_paper, recorded - set(t1) - after_paper)
+        # 39 of the record, minus [15] (containment only), plus the trivial group, [2,2,2,12] and [3,12] (certified here)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 41)
         self.assertEqual(len(knowledge._SIMPLE_FAMILY), 4)   # [13], [17], [19], [15]
         self.assertEqual(knowledge.infinite_record("simple", "15")["grade"], "family")
         self.assertEqual(knowledge.infinite_record("simple", "2.2.2.12")["grade"], "exact")

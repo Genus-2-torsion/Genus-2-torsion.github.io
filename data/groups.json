@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12 18:02 UTC",
+  "generated": "2026-10-12 18:09 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,9 +38,9 @@
   "n_groups_any_split": 77,
   "n_infinite": {
     "simple": {
-      "exact": 40,
-      "family": 9,
-      "open": 46
+      "exact": 41,
+      "family": 10,
+      "open": 44
     },
     "split": {
       "exact": 0,
@@ -8465,10 +8465,12 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
-          "inherited_from": null
+          "grade": "family",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "inherited: the group is a subgroup of [3,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "3.12"
         },
         "split": {
           "grade": "family",
@@ -8786,9 +8788,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the line (A,B) = (−2/3, −10) of the order-12 chart A(12) in coordinates (A,z,B) = (p², z, pr): the curves C_z have a rational class of order 12, and over the function field of E: w² = (3z²+25)(3z²+121) (conductor 990, rank 1, P = (−15, 30) on the minimal model) a second, independent rational 3-torsion class. For R = 110m·P the curve C_{z(R)} has the same reduction as 3.12.b (z = 5) at 37 and 41, so its torsion divides gcd(#J(𝔽₃₇), #J(𝔽₄₁)) = gcd(1332, 1980) = 36 = #[3,12], and its Frobenius at 37 is strict; the G2-invariants at z = 5 and z = 13/21 differ (family_312_certificate.log)",
           "inherited_from": null
         },
         "split": {

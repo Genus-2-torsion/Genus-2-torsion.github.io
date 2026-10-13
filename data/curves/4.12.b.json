@@ -1,0 +1,229 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "4.12.b",
+  "group": [
+    4,
+    12
+  ],
+  "group_key": "4.12",
+  "group_bracket": "[4,12]",
+  "order": 48,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "9",
+      "165",
+      "579",
+      "-1653",
+      "570",
+      "45"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "45*x^5 + 570*x^4 - 1653*x^3 + 579*x^2 + 165*x + 9",
+    "h_str": "x^2 + x",
+    "g": [
+      "36",
+      "660",
+      "2317",
+      "-6610",
+      "2281",
+      "180"
+    ],
+    "g_str": "180*x^5 + 2281*x^4 - 6610*x^3 + 2317*x^2 + 660*x + 36",
+    "g_scale": "1",
+    "discriminant": "9662005946592000000000",
+    "discriminant_digits": 22,
+    "igusa_clebsch": [
+      "182343368",
+      "687908192950564",
+      "35927588984325443563688",
+      "313048992669580800000000000"
+    ],
+    "g2_invariants": [
+      "6151767682137268581810194611794108601/76427976725971875000000",
+      "28225879153202209451898660474157/12580736909625000000",
+      "439406929571516673890901587/6212709585000000"
+    ],
+    "rational_weierstrass_points": 2,
+    "minimal_model": {
+      "f": [
+        "9",
+        "165",
+        "579",
+        "-1653",
+        "570",
+        "45"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "76427976725971875000000",
+    "minimal_discriminant_factored": "2^6 * 3^12 * 5^11 * 17^4 * 19 * 29",
+    "conductor": "8430300",
+    "conductor_factored": "2^2 * 3^2 * 5^2 * 17 * 19 * 29",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B9%2C165%2C579%2C-1653%2C570%2C45%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      4,
+      12
+    ],
+    "order": 48,
+    "generators": [
+      {
+        "order": 4,
+        "mumford": [
+          "x^2 - 25/12*x - 1/4",
+          "-185/6*x - 5/2",
+          "2"
+        ]
+      },
+      {
+        "order": 12,
+        "mumford": [
+          "x^2 + 41/3*x + 4/3",
+          "-754/3*x - 74/3",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 2,
+    "point_count_gcd": 48,
+    "point_count_primes": [
+      7,
+      11,
+      13,
+      23,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127
+    ],
+    "claimed": [
+      4,
+      12
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 31,
+    "chi": "T^4 + 8*T^3 + 30*T^2 + 248*T + 961",
+    "primes_tried_below": 500,
+    "admissible_primes": 5,
+    "reducible_chi": 4
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 31,
+    "chi": "T^4 + 8*T^3 + 30*T^2 + 248*T + 961"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 40,
+      "reducible_chi": 24
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "F. Najman",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "new",
+  "sources": [],
+  "rm": false,
+  "notes": "First example of [4,12] = Z/4 x Z/12 for a geometrically simple genus 2 Jacobian over Q (previously known only for Jacobians split over Q).\n\nOutput of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [4,12]; gcd of #J(F_p) over 25 good primes = 48 (sharp); strict prime 31, chi = x^4 + 8*x^3 + 30*x^2 + 248*x + 961; conductor 8430300 = 2^2*3^2*5^2*17*19*29. Independent PARI/GP check (hyperellcharpoly): gcd 48 over 103 good odd p < 600, 10 strict primes below 200. Sage/Lombardo: End(J_Qbar) = Z. #Aut(C) = 2.\n\nHow it was found: by a search on the order-12 chart A(12), written in coordinates (A,z,B) = (p^2, z, p*r), restricted to the plane A = 1/4, where all three 2-torsion points are rational. The curve is at (A,z,B) = (1/4, 10/3, 127/36). Eleven further pairwise non-isomorphic simple [4,12] curves were found on the same plane; no infinite family is known.",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "9",
+      "165",
+      "579",
+      "-1653",
+      "570",
+      "45"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      4,
+      12
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "issue",
+    "number": 3,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/3"
+  },
+  "dates": {
+    "submitted": "2026-10-13",
+    "verified": "2026-10-13 08:22:34 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "0.200000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/4.12.b.log",
+    "conductor_log": "data/logs/4.12.b.conductor.log",
+    "conductor_cputime_seconds": 0.23
+  }
+}

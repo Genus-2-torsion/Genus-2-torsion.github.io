@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12 18:09 UTC",
+  "generated": "2026-10-13 08:22 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -26,11 +26,11 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 95,
-  "n_curves": 153,
-  "n_certified": 152,
+  "n_curves": 154,
+  "n_certified": 153,
   "n_verified": 1,
   "n_groups_by_class": {
-    "simple": 75,
+    "simple": 76,
     "qsplit": 69,
     "gsplit": 8,
     "undecided": 1
@@ -9241,7 +9241,58 @@
       "order": 48,
       "rank": 2,
       "classes": {
-        "simple": [],
+        "simple": [
+          {
+            "id": "4.12.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "9",
+              "165",
+              "579",
+              "-1653",
+              "570",
+              "45"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "45*x^5 + 570*x^4 - 1653*x^3 + 579*x^2 + 165*x + 9",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 45*x^5 + 570*x^4 - 1653*x^3 + 579*x^2 + 165*x + 9"
+            },
+            "conductor": "8430300",
+            "conductor_sort": 8430300,
+            "conductor_note": "",
+            "discriminant_digits": 22,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B9%2C165%2C579%2C-1653%2C570%2C45%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 31 is strict (χ = T^4 + 8*T^3 + 30*T^2 + 248*T + 961)",
+            "verified": "2026-10-13 08:22:34 UTC",
+            "submitted": "2026-10-13",
+            "source_kind": "issue"
+          }
+        ],
         "qsplit": [
           {
             "id": "4.12.a",
@@ -9301,7 +9352,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -9313,12 +9364,12 @@
         "undecided": null
       },
       "known": {
-        "simple": false,
+        "simple": true,
         "qsplit": true,
         "gsplit": false,
         "undecided": false
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "open",

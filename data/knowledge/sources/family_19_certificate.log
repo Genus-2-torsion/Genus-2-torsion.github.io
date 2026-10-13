@@ -1,0 +1,9 @@
+over Q(r): f = A^2 + lambda x(x-1)^4 = B^2 - x^5(x-1)
+over Q(r): D0 = [x, A(0)] has order 19, and D1 = -5 D0
+f_2 = -16*X^5 + 377/4*X^4 - 195*X^3 + 189*X^2 - 88*X + 16; f_r = f_2 mod 3 is squarefree of degree 5 for every 3-integral r = 2 mod 3
+p = 3: #J(F_3) = 19, chi = X^4 + X^3 + 5*X^2 + 3*X + 9 (strict)
+r = 2: TorsionSubgroup = [ 19 ]
+r = 5: TorsionSubgroup = [ 19 ]
+r = -1: the fiber is census curve 19.a
+G2-invariants at r = 2 and r = 5 differ
+FAMILY_19_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [19]

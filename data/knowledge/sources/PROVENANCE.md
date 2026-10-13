@@ -15,6 +15,7 @@ derives from them are in `pipeline/knowledge.py`, which cites them by key.
 | `family_2_certificate.log` | produced here by `pipeline/magma/family_2_certificate.m` | — | the certificate for [2] with the family `y² = x(x⁴ + x + t)` (replacing the record's `y² = x(x⁵ + x + t)`, which has no rational 2-torsion generically — see the errata below) |
 | `family_22212_certificate.log` | produced here by `pipeline/magma/family_22212_certificate.m` | — | exact infinitude of geometrically simple [2,2,2,12] from the paper's family, by the congruence argument of the audit of 2026-09-18 |
 | `family_312_certificate.log` | produced here by `pipeline/magma/family_312_certificate.m` | — | exact infinitude of geometrically simple [3,12]: the line (A,B) = (−2/3, −10) of the A(12) chart, the rank-1 elliptic curve w² = (3z²+25)(3z²+121) and the congruence argument at 37 and 41 (found 2026-10-12, torsion_jac/notes/m312_a12_sieve_2026_10_12.md) |
+| `family_19_certificate.log` | produced here by `pipeline/magma/family_19_certificate.m` | — | exact infinitude of geometrically simple [19]: the rational family F1 with a class of order 19 over ℚ(r) (census 19.a is r = −1), and the residue class r ≡ 2 (mod 3), where #J(𝔽₃) = 19 with a strict Frobenius (derived 2026-10-13, torsion_jac/notes/z38_2026_10_13.md) |
 
 ## Errata to the copied record (`census_infinity_record.md`, copied verbatim; found by the audit of 2026-09-18, see `notes/`)
 

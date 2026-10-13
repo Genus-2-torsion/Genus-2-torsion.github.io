@@ -53,7 +53,7 @@ SOURCES = {
         "short": "this site (Magma log)", "year": 2026,
         "cite": "Computation for this census on the Mordell workstation (Magma V2.29-4); script and log in the repository.",
         "url": "data/knowledge/sources/",
-        "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log (scripts in pipeline/magma/)",
+        "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log (scripts in pipeline/magma/)",
     },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
@@ -192,6 +192,7 @@ _SIMPLE_EXACT = {
     "4.8": ("the tangent-cover family", [RECORD]),
     "2.2.2.10": ("Elkies 2024: the Clebsch–Klein full-level-2 plus 5-torsion two-parameter family", [RECORD, "Elkies2024"]),
     "3.12": ("the line (A,B) = (−2/3, −10) of the order-12 chart A(12) in coordinates (A,z,B) = (p², z, pr): the curves C_z have a rational class of order 12, and over the function field of E: w² = (3z²+25)(3z²+121) (conductor 990, rank 1, P = (−15, 30) on the minimal model) a second, independent rational 3-torsion class. For R = 110m·P the curve C_{z(R)} has the same reduction as 3.12.b (z = 5) at 37 and 41, so its torsion divides gcd(#J(𝔽₃₇), #J(𝔽₄₁)) = gcd(1332, 1980) = 36 = #[3,12], and its Frobenius at 37 is strict; the G2-invariants at z = 5 and z = 13/21 differ (family_312_certificate.log)", ["ThisSite"]),
+    "19": ("the rational one-parameter family F1: y² = f_r, λ = −r⁴/(r−1)³, S = (λ(x−1)³ + x⁴)/(x−r), A = (S − x(x−1)(x−r))/2, f_r = A² + λx(x−1)⁴ = B² − x⁵(x−1) with B = A + x(x−1)(x−r); P₀ = (0, A(0)), P₁ = (1, A(1)) satisfy P₀ + 4P₁ ~ 5∞ and 5P₀ + P₁ ~ 6∞ (determinant −19), so [P₀ − ∞] has order 19 over ℚ(r). Census curve 19.a is the fiber r = −1. For every 3-integral r ≡ 2 (mod 3) the curve has the same good reduction at 3 as r = 2, with #J(𝔽₃) = 19 and a strict Frobenius, so its torsion is exactly [19] and its Jacobian is geometrically simple; the G2-invariants at r = 2 and r = 5 differ (family_19_certificate.log). Leprévost (1991) gave a family with a class of order 19; whether it is this one was not checked", ["ThisSite", "Leprevost1991"]),
     "2.2.2.12": ("BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18)", ["ThisSite", "Audit2026", "BNSS2026", "Choudhry"]),
 }
 
@@ -199,7 +200,6 @@ _SIMPLE_EXACT = {
 _SIMPLE_FAMILY = {
     "13": ("Leprévost 1991: a family of genus-2 curves with a rational divisor class of order 13 (formulas not transcribed into the record; exactness and geometric simplicity of infinitely many members not certified)", ["Leprevost1991a"]),
     "17": ("Leprévost 1991: a family with a rational divisor class of order 17 (not transcribed; open legs as for [13])", ["Leprevost1991"]),
-    "19": ("Leprévost 1991: a family with a rational divisor class of order 19 (not transcribed; open legs as for [13])", ["Leprevost1991"]),
     "15": ("the record lists [15] as inherited from the cyclic [30] family, which only gives torsion ⊇ [30] ⊇ [15]; no family with generic torsion exactly [15] is recorded (audit of 2026-09-18)", [RECORD, "Audit2026"]),
 }
 

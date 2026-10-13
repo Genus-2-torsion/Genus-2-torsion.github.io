@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13 08:22 UTC",
+  "generated": "2026-10-13 13:40 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,8 +38,8 @@
   "n_groups_any_split": 77,
   "n_infinite": {
     "simple": {
-      "exact": 41,
-      "family": 10,
+      "exact": 42,
+      "family": 9,
       "open": 44
     },
     "split": {
@@ -2942,11 +2942,12 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
+            "ThisSite",
             "Leprevost1991"
           ],
-          "note": "Leprévost 1991: a family with a rational divisor class of order 19 (not transcribed; open legs as for [13])",
+          "note": "the rational one-parameter family F1: y² = f_r, λ = −r⁴/(r−1)³, S = (λ(x−1)³ + x⁴)/(x−r), A = (S − x(x−1)(x−r))/2, f_r = A² + λx(x−1)⁴ = B² − x⁵(x−1) with B = A + x(x−1)(x−r); P₀ = (0, A(0)), P₁ = (1, A(1)) satisfy P₀ + 4P₁ ~ 5∞ and 5P₀ + P₁ ~ 6∞ (determinant −19), so [P₀ − ∞] has order 19 over ℚ(r). Census curve 19.a is the fiber r = −1. For every 3-integral r ≡ 2 (mod 3) the curve has the same good reduction at 3 as r = 2, with #J(𝔽₃) = 19 and a strict Frobenius, so its torsion is exactly [19] and its Jacobian is geometrically simple; the G2-invariants at r = 2 and r = 5 differ (family_19_certificate.log). Leprévost (1991) gave a family with a class of order 19; whether it is this one was not checked",
           "inherited_from": null
         },
         "split": {

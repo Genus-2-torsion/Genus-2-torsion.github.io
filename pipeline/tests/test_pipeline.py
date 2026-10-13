@@ -83,9 +83,10 @@ class KnowledgeTests(unittest.TestCase):
         # groups first realized for simple Jacobians after the paper, with a family certified here
         after_paper = {"3.12"}
         self.assertTrue(recorded <= set(t1) | after_paper, recorded - set(t1) - after_paper)
-        # 39 of the record, minus [15] (containment only), plus the trivial group, [2,2,2,12] and [3,12] (certified here)
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 41)
-        self.assertEqual(len(knowledge._SIMPLE_FAMILY), 4)   # [13], [17], [19], [15]
+        # 39 of the record, minus [15] (containment only), plus the trivial group, [2,2,2,12], [3,12] and [19] (certified here)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 42)
+        self.assertEqual(len(knowledge._SIMPLE_FAMILY), 3)   # [13], [17], [15]
+        self.assertEqual(knowledge.infinite_record("simple", "19")["grade"], "exact")
         self.assertEqual(knowledge.infinite_record("simple", "15")["grade"], "family")
         self.assertEqual(knowledge.infinite_record("simple", "2.2.2.12")["grade"], "exact")
         self.assertEqual(knowledge.infinite_record("simple", "16")["inherited_from"], "32")

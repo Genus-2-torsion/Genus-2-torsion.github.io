@@ -1,0 +1,8 @@
+Loading "pipeline/magma/family_cert_lib.m"
+f_t = t*x^5 + (1/4*t^2 - 3/2*t + 9/4)*x^4 + (3/2*t - 9/2)*x^3 + (-1/2*t + 15/4)*x^2 - 3/2*x + 1/4
+over Q(t): 5 D0 = -3 D0 + 3 D1 = 0 and D1 has order 15
+p = 3, t = 1 mod 3: reduction $.1^5 + $.1^4 + $.1^2 + 1 (squarefree, degree 5), #J(F_3) = 15, chi = X^4 + X^3 + X^2 + 3*X + 9 (strict)
+gcd of #J(F_p) = 15; #G = 15
+sanity: t = 4 has TorsionSubgroup [ 15 ]
+G2-invariants of the members [ 4, 7, -2, 1/4 ] are not all equal
+FAMILY_15_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [15]

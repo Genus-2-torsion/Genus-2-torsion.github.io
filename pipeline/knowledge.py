@@ -10,9 +10,11 @@ realised only finitely often, and no group is known not to be realised at all):
 
   exact   -- certified: infinitely many pairwise non-isomorphic curves whose Jacobian is in the
              class and has J(Q)_tors isomorphic to G *exactly*.  On the simple side this is the
-             L1-L3 standard of the lab record (a marked family over a rational base with an exact
-             fiber, one geometrically simple fiber, pairwise distinct G2-invariants); the
-             certificates are in that record.
+             L1-L3 standard of the lab record (a marked family with an exact fiber, one
+             geometrically simple fiber, pairwise distinct G2-invariants), over a rational base or
+             over a curve with infinitely many rational points (a rank-1 elliptic curve).  The
+             certificates are in that record, or in data/knowledge/sources/family_*_certificate.log
+             for the families certified on this site.
   family  -- a positive-dimensional family of curves with J(Q)_tors *containing* G is proven in
              the cited source (infinitely many members in moduli); exactness of the torsion, or
              the class, for infinitely many members is not certified.  A group inherits this grade
@@ -53,7 +55,7 @@ SOURCES = {
         "short": "this site (Magma log)", "year": 2026,
         "cite": "Computation for this census on the Mordell workstation (Magma V2.29-4); script and log in the repository.",
         "url": "data/knowledge/sources/",
-        "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log (scripts in pipeline/magma/)",
+        "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log, and the residue-class certificates family_13, _15, _16, _17, _24, _25, _26, _214, _216, _228, _2214_certificate.log of 2026-10-13 (scripts in pipeline/magma/, shared argument in family_cert_lib.m)",
     },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
@@ -189,32 +191,37 @@ _SIMPLE_EXACT = {
     "30": ("the simultaneous contact-5 / contact-6 family", [RECORD]),
     "32": ("the reconstructed Elkies order-32 component", [RECORD, "Elkies2002"]),
     "3.3": ("Bruin–Flynn–Testa 2014, Theorem 6: rational parametrization of the pointwise A(3,3) chart", [RECORD, "BFT2014"]),
-    "4.8": ("the tangent-cover family", [RECORD]),
     "2.2.2.10": ("Elkies 2024: the Clebsch–Klein full-level-2 plus 5-torsion two-parameter family", [RECORD, "Elkies2024"]),
     "3.12": ("the line (A,B) = (−2/3, −10) of the order-12 chart A(12) in coordinates (A,z,B) = (p², z, pr): the curves C_z have a rational class of order 12, and over the function field of E: w² = (3z²+25)(3z²+121) (conductor 990, rank 1, P = (−15, 30) on the minimal model) a second, independent rational 3-torsion class. For R = 110m·P the curve C_{z(R)} has the same reduction as 3.12.b (z = 5) at 37 and 41, so its torsion divides gcd(#J(𝔽₃₇), #J(𝔽₄₁)) = gcd(1332, 1980) = 36 = #[3,12], and its Frobenius at 37 is strict; the G2-invariants at z = 5 and z = 13/21 differ (family_312_certificate.log)", ["ThisSite"]),
     "19": ("the rational one-parameter family F1: y² = f_r, λ = −r⁴/(r−1)³, S = (λ(x−1)³ + x⁴)/(x−r), A = (S − x(x−1)(x−r))/2, f_r = A² + λx(x−1)⁴ = B² − x⁵(x−1) with B = A + x(x−1)(x−r); P₀ = (0, A(0)), P₁ = (1, A(1)) satisfy P₀ + 4P₁ ~ 5∞ and 5P₀ + P₁ ~ 6∞ (determinant −19), so [P₀ − ∞] has order 19 over ℚ(r). Census curve 19.a is the fiber r = −1. For every 3-integral r ≡ 2 (mod 3) the curve has the same good reduction at 3 as r = 2, with #J(𝔽₃) = 19 and a strict Frobenius, so its torsion is exactly [19] and its Jacobian is geometrically simple; the G2-invariants at r = 2 and r = 5 differ (family_19_certificate.log). Leprévost (1991) gave a family with a class of order 19; whether it is this one was not checked", ["ThisSite", "Leprevost1991"]),
+    "13": ("relation-lattice family: B − A = x(x−1)², B + A = (x−1)³ + tx², f_t = A² + tx³(x−1)² = B² − x(x−1)⁵; [P₁ − ∞] has order 13 over ℚ(t) (lattice (3,2),(1,5)). Every 3-integral t ≡ 1 (mod 3) has the reduction of t = 1 at 3: #J(𝔽₃) = 13, strict (family_13_certificate.log)", ["ThisSite"]),
+    "15": ("relation-lattice family: B − A = tx² + (x−1)³, B + A = x³, f_t = A² + tx⁵ = B² − x³(x−1)³; a class of order 15 over ℚ(t) (lattice (5,0),(−3,3)). Every 3-integral t ≡ 1 (mod 3) has #J(𝔽₃) = 15, strict (family_15_certificate.log). (The record's [15] was only inherited from [30], i.e. containment)", ["ThisSite"]),
+    "16": ("relation-lattice family: λ = −(t−1)²/t, B − A = (x−1)²(x−t), B + A = x²·(λx + (x−1)²)/(x−t), f_t = A² + λx³(x−1)² = B² − x²(x−1)⁴; a cyclic class of order 16 over ℚ(t) (lattice (3,2),(−2,4)). Every 3-integral t ≡ 2 (mod 3) has #J(𝔽₃) = 16, strict (family_16_certificate.log)", ["ThisSite"]),
+    "17": ("relation-lattice family: λ = −(t−1)³/t², B − A = (x−1)²(x−t), B + A = x·((x−1)³ + λx²)/(x−t), f_t = A² + λx³(x−1)² = B² − x(x−1)⁵; a class of order 17 over ℚ(t) (lattice (3,2),(−1,5)). Every 3-integral t ≡ 2 (mod 3) has #J(𝔽₃) = 17, strict (family_17_certificate.log)", ["ThisSite"]),
+    "24": ("relation-lattice family with lattice (4,1),(0,6): f = A² + λx⁴(x−1) = B² − (x−1)⁶, B − A = (x−1)g₁, B + A = g₂, g₁g₂ = λx⁴ + (x−1)⁵, over the rational curve of quadratics g₁ = x² − e₁x + e₂, e₁ = (−33t⁴+65t³−42t²+11t−1)/t⁴, e₂ = (−9t³+15t²−7t+1)/t³. Every t ≡ 9 (mod 35) has #J(𝔽₅) = 24 and #J(𝔽₇) = 48, strict at 7 (family_24_certificate.log)", ["ThisSite"]),
+    "25": ("relation-lattice family with lattice (5,0),(1,5): f = A² + λx⁵ = B² − x(x−1)⁵, B − A = xg₁, B + A = g₂, over the same rational curve of quadratics g₁ as for [24]. Every t ≡ 3 (mod 77) has #J(𝔽₇) = 50 and #J(𝔽₁₁) = 75, strict at 11 (family_25_certificate.log)", ["ThisSite"]),
+    "26": ("the rational curve s = (16/3)(1+3t)⁴/d(t), d(t) = 1 + 28t + 312t² + 1728t³ + 4752t⁴ + 5184t⁵, on the [13] family, where f_s has the rational root x₀ = −(1/3)(1+6t)⁶/d(t): Z/26 is marked over ℚ(t). Every t ≡ 17 (mod 35) has #J(𝔽₅) = 26 and #J(𝔽₇) = 78, strict at 7 (family_26_certificate.log)", ["ThisSite"]),
+    "2.16": ("the [16] family at s = 3/4 + u², where f has two rational roots: [2,16] is marked over ℚ(u). Every 5-integral u ≡ 1 (mod 5) has #J(𝔽₅) = 32, strict (family_216_certificate.log)", ["ThisSite"]),
+    "2.14": ("the contact-7 two-root surface (h = 1 − (7/2)x + ax² + bx³, f = (h² + (x−1)⁷)/x², with roots 1 − s², 1 − t²), slice s = 1: [2,14] is marked over ℚ(t). Every t ≡ 2 (mod 65) has #J(𝔽₅) = 28, and a strict Frobenius at 13 (family_214_certificate.log)", ["ThisSite"]),
+    "2.2.8": ("the odd M₁(8,2,2) family of the lab inventory, f = ((1−u)x+1)((1−v)x+1)((u+v+2)x+1)(−x² + (u²v−u²+uv²−u−v²−v−2)x − (u²+uv+v²+u+v+1)), Q = (−1, uv(u+v+1)), slice v = 3: [2,2,8] is marked over ℚ(u). Every u ≡ 11 (mod 371) has #J(𝔽₇) = 64 and #J(𝔽₅₃) = 3296, gcd 32, strict at 53 (family_228_certificate.log)", ["ThisSite"]),
+    "2.2.14": ("the contact-7 chart with three rational roots 1 − s₁², 1 − u², 1 − s₃²: at s₁ = −1/2 the pairs (u, s₃) form a genus-1 curve birational to E: y² = x³ − 12x (rank 1, P = (−2, 4)), and [2,2,14] is marked over its function field. For R = (1 + 26k)P (26 = lcm of the orders of P mod 17 and mod 29) the curve has the reduction of R = P, (u, s₃) = (−13/49, 13/50), at 17 and 29: #J(𝔽₁₇) = 392, #J(𝔽₂₉) = 1120, gcd 56, strict at 17 (family_2214_certificate.log)", ["ThisSite"]),
     "2.2.2.12": ("BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18)", ["ThisSite", "Audit2026", "BNSS2026", "Choudhry"]),
 }
 
 # simple side: a family with J(Q)_tors ⊇ G is proven, but not exactness/simplicity of infinitely many members
 _SIMPLE_FAMILY = {
-    "13": ("Leprévost 1991: a family of genus-2 curves with a rational divisor class of order 13 (formulas not transcribed into the record; exactness and geometric simplicity of infinitely many members not certified)", ["Leprevost1991a"]),
-    "17": ("Leprévost 1991: a family with a rational divisor class of order 17 (not transcribed; open legs as for [13])", ["Leprevost1991"]),
-    "15": ("the record lists [15] as inherited from the cyclic [30] family, which only gives torsion ⊇ [30] ⊇ [15]; no family with generic torsion exactly [15] is recorded (audit of 2026-09-18)", [RECORD, "Audit2026"]),
 }
 
 # simple side: open, with a note from the record
 _SIMPLE_OPEN_NOTES = {
-    "16": "the record traces no positive-dimensional construction with generic torsion exactly [16] (the reconstructed Elkies [32] component contains [16] as 2D, but its generic torsion is [32])",
-    "26": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified",
     "28": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified",
-    "3.9": "only isolated examples; (2,2)-isogenies cannot create 3-power structure",
-    "6.6": "the contact-6 × contact-6 locus is positive-dimensional with one certified point, but no rational curve on it is known",
-    "2.2.8": "no positive-dimensional construction found (a second-level halving criterion was designed but not derived)",
+    "3.9": "only isolated examples of geometrically simple Jacobians (many on the [9]-chart of 2026-10-13); Leprévost (1995, Theorem 1.2.2) gives a one-parameter family with [3,9] marked, whose members appear geometrically split; (2,2)-isogenies cannot create 3-power structure",
+    "6.6": "two isolated geometrically simple examples are known (one on the contact-6 × cubic-contact locus, one on the A(12)-type chart of 2026-10-13); no rational or positive-rank curve through them is known (the contact-6 × contact-6 locus itself is split)",
     "2.4.4": "no positive-dimensional construction found; provably not a Richelot image of the [2,2,4,4] family",
     "2.4.8": "one verified exact hit on the one-split tangent subcover; the genus/rank of its base curve was not computed",
     "31": "every known example has real multiplication (by ℤ[√2]); a single curve is known",
     "2.22": "every known example has real multiplication (by ℤ[φ], φ² = φ + 1); two curves are known",
+    "4.8": "the record lists the tangent-cover family as certified, but no fiber certificate exists for it; the rational curve w = R² in that cover carries a marked [4,8] but looks geometrically split (no strict prime below 100 on 12 fibers), and the geometrically simple points found lie on no known rational or positive-rank curve (notes review of 2026-10-13; graded exact until then)",
     "2.2.20": "the displayed curve is the unique one in its one-parameter family (BNSS2026, §'A second order-80 group', by Chabauty); Elkies' family gives infinitely many Jacobians of order 80, but with group [2,2,2,10]",
 }
 

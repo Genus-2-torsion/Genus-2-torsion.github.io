@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13 13:40 UTC",
+  "generated": "2026-10-13 18:24 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,9 +38,9 @@
   "n_groups_any_split": 77,
   "n_infinite": {
     "simple": {
-      "exact": 42,
-      "family": 9,
-      "open": 44
+      "exact": 52,
+      "family": 4,
+      "open": 39
     },
     "split": {
       "exact": 0,
@@ -2044,11 +2044,11 @@
       "n_curves": 1,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Leprevost1991a"
+            "ThisSite"
           ],
-          "note": "Leprévost 1991: a family of genus-2 curves with a rational divisor class of order 13 (formulas not transcribed into the record; exactness and geometric simplicity of infinitely many members not certified)",
+          "note": "relation-lattice family: B − A = x(x−1)², B + A = (x−1)³ + tx², f_t = A² + tx³(x−1)² = B² − x(x−1)⁵; [P₁ − ∞] has order 13 over ℚ(t) (lattice (3,2),(1,5)). Every 3-integral t ≡ 1 (mod 3) has the reduction of t = 1 at 3: #J(𝔽₃) = 13, strict (family_13_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -2356,12 +2356,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Najman2026",
-            "Audit2026"
+            "ThisSite"
           ],
-          "note": "the record lists [15] as inherited from the cyclic [30] family, which only gives torsion ⊇ [30] ⊇ [15]; no family with generic torsion exactly [15] is recorded (audit of 2026-09-18)",
+          "note": "relation-lattice family: B − A = tx² + (x−1)³, B + A = x³, f_t = A² + tx⁵ = B² − x³(x−1)³; a class of order 15 over ℚ(t) (lattice (5,0),(−3,3)). Every 3-integral t ≡ 1 (mod 3) has #J(𝔽₃) = 15, strict (family_15_certificate.log). (The record's [15] was only inherited from [30], i.e. containment)",
           "inherited_from": null
         },
         "split": {
@@ -2519,13 +2518,12 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Najman2026",
-            "Elkies2002"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [32], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "32"
+          "note": "relation-lattice family: λ = −(t−1)²/t, B − A = (x−1)²(x−t), B + A = x²·(λx + (x−1)²)/(x−t), f_t = A² + λx³(x−1)² = B² − x²(x−1)⁴; a cyclic class of order 16 over ℚ(t) (lattice (3,2),(−2,4)). Every 3-integral t ≡ 2 (mod 3) has #J(𝔽₃) = 16, strict (family_16_certificate.log)",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
@@ -2625,11 +2623,11 @@
       "n_curves": 1,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Leprevost1991"
+            "ThisSite"
           ],
-          "note": "Leprévost 1991: a family with a rational divisor class of order 17 (not transcribed; open legs as for [13])",
+          "note": "relation-lattice family: λ = −(t−1)³/t², B − A = (x−1)²(x−t), B + A = x·((x−1)³ + λx²)/(x−t), f_t = A² + λx³(x−1)² = B² − x(x−1)⁵; a class of order 17 over ℚ(t) (lattice (3,2),(−1,5)). Every 3-integral t ≡ 2 (mod 3) has #J(𝔽₃) = 17, strict (family_17_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -3629,9 +3627,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "relation-lattice family with lattice (4,1),(0,6): f = A² + λx⁴(x−1) = B² − (x−1)⁶, B − A = (x−1)g₁, B + A = g₂, g₁g₂ = λx⁴ + (x−1)⁵, over the rational curve of quadratics g₁ = x² − e₁x + e₂, e₁ = (−33t⁴+65t³−42t²+11t−1)/t⁴, e₂ = (−9t³+15t²−7t+1)/t³. Every t ≡ 9 (mod 35) has #J(𝔽₅) = 24 and #J(𝔽₇) = 48, strict at 7 (family_24_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -3788,9 +3788,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "relation-lattice family with lattice (5,0),(1,5): f = A² + λx⁵ = B² − x(x−1)⁵, B − A = xg₁, B + A = g₂, over the same rational curve of quadratics g₁ as for [24]. Every t ≡ 3 (mod 77) has #J(𝔽₇) = 50 and #J(𝔽₁₁) = 75, strict at 11 (family_25_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -3889,11 +3891,11 @@
       "n_curves": 1,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "exact",
           "sources": [
-            "Najman2026"
+            "ThisSite"
           ],
-          "note": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified",
+          "note": "the rational curve s = (16/3)(1+3t)⁴/d(t), d(t) = 1 + 28t + 312t² + 1728t³ + 4752t⁴ + 5184t⁵, on the [13] family, where f_s has the rational root x₀ = −(1/3)(1+6t)⁶/d(t): Z/26 is marked over ℚ(t). Every t ≡ 17 (mod 35) has #J(𝔽₅) = 26 and #J(𝔽₇) = 78, strict at 7 (family_26_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -7044,9 +7046,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the contact-7 two-root surface (h = 1 − (7/2)x + ax² + bx³, f = (h² + (x−1)⁷)/x², with roots 1 − s², 1 − t²), slice s = 1: [2,14] is marked over ℚ(t). Every t ≡ 2 (mod 65) has #J(𝔽₅) = 28, and a strict Frobenius at 13 (family_214_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -7203,9 +7207,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the [16] family at s = 3/4 + u², where f has two rational roots: [2,16] is marked over ℚ(u). Every 5-integral u ≡ 1 (mod 5) has #J(𝔽₅) = 32, strict (family_216_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -8633,7 +8639,7 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "only isolated examples; (2,2)-isogenies cannot create 3-power structure",
+          "note": "only isolated examples of geometrically simple Jacobians (many on the [9]-chart of 2026-10-13); Leprévost (1995, Theorem 1.2.2) gives a one-parameter family with [3,9] marked, whose members appear geometrically split; (2,2)-isogenies cannot create 3-power structure",
           "inherited_from": null
         },
         "split": {
@@ -9214,11 +9220,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "exact",
+          "grade": "open",
           "sources": [
             "Najman2026"
           ],
-          "note": "the tangent-cover family",
+          "note": "the record lists the tangent-cover family as certified, but no fiber certificate exists for it; the rational curve w = R² in that cover carries a marked [4,8] but looks geometrically split (no strict prime below 100 on 12 fibers), and the geometrically simple points found lie on no known rational or positive-rank curve (notes review of 2026-10-13; graded exact until then)",
           "inherited_from": null
         },
         "split": {
@@ -9900,7 +9906,7 @@
           "sources": [
             "Najman2026"
           ],
-          "note": "the contact-6 × contact-6 locus is positive-dimensional with one certified point, but no rational curve on it is known",
+          "note": "two isolated geometrically simple examples are known (one on the contact-6 × cubic-contact locus, one on the A(12)-type chart of 2026-10-13); no rational or positive-rank curve through them is known (the contact-6 × contact-6 locus itself is split)",
           "inherited_from": null
         },
         "split": {
@@ -10852,13 +10858,12 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Najman2026",
-            "BNSS2026"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.8"
+          "note": "the odd M₁(8,2,2) family of the lab inventory, f = ((1−u)x+1)((1−v)x+1)((u+v+2)x+1)(−x² + (u²v−u²+uv²−u−v²−v−2)x − (u²+uv+v²+u+v+1)), Q = (−1, uv(u+v+1)), slice v = 3: [2,2,8] is marked over ℚ(u). Every u ≡ 11 (mod 371) has #J(𝔽₇) = 64 and #J(𝔽₅₃) = 3296, gcd 32, strict at 53 (family_228_certificate.log)",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
@@ -11287,9 +11292,11 @@
       "n_curves": 1,
       "infinite": {
         "simple": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the contact-7 chart with three rational roots 1 − s₁², 1 − u², 1 − s₃²: at s₁ = −1/2 the pairs (u, s₃) form a genus-1 curve birational to E: y² = x³ − 12x (rank 1, P = (−2, 4)), and [2,2,14] is marked over its function field. For R = (1 + 26k)P (26 = lcm of the orders of P mod 17 and mod 29) the curve has the reduction of R = P, (u, s₃) = (−13/49, 13/50), at 17 and 29: #J(𝔽₁₇) = 392, #J(𝔽₂₉) = 1120, gcd 56, strict at 17 (family_2214_certificate.log)",
           "inherited_from": null
         },
         "split": {

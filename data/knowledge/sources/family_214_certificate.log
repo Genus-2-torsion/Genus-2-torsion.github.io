@@ -1,0 +1,8 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(t), s = 1: [P - oo] has order 7 and the roots 0, 1 - t^2 give (Z/2)^2: [2,14] is marked
+p = 5, t = 2 mod 5: reduction $.1^5 + 2*$.1^4 + $.1^3 + 4*$.1^2 + $.1 (squarefree, degree 5), #J(F_5) = 28, chi = X^4 + X^3 - 4*X^2 + 5*X + 25
+p = 13, t = 2 mod 13: reduction $.1^5 + 9*$.1^4 + 12*$.1^3 + 3*$.1^2 + 11*$.1 (squarefree, degree 5), #J(F_13) = 168, chi = X^4 - X^3 + 12*X^2 - 13*X + 169 (strict)
+gcd of #J(F_p) = 28; #G = 28
+sanity: t = 2 has TorsionSubgroup [ 2, 14 ]
+G2-invariants of the members [ 2, 67, -63, 132 ] are not all equal
+FAMILY_214_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,14]

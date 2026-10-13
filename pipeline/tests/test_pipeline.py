@@ -83,13 +83,14 @@ class KnowledgeTests(unittest.TestCase):
         # groups first realized for simple Jacobians after the paper, with a family certified here
         after_paper = {"3.12"}
         self.assertTrue(recorded <= set(t1) | after_paper, recorded - set(t1) - after_paper)
-        # 39 of the record, minus [15] (containment only), plus the trivial group, [2,2,2,12], [3,12] and [19] (certified here)
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 42)
-        self.assertEqual(len(knowledge._SIMPLE_FAMILY), 3)   # [13], [17], [15]
-        self.assertEqual(knowledge.infinite_record("simple", "19")["grade"], "exact")
-        self.assertEqual(knowledge.infinite_record("simple", "15")["grade"], "family")
-        self.assertEqual(knowledge.infinite_record("simple", "2.2.2.12")["grade"], "exact")
-        self.assertEqual(knowledge.infinite_record("simple", "16")["inherited_from"], "32")
+        # 39 of the record, minus [15] (containment only) and [4,8] (no certificate), plus the trivial group and
+        # the groups certified here: [2,2,2,12], [3,12], [19], and the residue-class families of 2026-10-13
+        # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14]
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 52)
+        self.assertEqual(len(knowledge._SIMPLE_FAMILY), 0)
+        for key in ("13", "15", "16", "17", "19", "24", "25", "26", "2.14", "2.16", "2.2.8", "2.2.14", "2.2.2.12"):
+            self.assertEqual(knowledge.infinite_record("simple", key)["grade"], "exact", key)
+        self.assertEqual(knowledge.infinite_record("simple", "4.8")["grade"], "open")
         t2 = []
         for line in (KNOWLEDGE_DIR / "sources" / "table2.txt").read_text().splitlines():
             if line and not line.startswith("#"):

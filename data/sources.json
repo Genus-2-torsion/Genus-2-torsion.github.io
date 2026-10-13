@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13 13:40 UTC",
+  "generated": "2026-10-13 18:24 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -34,7 +34,7 @@
       "year": 2026,
       "cite": "Computation for this census on the Mordell workstation (Magma V2.29-4); script and log in the repository.",
       "url": "data/knowledge/sources/",
-      "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log (scripts in pipeline/magma/)"
+      "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log, and the residue-class certificates family_13, _15, _16, _17, _24, _25, _26, _214, _216, _228, _2214_certificate.log of 2026-10-13 (scripts in pipeline/magma/, shared argument in family_cert_lib.m)"
     },
     "HLP2000": {
       "short": "Howe–Leprévost–Poonen 2000",

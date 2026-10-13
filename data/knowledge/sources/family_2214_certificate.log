@@ -1,0 +1,13 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(u): [P - oo] has order 7 and f has the roots 3/4, 1 - u^2: [2,14] is marked
+over Q(C): 1 - s3^2 is a third root of f_u, so [2,2,14] is marked over Q(C)
+E = [ 0, 0, 0, -12, 0 ] (rank 1), P = (-2 : 4 : 1); psi(P) = (u, s3) = (-13/49, 13/50)
+ord(P mod 17), ord(P mod 29) = [ 13, 26 ]; n = 26
+for R = (1 + n k)P, R = P mod 17 and mod 29, so u(R) = u(P) and s3(R) = s3(P) mod 17 and mod 29
+sanity: u((1+n)P) has 139 digits and = u(P) mod 17, 29
+p = 17, t = 15 mod 17: reduction $.1^5 + 8*$.1^4 + 5*$.1^3 + 16*$.1^2 + 13*$.1 + 16 (squarefree, degree 5), #J(F_17) = 392, chi = X^4 + 4*X^3 + 30*X^2 + 68*X + 289 (strict)
+p = 29, t = 24 mod 29: reduction $.1^5 + 22*$.1^4 + 21*$.1^3 + 4*$.1 + 26 (squarefree, degree 5), #J(F_29) = 1120, chi = X^4 + 8*X^3 + 38*X^2 + 232*X + 841
+gcd of #J(F_p) = 56; #G = 56
+sanity: t = -13/49 has TorsionSubgroup [ 2, 2, 14 ]
+G2-invariants of the members [ -13/49, -139223720811250008740309083359595237854254114152956958932261839061912508788938959061128018390267944116027757620646917748114926917856136563/177503553940239962221812616308712341274860417864660775752713320447063528215573896431448090856033548465849093961494725603350929446884521138 ] are not all equal
+FAMILY_2214_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,14]

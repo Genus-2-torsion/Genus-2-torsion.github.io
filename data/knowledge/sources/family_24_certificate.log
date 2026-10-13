@@ -1,0 +1,9 @@
+Loading "pipeline/magma/family_cert_lib.m"
+lambda = (3125/81*t^10 - 15625/81*t^9 + 34375/81*t^8 - 43750/81*t^7 + 11875/27*t^6 - 19375/81*t^5 + 2375/27*t^4 - 1750/81*t^3 + 275/81*t^2 - 25/81*t + 1/81)/(t^10 - 10/3*t^9 + 13/3*t^8 - 76/27*t^7 + 79/81*t^6 - 14/81*t^5 + 1/81*t^4)
+over Q(t): 4 D0 + D1 = 6 D1 = 0 and D0 has order 24
+p = 5, t = 4 mod 5: reduction 4*$.1^5 + $.1^3 + 4*$.1^2 + $.1 + 4 (squarefree, degree 5), #J(F_5) = 24, chi = X^4 - X^3 + 4*X^2 - 5*X + 25
+p = 7, t = 2 mod 7: reduction 4*$.1^5 + 5*$.1^4 + $.1^2 + 1 (squarefree, degree 5), #J(F_7) = 48, chi = X^4 - X^3 + 6*X^2 - 7*X + 49 (strict)
+gcd of #J(F_p) = 24; #G = 24
+sanity: t = 9 has TorsionSubgroup [ 24 ]
+G2-invariants of the members [ 9, 44, -26, 79 ] are not all equal
+FAMILY_24_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [24]

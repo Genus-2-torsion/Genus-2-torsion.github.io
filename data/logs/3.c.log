@@ -1,0 +1,9 @@
+[0.0100000 s] start
+[0.0100000 s] curve: y^2 + (x^3 + x^2 + x + 1) y = -12*x^6 - 15*x^5 + 9*x^4 + 31*x^3 + 9*x^2 - 15*x - 12; working model y^2 = -47*x^6 - 58*x^5 + 39*x^4 + 128*x^3 + 39*x^2 - 58*x - 47
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 15 (p = [ 3, 5, 13, 17, 19, 23, 29, 31, 37, 41, 43, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109 ])
+[0.0600000 s] the submitted generators generate a subgroup of order 3, but the point-count bound is 15; TorsionSubgroup was run
+[0.260000 s] J(Q)_tors = [ 3 ] (TorsionSubgroup, 0.200000 s)
+[1.24000 s] no strict prime below 500 (91 admissible primes, 91 with reducible chi)
+[1.26000 s] split over Q: an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q
+[1.28000 s] class: qsplit
+[1.46000 s] VERIFY_DONE

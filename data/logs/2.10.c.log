@@ -1,0 +1,9 @@
+[0.0100000 s] start
+[0.0100000 s] curve: y^2 + (x^2 + 1) y = x^5 + 2*x^3 + 4*x^2 + 2*x; working model y^2 = 4*x^5 + x^4 + 8*x^3 + 18*x^2 + 8*x + 1
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 40 (p = [ 5, 7, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107 ])
+[0.0600000 s] the submitted generators generate a subgroup of order 20, but the point-count bound is 40; TorsionSubgroup was run
+[0.270000 s] J(Q)_tors = [ 2, 10 ] (TorsionSubgroup, 0.210000 s)
+[1.20000 s] no strict prime below 500 (92 admissible primes, 92 with reducible chi)
+[1.25000 s] split over Q: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (5)u^2 + (3)u + (7) over Q, (x,y) -> (p/q, y*hh/q^2) with p = 4*x^3 + x + 1, q = 4*x^2 + 5*x + 1, hh = 8*x^3 + 24*x^2 + 16*x + 4; degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission
+[1.25000 s] class: qsplit
+[1.43000 s] VERIFY_DONE

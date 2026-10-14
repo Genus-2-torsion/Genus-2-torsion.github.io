@@ -1,0 +1,261 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.10.c",
+  "group": [
+    2,
+    10
+  ],
+  "group_key": "2.10",
+  "group_bracket": "[2,10]",
+  "order": 20,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "0",
+      "2",
+      "4",
+      "2",
+      "0",
+      "1"
+    ],
+    "h": [
+      "1",
+      "0",
+      "1"
+    ],
+    "f_str": "x^5 + 2*x^3 + 4*x^2 + 2*x",
+    "h_str": "x^2 + 1",
+    "g": [
+      "1",
+      "8",
+      "18",
+      "8",
+      "1",
+      "4"
+    ],
+    "g_str": "4*x^5 + x^4 + 8*x^3 + 18*x^2 + 8*x + 1",
+    "g_scale": "1",
+    "discriminant": "-3066624",
+    "discriminant_digits": 7,
+    "igusa_clebsch": [
+      "1376",
+      "-49088",
+      "-33691712",
+      "-49065984"
+    ],
+    "g2_invariants": [
+      "-150536645632/11979",
+      "-8874253312/11979",
+      "-1356160144/11979"
+    ],
+    "rational_weierstrass_points": 3,
+    "minimal_model": {
+      "f": [
+        "0",
+        "-1",
+        "0",
+        "-2",
+        "4",
+        "-2"
+      ],
+      "h": [
+        "0",
+        "1",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-11979",
+    "minimal_discriminant_factored": "-1 * 3^2 * 11^3",
+    "conductor": "363",
+    "conductor_factored": "3 * 11^2",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "363.a.11979.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      10
+    ],
+    "order": 20,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x + 1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 10,
+        "mumford": [
+          "x^2 - 5*x - 2",
+          "-25*x - 9",
+          "2"
+        ]
+      }
+    ],
+    "method": "TorsionSubgroup",
+    "generators_note": "the submitted generators generate a subgroup of order 20, but the point-count bound is 40; TorsionSubgroup was run",
+    "generators_submitted": 2,
+    "point_count_gcd": 40,
+    "point_count_primes": [
+      5,
+      7,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
+    ],
+    "claimed": [
+      2,
+      10
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 92,
+    "reducible_chi": 92
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "cover",
+      "over": "Q",
+      "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (5)u^2 + (3)u + (7) over Q, (x,y) -> (p/q, y*hh/q^2) with p = 4*x^3 + x + 1, q = 4*x^2 + 5*x + 1, hh = 8*x^3 + 24*x^2 + 16*x + 4; degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission"
+    },
+    "isogenous_product": null,
+    "cover_submitted": true,
+    "cover_accepted": true,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 43,
+      "reducible_chi": 43
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "LMFDB genus 2 database (BSSVY 2016)",
+    "year": null,
+    "historical": false
+  },
+  "reference": "LMFDB 363.a.11979.1, https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+  "sources": [],
+  "rm": false,
+  "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB: torsion [2,10], not simple over Q (is_simple_base = false); J ~ 11a x 33a over Q, glued along their 3-torsion (a_p(11a) = a_p(33a) mod 3). The cover above is a degree-3 map u = (4x^3 + x + 1)/((4x + 1)(x + 1)) onto 11a3, found by solving for the ramification of a degree-3 elliptic subcover whose fibre over the origin is the three Weierstrass points over the roots of (4x + 1)(x + 1) and infinity. Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [2,10]; gcd of #J(F_p) over 25 good primes = 40 (not sharp); no strict prime below 500; conductor 363 = 3 * 11^2.",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "2",
+      "4",
+      "2",
+      "0",
+      "1"
+    ],
+    "h": [
+      "1",
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      10
+    ],
+    "claimed_class": "split",
+    "cover": {
+      "field": "",
+      "cremona": "",
+      "cubic": [
+        "1",
+        "5",
+        "3",
+        "7"
+      ],
+      "p": [
+        "1",
+        "1",
+        "0",
+        "4"
+      ],
+      "q": [
+        "1",
+        "5",
+        "4"
+      ],
+      "hh": [
+        "4",
+        "16",
+        "24",
+        "8"
+      ],
+      "note": "degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission"
+    },
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "issue",
+    "number": 6,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/6"
+  },
+  "dates": {
+    "submitted": "2026-10-14",
+    "verified": "2026-10-14 10:49:17 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.43000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/2.10.c.log",
+    "conductor_log": "data/logs/2.10.c.conductor.log",
+    "conductor_cputime_seconds": 0.16
+  }
+}

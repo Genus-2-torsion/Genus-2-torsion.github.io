@@ -1,0 +1,29 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^3 + 3*x^2 + 3*x + 1",
+  "h": "x^3 + x^2 + x",
+  "group": [
+    21
+  ],
+  "class": "split",
+  "generators": [
+    [
+      "1",
+      "x^3 + x^2",
+      2
+    ]
+  ],
+  "submitter": "Filip Najman",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "reference": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, https://doi.org/10.5802/jtnb.144: the curve C21 of §2.1 (Théorème 1.2.1), y^2 = 4x^6 - 12x^5 + 13x^4 - 6x^3 + 3x^2 - 2x + 1, shown in §3.2 to be isogenous over Q to E1 x E2 (points of order 3 and 7). This model is LMFDB 676.a.5408.1, https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+  "discoverer": "F. Leprévost",
+  "year": 1995,
+  "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB 676.a.5408.1 (torsion [21], is_simple_base = false) is isomorphic over Q to Leprévost's C21 (Magma IsIsomorphic; equal G2-invariants [345025251/5408, -928557/1352, 0]), so the curve is credited to Leprévost 1995. Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [21]; gcd of #J(F_p) over 25 good primes = 21 (sharp); no strict prime below 500; conductor 676 = 2^2 * 13^2.",
+  "date": "2026-10-14",
+  "source": {
+    "kind": "issue",
+    "number": 7,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/7"
+  }
+}

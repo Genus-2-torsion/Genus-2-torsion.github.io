@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13 18:24 UTC",
+  "generated": "2026-10-14 10:49 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -26,12 +26,12 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 95,
-  "n_curves": 154,
-  "n_certified": 153,
+  "n_curves": 159,
+  "n_certified": 158,
   "n_verified": 1,
   "n_groups_by_class": {
     "simple": 76,
-    "qsplit": 69,
+    "qsplit": 74,
     "gsplit": 8,
     "undecided": 1
   },
@@ -429,7 +429,60 @@
             "source_kind": "import"
           }
         ],
-        "qsplit": [],
+        "qsplit": [
+          {
+            "id": "3.c",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "-12",
+              "-15",
+              "9",
+              "31",
+              "9",
+              "-15",
+              "-12"
+            ],
+            "h": [
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-12*x^6 - 15*x^5 + 9*x^4 + 31*x^3 + 9*x^2 - 15*x - 12",
+              "h": "x^3 + x^2 + x + 1",
+              "text": "y^2 + (x^3 + x^2 + x + 1)*y = -12*x^6 - 15*x^5 + 9*x^4 + 31*x^3 + 9*x^2 - 15*x - 12"
+            },
+            "conductor": "847",
+            "conductor_sort": 847,
+            "conductor_note": "N(E1) N(E2) = 11 * 77 for the elliptic curves ['0', '-1', '1', '-7820', '-263580'] and ['0', '1', '1', '-89', '295'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+            "discriminant_digits": 7,
+            "lmfdb": {
+              "label": "847.d.847.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/847/d/847/1",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "year": null,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB 847.d.847.1, https://www.lmfdb.org/Genus2Curve/Q/847/d/847/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
+            "verified": "2026-10-14 10:49:07 UTC",
+            "submitted": "2026-10-14",
+            "source_kind": "issue"
+          }
+        ],
         "gsplit": [
           {
             "id": "3.b",
@@ -502,11 +555,11 @@
       },
       "known": {
         "simple": true,
-        "qsplit": false,
+        "qsplit": true,
         "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -3179,7 +3232,57 @@
             "source_kind": "import"
           }
         ],
-        "qsplit": [],
+        "qsplit": [
+          {
+            "id": "21.c",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "1",
+              "3",
+              "3",
+              "1"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "x^3 + 3*x^2 + 3*x + 1",
+              "h": "x^3 + x^2 + x",
+              "text": "y^2 + (x^3 + x^2 + x)*y = x^3 + 3*x^2 + 3*x + 1"
+            },
+            "conductor": "676",
+            "conductor_sort": 676,
+            "conductor_note": "N(E1) N(E2) = 26 * 26 for the elliptic curves ['1', '0', '1', '0', '0'] and ['1', '-1', '1', '-3', '3'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+            "discriminant_digits": 8,
+            "lmfdb": {
+              "label": "676.a.5408.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Leprévost",
+            "year": 1995,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, https://doi.org/10.5802/jtnb.144: the curve C21 of §2.1 (Théorème 1.2.1), y^2 = 4x^6 - 12x^5 + 13x^4 - 6x^3 + 3x^2 - 2x + 1, shown in §3.2 to be isogenous over Q to E1 x E2 (points of order 3 and 7). This model is LMFDB 676.a.5408.1, https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
+            "verified": "2026-10-14 10:49:22 UTC",
+            "submitted": "2026-10-14",
+            "source_kind": "issue"
+          }
+        ],
         "gsplit": [
           {
             "id": "21.b",
@@ -3239,7 +3342,7 @@
       },
       "first_dated": {
         "simple": null,
-        "qsplit": null,
+        "qsplit": 0,
         "gsplit": null,
         "undecided": null
       },
@@ -3251,11 +3354,11 @@
       },
       "known": {
         "simple": true,
-        "qsplit": false,
+        "qsplit": true,
         "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -3970,7 +4073,57 @@
             "source_kind": "import"
           }
         ],
-        "qsplit": [],
+        "qsplit": [
+          {
+            "id": "27.c",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "9",
+              "-36",
+              "90",
+              "-192",
+              "249",
+              "-60",
+              "4"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "4*x^6 - 60*x^5 + 249*x^4 - 192*x^3 + 90*x^2 - 36*x + 9",
+              "h": "0",
+              "text": "y^2 = 4*x^6 - 60*x^5 + 249*x^4 - 192*x^3 + 90*x^2 - 36*x + 9"
+            },
+            "conductor": "8748",
+            "conductor_sort": 8748,
+            "conductor_note": "",
+            "discriminant_digits": 23,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B9%2C-36%2C90%2C-192%2C249%2C-60%2C4%5D%2C%5B0%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Leprévost",
+            "year": 1995,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, https://doi.org/10.5802/jtnb.144: the curve C27 of Théorème 1.2.1 (p. 293), y^2 = (2x^3 - 15x^2 - 3)(2x^3 - 15x^2 + 12x - 3); §3.2 (p. 302) gives the explicit degree-3 cover onto E1 and shows that its Jacobian is not simple over Q. Not in the production LMFDB.",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (648)u^3 + (297)u^2 + (18)u + (1) over Q, (x,y) -> (p/q, y*hh/q^2) with p = x^2 - 2*x + 1, q = 2*x^3 - 15*x^2 - 3, hh = x^3 - 3*x^2 + 15*x + 3; Leprévost 1995, §3.2: the degree-3 map X = (x-1)^2/(2x^3-15x^2-3) onto E1: Y^2 = 648X^3 + 297X^2 + 18X + 1 (54b3), written on the even model y^2 = 4f",
+            "verified": "2026-10-14 10:49:32 UTC",
+            "submitted": "2026-10-14",
+            "source_kind": "issue"
+          }
+        ],
         "gsplit": [
           {
             "id": "27.b",
@@ -4029,7 +4182,7 @@
       },
       "first_dated": {
         "simple": null,
-        "qsplit": null,
+        "qsplit": 0,
         "gsplit": null,
         "undecided": null
       },
@@ -4041,11 +4194,11 @@
       },
       "known": {
         "simple": true,
-        "qsplit": false,
+        "qsplit": true,
         "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "open",
@@ -6008,7 +6161,58 @@
             "source_kind": "import"
           }
         ],
-        "qsplit": [],
+        "qsplit": [
+          {
+            "id": "2.2.c",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "0",
+              "3",
+              "28",
+              "72",
+              "28",
+              "3"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "3*x^5 + 28*x^4 + 72*x^3 + 28*x^2 + 3*x",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 3*x^5 + 28*x^4 + 72*x^3 + 28*x^2 + 3*x"
+            },
+            "conductor": "990",
+            "conductor_sort": 990,
+            "conductor_note": "N(E1) N(E2) = 15 * 66 for the elliptic curves ['1', '1', '1', '-135', '-660'] and ['1', '1', '1', '-22', '-49'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+            "discriminant_digits": 7,
+            "lmfdb": {
+              "label": "990.a.240570.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/990/a/240570/1",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "year": null,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB 990.a.240570.1, https://www.lmfdb.org/Genus2Curve/Q/990/a/240570/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
+            "verified": "2026-10-14 10:49:12 UTC",
+            "submitted": "2026-10-14",
+            "source_kind": "issue"
+          }
+        ],
         "gsplit": [
           {
             "id": "2.2.b",
@@ -6081,11 +6285,11 @@
       },
       "known": {
         "simple": true,
-        "qsplit": false,
+        "qsplit": true,
         "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -6646,7 +6850,58 @@
             "source_kind": "import"
           }
         ],
-        "qsplit": [],
+        "qsplit": [
+          {
+            "id": "2.10.c",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "0",
+              "2",
+              "4",
+              "2",
+              "0",
+              "1"
+            ],
+            "h": [
+              "1",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "x^5 + 2*x^3 + 4*x^2 + 2*x",
+              "h": "x^2 + 1",
+              "text": "y^2 + (x^2 + 1)*y = x^5 + 2*x^3 + 4*x^2 + 2*x"
+            },
+            "conductor": "363",
+            "conductor_sort": 363,
+            "conductor_note": "",
+            "discriminant_digits": 7,
+            "lmfdb": {
+              "label": "363.a.11979.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "year": null,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB 363.a.11979.1, https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (5)u^2 + (3)u + (7) over Q, (x,y) -> (p/q, y*hh/q^2) with p = 4*x^3 + x + 1, q = 4*x^2 + 5*x + 1, hh = 8*x^3 + 24*x^2 + 16*x + 4; degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission",
+            "verified": "2026-10-14 10:49:17 UTC",
+            "submitted": "2026-10-14",
+            "source_kind": "issue"
+          }
+        ],
         "gsplit": [
           {
             "id": "2.10.b",
@@ -6718,11 +6973,11 @@
       },
       "known": {
         "simple": true,
-        "qsplit": false,
+        "qsplit": true,
         "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",

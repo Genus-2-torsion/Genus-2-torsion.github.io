@@ -1,0 +1,29 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "-12*x^6 - 15*x^5 + 9*x^4 + 31*x^3 + 9*x^2 - 15*x - 12",
+  "h": "x^3 + x^2 + x + 1",
+  "group": [
+    3
+  ],
+  "class": "split",
+  "generators": [
+    [
+      "x^2 + 29/18*x + 1",
+      "11/324*x + 1/18",
+      2
+    ]
+  ],
+  "submitter": "Filip Najman",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "reference": "LMFDB 847.d.847.1, https://www.lmfdb.org/Genus2Curve/Q/847/d/847/1",
+  "discoverer": "LMFDB genus 2 database (BSSVY 2016)",
+  "year": "",
+  "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB: torsion [3], not simple over Q (is_simple_base = false). Split over Q by the involution (x, y) -> (1/x, y/x^3) (f and h are palindromic). Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [3]; gcd of #J(F_p) over 25 good primes = 15 (not sharp); no strict prime below 500; conductor 847 = 7 * 11^2.",
+  "date": "2026-10-14",
+  "source": {
+    "kind": "issue",
+    "number": 4,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/4"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13 18:24 UTC",
+  "generated": "2026-10-14 10:49 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -1384,6 +1384,255 @@
         "log": "data/logs/3.b.log",
         "conductor_log": "data/logs/3.b.conductor.log",
         "conductor_cputime_seconds": 0.48
+      }
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "3.c",
+      "group": [
+        3
+      ],
+      "group_key": "3",
+      "group_bracket": "[3]",
+      "order": 3,
+      "class": "qsplit",
+      "class_certified": true,
+      "class_text": "split over ℚ",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "-12",
+          "-15",
+          "9",
+          "31",
+          "9",
+          "-15",
+          "-12"
+        ],
+        "h": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "f_str": "-12*x^6 - 15*x^5 + 9*x^4 + 31*x^3 + 9*x^2 - 15*x - 12",
+        "h_str": "x^3 + x^2 + x + 1",
+        "g": [
+          "-47",
+          "-58",
+          "39",
+          "128",
+          "39",
+          "-58",
+          "-47"
+        ],
+        "g_str": "-47*x^6 - 58*x^5 + 39*x^4 + 128*x^3 + 39*x^2 - 58*x - 47",
+        "g_scale": "1",
+        "discriminant": "-3469312",
+        "discriminant_digits": 7,
+        "igusa_clebsch": [
+          "-321632",
+          "6438459712",
+          "-518064193667072",
+          "-3469312"
+        ],
+        "g2_invariants": [
+          "105037970421355597057024/847",
+          "18267839107785466368/847",
+          "454326923025280/121"
+        ],
+        "rational_weierstrass_points": 0,
+        "minimal_model": {
+          "f": [
+            "-12",
+            "-56",
+            "-94",
+            "-83",
+            "-59",
+            "-21",
+            "-7"
+          ],
+          "h": [
+            "1"
+          ]
+        },
+        "minimal_discriminant": "-847",
+        "minimal_discriminant_factored": "-1 * 7 * 11^2",
+        "conductor": "847",
+        "conductor_factored": "11 * 77 (product of the elliptic conductors)",
+        "conductor_note": "N(E1) N(E2) = 11 * 77 for the elliptic curves ['0', '-1', '1', '-7820', '-263580'] and ['0', '1', '1', '-89', '295'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "isogenous product of elliptic curves",
+        "conductor_magma": "847"
+      },
+      "lmfdb": {
+        "label": "847.d.847.1",
+        "kind": "production",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/847/d/847/1",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          3
+        ],
+        "order": 3,
+        "generators": [
+          {
+            "order": 3,
+            "mumford": [
+              "x^2 + 29/18*x + 1",
+              "11/324*x + 1/18",
+              "2"
+            ]
+          }
+        ],
+        "method": "TorsionSubgroup",
+        "generators_note": "the submitted generators generate a subgroup of order 3, but the point-count bound is 15; TorsionSubgroup was run",
+        "generators_submitted": 1,
+        "point_count_gcd": 15,
+        "point_count_primes": [
+          3,
+          5,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107,
+          109
+        ],
+        "claimed": [
+          3
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": false,
+        "strict_prime": 0,
+        "chi": "",
+        "primes_tried_below": 500,
+        "admissible_primes": 91,
+        "reducible_chi": 91
+      },
+      "q_simple": {
+        "certified": false,
+        "prime": 0,
+        "chi": ""
+      },
+      "split": {
+        "geometrically_split": true,
+        "split_over_Q": true,
+        "certificate": {
+          "kind": "involution",
+          "over": "Q",
+          "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+        },
+        "isogenous_product": {
+          "ainvs": [
+            [
+              "0",
+              "-1",
+              "1",
+              "-7820",
+              "-263580"
+            ],
+            [
+              "0",
+              "1",
+              "1",
+              "-89",
+              "295"
+            ]
+          ],
+          "conductors": [
+            "11",
+            "77"
+          ],
+          "conductor": "847",
+          "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+        },
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": true,
+          "primes_checked": 42,
+          "reducible_chi": 42
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "year": null,
+        "historical": false
+      },
+      "reference": "LMFDB 847.d.847.1, https://www.lmfdb.org/Genus2Curve/Q/847/d/847/1",
+      "sources": [],
+      "rm": false,
+      "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB: torsion [3], not simple over Q (is_simple_base = false). Split over Q by the involution (x, y) -> (1/x, y/x^3) (f and h are palindromic). Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [3]; gcd of #J(F_p) over 25 good primes = 15 (not sharp); no strict prime below 500; conductor 847 = 7 * 11^2.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "-12",
+          "-15",
+          "9",
+          "31",
+          "9",
+          "-15",
+          "-12"
+        ],
+        "h": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          3
+        ],
+        "claimed_class": "split",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "issue",
+        "number": 4,
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/4"
+      },
+      "dates": {
+        "submitted": "2026-10-14",
+        "verified": "2026-10-14 10:49:07 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.29-4",
+        "cputime_seconds": "1.46000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/3.c.log",
+        "conductor_log": "data/logs/3.c.conductor.log",
+        "conductor_cputime_seconds": 0.71
       }
     },
     {
@@ -9331,6 +9580,251 @@
     },
     {
       "schema": "genus-2-torsion/curve/1",
+      "id": "21.c",
+      "group": [
+        21
+      ],
+      "group_key": "21",
+      "group_bracket": "[21]",
+      "order": 21,
+      "class": "qsplit",
+      "class_certified": true,
+      "class_text": "split over ℚ",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "1",
+          "3",
+          "3",
+          "1"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        "f_str": "x^3 + 3*x^2 + 3*x + 1",
+        "h_str": "x^3 + x^2 + x",
+        "g": [
+          "4",
+          "12",
+          "13",
+          "6",
+          "3",
+          "2",
+          "1"
+        ],
+        "g_str": "x^6 + 2*x^5 + 3*x^4 + 6*x^3 + 13*x^2 + 12*x + 4",
+        "g_scale": "1",
+        "discriminant": "-22151168",
+        "discriminant_digits": 8,
+        "igusa_clebsch": [
+          "-408",
+          "13092",
+          "-1289688",
+          "-22151168"
+        ],
+        "g2_invariants": [
+          "345025251/5408",
+          "-928557/1352",
+          "0"
+        ],
+        "rational_weierstrass_points": 0,
+        "minimal_model": {
+          "f": [
+            "0",
+            "1",
+            "2",
+            "1",
+            "2",
+            "1"
+          ],
+          "h": [
+            "1",
+            "0",
+            "0",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "-5408",
+        "minimal_discriminant_factored": "-1 * 2^5 * 13^2",
+        "conductor": "676",
+        "conductor_factored": "26 * 26 (product of the elliptic conductors)",
+        "conductor_note": "N(E1) N(E2) = 26 * 26 for the elliptic curves ['1', '0', '1', '0', '0'] and ['1', '-1', '1', '-3', '3'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "isogenous product of elliptic curves",
+        "conductor_magma": "676"
+      },
+      "lmfdb": {
+        "label": "676.a.5408.1",
+        "kind": "production",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          21
+        ],
+        "order": 21,
+        "generators": [
+          {
+            "order": 21,
+            "mumford": [
+              "1",
+              "x^3 + x^2",
+              "2"
+            ]
+          }
+        ],
+        "method": "generators",
+        "generators_note": "",
+        "generators_submitted": 1,
+        "point_count_gcd": 21,
+        "point_count_primes": [
+          3,
+          5,
+          7,
+          11,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103
+        ],
+        "claimed": [
+          21
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": false,
+        "strict_prime": 0,
+        "chi": "",
+        "primes_tried_below": 500,
+        "admissible_primes": 93,
+        "reducible_chi": 93
+      },
+      "q_simple": {
+        "certified": false,
+        "prime": 0,
+        "chi": ""
+      },
+      "split": {
+        "geometrically_split": true,
+        "split_over_Q": true,
+        "certificate": {
+          "kind": "involution",
+          "over": "Q",
+          "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+        },
+        "isogenous_product": {
+          "ainvs": [
+            [
+              "1",
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "-1",
+              "1",
+              "-3",
+              "3"
+            ]
+          ],
+          "conductors": [
+            "26",
+            "26"
+          ],
+          "conductor": "676",
+          "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+        },
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": true,
+          "primes_checked": 44,
+          "reducible_chi": 44
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "F. Leprévost",
+        "year": 1995,
+        "historical": false
+      },
+      "reference": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, https://doi.org/10.5802/jtnb.144: the curve C21 of §2.1 (Théorème 1.2.1), y^2 = 4x^6 - 12x^5 + 13x^4 - 6x^3 + 3x^2 - 2x + 1, shown in §3.2 to be isogenous over Q to E1 x E2 (points of order 3 and 7). This model is LMFDB 676.a.5408.1, https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+      "sources": [],
+      "rm": false,
+      "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB 676.a.5408.1 (torsion [21], is_simple_base = false) is isomorphic over Q to Leprévost's C21 (Magma IsIsomorphic; equal G2-invariants [345025251/5408, -928557/1352, 0]), so the curve is credited to Leprévost 1995. Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [21]; gcd of #J(F_p) over 25 good primes = 21 (sharp); no strict prime below 500; conductor 676 = 2^2 * 13^2.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "1",
+          "3",
+          "3",
+          "1"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          21
+        ],
+        "claimed_class": "split",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "issue",
+        "number": 7,
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/7"
+      },
+      "dates": {
+        "submitted": "2026-10-14",
+        "verified": "2026-10-14 10:49:22 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.29-4",
+        "cputime_seconds": "1.36000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/21.c.log",
+        "conductor_log": "data/logs/21.c.conductor.log",
+        "conductor_cputime_seconds": 0.23
+      }
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
       "id": "22.a",
       "group": [
         22
@@ -11426,6 +11920,254 @@
         "log": "data/logs/27.b.log",
         "conductor_log": "data/logs/27.b.conductor.log",
         "conductor_cputime_seconds": 56.52
+      }
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "27.c",
+      "group": [
+        27
+      ],
+      "group_key": "27",
+      "group_bracket": "[27]",
+      "order": 27,
+      "class": "qsplit",
+      "class_certified": true,
+      "class_text": "split over ℚ",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "9",
+          "-36",
+          "90",
+          "-192",
+          "249",
+          "-60",
+          "4"
+        ],
+        "h": [
+          "0"
+        ],
+        "f_str": "4*x^6 - 60*x^5 + 249*x^4 - 192*x^3 + 90*x^2 - 36*x + 9",
+        "h_str": "0",
+        "g": [
+          "36",
+          "-144",
+          "360",
+          "-768",
+          "996",
+          "-240",
+          "16"
+        ],
+        "g_str": "16*x^6 - 240*x^5 + 996*x^4 - 768*x^3 + 360*x^2 - 144*x + 36",
+        "g_scale": "1",
+        "discriminant": "64621732218373901647872",
+        "discriminant_digits": 23,
+        "igusa_clebsch": [
+          "-953856",
+          "356705648640",
+          "-98351398854328320",
+          "64621732218373901647872"
+        ],
+        "g2_invariants": [
+          "-1564031349/1024",
+          "171810207/512",
+          "10094907/256"
+        ],
+        "rational_weierstrass_points": 0,
+        "minimal_model": {
+          "f": [
+            "10",
+            "-6",
+            "-4",
+            "11",
+            "-1",
+            "-3",
+            "1"
+          ],
+          "h": [
+            "0",
+            "1",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "14693280768",
+        "minimal_discriminant_factored": "2^10 * 3^15",
+        "conductor": "8748",
+        "conductor_factored": "2^2 * 3^7",
+        "conductor_note": "",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "",
+        "kind": "jump",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B9%2C-36%2C90%2C-192%2C249%2C-60%2C4%5D%2C%5B0%5D%5D",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          27
+        ],
+        "order": 27,
+        "generators": [
+          {
+            "order": 27,
+            "mumford": [
+              "x",
+              "2*x^3 - 3",
+              "2"
+            ]
+          }
+        ],
+        "method": "generators",
+        "generators_note": "",
+        "generators_submitted": 1,
+        "point_count_gcd": 27,
+        "point_count_primes": [
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103
+        ],
+        "claimed": [
+          27
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": false,
+        "strict_prime": 0,
+        "chi": "",
+        "primes_tried_below": 500,
+        "admissible_primes": 93,
+        "reducible_chi": 93
+      },
+      "q_simple": {
+        "certified": false,
+        "prime": 0,
+        "chi": ""
+      },
+      "split": {
+        "geometrically_split": true,
+        "split_over_Q": true,
+        "certificate": {
+          "kind": "cover",
+          "over": "Q",
+          "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (648)u^3 + (297)u^2 + (18)u + (1) over Q, (x,y) -> (p/q, y*hh/q^2) with p = x^2 - 2*x + 1, q = 2*x^3 - 15*x^2 - 3, hh = x^3 - 3*x^2 + 15*x + 3; Leprévost 1995, §3.2: the degree-3 map X = (x-1)^2/(2x^3-15x^2-3) onto E1: Y^2 = 648X^3 + 297X^2 + 18X + 1 (54b3), written on the even model y^2 = 4f"
+        },
+        "isogenous_product": null,
+        "cover_submitted": true,
+        "cover_accepted": true,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": true,
+          "primes_checked": 44,
+          "reducible_chi": 44
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "F. Leprévost",
+        "year": 1995,
+        "historical": false
+      },
+      "reference": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, https://doi.org/10.5802/jtnb.144: the curve C27 of Théorème 1.2.1 (p. 293), y^2 = (2x^3 - 15x^2 - 3)(2x^3 - 15x^2 + 12x - 3); §3.2 (p. 302) gives the explicit degree-3 cover onto E1 and shows that its Jacobian is not simple over Q. Not in the production LMFDB.",
+      "sources": [],
+      "rm": false,
+      "notes": "Q-split witness for [27]: the census has only a geometrically simple curve and a Q-simple geometrically split curve (27.b) with this torsion group. Not a new curve: this is Leprévost's C27 (f above is (2x^3 - 15x^2 - 3)(2x^3 - 15x^2 + 12x - 3) expanded). It is not the census curve 27.b (different G2-invariants). Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [27]; gcd of #J(F_p) over 25 good primes = 27 (sharp); no strict prime below 500; conductor (Magma, Ogg's formula at 2) 8748 = 2^2 * 3^7.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "9",
+          "-36",
+          "90",
+          "-192",
+          "249",
+          "-60",
+          "4"
+        ],
+        "h": [
+          "0"
+        ],
+        "claimed_group": [
+          27
+        ],
+        "claimed_class": "split",
+        "cover": {
+          "field": "",
+          "cremona": "",
+          "cubic": [
+            "648",
+            "297",
+            "18",
+            "1"
+          ],
+          "p": [
+            "1",
+            "-2",
+            "1"
+          ],
+          "q": [
+            "-3",
+            "0",
+            "-15",
+            "2"
+          ],
+          "hh": [
+            "3",
+            "15",
+            "-3",
+            "1"
+          ],
+          "note": "Leprévost 1995, §3.2: the degree-3 map X = (x-1)^2/(2x^3-15x^2-3) onto E1: Y^2 = 648X^3 + 297X^2 + 18X + 1 (54b3), written on the even model y^2 = 4f"
+        },
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "issue",
+        "number": 8,
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/8"
+      },
+      "dates": {
+        "submitted": "2026-10-14",
+        "verified": "2026-10-14 10:49:32 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.29-4",
+        "cputime_seconds": "1.35000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/27.c.log",
+        "conductor_log": "data/logs/27.c.conductor.log",
+        "conductor_cputime_seconds": 4.39
       }
     },
     {
@@ -16657,6 +17399,263 @@
     },
     {
       "schema": "genus-2-torsion/curve/1",
+      "id": "2.2.c",
+      "group": [
+        2,
+        2
+      ],
+      "group_key": "2.2",
+      "group_bracket": "[2,2]",
+      "order": 4,
+      "class": "qsplit",
+      "class_certified": true,
+      "class_text": "split over ℚ",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "0",
+          "3",
+          "28",
+          "72",
+          "28",
+          "3"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "f_str": "3*x^5 + 28*x^4 + 72*x^3 + 28*x^2 + 3*x",
+        "h_str": "x^2 + x",
+        "g": [
+          "0",
+          "12",
+          "113",
+          "290",
+          "113",
+          "12"
+        ],
+        "g_str": "12*x^5 + 113*x^4 + 290*x^3 + 113*x^2 + 12*x",
+        "g_scale": "1",
+        "discriminant": "6842880",
+        "discriminant_digits": 7,
+        "igusa_clebsch": [
+          "306056",
+          "27393028",
+          "2746933168904",
+          "985374720"
+        ],
+        "g2_invariants": [
+          "81951056110393451083057/240570",
+          "188813894774599018858/13365",
+          "7001861848004294/9"
+        ],
+        "rational_weierstrass_points": 2,
+        "minimal_model": {
+          "f": [
+            "0",
+            "3",
+            "28",
+            "72",
+            "28",
+            "3"
+          ],
+          "h": [
+            "0",
+            "1",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "240570",
+        "minimal_discriminant_factored": "2 * 3^7 * 5 * 11",
+        "conductor": "990",
+        "conductor_factored": "15 * 66 (product of the elliptic conductors)",
+        "conductor_note": "N(E1) N(E2) = 15 * 66 for the elliptic curves ['1', '1', '1', '-135', '-660'] and ['1', '1', '1', '-22', '-49'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "isogenous product of elliptic curves",
+        "conductor_magma": "990"
+      },
+      "lmfdb": {
+        "label": "990.a.240570.1",
+        "kind": "production",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/990/a/240570/1",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          2,
+          2
+        ],
+        "order": 4,
+        "generators": [
+          {
+            "order": 2,
+            "mumford": [
+              "x",
+              "0",
+              "1"
+            ]
+          },
+          {
+            "order": 2,
+            "mumford": [
+              "x^2 + 19/4*x + 1",
+              "0",
+              "2"
+            ]
+          }
+        ],
+        "method": "TorsionSubgroup",
+        "generators_note": "the submitted generators generate a subgroup of order 4, but the point-count bound is 32; TorsionSubgroup was run",
+        "generators_submitted": 2,
+        "point_count_gcd": 32,
+        "point_count_primes": [
+          7,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107,
+          109
+        ],
+        "claimed": [
+          2,
+          2
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": false,
+        "strict_prime": 0,
+        "chi": "",
+        "primes_tried_below": 500,
+        "admissible_primes": 91,
+        "reducible_chi": 91
+      },
+      "q_simple": {
+        "certified": false,
+        "prime": 0,
+        "chi": ""
+      },
+      "split": {
+        "geometrically_split": true,
+        "split_over_Q": true,
+        "certificate": {
+          "kind": "involution",
+          "over": "Q",
+          "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (z : y : x) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+        },
+        "isogenous_product": {
+          "ainvs": [
+            [
+              "1",
+              "1",
+              "1",
+              "-135",
+              "-660"
+            ],
+            [
+              "1",
+              "1",
+              "1",
+              "-22",
+              "-49"
+            ]
+          ],
+          "conductors": [
+            "15",
+            "66"
+          ],
+          "conductor": "990",
+          "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+        },
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": true,
+          "primes_checked": 42,
+          "reducible_chi": 42
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "year": null,
+        "historical": false
+      },
+      "reference": "LMFDB 990.a.240570.1, https://www.lmfdb.org/Genus2Curve/Q/990/a/240570/1",
+      "sources": [],
+      "rm": false,
+      "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB: torsion [2,2], not simple over Q (is_simple_base = false). Split over Q by the involution (x, y) -> (1/x, y/x^3). Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [2,2]; gcd of #J(F_p) over 25 good primes = 32 (not sharp); no strict prime below 500; conductor 990 = 2 * 3^2 * 5 * 11.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "0",
+          "3",
+          "28",
+          "72",
+          "28",
+          "3"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          2,
+          2
+        ],
+        "claimed_class": "split",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "issue",
+        "number": 5,
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/5"
+      },
+      "dates": {
+        "submitted": "2026-10-14",
+        "verified": "2026-10-14 10:49:12 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.29-4",
+        "cputime_seconds": "1.43000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/2.2.c.log",
+        "conductor_log": "data/logs/2.2.c.conductor.log",
+        "conductor_cputime_seconds": 0.35
+      }
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
       "id": "2.4.a",
       "group": [
         2,
@@ -18605,6 +19604,267 @@
         "log": "data/logs/2.10.b.log",
         "conductor_log": "data/logs/2.10.b.conductor.log",
         "conductor_cputime_seconds": 0.0700001
+      }
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "2.10.c",
+      "group": [
+        2,
+        10
+      ],
+      "group_key": "2.10",
+      "group_bracket": "[2,10]",
+      "order": 20,
+      "class": "qsplit",
+      "class_certified": true,
+      "class_text": "split over ℚ",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "0",
+          "2",
+          "4",
+          "2",
+          "0",
+          "1"
+        ],
+        "h": [
+          "1",
+          "0",
+          "1"
+        ],
+        "f_str": "x^5 + 2*x^3 + 4*x^2 + 2*x",
+        "h_str": "x^2 + 1",
+        "g": [
+          "1",
+          "8",
+          "18",
+          "8",
+          "1",
+          "4"
+        ],
+        "g_str": "4*x^5 + x^4 + 8*x^3 + 18*x^2 + 8*x + 1",
+        "g_scale": "1",
+        "discriminant": "-3066624",
+        "discriminant_digits": 7,
+        "igusa_clebsch": [
+          "1376",
+          "-49088",
+          "-33691712",
+          "-49065984"
+        ],
+        "g2_invariants": [
+          "-150536645632/11979",
+          "-8874253312/11979",
+          "-1356160144/11979"
+        ],
+        "rational_weierstrass_points": 3,
+        "minimal_model": {
+          "f": [
+            "0",
+            "-1",
+            "0",
+            "-2",
+            "4",
+            "-2"
+          ],
+          "h": [
+            "0",
+            "1",
+            "0",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "-11979",
+        "minimal_discriminant_factored": "-1 * 3^2 * 11^3",
+        "conductor": "363",
+        "conductor_factored": "3 * 11^2",
+        "conductor_note": "",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "363.a.11979.1",
+        "kind": "production",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          2,
+          10
+        ],
+        "order": 20,
+        "generators": [
+          {
+            "order": 2,
+            "mumford": [
+              "x + 1",
+              "0",
+              "1"
+            ]
+          },
+          {
+            "order": 10,
+            "mumford": [
+              "x^2 - 5*x - 2",
+              "-25*x - 9",
+              "2"
+            ]
+          }
+        ],
+        "method": "TorsionSubgroup",
+        "generators_note": "the submitted generators generate a subgroup of order 20, but the point-count bound is 40; TorsionSubgroup was run",
+        "generators_submitted": 2,
+        "point_count_gcd": 40,
+        "point_count_primes": [
+          5,
+          7,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107
+        ],
+        "claimed": [
+          2,
+          10
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": false,
+        "strict_prime": 0,
+        "chi": "",
+        "primes_tried_below": 500,
+        "admissible_primes": 92,
+        "reducible_chi": 92
+      },
+      "q_simple": {
+        "certified": false,
+        "prime": 0,
+        "chi": ""
+      },
+      "split": {
+        "geometrically_split": true,
+        "split_over_Q": true,
+        "certificate": {
+          "kind": "cover",
+          "over": "Q",
+          "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (1)u^3 + (5)u^2 + (3)u + (7) over Q, (x,y) -> (p/q, y*hh/q^2) with p = 4*x^3 + x + 1, q = 4*x^2 + 5*x + 1, hh = 8*x^3 + 24*x^2 + 16*x + 4; degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission"
+        },
+        "isogenous_product": null,
+        "cover_submitted": true,
+        "cover_accepted": true,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": true,
+          "primes_checked": 43,
+          "reducible_chi": 43
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "year": null,
+        "historical": false
+      },
+      "reference": "LMFDB 363.a.11979.1, https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+      "sources": [],
+      "rm": false,
+      "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB: torsion [2,10], not simple over Q (is_simple_base = false); J ~ 11a x 33a over Q, glued along their 3-torsion (a_p(11a) = a_p(33a) mod 3). The cover above is a degree-3 map u = (4x^3 + x + 1)/((4x + 1)(x + 1)) onto 11a3, found by solving for the ramification of a degree-3 elliptic subcover whose fibre over the origin is the three Weierstrass points over the roots of (4x + 1)(x + 1) and infinity. Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [2,10]; gcd of #J(F_p) over 25 good primes = 40 (not sharp); no strict prime below 500; conductor 363 = 3 * 11^2.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "0",
+          "2",
+          "4",
+          "2",
+          "0",
+          "1"
+        ],
+        "h": [
+          "1",
+          "0",
+          "1"
+        ],
+        "claimed_group": [
+          2,
+          10
+        ],
+        "claimed_class": "split",
+        "cover": {
+          "field": "",
+          "cremona": "",
+          "cubic": [
+            "1",
+            "5",
+            "3",
+            "7"
+          ],
+          "p": [
+            "1",
+            "1",
+            "0",
+            "4"
+          ],
+          "q": [
+            "1",
+            "5",
+            "4"
+          ],
+          "hh": [
+            "4",
+            "16",
+            "24",
+            "8"
+          ],
+          "note": "degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission"
+        },
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "issue",
+        "number": 6,
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/6"
+      },
+      "dates": {
+        "submitted": "2026-10-14",
+        "verified": "2026-10-14 10:49:17 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.29-4",
+        "cputime_seconds": "1.43000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/2.10.c.log",
+        "conductor_log": "data/logs/2.10.c.conductor.log",
+        "conductor_cputime_seconds": 0.16
       }
     },
     {

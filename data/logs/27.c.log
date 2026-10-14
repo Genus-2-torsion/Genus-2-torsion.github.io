@@ -1,0 +1,8 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (0) y = 4*x^6 - 60*x^5 + 249*x^4 - 192*x^3 + 90*x^2 - 36*x + 9; working model y^2 = 16*x^6 - 240*x^5 + 996*x^4 - 768*x^3 + 360*x^2 - 144*x + 36
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 27 (p = [ 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103 ])
+[0.0600000 s] J(Q)_tors = [ 27 ]: the 1 submitted generators are independent torsion points generating a group of order 27 = gcd #J(F_p)
+[1.05000 s] no strict prime below 500 (93 admissible primes, 93 with reducible chi)
+[1.17000 s] split over Q: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (648)u^3 + (297)u^2 + (18)u + (1) over Q, (x,y) -> (p/q, y*hh/q^2) with p = x^2 - 2*x + 1, q = 2*x^3 - 15*x^2 - 3, hh = x^3 - 3*x^2 + 15*x + 3; Leprévost 1995, §3.2: the degree-3 map X = (x-1)^2/(2x^3-15x^2-3) onto E1: Y^2 = 648X^3 + 297X^2 + 18X + 1 (54b3), written on the even model y^2 = 4f
+[1.17000 s] class: qsplit
+[1.35000 s] VERIFY_DONE

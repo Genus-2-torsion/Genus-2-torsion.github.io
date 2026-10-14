@@ -1,0 +1,245 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "21.c",
+  "group": [
+    21
+  ],
+  "group_key": "21",
+  "group_bracket": "[21]",
+  "order": 21,
+  "class": "qsplit",
+  "class_certified": true,
+  "class_text": "split over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "1",
+      "3",
+      "3",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1",
+      "1"
+    ],
+    "f_str": "x^3 + 3*x^2 + 3*x + 1",
+    "h_str": "x^3 + x^2 + x",
+    "g": [
+      "4",
+      "12",
+      "13",
+      "6",
+      "3",
+      "2",
+      "1"
+    ],
+    "g_str": "x^6 + 2*x^5 + 3*x^4 + 6*x^3 + 13*x^2 + 12*x + 4",
+    "g_scale": "1",
+    "discriminant": "-22151168",
+    "discriminant_digits": 8,
+    "igusa_clebsch": [
+      "-408",
+      "13092",
+      "-1289688",
+      "-22151168"
+    ],
+    "g2_invariants": [
+      "345025251/5408",
+      "-928557/1352",
+      "0"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "0",
+        "1",
+        "2",
+        "1",
+        "2",
+        "1"
+      ],
+      "h": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-5408",
+    "minimal_discriminant_factored": "-1 * 2^5 * 13^2",
+    "conductor": "676",
+    "conductor_factored": "26 * 26 (product of the elliptic conductors)",
+    "conductor_note": "N(E1) N(E2) = 26 * 26 for the elliptic curves ['1', '0', '1', '0', '0'] and ['1', '-1', '1', '-3', '3'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "isogenous product of elliptic curves",
+    "conductor_magma": "676"
+  },
+  "lmfdb": {
+    "label": "676.a.5408.1",
+    "kind": "production",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      21
+    ],
+    "order": 21,
+    "generators": [
+      {
+        "order": 21,
+        "mumford": [
+          "1",
+          "x^3 + x^2",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 1,
+    "point_count_gcd": 21,
+    "point_count_primes": [
+      3,
+      5,
+      7,
+      11,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103
+    ],
+    "claimed": [
+      21
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 93,
+    "reducible_chi": 93
+  },
+  "q_simple": {
+    "certified": false,
+    "prime": 0,
+    "chi": ""
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": true,
+    "certificate": {
+      "kind": "involution",
+      "over": "Q",
+      "detail": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x : y : -x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q"
+    },
+    "isogenous_product": {
+      "ainvs": [
+        [
+          "1",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "-1",
+          "1",
+          "-3",
+          "3"
+        ]
+      ],
+      "conductors": [
+        "26",
+        "26"
+      ],
+      "conductor": "676",
+      "note": "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 44,
+      "reducible_chi": 44
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "F. Leprévost",
+    "year": 1995,
+    "historical": false
+  },
+  "reference": "F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, https://doi.org/10.5802/jtnb.144: the curve C21 of §2.1 (Théorème 1.2.1), y^2 = 4x^6 - 12x^5 + 13x^4 - 6x^3 + 3x^2 - 2x + 1, shown in §3.2 to be isogenous over Q to E1 x E2 (points of order 3 and 7). This model is LMFDB 676.a.5408.1, https://www.lmfdb.org/Genus2Curve/Q/676/a/5408/1",
+  "sources": [],
+  "rm": false,
+  "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB 676.a.5408.1 (torsion [21], is_simple_base = false) is isomorphic over Q to Leprévost's C21 (Magma IsIsomorphic; equal G2-invariants [345025251/5408, -928557/1352, 0]), so the curve is credited to Leprévost 1995. Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [21]; gcd of #J(F_p) over 25 good primes = 21 (sharp); no strict prime below 500; conductor 676 = 2^2 * 13^2.",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "1",
+      "3",
+      "3",
+      "1"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      21
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "issue",
+    "number": 7,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/7"
+  },
+  "dates": {
+    "submitted": "2026-10-14",
+    "verified": "2026-10-14 10:49:22 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.29-4",
+    "cputime_seconds": "1.36000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/21.c.log",
+    "conductor_log": "data/logs/21.c.conductor.log",
+    "conductor_cputime_seconds": 0.23
+  }
+}

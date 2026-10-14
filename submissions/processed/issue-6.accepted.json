@@ -1,0 +1,62 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "x^5 + 2*x^3 + 4*x^2 + 2*x",
+  "h": "x^2 + 1",
+  "group": [
+    2,
+    10
+  ],
+  "class": "split",
+  "generators": [
+    [
+      "x + 1/4",
+      "0",
+      1
+    ],
+    [
+      "x^2 - 5*x - 2",
+      "-25*x - 9",
+      2
+    ]
+  ],
+  "cover": {
+    "field": "",
+    "cubic": [
+      1,
+      5,
+      3,
+      7
+    ],
+    "p": [
+      1,
+      1,
+      0,
+      4
+    ],
+    "q": [
+      1,
+      5,
+      4
+    ],
+    "hh": [
+      4,
+      16,
+      24,
+      8
+    ],
+    "note": "degree-3 map from the even model y^2 = 4x^5 + x^4 + 8x^3 + 18x^2 + 8x + 1 onto v^2 = u^3 + 5u^2 + 3u + 7 (the elliptic curve 11a3), computed for this submission"
+  },
+  "submitter": "Filip Najman",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "reference": "LMFDB 363.a.11979.1, https://www.lmfdb.org/Genus2Curve/Q/363/a/11979/1",
+  "discoverer": "LMFDB genus 2 database (BSSVY 2016)",
+  "year": "",
+  "notes": "Q-split witness: the census has only geometrically simple and Q-simple (geometrically split) curves with this torsion group. Not a new curve. LMFDB: torsion [2,10], not simple over Q (is_simple_base = false); J ~ 11a x 33a over Q, glued along their 3-torsion (a_p(11a) = a_p(33a) mod 3). The cover above is a degree-3 map u = (4x^3 + x + 1)/((4x + 1)(x + 1)) onto 11a3, found by solving for the ramification of a degree-3 elliptic subcover whose fibre over the origin is the three Weierstrass points over the roots of (4x + 1)(x + 1) and infinity. Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [2,10]; gcd of #J(F_p) over 25 good primes = 40 (not sharp); no strict prime below 500; conductor 363 = 3 * 11^2.",
+  "date": "2026-10-14",
+  "source": {
+    "kind": "issue",
+    "number": 6,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/6"
+  }
+}

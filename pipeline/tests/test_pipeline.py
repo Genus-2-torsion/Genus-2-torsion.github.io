@@ -64,7 +64,7 @@ class ValidateTests(unittest.TestCase):
 class KnowledgeTests(unittest.TestCase):
     def test_sources_exist(self):
         for side in ("simple", "split"):
-            for key in list(knowledge._SIMPLE_EXACT) + list(knowledge._SIMPLE_FAMILY) + list(knowledge._SPLIT_FAMILY):
+            for key in list(knowledge._SIMPLE_EXACT) + list(knowledge._SIMPLE_FAMILY) + list(knowledge._SPLIT_FAMILY) + list(knowledge._SPLIT_EXACT):
                 rec = knowledge.infinite_record(side, key)
                 self.assertIn(rec["grade"], ("exact", "family", "open"))
                 for s in rec["sources"]:
@@ -85,10 +85,10 @@ class KnowledgeTests(unittest.TestCase):
         self.assertTrue(recorded <= set(t1) | after_paper, recorded - set(t1) - after_paper)
         # 39 of the record, minus [15] (containment only) and [4,8] (no certificate), plus the trivial group and
         # the groups certified here: [2,2,2,12], [3,12], [19], and the residue-class families of 2026-10-13
-        # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14]
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 52)
+        # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14], and [2,4,4] (2026-10-14)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 53)
         self.assertEqual(len(knowledge._SIMPLE_FAMILY), 0)
-        for key in ("13", "15", "16", "17", "19", "24", "25", "26", "2.14", "2.16", "2.2.8", "2.2.14", "2.2.2.12"):
+        for key in ("13", "15", "16", "17", "19", "24", "25", "26", "2.14", "2.16", "2.2.8", "2.2.14", "2.2.2.12", "2.4.4"):
             self.assertEqual(knowledge.infinite_record("simple", key)["grade"], "exact", key)
         self.assertEqual(knowledge.infinite_record("simple", "4.8")["grade"], "open")
         t2 = []
@@ -100,6 +100,14 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
         self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
         self.assertEqual(knowledge.infinite_record("split", "2")["grade"], "family")             # inherited
+        # split side: [8,8] certified here (family_88_split_certificate.log)
+        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8"])
+        self.assertEqual(knowledge.infinite_record("split", "8.8")["grade"], "exact")
+        for key in ("2.4.4", "8.8"):
+            side = "simple" if key == "2.4.4" else "split"
+            name = "family_244_certificate.log" if key == "2.4.4" else "family_88_split_certificate.log"
+            self.assertIn(name, knowledge.infinite_record(side, key)["note"])
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / name).exists(), name)
 
     def test_subgroups(self):
         self.assertTrue(knowledge.is_subgroup([16], [32]) and knowledge.is_subgroup([2, 2, 6], [2, 2, 2, 6]) and knowledge.is_subgroup([], [2]))

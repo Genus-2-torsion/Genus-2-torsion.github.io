@@ -1,0 +1,16 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_m: y^2 = f(x) = F(x^2); F is palindromic, so phi1(x,y) = (x^2, y) and phi2(x,y) = (1/x^2, y/x^3) map C_m to E': Y^2 = F(u)
+E'[2]: u = -1 and the two roots of the irreducible palindromic quadratic 16m^8(u+1)^2 - N^2 u (swapped by u -> 1/u)
+E_t (Kubert X_1(8), t = m^2/(m^2+1), t(1-t) a square) -> E': (X, Y) -> (c1 X + c0, kk Y) is an isomorphism over Q(m)
+P' = ((-1/4*m^8 + m^6 + 1/2*m^4 - 1/4)/m^2, (1/4*m^20 - 2*m^18 + 11/4*m^16 + 4*m^14 + 13/2*m^12 - 13/2*m^8 - 4*m^6 - 11/4*m^4 + 2*m^2 - 1/4)/m^2)
+over Q(m): A = phi1^*P' and B = phi2^*P' have order 8, and 4A = 4B
+D = (x^2 + (1/2*m^8 - 2*m^6 - m^4 - 2*m^2 + 1/2)/(m^5 - 2*m^2 - m)*x + 1, (1/2*m^24 - 6*m^22 - m^21 + 21*m^20 + 8*m^19 - 12*m^18 - 11*m^17 - 17/2*m^16 - 16*m^15 - 84*m^14 - 26*m^13 - 42*m^12 - 32*m^10 + 26*m^9 + 47/2*m^8 + 16*m^7 + 10*m^6 + 11*m^5 + 5*m^4 - 8*m^3 - 4*m^2 + m + 1/2)/(m^9 - 4*m^6 - 2*m^5 + 4*m^3 + 4*m^2 + m)*x + (m^16 - 8*m^14 + 12*m^12 + 8*m^10 + 38*m^8 + 8*m^6 + 12*m^4 - 8*m^2 + 1)/(m^4 - 2*m - 1), 2)
+over Q(m): 2D = A + B, and the 64 sums iA + jD are distinct: [8,8] is marked
+E_t/<4P> has full rational 2-torsion and a point of order 8 over Q(m): 16 | #E'(F_p), 256 | #J(F_p) at every good p
+p = 13, m = 2 mod 13: reduction 8*Pp.1^6 + 6*Pp.1^4 + 6*Pp.1^2 + 8 (squarefree, degree 6), J(F_13) = [ 16, 16 ] (order 256), chi = X^4 + 4*X^3 + 30*X^2 + 52*X + 169 = (X^2 + 2*X + 13)^2, #E'(F_13) = 16
+p = 337, m = 2 mod 337: reduction 85*Pp.1^6 + 228*Pp.1^4 + 228*Pp.1^2 + 85 (squarefree, degree 6), J(F_337) = [ 8, 8, 40, 40 ] (order 102400), chi = X^4 - 36*X^3 + 998*X^2 - 12132*X + 113569 = (X^2 - 18*X + 337)^2, #E'(F_337) = 320
+odd parts [ 1, 25 ] (gcd 1); 2-ranks [ 2, 4 ] (min 2); 2-primary exponents 2^[ 4, 3 ] (min 2^3)
+J_m(Q)_tors embeds in both: a 2-group of 2-rank <= 2 and exponent <= 8, so of order <= 64 = #<A, D>
+sanity: m = 2 (t = 4/5) has TorsionSubgroup [ 8, 8 ]
+G2-invariants of the members [ 2, 4383, -4379, 4383/4382 ] are not all equal
+FAMILY_88_SPLIT_CERTIFIED: infinitely many geometrically split Jacobians (split over Q, isogenous to E x E) with J(Q)_tors exactly [8,8]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14 10:49 UTC",
+  "generated": "2026-10-14 11:00 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -14,6 +14,13 @@
       "cite": "J. S. Balakrishnan, F. Najman, A. Shnidman, A. V. Sutherland, Genus2Torsion GitHub repository (verification scripts and machine-readable tables), https://github.com/AndrewVSutherland/Genus2Torsion, 2026.",
       "url": "https://github.com/AndrewVSutherland/Genus2Torsion",
       "used_for": "table1.txt, table2.txt (copied to data/knowledge/sources/), the geometric-simplicity criterion and the explicit covers used as splitness certificates"
+    },
+    "Genus2TorsionNotebook": {
+      "short": "Genus2TorsionNotebook repository",
+      "year": 2026,
+      "cite": "J. S. Balakrishnan, F. Najman, A. Shnidman, A. V. Sutherland, Genus2TorsionNotebook GitHub repository (the project's lab notebook), https://github.com/AndrewVSutherland/Genus2TorsionNotebook, 2026.",
+      "url": "https://github.com/AndrewVSutherland/Genus2TorsionNotebook",
+      "used_for": "the member formula of Nicholls' family Λ₃₃₄ (notes/claude_ov_88_2026_07_25.md, code/claude_ov_88verify.m) used for the [2,4,4] certificate, and the conjugation self-gluing of the X₁(8) curve (notes/claude_split_2266_1212_session_2026_08_13.md, §2.1) used for the split [8,8] certificate"
     },
     "Najman2026": {
       "short": "Najman 2026 (unpublished)",
@@ -34,7 +41,7 @@
       "year": 2026,
       "cite": "Computation for this census on the Mordell workstation (Magma V2.29-4); script and log in the repository.",
       "url": "data/knowledge/sources/",
-      "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log, and the residue-class certificates family_13, _15, _16, _17, _24, _25, _26, _214, _216, _228, _2214_certificate.log of 2026-10-13 (scripts in pipeline/magma/, shared argument in family_cert_lib.m)"
+      "used_for": "family certificates computed for this census: trivial_torsion_family.log, family_2_certificate.log, family_22212_certificate.log, family_312_certificate.log, family_19_certificate.log, and the residue-class certificates family_13, _15, _16, _17, _24, _25, _26, _214, _216, _228, _2214_certificate.log of 2026-10-13 (scripts in pipeline/magma/, shared argument in family_cert_lib.m); family_244_certificate.log (simple [2,4,4]) and family_88_split_certificate.log (split [8,8])"
     },
     "HLP2000": {
       "short": "Howe–Leprévost–Poonen 2000",
@@ -195,7 +202,7 @@
       "year": 2018,
       "cite": "C. Nicholls, Descent methods and torsion on Jacobians of higher genus curves, DPhil thesis, University of Oxford, 2018.",
       "url": "https://doi.org/10.5287/ora-z58j05keq",
-      "used_for": "seed curve ([25])"
+      "used_for": "seed curve ([25]); the family Λ₃₃₄ with a marked (ℤ/4)² (the [2,4,4] certificate)"
     },
     "costa": {
       "short": "Costa et al. (ModularAbelianSurfaces)",

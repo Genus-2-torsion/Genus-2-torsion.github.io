@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14 10:52 UTC",
+  "generated": "2026-10-14 11:00 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,13 +38,13 @@
   "n_groups_any_split": 77,
   "n_infinite": {
     "simple": {
-      "exact": 52,
-      "family": 4,
+      "exact": 53,
+      "family": 3,
       "open": 39
     },
     "split": {
-      "exact": 0,
-      "family": 53,
+      "exact": 1,
+      "family": 52,
       "open": 42
     }
   },
@@ -198,10 +198,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "20"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -360,10 +361,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "20"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -732,10 +734,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "20"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -1369,10 +1372,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [40], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "40"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -6302,10 +6306,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.24"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -6461,10 +6466,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.24"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -6779,10 +6785,11 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.24"
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "8.8"
         }
       }
     },
@@ -9326,9 +9333,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded (see that group)",
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
           "inherited_from": "8.8"
         }
       }
@@ -9485,9 +9493,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded (see that group)",
+          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
           "inherited_from": "8.8"
         }
       }
@@ -10477,11 +10486,12 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "HLP2000"
+            "ThisSite",
+            "Genus2TorsionNotebook"
           ],
-          "note": "HLP 2000, Theorem 1: a family of genus-2 curves over ℚ with split Jacobians whose torsion contains the group, parametrised by the rational points of a non-empty open subset of a ℙ²",
+          "note": "the conjugation self-gluing of the X₁(8) curve E_t at t = m²/(m² + 1) (Genus2TorsionNotebook): with N = m⁸ − 4m⁶ − 2m⁴ − 4m² + 1 and F(u) = −N(u + 1)(16m⁸(u + 1)² − N²u), C_m: y² = F(x²); (x, y) ↦ (x², y) and (x, y) ↦ (1/x², y/x³) map C_m onto E′: Y² = F(u) ≅ E_t, so J(C_m) is isogenous over ℚ to E′ × E′. [8,8] is marked over ℚ(m). Here #J(𝔽_p) = #E′(𝔽_p)² is always divisible by 256, so the group structure is used instead: every m ≡ 2 (mod 4381) has the reductions of m = 2 at 13 and 337, with J(𝔽₁₃) = (ℤ/16)² (no odd part, 2-rank 2) and J(𝔽₃₃₇) = [8,8,40,40] (2-primary exponent 8), so J(ℚ)_tors is exactly [8,8] (family_88_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -12020,13 +12030,14 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Najman2026",
-            "BNSS2026"
+            "ThisSite",
+            "Nicholls2018",
+            "Genus2TorsionNotebook"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,4,4], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.4.4"
+          "note": "Nicholls' family Λ₃₃₄ (as built in the Genus2TorsionNotebook), on its rational locus where l₃ = x² − a splits (a = w², w = (m²t² − t⁴ + t²)/((m² + t² − 1)t), s = m(w − t)), slice t = m = 2 with parameter v: two order-4 classes from halving identities F = cu² + Rl² for R = l₃ and R = l₂, so [2,4,4] is marked over ℚ(v). Every v ≡ 2 (mod 589) has the reductions of v = 2 at 19 and 31: #J(𝔽₁₉) = 288, #J(𝔽₃₁) = 1088, gcd 32 = #[2,4,4], strict at 31 (family_244_certificate.log)",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",

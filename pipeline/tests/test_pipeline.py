@@ -137,6 +137,34 @@ class AcceptanceTests(unittest.TestCase):
                 verify.validate({"f": "x^5+1", "generators": bad})
 
 
+class CreditTests(unittest.TestCase):
+    def test_seed_credit_matches_import(self):
+        """The seed certificates carry the sources and the curve credit that import_paper.py assigns
+        (the Source(s) column dates the group; discovery.by credits the curve: errata of 2026-10-14)."""
+        import import_paper
+        keys = {}
+        for table, fn in (("t1", "table1.txt"), ("t2", "table2.txt")):
+            for i, (_, parts) in enumerate(import_paper.rows(fn), 1):
+                keys[f"paper-{table}-{i:03d}"] = knowledge.parse_source_column(parts[4].strip())[0]
+        for name in list(import_paper.CURVE_CREDIT) + list(import_paper.SOURCES_OVERRIDE):
+            self.assertIn(name, keys)
+        for k in [k for v in list(import_paper.CURVE_CREDIT.values()) + list(import_paper.SOURCES_OVERRIDE.values()) for k in v]:
+            self.assertIn(k, knowledge.SOURCES)
+        n = 0
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            c = read_json(p)
+            src = c.get("source") or {}
+            if src.get("kind") != "import":
+                continue
+            n += 1
+            sources, who = import_paper.credit(src["name"], keys[src["name"]])
+            self.assertEqual((c["sources"], c["discovery"]["by"]), (sources, who), c["id"])
+        self.assertEqual(n, 150)
+        # 27.b is Howe's curve, not Leprévost's C27 (which is the Q-split 27.c)
+        self.assertEqual(read_json(CURVES_DIR / "27.b.json")["sources"], ["Howe2015"])
+        self.assertNotIn("Leprévost", read_json(CURVES_DIR / "24.b.json")["discovery"]["by"])
+
+
 class CertificateTests(unittest.TestCase):
     def test_certificates_consistent(self):
         """Every certificate in data/curves/ is internally consistent."""

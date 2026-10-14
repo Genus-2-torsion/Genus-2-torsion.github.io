@@ -20,6 +20,7 @@ import_paper.py (seed tables)
 | `magma/family_2_certificate.m`, `magma/family_22212_certificate.m` | the exact-infinitude certificates computed for this site (logs in `data/knowledge/sources/`). |
 | `magma/prepare_submission.m` | for submitters: run locally, prints the submission JSON (curve, torsion group + generators on the even model, class guess, conductor). |
 | `magma/trivial_torsion_family.m` | the family certificate for the trivial group (log in `data/knowledge/sources/`). |
+| `magma/attribution_check.m` | compares disputed census curves with the curves printed in their cited sources (G2-invariants, isomorphism over ℚ); backs the credit errata of 2026-10-14 in `PROVENANCE.md` (log in `data/knowledge/sources/`). |
 | `tests/` | `test_pipeline.py` (Python contract tests, run by CI), `run_magma_tests.sh` + `fixtures/` (known positives and negative controls for the Magma verifier; run by hand). |
 
 ## Running by hand

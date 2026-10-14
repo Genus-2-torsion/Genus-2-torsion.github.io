@@ -167,13 +167,13 @@
   },
   "geometrically_isomorphic_to": [],
   "discovery": {
-    "by": "Leprévost 1995",
+    "by": "Howe 2015",
     "year": null,
     "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 22 (source: \\cite{Leprevost1995})",
   "sources": [
-    "Leprevost1995"
+    "Howe2015"
   ],
   "rm": false,
   "notes": "",

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14 10:49 UTC",
+  "generated": "2026-10-14 10:52 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -3112,7 +3112,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -3691,7 +3691,7 @@
               "Leprevost1995"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1995",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "Leprevost1995",
@@ -4160,14 +4160,14 @@
               "snapshot_label": "7776.e.2"
             },
             "sources": [
-              "Leprevost1995"
+              "Howe2015"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1995",
+            "discovered_by": "Howe 2015",
             "year": null,
             "historical": false,
-            "first_source": "Leprevost1995",
-            "first_source_year": 1995,
+            "first_source": "Howe2015",
+            "first_source_year": 2015,
             "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 22 (source: \\cite{Leprevost1995})",
             "new_group": false,
@@ -4189,7 +4189,7 @@
       "first_source": {
         "simple": "Howe2015",
         "qsplit": null,
-        "gsplit": "Leprevost1995",
+        "gsplit": "Howe2015",
         "undecided": null
       },
       "known": {
@@ -4584,7 +4584,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -5110,7 +5110,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -5525,7 +5525,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -5628,7 +5628,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -5839,7 +5839,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -7101,7 +7101,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -7953,7 +7953,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -8851,7 +8851,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -9011,7 +9011,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -9961,7 +9961,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -10118,7 +10118,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -10224,7 +10224,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -10432,7 +10432,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -11823,7 +11823,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -12141,7 +12141,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -12250,7 +12250,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",
@@ -13428,7 +13428,7 @@
               "HLP2000"
             ],
             "rm": false,
-            "discovered_by": "Howe–Leprévost–Poonen 2000",
+            "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
             "year": null,
             "historical": false,
             "first_source": "HLP2000",

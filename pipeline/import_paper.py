@@ -5,7 +5,8 @@ Usage:  python3 pipeline/import_paper.py [--only-new]
 
 Writes submissions/inbox/paper-t1-NNN.json (Table 1: geometrically simple) and paper-t2-NNN.json
 (Table 2: geometrically split) with the curve, the group of the table, the class, the LMFDB label
-of the table (a 2026-08 snapshot; re-resolved by the verifier), the citation keys, and for the
+of the table (a 2026-08 snapshot; re-resolved by the verifier), the citation keys of the Source(s)
+column (which date the group) and the credit of the curve itself (see `credit`), and for the
 COVER rows of Table 2 the explicit genus-1 cover transcribed from verify_split_certificates.m
 (data/knowledge/sources/Genus2Torsion_covers.json).  The verifier then re-derives everything.
 """
@@ -23,6 +24,56 @@ from common import CURVES_DIR, KNOWLEDGE_DIR, SCHEMA_SUBMISSION, SUBMISSIONS_INB
 
 TABLE_URL = "https://github.com/AndrewVSutherland/Genus2Torsion/blob/508852a150e17c00b84b209fee23300df897871d/"
 TABLE_DATE = "2026-08-30"
+
+# Credit.  The Source(s) column of the paper's tables dates the *group*: it names the first known
+# source of a realisation, which may give only a family whose torsion contains the group, or a
+# different curve (see the "Source(s) column" paragraphs of the companion tables
+# torsion_jac/paper/old/torsion_realizations.tex and split_torsion_table.tex).  It is kept, as citation
+# keys, in "sources".  "discoverer" (discovery.by of the certificate) credits the displayed curve
+# itself, which is usually the smallest-conductor curve of a database.  It defaults to the Source
+# column; the rows below are those where the curve is known to come from elsewhere (errata of
+# 2026-10-14 in data/knowledge/sources/PROVENANCE.md, check in data/knowledge/sources/attribution_check.log).
+# The default is UNVERIFIED for the other rows: for most Table 1 rows the curve is a database curve
+# while the column names the group's first source.
+DISCOVERER_TEXT = {"BSSVY": "LMFDB genus 2 database (BSSVY 2016)",
+                   "BookerSutherland": "Booker–Sutherland (extended database)"}
+CURVE_CREDIT = {
+    # split companion "HLP2000†, <witness>": HLP 2000 give a family with torsion containing the group
+    # (containment only); the exact witness is a database curve ...
+    "paper-t2-018": ["BookerSutherland"],   # [20]      363.a.3
+    "paper-t2-024": ["BookerSutherland"],   # [30]      4356.j.1
+    "paper-t2-025": ["BookerSutherland"],   # [35]      7436.a.2
+    "paper-t2-027": ["BookerSutherland"],   # [40]      3168.i.1
+    "paper-t2-030": ["BookerSutherland"],   # [60]      13500.r.4
+    "paper-t2-038": ["BSSVY"],              # [2,12]    450.a.36450.1
+    "paper-t2-043": ["BookerSutherland"],   # [2,24]    1440.c.2
+    "paper-t2-049": ["BookerSutherland"],   # [3,12]    2700.c.1
+    "paper-t2-056": ["BookerSutherland"],   # [5,10]    85500.cj.1
+    "paper-t2-057": ["BSSVY"],              # [6,6]     196.a.21952.1 (= X0(28))
+    "paper-t2-070": ["BookerSutherland"],   # [2,4,8]   573300.ir.1
+    "paper-t2-071": ["BookerSutherland"],   # [2,6,6]   132300.eo.2
+    # ... or a curve constructed in the paper ("HLP2000†, new")
+    "paper-t2-028": ["BNSS2026"],           # [45]
+    "paper-t2-058": ["BNSS2026"],           # [6,12]
+    "paper-t2-060": ["BNSS2026"],           # [8,8]
+    "paper-t2-068": ["BNSS2026"],           # [2,2,24]
+    "paper-t2-077": ["BNSS2026"],           # [2,2,4,8]
+    # [3,9]: companion "Leprevost1995†, BSSVY"; the curve is the production curve 2916.a.139968.1
+    "paper-t2-048": ["BSSVY"],
+    # [24]: 300.a.1 is neither of Leprévost's curves C24,1 and C24,2 (G2-invariants); extended database
+    "paper-t2-020": ["BookerSutherland"],
+}
+# [27]: 7776.e.2 is not Leprévost's C27 (which is split over Q, census 27.c) but the order-27 curve
+# y^2 + (6x^3+9x^2+6x-1)y = -3x^2 marked "New" in Table 2 of Howe 2015; Leprévost 1995 has no curve
+# in this class (simple over Q, geometrically split), so the group-level source is replaced as well.
+SOURCES_OVERRIDE = {"paper-t2-022": ["Howe2015"]}
+
+
+def credit(name: str, keys: list[str]) -> tuple[list[str], str]:
+    """(sources, discoverer) of the seed row `name` whose Source(s) column gave the keys `keys`."""
+    sources = SOURCES_OVERRIDE.get(name, keys)
+    who = CURVE_CREDIT.get(name, sources)
+    return sources, "; ".join(DISCOVERER_TEXT.get(k, knowledge.SOURCES[k]["short"]) for k in who if k in knowledge.SOURCES)
 
 
 def rows(fn: str):
@@ -65,15 +116,16 @@ def main():
             name = f"paper-{table}-{i:03d}"
             if args.only_new and already_done(name):
                 continue
+            sources, discoverer = credit(name, keys)
             sub = {
                 "schema": SCHEMA_SUBMISSION,
                 "coeffs": [f, h],
                 "group": group,
                 "class": cls,
                 "lmfdb_label": "" if label == "-" else label,
-                "sources": keys,
+                "sources": sources,
                 "rm": rm,
-                "discoverer": "; ".join(knowledge.SOURCES[k]["short"] for k in keys if k in knowledge.SOURCES),
+                "discoverer": discoverer,
                 "reference": f"Balakrishnan–Najman–Shnidman–Sutherland 2026, Table {1 if table == 't1' else 2}, row {i}"
                              + (f" (source: {source_col})" if source_col else ""),
                 "notes": "" if comment in ("-", "") else comment,

@@ -27,6 +27,54 @@ derives from them are in `pipeline/knowledge.py`, which cites them by key.
 | `family_216_certificate.log` | produced here by `pipeline/magma/family_216_certificate.m` (shared argument in `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of geometrically simple [2,16]: the [16] family at s = 3/4 + u², u ≡ 1 (mod 5) with #J(𝔽₅) = 32, strict (found in the notes review of 2026-10-13, torsion_jac/notes/review_of_notes_2026_10_13.md) |
 | `family_228_certificate.log` | produced here by `pipeline/magma/family_228_certificate.m` (shared argument in `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of geometrically simple [2,2,8]: the odd M₁(8,2,2) family of the lab inventory, slice v = 3, u ≡ 11 (mod 371) (found in the notes review of 2026-10-13, torsion_jac/notes/review_of_notes_2026_10_13.md) |
 | `family_2214_certificate.log` | produced here by `pipeline/magma/family_2214_certificate.m` (shared argument in `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of geometrically simple [2,2,14]: the contact-7 three-root locus over s₁ = −1/2, a genus-1 curve birational to y² = x³ − 12x (rank 1), congruence at 17 and 29 (found in the notes review of 2026-10-13, torsion_jac/notes/review_of_notes_2026_10_13.md) |
+| `attribution_check.log` | produced here by `pipeline/magma/attribution_check.m` | — | the comparisons behind the credit errata of 2026-10-14 below: census curves 27.b, 24.b, 25.b, 3.9.b, 6.6.b, 5.5.a, 21.c, 27.c against the curves printed in Leprévost 1995 (C21, C24,1, C24,2, C25, C27, pp. 291–302 of the JTNB scan), Howe 2015 (Table 2, order 27, arXiv:1407.2654v3), HLP 2000 (X₀(22), Cor. 5) and the LMFDB, by G2-invariants and isomorphism over ℚ. It also shows that 21.c (LMFDB 676.a.5408.1, issue #7) is Leprévost's C21 and 27.c (issue #8) is his C27, which is why both are credited to Leprévost 1995 |
+
+## Errata to the seed import: curve credits (review of 2026-10-14)
+
+The Source(s) column of the paper's tables dates the *group*: it gives the first known source of a
+realisation, which may only give a family whose torsion contains the group (companion tables
+`torsion_jac/paper/old/torsion_realizations.tex` and `split_torsion_table.tex`, "Source(s) column"; in
+the split companion a dagger marks such containment-only sources).  `import_paper.py` also copied it
+into each curve's `discovery.by`.  The site keeps the column in `sources` (it dates the group, see the
+about page), and `discovery.by` now credits the curve itself.  `pipeline/import_paper.py`
+(`CURVE_CREDIT`, `SOURCES_OVERRIDE`) assigns these credits, and `test_seed_credit_matches_import` keeps the 150 seed
+certificates consistent with it.  Corrected:
+
+* **27.b** (7776.e.2), credited to Leprévost 1995: this is not Leprévost's C27 (G2-invariants
+  [−173781261/512, 2737575/128, 106329/32] against [−1564031349/1024, 171810207/512, 10094907/256]).
+  It is isomorphic over ℚ to y² + (6x³+9x²+6x−1)y = −3x², marked "New" in Table 2 of Howe 2015 (the
+  fourth order-27 row).  Both `discovery.by` and `sources` are now Howe 2015.  C27 itself is split over ℚ:
+  Leprévost's degree-3 map, p. 302, goes onto 54b3.  It has been in the census since 2026-10-14 as
+  27.c, so Leprévost 1995 does not date the class "simple over ℚ, split over ℚ̄" of [27].  The paper's
+  group-level credit of the split [27] to Leprévost 1995 is correct.
+* **24.b** (300.a.1), credited to Leprévost 1995: this is neither C24,1 nor C24,2 (G2-invariants above).
+  It is a curve of the extended database; no production LMFDB curve has conductor 300.  `discovery.by`
+  is now Booker–Sutherland (extended database).  `sources` is unchanged: C24,2 is split over ℚ (its
+  involution, p. 301), so Leprévost 1995 still dates the ℚ-split [24].
+* **HLP 2000 as the discoverer of 17 database or new curves.** The split companion reads
+  "HLP2000†, BookerSutherland" for [20], [30], [35], [40], [60], [2,24], [3,12], [5,10], [2,4,8] and
+  [2,6,6], and "HLP2000†, BSSVY" for [2,12] and [6,6].  It reads "HLP2000†, new" for [45], [6,12],
+  [8,8], [2,2,24] and [2,2,4,8].  `discovery.by` is now:
+  * Booker–Sutherland (extended database) for 20.b, 30.b, 35.a, 40.b, 60.a, 2.24.a, 3.12.a, 5.10.a,
+    2.4.8.b and 2.6.6.a;
+  * LMFDB genus 2 database (BSSVY 2016) for 2.12.b and 6.6.b;
+  * Balakrishnan–Najman–Shnidman–Sutherland 2026 for 45.a, 6.12.a, 8.8.a, 2.2.24.a and 2.2.4.8.a.
+
+  `sources` (HLP 2000, group level) is unchanged for all of them.  6.6.b is X₀(28)
+  (`SmallModularCurve(28)`); an earlier source for that curve's torsion was not looked for (UNVERIFIED).
+* **3.9.b** (2916.e.2), credited to HLP 2000: the companion reads "Leprevost1995†, BSSVY", and the
+  curve is isomorphic over ℚ to the production curve 2916.a.139968.1.  `discovery.by` is now LMFDB
+  genus 2 database (BSSVY 2016).  `sources` is unchanged.  For [3,9], the paper's Table 2 cites HLP 2000 and its
+  companion cites Leprévost 1995: this group-level difference is left as in `table2.txt`.
+
+Checked and correct: 25.b is Leprévost's C25, and 5.5.a is X₀(22) (HLP 2000, Corollary 5 and the remark after it).
+Not checked: 7.7.a and 63.a, which the companion credits to HLP 2000 without a dagger.  Left unchanged
+(UNVERIFIED): the other 130 seed rows keep the Source column as `discovery.by`.  On the simple side, the
+companion states that the displayed curves are smallest-conductor database curves while the column dates
+the group.  So many Table 1 credits, for example 10.a "Flynn 1991" for 389.a.389.1, are probably
+group-level too.  Deciding which database curves are published curves needs the sources' equations,
+and not all of them are available here.  Note that the site shows `discovery.by` only for curves with
+empty `sources`, so the corrected credits are in `data/curves.json` but not on the seed curves' pages.
 
 ## Errata to the copied record (`census_infinity_record.md`, copied verbatim; found by the audit of 2026-09-18, see `notes/`)
 

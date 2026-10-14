@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14 10:49 UTC",
+  "generated": "2026-10-14 10:52 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -9021,7 +9021,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -10685,7 +10685,7 @@
         "16.b"
       ],
       "discovery": {
-        "by": "Leprévost 1995",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -11837,13 +11837,13 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1995",
+        "by": "Howe 2015",
         "year": null,
         "historical": false
       },
       "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 22 (source: \\cite{Leprevost1995})",
       "sources": [
-        "Leprevost1995"
+        "Howe2015"
       ],
       "rm": false,
       "notes": "",
@@ -13293,7 +13293,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -14448,7 +14448,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -15614,7 +15614,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -15864,7 +15864,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
         "year": null,
         "historical": false
       },
@@ -16367,7 +16367,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -20306,7 +20306,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -22810,7 +22810,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -25296,7 +25296,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -25561,7 +25561,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -28577,7 +28577,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -29067,7 +29067,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -29330,7 +29330,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
         "year": null,
         "historical": false
       },
@@ -29848,7 +29848,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
         "year": null,
         "historical": false
       },
@@ -33989,7 +33989,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
         "year": null,
         "historical": false
       },
@@ -35017,7 +35017,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -35293,7 +35293,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -39046,7 +39046,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe–Leprévost–Poonen 2000",
+        "by": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
         "year": null,
         "historical": false
       },

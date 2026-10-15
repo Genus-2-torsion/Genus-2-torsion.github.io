@@ -55,6 +55,13 @@ def cert_summary(c: dict) -> str:
     return "; ".join(parts)
 
 
+def credit_differs(c: dict) -> bool:
+    """The curve's own credit (discovery.by) is not the credit of its sources, which then date only the
+    group (the seed rows corrected on 2026-10-14, e.g. a database curve in a group first realised by HLP 2000)."""
+    by, srcs = c["discovery"]["by"], c.get("sources", [])
+    return bool(by and srcs and by != knowledge.credit_text(srcs))
+
+
 def curve_summary(c: dict) -> dict:
     cond = c["curve"].get("conductor") or ""
     return {
@@ -65,7 +72,7 @@ def curve_summary(c: dict) -> dict:
         "conductor_note": c["curve"].get("conductor_note", ""),
         "discriminant_digits": c["curve"].get("discriminant_digits"),
         "lmfdb": c["lmfdb"], "sources": c.get("sources", []), "rm": c.get("rm", False),
-        "discovered_by": c["discovery"]["by"], "year": c["discovery"]["year"] if isinstance(c["discovery"].get("year"), int) else None,
+        "discovered_by": c["discovery"]["by"], "credit_differs": credit_differs(c), "year": c["discovery"]["year"] if isinstance(c["discovery"].get("year"), int) else None,
         "historical": bool(c["discovery"].get("historical", False)),
         "first_source": knowledge.first_source(c.get("sources", [])),
         "first_source_year": (knowledge.SOURCES[knowledge.first_source(c.get("sources", []))]["year"] if knowledge.first_source(c.get("sources", [])) else None),
@@ -133,7 +140,7 @@ def build():
         "n_rejected": len(list(REJECTED_DIR.glob("*.json"))),
         "groups": groups,
     }
-    curves_out = {"generated": now, "curves": curves}
+    curves_out = {"generated": now, "curves": [dict(c, credit_differs=credit_differs(c)) for c in curves]}
     sources_out = {"generated": now, "sources": knowledge.SOURCES}
     return groups_out, curves_out, sources_out
 

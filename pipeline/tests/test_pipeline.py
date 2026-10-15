@@ -172,6 +172,23 @@ class CreditTests(unittest.TestCase):
         self.assertEqual(read_json(CURVES_DIR / "27.b.json")["sources"], ["Howe2015"])
         self.assertNotIn("Leprévost", read_json(CURVES_DIR / "24.b.json")["discovery"]["by"])
 
+    def test_credit_differs_flags_corrected_rows(self):
+        """The pages show the curve's own credit next to the group's sources exactly for the seed rows
+        whose curve credit was corrected (CURVE_CREDIT); everywhere else the sources credit the curve."""
+        import build
+        import import_paper
+        flagged, corrected = set(), set()
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            c = read_json(p)
+            if build.credit_differs(c):
+                flagged.add(c["id"])
+            if (c.get("source") or {}).get("name") in import_paper.CURVE_CREDIT:
+                corrected.add(c["id"])
+        self.assertEqual(flagged, corrected)
+        self.assertEqual(len(flagged), 19)
+        self.assertIn("35.a", flagged)
+        self.assertNotIn("27.b", flagged)   # its sources were replaced as well (SOURCES_OVERRIDE)
+
 
 class CertificateTests(unittest.TestCase):
     def test_certificates_consistent(self):

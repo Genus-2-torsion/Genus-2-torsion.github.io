@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14 11:00 UTC",
+  "generated": "2026-10-15 05:39 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -204,7 +204,8 @@
         "log": "data/logs/1.a.log",
         "conductor_log": "data/logs/1.a.conductor.log",
         "conductor_cputime_seconds": 0.16
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -434,7 +435,8 @@
         "log": "data/logs/1.b.log",
         "conductor_log": "data/logs/1.b.conductor.log",
         "conductor_cputime_seconds": 0.22
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -655,7 +657,8 @@
         "log": "data/logs/2.a.log",
         "conductor_log": "data/logs/2.a.conductor.log",
         "conductor_cputime_seconds": 0.11
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -911,7 +914,8 @@
         "log": "data/logs/2.b.log",
         "conductor_log": "data/logs/2.b.conductor.log",
         "conductor_cputime_seconds": 0.41
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -1128,7 +1132,8 @@
         "log": "data/logs/3.a.log",
         "conductor_log": "data/logs/3.a.conductor.log",
         "conductor_cputime_seconds": 0.12
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -1384,7 +1389,8 @@
         "log": "data/logs/3.b.log",
         "conductor_log": "data/logs/3.b.conductor.log",
         "conductor_cputime_seconds": 0.48
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -1633,7 +1639,8 @@
         "log": "data/logs/3.c.log",
         "conductor_log": "data/logs/3.c.conductor.log",
         "conductor_cputime_seconds": 0.71
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -1852,7 +1859,8 @@
         "log": "data/logs/4.a.log",
         "conductor_log": "data/logs/4.a.conductor.log",
         "conductor_cputime_seconds": 0.2
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2092,7 +2100,8 @@
         "log": "data/logs/4.b.log",
         "conductor_log": "",
         "conductor_cputime_seconds": null
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2307,7 +2316,8 @@
         "log": "data/logs/5.a.log",
         "conductor_log": "data/logs/5.a.conductor.log",
         "conductor_cputime_seconds": 0.11
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2552,7 +2562,8 @@
         "log": "data/logs/5.b.log",
         "conductor_log": "data/logs/5.b.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2774,7 +2785,8 @@
         "log": "data/logs/6.a.log",
         "conductor_log": "data/logs/6.a.conductor.log",
         "conductor_cputime_seconds": 0.35
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3027,7 +3039,8 @@
         "log": "data/logs/6.b.log",
         "conductor_log": "data/logs/6.b.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3252,7 +3265,8 @@
         "log": "data/logs/7.a.log",
         "conductor_log": "data/logs/7.a.conductor.log",
         "conductor_cputime_seconds": 0.12
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3507,7 +3521,8 @@
         "log": "data/logs/7.b.log",
         "conductor_log": "data/logs/7.b.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3730,7 +3745,8 @@
         "log": "data/logs/8.a.log",
         "conductor_log": "data/logs/8.a.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3980,7 +3996,8 @@
         "log": "data/logs/8.b.log",
         "conductor_log": "data/logs/8.b.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -4203,7 +4220,8 @@
         "log": "data/logs/9.a.log",
         "conductor_log": "data/logs/9.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -4455,7 +4473,8 @@
         "log": "data/logs/9.b.log",
         "conductor_log": "data/logs/9.b.conductor.log",
         "conductor_cputime_seconds": 0.17
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -4680,7 +4699,8 @@
         "log": "data/logs/10.a.log",
         "conductor_log": "data/logs/10.a.conductor.log",
         "conductor_cputime_seconds": 0.1
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -4929,7 +4949,8 @@
         "log": "data/logs/10.b.log",
         "conductor_log": "data/logs/10.b.conductor.log",
         "conductor_cputime_seconds": 0.17
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5148,7 +5169,8 @@
         "log": "data/logs/11.a.log",
         "conductor_log": "data/logs/11.a.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5358,7 +5380,8 @@
         "log": "data/logs/11.b.log",
         "conductor_log": "",
         "conductor_cputime_seconds": null
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5574,7 +5597,8 @@
         "log": "data/logs/12.a.log",
         "conductor_log": "data/logs/12.a.conductor.log",
         "conductor_cputime_seconds": 0.22
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5824,7 +5848,8 @@
         "log": "data/logs/12.b.log",
         "conductor_log": "data/logs/12.b.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -6044,7 +6069,8 @@
         "log": "data/logs/13.a.log",
         "conductor_log": "data/logs/13.a.conductor.log",
         "conductor_cputime_seconds": 0.1
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -6264,7 +6290,8 @@
         "log": "data/logs/14.a.log",
         "conductor_log": "data/logs/14.a.conductor.log",
         "conductor_cputime_seconds": 0.12
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -6516,7 +6543,8 @@
         "log": "data/logs/14.b.log",
         "conductor_log": "data/logs/14.b.conductor.log",
         "conductor_cputime_seconds": 0.15
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -6732,7 +6760,8 @@
         "log": "data/logs/15.a.log",
         "conductor_log": "data/logs/15.a.conductor.log",
         "conductor_cputime_seconds": 0.1
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -6982,7 +7011,8 @@
         "log": "data/logs/15.b.log",
         "conductor_log": "data/logs/15.b.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -7206,7 +7236,8 @@
         "log": "data/logs/16.a.log",
         "conductor_log": "data/logs/16.a.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -7462,7 +7493,8 @@
         "log": "data/logs/16.b.log",
         "conductor_log": "data/logs/16.b.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -7681,7 +7713,8 @@
         "log": "data/logs/17.a.log",
         "conductor_log": "data/logs/17.a.conductor.log",
         "conductor_cputime_seconds": 0.17
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -7905,7 +7938,8 @@
         "log": "data/logs/18.a.log",
         "conductor_log": "data/logs/18.a.conductor.log",
         "conductor_cputime_seconds": 0.24
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -8157,7 +8191,8 @@
         "log": "data/logs/18.b.log",
         "conductor_log": "data/logs/18.b.conductor.log",
         "conductor_cputime_seconds": 0.22
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -8383,7 +8418,8 @@
         "log": "data/logs/19.a.log",
         "conductor_log": "data/logs/19.a.conductor.log",
         "conductor_cputime_seconds": 0.24
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -8628,7 +8664,8 @@
         "log": "data/logs/19.b.log",
         "conductor_log": "data/logs/19.b.conductor.log",
         "conductor_cputime_seconds": 0.2
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -8848,7 +8885,8 @@
         "log": "data/logs/20.a.log",
         "conductor_log": "data/logs/20.a.conductor.log",
         "conductor_cputime_seconds": 0.16
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -9100,7 +9138,8 @@
         "log": "data/logs/20.b.log",
         "conductor_log": "data/logs/20.b.conductor.log",
         "conductor_cputime_seconds": 0.14
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -9323,7 +9362,8 @@
         "log": "data/logs/21.a.log",
         "conductor_log": "data/logs/21.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -9576,7 +9616,8 @@
         "log": "data/logs/21.b.log",
         "conductor_log": "data/logs/21.b.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -9821,7 +9862,8 @@
         "log": "data/logs/21.c.log",
         "conductor_log": "data/logs/21.c.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10040,7 +10082,8 @@
         "log": "data/logs/22.a.log",
         "conductor_log": "data/logs/22.a.conductor.log",
         "conductor_cputime_seconds": 0.15
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10265,7 +10308,8 @@
         "log": "data/logs/23.a.log",
         "conductor_log": "data/logs/23.a.conductor.log",
         "conductor_cputime_seconds": 0.17
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10488,7 +10532,8 @@
         "log": "data/logs/24.a.log",
         "conductor_log": "data/logs/24.a.conductor.log",
         "conductor_cputime_seconds": 0.31
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10740,7 +10785,8 @@
         "log": "data/logs/24.b.log",
         "conductor_log": "data/logs/24.b.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10958,7 +11004,8 @@
         "log": "data/logs/25.a.log",
         "conductor_log": "data/logs/25.a.conductor.log",
         "conductor_cputime_seconds": 7.56
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11225,7 +11272,8 @@
         "log": "data/logs/25.b.log",
         "conductor_log": "data/logs/25.b.conductor.log",
         "conductor_cputime_seconds": 7.12
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11444,7 +11492,8 @@
         "log": "data/logs/26.a.log",
         "conductor_log": "data/logs/26.a.conductor.log",
         "conductor_cputime_seconds": 1.01
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11666,7 +11715,8 @@
         "log": "data/logs/27.a.log",
         "conductor_log": "data/logs/27.a.conductor.log",
         "conductor_cputime_seconds": 0.18
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11920,7 +11970,8 @@
         "log": "data/logs/27.b.log",
         "conductor_log": "data/logs/27.b.conductor.log",
         "conductor_cputime_seconds": 56.52
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -12168,7 +12219,8 @@
         "log": "data/logs/27.c.log",
         "conductor_log": "data/logs/27.c.conductor.log",
         "conductor_cputime_seconds": 4.39
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -12394,7 +12446,8 @@
         "log": "data/logs/28.a.log",
         "conductor_log": "data/logs/28.a.conductor.log",
         "conductor_cputime_seconds": 0.1
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -12647,7 +12700,8 @@
         "log": "data/logs/28.b.log",
         "conductor_log": "data/logs/28.b.conductor.log",
         "conductor_cputime_seconds": 0.37
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -12870,7 +12924,8 @@
         "log": "data/logs/29.a.log",
         "conductor_log": "data/logs/29.a.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -13095,7 +13150,8 @@
         "log": "data/logs/30.a.log",
         "conductor_log": "data/logs/30.a.conductor.log",
         "conductor_cputime_seconds": 0.42
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -13350,7 +13406,8 @@
         "log": "data/logs/30.b.log",
         "conductor_log": "data/logs/30.b.conductor.log",
         "conductor_cputime_seconds": 0.22
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -13575,7 +13632,8 @@
         "log": "data/logs/31.a.log",
         "conductor_log": "data/logs/31.a.conductor.log",
         "conductor_cputime_seconds": 0.55
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -13800,7 +13858,8 @@
         "log": "data/logs/32.a.log",
         "conductor_log": "data/logs/32.a.conductor.log",
         "conductor_cputime_seconds": 0.27
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -14026,7 +14085,8 @@
         "log": "data/logs/33.a.log",
         "conductor_log": "data/logs/33.a.conductor.log",
         "conductor_cputime_seconds": 0.63
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -14251,7 +14311,8 @@
         "log": "data/logs/34.a.log",
         "conductor_log": "data/logs/34.a.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -14504,7 +14565,8 @@
         "log": "data/logs/35.a.log",
         "conductor_log": "data/logs/35.a.conductor.log",
         "conductor_cputime_seconds": 0.34
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -14725,7 +14787,8 @@
         "log": "data/logs/36.a.log",
         "conductor_log": "data/logs/36.a.conductor.log",
         "conductor_cputime_seconds": 0.41
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -14977,7 +15040,8 @@
         "log": "data/logs/36.b.log",
         "conductor_log": "data/logs/36.b.conductor.log",
         "conductor_cputime_seconds": 0.33
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -15199,7 +15263,8 @@
         "log": "data/logs/39.a.log",
         "conductor_log": "data/logs/39.a.conductor.log",
         "conductor_cputime_seconds": 0.28
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -15419,7 +15484,8 @@
         "log": "data/logs/40.a.log",
         "conductor_log": "data/logs/40.a.conductor.log",
         "conductor_cputime_seconds": 0.29
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -15669,7 +15735,8 @@
         "log": "data/logs/40.b.log",
         "conductor_log": "data/logs/40.b.conductor.log",
         "conductor_cputime_seconds": 0.14
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -15918,7 +15985,8 @@
         "log": "data/logs/45.a.log",
         "conductor_log": "data/logs/45.a.conductor.log",
         "conductor_cputime_seconds": 0.82
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -16170,7 +16238,8 @@
         "log": "data/logs/48.a.log",
         "conductor_log": "data/logs/48.a.conductor.log",
         "conductor_cputime_seconds": 0.15
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -16423,7 +16492,8 @@
         "log": "data/logs/60.a.log",
         "conductor_log": "data/logs/60.a.conductor.log",
         "conductor_cputime_seconds": 0.51
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -16672,7 +16742,8 @@
         "log": "data/logs/63.a.log",
         "conductor_log": "data/logs/63.a.conductor.log",
         "conductor_cputime_seconds": 1.54
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -16920,7 +16991,8 @@
         "log": "data/logs/70.a.log",
         "conductor_log": "data/logs/70.a.conductor.log",
         "conductor_cputime_seconds": 0.24
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -17151,7 +17223,8 @@
         "log": "data/logs/2.2.a.log",
         "conductor_log": "data/logs/2.2.a.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -17395,7 +17468,8 @@
         "log": "data/logs/2.2.b.log",
         "conductor_log": "data/logs/2.2.b.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -17652,7 +17726,8 @@
         "log": "data/logs/2.2.c.log",
         "conductor_log": "data/logs/2.2.c.conductor.log",
         "conductor_cputime_seconds": 0.35
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -17882,7 +17957,8 @@
         "log": "data/logs/2.4.a.log",
         "conductor_log": "data/logs/2.4.a.conductor.log",
         "conductor_cputime_seconds": 0.12
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -18143,7 +18219,8 @@
         "log": "data/logs/2.4.b.log",
         "conductor_log": "data/logs/2.4.b.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -18373,7 +18450,8 @@
         "log": "data/logs/2.6.a.log",
         "conductor_log": "data/logs/2.6.a.conductor.log",
         "conductor_cputime_seconds": 0.18
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -18634,7 +18712,8 @@
         "log": "data/logs/2.6.b.log",
         "conductor_log": "data/logs/2.6.b.conductor.log",
         "conductor_cputime_seconds": 0.22
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -18866,7 +18945,8 @@
         "log": "data/logs/2.8.a.log",
         "conductor_log": "data/logs/2.8.a.conductor.log",
         "conductor_cputime_seconds": 0.2
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -19131,7 +19211,8 @@
         "log": "data/logs/2.8.b.log",
         "conductor_log": "data/logs/2.8.b.conductor.log",
         "conductor_cputime_seconds": 0.22
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -19363,7 +19444,8 @@
         "log": "data/logs/2.10.a.log",
         "conductor_log": "data/logs/2.10.a.conductor.log",
         "conductor_cputime_seconds": 0.14
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -19604,7 +19686,8 @@
         "log": "data/logs/2.10.b.log",
         "conductor_log": "data/logs/2.10.b.conductor.log",
         "conductor_cputime_seconds": 0.0700001
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -19865,7 +19948,8 @@
         "log": "data/logs/2.10.c.log",
         "conductor_log": "data/logs/2.10.c.conductor.log",
         "conductor_cputime_seconds": 0.16
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -20098,7 +20182,8 @@
         "log": "data/logs/2.12.a.log",
         "conductor_log": "data/logs/2.12.a.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -20363,7 +20448,8 @@
         "log": "data/logs/2.12.b.log",
         "conductor_log": "data/logs/2.12.b.conductor.log",
         "conductor_cputime_seconds": 0.2
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -20597,7 +20683,8 @@
         "log": "data/logs/2.14.a.log",
         "conductor_log": "data/logs/2.14.a.conductor.log",
         "conductor_cputime_seconds": 0.14
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -20861,7 +20948,8 @@
         "log": "data/logs/2.14.b.log",
         "conductor_log": "data/logs/2.14.b.conductor.log",
         "conductor_cputime_seconds": 0.35
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -21098,7 +21186,8 @@
         "log": "data/logs/2.16.a.log",
         "conductor_log": "data/logs/2.16.a.conductor.log",
         "conductor_cputime_seconds": 0.16
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -21366,7 +21455,8 @@
         "log": "data/logs/2.16.b.log",
         "conductor_log": "data/logs/2.16.b.conductor.log",
         "conductor_cputime_seconds": 0.14
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -21603,7 +21693,8 @@
         "log": "data/logs/2.18.a.log",
         "conductor_log": "data/logs/2.18.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -21867,7 +21958,8 @@
         "log": "data/logs/2.18.b.log",
         "conductor_log": "data/logs/2.18.b.conductor.log",
         "conductor_cputime_seconds": 0.32
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -22104,7 +22196,8 @@
         "log": "data/logs/2.20.a.log",
         "conductor_log": "data/logs/2.20.a.conductor.log",
         "conductor_cputime_seconds": 0.4
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -22367,7 +22460,8 @@
         "log": "data/logs/2.20.b.log",
         "conductor_log": "data/logs/2.20.b.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -22604,7 +22698,8 @@
         "log": "data/logs/2.22.a.log",
         "conductor_log": "data/logs/2.22.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -22866,7 +22961,8 @@
         "log": "data/logs/2.24.a.log",
         "conductor_log": "data/logs/2.24.a.conductor.log",
         "conductor_cputime_seconds": 0.2
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -23102,7 +23198,8 @@
         "log": "data/logs/2.26.a.log",
         "conductor_log": "data/logs/2.26.a.conductor.log",
         "conductor_cputime_seconds": 0.15
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -23339,7 +23436,8 @@
         "log": "data/logs/2.28.a.log",
         "conductor_log": "data/logs/2.28.a.conductor.log",
         "conductor_cputime_seconds": 0.26
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -23604,7 +23702,8 @@
         "log": "data/logs/2.30.a.log",
         "conductor_log": "data/logs/2.30.a.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -23869,7 +23968,8 @@
         "log": "data/logs/2.48.a.log",
         "conductor_log": "data/logs/2.48.a.conductor.log",
         "conductor_cputime_seconds": 0.27
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -24100,7 +24200,8 @@
         "log": "data/logs/3.3.a.log",
         "conductor_log": "data/logs/3.3.a.conductor.log",
         "conductor_cputime_seconds": 0.55
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -24346,7 +24447,8 @@
         "log": "data/logs/3.3.b.log",
         "conductor_log": "",
         "conductor_cputime_seconds": null
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -24583,7 +24685,8 @@
         "log": "data/logs/3.6.a.log",
         "conductor_log": "data/logs/3.6.a.conductor.log",
         "conductor_cputime_seconds": 0.51
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -24848,7 +24951,8 @@
         "log": "data/logs/3.6.b.log",
         "conductor_log": "data/logs/3.6.b.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -25088,7 +25192,8 @@
         "log": "data/logs/3.9.a.log",
         "conductor_log": "data/logs/3.9.a.conductor.log",
         "conductor_cputime_seconds": 0.55
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -25353,7 +25458,8 @@
         "log": "data/logs/3.9.b.log",
         "conductor_log": "data/logs/3.9.b.conductor.log",
         "conductor_cputime_seconds": 0.58
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -25618,7 +25724,8 @@
         "log": "data/logs/3.12.a.log",
         "conductor_log": "data/logs/3.12.a.conductor.log",
         "conductor_cputime_seconds": 0.27
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -25851,7 +25958,8 @@
         "log": "data/logs/3.12.b.log",
         "conductor_log": "data/logs/3.12.b.conductor.log",
         "conductor_cputime_seconds": 218.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -26116,7 +26224,8 @@
         "log": "data/logs/3.24.a.log",
         "conductor_log": "data/logs/3.24.a.conductor.log",
         "conductor_cputime_seconds": 0.3
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -26353,7 +26462,8 @@
         "log": "data/logs/4.4.a.log",
         "conductor_log": "data/logs/4.4.a.conductor.log",
         "conductor_cputime_seconds": 0.24
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -26618,7 +26728,8 @@
         "log": "data/logs/4.4.b.log",
         "conductor_log": "data/logs/4.4.b.conductor.log",
         "conductor_cputime_seconds": 0.16
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -26851,7 +26962,8 @@
         "log": "data/logs/4.8.a.log",
         "conductor_log": "data/logs/4.8.a.conductor.log",
         "conductor_cputime_seconds": 0.35
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -27110,7 +27222,8 @@
         "log": "data/logs/4.8.b.log",
         "conductor_log": "data/logs/4.8.b.conductor.log",
         "conductor_cputime_seconds": 0.24
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -27377,7 +27490,8 @@
         "log": "data/logs/4.12.a.log",
         "conductor_log": "data/logs/4.12.a.conductor.log",
         "conductor_cputime_seconds": 0.28
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -27606,7 +27720,8 @@
         "log": "data/logs/4.12.b.log",
         "conductor_log": "data/logs/4.12.b.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -27868,7 +27983,8 @@
         "log": "data/logs/4.16.a.log",
         "conductor_log": "data/logs/4.16.a.conductor.log",
         "conductor_cputime_seconds": 0.26
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -28133,7 +28249,8 @@
         "log": "data/logs/5.5.a.log",
         "conductor_log": "data/logs/5.5.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -28369,7 +28486,8 @@
         "log": "data/logs/5.5.b.log",
         "conductor_log": "data/logs/5.5.b.conductor.log",
         "conductor_cputime_seconds": 0.44
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -28634,7 +28752,8 @@
         "log": "data/logs/5.10.a.log",
         "conductor_log": "data/logs/5.10.a.conductor.log",
         "conductor_cputime_seconds": 0.48
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -28859,7 +28978,8 @@
         "log": "data/logs/6.6.a.log",
         "conductor_log": "data/logs/6.6.a.conductor.log",
         "conductor_cputime_seconds": 0.51
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29124,7 +29244,8 @@
         "log": "data/logs/6.6.b.log",
         "conductor_log": "data/logs/6.6.b.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29385,7 +29506,8 @@
         "log": "data/logs/6.12.a.log",
         "conductor_log": "data/logs/6.12.a.conductor.log",
         "conductor_cputime_seconds": 0.41
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29642,7 +29764,8 @@
         "log": "data/logs/7.7.a.log",
         "conductor_log": "data/logs/7.7.a.conductor.log",
         "conductor_cputime_seconds": 1.02
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29903,7 +30026,8 @@
         "log": "data/logs/8.8.a.log",
         "conductor_log": "data/logs/8.8.a.conductor.log",
         "conductor_cputime_seconds": 0.3
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -30146,7 +30270,8 @@
         "log": "data/logs/2.2.2.a.log",
         "conductor_log": "data/logs/2.2.2.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -30417,7 +30542,8 @@
         "log": "data/logs/2.2.2.b.log",
         "conductor_log": "data/logs/2.2.2.b.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -30662,7 +30788,8 @@
         "log": "data/logs/2.2.4.a.log",
         "conductor_log": "data/logs/2.2.4.a.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -30926,7 +31053,8 @@
         "log": "data/logs/2.2.4.b.log",
         "conductor_log": "",
         "conductor_cputime_seconds": null
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -31172,7 +31300,8 @@
         "log": "data/logs/2.2.6.a.log",
         "conductor_log": "data/logs/2.2.6.a.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -31447,7 +31576,8 @@
         "log": "data/logs/2.2.6.b.log",
         "conductor_log": "data/logs/2.2.6.b.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -31692,7 +31822,8 @@
         "log": "data/logs/2.2.8.a.log",
         "conductor_log": "data/logs/2.2.8.a.conductor.log",
         "conductor_cputime_seconds": 0.18
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -31963,7 +32094,8 @@
         "log": "data/logs/2.2.8.b.log",
         "conductor_log": "data/logs/2.2.8.b.conductor.log",
         "conductor_cputime_seconds": 0.13
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -32209,7 +32341,8 @@
         "log": "data/logs/2.2.10.a.log",
         "conductor_log": "data/logs/2.2.10.a.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -32484,7 +32617,8 @@
         "log": "data/logs/2.2.10.b.log",
         "conductor_log": "data/logs/2.2.10.b.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -32732,7 +32866,8 @@
         "log": "data/logs/2.2.12.a.log",
         "conductor_log": "data/logs/2.2.12.a.conductor.log",
         "conductor_cputime_seconds": 0.14
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -33006,7 +33141,8 @@
         "log": "data/logs/2.2.12.b.log",
         "conductor_log": "data/logs/2.2.12.b.conductor.log",
         "conductor_cputime_seconds": 0.21
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -33252,7 +33388,8 @@
         "log": "data/logs/2.2.14.a.log",
         "conductor_log": "data/logs/2.2.14.a.conductor.log",
         "conductor_cputime_seconds": 0.37
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -33529,7 +33666,8 @@
         "log": "data/logs/2.2.16.a.log",
         "conductor_log": "data/logs/2.2.16.a.conductor.log",
         "conductor_cputime_seconds": 0.33
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -33774,7 +33912,8 @@
         "log": "data/logs/2.2.20.a.log",
         "conductor_log": "data/logs/2.2.20.a.conductor.log",
         "conductor_cputime_seconds": 0.81
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -34044,7 +34183,8 @@
         "log": "data/logs/2.2.24.a.log",
         "conductor_log": "data/logs/2.2.24.a.conductor.log",
         "conductor_cputime_seconds": 0.45
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -34289,7 +34429,8 @@
         "log": "data/logs/2.4.4.a.log",
         "conductor_log": "data/logs/2.4.4.a.conductor.log",
         "conductor_cputime_seconds": 0.25
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -34560,7 +34701,8 @@
         "log": "data/logs/2.4.4.b.log",
         "conductor_log": "data/logs/2.4.4.b.conductor.log",
         "conductor_cputime_seconds": 0.18
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -34801,7 +34943,8 @@
         "log": "data/logs/2.4.8.a.log",
         "conductor_log": "data/logs/2.4.8.a.conductor.log",
         "conductor_cputime_seconds": 0.52
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -35074,7 +35217,8 @@
         "log": "data/logs/2.4.8.b.log",
         "conductor_log": "data/logs/2.4.8.b.conductor.log",
         "conductor_cputime_seconds": 0.24
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -35351,7 +35495,8 @@
         "log": "data/logs/2.6.6.a.log",
         "conductor_log": "data/logs/2.6.6.a.conductor.log",
         "conductor_cputime_seconds": 0.18
-      }
+      },
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -35608,7 +35753,8 @@
         "log": "data/logs/2.2.2.2.a.log",
         "conductor_log": "data/logs/2.2.2.2.a.conductor.log",
         "conductor_cputime_seconds": 0.1
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -35866,7 +36012,8 @@
         "log": "data/logs/2.2.2.2.b.log",
         "conductor_log": "data/logs/2.2.2.2.b.conductor.log",
         "conductor_cputime_seconds": 7.58
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -36146,7 +36293,8 @@
         "log": "data/logs/2.2.2.2.c.log",
         "conductor_log": "data/logs/2.2.2.2.c.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -36403,7 +36551,8 @@
         "log": "data/logs/2.2.2.4.a.log",
         "conductor_log": "data/logs/2.2.2.4.a.conductor.log",
         "conductor_cputime_seconds": 0.17
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -36688,7 +36837,8 @@
         "log": "data/logs/2.2.2.4.b.log",
         "conductor_log": "data/logs/2.2.2.4.b.conductor.log",
         "conductor_cputime_seconds": 0.12
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -36947,7 +37097,8 @@
         "log": "data/logs/2.2.2.6.a.log",
         "conductor_log": "data/logs/2.2.2.6.a.conductor.log",
         "conductor_cputime_seconds": 0.2
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -37232,7 +37383,8 @@
         "log": "data/logs/2.2.2.6.b.log",
         "conductor_log": "data/logs/2.2.2.6.b.conductor.log",
         "conductor_cputime_seconds": 0.15
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -37484,7 +37636,8 @@
         "log": "data/logs/2.2.2.8.a.log",
         "conductor_log": "data/logs/2.2.2.8.a.conductor.log",
         "conductor_cputime_seconds": 0.32
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -37773,7 +37926,8 @@
         "log": "data/logs/2.2.2.8.b.log",
         "conductor_log": "data/logs/2.2.2.8.b.conductor.log",
         "conductor_cputime_seconds": 0.19
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -38026,7 +38180,8 @@
         "log": "data/logs/2.2.2.10.a.log",
         "conductor_log": "data/logs/2.2.2.10.a.conductor.log",
         "conductor_cputime_seconds": 0.23
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -38283,7 +38438,8 @@
         "log": "data/logs/2.2.2.12.a.log",
         "conductor_log": "data/logs/2.2.2.12.a.conductor.log",
         "conductor_cputime_seconds": 5.99
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -38536,7 +38692,8 @@
         "log": "data/logs/2.2.4.4.a.log",
         "conductor_log": "data/logs/2.2.4.4.a.conductor.log",
         "conductor_cputime_seconds": 0.29
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -38821,7 +38978,8 @@
         "log": "data/logs/2.2.4.4.b.log",
         "conductor_log": "data/logs/2.2.4.4.b.conductor.log",
         "conductor_cputime_seconds": 0.26
-      }
+      },
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -39102,7 +39260,8 @@
         "log": "data/logs/2.2.4.8.a.log",
         "conductor_log": "data/logs/2.2.4.8.a.conductor.log",
         "conductor_cputime_seconds": 0.82
-      }
+      },
+      "credit_differs": true
     }
   ]
 }

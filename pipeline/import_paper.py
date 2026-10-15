@@ -35,8 +35,6 @@ TABLE_DATE = "2026-08-30"
 # 2026-10-14 in data/knowledge/sources/PROVENANCE.md, check in data/knowledge/sources/attribution_check.log).
 # The default is UNVERIFIED for the other rows: for most Table 1 rows the curve is a database curve
 # while the column names the group's first source.
-DISCOVERER_TEXT = {"BSSVY": "LMFDB genus 2 database (BSSVY 2016)",
-                   "BookerSutherland": "Booker–Sutherland (extended database)"}
 CURVE_CREDIT = {
     # split companion "HLP2000†, <witness>": HLP 2000 give a family with torsion containing the group
     # (containment only); the exact witness is a database curve ...
@@ -73,7 +71,7 @@ def credit(name: str, keys: list[str]) -> tuple[list[str], str]:
     """(sources, discoverer) of the seed row `name` whose Source(s) column gave the keys `keys`."""
     sources = SOURCES_OVERRIDE.get(name, keys)
     who = CURVE_CREDIT.get(name, sources)
-    return sources, "; ".join(DISCOVERER_TEXT.get(k, knowledge.SOURCES[k]["short"]) for k in who if k in knowledge.SOURCES)
+    return sources, knowledge.credit_text(who)
 
 
 def rows(fn: str):

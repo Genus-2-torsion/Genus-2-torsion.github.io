@@ -141,6 +141,15 @@
     return out;
   }
 
+  // Credit of a curve: its sources; or, when they date only the group and not the curve itself
+  // (credit_differs, e.g. a database curve in a group first realised by HLP 2000), the curve's own
+  // credit followed by the group's sources.
+  const GROUP_SRC_TITLE = "the source credited in the paper's tables for this group; it is not the source of this curve";
+  function creditNodes(sources, c, by, year) {
+    if (c.credit_differs) return [discovery(by, year), el("span", { class: "muted", title: GROUP_SRC_TITLE }, " · group: ", sourceLinks(sources, c.sources))];
+    return c.sources && c.sources.length ? sourceLinks(sources, c.sources) : discovery(by, year);
+  }
+
   function exampleCell(list, sources, g, cls, mode) {
     const side = cls === "simple" || cls === "qsplit" || (cls === "gsplit" && !$("#cls-qsplit").checked) ? " side-start" : "";
     if (!list.length) return el("td", { class: "ex none" + side }, "—");
@@ -164,8 +173,7 @@
     if (lm) meta.push(lm);
     if (c.conductor) meta.push(el("span", { title: c.conductor_note || "conductor" }, "N = " + c.conductor));
     if (mode !== "first") {
-      if (c.sources && c.sources.length) meta.push(el("span", null, sourceLinks(sources, c.sources)));
-      else if (c.discovered_by) meta.push(el("span", null, discovery(c.discovered_by, c.year)));
+      if ((c.sources && c.sources.length) || c.discovered_by) meta.push(el("span", null, creditNodes(sources, c, c.discovered_by, c.year)));
     }
     if (c.rm) meta.push(el("span", { title: "the Jacobian has real multiplication" }, "RM"));
     if (c.status !== "certified") meta.push(chip(c.status));
@@ -274,7 +282,7 @@
         el("td", { class: "poly", html: eqHtml(c.equation) }),
         el("td", { class: "num", "data-sort": c.conductor_sort === null ? 1e300 : c.conductor_sort, title: c.conductor_note || "" }, c.conductor || "—"),
         el("td", null, lmfdbLink(c.lmfdb) || el("span", { class: "empty" }, "—")),
-        el("td", null, c.sources && c.sources.length ? sourceLinks(sources, c.sources) : (c.discovered_by || "—"), c.rm ? el("span", { class: "muted" }, " · RM") : null, c.historical ? el("span", { class: "muted" }, " · historical example") : null),
+        el("td", null, creditNodes(sources, c, c.discovered_by, null), c.rm ? el("span", { class: "muted" }, " · RM") : null, c.historical ? el("span", { class: "muted" }, " · historical example") : null),
         el("td", { class: "num", "data-sort": c.year === null ? 9999 : c.year }, c.year === null ? "" : c.year),
         el("td", { class: "muted", style: "max-width: 22rem; font-size: 0.85rem" }, c.certificate),
         el("td", null, chip(c.status), c.new_group ? [" ", el("span", { class: "chip new", title: "first curve in the census with this group" }, "new group")] : null)))));
@@ -363,7 +371,9 @@
         c.split.cover_submitted ? el("dd", null, c.split.cover_accepted ? "accepted (the polynomial identity holds)" : "rejected: " + c.split.cover_error) : null,
         el("dt", null, "LMFDB"), el("dd", null, lmfdbLink(c.lmfdb, true) || el("span", { class: "empty" }, "not in the LMFDB"),
           c.lmfdb.kind === "alpha-snapshot" ? el("span", { class: "muted" }, " (extended database; the label is a 2026-08 snapshot, not a permalink)") : c.lmfdb.kind === "jump" ? el("span", { class: "muted" }, " (not found at verification time; the link searches by equation)") : null),
-        el("dt", null, "source"), el("dd", null, c.sources && c.sources.length ? sourceLinks(sources, c.sources) : discovery(c.discovery.by, c.discovery.year), c.rm ? " · the Jacobian has real multiplication" : ""),
+        el("dt", null, "source"), el("dd", null, c.credit_differs ? discovery(c.discovery.by, c.discovery.year) : creditNodes(sources, c, c.discovery.by, c.discovery.year), c.rm ? " · the Jacobian has real multiplication" : ""),
+        c.credit_differs ? el("dt", null, "source of the group") : null,
+        c.credit_differs ? el("dd", null, sourceLinks(sources, c.sources), el("span", { class: "muted" }, " (" + GROUP_SRC_TITLE + ")")) : null,
         c.reference ? el("dt", null, "reference") : null, c.reference ? el("dd", null, c.reference) : null,
         c.notes ? el("dt", null, "notes") : null, c.notes ? el("dd", null, c.notes) : null,
         c.geometrically_isomorphic_to && c.geometrically_isomorphic_to.length ? el("dt", null, "same G2-invariants as") : null,

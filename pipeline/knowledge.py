@@ -128,6 +128,17 @@ def first_source(keys):
     return min(ks, key=lambda k: SOURCES[k]["year"]) if ks else None
 
 
+# Credit text of a curve whose discoverer is given by citation keys: the short form of each source,
+# except that the two databases are named as databases.  import_paper.py writes it as discovery.by;
+# build.py compares it with a curve's discovery.by to tell whether the sources date only the group.
+DISCOVERER_TEXT = {"BSSVY": "LMFDB genus 2 database (BSSVY 2016)",
+                   "BookerSutherland": "Booker–Sutherland (extended database)"}
+
+
+def credit_text(keys):
+    return "; ".join(DISCOVERER_TEXT.get(k, SOURCES[k]["short"]) for k in keys if k in SOURCES)
+
+
 # citation keys as they appear in the Source(s) column of table1.txt / table2.txt -> SOURCES keys
 CITE_KEYS = {k: k for k in SOURCES}
 CITE_KEYS["new"] = "BNSS2026"

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16 07:12 UTC",
+  "generated": "2026-10-16 09:03 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -43,9 +43,9 @@
       "open": 40
     },
     "split": {
-      "exact": 1,
-      "family": 52,
-      "open": 43
+      "exact": 2,
+      "family": 54,
+      "open": 40
     }
   },
   "n_rejected": 0,
@@ -2617,10 +2617,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "Howe2015"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [48], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "48"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -7567,10 +7567,12 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
-          "inherited_from": null
+          "grade": "family",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -10774,10 +10776,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.24"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -10939,10 +10941,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.24"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -11265,10 +11267,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.24"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -11808,10 +11810,12 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
-          "inherited_from": null
+          "grade": "family",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -12667,10 +12671,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.4.8"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -12832,10 +12836,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.4.8"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -13158,10 +13162,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,4,8], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.4.8"
+          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.16"
         }
       }
     },
@@ -13480,9 +13484,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of E₁ = E_{2,4}(t) with E₂ = E_{2,8}(−20/31) along the identity on the labelled 2-torsion, on the fibre t = Aa², t + 1/4 = Bc², t − 1/4 = Ce², (A, B, C) = (−1788961, 11195, −138818), of the locus where the Kummer images of the rational torsion of E₁ and E₂ agree completely; this fibre is a 2-covering of E_d: y² = x³ − d²x, d = 554577910 (rank 1). C_t: y² = −A(t)(k₁t − x²)(k₂(t − 1/4)² − x²)(x² + k₃(t + 1/4)²) maps onto E₂ by (x, y) ↦ (x², y) and onto E₁(t) by (x, y) ↦ (1/x², y/x³), so J is isogenous over ℚ to E₁ × E₂. [2,2,2,16] is marked over the function field of the fibre: the class of order 16 is the sum of the pullbacks of halves of the points of order 4 and 8, computed over ℚ(√22390, √69409)(n) and descending to ℚ(n). For R = P + (d, 0) + 12kP on E_d (P of order 6 mod 11 and 4 mod 13) the curve C_{x(R)/4d} has the reductions of the census curve 2.2.2.16.a (k = 0) at 11 and 13, where J(𝔽₁₁) ≅ J(𝔽₁₃) ≅ [2,2,2,16], so J(ℚ)_tors is exactly [2,2,2,16]; the G2-invariants at k = 0 and at 3P + (d, 0) differ (family_22216_split_certificate.log)",
           "inherited_from": null
         }
       }

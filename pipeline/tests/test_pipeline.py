@@ -100,12 +100,14 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
         self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
         self.assertEqual(knowledge.infinite_record("split", "2")["grade"], "family")             # inherited
-        # split side: [8,8] certified here (family_88_split_certificate.log)
-        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8"])
+        # split side: [8,8] and [2,2,2,16] certified here (family_88_split_certificate.log, family_22216_split_certificate.log)
+        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8", "2.2.2.16"])
         self.assertEqual(knowledge.infinite_record("split", "8.8")["grade"], "exact")
-        for key in ("2.4.4", "8.8"):
+        self.assertEqual(knowledge.infinite_record("split", "2.2.2.16")["grade"], "exact")
+        names = {"2.4.4": "family_244_certificate.log", "8.8": "family_88_split_certificate.log", "2.2.2.16": "family_22216_split_certificate.log"}
+        for key in ("2.4.4", "8.8", "2.2.2.16"):
             side = "simple" if key == "2.4.4" else "split"
-            name = "family_244_certificate.log" if key == "2.4.4" else "family_88_split_certificate.log"
+            name = names[key]
             self.assertIn(name, knowledge.infinite_record(side, key)["note"])
             self.assertTrue((KNOWLEDGE_DIR / "sources" / name).exists(), name)
 

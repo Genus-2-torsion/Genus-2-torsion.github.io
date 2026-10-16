@@ -1,0 +1,47 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "-42337414886067900*x^5 + 9716619250580389984680*x^4 + 249323508190639120726354536*x^3 - 406358837350345916288092715922*x^2 - 80303936093332009982025661643142*x + 230262357769227286812882682545067236",
+  "h": "x^2 + x",
+  "group": [
+    2,
+    2,
+    2,
+    16
+  ],
+  "class": "split",
+  "generators": [
+    [
+      "x + 1578364/2239",
+      "0",
+      1
+    ],
+    [
+      "x^2 + 24313182047/1035504*x - 7695188165473/258876",
+      "0",
+      2
+    ],
+    [
+      "x + 19722364/799",
+      "0",
+      1
+    ],
+    [
+      "x^2 - 617820584783507/399930795725*x - 481635448720173196314/399930795725",
+      "36685050904415577795838069748/14797439441825*x + 3249321521204953541907986666568846/14797439441825",
+      2
+    ]
+  ],
+  "submitter": "Filip Najman",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "reference": "new",
+  "discoverer": "F. Najman",
+  "year": 2026,
+  "notes": "New group [2,2,2,16]. The curve is the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of E1 = E_{2,4}(t) with torsion [2,4] (conductor 2781739260113226584010) and E2 = E_{2,8}(u) with torsion [2,8] (conductor 477491580510), in the Tate normal forms of HLP Table 3, at u = -20/31, t = -4333968559/38784504316. The gluing is the identity on the labelled 2-torsion points, and the Kummer images of the rational torsion of E1 and E2 agree completely (gain 4), which gives #J(Q)_tors = 2 * 4 * 4 * 4 = 128. The point was found by a fibre-wise 2-descent: over fixed u the gain locus is a 2-covering of y^2 = x^3 - d^2 x, here with d = 554577910 and a point of canonical height 22.83. The two elliptic quotients of the curve are Q-isomorphic to E1 and E2, and j(E1) != j(E2). Output of pipeline/magma/prepare_submission.m (Magma V2.29-4): J(Q)_tors = [2,2,2,16]; gcd of #J(F_p) over 25 good primes = 128 (sharp); J(F_11) = [2,2,2,16]; conductor N(E1) N(E2) = 1328257075878182563154683193645100 (J is isogenous over Q to E1 x E2). Further points on the same fibre give more curves with the same torsion subgroup (checked for one more, from 3P).",
+  "date": "2026-10-16",
+  "source": {
+    "kind": "issue",
+    "number": 9,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/9"
+  }
+}

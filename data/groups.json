@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15 05:39 UTC",
+  "generated": "2026-10-16 07:12 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -25,27 +25,27 @@
     },
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
-  "n_groups": 95,
-  "n_curves": 159,
-  "n_certified": 158,
+  "n_groups": 96,
+  "n_curves": 160,
+  "n_certified": 159,
   "n_verified": 1,
   "n_groups_by_class": {
     "simple": 76,
-    "qsplit": 74,
+    "qsplit": 75,
     "gsplit": 8,
     "undecided": 1
   },
-  "n_groups_any_split": 77,
+  "n_groups_any_split": 78,
   "n_infinite": {
     "simple": {
       "exact": 53,
       "family": 3,
-      "open": 39
+      "open": 40
     },
     "split": {
       "exact": 1,
       "family": 52,
-      "open": 42
+      "open": 43
     }
   },
   "n_rejected": 0,
@@ -13373,6 +13373,110 @@
             "Choudhry"
           ],
           "note": "BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18)",
+          "inherited_from": null
+        },
+        "split": {
+          "grade": "open",
+          "sources": [],
+          "note": "",
+          "inherited_from": null
+        }
+      }
+    },
+    {
+      "key": "2.2.2.16",
+      "group": [
+        2,
+        2,
+        2,
+        16
+      ],
+      "bracket": "[2,2,2,16]",
+      "label": "ℤ/2 ⊕ ℤ/2 ⊕ ℤ/2 ⊕ ℤ/16",
+      "order": 128,
+      "rank": 4,
+      "classes": {
+        "simple": [],
+        "qsplit": [
+          {
+            "id": "2.2.2.16.a",
+            "class": "qsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "split over ℚ",
+            "f": [
+              "230262357769227286812882682545067236",
+              "-80303936093332009982025661643142",
+              "-406358837350345916288092715922",
+              "249323508190639120726354536",
+              "9716619250580389984680",
+              "-42337414886067900"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-42337414886067900*x^5 + 9716619250580389984680*x^4 + 249323508190639120726354536*x^3 - 406358837350345916288092715922*x^2 - 80303936093332009982025661643142*x + 230262357769227286812882682545067236",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = -42337414886067900*x^5 + 9716619250580389984680*x^4 + 249323508190639120726354536*x^3 - 406358837350345916288092715922*x^2 - 80303936093332009982025661643142*x + 230262357769227286812882682545067236"
+            },
+            "conductor": "1328257075878182563154683193645100",
+            "conductor_sort": 1328257075878182563154683193645100,
+            "conductor_note": "N(E1) N(E2) = 477491580510 * 2781739260113226584010 for the elliptic curves ['1', '0', '0', '-562198913575863696451480', '160785133294502034126172196982094400'] and ['1', '0', '0', '-44159264041619640913098181712776142490', '103727250430271191833554094526364327863820764434279638100'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+            "discriminant_digits": 226,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B230262357769227286812882682545067236%2C-80303936093332009982025661643142%2C-406358837350345916288092715922%2C249323508190639120726354536%2C9716619250580389984680%2C-42337414886067900%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": true,
+            "new_for_class": true,
+            "certificate": "an involution over Q other than the hyperelliptic one, (x : y : z) -> (x + 127040438808088/3001354917*z : -4388826064328642/9008131337800076889*x^3 + 868483690974880588572295336670/9012199761229349577926071071*x^2*z - 7476002155784207232862311944576666/9012199761229349577926071071*x*z^2 + 7412961991040628919612801323841/27036599283688048733778213213*y + 8069445899552938542778023524/9008131337800076889*z^3 : 2921719/3001354917*x - z) on the model y^2 + h y = f; its quotient is a genus-1 curve over Q",
+            "verified": "2026-10-16 07:12:43 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "issue"
+          }
+        ],
+        "gsplit": [],
+        "undecided": []
+      },
+      "first_dated": {
+        "simple": null,
+        "qsplit": 0,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "known": {
+        "simple": false,
+        "qsplit": true,
+        "gsplit": false,
+        "undecided": false
+      },
+      "n_curves": 1,
+      "infinite": {
+        "simple": {
+          "grade": "open",
+          "sources": [],
+          "note": "",
           "inherited_from": null
         },
         "split": {

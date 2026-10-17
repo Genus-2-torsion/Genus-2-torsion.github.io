@@ -54,6 +54,15 @@ class ValidateTests(unittest.TestCase):
         v = verify.validate({"f": "x^5+1", "cover": {"cremona": "19a1", "p": [1, 2], "q": [3], "hh": [1]}})
         self.assertEqual(v["cover"]["cremona"], "19a1")
 
+    def test_lmfdb_conductor_override(self):
+        ogg = {"conductor": "793600", "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, ..."}
+        self.assertEqual(verify.lmfdb_conductor_override(ogg, {"label": "775.a.1"}), "775")
+        self.assertEqual(verify.lmfdb_conductor_override(ogg, {"label": ""}), "")
+        self.assertEqual(verify.lmfdb_conductor_override(ogg, {"label": "777.a.1"}), "")        # odd parts differ
+        self.assertEqual(verify.lmfdb_conductor_override({"conductor": "793600", "conductor_note": ""}, {"label": "775.a.1"}), "")
+        self.assertEqual(verify.lmfdb_conductor_override(None, {"label": "775.a.1"}), "")
+        self.assertEqual(verify._factor_str(176400), "2^4 * 3^2 * 5^2 * 7^2")
+
     def test_rejects(self):
         for bad in ({"f": "x^7 + 1"}, {"f": "x^5 + 1; quit"}, {"f": "x^5+1", "group": [2, 3]}, {"f": "x^5+1", "class": "cm"},
                     {"f": "x^5+1", "cover": {"p": [1], "q": [1], "hh": [1]}}, {"f": "0"}):

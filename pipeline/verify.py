@@ -296,6 +296,38 @@ def sha256_file(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _odd_part(n: int) -> int:
+    while n and n % 2 == 0:
+        n //= 2
+    return n
+
+
+def _factor_str(n: int) -> str:
+    out, d = [], 2
+    while d * d <= n:
+        e = 0
+        while n % d == 0:
+            n //= d; e += 1
+        if e:
+            out.append(f"{d}^{e}" if e > 1 else f"{d}")
+        d += 1
+    if n > 1:
+        out.append(str(n))
+    return " * ".join(out) or "1"
+
+
+def lmfdb_conductor_override(cond: dict | None, lmfdb: dict) -> str:
+    """The LMFDB conductor, when it should replace Magma's: Magma's exponent at 2 came from Ogg's formula
+    (v_2(disc) >= 12, no correctness guarantee), the curve has an LMFDB label, the two values differ, and their
+    odd parts agree (Magma's odd exponents are rigorous).  Otherwise ""."""
+    if not cond or "Ogg" not in (cond.get("conductor_note") or "") or not lmfdb.get("label"):
+        return ""
+    mag, lab = str(cond.get("conductor") or ""), lmfdb["label"].split(".")[0]
+    if not (mag.isdigit() and lab.isdigit()) or mag == lab or _odd_part(int(mag)) != _odd_part(int(lab)):
+        return ""
+    return lab
+
+
 def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, now: str, lmfdb: dict) -> dict:
     inv = res["torsion"]["invariants"]
     key = group_key(inv)
@@ -317,6 +349,15 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
             curve["conductor"] = lmfdb["label"].split(".")[0]
             curve["conductor_note"] = "taken from the LMFDB label " + lmfdb["label"] + " (Magma did not finish the conductor computation within the time limit)"
     curve["conductor_source"] = "magma" if cond else ("lmfdb label" if curve["conductor"] else "")
+    override = lmfdb_conductor_override(cond, lmfdb)
+    if override:
+        curve["conductor_magma"] = cond["conductor"]
+        curve["conductor"] = override
+        curve["conductor_factored"] = _factor_str(int(override))
+        curve["conductor_source"] = "lmfdb label"
+        curve["conductor_note"] = (f"taken from the LMFDB label {lmfdb['label']}: Magma's genus-2 Conductor gave {cond['conductor']}, "
+                                   "with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); "
+                                   "the odd parts agree")
     prod = res["split"].get("isogenous_product")
     if prod:
         # rigorous: the conductor is an isogeny invariant and multiplicative in products
@@ -480,6 +521,9 @@ def process(path: Path, args) -> str:
         lmfdb = lmfdb_record(v, res, not args.no_lmfdb)
         log(f"  LMFDB: {lmfdb['label'] or '-'} ({lmfdb['kind']})")
         cond_str = cond["conductor"] if cond else (lmfdb["label"].split(".")[0] if lmfdb.get("label") else "")
+        if lmfdb_conductor_override(cond, lmfdb):
+            cond_str = lmfdb_conductor_override(cond, lmfdb)
+            log(f"  conductor at 2 from Ogg's formula disagrees with the LMFDB label; using {cond_str}")
         accept, why, rival = acceptance(res["class"], res["class"] in CLASSES, inv, cond_str, curves, v.get("historical", False))
         if not accept:
             raise Reject(why)

@@ -1,0 +1,59 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "-x^5 + 5*x^3 - 14*x^2 - 16*x + 10",
+ "h": "x^3 + x",
+ "group": [
+  18
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 - 4*x + 1",
+   "-6*x + 6",
+   2
+  ]
+ ],
+ "cover": {
+  "field": "X^2 - 6",
+  "cubic": [
+   "-20*w - 48",
+   "-18*w - 41",
+   "-2*w - 2",
+   "1"
+  ],
+  "p": [
+   "-2*w - 5",
+   "-2*w + 2",
+   "1"
+  ],
+  "q": [
+   "2*w + 8",
+   "2*w - 1",
+   "-2",
+   "1"
+  ],
+  "hh": [
+   "w + 1",
+   "-6*w - 15",
+   "-w - 3",
+   "1"
+  ],
+  "note": "degree-3 map, defined over Q(sqrt(6)), from y^2 = g to a genus-1 curve; found by code/gsplit2_cover3.m (torsion_jac, 2026-10-17)"
+ },
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 17280.z.1 (table g2c_curves_new, label 17280.z1 on devmirror.lmfdb.xyz, read 2026-10-17)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [18] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, both g2c_curves and g2c_curves_new, all curves with is_simple_base = true, is_simple_geom = false): there are exactly three such curves with torsion [18], 17280.z1, 36000.e1 and 36000.e2, all in the extended table; this is the one of smallest conductor. J splits over Q(sqrt(6)) as E x E^sigma (E in the isogeny class 2.2.24.1-30.1-b, not a Q-curve). The automatic Richelot certificates do not apply (over Q(sqrt(6)) the working model factors as 1+1+2+2 and its only Richelot neighbour leads to no split surface), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(6)); the fibre over the point at infinity is the cubic (linear)*(quadratic) factor of g over Q(sqrt(6)). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [18] from the submitted generator (gcd #J(F_p) = 18), Q-simple (chi_7 irreducible), class gsplit. Conductor 17280 = 2^7 * 3^3 * 5: Magma's genus-2 Conductor uses Ogg's formula at 2 here (v_2(disc) >= 12), but the value is rigorous: J is Q-isogenous to Res_{K/Q} E_T, E_T the target of the cover, so N(J) = |d_K|^2 Norm(f_{E_T}) = 576 * 30 = 17280, which agrees with the LMFDB. Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",
+ "date": "2026-10-17",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_18.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "17280.z.1"
+}

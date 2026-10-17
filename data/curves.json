@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17 06:29 UTC",
+  "generated": "2026-10-17 10:20 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10895,6 +10895,260 @@
         "log": "data/logs/18.b.log",
         "conductor_log": "data/logs/18.b.conductor.log",
         "conductor_cputime_seconds": 0.22
+      },
+      "credit_differs": false
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "18.c",
+      "group": [
+        18
+      ],
+      "group_key": "18",
+      "group_bracket": "[18]",
+      "order": 18,
+      "class": "gsplit",
+      "class_certified": true,
+      "class_text": "geometrically split, simple over ℚ",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": true,
+      "accepted_because": "new for this class",
+      "curve": {
+        "f": [
+          "10",
+          "-16",
+          "-14",
+          "5",
+          "0",
+          "-1"
+        ],
+        "h": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        "f_str": "-x^5 + 5*x^3 - 14*x^2 - 16*x + 10",
+        "h_str": "x^3 + x",
+        "g": [
+          "40",
+          "-64",
+          "-55",
+          "20",
+          "2",
+          "-4",
+          "1"
+        ],
+        "g_str": "x^6 - 4*x^5 + 2*x^4 + 20*x^3 - 55*x^2 - 64*x + 40",
+        "g_scale": "1",
+        "discriminant": "-281792804290560",
+        "discriminant_digits": 15,
+        "igusa_clebsch": [
+          "4800",
+          "-21784320",
+          "-70418681856",
+          "-281792804290560"
+        ],
+        "g2_invariants": [
+          "-1953125/1728",
+          "-109375/144",
+          "-4000/9"
+        ],
+        "rational_weierstrass_points": 0,
+        "minimal_model": {
+          "f": [
+            "10",
+            "-16",
+            "-14",
+            "5",
+            "0",
+            "-1"
+          ],
+          "h": [
+            "0",
+            "1",
+            "0",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "-68797071360",
+        "minimal_discriminant_factored": "-1 * 2^21 * 3^8 * 5",
+        "conductor": "17280",
+        "conductor_factored": "2^7 * 3^3 * 5",
+        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "17280.z.1",
+        "kind": "alpha-snapshot",
+        "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B10%2C-16%2C-14%2C5%2C0%2C-1%5D%2C%5B0%2C1%2C0%2C1%5D%5D",
+        "snapshot_label": "17280.z.1"
+      },
+      "torsion": {
+        "invariants": [
+          18
+        ],
+        "order": 18,
+        "generators": [
+          {
+            "order": 18,
+            "mumford": [
+              "x^2 - 4*x + 1",
+              "-6*x + 6",
+              "2"
+            ]
+          }
+        ],
+        "method": "generators",
+        "generators_note": "",
+        "generators_submitted": 1,
+        "point_count_gcd": 18,
+        "point_count_primes": [
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107
+        ],
+        "claimed": [
+          18
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": false,
+        "strict_prime": 0,
+        "chi": "",
+        "primes_tried_below": 500,
+        "admissible_primes": 92,
+        "reducible_chi": 51
+      },
+      "q_simple": {
+        "certified": true,
+        "prime": 7,
+        "chi": "T^4 + 4*T^2 + 49"
+      },
+      "split": {
+        "geometrically_split": true,
+        "split_over_Q": false,
+        "certificate": {
+          "kind": "cover",
+          "over": "X^2 - 6",
+          "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-20*w - 48)u^3 + (-18*w - 41)u^2 + (-2*w - 2)u + (1) over X^2 - 6, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + (-2*w + 2)*x - 2*w - 5, q = x^3 - 2*x^2 + (2*w - 1)*x + 2*w + 8, hh = x^3 + (-w - 3)*x^2 + (-6*w - 15)*x + w + 1; degree-3 map, defined over Q(sqrt(6)), from y^2 = g to a genus-1 curve; found by code/gsplit2_cover3.m (torsion_jac, 2026-10-17)"
+        },
+        "isogenous_product": null,
+        "cover_submitted": true,
+        "cover_accepted": true,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": true,
+          "primes_checked": 43,
+          "reducible_chi": 25
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "Booker–Sutherland (extended database)",
+        "year": 2026,
+        "historical": false
+      },
+      "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 17280.z.1 (table g2c_curves_new, label 17280.z1 on devmirror.lmfdb.xyz, read 2026-10-17)",
+      "sources": [
+        "BookerSutherland"
+      ],
+      "rm": false,
+      "notes": "First Q-simple, geometrically split example of [18] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, both g2c_curves and g2c_curves_new, all curves with is_simple_base = true, is_simple_geom = false): there are exactly three such curves with torsion [18], 17280.z1, 36000.e1 and 36000.e2, all in the extended table; this is the one of smallest conductor. J splits over Q(sqrt(6)) as E x E^sigma (E in the isogeny class 2.2.24.1-30.1-b, not a Q-curve). The automatic Richelot certificates do not apply (over Q(sqrt(6)) the working model factors as 1+1+2+2 and its only Richelot neighbour leads to no split surface), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(6)); the fibre over the point at infinity is the cubic (linear)*(quadratic) factor of g over Q(sqrt(6)). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [18] from the submitted generator (gcd #J(F_p) = 18), Q-simple (chi_7 irreducible), class gsplit. Conductor 17280 = 2^7 * 3^3 * 5: Magma's genus-2 Conductor uses Ogg's formula at 2 here (v_2(disc) >= 12), but the value is rigorous: J is Q-isogenous to Res_{K/Q} E_T, E_T the target of the cover, so N(J) = |d_K|^2 Norm(f_{E_T}) = 576 * 30 = 17280, which agrees with the LMFDB. Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",
+      "submitter": {
+        "name": "Filip Najman",
+        "github": "F-Najman",
+        "affiliation": "University of Zagreb"
+      },
+      "submitted": {
+        "f": [
+          "10",
+          "-16",
+          "-14",
+          "5",
+          "0",
+          "-1"
+        ],
+        "h": [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        "claimed_group": [
+          18
+        ],
+        "claimed_class": "split",
+        "cover": {
+          "field": "X^2-6",
+          "cremona": "",
+          "cubic": [
+            "-20*w-48",
+            "-18*w-41",
+            "-2*w-2",
+            "1"
+          ],
+          "p": [
+            "-2*w-5",
+            "-2*w+2",
+            "1"
+          ],
+          "q": [
+            "2*w+8",
+            "2*w-1",
+            "-2",
+            "1"
+          ],
+          "hh": [
+            "w+1",
+            "-6*w-15",
+            "-w-3",
+            "1"
+          ],
+          "note": "degree-3 map, defined over Q(sqrt(6)), from y^2 = g to a genus-1 curve; found by code/gsplit2_cover3.m (torsion_jac, 2026-10-17)"
+        },
+        "lmfdb_label_given": "17280.z.1"
+      },
+      "source": {
+        "kind": "file",
+        "path": "submissions/inbox/gsplit_18.json"
+      },
+      "dates": {
+        "submitted": "2026-10-17",
+        "verified": "2026-10-17 10:20:31 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.30-1",
+        "cputime_seconds": "1.57000",
+        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "log": "data/logs/18.c.log",
+        "conductor_log": "data/logs/18.c.conductor.log",
+        "conductor_cputime_seconds": 2.67
       },
       "credit_differs": false
     },

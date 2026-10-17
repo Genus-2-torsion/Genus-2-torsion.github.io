@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17 06:29 UTC",
+  "generated": "2026-10-17 10:20 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -26,13 +26,13 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 96,
-  "n_curves": 186,
-  "n_certified": 185,
+  "n_curves": 187,
+  "n_certified": 186,
   "n_verified": 1,
   "n_groups_by_class": {
     "simple": 76,
     "qsplit": 75,
-    "gsplit": 34,
+    "gsplit": 35,
     "undecided": 1
   },
   "n_groups_any_split": 78,
@@ -3500,28 +3500,83 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "18.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "10",
+              "-16",
+              "-14",
+              "5",
+              "0",
+              "-1"
+            ],
+            "h": [
+              "0",
+              "1",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "-x^5 + 5*x^3 - 14*x^2 - 16*x + 10",
+              "h": "x^3 + x",
+              "text": "y^2 + (x^3 + x)*y = -x^5 + 5*x^3 - 14*x^2 - 16*x + 10"
+            },
+            "conductor": "17280",
+            "conductor_sort": 17280,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 15,
+            "lmfdb": {
+              "label": "17280.z.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B10%2C-16%2C-14%2C5%2C0%2C-1%5D%2C%5B0%2C1%2C0%2C1%5D%5D",
+              "snapshot_label": "17280.z.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 17280.z.1 (table g2c_curves_new, label 17280.z1 on devmirror.lmfdb.xyz, read 2026-10-17)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-20*w - 48)u^3 + (-18*w - 41)u^2 + (-2*w - 2)u + (1) over X^2 - 6, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + (-2*w + 2)*x - 2*w - 5, q = x^3 - 2*x^2 + (2*w - 1)*x + 2*w + 8, hh = x^3 + (-w - 3)*x^2 + (-6*w - 15)*x + w + 1; degree-3 map, defined over Q(sqrt(6)), from y^2 = g to a genus-1 curve; found by code/gsplit2_cover3.m (torsion_jac, 2026-10-17); simple over ℚ: χ_7 = T^4 + 4*T^2 + 49 is irreducible",
+            "verified": "2026-10-17 10:20:31 UTC",
+            "submitted": "2026-10-17",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "PP2012",
         "qsplit": "BookerSutherland",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",

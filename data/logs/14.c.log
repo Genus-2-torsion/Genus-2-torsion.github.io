@@ -1,0 +1,9 @@
+[0.000000 s] start
+[0.0100000 s] curve: y^2 + (x^2 + x) y = 3*x^6 - 27*x^5 + 47*x^4 + 64*x^3 - 7*x^2 + 9*x + 15; working model y^2 = 12*x^6 - 108*x^5 + 189*x^4 + 258*x^3 - 27*x^2 + 36*x + 60
+[0.0300000 s] #J(Q)_tors divides gcd #J(F_p) = 14 (p = [ 5, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107 ])
+[0.0400000 s] J(Q)_tors = [ 14 ]: the 1 submitted generators are independent torsion points generating a group of order 14 = gcd #J(F_p)
+[0.610000 s] no strict prime below 500 (92 admissible primes, 49 with reducible chi)
+[0.610000 s] Q-simple: chi irreducible at p = 5
+[0.800000 s] geometrically split: a chain of at most 2 (2,2)-isogenies over Q(sqrt(-7)) reaches a product of two elliptic curves over Q(sqrt(-7))
+[0.800000 s] class: gsplit
+[0.900000 s] VERIFY_DONE

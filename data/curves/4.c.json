@@ -1,0 +1,224 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "4.c",
+  "group": [
+    4
+  ],
+  "group_key": "4",
+  "group_bracket": "[4]",
+  "order": 4,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "-9",
+      "-44",
+      "11",
+      "80",
+      "105",
+      "56",
+      "16"
+    ],
+    "h": [
+      "0",
+      "1"
+    ],
+    "f_str": "16*x^6 + 56*x^5 + 105*x^4 + 80*x^3 + 11*x^2 - 44*x - 9",
+    "h_str": "x",
+    "g": [
+      "-36",
+      "-176",
+      "45",
+      "320",
+      "420",
+      "224",
+      "64"
+    ],
+    "g_str": "64*x^6 + 224*x^5 + 420*x^4 + 320*x^3 + 45*x^2 - 176*x - 36",
+    "g_scale": "1",
+    "discriminant": "15872000000000000000",
+    "discriminant_digits": 20,
+    "igusa_clebsch": [
+      "-712000",
+      "73249000000",
+      "-10758419000000000",
+      "15872000000000000000"
+    ],
+    "g2_invariants": [
+      "-44672475592/31",
+      "9767345495/124",
+      "-3714949"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": {
+      "f": [
+        "-9",
+        "-44",
+        "11",
+        "80",
+        "105",
+        "56",
+        "16"
+      ],
+      "h": [
+        "0",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "3875000000000000",
+    "minimal_discriminant_factored": "2^12 * 5^15 * 31",
+    "conductor": "775",
+    "conductor_factored": "5^2 * 31",
+    "conductor_note": "taken from the LMFDB label 775.a.1: Magma's genus-2 Conductor gave 793600, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
+    "conductor_source": "lmfdb label",
+    "conductor_magma": "793600"
+  },
+  "lmfdb": {
+    "label": "775.a.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-9%2C-44%2C11%2C80%2C105%2C56%2C16%5D%2C%5B0%2C1%5D%5D",
+    "snapshot_label": "775.a.1"
+  },
+  "torsion": {
+    "invariants": [
+      4
+    ],
+    "order": 4,
+    "generators": [
+      {
+        "order": 4,
+        "mumford": [
+          "1",
+          "8*x^3 + 14*x^2",
+          "2"
+        ]
+      }
+    ],
+    "method": "TorsionSubgroup",
+    "generators_note": "the submitted generators generate a subgroup of order 4, but the point-count bound is 8; TorsionSubgroup was run",
+    "generators_submitted": 1,
+    "point_count_gcd": 8,
+    "point_count_primes": [
+      3,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
+    ],
+    "claimed": [
+      4
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 92,
+    "reducible_chi": 50
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 - 2*T^2 + 9"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)"
+    },
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 43,
+      "reducible_chi": 24
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Booker–Sutherland (extended database)",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 775.a.1 (table g2c_curves_new, label 775.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [4] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [4]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 775. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [4], class gsplit, Q-simplicity prime 3 (chi = T^4 - 2*T^2 + 9), splitness certificate: richelot over Q ((2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)). Note: Magma's genus-2 Conductor on the reduced minimal model gives 793600 (2-part by Ogg's formula), not the LMFDB value 775. Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant 5, so N(J) = |d_K|^2 * Norm(f_E) = 25 * 31 = 775 (computed with Magma; conductor is an isogeny invariant).",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "-9",
+      "-44",
+      "11",
+      "80",
+      "105",
+      "56",
+      "16"
+    ],
+    "h": [
+      "0",
+      "1"
+    ],
+    "claimed_group": [
+      4
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "775.a.1"
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/gsplit_4.json"
+  },
+  "dates": {
+    "submitted": "2026-10-16",
+    "verified": "2026-10-17 06:28:59 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.870000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/4.c.log",
+    "conductor_log": "data/logs/4.c.conductor.log",
+    "conductor_cputime_seconds": 1.15
+  }
+}

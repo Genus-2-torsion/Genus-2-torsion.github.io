@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-16 09:03 UTC",
+  "generated": "2026-10-17 06:29 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -26,13 +26,13 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 96,
-  "n_curves": 160,
-  "n_certified": 159,
+  "n_curves": 186,
+  "n_certified": 185,
   "n_verified": 1,
   "n_groups_by_class": {
     "simple": 76,
     "qsplit": 75,
-    "gsplit": 8,
+    "gsplit": 34,
     "undecided": 1
   },
   "n_groups_any_split": 78,
@@ -166,28 +166,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "1.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-7",
+              "-37",
+              "-122",
+              "-129",
+              "-42",
+              "-5",
+              "-7"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "-7*x^6 - 5*x^5 - 42*x^4 - 129*x^3 - 122*x^2 - 37*x - 7",
+              "h": "0",
+              "text": "y^2 = -7*x^6 - 5*x^5 - 42*x^4 - 129*x^3 - 122*x^2 - 37*x - 7"
+            },
+            "conductor": "1521",
+            "conductor_sort": 1521,
+            "conductor_note": "taken from the LMFDB label 1521.d.2 (Magma did not finish the conductor computation within the time limit)",
+            "discriminant_digits": 24,
+            "lmfdb": {
+              "label": "1521.d.2",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-7%2C-37%2C-122%2C-129%2C-42%2C-5%2C-7%5D%2C%5B0%5D%5D",
+              "snapshot_label": "1521.d.2"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 1521.d.2 (table g2c_curves_new, label 1521.d2 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_5 = T^4 + 2*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:01:47 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -330,28 +383,84 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-168",
+              "-666",
+              "-504",
+              "-1",
+              "-504",
+              "665",
+              "-168"
+            ],
+            "h": [
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-168*x^6 + 665*x^5 - 504*x^4 - x^3 - 504*x^2 - 666*x - 168",
+              "h": "x^3 + x^2 + x + 1",
+              "text": "y^2 + (x^3 + x^2 + x + 1)*y = -168*x^6 + 665*x^5 - 504*x^4 - x^3 - 504*x^2 - 666*x - 168"
+            },
+            "conductor": "576",
+            "conductor_sort": 576,
+            "conductor_note": "",
+            "discriminant_digits": 34,
+            "lmfdb": {
+              "label": "576.b.2",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-168%2C-666%2C-504%2C-1%2C-504%2C665%2C-168%5D%2C%5B1%2C1%2C1%2C1%5D%5D",
+              "snapshot_label": "576.b.2"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 576.b.2 (table g2c_curves_new, label 576.b2 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(2)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 22*T^2 + 361 is irreducible",
+            "verified": "2026-10-17 06:12:15 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -709,28 +818,82 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "4.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-9",
+              "-44",
+              "11",
+              "80",
+              "105",
+              "56",
+              "16"
+            ],
+            "h": [
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "16*x^6 + 56*x^5 + 105*x^4 + 80*x^3 + 11*x^2 - 44*x - 9",
+              "h": "x",
+              "text": "y^2 + x*y = 16*x^6 + 56*x^5 + 105*x^4 + 80*x^3 + 11*x^2 - 44*x - 9"
+            },
+            "conductor": "775",
+            "conductor_sort": 775,
+            "conductor_note": "taken from the LMFDB label 775.a.1: Magma's genus-2 Conductor gave 793600, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
+            "discriminant_digits": 20,
+            "lmfdb": {
+              "label": "775.a.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-9%2C-44%2C11%2C80%2C105%2C56%2C16%5D%2C%5B0%2C1%5D%5D",
+              "snapshot_label": "775.a.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 775.a.1 (table g2c_curves_new, label 775.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 - 2*T^2 + 9 is irreducible",
+            "verified": "2026-10-17 06:28:59 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -868,28 +1031,83 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "5.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "357",
+              "30",
+              "86",
+              "-21",
+              "2",
+              "-3"
+            ],
+            "h": [
+              "1",
+              "0",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "-3*x^5 + 2*x^4 - 21*x^3 + 86*x^2 + 30*x + 357",
+              "h": "x^3 + 1",
+              "text": "y^2 + (x^3 + 1)*y = -3*x^5 + 2*x^4 - 21*x^3 + 86*x^2 + 30*x + 357"
+            },
+            "conductor": "676",
+            "conductor_sort": 676,
+            "conductor_note": "",
+            "discriminant_digits": 21,
+            "lmfdb": {
+              "label": "676.c.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B357%2C30%2C86%2C-21%2C2%2C-3%5D%2C%5B1%2C0%2C0%2C1%5D%5D",
+              "snapshot_label": "676.c.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 676.c.1 (table g2c_curves_new, label 676.c1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(13)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:29:00 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Ogg1973",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -1030,28 +1248,83 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "6.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-7",
+              "27",
+              "-18",
+              "-23",
+              "6",
+              "3"
+            ],
+            "h": [
+              "1",
+              "0",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "3*x^5 + 6*x^4 - 23*x^3 - 18*x^2 + 27*x - 7",
+              "h": "x^3 + 1",
+              "text": "y^2 + (x^3 + 1)*y = 3*x^5 + 6*x^4 - 23*x^3 - 18*x^2 + 27*x - 7"
+            },
+            "conductor": "657",
+            "conductor_sort": 657,
+            "conductor_note": "",
+            "discriminant_digits": 13,
+            "lmfdb": {
+              "label": "657.a.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-7%2C27%2C-18%2C-23%2C6%2C3%5D%2C%5B1%2C0%2C0%2C1%5D%5D",
+              "snapshot_label": "657.a.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 657.a.1 (table g2c_curves_new, label 657.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - 2*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:29:01 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Flynn1991",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -1194,28 +1467,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "7.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "2",
+              "2",
+              "-8",
+              "-6",
+              "12",
+              "10",
+              "2"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "2*x^6 + 10*x^5 + 12*x^4 - 6*x^3 - 8*x^2 + 2*x + 2",
+              "h": "0",
+              "text": "y^2 = 2*x^6 + 10*x^5 + 12*x^4 - 6*x^3 - 8*x^2 + 2*x + 2"
+            },
+            "conductor": "1521",
+            "conductor_sort": 1521,
+            "conductor_note": "taken from the LMFDB label 1521.d.1 (Magma did not finish the conductor computation within the time limit)",
+            "discriminant_digits": 14,
+            "lmfdb": {
+              "label": "1521.d.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B2%2C2%2C-8%2C-6%2C12%2C10%2C2%5D%2C%5B0%5D%5D",
+              "snapshot_label": "1521.d.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 1521.d.1 (table g2c_curves_new, label 1521.d1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_5 = T^4 + 2*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:29:02 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Ogg1973",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -1355,28 +1681,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "8.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-1",
+              "-2",
+              "1",
+              "4",
+              "-1",
+              "-2",
+              "1"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "x^6 - 2*x^5 - x^4 + 4*x^3 + x^2 - 2*x - 1",
+              "h": "0",
+              "text": "y^2 = x^6 - 2*x^5 - x^4 + 4*x^3 + x^2 - 2*x - 1"
+            },
+            "conductor": "2560",
+            "conductor_sort": 2560,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 11,
+            "lmfdb": {
+              "label": "2560.h.3",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-1%2C-2%2C1%2C4%2C-1%2C-2%2C1%5D%2C%5B0%5D%5D",
+              "snapshot_label": "2560.h.3"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 2560.h.3 (table g2c_curves_new, label 2560.h3 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 - 2*T^2 + 9 is irreducible",
+            "verified": "2026-10-17 06:29:03 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -1518,28 +1897,82 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "9.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "26",
+              "3",
+              "-12",
+              "9",
+              "2",
+              "-2",
+              "1"
+            ],
+            "h": [
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "x^6 - 2*x^5 + 2*x^4 + 9*x^3 - 12*x^2 + 3*x + 26",
+              "h": "x",
+              "text": "y^2 + x*y = x^6 - 2*x^5 + 2*x^4 + 9*x^3 - 12*x^2 + 3*x + 26"
+            },
+            "conductor": "1696",
+            "conductor_sort": 1696,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 10,
+            "lmfdb": {
+              "label": "1696.b.434176.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/1696/b/434176/1",
+              "snapshot_label": ""
+            },
+            "sources": [
+              "BSSVY"
+            ],
+            "rm": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": false,
+            "year": 2016,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "generators",
+            "reference": "LMFDB genus 2 curve 1696.b.434176.1, https://www.lmfdb.org/Genus2Curve/Q/1696/b/434176/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-8*w)u^3 + (90*w - 56)u^2 + (36*w + 20)u + (4) over X^2 + 1, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + x - 1/2, q = x^3 + (-3*w - 1)*x^2 + 1/2*(-w - 8)*x + 5*w - 1, hh = x^3 + 1/2*(-3*w + 3)*x^2 + 1/2*(-8*w - 3)*x + 1/4*(-11*w - 9); degree-3 map, defined over Q(sqrt(-1)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16); simple over ℚ: χ_3 = T^4 - T^2 + 9 is irreducible",
+            "verified": "2026-10-17 06:29:05 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Flynn1991",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BSSVY",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -1680,28 +2113,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "10.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "-1",
+              "0",
+              "-1"
+            ],
+            "h": [
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-x^3 - x",
+              "h": "x^3 + x^2 + x + 1",
+              "text": "y^2 + (x^3 + x^2 + x + 1)*y = -x^3 - x"
+            },
+            "conductor": "576",
+            "conductor_sort": 576,
+            "conductor_note": "",
+            "discriminant_digits": 7,
+            "lmfdb": {
+              "label": "576.a.576.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/576/a/576/1",
+              "snapshot_label": ""
+            },
+            "sources": [
+              "BSSVY"
+            ],
+            "rm": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": false,
+            "year": 2016,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB genus 2 curve 576.a.576.1, https://www.lmfdb.org/Genus2Curve/Q/576/a/576/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(2)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 22*T^2 + 361 is irreducible",
+            "verified": "2026-10-17 06:01:48 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Flynn1991",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BSSVY",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -1996,28 +2482,82 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "12.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "-2",
+              "1",
+              "0",
+              "-1"
+            ],
+            "h": [
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-x^4 + x^2 - 2*x",
+              "h": "x^3 + x^2 + x + 1",
+              "text": "y^2 + (x^3 + x^2 + x + 1)*y = -x^4 + x^2 - 2*x"
+            },
+            "conductor": "1792",
+            "conductor_sort": 1792,
+            "conductor_note": "",
+            "discriminant_digits": 8,
+            "lmfdb": {
+              "label": "1792.a.3584.1",
+              "kind": "production",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/1792/a/3584/1",
+              "snapshot_label": ""
+            },
+            "sources": [
+              "BSSVY"
+            ],
+            "rm": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": false,
+            "year": 2016,
+            "historical": false,
+            "first_source": "BSSVY",
+            "first_source_year": 2016,
+            "torsion_method": "generators",
+            "reference": "LMFDB genus 2 curve 1792.a.3584.1, https://www.lmfdb.org/Genus2Curve/Q/1792/a/3584/1",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(2)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - 2*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:01:49 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BSSVY",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -2262,28 +2802,83 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "14.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "15",
+              "9",
+              "-7",
+              "64",
+              "47",
+              "-27",
+              "3"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "3*x^6 - 27*x^5 + 47*x^4 + 64*x^3 - 7*x^2 + 9*x + 15",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 3*x^6 - 27*x^5 + 47*x^4 + 64*x^3 - 7*x^2 + 9*x + 15"
+            },
+            "conductor": "9604",
+            "conductor_sort": 9604,
+            "conductor_note": "",
+            "discriminant_digits": 20,
+            "lmfdb": {
+              "label": "9604.b.3",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B15%2C9%2C-7%2C64%2C47%2C-27%2C3%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": "9604.b.3"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 9604.b.3 (table g2c_curves_new, label 9604.b3 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a chain of at most 2 (2,2)-isogenies over Q(sqrt(-7)) reaches a product of two elliptic curves over Q(sqrt(-7)); simple over ℚ: χ_5 = T^4 + 2*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:01:50 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "PP2012",
         "qsplit": "BookerSutherland",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -2419,28 +3014,83 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "15.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "1",
+              "-18",
+              "72",
+              "47",
+              "38",
+              "9",
+              "1"
+            ],
+            "h": [
+              "0",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "x^6 + 9*x^5 + 38*x^4 + 47*x^3 + 72*x^2 - 18*x + 1",
+              "h": "x^2",
+              "text": "y^2 + x^2*y = x^6 + 9*x^5 + 38*x^4 + 47*x^3 + 72*x^2 - 18*x + 1"
+            },
+            "conductor": "3168",
+            "conductor_sort": 3168,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 20,
+            "lmfdb": {
+              "label": "3168.h.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1%2C-18%2C72%2C47%2C38%2C9%2C1%5D%2C%5B0%2C0%2C1%5D%5D",
+              "snapshot_label": "3168.h.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 3168.h.1 (table g2c_curves_new, label 3168.h1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-432*w + 864)u^3 + (36*w + 45)u^2 + (24*w - 12)u + (4) over X^2 - 3, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + (-w + 1)*x, q = x^3 + 1/2*(-4*w + 9)*x^2 + (-7*w + 15)*x + w - 2, hh = x^3 + (-w + 3)*x^2 + 1/2*(5*w - 9)*x - 4*w + 7; degree-3 map, defined over Q(sqrt(3)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16); simple over ℚ: χ_5 = T^4 + 4*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:01:53 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Leprevost1991",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -6509,28 +7159,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.4.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "-1",
+              "11",
+              "35",
+              "-123",
+              "-171",
+              "405"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "405*x^6 - 171*x^5 - 123*x^4 + 35*x^3 + 11*x^2 - x",
+              "h": "0",
+              "text": "y^2 = 405*x^6 - 171*x^5 - 123*x^4 + 35*x^3 + 11*x^2 - x"
+            },
+            "conductor": "2457",
+            "conductor_sort": 2457,
+            "conductor_note": "taken from the LMFDB label 2457.b.3 (Magma did not finish the conductor computation within the time limit)",
+            "discriminant_digits": 19,
+            "lmfdb": {
+              "label": "2457.b.3",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-1%2C11%2C35%2C-123%2C-171%2C405%5D%2C%5B0%5D%5D",
+              "snapshot_label": "2457.b.3"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 2457.b.3 (table g2c_curves_new, label 2457.b3 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma); simple over ℚ: χ_11 = T^4 - 10*T^2 + 121 is irreducible",
+            "verified": "2026-10-17 06:12:08 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -6670,28 +7373,80 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.6.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "1",
+              "-4",
+              "-13",
+              "-9",
+              "-1"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "-x^5 - 9*x^4 - 13*x^3 - 4*x^2 + x",
+              "h": "0",
+              "text": "y^2 = -x^5 - 9*x^4 - 13*x^3 - 4*x^2 + x"
+            },
+            "conductor": "784",
+            "conductor_sort": 784,
+            "conductor_note": "",
+            "discriminant_digits": 9,
+            "lmfdb": {
+              "label": "784.b.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C1%2C-4%2C-13%2C-9%2C-1%5D%2C%5B0%5D%5D",
+              "snapshot_label": "784.b.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 784.b.1 (table g2c_curves_new, label 784.b1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_3 = T^4 + T^3 - 2*T^2 + 3*T + 9 is irreducible",
+            "verified": "2026-10-17 06:12:10 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -6832,13 +7587,66 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.8.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-8152375",
+              "2562175",
+              "73961",
+              "83792",
+              "-1345",
+              "847",
+              "49"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "49*x^6 + 847*x^5 - 1345*x^4 + 83792*x^3 + 73961*x^2 + 2562175*x - 8152375",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 49*x^6 + 847*x^5 - 1345*x^4 + 83792*x^3 + 73961*x^2 + 2562175*x - 8152375"
+            },
+            "conductor": "979254391500",
+            "conductor_sort": 979254391500,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 57,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-8152375%2C2562175%2C73961%2C83792%2C-1345%2C847%2C49%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-55)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
+            "verified": "2026-10-17 06:12:13 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
@@ -6850,10 +7658,10 @@
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -8651,28 +9459,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "3.3.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "196",
+              "0",
+              "0",
+              "-13"
+            ],
+            "h": [
+              "0",
+              "0",
+              "0",
+              "1"
+            ],
+            "equation": {
+              "f": "-13*x^3 + 196",
+              "h": "x^3",
+              "text": "y^2 + x^3*y = -13*x^3 + 196"
+            },
+            "conductor": "1764",
+            "conductor_sort": 1764,
+            "conductor_note": "",
+            "discriminant_digits": 17,
+            "lmfdb": {
+              "label": "1764.d.2",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B196%2C0%2C0%2C-13%5D%2C%5B0%2C0%2C0%2C1%5D%5D",
+              "snapshot_label": "1764.d.2"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 1764.d.2 (table g2c_curves_new, label 1764.d2 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_43 = T^4 - 4*T^3 - 27*T^2 - 172*T + 1849 is irreducible",
+            "verified": "2026-10-17 06:12:17 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BFT2014",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -8816,28 +9677,84 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "3.6.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "19",
+              "4",
+              "-14",
+              "11",
+              "3",
+              "-5",
+              "2"
+            ],
+            "h": [
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "2*x^6 - 5*x^5 + 3*x^4 + 11*x^3 - 14*x^2 + 4*x + 19",
+              "h": "x^3 + x^2 + x + 1",
+              "text": "y^2 + (x^3 + x^2 + x + 1)*y = 2*x^6 - 5*x^5 + 3*x^4 + 11*x^3 - 14*x^2 + 4*x + 19"
+            },
+            "conductor": "2700",
+            "conductor_sort": 2700,
+            "conductor_note": "taken from the LMFDB label 2700.b.1 (Magma did not finish the conductor computation within the time limit)",
+            "discriminant_digits": 16,
+            "lmfdb": {
+              "label": "2700.b.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B19%2C4%2C-14%2C11%2C3%2C-5%2C2%5D%2C%5B1%2C1%2C1%2C1%5D%5D",
+              "snapshot_label": "2700.b.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 2700.b.1 (table g2c_curves_new, label 2700.b1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar; simple over ℚ: χ_19 = T^4 + 5*T^3 + 6*T^2 + 95*T + 361 is irreducible",
+            "verified": "2026-10-17 06:18:54 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BookerSutherland",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "family",
@@ -8981,28 +9898,84 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "3.9.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "1",
+              "-3",
+              "-1",
+              "7",
+              "6",
+              "4",
+              "2"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "2*x^6 + 4*x^5 + 6*x^4 + 7*x^3 - x^2 - 3*x + 1",
+              "h": "x^3 + x^2 + x",
+              "text": "y^2 + (x^3 + x^2 + x)*y = 2*x^6 + 4*x^5 + 6*x^4 + 7*x^3 - x^2 - 3*x + 1"
+            },
+            "conductor": "6804",
+            "conductor_sort": 6804,
+            "conductor_note": "taken from the LMFDB label 6804.a.1 (Magma did not finish the conductor computation within the time limit)",
+            "discriminant_digits": 12,
+            "lmfdb": {
+              "label": "6804.a.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1%2C-3%2C-1%2C7%2C6%2C4%2C2%5D%2C%5B0%2C1%2C1%2C1%5D%5D",
+              "snapshot_label": "6804.a.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-24*w)u^3 + (1/2*(27*w - 117))u^2 + (27*w + 9)u + (9) over X^2 + 3, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + x, q = x^3 + (-w + 1)*x^2 + 1/6*(-5*w - 3)*x + 1/3*(w - 1), hh = x^3 + 1/2*(-w + 3)*x^2 - 2/3*w*x + 1/3*(-w - 1); degree-3 map, defined over Q(sqrt(-3)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16); simple over ℚ: χ_17 = T^4 + 7*T^2 + 289 is irreducible",
+            "verified": "2026-10-17 06:28:55 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "Leprevost1995",
         "qsplit": "HLP2000",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "open",
@@ -9412,28 +10385,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "4.4.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "1",
+              "10",
+              "-20",
+              "-40",
+              "735",
+              "-1260",
+              "-540"
+            ],
+            "h": [
+              "1"
+            ],
+            "equation": {
+              "f": "-540*x^6 - 1260*x^5 + 735*x^4 - 40*x^3 - 20*x^2 + 10*x + 1",
+              "h": "1",
+              "text": "y^2 + y = -540*x^6 - 1260*x^5 + 735*x^4 - 40*x^3 - 20*x^2 + 10*x + 1"
+            },
+            "conductor": "48384",
+            "conductor_sort": 48384,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 29,
+            "lmfdb": {
+              "label": "48384.j.5",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1%2C10%2C-20%2C-40%2C735%2C-1260%2C-540%5D%2C%5B1%5D%5D",
+              "snapshot_label": "48384.j.5"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 48384.j.5 (table g2c_curves_new, label 48384.j5 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma); simple over ℚ: χ_17 = T^4 + 14*T^2 + 289 is irreducible",
+            "verified": "2026-10-17 06:28:57 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BookerSutherland",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -10742,28 +11768,80 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.2.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "-16",
+              "-8",
+              "23",
+              "-10",
+              "-25"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "-25*x^5 - 10*x^4 + 23*x^3 - 8*x^2 - 16*x",
+              "h": "0",
+              "text": "y^2 = -25*x^5 - 10*x^4 + 23*x^3 - 8*x^2 - 16*x"
+            },
+            "conductor": "775",
+            "conductor_sort": 775,
+            "conductor_note": "taken from the LMFDB label 775.a.2 (Magma did not finish the conductor computation within the time limit)",
+            "discriminant_digits": 17,
+            "lmfdb": {
+              "label": "775.a.2",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-16%2C-8%2C23%2C-10%2C-25%5D%2C%5B0%5D%5D",
+              "snapshot_label": "775.a.2"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 775.a.2 (table g2c_curves_new, label 775.a2 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 - 2*T^2 + 9 is irreducible",
+            "verified": "2026-10-17 06:11:58 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -10907,28 +11985,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.4.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "19",
+              "71",
+              "67",
+              "-8",
+              "-19",
+              "4"
+            ],
+            "h": [
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "4*x^5 - 19*x^4 - 8*x^3 + 67*x^2 + 71*x + 19",
+              "h": "x + 1",
+              "text": "y^2 + (x + 1)*y = 4*x^5 - 19*x^4 - 8*x^3 + 67*x^2 + 71*x + 19"
+            },
+            "conductor": "4752",
+            "conductor_sort": 4752,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 12,
+            "lmfdb": {
+              "label": "4752.o.2",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B19%2C71%2C67%2C-8%2C-19%2C4%5D%2C%5B1%2C1%5D%5D",
+              "snapshot_label": "4752.o.2"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 4752.o.2 (table g2c_curves_new, label 4752.o2 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(3)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
+            "verified": "2026-10-17 06:12:03 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -11071,28 +12202,81 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.6.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "1",
+              "-2",
+              "-7",
+              "10",
+              "14",
+              "-8",
+              "-8"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "-8*x^6 - 8*x^5 + 14*x^4 + 10*x^3 - 7*x^2 - 2*x + 1",
+              "h": "0",
+              "text": "y^2 = -8*x^6 - 8*x^5 + 14*x^4 + 10*x^3 - 7*x^2 - 2*x + 1"
+            },
+            "conductor": "6912",
+            "conductor_sort": 6912,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 14,
+            "lmfdb": {
+              "label": "6912.w.4",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1%2C-2%2C-7%2C10%2C14%2C-8%2C-8%5D%2C%5B0%5D%5D",
+              "snapshot_label": "6912.w.4"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6912.w.4 (table g2c_curves_new, label 6912.w4 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-2)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - 2*T^2 + 25 is irreducible",
+            "verified": "2026-10-17 06:12:05 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BSSVY",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "family",
@@ -11233,28 +12417,83 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.8.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "-25",
+              "46",
+              "5",
+              "-39",
+              "3",
+              "9"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "9*x^6 + 3*x^5 - 39*x^4 + 5*x^3 + 46*x^2 - 25*x",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 9*x^6 + 3*x^5 - 39*x^4 + 5*x^3 + 46*x^2 - 25*x"
+            },
+            "conductor": "9900",
+            "conductor_sort": 9900,
+            "conductor_note": "",
+            "discriminant_digits": 15,
+            "lmfdb": {
+              "label": "9900.k.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-25%2C46%2C5%2C-39%2C3%2C9%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": "9900.k.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 9900.k.1 (table g2c_curves_new, label 9900.k1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma); simple over ℚ: χ_47 = T^4 - 34*T^2 + 2209 is irreducible",
+            "verified": "2026-10-17 06:12:07 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BookerSutherland",
         "qsplit": "BSSVY",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -12584,7 +13823,61 @@
             "source_kind": "file"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.2.2.d",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "-3",
+              "1",
+              "17",
+              "16",
+              "3"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "3*x^5 + 16*x^4 + 17*x^3 + x^2 - 3*x",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 3*x^5 + 16*x^4 + 17*x^3 + x^2 - 3*x"
+            },
+            "conductor": "1521",
+            "conductor_sort": 1521,
+            "conductor_note": "",
+            "discriminant_digits": 12,
+            "lmfdb": {
+              "label": "1521.b.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-3%2C1%2C17%2C16%2C3%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": "1521.b.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 1521.b.1 (table g2c_curves_new, label 1521.b1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(13)) (the surface is E x E^sigma); simple over ℚ: χ_11 = T^4 - 10*T^2 + 121 is irreducible",
+            "verified": "2026-10-17 06:01:54 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": [
           {
             "id": "2.2.2.2.b",
@@ -12643,22 +13936,22 @@
       "first_dated": {
         "simple": null,
         "qsplit": 0,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BookerSutherland",
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": "BookerSutherland"
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": true
       },
-      "n_curves": 3,
+      "n_curves": 4,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -12801,28 +14094,80 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.2.4.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "0",
+              "75",
+              "-490",
+              "659",
+              "392",
+              "48"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "48*x^5 + 392*x^4 + 659*x^3 - 490*x^2 + 75*x",
+              "h": "0",
+              "text": "y^2 = 48*x^5 + 392*x^4 + 659*x^3 - 490*x^2 + 75*x"
+            },
+            "conductor": "176400",
+            "conductor_sort": 176400,
+            "conductor_note": "taken from the LMFDB label 176400.cr.1: Magma's genus-2 Conductor gave 184968806400, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
+            "discriminant_digits": 23,
+            "lmfdb": {
+              "label": "176400.cr.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C75%2C-490%2C659%2C392%2C48%5D%2C%5B0%5D%5D",
+              "snapshot_label": "176400.cr.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "generators",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 176400.cr.1 (table g2c_curves_new, label 176400.cr1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-5)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
+            "verified": "2026-10-17 06:01:56 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
         "simple": "BookerSutherland",
         "qsplit": "BookerSutherland",
-        "gsplit": null,
+        "gsplit": "BookerSutherland",
         "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -12966,13 +14311,65 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.2.2.6.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "1355999975081200",
+              "2757085929534360",
+              "16095094765893",
+              "14380189111",
+              "-25655829",
+              "6993"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "6993*x^5 - 25655829*x^4 + 14380189111*x^3 + 16095094765893*x^2 + 2757085929534360*x + 1355999975081200",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 6993*x^5 - 25655829*x^4 + 14380189111*x^3 + 16095094765893*x^2 + 2757085929534360*x + 1355999975081200"
+            },
+            "conductor": "168017780700",
+            "conductor_sort": 168017780700,
+            "conductor_note": "",
+            "discriminant_digits": 95,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1355999975081200%2C2757085929534360%2C16095094765893%2C14380189111%2C-25655829%2C6993%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-11)) (the surface is E x E^sigma); simple over ℚ: χ_29 = T^4 - 26*T^2 + 841 is irreducible",
+            "verified": "2026-10-17 06:01:57 UTC",
+            "submitted": "2026-10-16",
+            "source_kind": "file"
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
@@ -12984,10 +14381,10 @@
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",

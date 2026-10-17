@@ -1,0 +1,32 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "2*x^6 + 10*x^5 + 12*x^4 - 6*x^3 - 8*x^2 + 2*x + 2",
+ "h": "0",
+ "group": [
+  7
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 + 3*x + 1",
+   "2*x",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 1521.d.1 (table g2c_curves_new, label 1521.d1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [7] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [7]; geom_end_alg = M_2(Q), end_alg = CM; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 1521. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [7], class gsplit, Q-simplicity prime 5 (chi = T^4 + 2*T^2 + 25), splitness certificate: geometric_involution over Qbar (the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar). Submitted by F. Najman; the curve is due to the database cited under Reference.",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_7.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "1521.d.1"
+}

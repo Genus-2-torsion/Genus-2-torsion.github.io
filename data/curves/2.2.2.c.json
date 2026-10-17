@@ -1,0 +1,228 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.2.c",
+  "group": [
+    2,
+    2,
+    2
+  ],
+  "group_key": "2.2.2",
+  "group_bracket": "[2,2,2]",
+  "order": 8,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "0",
+      "-16",
+      "-8",
+      "23",
+      "-10",
+      "-25"
+    ],
+    "h": [
+      "0"
+    ],
+    "f_str": "-25*x^5 - 10*x^4 + 23*x^3 - 8*x^2 - 16*x",
+    "h_str": "0",
+    "g": [
+      "0",
+      "-64",
+      "-32",
+      "92",
+      "-40",
+      "-100"
+    ],
+    "g_str": "-100*x^5 - 40*x^4 + 92*x^3 - 32*x^2 - 64*x",
+    "g_scale": "1",
+    "discriminant": "-13633944184422400",
+    "discriminant_digits": 17,
+    "igusa_clebsch": [
+      "286304",
+      "-1061273600",
+      "-4546350284800",
+      "-136339441844224000000"
+    ],
+    "g2_invariants": [
+      "-57330692374283449507/32505856000000",
+      "-23068984144969561569/260046848000000",
+      "-2645395324640711/16777216000000"
+    ],
+    "rational_weierstrass_points": 4,
+    "minimal_model": null,
+    "minimal_discriminant": "",
+    "minimal_discriminant_factored": "",
+    "conductor": "775",
+    "conductor_factored": "",
+    "conductor_note": "taken from the LMFDB label 775.a.2 (Magma did not finish the conductor computation within the time limit)",
+    "conductor_source": "lmfdb label"
+  },
+  "lmfdb": {
+    "label": "775.a.2",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-16%2C-8%2C23%2C-10%2C-25%5D%2C%5B0%5D%5D",
+    "snapshot_label": "775.a.2"
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      2
+    ],
+    "order": 8,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x + 4/5",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x + 1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 4/5*x",
+          "0",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 3,
+    "point_count_gcd": 8,
+    "point_count_primes": [
+      3,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
+    ],
+    "claimed": [
+      2,
+      2,
+      2
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 92,
+    "reducible_chi": 50
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 3,
+    "chi": "T^4 - 2*T^2 + 9"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)"
+    },
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 43,
+      "reducible_chi": 24
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Booker–Sutherland (extended database)",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 775.a.2 (table g2c_curves_new, label 775.a2 on devmirror.lmfdb.xyz, read 2026-10-16)",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [2,2,2] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [2,2,2]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 775. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [2,2,2], class gsplit, Q-simplicity prime 3 (chi = T^4 - 2*T^2 + 9), splitness certificate: richelot over Q ((2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)). Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant 5, so N(J) = |d_K|^2 * Norm(f_E) = 25 * 31 = 775 (computed with Magma; conductor is an isogeny invariant).",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "-16",
+      "-8",
+      "23",
+      "-10",
+      "-25"
+    ],
+    "h": [
+      "0"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      2
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "775.a.2"
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/gsplit_2.2.2.json"
+  },
+  "dates": {
+    "submitted": "2026-10-16",
+    "verified": "2026-10-17 06:11:58 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.770000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/2.2.2.c.log",
+    "conductor_log": "",
+    "conductor_cputime_seconds": null
+  }
+}

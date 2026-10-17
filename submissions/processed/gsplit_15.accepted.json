@@ -1,0 +1,59 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "x^6 + 9*x^5 + 38*x^4 + 47*x^3 + 72*x^2 - 18*x + 1",
+ "h": "x^2",
+ "group": [
+  15
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "1",
+   "-2*x^3 - 9*x^2",
+   2
+  ]
+ ],
+ "cover": {
+  "field": "X^2 - 3",
+  "cubic": [
+   "-432*w + 864",
+   "36*w + 45",
+   "24*w - 12",
+   "4"
+  ],
+  "p": [
+   "0",
+   "-w + 1",
+   "1"
+  ],
+  "q": [
+   "w - 2",
+   "-7*w + 15",
+   "1/2*(-4*w + 9)",
+   "1"
+  ],
+  "hh": [
+   "-4*w + 7",
+   "1/2*(5*w - 9)",
+   "-w + 3",
+   "1"
+  ],
+  "note": "degree-3 map, defined over Q(sqrt(3)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16)"
+ },
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 3168.h.1 (table g2c_curves_new, label 3168.h1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [15] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false); smallest-conductor curve of this torsion group there (LMFDB conductor 3168). The automatic Richelot certificates do not apply (over Q(sqrt(3)) the working model factors as two cubics and has no Richelot isogeny), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(3)) (the field over which J splits; the cubic factors of g are the fibre over the point at infinity and the three remaining Weierstrass points). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1). Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_15.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "3168.h.1"
+}

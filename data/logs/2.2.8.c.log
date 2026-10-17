@@ -1,0 +1,9 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (x^2 + x) y = 9*x^6 + 3*x^5 - 39*x^4 + 5*x^3 + 46*x^2 - 25*x; working model y^2 = 36*x^6 + 12*x^5 - 155*x^4 + 22*x^3 + 185*x^2 - 100*x
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 32 (p = [ 7, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109 ])
+[0.0600000 s] J(Q)_tors = [ 2, 2, 8 ]: the 3 submitted generators are independent torsion points generating a group of order 32 = gcd #J(F_p)
+[0.950000 s] no strict prime below 500 (91 admissible primes, 63 with reducible chi)
+[0.950000 s] Q-simple: chi irreducible at p = 47
+[1.03000 s] geometrically split: a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)
+[1.03000 s] class: gsplit
+[1.27000 s] VERIFY_DONE

@@ -1,0 +1,47 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "6993*x^5 - 25655829*x^4 + 14380189111*x^3 + 16095094765893*x^2 + 2757085929534360*x + 1355999975081200",
+ "h": "x^2 + x",
+ "group": [
+  2,
+  2,
+  2,
+  6
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 + 1301263/3996*x + 640867/3996",
+   "0",
+   2
+  ],
+  [
+   "x + 73/148",
+   "0",
+   1
+  ],
+  [
+   "x^2 - 4263*x + 4501880",
+   "0",
+   2
+  ],
+  [
+   "x^2 - 526551/925*x - 208749508/925",
+   "-29157374916/4625*x - 8023716816228/4625",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "new",
+ "discoverer": "F. Najman",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [2,2,2,6] for the census (the gsplit cell is empty). Construction: quadratic-conjugate (2,2)-gluing. E = E_{2,6}(t) (Tate normal form of HLP Table 3) with t = (11 + 84*sqrt(-11))/37 over K = Q(sqrt(-11)), E(K)_tors = Z/2 x Z/6, glued with its Galois conjugate E^sigma along the G_K-isomorphism E[2] -> E^sigma[2], T_i -> sigma(T_i) (it satisfies psi^sigma psi = id, so the glued surface and the curve descend to Q). The parameter was chosen so that the Kummer classes of both generators of E(K)_tors/2 are sigma-invariant: N(t-3), N((t-5)(t+3)) and N((t-9)(t-1)) are squares in Q (norms from K); this doubles the torsion twice, J(Q)_tors = [2,2,2,6] against [2,6] for a generic member. E is not a Q-curve (a_P(E) <> a_P(E^sigma) at 13 of 32 split primes below 400), so J is simple over Q (also certified by chi_29 irreducible); J is (2,2)-isogenous over Q to Res_{K/Q} E, which Magma's Richelot search finds. Magma's Conductor on the reduced minimal model: 2^2 * 3^2 * 5^2 * 7^2 * 11^2 * 23 * 37^2. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant -11, so N(J) = |d_K|^2 * Norm(f_E) = 121 * 1388576700 = 168017780700 (computed with Magma; conductor is an isogeny invariant).",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_2.2.2.6.json"
+ },
+ "sources": []
+}

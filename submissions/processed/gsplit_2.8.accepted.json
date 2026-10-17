@@ -1,0 +1,35 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "49*x^6 + 847*x^5 - 1345*x^4 + 83792*x^3 + 73961*x^2 + 2562175*x - 8152375",
+ "h": "x^2 + x",
+ "group": [
+  2,
+  8
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 + 275/14*x - 55",
+   "0",
+   2
+  ],
+  [
+   "x^2 - 253/42*x + 55/6",
+   "29722/9*x - 59290/9",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "new",
+ "discoverer": "F. Najman",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [2,8] for the census (the gsplit cell is empty). Construction: quadratic-conjugate (2,2)-gluing. E = E_{2,8}(t) (Tate normal form of HLP Table 3) with t = (-1 + sqrt(-55))/8 over K = Q(sqrt(-55)), E(K)_tors = Z/2 x Z/8 = <P> x <T>; E is glued with its Galois conjugate E^sigma along the G_K-isomorphism psi: E[2] -> E^sigma[2] that fixes the 2-torsion point 4P and swaps the other two (psi^sigma psi = id, so the glued abelian surface Res_{K/Q}(E)/graph(psi) and the curve descend to Q). The Kummer class of P + T is twisted-invariant, which gives the extra factor 2 (J(Q)_tors = [2,8], against [2,4] for a generic member of the family). E is not a Q-curve (a_P(E) <> a_P(E^sigma) at 15 of 34 split primes below 400), so J is simple over Q (also certified by chi_19 irreducible); J is (2,2)-isogenous over Q to Res_{K/Q} E, which Magma's Richelot search finds. Found by a search over t = t1 + sqrt(s) with a Kummer-class prefilter (torsion_jac code/gsplit_gain_search.m). Conductor 979254391500 = 2^2 * 3^2 * 5^3 * 7^2 * 11^2 * 17^2 * 127 (Magma's Conductor on the reduced minimal model; it agrees with the rigorous value below). A second example with the same construction: t = -2 + sqrt(10)/4 over Q(sqrt 10), y^2 = 1521x^6 + 4368x^5 - 20264x^4 - 17376x^3 - 102569x^2 - 722580x + 906724, conductor 10145386368000. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant -55, so N(J) = |d_K|^2 * Norm(f_E) = 3025 * 323720460 = 979254391500 (computed with Magma; conductor is an isogeny invariant).",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_2.8.json"
+ },
+ "sources": []
+}

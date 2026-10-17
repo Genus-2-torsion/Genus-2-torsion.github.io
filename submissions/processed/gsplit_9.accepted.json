@@ -1,0 +1,59 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "x^6 - 2*x^5 + 2*x^4 + 9*x^3 - 12*x^2 + 3*x + 26",
+ "h": "x",
+ "group": [
+  9
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "1",
+   "2*x^3 - 2*x^2",
+   2
+  ]
+ ],
+ "cover": {
+  "field": "X^2 + 1",
+  "cubic": [
+   "-8*w",
+   "90*w - 56",
+   "36*w + 20",
+   "4"
+  ],
+  "p": [
+   "-1/2",
+   "1",
+   "1"
+  ],
+  "q": [
+   "5*w - 1",
+   "1/2*(-w - 8)",
+   "-3*w - 1",
+   "1"
+  ],
+  "hh": [
+   "1/4*(-11*w - 9)",
+   "1/2*(-8*w - 3)",
+   "1/2*(-3*w + 3)",
+   "1"
+  ],
+  "note": "degree-3 map, defined over Q(sqrt(-1)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16)"
+ },
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB genus 2 curve 1696.b.434176.1, https://www.lmfdb.org/Genus2Curve/Q/1696/b/434176/1",
+ "discoverer": "LMFDB genus 2 database (BSSVY 2016)",
+ "year": 2016,
+ "notes": "First Q-simple, geometrically split example of [9] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves: is_simple_base = true, is_simple_geom = false); smallest-conductor curve of this torsion group there (LMFDB conductor 1696). The automatic Richelot certificates do not apply (over Q(sqrt(-1)) the working model factors as two cubics and has no Richelot isogeny), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(-1)) (the field over which J splits; the cubic factors of g are the fibre over the point at infinity and the three remaining Weierstrass points). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1). Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_9.json"
+ },
+ "sources": [
+  "BSSVY"
+ ],
+ "lmfdb_label": "1696.b.434176.1"
+}

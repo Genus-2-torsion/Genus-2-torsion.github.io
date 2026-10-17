@@ -1,0 +1,32 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "x^6 - 2*x^5 - x^4 + 4*x^3 + x^2 - 2*x - 1",
+ "h": "0",
+ "group": [
+  8
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x + 1",
+   "x^3 + 1",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 2560.h.3 (table g2c_curves_new, label 2560.h3 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [8] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [8]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 2560. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [8], class gsplit, Q-simplicity prime 3 (chi = T^4 - 2*T^2 + 9), splitness certificate: richelot over Q ((2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma)). Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant -4, so N(J) = |d_K|^2 * Norm(f_E) = 16 * 160 = 2560 (computed with Magma; conductor is an isogeny invariant).",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_8.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "2560.h.3"
+}

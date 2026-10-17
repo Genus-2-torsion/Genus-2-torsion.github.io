@@ -1,0 +1,38 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "-x^5 - 9*x^4 - 13*x^3 - 4*x^2 + x",
+ "h": "0",
+ "group": [
+  2,
+  6
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 + x",
+   "0",
+   2
+  ],
+  [
+   "x^2 + 9*x - 1",
+   "-11*x + 1",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 784.b.1 (table g2c_curves_new, label 784.b1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [2,6] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [2,6]; geom_end_alg = M_2(Q), end_alg = CM; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 784. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [2,6], class gsplit, Q-simplicity prime 3 (chi = T^4 + T^3 - 2*T^2 + 3*T + 9), splitness certificate: geometric_involution over Qbar (the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar). Submitted by F. Najman; the curve is due to the database cited under Reference.",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_2.6.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "784.b.1"
+}

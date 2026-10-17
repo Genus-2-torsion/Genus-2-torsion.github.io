@@ -1,0 +1,4 @@
+[0.0200000 s] minimal model y^2 + (x^3 + 1) y = -3*x^5 + 2*x^4 - 21*x^3 + 86*x^2 + 30*x + 357, discriminant 204743572056363028
+[0.0200000 s] discriminant factored: 2^2 * 13^15
+[0.240000 s] conductor 676 = 2^2 * 13^2
+[0.240000 s] CONDUCTOR_DONE

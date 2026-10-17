@@ -1,0 +1,32 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "3*x^6 - 27*x^5 + 47*x^4 + 64*x^3 - 7*x^2 + 9*x + 15",
+ "h": "x^2 + x",
+ "group": [
+  14
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 - 7*x + 5",
+   "36*x - 45",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 9604.b.3 (table g2c_curves_new, label 9604.b3 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [14] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [14]; geom_end_alg = M_2(Q), end_alg = RM; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 9604. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [14], class gsplit, Q-simplicity prime 5 (chi = T^4 + 2*T^2 + 25), splitness certificate: richelot over Q(sqrt(-7)) (a chain of at most 2 (2,2)-isogenies over Q(sqrt(-7)) reaches a product of two elliptic curves over Q(sqrt(-7))). Submitted by F. Najman; the curve is due to the database cited under Reference.",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_14.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "9604.b.3"
+}

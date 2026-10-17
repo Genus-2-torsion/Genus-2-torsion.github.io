@@ -1,0 +1,249 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.8.c",
+  "group": [
+    2,
+    2,
+    8
+  ],
+  "group_key": "2.2.8",
+  "group_bracket": "[2,2,8]",
+  "order": 32,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "0",
+      "-25",
+      "46",
+      "5",
+      "-39",
+      "3",
+      "9"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "9*x^6 + 3*x^5 - 39*x^4 + 5*x^3 + 46*x^2 - 25*x",
+    "h_str": "x^2 + x",
+    "g": [
+      "0",
+      "-100",
+      "185",
+      "22",
+      "-155",
+      "12",
+      "36"
+    ],
+    "g_str": "36*x^6 + 12*x^5 - 155*x^4 + 22*x^3 + 185*x^2 - 100*x",
+    "g_scale": "1",
+    "discriminant": "175177728000000",
+    "discriminant_digits": 15,
+    "igusa_clebsch": [
+      "413704",
+      "654796900",
+      "89140378564200",
+      "175177728000000"
+    ],
+    "g2_invariants": [
+      "369827042982605246689793/42768000000",
+      "14466193255352460790207/42768000000",
+      "78249066161727186361/4752000000"
+    ],
+    "rational_weierstrass_points": 4,
+    "minimal_model": {
+      "f": [
+        "0",
+        "-25",
+        "-79",
+        "-60",
+        "5",
+        "2"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "42768000000",
+    "minimal_discriminant_factored": "2^10 * 3^5 * 5^6 * 11",
+    "conductor": "9900",
+    "conductor_factored": "2^2 * 3^2 * 5^2 * 11",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "9900.k.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-25%2C46%2C5%2C-39%2C3%2C9%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": "9900.k.1"
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      8
+    ],
+    "order": 32,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 5/6*x",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 5/6*x - 25/18",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 8,
+        "mumford": [
+          "x^2 + 1/3*x - 25/12",
+          "1/6*x + 25/12",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 3,
+    "point_count_gcd": 32,
+    "point_count_primes": [
+      7,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
+    ],
+    "claimed": [
+      2,
+      2,
+      8
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 91,
+    "reducible_chi": 63
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 47,
+    "chi": "T^4 - 34*T^2 + 2209"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)"
+    },
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 42,
+      "reducible_chi": 32
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Booker–Sutherland (extended database)",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 9900.k.1 (table g2c_curves_new, label 9900.k1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [2,2,8] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [2,2,8]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 9900. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [2,2,8], class gsplit, Q-simplicity prime 47 (chi = T^4 - 34*T^2 + 2209), splitness certificate: richelot over Q (a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)). Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant 5, so N(J) = |d_K|^2 * Norm(f_E) = 25 * 396 = 9900 (computed with Magma; conductor is an isogeny invariant).",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "-25",
+      "46",
+      "5",
+      "-39",
+      "3",
+      "9"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      8
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "9900.k.1"
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/gsplit_2.2.8.json"
+  },
+  "dates": {
+    "submitted": "2026-10-16",
+    "verified": "2026-10-17 06:12:07 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "1.27000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/2.2.8.c.log",
+    "conductor_log": "data/logs/2.2.8.c.conductor.log",
+    "conductor_cputime_seconds": 0.3
+  }
+}

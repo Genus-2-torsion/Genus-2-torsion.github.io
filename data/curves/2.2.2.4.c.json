@@ -1,0 +1,251 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.2.4.c",
+  "group": [
+    2,
+    2,
+    2,
+    4
+  ],
+  "group_key": "2.2.2.4",
+  "group_bracket": "[2,2,2,4]",
+  "order": 32,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "0",
+      "75",
+      "-490",
+      "659",
+      "392",
+      "48"
+    ],
+    "h": [
+      "0"
+    ],
+    "f_str": "48*x^5 + 392*x^4 + 659*x^3 - 490*x^2 + 75*x",
+    "h_str": "0",
+    "g": [
+      "0",
+      "300",
+      "-1960",
+      "2636",
+      "1568",
+      "192"
+    ],
+    "g_str": "192*x^5 + 1568*x^4 + 2636*x^3 - 1960*x^2 + 300*x",
+    "g_scale": "1",
+    "discriminant": "10232296799993856000000",
+    "discriminant_digits": 23,
+    "igusa_clebsch": [
+      "93167456",
+      "4552380006400",
+      "143176481884720332800",
+      "377203389234973507584000000"
+    ],
+    "g2_invariants": [
+      "209204630614995639704963663037643/89932296093696000000",
+      "2561100354238966139826006650203/26646606249984000000",
+      "87990998318525320573929/16777216000000"
+    ],
+    "rational_weierstrass_points": 6,
+    "minimal_model": {
+      "f": [
+        "0",
+        "75",
+        "-490",
+        "659",
+        "392",
+        "48"
+      ],
+      "h": []
+    },
+    "minimal_discriminant": "92090671199944704000000",
+    "minimal_discriminant_factored": "2^36 * 3^6 * 5^6 * 7^6",
+    "conductor": "176400",
+    "conductor_factored": "2^4 * 3^2 * 5^2 * 7^2",
+    "conductor_note": "taken from the LMFDB label 176400.cr.1: Magma's genus-2 Conductor gave 184968806400, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
+    "conductor_source": "lmfdb label",
+    "conductor_magma": "184968806400"
+  },
+  "lmfdb": {
+    "label": "176400.cr.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C75%2C-490%2C659%2C392%2C48%5D%2C%5B0%5D%5D",
+    "snapshot_label": "176400.cr.1"
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "order": 32,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 5*x",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 7/12*x + 1/12",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 4,
+        "mumford": [
+          "x^2 - 37/4*x + 15/4",
+          "276*x - 120",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 4,
+    "point_count_gcd": 32,
+    "point_count_primes": [
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
+    ],
+    "claimed": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 91,
+    "reducible_chi": 57
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 19,
+    "chi": "T^4 - 10*T^2 + 361"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-5)) (the surface is E x E^sigma)"
+    },
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 42,
+      "reducible_chi": 28
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Booker–Sutherland (extended database)",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 176400.cr.1 (table g2c_curves_new, label 176400.cr1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [2,2,2,4] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [2,2,2,4]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 176400. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [2,2,2,4], class gsplit, Q-simplicity prime 19 (chi = T^4 - 10*T^2 + 361), splitness certificate: richelot over Q ((2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-5)) (the surface is E x E^sigma)). Note: Magma's genus-2 Conductor on the reduced minimal model gives 184968806400 (2-part by Ogg's formula), not the LMFDB value 176400. Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant -20, so N(J) = |d_K|^2 * Norm(f_E) = 400 * 441 = 176400 (computed with Magma; conductor is an isogeny invariant).",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "75",
+      "-490",
+      "659",
+      "392",
+      "48"
+    ],
+    "h": [
+      "0"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      2,
+      4
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": "176400.cr.1"
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/gsplit_2.2.2.4.json"
+  },
+  "dates": {
+    "submitted": "2026-10-16",
+    "verified": "2026-10-17 06:01:56 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.820000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/2.2.2.4.c.log",
+    "conductor_log": "data/logs/2.2.2.4.c.conductor.log",
+    "conductor_cputime_seconds": 0.28
+  }
+}

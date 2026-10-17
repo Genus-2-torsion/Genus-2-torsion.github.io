@@ -1,0 +1,9 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (x) y = x^6 - 2*x^5 + 2*x^4 + 9*x^3 - 12*x^2 + 3*x + 26; working model y^2 = 4*x^6 - 8*x^5 + 8*x^4 + 36*x^3 - 47*x^2 + 12*x + 104
+[0.0300000 s] #J(Q)_tors divides gcd #J(F_p) = 9 (p = [ 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103 ])
+[0.0400000 s] J(Q)_tors = [ 9 ]: the 1 submitted generators are independent torsion points generating a group of order 9 = gcd #J(F_p)
+[0.620000 s] no strict prime below 500 (93 admissible primes, 48 with reducible chi)
+[0.620000 s] Q-simple: chi irreducible at p = 3
+[0.700000 s] geometrically split: a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-8*w)u^3 + (90*w - 56)u^2 + (36*w + 20)u + (4) over X^2 + 1, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + x - 1/2, q = x^3 + (-3*w - 1)*x^2 + 1/2*(-w - 8)*x + 5*w - 1, hh = x^3 + 1/2*(-3*w + 3)*x^2 + 1/2*(-8*w - 3)*x + 1/4*(-11*w - 9); degree-3 map, defined over Q(sqrt(-1)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16)
+[0.700000 s] class: gsplit
+[0.810000 s] VERIFY_DONE

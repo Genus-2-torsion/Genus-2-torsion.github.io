@@ -1,0 +1,252 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "3.9.c",
+  "group": [
+    3,
+    9
+  ],
+  "group_key": "3.9",
+  "group_bracket": "[3,9]",
+  "order": 27,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "1",
+      "-3",
+      "-1",
+      "7",
+      "6",
+      "4",
+      "2"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1",
+      "1"
+    ],
+    "f_str": "2*x^6 + 4*x^5 + 6*x^4 + 7*x^3 - x^2 - 3*x + 1",
+    "h_str": "x^3 + x^2 + x",
+    "g": [
+      "4",
+      "-12",
+      "-3",
+      "30",
+      "27",
+      "18",
+      "9"
+    ],
+    "g_str": "9*x^6 + 18*x^5 + 27*x^4 + 30*x^3 - 3*x^2 - 12*x + 4",
+    "g_scale": "1",
+    "discriminant": "-975198486528",
+    "discriminant_digits": 12,
+    "igusa_clebsch": [
+      "-10584",
+      "11573604",
+      "-49327120152",
+      "-975198486528"
+    ],
+    "g2_invariants": [
+      "1089547389/64",
+      "-7411887/16",
+      "-264453"
+    ],
+    "rational_weierstrass_points": 0,
+    "minimal_model": null,
+    "minimal_discriminant": "",
+    "minimal_discriminant_factored": "",
+    "conductor": "6804",
+    "conductor_factored": "",
+    "conductor_note": "taken from the LMFDB label 6804.a.1 (Magma did not finish the conductor computation within the time limit)",
+    "conductor_source": "lmfdb label"
+  },
+  "lmfdb": {
+    "label": "6804.a.1",
+    "kind": "alpha-snapshot",
+    "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1%2C-3%2C-1%2C7%2C6%2C4%2C2%5D%2C%5B0%2C1%2C1%2C1%5D%5D",
+    "snapshot_label": "6804.a.1"
+  },
+  "torsion": {
+    "invariants": [
+      3,
+      9
+    ],
+    "order": 27,
+    "generators": [
+      {
+        "order": 3,
+        "mumford": [
+          "x^2 + x",
+          "x + 2",
+          "2"
+        ]
+      },
+      {
+        "order": 9,
+        "mumford": [
+          "x^2 + x",
+          "3*x + 2",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 2,
+    "point_count_gcd": 27,
+    "point_count_primes": [
+      5,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107
+    ],
+    "claimed": [
+      3,
+      9
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 92,
+    "reducible_chi": 56
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 17,
+    "chi": "T^4 + 7*T^2 + 289"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "cover",
+      "over": "X^2 + 3",
+      "detail": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-24*w)u^3 + (1/2*(27*w - 117))u^2 + (27*w + 9)u + (9) over X^2 + 3, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + x, q = x^3 + (-w + 1)*x^2 + 1/6*(-5*w - 3)*x + 1/3*(w - 1), hh = x^3 + 1/2*(-w + 3)*x^2 - 2/3*w*x + 1/3*(-w - 1); degree-3 map, defined over Q(sqrt(-3)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16)"
+    },
+    "isogenous_product": null,
+    "cover_submitted": true,
+    "cover_accepted": true,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 43,
+      "reducible_chi": 25
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Booker–Sutherland (extended database)",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+  "sources": [
+    "BookerSutherland"
+  ],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [3,9] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false); smallest-conductor curve of this torsion group there (LMFDB conductor 6804). The automatic Richelot certificates do not apply (over Q(sqrt(-3)) the working model factors as two cubics and has no Richelot isogeny), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(-3)) (the field over which J splits; the cubic factors of g are the fibre over the point at infinity and the three remaining Weierstrass points). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1). Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "1",
+      "-3",
+      "-1",
+      "7",
+      "6",
+      "4",
+      "2"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      3,
+      9
+    ],
+    "claimed_class": "split",
+    "cover": {
+      "field": "X^2+3",
+      "cremona": "",
+      "cubic": [
+        "-24*w",
+        "1/2*(27*w-117)",
+        "27*w+9",
+        "9"
+      ],
+      "p": [
+        "0",
+        "1",
+        "1"
+      ],
+      "q": [
+        "1/3*(w-1)",
+        "1/6*(-5*w-3)",
+        "-w+1",
+        "1"
+      ],
+      "hh": [
+        "1/3*(-w-1)",
+        "-2/3*w",
+        "1/2*(-w+3)",
+        "1"
+      ],
+      "note": "degree-3 map, defined over Q(sqrt(-3)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16)"
+    },
+    "lmfdb_label_given": "6804.a.1"
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/gsplit_3.9.json"
+  },
+  "dates": {
+    "submitted": "2026-10-16",
+    "verified": "2026-10-17 06:28:55 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.980000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/3.9.c.log",
+    "conductor_log": "",
+    "conductor_cputime_seconds": null
+  }
+}

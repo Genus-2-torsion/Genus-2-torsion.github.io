@@ -1,0 +1,32 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "-x^4 + x^2 - 2*x",
+ "h": "x^3 + x^2 + x + 1",
+ "group": [
+  12
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 + x - 1",
+   "-1",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB genus 2 curve 1792.a.3584.1, https://www.lmfdb.org/Genus2Curve/Q/1792/a/3584/1",
+ "discoverer": "LMFDB genus 2 database (BSSVY 2016)",
+ "year": 2016,
+ "notes": "First Q-simple, geometrically split example of [12] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [12]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 1792. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [12], class gsplit, Q-simplicity prime 5 (chi = T^4 - 2*T^2 + 25), splitness certificate: richelot over Q ((2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(2)) (the surface is E x E^sigma)). Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant 8, so N(J) = |d_K|^2 * Norm(f_E) = 64 * 28 = 1792 (computed with Magma; conductor is an isogeny invariant).",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_12.json"
+ },
+ "sources": [
+  "BSSVY"
+ ],
+ "lmfdb_label": "1792.a.3584.1"
+}

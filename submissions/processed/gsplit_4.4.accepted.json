@@ -1,0 +1,38 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "-540*x^6 - 1260*x^5 + 735*x^4 - 40*x^3 - 20*x^2 + 10*x + 1",
+ "h": "1",
+ "group": [
+  4,
+  4
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 - 1/8*x - 1/8",
+   "-175/16*x + 25/16",
+   2
+  ],
+  [
+   "x^2 - 11/48*x - 1/48",
+   "925/64*x - 25/64",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 48384.j.5 (table g2c_curves_new, label 48384.j5 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [4,4] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [4,4]; geom_end_alg = Q x Q, end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 48384. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [4,4], class gsplit, Q-simplicity prime 17 (chi = T^4 + 14*T^2 + 289), splitness certificate: richelot over Q (a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma)). Submitted by F. Najman; the curve is due to the database cited under Reference. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant -3, so N(J) = |d_K|^2 * Norm(f_E) = 9 * 5376 = 48384 (computed with Magma; conductor is an isogeny invariant).",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_4.4.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "48384.j.5"
+}

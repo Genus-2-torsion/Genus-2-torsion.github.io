@@ -1,0 +1,38 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "2*x^6 - 5*x^5 + 3*x^4 + 11*x^3 - 14*x^2 + 4*x + 19",
+ "h": "x^3 + x^2 + x + 1",
+ "group": [
+  3,
+  6
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "1",
+   "-3*x^3 + 3*x^2",
+   2
+  ],
+  [
+   "x^2 - 13/6*x + 17/6",
+   "17/12*x - 19/12",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 2700.b.1 (table g2c_curves_new, label 2700.b1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+ "discoverer": "Booker–Sutherland (extended database)",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [3,6] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false, torsion_subgroup = [3,6]; geom_end_alg = M_2(Q), end_alg = Q; smallest conductor among the curves of this group that the census verifier certifies). LMFDB conductor 2700. Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1): J(Q)_tors = [3,6], class gsplit, Q-simplicity prime 19 (chi = T^4 + 5*T^3 + 6*T^2 + 95*T + 361), splitness certificate: geometric_involution over Qbar (the geometric automorphism group has order 12 (7 involutions), so the curve is bielliptic over Qbar). Submitted by F. Najman; the curve is due to the database cited under Reference.",
+ "date": "2026-10-16",
+ "source": {
+  "kind": "file",
+  "path": "submissions/inbox/gsplit_3.6.json"
+ },
+ "sources": [
+  "BookerSutherland"
+ ],
+ "lmfdb_label": "2700.b.1"
+}

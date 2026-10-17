@@ -1,0 +1,256 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.2.6.c",
+  "group": [
+    2,
+    2,
+    2,
+    6
+  ],
+  "group_key": "2.2.2.6",
+  "group_bracket": "[2,2,2,6]",
+  "order": 48,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "1355999975081200",
+      "2757085929534360",
+      "16095094765893",
+      "14380189111",
+      "-25655829",
+      "6993"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "6993*x^5 - 25655829*x^4 + 14380189111*x^3 + 16095094765893*x^2 + 2757085929534360*x + 1355999975081200",
+    "h_str": "x^2 + x",
+    "g": [
+      "5423999900324800",
+      "11028343718137440",
+      "64380379063573",
+      "57520756446",
+      "-102623315",
+      "27972"
+    ],
+    "g_str": "27972*x^5 - 102623315*x^4 + 57520756446*x^3 + 64380379063573*x^2 + 11028343718137440*x + 5423999900324800",
+    "g_scale": "1",
+    "discriminant": "35878448948066852935038381285129780531100823226415767133165680799200216725449356333597696000000",
+    "discriminant_digits": 95,
+    "igusa_clebsch": [
+      "137902064479437234244616",
+      "35349820210668815871367636586314097691372004",
+      "1679343529592066882211565644932964124219164274706616012250849557224",
+      "28072474696037819160080651815777591982258215701736351019498522360973570545896703527104878017265664000000"
+    ],
+    "g2_invariants": [
+      "1521962333789126326776453562642735921183791307522788286142281658116496346600156845875930488004258549143399286657/6853631517587358193379065384711326167543509692806726323119756435784563121556812384547089359684000000",
+      "61652267902306842394735058419607160456531564587392998002891497586947944591143633123086307823986191760651/6867359368965921069597190167856872054781016945681142927832493590471916482605540860727684000000",
+      "1893822486532904518439205315058854663384055713871982853517500985123697363611917449/4080789825673233944205310843084306972758156215128030096638733172472228096"
+    ],
+    "rational_weierstrass_points": 6,
+    "minimal_model": {
+      "f": [
+        "1355999975081200",
+        "2757085929534360",
+        "16095094765893",
+        "14380189111",
+        "-25655829",
+        "6993"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "6853631517587358193379065384711326167543509692806726323119756435784563121556812384547089359684000000",
+    "minimal_discriminant_factored": "2^8 * 3^24 * 5^6 * 7^4 * 11^6 * 17^12 * 23^6 * 31^12 * 37^6 * 67^12",
+    "conductor": "168017780700",
+    "conductor_factored": "2^2 * 3^2 * 5^2 * 7^2 * 11^2 * 23 * 37^2",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1355999975081200%2C2757085929534360%2C16095094765893%2C14380189111%2C-25655829%2C6993%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      2,
+      6
+    ],
+    "order": 48,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 1301263/3996*x + 640867/3996",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x + 73/148",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 4263*x + 4501880",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 6,
+        "mumford": [
+          "x^2 - 526551/925*x - 208749508/925",
+          "-29157374916/4625*x - 8023716816228/4625",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 4,
+    "point_count_gcd": 48,
+    "point_count_primes": [
+      13,
+      19,
+      29,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137,
+      139,
+      149
+    ],
+    "claimed": [
+      2,
+      2,
+      2,
+      6
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 85,
+    "reducible_chi": 59
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 29,
+    "chi": "T^4 - 26*T^2 + 841"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-11)) (the surface is E x E^sigma)"
+    },
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 36,
+      "reducible_chi": 26
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "F. Najman",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "new",
+  "sources": [],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [2,2,2,6] for the census (the gsplit cell is empty). Construction: quadratic-conjugate (2,2)-gluing. E = E_{2,6}(t) (Tate normal form of HLP Table 3) with t = (11 + 84*sqrt(-11))/37 over K = Q(sqrt(-11)), E(K)_tors = Z/2 x Z/6, glued with its Galois conjugate E^sigma along the G_K-isomorphism E[2] -> E^sigma[2], T_i -> sigma(T_i) (it satisfies psi^sigma psi = id, so the glued surface and the curve descend to Q). The parameter was chosen so that the Kummer classes of both generators of E(K)_tors/2 are sigma-invariant: N(t-3), N((t-5)(t+3)) and N((t-9)(t-1)) are squares in Q (norms from K); this doubles the torsion twice, J(Q)_tors = [2,2,2,6] against [2,6] for a generic member. E is not a Q-curve (a_P(E) <> a_P(E^sigma) at 13 of 32 split primes below 400), so J is simple over Q (also certified by chi_29 irreducible); J is (2,2)-isogenous over Q to Res_{K/Q} E, which Magma's Richelot search finds. Magma's Conductor on the reduced minimal model: 2^2 * 3^2 * 5^2 * 7^2 * 11^2 * 23 * 37^2. Rigorous conductor: J is (2,2)-isogenous over Q to Res_(K/Q) E with K the quadratic field of discriminant -11, so N(J) = |d_K|^2 * Norm(f_E) = 121 * 1388576700 = 168017780700 (computed with Magma; conductor is an isogeny invariant).",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "1355999975081200",
+      "2757085929534360",
+      "16095094765893",
+      "14380189111",
+      "-25655829",
+      "6993"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      2,
+      6
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/gsplit_2.2.2.6.json"
+  },
+  "dates": {
+    "submitted": "2026-10-16",
+    "verified": "2026-10-17 06:01:57 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.810000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/2.2.2.6.c.log",
+    "conductor_log": "data/logs/2.2.2.6.c.conductor.log",
+    "conductor_cputime_seconds": 0.24
+  }
+}

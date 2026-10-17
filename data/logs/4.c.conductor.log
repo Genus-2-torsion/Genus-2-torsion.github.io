@@ -1,0 +1,4 @@
+[0.0200000 s] minimal model y^2 + (x) y = 16*x^6 + 56*x^5 + 105*x^4 + 80*x^3 + 11*x^2 - 44*x - 9, discriminant 3875000000000000
+[0.0200000 s] discriminant factored: 2^12 * 5^15 * 31
+[1.15000 s] conductor 793600 = 2^10 * 5^2 * 31
+[1.15000 s] CONDUCTOR_DONE

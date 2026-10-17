@@ -1,0 +1,10 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (x^3 + 1) y = 3*x^5 + 6*x^4 - 23*x^3 - 18*x^2 + 27*x - 7; working model y^2 = x^6 + 12*x^5 + 24*x^4 - 90*x^3 - 72*x^2 + 108*x - 27
+[0.0300000 s] #J(Q)_tors divides gcd #J(F_p) = 12 (p = [ 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 79, 83, 89, 97, 101, 103, 107 ])
+[0.0400000 s] the submitted generators generate a subgroup of order 6, but the point-count bound is 12; TorsionSubgroup was run
+[0.150000 s] J(Q)_tors = [ 6 ] (TorsionSubgroup, 0.110000 s)
+[0.730000 s] no strict prime below 500 (92 admissible primes, 49 with reducible chi)
+[0.730000 s] Q-simple: chi irreducible at p = 5
+[0.760000 s] geometrically split: (2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma)
+[0.760000 s] class: gsplit
+[0.860000 s] VERIFY_DONE

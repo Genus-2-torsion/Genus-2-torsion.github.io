@@ -1,0 +1,21 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_s : y^2 = f_s(x) = (-4*s^6 - 16*s^4 + 320*s^2 - 768)*x^6 + (s^8 + 12*s^6 + 720*s^4 + 9792*s^2 + 13824)*x^4 + (-2*s^8 - 204*s^6 - 2160*s^4 - 5184*s^2 - 62208)*x^2 + s^8 - 60*s^6 + 432*s^4 + 15552*s^2
+f_s = F(x^2), squarefree of degree 6 over Q(s), with the six rational roots +-s/2, +-(s+6)/(s-2), +-(s-6)/(s+2); f_{-s} = f_s
+(0) the HLP (Prop. 4) gluing of E2 = E_{2,6}(s+3) and E1 = E2/<2P> along the dual isogeny on 2-torsion is ((2*s^20 - 72*s^19 + 1056*s^18 - 7776*s^17 + 25824*s^16 + 13824*s^15 - 421888*s^14 + 1419264*s^13 - 1281024*s^12 - 8515584*s^11 + 45367296*s^10 - 52641792*s^9 - 255606784*s^8 + 734920704*s^7 + 402653184*s^6 - 3128426496*s^5 + 1072300032*s^4 + 6072827904*s^3 - 4586471424*s^2 - 4586471424*s + 4586471424)/(s^30 + 90*s^29 + 3780*s^28 + 98280*s^27 + 1769040*s^26 + 23351328*s^25 + 233513280*s^24 + 1801388160*s^23 + 10808328960*s^22 + 50438868480*s^21 + 181579926528*s^20 + 495217981440*s^19 + 990435962880*s^18 + 1371372871680*s^17 + 1175462461440*s^16 + 470184984576*s^15))^2 f_s
+(1) phi1 = (x^2, y) : C_s -> Ea : Y^2 = F(X) and phi2 = (1/x^2, y/x^3) : C_s -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(s)-isomorphic to E2 = E_{2,6}(s+3) and Eb to E1 = E2/<2P>: J is isogenous over Q to E1 x E2
+(2) over Q(s): the 15 classes [(x - r_i)(x - r_j), 0] and 0 form J[2] = (Z/2)^4; D3 = phi1^*(Pa) = (x^2 + 3, -4*s^4 - 96*s^2 - 576, 2) has order 3
+    so G = J[2] + <D3> = [2,2,2,6] is marked over Q(s)
+(3) Eb: the 3-division polynomial has the root xK = -1/3*s^8 + 20*s^6 - 144*s^4 - 5184*s^2, where yK^2 = -3 (4/9*s^12 - 16*s^10 - 384*s^8 + 7680*s^6 + 193536*s^4 + 995328*s^2)^2: {O, (xK, +-yK)} is defined over Q(sqrt -3) and inverted by conjugation, so it is mu_3
+    Ea has the rational point of order 3 (Pa)
+(4) p = 13, s = 4 mod 13: reduction 5*$.1^6 + 9*$.1^4 + 12*$.1^2 + 8 (squarefree, degree 6); J(F_13) = [ 2, 2, 6, 6 ] (order 144), chi = X^4 - 4*X^3 + 30*X^2 - 52*X + 169
+    wK(4) is a unit mod 13, so at every member of the class the mu_3 of (3) specializes to a subgroup of order 3 of Eb
+    2-part (Z/2)^4 = J[2]; odd part (Z/3)^2 of exponent 3; 13 = 1 mod 3, so Eb(Q)[3] != 0 would force 3-rank >= 3 in J(F_13)
+    hence every 13-integral s = 4 mod 13 has J_s(Q)_tors exactly [2,2,2,6]
+(5) the G2-invariants of the members [ 4, 17, -9, 17/14 ] are not all equal
+(6) TorsionSubgroup at s = 4: [ 2, 2, 2, 6 ]
+(6) TorsionSubgroup at s = 17: [ 2, 2, 2, 6 ]
+(6) TorsionSubgroup at s = -9: [ 2, 2, 2, 6 ]
+(6) C_4 is Q-isomorphic to the census curve 2.2.2.6.b (LMFDB 900.b.2)
+time 0.460 s
+FAMILY_2226_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [2,2,2,6]

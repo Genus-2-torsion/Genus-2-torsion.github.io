@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17 10:20 UTC",
+  "generated": "2026-10-18 08:27 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -43,9 +43,9 @@
       "open": 40
     },
     "split": {
-      "exact": 2,
+      "exact": 7,
       "family": 54,
-      "open": 40
+      "open": 35
     }
   },
   "n_rejected": 0,
@@ -253,11 +253,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "ThisSite",
-            "Genus2TorsionNotebook"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "8.8"
+          "note": "inherited: the group is a subgroup of [14], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "14"
         }
       }
     },
@@ -474,11 +473,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "ThisSite",
-            "Genus2TorsionNotebook"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "8.8"
+          "note": "inherited: the group is a subgroup of [14], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "14"
         }
       }
     },
@@ -690,10 +688,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [21], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "21"
+          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.6"
         }
       }
     },
@@ -1120,10 +1118,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "20"
+          "note": "inherited: the group is a subgroup of [2,10], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.10"
         }
       }
     },
@@ -1337,10 +1335,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [30], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "30"
+          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.6"
         }
       }
     },
@@ -1554,10 +1552,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [21], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "21"
+          "note": "inherited: the group is a subgroup of [14], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "14"
         }
       }
     },
@@ -2200,10 +2198,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [20], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "20"
+          "note": "inherited: the group is a subgroup of [2,10], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.10"
         }
       }
     },
@@ -2889,9 +2887,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the (3,3)-gluings, in the normal form of Bröker–Howe–Lauter–Stevenhagen (arXiv:1403.6911), of E = 26b1 (torsion ℤ/7) with the partners F that have a rational 2-torsion point. The partners anti-symplectically 3-congruent to E form a rational curve, and so does the cover on which F has a rational 2-torsion point (Γ(3) ∩ Γ₀(2) has genus 0); this gives C_v over ℚ(v) with explicit degree-3 maps onto E and F_v, so J is isogenous over ℚ to E × F_v. Pullback is injective on torsion of order prime to 3 (φ_*φ^* = [3]), so ℤ/14 ⊂ J(ℚ). Every 7- and 71-integral v ≡ 0 (mod 497) has the reductions of v = 0 (the census curve 14.b, the gluing of 26b1 and 52a1) at 7 and 71, where #J(𝔽₇) = 70 and #J(𝔽₇₁) = 4774, so J(ℚ)_tors is exactly [14]; the G2-invariants at v = 0 and v = 497 differ (family_14_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -7086,11 +7086,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "ThisSite",
-            "Genus2TorsionNotebook"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "8.8"
+          "note": "inherited: the group is a subgroup of [2,10], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.10"
         }
       }
     },
@@ -7514,10 +7513,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.24"
+          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.6"
         }
       }
     },
@@ -7943,9 +7942,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of the Kubert curve E₂ = E₁₀(t) (torsion ℤ/10) with its 5-isogenous curve E₁ = E₂/⟨2P⟩, along the isomorphism of 2-torsion induced by the isogeny. Up to a square it is C_t: y² = F(x²), with (x, y) ↦ (x², y) onto E₂ and (x, y) ↦ (1/x², y/x³) onto E₁, so J is isogenous over ℚ to E₁ × E₂. Over ℚ(t) two distinct classes of order 2 (one of them the gain of the gluing: the Kummer maps commute with the isogeny) and the pullback of 2P, of order 5, mark [2,10]. Every 7- and 11-integral t ≡ 58 (mod 77) has J(𝔽₇) ≅ J(𝔽₁₁) ≅ [10,10]; the kernel of E₁ → E₂ is μ₅ and 11 ≡ 1 (mod 5), so a rational point of order 5 on E₁ would give J(𝔽₁₁)[5] rank ≥ 3, and J(ℚ)_tors is exactly [2,10]; the G2-invariants of the members differ (family_210_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -8267,9 +8268,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the (3,3)-gluings (Bröker–Howe–Lauter–Stevenhagen normal form) of E = 294b2 (torsion ℤ/7) with the partners F that have full rational 2-torsion. They are parametrised by the genus-1 curve D: s² = 6769v⁴ − 2324v³ − 714v² − 644v + 49, whose Jacobian y² = x³ + 86436 has the point P = (−392/9, 1666/27) of infinite order. Explicit degree-3 maps onto E and F_v make J isogenous over ℚ to E × F_v, and pullback is injective on torsion of order prime to 3, so [2,14] ⊂ J(ℚ). For R_k = R₀ + 124kP (R₀ over v = 0, the census curve 2.14.b, the gluing of 294b2 and 294c4), v(R_k) ≡ 0 modulo 11 and 97, where #J(𝔽₁₁) = 112 and #J(𝔽₉₇) = 8820, so J(ℚ)_tors is exactly [2,14]; the G2-invariants at v = 0 and v = 34/825 differ (family_214_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -11911,8 +11914,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.16"
+          "note": "inherited: the group is a subgroup of [2,2,10], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.10"
         }
       }
     },
@@ -12344,10 +12347,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.2.24"
+          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.6"
         }
       }
     },
@@ -12724,9 +12727,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the (3,3)-gluings (Bröker–Howe–Lauter–Stevenhagen normal form) of E = 66c1 (torsion ℤ/10) with the partners F that have full rational 2-torsion, parametrised by the genus-1 curve D: s² = −2v⁴ + 19v³ − 12v² − 80v + 196, whose Jacobian y² = x³ + 39204 has the point P = (616, −15290) of infinite order. Explicit degree-3 maps make J isogenous over ℚ to E × F_v; pullback is injective on torsion of order prime to 3, and E and F_v are not isogenous (#E(𝔽₂₃) = 30, #F_v(𝔽₂₃) = 24), so [2,2,10] ⊂ J(ℚ). For R_k = R₀ + 48kP (R₀ over v = 0, the census curve 2.2.10.b, the gluing of 66c1 and 462f2), v(R_k) ≡ 0 modulo 23 and 47, where #J(𝔽₂₃) = 720 and #J(𝔽₄₇) = 2200, so J(ℚ)_tors is exactly [2,2,10]; the G2-invariants at v = 0 and v = 5560/3033 differ (family_2210_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -14021,8 +14026,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,16], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.16"
+          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.2.2.6"
         }
       }
     },
@@ -14450,9 +14455,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of the Kubert curve E₂ = E_{2,6}(s + 3) with its 3-isogenous curve E₁ = E₂/⟨2P⟩, along the isomorphism of 2-torsion induced by the dual isogeny (the Kummer maps commute with the isogeny, so the gain is full): C_s: y² = (s² + 12)(s² − 4x²)((s − 2)²x² − (s + 6)²)((s + 2)²x² − (s − 6)²), with six rational Weierstrass points and maps (x, y) ↦ (x², y) onto E₂ and (x, y) ↦ (1/x², y/x³) onto E₁, so J is isogenous over ℚ to E₁ × E₂. Over ℚ(s), J[2] is rational and the pullback of the point of order 3 of E₂ has order 3, so [2,2,2,6] is marked. Every 13-integral s ≡ 4 (mod 13) has the reduction of the census curve 2.2.2.6.b (s = 4) at 13, where J(𝔽₁₃) ≅ [2,2,6,6]; E₁[3] contains μ₃ and 13 ≡ 1 (mod 3), so a rational point of order 3 on E₁ would give J(𝔽₁₃)[3] rank ≥ 3, and J(ℚ)_tors is exactly [2,2,2,6]; the G2-invariants of the members differ (family_2226_split_certificate.log)",
           "inherited_from": null
         }
       }

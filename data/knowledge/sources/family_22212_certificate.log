@@ -1,3 +1,4 @@
+(0) over Q(E): rank E(Q) = 1; psi(E) lies on S; D3 (order 3), D4 (2 D4 = W_s + W_t - K, order 4) and J[2] generate a group of order 96 = [2,2,2,12]
 psi(2Q) = P_1 = [ 120, 143, 266, 218, 241 ], J(Q)_tors = [2,2,2,12]
 p = 29: ord(Q mod p) = 16, #J(F_p) = 864, chi = x^4 + 22*x^2 + 841
 p = 37: ord(Q mod p) = 10, #J(F_p) = 1344, chi = x^4 - 26*x^2 + 1369

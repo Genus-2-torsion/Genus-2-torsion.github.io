@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18 11:57 UTC",
+  "generated": "2026-10-18 15:04 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -467,7 +467,7 @@
             "ThisSite",
             "Audit2026"
           ],
-          "note": "y² = x(x⁴ + x + t): the class [(0,0) − ∞] is a rational 2-torsion point for every t (checked over ℚ(t)); fibers t = 1, 2, 3, 5, 7 have torsion exactly [2], a strict prime and distinct G2-invariants (family_2_certificate.log). The record's family y² = x(x⁵ + x + t) has no rational 2-torsion generically (x⁵ + x + t is irreducible over ℚ(t)); its fiber t = 2 is exact [2] only by an accidental extra root — found by the audit of 2026-09-18",
+          "note": "y² = x(x⁴ + x + t): the class [(0,0) − ∞] is a rational 2-torsion point for every t (checked over ℚ(t)). Every 3- and 5-integral t ≡ 2 (mod 15) has the reductions of t = 2 at 3 and 5: #J(𝔽₃) = 22 and #J(𝔽₅) = 20 (gcd 2), strict at 3 and 5, so its torsion is exactly [2] and its Jacobian is geometrically simple (family_2_certificate.log). The record's family y² = x(x⁵ + x + t) has no rational 2-torsion generically (x⁵ + x + t is irreducible over ℚ(t)); its fiber t = 2 is exact [2] only by an accidental extra root — found by the audit of 2026-09-18",
           "inherited_from": null
         },
         "split": {
@@ -14870,7 +14870,7 @@
             "BNSS2026",
             "Choudhry"
           ],
-          "note": "BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18)",
+          "note": "BNSS2026, Theorems 3.1 and 3.3 give the family C_P, P = ψ(nQ) on the surface a²+b²+c² = u²+v², a⁴+b⁴+c⁴ = u⁴+v⁴, with E: y² = x³ − 21x − 20 of rank 1 and ψ(2Q) = P₁ = [120:143:266:218:241]. For n ≡ 2 (mod 560) the curves C_{ψ(nQ)} have the same reduction as C_{P₁} at 29, 37 and 71, so their torsion divides gcd(#J(𝔽₂₉), #J(𝔽₃₇)) = 96 = #[2,2,2,12] and their Frobenius at 71 is strict; the G2-invariants at ψ(2Q), ψ(4Q) differ (family_22212_certificate.log; argument from the audit of 2026-09-18). Since 2026-10-18 the certificate also checks the inputs from BNSS2026 over the function field of E: ψ(E) lies on the surface, and explicit classes generate [2,2,2,12] in J(ℚ(E))",
           "inherited_from": null
         },
         "split": {

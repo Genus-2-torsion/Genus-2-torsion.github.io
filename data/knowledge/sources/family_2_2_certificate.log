@@ -1,0 +1,8 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(t): T1 = [x(x-1), 0] and T2 = [x(x-2), 0] are distinct classes of order 2: [2,2] is marked
+p = 7, t = 3 mod 7: reduction $.1^6 + 4*$.1^5 + 3*$.1^4 + 6*$.1 (squarefree, degree 6), #J(F_7) = 72, chi = X^4 + 2*X^3 + 6*X^2 + 14*X + 49
+p = 17, t = 3 mod 17: reduction $.1^6 + 14*$.1^5 + 3*$.1^4 + 10*$.1^2 + 6*$.1 (squarefree, degree 6), #J(F_17) = 316, chi = X^4 + X^3 + 8*X^2 + 17*X + 289 (strict)
+gcd of #J(F_p) = 4; #G = 4
+sanity: t = 3 has TorsionSubgroup [ 2, 2 ]
+G2-invariants of the members [ 3, 122, -116, 241 ] are not all equal
+FAMILY_2_2_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2]

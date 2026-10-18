@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18 08:27 UTC",
+  "generated": "2026-10-18 11:57 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -43,9 +43,9 @@
       "open": 40
     },
     "split": {
-      "exact": 7,
+      "exact": 8,
       "family": 54,
-      "open": 35
+      "open": 34
     }
   },
   "n_rejected": 0,
@@ -247,7 +247,7 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "y² = x⁵ + x + t (t = 3, 4, 5, 7, 8: trivial torsion, strict primes 7, 7, 7, 13, 13, distinct G2-invariants)",
+          "note": "y² = x⁵ + x + t: every 3- and 17-integral t ≡ 3 (mod 51) has #J(𝔽₃) = 12 and #J(𝔽₁₇) = 205 (gcd 1), strict at 17 (family_1_certificate.log); the fibers t = 3, 4, 5, 7, 8 have trivial torsion, strict primes 7, 7, 7, 13, 13 and distinct G2-invariants (trivial_torsion_family.log)",
           "inherited_from": null
         },
         "split": {
@@ -680,9 +680,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = (x³+x+1)² − t(x²+1)³ (contact form f = h² − λQ³); t = 2 (p = 13)",
+          "note": "y² = (x³+x+1)² − t(x²+1)³ (contact form f = h² − λQ³): D = [x² + 1, 1] has order 3 over ℚ(t). Every 3-integral t ≡ 2 (mod 3) has #J(𝔽₃) = 3, strict (family_3_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -690,8 +691,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.6"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -896,19 +897,19 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = x·Q₄(x), Q₄ the norm from ℚ(√2) of the automatic-halving quadratic q_{α,β}, α = 1 + s√2, β = 1; eight exact fibers",
+          "note": "y² = x·Q₄(x), Q₄ the norm from ℚ(√2) of the automatic-halving quadratic q_{α,β}, α = 1 + s√2, β = 1: Q₄ = u² + xl² with u = x² + x + 1 − 2s², l = 2x + 2, so D = [u, xl mod u] has 2D = [x, 0] ≠ 0 and order 4 over ℚ(s). Every s ≡ 1 (mod 57) has #J(𝔽₃) = 4 and #J(𝔽₁₉) = 412, strict at 19 (family_4_certificate.log)",
           "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
-            "ThisSite",
-            "Genus2TorsionNotebook"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "8.8"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -1110,9 +1111,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
+            "ThisSite",
             "Najman2026"
           ],
-          "note": "five-torsion families (see the record)",
+          "note": "the contact-5 family y² = (1 + x + x²)² − tx⁵: [x, 1] = [(0,1) − ∞] has order 5 over ℚ(t). Every 3-integral t ≡ 1 (mod 3) has #J(𝔽₃) = 5, strict (family_5_certificate.log). The record names no family for [5]; the normalized five-torsion chart f = h² − (1+a+b)²x⁵, h = 1 + ax + bx², of the lab inventory it refers to has f(1) = 0 for all a, b, so its torsion contains [10] (audit of 2026-10-18)",
           "inherited_from": null
         },
         "split": {
@@ -1327,9 +1329,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
+            "ThisSite",
             "Najman2026"
           ],
-          "note": "the plain M(12) chart T₁₂ = ax² − x + r, h = (x−r)(T₁₂+1), f = ax²T₁₂(T₁₂+1)",
+          "note": "the contact-6 family h = t + x + x² + x³, y² = h² − (x−1)⁶: [(1, h(1)) − ∞] has order 6 over ℚ(t). Every t ≡ 16 (mod 33) has #J(𝔽₃) = 12 and #J(𝔽₁₁) = 102 (gcd 6), strict at 11 (family_6_certificate.log). The record's family, the plain M(12) chart T₁₂ = ax² − x + r, h = (x−r)(T₁₂+1), f = ax²T₁₂(T₁₂+1), has torsion exactly [6] generically, but its class of order 2 is divisible by 2 in J(𝔽_p) in every good residue class tested, so it has no explicit residue-class certificate (audit of 2026-10-18)",
           "inherited_from": null
         },
         "split": {
@@ -1337,8 +1340,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.6"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -1544,9 +1547,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "contact-7 chart: h = 1 − (7/2)x + ax² + bx³, f = (h² + (x−1)⁷)/x²",
+          "note": "contact-7 chart h = 1 − (7/2)x + ax² + bx³, f = (h² + (x−1)⁷)/x², slice a = t, b = 1: [(1, h(1)) − ∞] has order 7 over ℚ(t). Every 3-integral t ≡ 2 (mod 3) has #J(𝔽₃) = 7, strict (family_7_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -1758,9 +1762,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the A(8) chart, slice p = 2, r = 3 with free parameter t; t = 2 (p = 13)",
+          "note": "the A(8) chart, slice p = 2, r = 3 with free parameter t: a class D₈ of order 8 over ℚ(t). Every t ≡ 3 (mod 95) has #J(𝔽₅) = 16 and #J(𝔽₁₉) = 584 (gcd 8), strict at 19 (family_8_certificate.log); the class contains the record's fiber t = 3",
           "inherited_from": null
         },
         "split": {
@@ -1975,9 +1980,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "contact-9 chart: h = 1 − (9/2)x + (63/8)x² − (105/16)x³ + ax⁴, f = (h² + (x−1)⁹)/x⁴",
+          "note": "contact-9 chart h = 1 − (9/2)x + (63/8)x² − (105/16)x³ + tx⁴, f = (h² + (x−1)⁹)/x⁴: [(1, h(1)) − ∞] has order 9 over ℚ(t). Every 3-integral t ≡ 1 (mod 3) has #J(𝔽₃) = 9, strict (family_9_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -2190,9 +2196,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "contact-5 chart at b = 1: y² = (1 + ax + x²)² − (a+2)²x⁵; eight exact fibers",
+          "note": "contact-5 chart at b = 1: y² = (1 + tx + x²)² − (t+2)²x⁵, with [x, 1] = [(0,1) − ∞] of order 5 and [x − 1, 0] of order 2 over ℚ(t). Every t ≡ 15 (mod 35) has #J(𝔽₅) = 20 and #J(𝔽₇) = 30 (gcd 10), strict at 5 and 7 (family_10_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -2349,9 +2356,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "DaowsudSchmidt"
           ],
-          "note": "Flynn's family y² = x⁶ + 2x⁵ + (2t+3)x⁴ + 2x³ + (t²+1)x² + 2t(1−t)x + t² and the Daowsud–Schmidt continued-fraction family",
+          "note": "Flynn's family y² = x⁶ + 2x⁵ + (2t+3)x⁴ + 2x³ + (t²+1)x² + 2t(1−t)x + t² (as quoted by Daowsud–Schmidt): [∞₋ − ∞₊] has order 11 over ℚ(t). Every t ≡ 11 (mod 15) has #J(𝔽₃) = 11 and #J(𝔽₅) = 22, strict at 5 (family_11_certificate.log). The record also cites the Daowsud–Schmidt continued-fraction family, not certified here",
           "inherited_from": null
         },
         "split": {
@@ -2560,18 +2568,19 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the rational-Weierstrass subchart a = (1−z²)/(4(r+1)) of the M(12) chart",
+          "note": "the rational-Weierstrass subchart a = (1−z²)/(4(r+1)) of the M(12) chart, slice r = 3: T₁₂ + 1 has the rational root w = 8/(1−z), and [P − (w, 0)] has order 12 over ℚ(z). Every z ≡ 37 (mod 77) has #J(𝔽₇) = 60 and #J(𝔽₁₁) = 168 (gcd 12), strict at 11 (family_12_certificate.log)",
           "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
-            "Howe2015"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [48], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "48"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -2881,9 +2890,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "rational-root subfamily of the contact-7 chart",
+          "note": "rational-root subfamily of the contact-7 chart: r = 1 − s², h(r) = s⁷, slice b = 1. [(1, h(1)) − ∞] has order 7 and [(r, 0) − ∞] order 2 over ℚ(s). Every s ≡ 31 (mod 35) has #J(𝔽₅) = 28 and #J(𝔽₇) = 70 (gcd 14), strict at 7 (family_14_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -3581,9 +3591,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "rational-root subfamily of the contact-9 chart",
+          "note": "rational-root subfamily of the contact-9 chart: r = 1 − s², h(r) = s⁹. [(1, h(1)) − ∞] has order 9 and [(r, 0) − ∞] order 2 over ℚ(s). Every s ≡ 23 (mod 91) has #J(𝔽₇) = 72 and #J(𝔽₁₃) = 198 (gcd 18), strict at 13 (family_18_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -3901,9 +3912,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the contact-5 + 4-torsion family",
+          "note": "the halving component b = (a²−1)/2 of the contact-5 chart: h = 1 + tx + ((t²−1)/2)x², f_t = h² − ((t+1)⁴/4)x⁵. Over ℚ(t), D₅ = [x, 1] has order 5 and H = [x² + 2x/(t+1), (t+2)x + 1] has order 4 (2H = [x − 1, 0]), so ℤ/20 is marked. Every t ≡ 1 (mod 21) has #J(𝔽₃) = 20 and #J(𝔽₇) = 40 (gcd 20), strict at 7 (family_20_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -4115,9 +4127,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "Leprevost1991"
           ],
-          "note": "Leprévost's 1991 one-parameter degree-5 family f₂₁ = A₂₁² − k₂₁x³(x−1)²; marked class of order 21 verified symbolically over ℚ(t)",
+          "note": "Leprévost's 1991 one-parameter degree-5 family f₂₁ = A₂₁² − k₂₁x³(x−1)²: D = [x, A₂₁(0)] has order 21 over ℚ(t). Every 5-integral t ≡ 1 (mod 5) has #J(𝔽₅) = 21, strict (family_21_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -4221,9 +4234,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "rational-branch subfamilies of the order-11 families",
+          "note": "Flynn's order-11 family on the curve t = (−s²(s²+1)(s⁴−s²+1) + 2s⁵)/(s²−1)², where x = s² is a root: over ℚ(s), [∞₁ − ∞₂] has order 11 and [(s², 0) − ∞₁] has order 22. Every 5-integral s ≡ 2 (mod 5) has #J(𝔽₅) = 22, strict (family_22_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -4328,9 +4342,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "KuruSadek"
           ],
-          "note": "the Kuru–Sadek quadratic-order construction, genus-2 specialization",
+          "note": "the Kuru–Sadek quadratic-order construction, genus-2 specialization f_t = A² − λx⁴(x−1), with β = (t²+1)²/(4t²), s = (t²−1)/(2t), α = β − s⁵/β^{3/2}, λ = (α−1)⁴/((α−β)²α): D = [x, A(0)] has order 23 over ℚ(t). Every t ≡ 17 (mod 91) has #J(𝔽₇) = 46 and #J(𝔽₁₃) = 115 (gcd 23), strict at 7 and 13 (family_23_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -5391,9 +5406,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the simultaneous contact-5 / contact-6 family",
+          "note": "the simultaneous contact-5 / contact-6 family f = h₆² − (x−1)⁶ = h₅² − Kx⁵ over ℚ(R), branch −1: D₅ = [x, h₅(0)] has order 5 and D₆ = [x − 1, h₆(1)] has order 6. Every R ≡ 110 (mod 143) has #J(𝔽₁₁) = 150 and #J(𝔽₁₃) = 120 (gcd 30), strict at 13 (family_30_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -5607,9 +5623,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "Elkies2002"
           ],
-          "note": "the reconstructed Elkies order-32 component",
+          "note": "the reconstructed Elkies order-32 component, parametrized as y² = h² − a²x⁵(x+1), h = ax³ + bx² + cx + 1, a = −2w³(w⁴ − w³ + 2w² − w + 1), r = 1/(w⁴ − 1) (b, c in the certificate): over ℚ(w), D = [x, 1] has 16D = [x − r, 0] ≠ 0 and 32D = 0. The member w = 2 is Elkies' printed curve. Every w ≡ 16 (mod 91) has #J(𝔽₇) = 64 and #J(𝔽₁₃) = 160 (gcd 32), strict at 7 (family_32_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -7078,9 +7095,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = x(x−1)(x−2)(x³ + x + t); t = 3 (p = 11)",
+          "note": "y² = x(x−1)(x−2)(x³ + x + t): [x(x−1), 0] and [x(x−2), 0] mark [2,2] over ℚ(t). Every t ≡ 3 (mod 119) has #J(𝔽₇) = 72 and #J(𝔽₁₇) = 316 (gcd 4), strict at 17 (family_2_2_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -7292,19 +7310,19 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = x(x² + (2t+1)x + t²)(x² + 3x + 1); eight exact fibers",
+          "note": "y² = x(x² + (2t+1)x + t²)(x² + 3x + 1): D = [x² + tx + t, x(2x + t + 1) mod u] has 2D = [x, 0] ≠ 0, and with T = [x² + 3x + 1, 0] it marks [2,4] over ℚ(t). Every t ≡ 3 (mod 119) has #J(𝔽₇) = 56 and #J(𝔽₁₇) = 368 (gcd 8), strict at 17 (family_2_4_certificate.log)",
           "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
-            "ThisSite",
-            "Genus2TorsionNotebook"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "8.8"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -7505,9 +7523,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "contact-6 chart: f = h² − (x−1)⁶, h cubic",
+          "note": "contact-6 chart f = h² − (x−1)⁶ with h = 1 + tx + x² + x³ (h(0) = 1 gives the root x = 0): D₆ = [(1, h(1)) − ∞] has order 6 and [x, 0] is a class of order 2 outside ⟨D₆⟩, so [2,6] is marked over ℚ(t). Every t ≡ 13 (mod 39) has #J(𝔽₃) = 12 and #J(𝔽₁₃) = 120 (gcd 12), strict at 13 (family_2_6_certificate.log). The record's 'h cubic' needs h(0) = 1 for the class of order 2",
           "inherited_from": null
         },
         "split": {
@@ -7515,8 +7534,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.6"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -7720,9 +7739,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "Richelot partner #4 of the [2,2,2,8] family (fibers t = 2, 3, 5, 7)",
+          "note": "the Richelot quotient of the [2,2,2,8] family by the kernel K = {[(−b²,0) − ∞], [(0,0) − (−a²,0)], [(−1,0) − (−t²,0)]}, the record's 'partner #4' at t = 2: the pushforward of the class of order 8 and a class of order 2 mark [2,8] over ℚ(t). Every t ≡ 2 (mod 82739) has J′(𝔽₁₇) ≅ [16,16], J′(𝔽₃₁) ≅ [2,2,272] and J′(𝔽₁₅₇) ≅ [4,24,264]; the only abelian 2-group containing [2,8] that embeds in all three is [2,8], and the odd parts have gcd 1, so J′(ℚ)_tors is exactly [2,8]; strict at 31 (family_2_8_certificate.log). The record's 'partner #4' is not one family: Magma orders the Richelot partners by the size of the roots, and partner #4 is K at t = 2, 3 but {[(−a²,0) − ∞], [(0,0) − (−b²,0)], [(−1,0) − (−t²,0)]} at t = 5, 7 (audit of 2026-10-18)",
           "inherited_from": null
         },
         "split": {
@@ -7936,9 +7956,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "Elkies2024"
           ],
-          "note": "Elkies' 5-torsion chart with three rational Weierstrass points, slice (t, 2, 3); five exact fibers",
+          "note": "Elkies' 5-torsion chart with three rational Weierstrass points, slice (t, 2, 3): D₅ = [Q, x] has order 5 and two root-pair classes generate (ℤ/2)², so [2,10] is marked over ℚ(t). Every t ≡ 31 (mod 85) has #J(𝔽₅) = 40 and #J(𝔽₁₇) = 260 (gcd 20), strict at 17 (family_210_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -8099,18 +8120,19 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the line a = (1−r)/4 in the M(12) chart",
+          "note": "the line a = (1−r)/4 in the M(12) chart: [P − (2, 0)] has order 12, and the root u = −2r/(r−2) gives a class [(x−u)(x−2), 0] of order 2 outside it, so [2,12] is marked over ℚ(r). Every r ≡ 2 (mod 35), r ≠ 2, has #J(𝔽₅) = 24 and #J(𝔽₇) = 48 (gcd 24), strict at 7 (family_2_12_certificate.log)",
           "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,24], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "2.24"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -8751,9 +8773,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the extra-2 loci of the contact-5 + 4-torsion family",
+          "note": "the extra-2 locus t = −(z⁴ + 4z + 4)/(z⁴ + 4z³ + 8z² + 8z + 4) of the [20] family, where f_t has the second rational root z/(t+1): [x − z/(t+1), 0] is a class of order 2 outside ⟨D₅, H⟩, so [2,20] is marked over ℚ(z). Every 7-integral z ≡ 1 (mod 7) has #J(𝔽₇) = 40, strict (family_220_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -9597,9 +9620,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "BFT2014"
           ],
-          "note": "Bruin–Flynn–Testa 2014, Theorem 6: rational parametrization of the pointwise A(3,3) chart",
+          "note": "Bruin–Flynn–Testa 2014, Theorem 6, on the line r = 2, s = 3: F = G₁² + 12H₁³ = G₂² + 12tH₂³ with H₁ = x² + 2x + t, H₂ = x² + x + 2; T₁ = [H₁, G₁] and T₂ = [H₂, G₂] have order 3 and T₂ ∉ ⟨T₁⟩, so (ℤ/3)² is marked over ℚ(t). Every t ≡ 19 (mod 65) has #J(𝔽₅) = 9 and #J(𝔽₁₃) = 198, strict at 13 (family_33_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -10522,19 +10546,19 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "Richelot partner #5 of the [2,2,4,4] family (fibers s = 3, 5, 7, 9, 11)",
+          "note": "the Richelot quotient of the [2,2,4,4] family by the kernel K = {[(−c²,0) − ∞], [(0,0) − (−b²,0)], [(−a²,0) − (−d²,0)]}, the record's 'partner #5' (the certificate checks s = 5): the pushforwards of the two classes of order 4 mark [4,4] over ℚ(s). Since #J′(𝔽_p) = #J(𝔽_p) is always divisible by 64, group structures are used: every s ≡ 5 (mod 99061) has J′(𝔽₂₃) ≅ [8,64], J′(𝔽₅₉) ≅ [2,2,4,252] and J′(𝔽₇₃) ≅ [8,568]; the only abelian 2-group containing [4,4] that embeds in all three is [4,4], and the odd parts have gcd 1, so J′(ℚ)_tors is exactly [4,4]; strict at 73 (family_44_certificate.log)",
           "inherited_from": null
         },
         "split": {
           "grade": "family",
           "sources": [
-            "ThisSite",
-            "Genus2TorsionNotebook"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [8,8], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "8.8"
+          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "4.12"
         }
       }
     },
@@ -10850,9 +10874,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of the Kubert curve E₂ = E₁₂(t) (torsion ℤ/12, P = (0,0)) with its 3-isogenous curve E₁ = E₂/⟨4P⟩, along the isomorphism of 2-torsion induced by the isogeny. Up to a square it is C_t: y² = −(6τ²+6τ+1)((2τ+1)(4τ+1)x² − (6τ+1))q(x)q(−x), q(x) = τ²x² − (6τ²+6τ+1)x + (3τ+1)², τ = t² − t, with (x, y) ↦ (x², y) onto E₂ and (x, y) ↦ (1/x², y/x³) onto E₁, so J is isogenous over ℚ to E₁ × E₂. Over ℚ(t) the pullback of P has order 12, and the gain of the gluing (the Kummer maps commute with the isogeny), computed from a half Q of 3P over the quartic field ℚ(t)(x(Q)), is a class of order 4 with coefficients in ℚ(t) whose double is not in the pullback of ⟨P⟩, so [4,12] is marked. Every 7-integral t ≡ 5 (mod 7) has J(𝔽₇) ≅ [12,12]; the kernel of E₁ → E₂ is μ₃ and 7 ≡ 1 (mod 3), so a rational point of order 3 on E₁ would give J(𝔽₇)[3] rank ≥ 3, and J(ℚ)_tors is exactly [4,12]. The census curve 4.12.a is the member t = 1/3; the G2-invariants of the members differ (family_412_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -11904,9 +11930,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = x(x−1)(x−2)(x² + x + t); t = 3 (p = 29)",
+          "note": "y² = x(x−1)(x−2)(x² + x + t): [x, 0], [x−1, 0], [x−2, 0] mark [2,2,2] over ℚ(t). Every t ≡ 3 (mod 581) has #J(𝔽₇) = 32 and #J(𝔽₈₃) = 6824 (gcd 8), strict at 83 (family_2_2_2_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -12122,9 +12149,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = x(x+4)(x+9)(x² + (2t+1)x + t²); seven exact fibers",
+          "note": "y² = x(x+4)(x+9)(x² + (2t+1)x + t²): D = [x² + (t−1)x − 6t, x(4x + 5t + 6) mod u] has 2D = [x, 0] ≠ 0, and with [x+4, 0], [x+9, 0] it marks [2,2,4] over ℚ(t). Every t ≡ 1 (mod 91) has #J(𝔽₇) = 32 and #J(𝔽₁₃) = 208 (gcd 16), strict at 13 (family_224_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -12339,7 +12367,8 @@
         "simple": {
           "grade": "family",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
           "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
           "inherited_from": "2.2.2.6"
@@ -12721,9 +12750,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "Elkies2024"
           ],
-          "note": "Elkies' 5-torsion chart with four rational Weierstrass points on the nodal cubic a³ + 5a² − (5/9)ab² + (1/3)b² = 0 (parametrised by τ); five exact fibers",
+          "note": "Elkies' 5-torsion chart with four rational Weierstrass points on the nodal cubic a³ + 5a² − (5/9)ab² + (1/3)b² = 0, parametrised by τ: D₅ = [Q, x] has order 5 and the root-pair classes generate (ℤ/2)³, so [2,2,10] is marked over ℚ(τ). Every τ ≡ 57 (mod 65) has #J(𝔽₅) = 40 and #J(𝔽₁₃) = 120 (gcd 40), strict at 13 (family_2210_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -14016,9 +14046,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "y² = x(x−1)(x−2)(x−3)(x−t); t = 5 (p = 11)",
+          "note": "y² = x(x−1)(x−2)(x−3)(x−t): J[2] ≅ [2,2,2,2] is rational over ℚ(t). Every t ≡ 5 (mod 77) has #J(𝔽₇) = 48 and #J(𝔽₁₁) = 80 (gcd 16), strict at 11 (family_2222_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -14233,9 +14264,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "BNSS2026"
           ],
-          "note": "y² = x(x+1)(x+4)(x+9)(x+t²) (the square-branch chart of BNSS2026, Lemma 2.3); t = 5 (p = 59)",
+          "note": "y² = x(x+1)(x+4)(x+9)(x+t²) (the square-branch chart of BNSS2026, Lemma 2.3): a half D₀ of [x, 0] and the classes [x+1, 0], [x+4, 0], [x+9, 0] mark [2,2,2,4] over ℚ(t). Every t ≡ 5 (mod 649) has #J(𝔽₁₁) = 128 and #J(𝔽₅₉) = 4000 (gcd 32), strict at 59 (family_2224_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -14449,9 +14481,10 @@
         "simple": {
           "grade": "exact",
           "sources": [
-            "Najman2026"
+            "Najman2026",
+            "ThisSite"
           ],
-          "note": "the M(2,2,2,6) chart: y² = x(x+2s²−sn)(x+2s²+sm−2sn−mn)(x+2s²+sm−sn−mn)(2x−mn)(2x+4s²−4sn−mn); five exact fibers",
+          "note": "the M(2,2,2,6) chart: y² = x(x+2s²−sn)(x+2s²+sm−2sn−mn)(x+2s²+sm−sn−mn)(2x−mn)(2x+4s²−4sn−mn), on the line s = 7, m = 2: a class of order 6 and the rational J[2] mark [2,2,2,6] over ℚ(n). Every n ≡ 278 (mod 299) has #J(𝔽₁₃) = 240 and #J(𝔽₂₃) = 432 (gcd 48), strict at 23 (family_2226_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -14613,9 +14646,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "BNSS2026"
           ],
-          "note": "the rational curve on the K3 surface M(2,2,2,8) of BNSS2026, Theorem 4.7: (a,b,c,d) = (4t²(t+1)/(t²+t+1)², t/(t+1), −1, −t) on y² = x(x+a²)(x+b²)(x+c²)(x+d²); t = 2 (p = 31)",
+          "note": "the rational curve on the K3 surface M(2,2,2,8) of BNSS2026, Theorem 4.7: (a,b,c,d) = (4t²(t+1)/(t²+t+1)², t/(t+1), −1, −t) on y² = x(x+a²)(x+b²)(x+c²)(x+d²). A rational point P has 4[P − ∞] = [x, 0] ≠ 0 and 8[P − ∞] = 0, and with three classes of order 2 it marks [2,2,2,8] over ℚ(t). Every t ≡ 2 (mod 403) has #J(𝔽₁₃) = 256 and #J(𝔽₃₁) = 1088 (gcd 64), strict at 31 (family_2228_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -14723,9 +14757,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "Elkies2024"
           ],
-          "note": "Elkies 2024: the Clebsch–Klein full-level-2 plus 5-torsion two-parameter family",
+          "note": "Elkies' Clebsch–Klein family y² = x∏(x − rᵢ²), Σrᵢ = Σrᵢ³ = 0, on the tangent section of the Clebsch surface at P₀ = (1, −8, −7, 5, 9): r(u) = (Σvᵢ³)P₀ − 3(ΣP₀ᵢvᵢ²)v with v = (7, 56u, 0, −10 − 17u, 3 − 39u). [∞₊ − ∞₋] has order 5 and J[2] is rational, so [2,2,2,10] is marked over ℚ(u). Every 11-integral u ≡ 7 (mod 11) has #J(𝔽₁₁) = 80, strict (family_22210_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -15100,9 +15135,10 @@
           "grade": "exact",
           "sources": [
             "Najman2026",
+            "ThisSite",
             "BNSS2026"
           ],
-          "note": "the rational curve in A(2,2,4,4) of BNSS2026, Proposition 4.4; s = 3 (p = 37)",
+          "note": "the rational curve in A(2,2,4,4) of BNSS2026, Proposition 4.4, on y² = x(x+a²)(x+b²)(x+c²)(x+d²): a half D₀ of [x, 0], a half D₁ of [(x+a²)(x+b²), 0], [x+a², 0] and [x+c², 0] mark [2,2,4,4] over ℚ(s). Every s ≡ 3 (mod 1591) has #J(𝔽₃₇) = 1216 and #J(𝔽₄₃) = 1856 (gcd 64), strict at 37 (family_2244_certificate.log)",
           "inherited_from": null
         },
         "split": {

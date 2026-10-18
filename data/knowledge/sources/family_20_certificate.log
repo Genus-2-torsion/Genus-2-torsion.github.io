@@ -1,0 +1,8 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(t): D5 = [x, 1] has order 5, H = [x^2 + 2x/(t+1), (t+2)x + 1] has order 4 (2H = [x-1, 0]), D5 + H has order 20
+p = 3, t = 1 mod 3: reduction 2*$.1^5 + $.1^2 + 2*$.1 + 1 (squarefree, degree 5), #J(F_3) = 20, chi = X^4 + 2*X^3 + 2*X^2 + 6*X + 9
+p = 7, t = 1 mod 7: reduction 3*$.1^5 + $.1^2 + 2*$.1 + 1 (squarefree, degree 5), #J(F_7) = 40, chi = X^4 - X^3 - 2*X^2 - 7*X + 49 (strict)
+gcd of #J(F_p) = 20; #G = 20
+sanity: t = 1 has TorsionSubgroup [ 20 ]
+G2-invariants of the members [ 1, 22, -20, 22/43 ] are not all equal
+FAMILY_20_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [20]

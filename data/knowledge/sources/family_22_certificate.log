@@ -1,0 +1,7 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(s): [oo1 - oo2] has order 11, W = (s^2, 0) is a Weierstrass point, and [W - oo1] has order 22
+p = 5, t = 2 mod 5: reduction $.1^6 + 2*$.1^5 + 2*$.1^3 + 2*$.1^2 + 1 (squarefree, degree 6), #J(F_5) = 22, chi = X^4 - X^3 + 2*X^2 - 5*X + 25 (strict)
+gcd of #J(F_p) = 22; #G = 22
+sanity: t = 2 has TorsionSubgroup [ 22 ]
+G2-invariants of the members [ 2, 7, -3, 7/6 ] are not all equal
+FAMILY_22_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [22]

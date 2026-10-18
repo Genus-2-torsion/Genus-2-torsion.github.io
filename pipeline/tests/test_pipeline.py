@@ -100,6 +100,13 @@ class KnowledgeTests(unittest.TestCase):
         for key in ("13", "15", "16", "17", "19", "24", "25", "26", "2.14", "2.16", "2.2.8", "2.2.14", "2.2.2.12", "2.4.4"):
             self.assertEqual(knowledge.infinite_record("simple", key)["grade"], "exact", key)
         self.assertEqual(knowledge.infinite_record("simple", "4.8")["grade"], "open")
+        # every simple-side exact grade names a residue-class certificate log present here (audit of 2026-10-18)
+        import re
+        for key, (note, _src) in knowledge._SIMPLE_EXACT.items():
+            logs = re.findall(r"family_[A-Za-z0-9_]+_certificate\.log", note)
+            self.assertTrue(logs, key)
+            for name in logs:
+                self.assertTrue((KNOWLEDGE_DIR / "sources" / name).exists(), (key, name))
         t2 = []
         for line in (KNOWLEDGE_DIR / "sources" / "table2.txt").read_text().splitlines():
             if line and not line.startswith("#"):
@@ -109,13 +116,14 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
         self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
         self.assertEqual(knowledge.infinite_record("split", "2")["grade"], "family")             # inherited
-        # split side: [8,8], [2,2,2,16] and (2026-10-18) [14], [2,10], [2,14], [2,2,10], [2,2,2,6] certified here (family_*_split_certificate.log)
-        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8", "2.2.2.16", "14", "2.10", "2.14", "2.2.10", "2.2.2.6"])
+        # split side: [8,8], [2,2,2,16] and (2026-10-18) [14], [2,10], [2,14], [2,2,10], [2,2,2,6], [4,12] certified here (family_*_split_certificate.log)
+        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8", "2.2.2.16", "14", "2.10", "2.14", "2.2.10", "2.2.2.6", "4.12"])
         self.assertEqual(knowledge.infinite_record("split", "8.8")["grade"], "exact")
         self.assertEqual(knowledge.infinite_record("split", "2.2.2.16")["grade"], "exact")
         names = {"2.4.4": "family_244_certificate.log", "8.8": "family_88_split_certificate.log", "2.2.2.16": "family_22216_split_certificate.log",
                  "14": "family_14_split_certificate.log", "2.10": "family_210_split_certificate.log", "2.14": "family_214_split_certificate.log",
-                 "2.2.10": "family_2210_split_certificate.log", "2.2.2.6": "family_2226_split_certificate.log"}
+                 "2.2.10": "family_2210_split_certificate.log", "2.2.2.6": "family_2226_split_certificate.log",
+                 "4.12": "family_412_split_certificate.log"}
         for key in names:
             side = "simple" if key == "2.4.4" else "split"
             name = names[key]

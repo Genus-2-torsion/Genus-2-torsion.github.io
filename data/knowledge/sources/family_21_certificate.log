@@ -1,0 +1,7 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(t): D = [x, A21(0)] has order 21
+p = 5, t = 1 mod 5: reduction $.1^5 + 3*$.1^4 + $.1^3 + 4*$.1^2 + 4*$.1 + 1 (squarefree, degree 5), #J(F_5) = 21, chi = X^4 - X^3 + X^2 - 5*X + 25 (strict)
+gcd of #J(F_p) = 21; #G = 21
+sanity: t = 1 has TorsionSubgroup [ 21 ]
+G2-invariants of the members [ 1, 6, -4, 6/11 ] are not all equal
+FAMILY_21_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [21]

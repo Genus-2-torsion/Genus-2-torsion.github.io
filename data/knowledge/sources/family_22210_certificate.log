@@ -1,0 +1,14 @@
+Loading "pipeline/magma/family_cert_lib.m"
+r(u) = [
+111384*u^3 + 214053*u^2 + 2373*u - 13860,
+781200*u^3 + 28056*u^2 - 56616*u + 5040,
+-779688*u^3 - 35133*u^2 + 43071*u + 4410,
+49266*u^3 - 294231*u^2 - 10815*u + 15750,
+-162162*u^3 + 87255*u^2 + 21987*u - 11340
+]
+over Q(u): r(u) lies on the Clebsch surface, f = h^2 - e5^2 x, [oo+ - oo-] has order 5 and the root classes generate (Z/2)^4: [2,2,2,10] is marked
+p = 11, t = 7 mod 11: reduction $.1^6 + 10*$.1 (squarefree, degree 6), #J(F_11) = 80, chi = X^4 - 4*X^3 + 6*X^2 - 44*X + 121 (strict)
+gcd of #J(F_p) = 80; #G = 80
+sanity: t = 7 has TorsionSubgroup [ 2, 2, 2, 10 ]
+G2-invariants of the members [ 7, 18, -4 ] are not all equal
+FAMILY_22210_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,2,10]

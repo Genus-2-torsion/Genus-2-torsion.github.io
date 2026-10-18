@@ -1,0 +1,8 @@
+Loading "pipeline/magma/family_cert_lib.m"
+f_t = x^5 + (t^2 - 9)*x^4 + (-105/8*t + 36)*x^3 + (63/4*t - 10479/256)*x^2 + (-9*t + 1449/64)*x + 2*t - 315/64
+over Q(t): x^4 f - h^2 = (x-1)^9 and D = [x - 1, h(1)] has order 9
+p = 3, t = 1 mod 3: reduction $.1^5 + $.1^4 + 2 (squarefree, degree 5), #J(F_3) = 9, chi = X^4 - X^3 + 3*X^2 - 3*X + 9 (strict)
+gcd of #J(F_p) = 9; #G = 9
+sanity: t = 1 has TorsionSubgroup [ 9 ]
+G2-invariants of the members [ 1, 4, -2, 1/4 ] are not all equal
+FAMILY_9_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [9]

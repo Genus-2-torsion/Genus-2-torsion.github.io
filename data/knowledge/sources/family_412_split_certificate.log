@@ -1,0 +1,24 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (-48*t^16 + 384*t^15 - 1428*t^14 + 3276*t^13 - 5174*t^12 + 5928*t^11 - 5046*t^10 + 3208*t^9 - 1507*t^8 + 508*t^7 - 116*t^6 + 16*t^5 - t^4)*x^6 + (864*t^16 - 6912*t^15 + 28620*t^14 - 79380*t^13 + 161658*t^12 - 252504*t^11 + 309690*t^10 - 302040*t^9 + 235485*t^8 - 146628*t^7 + 72396*t^6 - 27936*t^5 + 8223*t^4 - 1776*t^3 + 264*t^2 - 24*t + 1)*x^4 + (-3888*t^16 + 31104*t^15 - 121500*t^14 + 306180*t^13 - 556146*t^12 + 771768*t^11 - 846450*t^10 + 748440*t^9 - 538785*t^8 + 316116*t^7 - 150012*t^6 + 56592*t^5 - 16491*t^4 + 3552*t^3 - 528*t^2 + 48*t - 2)*x^2 + 2916*t^14 - 20412*t^13 + 68526*t^12 - 145800*t^11 + 218862*t^10 - 244296*t^9 + 208359*t^8 - 137484*t^7 + 70308*t^6 - 27648*t^5 + 8205*t^4 - 1776*t^3 + 264*t^2 - 24*t + 1
+    = -(6tau^2+6tau+1)((2tau+1)(4tau+1)x^2 - (6tau+1)) q(x) q(-x), q(x) = tau^2 x^2 - (6tau^2+6tau+1)x + (3tau+1)^2, tau = t^2 - t
+(0) the HLP (Prop. 4) gluing of E2 = E_12(t) and E1 = E2/<4P> along phi on 2-torsion has coefficients in Q(t) and is (sqrt ratio)^2 f_t
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E2 = E_12(t) and Eb to E1 = E2/<4P>: J is isogenous over Q to E1 x E2
+(2) over Q(t): D12 = phi1^*(Pa) has order 12; phi2^*(Pb) has order 4, 2 phi2^*(Pb) = 6 D12, phi2^*(Pb) not in <D12>: together [2,12];
+    the gain G4 = phi1^*(Q') + phi2^*(phi(Q)'), 2Q = 3P, computed over Q(t)(x(Q)) (quartic), lies in J(Q(t)):
+    G4 = (x^2 + (3*t^4 - 6*t^3 + 6*t^2 - 3*t + 1/2)/(t^4 - 2*t^3 + 9/4*t^2 - 5/4*t + 1/4)*x + (3/4*t^2 - 3/4*t + 1/4)/(t^4 - 2*t^3 + 9/4*t^2 - 5/4*t + 1/4), (162*t^14 - 1134*t^13 + 3942*t^12 - 8910*t^11 + 14499*t^10 - 17847*t^9 + 17037*t^8 - 12744*t^7 + 14931/2*t^6 - 6777/2*t^5 + 2331/2*t^4 - 585/2*t^3 + 201/4*t^2 - 21/4*t + 1/4)/(t^7 - 7/2*t^6 + 27/4*t^5 - 65/8*t^4 + 13/2*t^3 - 27/8*t^2 + t - 1/8)*x + (54*t^14 - 378*t^13 + 1368*t^12 - 3294*t^11 + 5787*t^10 - 7749*t^9 + 8079*t^8 - 6612*t^7 + 8481/2*t^6 - 4215/2*t^5 + 794*t^4 - 437/2*t^3 + 165/4*t^2 - 19/4*t + 1/4)/(t^7 - 7/2*t^6 + 27/4*t^5 - 65/8*t^4 + 13/2*t^3 - 27/8*t^2 + t - 1/8))
+    G4 has order 4, 2 G4 = [q, 0] != 6 D12, so G = <G4, D12> = [4,12] is marked over Q(t)
+(3) the 3-division polynomial of Eb has the single linear factor x - x0 over Q(t), and -3 y0^2 = (139968*t^22 - 1539648*t^21 + 8328096*t^20 - 29393280*t^19 + 75777120*t^18 - 151445376*t^17 + 243149040*t^16 - 320817024*t^15 + 353060208*t^14 - 327163536*t^13 + 256691880*t^12 - 170931168*t^11 + 96564312*t^10 - 46138608*t^9 + 18535860*t^8 - 6204528*t^7 + 1707840*t^6 - 379440*t^5 + 66252*t^4 - 8736*t^3 + 816*t^2 - 48*t + 4/3)^2:
+    the kernel of the 3-isogeny Eb -> Ea is mu_3
+(4) p = 7, t = 5 mod 7: reduction 4*$.1^6 + 2*$.1^4 + $.1^2 + 4 (squarefree, degree 6); J(F_7) = [ 12, 12 ], chi = X^4 + 8*X^3 + 30*X^2 + 56*X + 49
+    x0, y0^2 and w0 have 7-integral nonzero specializations on the class
+    the 2-part of J_t(Q)_tors is <G4, 3 D12> = [4,4]; the odd part is a 3-group of exponent 3
+    7 = 1 mod 3 and J(F_7)[3] has rank 2, so Eb(Q)[3] = 0 by (3), and J_t(Q)[3^inf] = <4 D12>
+    hence every 7-integral t = 5 mod 7 has J_t(Q)_tors exactly [4,12]
+(5) the G2-invariants of the members [ 1/3, 5, -2, 12, 19 ] are pairwise distinct
+    the member t = 1/3 is the census curve 4.12.a (equal G2-invariants)
+(6) TorsionSubgroup at t = 1/3: [ 4, 12 ]
+(6) TorsionSubgroup at t = 5: [ 4, 12 ]
+(6) TorsionSubgroup at t = -2: [ 4, 12 ]
+time 0.550 s
+FAMILY_412_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [4,12]

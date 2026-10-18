@@ -1,0 +1,8 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(R): f = h6^2 - (x-1)^6 = h5^2 - K x^5; D5 = [x, c] has order 5 and D6 = [x-1, h6(1)] has order 6, so D5 + D6 has order 30
+p = 11, t = 0 mod 11: reduction $.1^5 + 3*$.1^4 + 10*$.1^3 + 7*$.1^2 + 10*$.1 + 3 (squarefree, degree 5), #J(F_11) = 150, chi = X^4 + X^3 + 16*X^2 + 11*X + 121
+p = 13, t = 6 mod 13: reduction 5*$.1^5 + $.1^4 + 4*$.1^3 + 7*$.1^2 + 6*$.1 + 12 (squarefree, degree 5), #J(F_13) = 120, chi = X^4 - 4*X^3 + 6*X^2 - 52*X + 169 (strict)
+gcd of #J(F_p) = 30; #G = 30
+sanity: t = 110 has TorsionSubgroup [ 30 ]
+G2-invariants of the members [ 110, 253, -33 ] are not all equal
+FAMILY_30_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [30]

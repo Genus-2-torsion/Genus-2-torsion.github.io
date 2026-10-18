@@ -94,8 +94,9 @@ class KnowledgeTests(unittest.TestCase):
         self.assertTrue(recorded <= set(t1) | after_paper, recorded - set(t1) - after_paper)
         # 39 of the record, minus [15] (containment only) and [4,8] (no certificate), plus the trivial group and
         # the groups certified here: [2,2,2,12], [3,12], [19], and the residue-class families of 2026-10-13
-        # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14], and [2,4,4] (2026-10-14)
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 53)
+        # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14], [2,4,4] (2026-10-14),
+        # and [3,6], [2,2,6], [2,2,12] (2026-10-18)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 56)
         self.assertEqual(len(knowledge._SIMPLE_FAMILY), 0)
         for key in ("13", "15", "16", "17", "19", "24", "25", "26", "2.14", "2.16", "2.2.8", "2.2.14", "2.2.2.12", "2.4.4"):
             self.assertEqual(knowledge.infinite_record("simple", key)["grade"], "exact", key)
@@ -116,14 +117,18 @@ class KnowledgeTests(unittest.TestCase):
         self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
         self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
         self.assertEqual(knowledge.infinite_record("split", "2")["grade"], "family")             # inherited
-        # split side: [8,8], [2,2,2,16] and (2026-10-18) [14], [2,10], [2,14], [2,2,10], [2,2,2,6], [4,12] certified here (family_*_split_certificate.log)
-        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8", "2.2.2.16", "14", "2.10", "2.14", "2.2.10", "2.2.2.6", "4.12"])
+        # split side: [8,8], [2,2,2,16] and (2026-10-18) [14], [2,10], [2,14], [2,2,10], [2,2,2,6], [4,12], [18], [2,18] certified here (family_*_split_certificate.log)
+        self.assertEqual(list(knowledge._SPLIT_EXACT), ["8.8", "2.2.2.16", "14", "2.10", "2.14", "2.2.10", "2.2.2.6", "4.12", "18", "2.18"])
         self.assertEqual(knowledge.infinite_record("split", "8.8")["grade"], "exact")
+        # simple side: since 2026-10-18 no group is graded "family" (the last three got their own families)
+        for key in ["3.6", "2.2.6", "2.2.12"]:
+            self.assertEqual(knowledge.infinite_record("simple", key)["grade"], "exact")
         self.assertEqual(knowledge.infinite_record("split", "2.2.2.16")["grade"], "exact")
         names = {"2.4.4": "family_244_certificate.log", "8.8": "family_88_split_certificate.log", "2.2.2.16": "family_22216_split_certificate.log",
                  "14": "family_14_split_certificate.log", "2.10": "family_210_split_certificate.log", "2.14": "family_214_split_certificate.log",
                  "2.2.10": "family_2210_split_certificate.log", "2.2.2.6": "family_2226_split_certificate.log",
-                 "4.12": "family_412_split_certificate.log"}
+                 "4.12": "family_412_split_certificate.log", "18": "family_18_split_certificate.log",
+                 "2.18": "family_218_split_certificate.log"}
         for key in names:
             side = "simple" if key == "2.4.4" else "split"
             name = names[key]

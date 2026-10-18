@@ -1,0 +1,25 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 714i1 = [ 1, 0, 0, 108, 11664 ], torsion [ 9 ], P9 = (24 : -180 : 1) of order 9
+(1) j(E0(a(v), c(v))) = j(E) identically in v
+(1) cover identities h1^4 f1(nn1/h1) = h1 h2 mm1^2 and h2^4 f2(nn2/h2) = h1 h2 mm2^2 hold over Q(v)
+(1) F = F0^tw has the 2-torsion point (tw X(v), 0); f2 = (X - X(v)) q(X), and disc(q) = dpol(v) drt(v)^2 with dpol = -5183*V^4 - 60435076*V^3 - 234870845178*V^2 - 304157704212868*V + 304392635498305
+    so F_v has full rational 2-torsion exactly when dpol(v) is a square: the base is the genus-1 curve D : s^2 = dpol(v)
+(1) C_v : y^2 = f_v(x), coefficients of degrees [ 47, 47, 45, 45, 44, 43, 42 ] in v; y' = kk y maps C_v to y'^2 = tw h1 h2
+(1) phi1 : (x,y) -> (tw nn1/h1, tw kk y mm1/h1^2) onto E0^tw ~ E, phi2 : (x,y) -> (tw nn2/h2, tw kk y mm2/h2^2) onto F_v
+(3) p = 109, v = 29 mod 109: reduction 90*$.1^6 + 46*$.1^5 + 74*$.1^4 + 104*$.1^3 + 89*$.1^2 + 68*$.1 + 9 (squarefree, degree 6); #J(F_p) = 11664 = #E(F_p) #F(F_p) = 108 * 108; J(F_p) = [ 2, 2, 54, 54 ]
+(3) p = 251, v = 240 mod 251: reduction 29*$.1^6 + 122*$.1^5 + 227*$.1^4 + 247*$.1^3 + 201*$.1^2 + 179*$.1 + 203 (squarefree, degree 6); #J(F_p) = 62640 = #E(F_p) #F(F_p) = 261 * 240; J(F_p) = [ 2, 31320 ]
+(3) p = 359, v = 208 mod 359: reduction 17*$.1^6 + 129*$.1^5 + 181*$.1^4 + 21*$.1^3 + 261*$.1^2 + 152*$.1 + 221 (squarefree, degree 6); #J(F_p) = 129600 = #E(F_p) #F(F_p) = 360 * 360; J(F_p) = [ 2, 2, 180, 180 ]
+(3) the largest group embedding in all J(F_p) has invariants [ 2, 18 ]
+(3) every p-integral v = -3023 mod 9821881 (p in [ 109, 251, 359 ]) has J(Q)_tors = G = [2,18]
+(4) D : s^2 = dpol(v) is a genus-1 curve; its Jacobian EM = [ 0, 0, 0, 0, 289 ] (minimal), with B = (1, 0) -> O; P = (-4 : -15 : 1) has infinite order (rank bounds [ 1 ]), T = (0 : 17 : 1) has order 3; the member v = -3023 lies over R0 = P + T = (68 : -561 : 1)
+(4) P has orders [ 6, 18, 9 ] mod [ 109, 251, 359 ]; for R_k = R0 + 18 k P the point R_k reduces to R0 mod every p, where v = NX/NZ has NZ a p-unit,
+    so v(R_k) is p-integral and = v(R0) mod p: every R_k gives a member of the class with F_v of full rational 2-torsion
+(4) sanity: v(R_1) has 439 digits, lies on D and is = -3023 mod [ 109, 251, 359 ]
+(4) the point 2 P of D lies over v2 = -11563693/3107, where C_v2 has G2-invariants different from those of C_{-3023}
+(2) v = -3023: phi1^*(P9) has order 9, J(Q)[2] has 4 elements, they generate 36 classes
+(2) v = -11563693/3107: phi1^*(P9) has order 9, J(Q)[2] has 4 elements, they generate 36 classes
+(4) the members [ -3023, -11563693/3107 ] (points of D) have distinct G2-invariants: v -> M_2 is nonconstant on D, so the R_k give infinitely many isomorphism classes
+(5) TorsionSubgroup at v = -3023: [ 2, 18 ]
+(5) TorsionSubgroup at v = -51395/13: [ 2, 18 ]
+time 1.100 s
+FAMILY_2_18_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_v) and J(Q)_tors exactly [2,18]

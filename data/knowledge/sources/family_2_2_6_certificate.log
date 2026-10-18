@@ -1,0 +1,13 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(p,q,r): x(x^2 - (p+q+r)x + (pq+pr+qr)) - (x-p)(x-q)(x-r) = pqr
+f_t = x^6 + (-2*t - 6)*x^5 + (t^2 + 12*t + 13)*x^4 + (-6*t^2 - 24*t - 12)*x^3 + (11*t^2 + 18*t + 4)*x^2 + (-6*t^2 - 4*t)*x
+over Q(t): D3 = oo+ - oo- has order 3, [x(x-1),0], [x(x-2),0], [x(x-t),0] generate (Z/2)^3; the marked group has order 24 = [2,2,6]
+p = 5, t = 3 mod 5: reduction $.1^6 + 3*$.1^5 + 3*$.1^4 + 2*$.1^3 + 2*$.1^2 + 4*$.1 (squarefree, degree 6), #J(F_5) = 24, chi = X^4 - 2*X^2 + 25
+p = 29, t = 27 mod 29: reduction $.1^6 + 27*$.1^5 + 22*$.1^4 + 12*$.1^3 + 12*$.1^2 + 13*$.1 (squarefree, degree 6), #J(F_29) = 648, chi = X^4 - 8*X^3 + 46*X^2 - 232*X + 841 (strict)
+gcd of #J(F_p) = 24; #G = 24
+sanity: t = -2 has TorsionSubgroup [ 2, 2, 6 ]
+G2-invariants of the members [ -2, 143, -147, 288 ] are not all equal
+sanity: t = 143 has TorsionSubgroup [ 2, 2, 6 ]
+sanity: t = -147 has TorsionSubgroup [ 2, 2, 6 ]
+control: the member t = -2 is Q-isomorphic to census curve 2.2.6.a
+FAMILY_2_2_6_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,6]

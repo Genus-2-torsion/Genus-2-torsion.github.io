@@ -1,0 +1,12 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(r,s,t): G1^2 + 4s H1^3 = G2^2 + 4st H2^3 (BFT Theorem 6); x^6-coefficient s^2(1-t)^2 + 2s(1+t) + 1
+(r, s, t) = (-3*l^2 + 1, -1/9/(l^4 - 2*l^3 + l^2), 9*l^4 - 18*l^3 + 15*l^2 - 6*l + 1); f_l has the root x0 = 2*l - 1 and an irreducible quartic cofactor
+over Q(l): T1 = [H1, G1], T2 = [H2, G2] (order 3, independent) and T0 = [x - x0, 0] (order 2) generate a group of order 18 = [3,6]
+p = 11, t = 2 mod 11: reduction 7*$.1^5 + 5*$.1^4 + 4*$.1^3 + 4*$.1^2 + 5 (squarefree, degree 5), #J(F_11) = 126, chi = X^4 + 4*X^2 + 121
+p = 37, t = 2 mod 37: reduction 7*$.1^5 + 18*$.1^4 + 22*$.1^3 + 36*$.1^2 + 27*$.1 + 23 (squarefree, degree 5), #J(F_37) = 1746, chi = X^4 + 8*X^3 + 72*X^2 + 296*X + 1369 (strict)
+gcd of #J(F_p) = 18; #G = 18
+sanity: t = 2 has TorsionSubgroup [ 3, 6 ]
+G2-invariants of the members [ 2, 409, -405, 816 ] are not all equal
+sanity: l = 409 has TorsionSubgroup [ 3, 6 ]
+sanity: l = -405 has TorsionSubgroup [ 3, 6 ]
+FAMILY_3_6_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [3,6]

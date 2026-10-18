@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18 15:04 UTC",
+  "generated": "2026-10-18 20:21 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,14 +38,14 @@
   "n_groups_any_split": 78,
   "n_infinite": {
     "simple": {
-      "exact": 53,
-      "family": 3,
+      "exact": 56,
+      "family": 0,
       "open": 40
     },
     "split": {
-      "exact": 8,
+      "exact": 10,
       "family": 54,
-      "open": 34
+      "open": 32
     }
   },
   "n_rejected": 0,
@@ -691,8 +691,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "4.12"
+          "note": "inherited: the group is a subgroup of [18], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "18"
         }
       }
     },
@@ -1340,8 +1340,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "4.12"
+          "note": "inherited: the group is a subgroup of [18], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "18"
         }
       }
     },
@@ -1989,10 +1989,10 @@
         "split": {
           "grade": "family",
           "sources": [
-            "HLP2000"
+            "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [45], for which a family with torsion containing it is recorded (see that group)",
-          "inherited_from": "45"
+          "note": "inherited: the group is a subgroup of [18], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "18"
         }
       }
     },
@@ -3598,9 +3598,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the (3,3)-gluings, in the normal form of Bröker–Howe–Lauter–Stevenhagen (arXiv:1403.6911), of E = 54b3 (torsion ℤ/9) with the partners F that have a rational 2-torsion point. The partners anti-symplectically 3-congruent to E form a rational curve, and so does the cover on which F has a rational 2-torsion point (Γ(3) ∩ Γ₀(2) has genus 0); this gives C_v over ℚ(v) with explicit degree-3 maps onto E and F_v, so J is isogenous over ℚ to E × F_v. The map onto E has prime degree, so pullback is injective on E and ℤ/9 ⊂ J(ℚ); with the class of the quadratic factor of f_v, [18] is marked. F_v also inherits a rational point of order 3 from E, but no extra 3-torsion appears in J (ℤ/18 is not a torsion group of an elliptic curve over ℚ). Here #J(𝔽_p) = #E(𝔽_p)#F_v(𝔽_p) is always divisible by 54, so the group structure is used instead: every 5- and 13-integral v ≡ −2 (mod 65) has the reductions of v = −2 at 5 and 13, where J(𝔽₅) ≅ ℤ/54 is cyclic and J(𝔽₁₃) ≅ (ℤ/18)² has exponent 18, so J(ℚ)_tors is exactly [18]; the G2-invariants at v = −2 and v = 63 differ. The member v = 4 (outside the class) is the census curve 36.b (family_18_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -7534,8 +7536,8 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [4,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "4.12"
+          "note": "inherited: the group is a subgroup of [2,18], for which a family with torsion containing it is recorded with exact torsion (see that group)",
+          "inherited_from": "2.18"
         }
       }
     },
@@ -8617,9 +8619,11 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "ThisSite"
+          ],
+          "note": "the (3,3)-gluings (Bröker–Howe–Lauter–Stevenhagen normal form) of E = 714i1 (torsion ℤ/9) with the partners F that have full rational 2-torsion. They are parametrised by the genus-1 curve D: s² = −5183v⁴ − 60435076v³ − 234870845178v² − 304157704212868v + 304392635498305, whose Jacobian y² = x³ + 289 has the point P = (−4, −15) of infinite order (for 54b3 this Jacobian is y² = x³ + 81, of rank 0). Explicit degree-3 maps make J isogenous over ℚ to E × F_v; pullback along the map onto E is injective (prime degree) and along the map onto F_v is injective on F_v(ℚ)[2], so [2,18] ⊂ J(ℚ). For R_k = R₀ + 18kP (R₀ = P + (0, 17) over v = −3023), v(R_k) ≡ −3023 modulo 109, 251 and 359, where J(𝔽₁₀₉) ≅ [2,2,54,54] (2-primary exponent 2), J(𝔽₂₅₁) ≅ [2,31320] (3-primary part ℤ/27) and J(𝔽₃₅₉) ≅ [2,2,180,180] (3-primary exponent 9), so J(ℚ)_tors is exactly [2,18]; the G2-invariants at v = −3023 and at v = −11563693/3107 (over 2P) differ (family_218_split_certificate.log)",
           "inherited_from": null
         }
       }
@@ -9839,12 +9843,13 @@
       "n_curves": 3,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "ThisSite"
+            "ThisSite",
+            "BFT2014"
           ],
-          "note": "inherited: the group is a subgroup of [3,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "3.12"
+          "note": "Bruin–Flynn–Testa's (ℤ/3)² family (BFT 2014, Theorem 6) on the rational curve (r, s, t) = (1 − 3l², −1/(9l²(l−1)²), (3l² − 3l + 1)²), where F = G₁² + 4sH₁³ is a quintic with the rational root x₀ = 2l − 1: T₁ = [H₁, G₁] and T₂ = [H₂, G₂] (order 3, independent) and [x − x₀, 0] (order 2) mark [3,6] over ℚ(l). Every l ≡ 2 (mod 407) has #J(𝔽₁₁) = 126 and #J(𝔽₃₇) = 1746 (gcd 18), strict at 37 (family_3_6_certificate.log)",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
@@ -12365,13 +12370,12 @@
       "n_curves": 3,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Najman2026",
             "ThisSite"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,6], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.6"
+          "note": "y² = F₁F₂ with F₁ = x(x² − (t+3)x + 3t + 2), F₂ = (x−1)(x−2)(x−t): F₁ − F₂ = 2t is constant, so D₃ = ∞₊ − ∞₋ has order 3, and the four rational roots give rational 2-rank 3: [2,2,6] is marked over ℚ(t). Every t ≡ −2 (mod 145) has #J(𝔽₅) = 24 and #J(𝔽₂₉) = 648, strict at 29 (family_2_2_6_certificate.log); t = −2 is the census curve 2.2.6.a",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",
@@ -12913,15 +12917,13 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
             "ThisSite",
-            "Audit2026",
-            "BNSS2026",
-            "Choudhry"
+            "BNSS2026"
           ],
-          "note": "inherited: the group is a subgroup of [2,2,2,12], for which a family with torsion containing it is recorded with exact torsion (see that group)",
-          "inherited_from": "2.2.2.12"
+          "note": "y² = x(x² − Sx + w²)(x − a²)(x − b²)(x − c²) with S = a² + b² + c², w² = a²b² + a²c² + b²c² (as in BNSS2026, F₁ − F₂ = (abc)², so D₃ = ∞₊ − ∞₋ has order 3), on the conic a = m² − 1, b = 2m + 1, c = 2(m² + m + 1), w = −(2a² + ab + 2b²): since S + 2w = (a + b)² is a square, the class [x² − Sx + w², 0] of the irrational root pair has an explicit half D₄ over ℚ(m), and with [x(x − a²), 0], [x(x − b²), 0] it marks [2,2,12]. Every m ≡ 3 (mod 1357) has #J(𝔽₂₃) = 528 and #J(𝔽₅₉) = 3984 (gcd 48), strict at 59 (family_2_2_12_certificate.log). A second family, over the rank-1 elliptic curve A² = τ⁴ + τ³ − 17τ² + 7τ + 49 (Jacobian of conductor 2660), contains the census curve 2.2.12.a: for R = 36k·P it has the reductions of 2.2.12.a at 17 and 233, #J = 240 and 56496 (gcd 48), strict at 233 (family_2_2_12_control_certificate.log)",
+          "inherited_from": null
         },
         "split": {
           "grade": "family",

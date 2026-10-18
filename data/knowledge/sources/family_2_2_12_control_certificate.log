@@ -1,0 +1,12 @@
+Loading "pipeline/magma/family_cert_lib.m"
+f_tau = x (x - e1)(x - e2) (x (x - e1)(x - e2) - kappa), e1 = 4/5, e2 = (tau^4 - 14*tau^2 + 49)/(tau^4 - 10*tau^2 + 49), kappa = 4/5*tau^2/(tau^4 - 10*tau^2 + 49)
+(1) over Q(C1): D3 (order 3), D4 (2 D4 = [x(x-1), 0], order 4), [x(x-e1),0], [x(x-e2),0] generate a group of order 48 = [2,2,12]
+(2) E = [ 0, 1, 0, -285, 1900 ], conductor 2660, rank 1; P = (8 : 14 : 1) has infinite order, order 12 mod 17 and 36 mod 233
+sanity: tau(36 P) has 811 digits and is = -7 mod 17 and mod 233
+p = 17, tau = -7 mod 17: reduction squarefree of degree 6, #J(F_17) = 240, chi = T^4 - 4*T^3 + 22*T^2 - 68*T + 289
+p = 233, tau = -7 mod 233: reduction squarefree of degree 6, #J(F_233) = 56496, chi = T^4 + 8*T^3 + 334*T^2 + 1864*T + 54289 (strict)
+(3) gcd of #J(F_p) = 48 = #[2,2,12]
+control: the fiber at R0 (tau = -7) is Q-isomorphic to census curve 2.2.12.a
+sanity: tau = -7 and tau = 3 have TorsionSubgroup [ 2, 2, 12 ], [ 2, 2, 12 ]
+(4) G2-invariants at tau = -7 and tau = 3 differ
+FAMILY_2_2_12_CONTROL_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,12], in a family through census curve 2.2.12.a

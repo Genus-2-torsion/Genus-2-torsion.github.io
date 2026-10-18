@@ -1,0 +1,13 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(m): w^2 = a^2b^2 + a^2c^2 + b^2c^2 and S + 2w = (a+b)^2
+f_m = x (x^2 - S x + w^2)(x - a^2)(x - b^2)(x - c^2) with a = m^2 - 1, b = 2*m + 1, c = 2*m^2 + 2*m + 2, S = 5*m^4 + 8*m^3 + 14*m^2 + 12*m + 6, w = -2*m^4 - 2*m^3 - 5*m^2 - 6*m - 3
+ell = (-1/2*m^4 - m^3 - 2*m^2 - 1)/(m^3 - 1)*x + m^3 - 1, gamma = (1/2*m^4 + m^3 + m^2 + 2*m)/(m^3 - 1)
+D4 = [x^2 + (-3*m^4 - 5*m^3 - 9*m^2 - 6*m - 4)*x - 2*m^7 - 2*m^6 - 5*m^5 - 4*m^4 - m^3 + 5*m^2 + 6*m + 3, (-2*m^8 - 9*m^7 - 22*m^6 - 37*m^5 - 36*m^4 - 29*m^3 - 21*m^2 - 6*m)*x - 4*m^11 - 18*m^10 - 38*m^9 - 61*m^8 - 69*m^7 - 35*m^6 + 32*m^5 + 81*m^4 + 73*m^3 + 33*m^2 + 6*m] has 2 D4 = [x^2 - S x + w^2, 0] != 0, so order 4
+over Q(m): D3 (order 3), D4 (order 4), [x(x-a^2),0], [x(x-b^2),0] generate a group of order 48 = Z/3 x Z/4 x Z/2 x Z/2 = [2,2,12]
+p = 23, t = 3 mod 23: reduction $.1^6 + 9*$.1^5 + 6*$.1^4 + 22*$.1^3 + 6*$.1^2 + 7*$.1 (squarefree, degree 6), #J(F_23) = 528, chi = X^4 - 2*X^2 + 529
+p = 59, t = 3 mod 59: reduction $.1^6 + 15*$.1^5 + 55*$.1^4 + 50*$.1^3 + 41*$.1^2 + 56*$.1 (squarefree, degree 6), #J(F_59) = 3984, chi = X^4 + 8*X^3 + 22*X^2 + 472*X + 3481 (strict)
+gcd of #J(F_p) = 48; #G = 48
+sanity: t = 3 has TorsionSubgroup [ 2, 2, 12 ]
+G2-invariants of the members [ 3, -1354, 1360, 2717 ] are not all equal
+sanity: m = -1354 has TorsionSubgroup [ 2, 2, 12 ]
+FAMILY_2_2_12_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,12]

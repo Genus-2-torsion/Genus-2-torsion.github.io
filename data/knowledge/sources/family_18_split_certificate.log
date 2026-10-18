@@ -1,0 +1,22 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 54b3 = [ 1, -1, 1, -14, 29 ], torsion [ 9 ], P = (9 : 19 : 1) of order 9
+(1) j(E0(a(v), c(v))) = j(E) identically in v
+(1) cover identities h1^4 f1(nn1/h1) = h1 h2 mm1^2 and h2^4 f2(nn2/h2) = h1 h2 mm2^2 hold over Q(v)
+(1) E0^tw has the c-invariants of E; F = F0^tw has the rational 2-torsion point (tw X(v), 0)
+(1) C_v : y^2 = f_v(x), coefficients of degrees [ 48, 48, 48, 48, 48, 46, 46 ] in v; y' = kk y maps C_v to y'^2 = tw h1 h2
+(1) phi1 : (x,y) -> (tw nn1/h1, tw kk y mm1/h1^2) onto E0^tw ~ E, phi2 : (x,y) -> (tw nn2/h2, tw kk y mm2/h2^2) onto F
+(1) factor degrees of f_v over Q(v): [ 1, 2, 3 ]
+(1) marked over Q(v): the class c2 = [q, 0] of the quadratic factor q of f_v has order 2 (Mumford arithmetic over Q(v)); it is the only rational 2-torsion class
+(3) p = 5, v = 3 mod 5: reduction $.1^6 + $.1^5 + 4*$.1^4 + $.1^3 + $.1^2 + 4*$.1 + 1 (squarefree, degree 6); #J(F_p) = 54 = #E(F_p) #F(F_p) = 9 * 6; J(F_p) = [ 54 ]
+(3) p = 13, v = 11 mod 13: reduction 12*$.1^6 + 8*$.1^5 + 5*$.1^4 + 10*$.1^3 + 8*$.1^2 + 5*$.1 + 12 (squarefree, degree 6); #J(F_p) = 324 = #E(F_p) #F(F_p) = 18 * 18; J(F_p) = [ 18, 18 ]
+(3) the largest group embedding in all J(F_p) has invariants [ 18 ]
+(3) every p-integral v = -2 mod 65 (p in [ 5, 13 ]) has J(Q)_tors = G = [18]
+(2) v = -2: phi1^*(P) and [q, 0] have orders [ 9, 2 ]; their sum has order 18 (Mumford arithmetic on the member); F_v = [ 1, -1, 1, -725, 7661 ] has torsion [ 6 ]
+(2) v = 63: phi1^*(P) and [q, 0] have orders [ 9, 2 ]; their sum has order 18 (Mumford arithmetic on the member); F_v = [ 1, -1, 1, -37796404643935931570, -89438254143887845199508502327 ] has torsion [ 6 ]
+(4) the G2-invariants of the members [ -2, 63 ] are pairwise distinct: v -> M_2 is nonconstant, so the residue class gives infinitely many isomorphism classes
+(5) TorsionSubgroup at v = -2: [ 18 ]
+(5) TorsionSubgroup at v = -1: [ 18 ]
+(5) these members are pairwise non-isomorphic (distinct G2-invariants)
+(5) control: the member v = 4 (not in the class) is Q-isomorphic to the census curve 36.b; there F_4 = [ 1, -1, 1, -122, 1721 ] has torsion [12] and J(Q)_tors = [ 36 ]
+time 0.580 s
+FAMILY_18_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_v) and J(Q)_tors exactly [18]

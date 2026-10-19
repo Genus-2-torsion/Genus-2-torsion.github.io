@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19 12:24 UTC",
+  "generated": "2026-10-19 13:12 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -43,8 +43,8 @@
       "open": 40
     },
     "split": {
-      "exact": 68,
-      "family": 1,
+      "exact": 69,
+      "family": 0,
       "open": 27
     }
   },
@@ -6587,11 +6587,13 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "family",
+          "grade": "exact",
           "sources": [
-            "Howe2015"
+            "ThisSite",
+            "Howe2015",
+            "HLP2000"
           ],
-          "note": "Howe 2015, Theorem 3.2 and Remark 3.3: a family of genus-2 curves whose Jacobians have a rational point of order 48, parametrised by an elliptic curve of rank 2; the Jacobians are split over ℚ by the 2-gluing construction",
+          "note": "Howe 2015, Theorems 3.1 and 3.2: the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of the fixed curve F = 42a1: y² = x³ − 31x² + 256x (Q = (32, 96) of order 8) with E_s: y² = x(x² + a_s x + b_s) (P of order 6), Howe's C^s₂₄: d y² = x⁶ + c₄x⁴ + c₂x² + c₀; (x, y) ↦ (x², y) and (x, y) ↦ (1/x², y/x³) map it onto F and E_s, so J is isogenous over ℚ to E_s × F, and the image of (2P, Q) has order 24 over ℚ(s). On Howe's curve D: w² = z³ + 14z² + 196z (9408q1, rank 2), s = −21[(z² + 196)(z² + 56z + 196) + 32(z + 14)(z − 14)w]/(z⁴ − 896z³ − 24696z² − 175616z + 38416), the identity A(B − 32) = ℓ²n² in ℚ(√−7)(D) and HLP Prop. 12 give a rational point of order 16 whose double is the image of (3P, Q), so ℤ/48 ⊂ J(ℚ). For R_k = (1 + 8k)P₂, P₂ = (7, −49), s(R_k) ≡ 3 (mod 5), where J(𝔽₅) = ℤ/48, so J(ℚ)_tors is exactly [48]; the G2-invariants at s = 3 and s = 21/31 differ. The members over P₁, P₂, P₃ are Howe's Corollary 3.5 curves; the census curve 48.a is not a member (its Jacobian has no factor 42a1) (family_48_split_certificate.log)",
           "inherited_from": null
         }
       }

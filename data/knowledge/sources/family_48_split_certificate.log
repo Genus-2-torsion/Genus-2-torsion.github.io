@@ -1,0 +1,21 @@
+Loading "pipeline/magma/family_cert_lib.m"
+(0) F = [ 0, -31, 0, 256, 0 ] = 42a1, Q = (32, 96) of order 8, 4Q = (0,0); E_s : y^2 = x(x^2 + a x + b) with P of order 6, 3P = (0,0)
+(1) psi : (alpha_i,0) -> (beta_i,0) is given by phi in Q(s)[x]; the closed-form HLP gluing y^2 = c2 Fh(k x^2 - 1, c2 x^2), at
+    x/(8(s^2 + 63)) and times a square, is Howe's f_s = d(x^6 + c4 x^4 + c2 x^2 + c0): C^s_24 is the HLP gluing of E_s and F
+(1) (x,y) -> (x^2, y) maps C onto Y^2 = Ha(U), isomorphic over Q(s) to F; (x,y) -> (1/x^2, y/x^3) onto Y^2 = Hb(U), isomorphic to E_s
+(2) over Q(s): D6 = pullback of P has order 6, D8 = pullback of Q order 8, T8 = image of (3P, Q) order 8,
+    D24 = image of (2P, Q) order 24 (Howe, Theorem 3.1)
+(2) over L(D), L = Q(sqrt -7): A(B - 32) = l^2 n^2 (Howe, proof of Theorem 3.2), so iota(3P) = psi~(iota'(Q)) on D and by
+    HLP Prop. 12 there is a rational G with 2G = T8: G has order 16 and G + D3 has order 48, so Z/48 embeds in J(Q)
+(4) D = [ 0, 14, 0, 196, 0 ] = 9408q1 (rank bounds [ 2 ]), P1 = (0,0) of order 2, P2 = (7,-49), P3 = (16,-104); s(P2) = 3, s(P3) = 21/31
+(3) p = 5, s = 3 mod 5: reduction 3*$.1^6 + 4*$.1^4 + 2*$.1^2 + 2 (squarefree, degree 6), J(F_5) = [ 48 ]: every member in the class has J(Q)_tors = Z/48
+    (s = 1, 2, 3, 4 mod 5 all give good reduction and J(F_5) = Z/48)
+(4) P2 has order 8 in D(F_5); R_k = (1 + 8 k) P2 reduces to P2 mod 5, s(R_k) is 5-integral and = 3 mod 5
+(4) sanity: s(R_1) = s(9 P2) has 129 digits, = 3 mod 5, with the same reduction at 5
+(4) the G2-invariants at s = 3 and s = 21/31 differ: s -> M_2 is nonconstant, so the R_k give infinitely many isomorphism classes
+(5) P1 (s = -21): TorsionSubgroup [ 48 ]; T8 has order 8, a rational G with 2G = T8 has order 16 (2 such G), G + D3 has order 48; Howe Cor. 3.5 curve: true
+(5) P2 (s = 3): TorsionSubgroup [ 48 ]; T8 has order 8, a rational G with 2G = T8 has order 16 (2 such G), G + D3 has order 48; Howe Cor. 3.5 curve: true
+(5) P3 (s = 21/31): TorsionSubgroup [ 48 ]; T8 has order 8, a rational G with 2G = T8 has order 16 (2 such G), G + D3 has order 48; Howe Cor. 3.5 curve: true
+(5) census 48.a: TorsionSubgroup [ 48 ]; not a member (J(48.a) is isogenous to curves of conductor 21 and 84, every member has the factor 42a1)
+time 0.650 s
+FAMILY_48_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E_s x F) and J(Q)_tors exactly [48]

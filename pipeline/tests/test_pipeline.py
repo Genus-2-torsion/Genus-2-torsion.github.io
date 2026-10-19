@@ -116,12 +116,12 @@ class KnowledgeTests(unittest.TestCase):
         self.assertTrue(set(knowledge._SPLIT_FAMILY) <= set(t2))
         self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
         self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
-        self.assertEqual(knowledge.infinite_record("split", "48")["grade"], "family")            # Howe 2015; since 2026-10-19 the only split "family" grade
-        self.assertEqual([k for k in knowledge._recorded_keys("split") if knowledge.infinite_record("split", k)["grade"] == "family"], ["48"])
+        self.assertEqual(knowledge.infinite_record("split", "48")["grade"], "exact")             # Howe 2015 family, certified 2026-10-19
+        self.assertEqual([k for k in knowledge._recorded_keys("split") if knowledge.infinite_record("split", k)["grade"] == "family"], [])
         # split side: [8,8], [2,2,2,16] and (2026-10-18) [14], [2,10], [2,14], [2,2,10], [2,2,2,6], [4,12], [18], [2,18] certified here (family_*_split_certificate.log)
         self.assertEqual(list(knowledge._SPLIT_EXACT)[:10], ["8.8", "2.2.2.16", "14", "2.10", "2.14", "2.2.10", "2.2.2.6", "4.12", "18", "2.18"])
         # the split-side sweep of 2026-10-19: 58 more, among them [3,24], [2,30], [2,48], [27], [36] (graded open before)
-        self.assertEqual(len(knowledge._SPLIT_EXACT), 68)
+        self.assertEqual(len(knowledge._SPLIT_EXACT), 69)   # with [48] (Howe 2015)
         for key, (note, _src) in knowledge._SPLIT_EXACT.items():
             logs = re.findall(r"family_[A-Za-z0-9_]+_certificate\.log", note)
             self.assertTrue(logs, key)

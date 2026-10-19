@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19 13:12 UTC",
+  "generated": "2026-10-19 14:11 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,9 +38,9 @@
   "n_groups_any_split": 78,
   "n_infinite": {
     "simple": {
-      "exact": 56,
+      "exact": 57,
       "family": 0,
-      "open": 40
+      "open": 39
     },
     "split": {
       "exact": 69,
@@ -10085,11 +10085,11 @@
       "n_curves": 3,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "exact",
           "sources": [
-            "Najman2026"
+            "ThisSite"
           ],
-          "note": "only isolated examples of geometrically simple Jacobians (many on the [9]-chart of 2026-10-13); Leprévost (1995, Theorem 1.2.2) gives a one-parameter family with [3,9] marked, whose members appear geometrically split; (2,2)-isogenies cannot create 3-power structure",
+          "note": "the pencil C_t: y² = (t²x³ + 3(t + 1)x + 1)² + 32t²x³, a line of the [9]-chart of 2026-10-13, with the class [x² + (3x + 1)/t, (2t − 12)x − 4] of order 9 over ℚ(t). Since (4t + 1)f_t = B² + 4t²(tx² − x − 1)³ with B = t²x³ + 6t²x² + (9t + 3)x + 2t + 1, after the base change t = (s² − 1)/4 the class [x² − (x + 1)/t, 2s(2x + 1)] is a second rational point of order 3, not in the span of the first, so [3,9] is marked over ℚ(s). Every 7- and 17-integral s ≡ 5 (mod 119) has #J(𝔽₇) = 81 and #J(𝔽₁₇) = 351 (gcd 27), strict at 17 (family_3_9_certificate.log). The census curve 3.9.a is not on the pencil",
           "inherited_from": null
         },
         "split": {

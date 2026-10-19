@@ -95,8 +95,9 @@ class KnowledgeTests(unittest.TestCase):
         # 39 of the record, minus [15] (containment only) and [4,8] (no certificate), plus the trivial group and
         # the groups certified here: [2,2,2,12], [3,12], [19], and the residue-class families of 2026-10-13
         # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14], [2,4,4] (2026-10-14),
-        # and [3,6], [2,2,6], [2,2,12] (2026-10-18)
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 56)
+        # and [3,6], [2,2,6], [2,2,12] (2026-10-18), [3,9] (2026-10-19)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 57)
+        self.assertEqual(knowledge.infinite_record("simple", "3.9")["grade"], "exact")
         self.assertEqual(len(knowledge._SIMPLE_FAMILY), 0)
         for key in ("13", "15", "16", "17", "19", "24", "25", "26", "2.14", "2.16", "2.2.8", "2.2.14", "2.2.2.12", "2.4.4"):
             self.assertEqual(knowledge.infinite_record("simple", key)["grade"], "exact", key)

@@ -1,0 +1,11 @@
+Loading "pipeline/magma/family_cert_lib.m"
+over Q(t): f_t = (t^2 x^3 + 3(t+1)x + 1)^2 + 32t^2 x^3, disc 2^21 3^6 t^16 (t-2)^4 (4t+1)^2; D has order 9; (4t+1) f_t = B^2 + 4t^2 (t x^2 - x - 1)^3
+over Q(s), t = (s^2 - 1)/4: D (order 9) and S = [x^2 - (x+1)/t, 2s(2x+1)] (order 3, not in <3D>) generate a group of order 27 = [3,9]
+p = 7, t = 5 mod 7: reduction $.1^6 + 6*$.1^3 + 1 (squarefree, degree 6), #J(F_7) = 81, chi = X^4 + 2*X^3 + 15*X^2 + 14*X + 49
+p = 17, t = 5 mod 17: reduction 4*$.1^6 + 16*$.1^4 + 16*$.1^2 + 8*$.1 + 1 (squarefree, degree 6), #J(F_17) = 351, chi = X^4 + 3*X^3 + 7*X^2 + 51*X + 289 (strict)
+gcd of #J(F_p) = 27; #G = 27
+sanity: t = 5 has TorsionSubgroup [ 3, 9 ]
+G2-invariants of the members [ 5, 124, -114, 243 ] are not all equal
+sanity: s = 124 has TorsionSubgroup [ 3, 9 ]
+sanity: s = -114 has TorsionSubgroup [ 3, 9 ]
+FAMILY_3_9_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [3,9]

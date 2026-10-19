@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19 14:11 UTC",
+  "generated": "2026-10-19 14:49 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,9 +38,9 @@
   "n_groups_any_split": 78,
   "n_infinite": {
     "simple": {
-      "exact": 57,
+      "exact": 59,
       "family": 0,
-      "open": 39
+      "open": 37
     },
     "split": {
       "exact": 69,
@@ -10735,11 +10735,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "exact",
           "sources": [
-            "Najman2026"
+            "ThisSite"
           ],
-          "note": "the record lists the tangent-cover family as certified, but no fiber certificate exists for it; the rational curve w = R² in that cover carries a marked [4,8] but looks geometrically split (no strict prime below 100 on 12 fibers), and the geometrically simple points found lie on no known rational or positive-rank curve (notes review of 2026-10-13; graded exact until then)",
+          "note": "the M₁(8,2^w) odd model y² = xA(x)B(x) of the [4,8] tangent cover, restricted to the rational curve w = (13R − 12)/(12R − 13), R = 3(τ² − 4)/(2(τ² − 9)), on which both 2-descent conditions for halving T₀ = [x, 0] hold identically: P₈ = (−R, y₀) − ∞ (order 8) and the tangent half H of T₀ (order 4) mark [4,8] over ℚ(τ). Every 13- and 41-integral τ ≡ 4 (mod 533) has #J(𝔽₁₃) = 128 and #J(𝔽₄₁) = 1888 (gcd 32), strict at 41 (family_4_8_certificate.log)",
           "inherited_from": null
         },
         "split": {
@@ -13697,11 +13697,11 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "exact",
           "sources": [
-            "Najman2026"
+            "ThisSite"
           ],
-          "note": "one verified exact hit on the one-split tangent subcover; the genus/rank of its base curve was not computed",
+          "note": "the M₁(8,2^w) odd model y² = xA(x)B(x) of the [4,8] tangent cover (A = x² + (R³ + 4R²t + R − 8Rt + 4t)x + R⁴, B = (R + 2 + 4t)x² + (R² + 4R + 1 + 8t)x + 2R² + R + 4t, t = (2R² + (1 − w²)R − 2w²)/(4(w² − 1))), in which P₈ = (−R, y₀) − ∞ has order 8, restricted to the line w = (13R − 12)/(12R − 13), R = 3(τ² − 4)/(2(τ² − 9)). There both 2-descent conditions for halving T₀ = [x, 0] hold identically, so the tangent half H (2H = T₀) is defined over ℚ(τ) and ⟨P₈, H⟩ = [4,8]. B splits over the genus-1 curve D: σ² = τ⁴ − 36τ² + 36, whose Jacobian y² = x³ − 36x (conductor 576) has rank 1, and [x − β, 0] for a root β of B completes [2,4,8] over ℚ(D). For R_k = R₀ + 60kP (R₀ over τ = 12/35, P from τ = −1), τ(R_k) ≡ 12/35 modulo 11 and 53, where J(𝔽₁₁) ≅ [2,4,16] and J(𝔽₅₃) ≅ [2,4,328] (#J = 128 and 2624, gcd 64), strict at 53, so J(ℚ)_tors is exactly [2,4,8]; the G2-invariants at R₀ and at 60P differ (family_2_4_8_certificate.log). The census curve 2.4.8.a, (R, w) = (−16/11, 14/11), where A splits instead of B, is not on D",
           "inherited_from": null
         },
         "split": {

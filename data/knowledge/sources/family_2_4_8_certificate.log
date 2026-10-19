@@ -1,0 +1,15 @@
+Loading "pipeline/magma/family_cert_lib.m"
+(0) C_tau : y^2 = x A B with R = (3/2*tau^2 - 6)/(tau^2 - 9), w = (13R - 12)/(12R - 13), t = (-3/8*tau^4 + 183/8*tau^2 - 27/2)/(tau^4 - 18*tau^2 + 81)
+(1) over Q(tau): P8 = [x + R, y0] has order 8, H = [u, v] with u = xt^2 + (3/4*tau^6 - 21/2*tau^5 + 93/4*tau^4 - 126*tau^3 - 279/2*tau^2 - 378*tau - 162)/(tau^6 - 9*tau^4 - 81*tau^2 + 729)*xt + (-27/8*tau^6 + 27/2*tau^4 + 54*tau^2 - 216)/(tau^6 - 9*tau^4 - 81*tau^2 + 729) has 2H = [x, 0]; <P8, H> = [4,8]
+    over Q(D), D : sigma^2 = tau^4 - 36 tau^2 + 36: B splits, TB = [x - beta, 0] has order 2, and the 64 sums i P8 + j H + k TB are distinct: [2,4,8] is marked
+(2) E = [ 0, 0, 0, -36, 0 ], conductor 576, rank 1; P = (12 : 36 : 1) has infinite order, order 6 mod 11 and 20 mod 53
+    sanity: tau(60 P) has 1298 digits, lies on D, and is = 12/35 mod 11 and mod 53
+(3) p = 11, tau = 6 mod 11: reduction 8*$.1^5 + $.1^4 + 9*$.1^2 + 8*$.1 (squarefree, degree 5), J(F_11) = [ 2, 4, 16 ], #J(F_11) = 128, chi = T^4 + 6*T^2 + 121
+(3) p = 53, tau = 17 mod 53: reduction 33*$.1^5 + 33*$.1^4 + 50*$.1^3 + 7*$.1^2 + 41*$.1 (squarefree, degree 5), J(F_53) = [ 2, 4, 328 ], #J(F_53) = 2624, chi = T^4 - 4*T^3 + 30*T^2 - 212*T + 2809 (strict)
+    gcd of #J(F_p) = 64 = #[2,4,8]: every R = 60k P (k >= 1) has J(Q)_tors exactly [2,4,8], geometrically simple
+(4) the G2-invariants at tau(R0) = 12/35 and tau(60 P) differ
+(5) the member at R0 (tau = 12/35, R = 2378/3627, w = 2522/3723): y^2 = 3080162/1461681*T^5 + 134745173818917193321/28106082363449558169*T^4 + 995389909632222989104/252954741271046023521*T^3 + 3164020055780541862096/2276592671439414211689*T^2 + 2407026416959740032/13470962552895942081*T
+    TorsionSubgroup at tau = 12/35: [ 2, 4, 8 ]
+    TorsionSubgroup at tau = 6 ((R, w) = (16/9, 4/3), a point of D off the class): [ 2, 4, 8 ]
+time 9.740 s
+FAMILY_2_4_8_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,4,8], over the rank-1 elliptic curve D : sigma^2 = tau^4 - 36 tau^2 + 36

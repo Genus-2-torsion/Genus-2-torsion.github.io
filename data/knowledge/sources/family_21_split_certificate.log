@@ -1,0 +1,15 @@
+Loading "pipeline/magma/family_cert_lib.m"
+A = -27*t^8 + 324*t^7 - 1134*t^6 + 1512*t^5 - 945*t^4 + 378*t^2 - 108*t - 27
+B = 54*t^12 - 972*t^11 + 6318*t^10 - 19116*t^9 + 30780*t^8 - 26244*t^7 + 14742*t^6 - 11988*t^5 + 9396*t^4 - 2484*t^3 - 810*t^2 + 324*t + 54
+C_t : y^2 = f_t(x) = A^7 - 3A^5 B x^2 + (A^6 + 3A^3 B^2) x^4 - A B^3 x^6
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E3 and Eb to E7 = E_7(t): J is isogenous over Q to E3 x E7
+(2) over Q(t): D7 = phi2^*(P7) has order 7, D3 = phi1^*(P3) has order 3, D21 = D7 + D3 has order 21
+(3) p = 5, t = 2 mod 5: reduction 2*$.1^6 + 3*$.1^4 + $.1^2 + 3 (squarefree, degree 6); #J(F_5) = 21, J(F_5) = [ 21 ], chi = X^4 - 2*X^3 + 7*X^2 - 10*X + 25
+    hence every 5-integral t = 2 mod 5 has J_t(Q)_tors exactly [21]
+(4) the G2-invariants of the members [ 2, 7, -3, 12, 17 ] are pairwise distinct
+(5) TorsionSubgroup at t = 2: [ 21 ]
+(5) TorsionSubgroup at t = 7: [ 21 ]
+(5) TorsionSubgroup at t = -3: [ 21 ]
+time 0.370 s
+FAMILY_21_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [21]

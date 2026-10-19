@@ -1,0 +1,19 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 210e2 = [ 1, 0, 0, -1070, 7812 ], torsion [ 2, 8 ]; Y^2 = g(u) = (u - e1)(u - e2)(u - e3) with (e1, e2, e3) = [ -36, 31/4, 28 ]; Pgen = (4 : -62 : 1) of order 8
+(1) lambda = (e3 - e1)/(e2 - e1) = 256/175; (r1 : r2 : r3) = (m^2 - 256/175 : m^2 - 2*m + 256/175 : -m^2 + 512/175*m - 256/175) is on the conic r3^2 - r1^2 = lambda (r2^2 - r1^2)
+(1) C_m : y^2 = f(x) = F(x^2), F(u) = c (u - r1^2)(u - r2^2)(u - r3^2), c = (e2 - e1)(r2^2 - r1^2) = -175*m^3 + 431*m^2 - 256*m
+(1) phi1 : (x, y) -> (mu x^2 + k, mu y/s) maps C_m onto E (Y^2 = g(u)): s^2 g(mu x^2 + k) = mu^2 f(x) over Q(m), with s = r2^2 - r1^2, mu = (e2 - e1)/s = -175/16/(m^3 - 431/175*m^2 + 256/175*m), k = e1 - mu r1^2 = (175/16*m^4 - 36*m^3 + 9916/175*m^2 - 9216/175*m + 4096/175)/(m^3 - 431/175*m^2 + 256/175*m)
+(1) phi2 : (x, y) -> (1/x^2, y/x^3) maps C_m onto E2_m : Y^2 = F2(w) = w^3 F(1/w); so J(C_m) is isogenous over Q to E x E2_m
+    the six Weierstrass points (+-r_i, 0) of C_m are rational over Q(m)
+(2) over Q(m): the 15 pair classes [(x - w)(x - w'), 0] and 0 are 16 classes killed by 2 (J[2] is rational); A = phi1^*(Pgen) = (x^2 - m^4 + 128/35*m^3 - 37248/6125*m^2 + 32768/6125*m - 65536/30625, -768/35*m^6 + 662016/6125*m^5 - 211477248/1071875*m^4 + 169476096/1071875*m^3 - 50331648/1071875*m^2, 2) has order 8; together they generate 64 classes
+    so J(Q(m)) contains G = [2,2,2,8]
+(3) p = 11, m = 6 mod 11: reduction 6*Pp.1^6 + 10*Pp.1^4 + 3*Pp.1^2 + 3 (squarefree, degree 6); J(F_p) = [ 2, 2, 2, 16 ] (order 128), chi = (X^2 + 4*X + 11)(X^2 - 4*X + 11): #E(F_p) = 16, #E2(F_p) = 8
+(3) p = 13, m = 12 mod 13: reduction 4*Pp.1^6 + 5*Pp.1^4 + 8*Pp.1^2 + 9 (squarefree, degree 6); J(F_p) = [ 2, 2, 8, 8 ] (order 256), chi = (X^2 + 2*X + 13)(X^2 + 2*X + 13): #E(F_p) = 16, #E2(F_p) = 16
+(3) the largest group embedding in all J(F_p) has invariants [ 2, 2, 2, 8 ]
+(3) every p-integral m = 8/5 mod 143 (p in [ 11, 13 ]) has J(Q)_tors = G = [2,2,2,8]
+(4) the G2-invariants of the members [ 8/5, 723/5, -707/5, 1438/5 ] are not all equal: m -> M_2 is nonconstant, so the class gives infinitely many isomorphism classes
+(5) m = 8/5: TorsionSubgroup [ 2, 2, 2, 8 ]; E2_m = [ 1, 0, 0, -4, -1 ] (minimal model), conductor 21, torsion [ 2, 4 ]
+(5) m = 723/5: TorsionSubgroup [ 2, 2, 2, 8 ]; E2_m = [ 1, 0, 0, -180741876056888544664515092774, 16634354738824360790937274146537676452374244 ] (minimal model), conductor 9941424177694641049194, torsion [ 2, 4 ]
+(5) the member m = 8/5 is Q-isomorphic to the census curve 2.2.2.8.b
+time 0.260 s
+FAMILY_2_2_2_8_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x E2_m) and J(Q)_tors exactly [2,2,2,8]

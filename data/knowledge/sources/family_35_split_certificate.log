@@ -1,0 +1,20 @@
+Loading "pipeline/magma/family_cert_lib.m"
+(0) E = [ -1, 2, 2, 0, 0 ] (conductor 26, torsion Z/7, P_E = (0,0)); f(z) = X^3 - 43/16*X + 83/32
+(1) base X' = EM : [ 0, 1, 0, -901, -7461 ], conductor 54080
+(1a) over Q(X'): charpoly(c1 a + c2 (a^2 + 2pE/3)) = z^3 + a1(t) z + a0(t), the depressed 2-division cubic of the
+     Kubert curve F_t of the family below, at t = t(R): F_R[2] = E[2] as Galois modules via (a_i,0) -> (phi(a_i),0)
+(1b) C_R : y^2 = h(x) = c2 Fh(c1 x^2 - 1, c2 x^2); phi2 maps C onto Eb : Y^2 = c2^4 f((c1 - U)/c2) = E,
+     phi1 maps C onto Ea : Y^2 = Ha(U), and Ea is isomorphic to F_t over Q(X') (c4(Ea) = lam^2 c4(F_t), c6(Ea) = lam^3 c6(F_t)
+     with lam a square in Q(X')): J(C_R) is isogenous over Q to E x F_t(R)
+(3) p = 3, R = R0 mod 3: reduction xp^6 + 2*xp^4 + 1 (squarefree, degree 6); #J(F_p) = 35, J(F_p) = [ 35 ]
+(3) gcd of #J(F_p) = 35 = #G
+    J(Q)_tors injects into J(F_3) (good reduction at the odd prime 3), and contains Z/35 by (2): it is exactly Z/35
+(4) P = (91 : -820 : 1) has orders [ 3 ] mod [ 3 ]; for R_k = R0 + 3 k P the point R_k reduces to R0 mod every p in [ 3 ],
+    so x(R_k), y(R_k) are p-integral and congruent to x(R0), y(R0), and C_{R_k} has the reductions of (3)
+(4) sanity: h at R_1 = R0 + 3 P has coefficients of up to 775 digits and the same reductions
+(4) C at 2 P has G2-invariants different from C at R0: R -> M_2 is nonconstant on X', so the R_k give infinitely many isomorphism classes
+(2),(5) R = (91 : -820 : 1) (t = 32/13): phi2^*(P_E) has order 7, phi1^*((0,0) of F_t) has order 5, their sum has order 35; TorsionSubgroup [ 35 ]
+(2),(5) R = (-9 : 0 : 1) (t = -26): phi2^*(P_E) has order 7, phi1^*((0,0) of F_t) has order 5, their sum has order 35; TorsionSubgroup [ 35 ]
+(5) the member at (-25, 8) (t = -2/13) has the G2-invariants of the census curve 35.a
+time 0.470 s
+FAMILY_35_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_R) and J(Q)_tors exactly [35]

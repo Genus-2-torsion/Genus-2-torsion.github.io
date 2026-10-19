@@ -1,0 +1,21 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 90c3 = [ 1, -1, 1, -122, 1721 ], conductor 90, torsion [ 12 ]; generators used for the pullbacks: [ (-9 : 49 : 1) ] (2-torsion classes come from f)
+(1) j(E0(a(v), c(v))) = j(E) identically in v
+(1) cover identities h1^4 f1(nn1/h1) = h1 h2 mm1^2 and h2^4 f2(nn2/h2) = h1 h2 mm2^2 hold over Q(v)
+(1) E0^tw has the c-invariants of E; F = F0^tw has the rational 2-torsion point (tw X(v), 0)
+(1) C_v : y^2 = f_v(x), coefficients of degrees [ 48, 48, 48, 48, 48, 46, 46 ] in v; y' = kk y maps C_v to y'^2 = tw h1 h2
+(1) phi1 : (x,y) -> (tw nn1/h1, tw kk y mm1/h1^2) onto E0^tw ~ E, phi2 : (x,y) -> (tw nn2/h2, tw kk y mm2/h2^2) onto F
+(1) factor degrees of f_v over Q(v): [ 1, 1, 2, 2 ]; 3 quadratic divisors, so #J(Q(v))[2] = 4
+(1) marked over Q(v): each class [u, 0] has order 2 (Mumford arithmetic over Q(v)); J(Q(v))[2] has 2-rank 2, one more than E(Q)_tors
+(3) p = 7, v = 4 mod 7: reduction 6*$.1^6 + 3*$.1^5 + 2*$.1^4 + 2*$.1^3 + 3*$.1^2 + 3*$.1 + 2 (squarefree, degree 6); #J(F_p) = 72 = #E(F_p) #F(F_p) = 12 * 6; J(F_p) = [ 2, 36 ]
+(3) p = 11, v = 4 mod 11: reduction 3*$.1^6 + 8*$.1^5 + 5*$.1^4 + 5*$.1^3 + 4*$.1^2 + 5*$.1 + 7 (squarefree, degree 6); #J(F_p) = 144 = #E(F_p) #F(F_p) = 12 * 12; J(F_p) = [ 12, 12 ]
+(3) the largest group embedding in all J(F_p) has invariants [ 2, 12 ]
+(3) every p-integral v = 4 mod 77 (p in [ 7, 11 ]) has J(Q)_tors = G = [2,12]
+(2) v = 4: the pullbacks phi1^*(P) of the generators have orders [ 12 ]; with the 3 classes [u, 0] they generate a subgroup of J(Q) of order 24 isomorphic to [ 2, 12 ] (Mumford arithmetic on the member); F_v has torsion [ 6 ]
+(2) v = -73: the pullbacks phi1^*(P) of the generators have orders [ 12 ]; with the 3 classes [u, 0] they generate a subgroup of J(Q) of order 24 isomorphic to [ 2, 12 ] (Mumford arithmetic on the member); F_v has torsion [ 6 ]
+(4) the G2-invariants of the members [ 4, -73 ] are pairwise distinct: v -> M_2 is nonconstant, so the residue class gives infinitely many isomorphism classes
+(5) TorsionSubgroup at v = 4: [ 2, 12 ]
+(5) TorsionSubgroup at v = -73: [ 2, 12 ]
+(5) these members are pairwise non-isomorphic (distinct G2-invariants)
+time 0.660 s
+FAMILY_2_12_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_v) and J(Q)_tors exactly [2,12]

@@ -1,0 +1,27 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (-10368*t^13 + 404352*t^12 - 6531840*t^11 + 58958080*t^10 - 353292672*t^9 + 1620756096*t^8 - 5595259392*t^7 + 8999155200*t^6 + 27131518080*t^5 - 192335486848*t^4 + 470196878592*t^3 - 580362151680*t^2 + 358681046400*t - 88035984000)*x^6 + (6561*t^12 - 236196*t^11 + 3424842*t^10 - 22566276*t^9 + 21810951*t^8 + 635091192*t^7 - 5459931668*t^6 + 35114636952*t^5 - 159717812289*t^4 + 350315165484*t^3 + 10188866922*t^2 - 1350417694356*t + 1633141477881)*x^4 + (-2827791*t^8 + 67866984*t^7 - 576869364*t^6 + 2364919416*t^5 - 7054491690*t^4 + 16618029336*t^3 + 145223799916*t^2 - 997272028536*t + 1517004081729)*x^2 + 293932800*t^4 - 3527193600*t^3 + 8817984000*t^2 - 89515238400*t + 246500755200
+(0) the HLP (Prop. 4) gluing of E1 = 210e2 and E2 = E_{2,6}(t) along psi (4 P8 -> 3 P6) has coefficients in Q(t),
+    f_t = h(lambda x)/mu^2 with lambda, mu in Q(t)
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E2 and Eb to E1 = 210e2: J is isogenous over Q to E1 x E2
+(2) over Q(t): D8 = phi2^*(P8) has order 8, D6 = phi1^*(P6) has order 6, 4 D8 = 3 D6, D24 = D8 + D6 has order 24, DT = phi2^*(T) has order 2 and is not 12 D24: [2,24] is marked
+(3) Kummer products: (x(a) - alpha_k)(beta_3 - beta_k) = s_k h_k^2 over Q(t), s1 = 6t^2 - 12t - 90, s2 = 15t^2 - 150t + 135;
+    the third component is automatic (the products of the three components are squares)
+    X : Y1^2 = s1(t), Y2^2 = s2(t) (genus 1); phi : E' = [0,-1,0,67,237] (4800c1) -> X by four integral quartics:
+    both quadrics pull back to multiples of the Weierstrass cubic
+    P = (13 : -56 : 1) has infinite order, T' = (-3 : 0 : 1) has order 2; t(T') = 21
+(4) p = 11, t = 21 mod 11: reduction 6*$.1^6 + $.1^4 + 5 (squarefree, degree 6); J(F_11) = [ 4, 48 ], chi = X^4 + 4*X^3 + 22*X^2 + 44*X + 121
+(4) p = 13, t = 21 mod 13: reduction 2*$.1^6 + 12*$.1^4 + 2*$.1^2 + 10 (squarefree, degree 6); J(F_13) = [ 2, 2, 48 ], chi = X^4 + 22*X^2 + 169
+    the largest group embedding in all J(F_p) has invariants [ 2, 48 ]
+(5) E' has good reduction at 11, 13 and P has orders 8, 4 there: R_k = T' + 8kP reduces to T' mod 11 and 13, the
+    quartics are integral and the fourth is a unit at T', so t(R_k) is 11- and 13-integral and = 21 mod 143;
+    h1, h2, s1, s2 are units at t = 21 mod 11 and 13, so the Kummer products are nonzero squares at every t(R_k)
+    k = 0: t(R_k) has 2 digits, = 21 mod 143, both Kummer products are nonzero squares
+    k = 1: t(R_k) has 285 digits, = 21 mod 143, both Kummer products are nonzero squares
+    k = -1: t(R_k) has 222 digits, = 21 mod 143, both Kummer products are nonzero squares
+    the G2-invariants at t(T'), t(T' + 8P), t(T' - 8P) are pairwise distinct: infinitely many isomorphism classes
+(6) the member t = 21 (in the class) is Q-isomorphic to the census curve 2.48.a
+(6) t = 21: both Kummer products are squares; TorsionSubgroup [ 2, 48 ]
+(6) t = -85701/20879: both Kummer products are squares; TorsionSubgroup [ 2, 48 ]
+time 0.530 s
+FAMILY_2_48_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [2,48]

@@ -1,0 +1,20 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 17a2 = [ 1, -1, 1, -6, -4 ], conductor 17, torsion [ 2, 2 ]; generators used for the pullbacks: [] (2-torsion classes come from f)
+(1) j(E0(a(w), c(w))) = j(E) identically in w
+(1) cover identities h1^4 f1(nn1/h1) = h1 h2 mm1^2 and h2^4 f2(nn2/h2) = h1 h2 mm2^2 hold over Q(w)
+(1) E0^tw has the c-invariants of E; F_w = F0^tw
+(1) C_w : y^2 = f_w(x), coefficients of degrees [ 15, 15, 13, 13, 12, 11, 10 ] in w; y' = kk y maps C_w to y'^2 = tw h1 h2
+(1) phi1 : (x,y) -> (tw nn1/h1, tw kk y mm1/h1^2) onto E0^tw ~ E, phi2 : (x,y) -> (tw nn2/h2, tw kk y mm2/h2^2) onto F
+(1) factor degrees of f_w over Q(w): [ 1, 1, 1, 3 ]; 3 quadratic divisors, so #J(Q(w))[2] = 4
+(3) p = 7, w = 2 mod 7: reduction 3*$.1^5 + 2*$.1^2 + 4*$.1 + 5 (squarefree, degree 5); #J(F_p) = 40 = #E(F_p) #F(F_p) = 4 * 10; J(F_p) = [ 2, 2, 10 ]
+(3) p = 13, w = 2 mod 13: reduction 6*$.1^5 + $.1^3 + 4*$.1^2 + 8*$.1 + 1 (squarefree, degree 5); #J(F_p) = 304 = #E(F_p) #F(F_p) = 16 * 19; J(F_p) = [ 4, 76 ]
+(3) the largest group embedding in all J(F_p) has invariants [ 2, 2 ]
+(3) every p-integral w = 2 mod 91 (p in [ 7, 13 ]) has J(Q)_tors = G = [2,2]
+(2) w = 2: the pullbacks phi1^*(P) of the generators have orders []; with the 3 classes [u, 0] they generate a subgroup of J(Q) of order 4 isomorphic to [ 2, 2 ] (Mumford arithmetic on the member); F_w has torsion []
+(2) w = -89: the pullbacks phi1^*(P) of the generators have orders []; with the 3 classes [u, 0] they generate a subgroup of J(Q) of order 4 isomorphic to [ 2, 2 ] (Mumford arithmetic on the member); F_w has torsion []
+(4) the G2-invariants of the members [ 2, -89 ] are pairwise distinct: w -> M_2 is nonconstant, so the residue class gives infinitely many isomorphism classes
+(5) TorsionSubgroup at w = 2: [ 2, 2 ]
+(5) TorsionSubgroup at w = -89: [ 2, 2 ]
+(5) these members are pairwise non-isomorphic (distinct G2-invariants)
+time 0.340 s
+FAMILY_2_2_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_w) and J(Q)_tors exactly [2,2]

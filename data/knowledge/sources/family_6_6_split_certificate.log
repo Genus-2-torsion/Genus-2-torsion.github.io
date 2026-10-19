@@ -1,0 +1,24 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (24*t^11 + 108*t^10 + 162*t^9 + 198*t^8 + 108*t^7 + 81*t^6 + 18*t^5 + 27*t^4 + 3*t^2)*x^6 + (-48*t^12 - 360*t^11 - 1620*t^10 - 3822*t^9 - 2970*t^8 - 1620*t^7 - 1935*t^6 - 270*t^5 - 405*t^4 - 24*t^3 - 45*t^2 - 3)*x^4 + (96*t^12 + 1800*t^11 + 8100*t^10 + 14934*t^9 + 14850*t^8 + 8100*t^7 + 7515*t^6 + 1350*t^5 + 2025*t^4 + 48*t^3 + 225*t^2 + 6)*x^2 - 48*t^12 + 72*t^11 + 324*t^10 - 906*t^9 + 594*t^8 + 324*t^7 - 477*t^6 + 54*t^5 + 81*t^4 - 24*t^3 + 9*t^2 - 3
+    the irreducible factors of f_t over Q(t) have degrees [ 2, 2, 2 ]
+(0) E : y^2 + 3 lam xy + (lam^3 - 1)y = x^3 with lam = (2t^3 + 1)/(3t^2): P = (0,0) of order 3 and T = (-mm^2, *) of order 2,
+    mm = (t^3 - 1)/(3t^2), so P6 = P + T has order 6; the 3-division polynomial vanishes at x0 = -(lam^2 + lam + 1),
+    and -3 (disc of the y-quadratic at x0) = ((4/3*t^6 + 2*t^5 + 3*t^4 + 4/3*t^3 + t^2 + 1/3)/t^4)^2: C = <(x0, *)> is mu_3, E[3] = <P> + mu_3
+    E1 = E/C, phi : E -> E1 of degree 3, and phi(P6) has order 6
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E and Eb to E1, so J is isogenous over Q to E x E1 (phi1^* + phi2^* has kernel of order 4)
+    for T in E[2] - 0 the two Weierstrass points x = +-sqrt(R) of C_t over the image (R, 0) of T in Ea lie over the
+    image (1/R, 0) of phi(T) in Eb (checked in Q(t)[x]/(2-division polynomial of E)): C_t is the (2,2)-gluing
+    of E and E1 along phi|E[2], and J = (E x E1)/graph(phi|E[2]) (HLP 2000, Prop. 4)
+(2) over Q(t): Da = phi1^*((P+T)') and Db = phi2^*(phi(P+T)') have order 6, with 3 Da = 3 Db = [x^2 - r, 0];
+    c2 = [q, 0], q an odd quadratic factor of f_t, is the gain of the gluing (order 2); the 36 classes
+    i Da + j (2 Db) + k c2 are distinct, so G = <Da, 2 Db, c2> = Z/6 x Z/3 x Z/2 = [6,6] is marked over Q(t)
+(3) p = 5, t = 3 mod 5: reduction 2*$.1^6 + 1 (squarefree, degree 6); J(F_5) = [ 6, 6 ], chi = X^4 + 10*X^2 + 25
+    #J_t(Q)_tors divides #J(F_5) = 36 = #G, so every 5-integral t = 3 mod 5 has J_t(Q)_tors exactly [6,6]
+(4) the G2-invariants of the members [ 3, -2, 8, 13, -7, 4/3 ] are pairwise distinct
+    the member t = -2 is the census curve 6.6.b (isomorphic over Q)
+(5) TorsionSubgroup at t = 3: [ 6, 6 ]
+(5) TorsionSubgroup at t = -2: [ 6, 6 ]
+(5) TorsionSubgroup at t = 8: [ 6, 6 ]
+time 0.270 s
+FAMILY_6_6_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x E1) and J(Q)_tors exactly [6,6]

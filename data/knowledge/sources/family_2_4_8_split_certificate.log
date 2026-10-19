@@ -1,0 +1,18 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (-21743271936*t^28 - 152202903552*t^27 - 497377345536*t^26 - 1006985281536*t^25 - 1407743688704*t^24 - 1424064774144*t^23 - 1048389877760*t^22 - 531381092352*t^21 - 136342732800*t^20 + 44849299456*t^19 + 73012264960*t^18 + 44738224128*t^17 + 17073660160*t^16 + 3764438016*t^15 - 46024960*t^14 - 431994112*t^13 - 207600800*t^12 - 62016064*t^11 - 13420240*t^10 - 2181072*t^9 - 265919*t^8 - 23712*t^7 - 1464*t^6 - 56*t^5 - t^4)*x^6 + (6879707136*t^24 + 41278242816*t^23 + 113515167744*t^22 + 189191946240*t^21 + 213339930624*t^20 + 172767707136*t^19 + 105001795584*t^18 + 50333736960*t^17 + 19963194880*t^16 + 5740656640*t^15 - 690966016*t^14 - 2791641600*t^13 - 2384416192*t^12 - 1235939200*t^11 - 412298144*t^10 - 72060480*t^9 + 7284430*t^8 + 9541920*t^7 + 3470936*t^6 + 793768*t^5 + 126289*t^4 + 14080*t^3 + 1056*t^2 + 48*t + 1)*x^4 + (-723914496*t^16 - 2895657984*t^15 - 5067401472*t^14 - 5067401472*t^13 - 3055317408*t^12 - 931424832*t^11 + 116545392*t^10 + 269216784*t^9 + 143529985*t^8 + 51628448*t^7 + 17550328*t^6 + 6045464*t^5 + 1711777*t^4 + 336896*t^3 + 42112*t^2 + 3008*t + 94)*x^2 + 18370800*t^8 + 36741600*t^7 + 27556200*t^6 + 9185400*t^5 - 2480625*t^4 - 3628800*t^3 - 1360800*t^2 - 226800*t - 14175
+(0) the HLP (Prop. 4) gluing of E1 = 210e2 and E2 = E_{2,8}(t) along psi (4 P8 -> 4 Q8) has coefficients in Q(t),
+    f_t = h(lambda x)/mu^2 with lambda, mu in Q(t)
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E2 and Eb to E1 = 210e2: J is isogenous over Q to E1 x E2
+(2) over Q(t): D8 = phi2^*(P8), D8' = phi1^*(Q8) have order 8, 4 D8 = 4 D8', D8' - D8 has order 4 with 2(D8' - D8) != 4 D8, DT = phi2^*(T) of order 2 outside <D8, D8'>: [2,4,8] is marked
+(3) p = 23, t = 3 mod 23: reduction 12*$.1^6 + 19*$.1^4 + 18*$.1^2 + 22 (squarefree, degree 6); J(F_23) = [ 2, 2, 4, 32 ], chi = X^4 - 18*X^2 + 529
+(3) p = 41, t = 3 mod 41: reduction 18*$.1^6 + 25*$.1^4 + 8*$.1^2 + 22 (squarefree, degree 6); J(F_41) = [ 8, 8, 24 ], chi = X^4 - 4*X^3 + 22*X^2 - 164*X + 1681
+    the largest group embedding in all J(F_p) has invariants [ 2, 4, 8 ]
+    hence every t = 3 mod 943, integral at [ 23, 41 ], has J_t(Q)_tors exactly [2,4,8]
+(4) the G2-invariants of the members [ 3, 946, -940, 1889 ] are pairwise distinct
+(5) TorsionSubgroup at t = 3 (in the class): [ 2, 4, 8 ]
+(5) TorsionSubgroup at t = 946 (in the class): [ 2, 4, 8 ]
+(5) TorsionSubgroup at t = 2 (outside the class): [ 2, 4, 8 ]
+(5) TorsionSubgroup at t = 5 (outside the class): [ 2, 4, 8 ]
+time 0.530 s
+FAMILY_2_4_8_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [2,4,8]

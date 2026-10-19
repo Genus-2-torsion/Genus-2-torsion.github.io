@@ -1,0 +1,19 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (-10368*t^13 + 404352*t^12 - 6531840*t^11 + 58958080*t^10 - 353292672*t^9 + 1620756096*t^8 - 5595259392*t^7 + 8999155200*t^6 + 27131518080*t^5 - 192335486848*t^4 + 470196878592*t^3 - 580362151680*t^2 + 358681046400*t - 88035984000)*x^6 + (6561*t^12 - 236196*t^11 + 3424842*t^10 - 22566276*t^9 + 21810951*t^8 + 635091192*t^7 - 5459931668*t^6 + 35114636952*t^5 - 159717812289*t^4 + 350315165484*t^3 + 10188866922*t^2 - 1350417694356*t + 1633141477881)*x^4 + (-2827791*t^8 + 67866984*t^7 - 576869364*t^6 + 2364919416*t^5 - 7054491690*t^4 + 16618029336*t^3 + 145223799916*t^2 - 997272028536*t + 1517004081729)*x^2 + 293932800*t^4 - 3527193600*t^3 + 8817984000*t^2 - 89515238400*t + 246500755200
+(0) the HLP (Prop. 4) gluing of E1 = 210e2 and E2 = E_{2,6}(t) along psi (4 P8 -> 3 P6) has coefficients in Q(t),
+    f_t = h(lambda x)/mu^2 with lambda, mu in Q(t)
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E2 and Eb to E1 = 210e2: J is isogenous over Q to E1 x E2
+(2) over Q(t): D8 = phi2^*(P8) has order 8, D6 = phi1^*(P6) has order 6, 4 D8 = 3 D6, D24 = D8 + D6 has order 24, DT = phi2^*(T) has order 2 and is not 12 D24: [2,24] is marked
+(3) p = 11, t = 2 mod 11: reduction 3*$.1^6 + 9*$.1^4 + 8*$.1^2 + 2 (squarefree, degree 6); J(F_11) = [ 4, 48 ], chi = X^4 + 4*X^3 + 22*X^2 + 44*X + 121
+(3) p = 13, t = 11 mod 13: reduction 9*$.1^6 + 8*$.1^4 + 6*$.1^2 + 7 (squarefree, degree 6); J(F_13) = [ 2, 2, 48 ], chi = X^4 + 22*X^2 + 169
+(3) p = 41, t = 24 mod 41: reduction 12*$.1^6 + 16*$.1^4 + 28*$.1^2 + 14 (squarefree, degree 6); J(F_41) = [ 2, 2, 24, 24 ], chi = X^4 + 12*X^3 + 118*X^2 + 492*X + 1681
+    the largest group embedding in all J(F_p) has invariants [ 2, 24 ]
+    hence every t = 24 mod 5863, integral at [ 11, 13, 41 ], has J_t(Q)_tors exactly [2,24]
+(4) the G2-invariants of the members [ 24, 5887, -5839, 11750 ] are pairwise distinct
+(5) TorsionSubgroup at t = 24 (in the class): [ 2, 24 ]
+(5) TorsionSubgroup at t = 5887 (in the class): [ 2, 24 ]
+(5) TorsionSubgroup at t = 2 (outside the class): [ 2, 24 ]
+(5) TorsionSubgroup at t = 7 (outside the class): [ 2, 24 ]
+time 0.460 s
+FAMILY_2_24_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [2,24]

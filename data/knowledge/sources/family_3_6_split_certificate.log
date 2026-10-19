@@ -1,0 +1,28 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (-6144*t^23 - 9216*t^22 - 35328*t^21 + 18432*t^20 - 32256*t^19 + 141696*t^18 - 62208*t^17 + 175104*t^16 - 225216*t^15 + 140736*t^14 - 240192*t^13 + 178800*t^12 - 141120*t^11 + 130752*t^10 - 72144*t^9 + 53568*t^8 - 24768*t^7 + 12240*t^6 - 3264*t^5 + 576*t^4 - 48*t^3)*x^6 + (-12288*t^24 - 30720*t^23 + 39936*t^22 + 425472*t^21 + 1717248*t^20 + 3337728*t^19 + 6301824*t^18 + 6992640*t^17 + 7895808*t^16 + 6741312*t^15 + 2701248*t^14 + 5370816*t^13 - 1990128*t^12 + 4271808*t^11 - 2171712*t^10 + 1966416*t^9 - 821088*t^8 + 421920*t^7 - 149880*t^6 + 49776*t^5 - 14208*t^4 + 3300*t^3 - 564*t^2 + 60*t - 3)*x^4 + (24576*t^24 + 374784*t^23 + 1864704*t^22 + 6259200*t^21 + 15753216*t^20 + 29253120*t^19 + 49529472*t^18 + 56095488*t^17 + 74174976*t^16 + 47838912*t^15 + 59512128*t^14 + 13627200*t^13 + 29967504*t^12 - 6181440*t^11 + 12720768*t^10 - 6334032*t^9 + 4365504*t^8 - 2026656*t^7 + 800664*t^6 - 248880*t^5 + 57504*t^4 - 9012*t^3 + 804*t^2 - 12*t - 3)*x^2 - 12288*t^24 + 55296*t^23 - 125952*t^22 + 330240*t^21 - 875520*t^20 + 1651200*t^19 - 2397312*t^18 + 3034368*t^17 - 3135744*t^16 + 2470848*t^15 - 1688256*t^14 + 964416*t^13 - 28176*t^12 - 597312*t^11 + 563712*t^10 - 291888*t^9 + 57888*t^8 + 77184*t^7 - 68736*t^6 + 12960*t^5 + 5232*t^4 - 2688*t^3 + 576*t^2 - 48*t
+    the irreducible factors of f_t over Q(t) have degrees [ 2, 4 ]
+(0) E : y^2 + 3 lam xy + (lam^3 - 1)y = x^3 with lam = (2t^3 + 1)/(3t^2): P = (0,0) of order 3 and T = (-mm^2, *) of order 2,
+    mm = (t^3 - 1)/(3t^2), so P6 = P + T has order 6; the 3-division polynomial vanishes at x0 = -(lam^2 + lam + 1),
+    and -3 (disc of the y-quadratic at x0) = ((4/3*t^6 + 2*t^5 + 3*t^4 + 4/3*t^3 + t^2 + 1/3)/t^4)^2: C = <(x0, *)> is mu_3, E[3] = <P> + mu_3
+    E1 = E/C, phi : E -> E1 of degree 3, and phi(P6) has order 6
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E and Eb to E1, so J is isogenous over Q to E x E1 (phi1^* + phi2^* has kernel of order 4)
+    for T in E[2] - 0 the two Weierstrass points x = +-sqrt(R) of C_t over the image (R, 0) of T in Ea lie over the
+    image (1/R, 0) of phi(s(T)) in Eb (checked in Q(t)[x]/(2-division polynomial of E)): C_t is the (2,2)-gluing
+    of E and E1 along phi o s on E[2], and J = (E x E1)/graph(phi o s on E[2]) (HLP 2000, Prop. 4)
+(2) over Q(t): Da = phi1^*((P+T)') has order 6, Db = phi2^*(phi(P)') has order 3, and the 18 classes
+    i Da + j Db are distinct, so G = <Da, Db> = [3,6] is marked over Q(t)
+(3) p = 5, t = 4 mod 5: reduction $.1^6 + 3 (squarefree, degree 6); J(F_5) = [ 6, 6 ], chi = X^4 + 10*X^2 + 25
+    so the odd part of J_t(Q)_tors is the marked [3,3] and its 2-part is J_t(Q)[2]
+    p = 5, t = 4 mod 5: r, d1, d2 are p-adic units with Legendre symbols giving Frobenius = [ 1, 1, 1 ]
+    p = 11, t = 3 mod 11: r, d1, d2 are p-adic units with Legendre symbols giving Frobenius = [ 0, 1, 0 ]
+    p = 17, t = 13 mod 17: r, d1, d2 are p-adic units with Legendre symbols giving Frobenius = [ 0, 0, 1 ]
+    the three Frobenius elements fix only the trivial class and [x^2 - r, 0]: J_t(Q)[2] = Z/2
+    hence every t = 234 mod 935, integral at 5, 11, 17, has J_t(Q)_tors exactly [3,6]
+(4) the G2-invariants of the members [ 1/4, 234, -701, 1169, 1403/2 ] are pairwise distinct
+    the member t = 1/4 is the census curve 3.6.b (isomorphic over Q)
+(5) TorsionSubgroup at t = 1/4: [ 3, 6 ]
+(5) TorsionSubgroup at t = 234: [ 3, 6 ]
+(5) TorsionSubgroup at t = -701: [ 3, 6 ]
+time 0.350 s
+FAMILY_3_6_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x E1) and J(Q)_tors exactly [3,6]

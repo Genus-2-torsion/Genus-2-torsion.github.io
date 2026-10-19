@@ -1,0 +1,20 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 15a4 = [ 1, 1, 1, 35, -28 ], conductor 15, torsion [ 8 ]; generators used for the pullbacks: [ (2 : 6 : 1) ] (2-torsion classes come from f)
+(1) j(E0(a(w), c(w))) = j(E) identically in w
+(1) cover identities h1^4 f1(nn1/h1) = h1 h2 mm1^2 and h2^4 f2(nn2/h2) = h1 h2 mm2^2 hold over Q(w)
+(1) E0^tw has the c-invariants of E; F_w = F0^tw
+(1) C_w : y^2 = f_w(x), coefficients of degrees [ 15, 15, 13, 13, 12, 11, 10 ] in w; y' = kk y maps C_w to y'^2 = tw h1 h2
+(1) phi1 : (x,y) -> (tw nn1/h1, tw kk y mm1/h1^2) onto E0^tw ~ E, phi2 : (x,y) -> (tw nn2/h2, tw kk y mm2/h2^2) onto F
+(1) factor degrees of f_w over Q(w): [ 1, 2, 3 ]; 1 quadratic divisors, so #J(Q(w))[2] = 2
+(3) p = 11, w = 5 mod 11: reduction $.1^6 + 10*$.1^4 + 4*$.1^3 + 10*$.1 + 3 (squarefree, degree 6); #J(F_p) = 112 = #E(F_p) #F(F_p) = 16 * 7; J(F_p) = [ 112 ]
+(3) p = 13, w = 5 mod 13: reduction 10*$.1^6 + 8*$.1^5 + 11*$.1^4 + 5*$.1^2 + 6*$.1 + 4 (squarefree, degree 6); #J(F_p) = 160 = #E(F_p) #F(F_p) = 16 * 10; J(F_p) = [ 2, 2, 40 ]
+(3) the largest group embedding in all J(F_p) has invariants [ 8 ]
+(3) every p-integral w = 5 mod 143 (p in [ 11, 13 ]) has J(Q)_tors = G = [8]
+(2) w = 5: the pullbacks phi1^*(P) of the generators have orders [ 8 ]; with the 1 classes [u, 0] they generate a subgroup of J(Q) of order 8 isomorphic to [ 8 ] (Mumford arithmetic on the member); F_w has torsion []
+(2) w = -138: the pullbacks phi1^*(P) of the generators have orders [ 8 ]; with the 1 classes [u, 0] they generate a subgroup of J(Q) of order 8 isomorphic to [ 8 ] (Mumford arithmetic on the member); F_w has torsion []
+(4) the G2-invariants of the members [ 5, -138 ] are pairwise distinct: w -> M_2 is nonconstant, so the residue class gives infinitely many isomorphism classes
+(5) TorsionSubgroup at w = 5: [ 8 ]
+(5) TorsionSubgroup at w = -138: [ 8 ]
+(5) these members are pairwise non-isomorphic (distinct G2-invariants)
+time 0.750 s
+FAMILY_8_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_w) and J(Q)_tors exactly [8]

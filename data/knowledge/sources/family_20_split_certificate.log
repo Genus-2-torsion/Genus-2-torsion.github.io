@@ -1,0 +1,18 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_s : y^2 = f_s(x) = (1293732*s^7 - 217800*s^6 - 39204*s^5 + 13200*s^4 - 1188*s^3 - 200*s^2 + 36*s)*x^6 + (-2910897*s^6 - 490050*s^5 + 958881*s^4 - 207900*s^3 + 29057*s^2 - 450*s - 81)*x^4 + (2205225*s^4 - 2567268*s^3 + 503350*s^2 - 77796*s + 2025)*x^2 + 1368576*s^2 - 230400*s + 41472
+(0) the HLP (Prop. 4) gluing of E1 = 66c1 and E2 = E_4((33s^2 - 1)/16) along psi has coefficients in Q(s),
+    and f_s = h(lambda x)/mu^2 with lambda, mu in Q(s)
+(1) phi1 = (x^2, y) : C_s -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_s -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(s)-isomorphic to E2 = E_4(u) and Eb to E1 = 66c1: J is isogenous over Q to E1 x E2
+(2) over Q(s): D10 = phi2^*(P10) has order 10, D4 = phi1^*(P4) has order 4, 5 D10 = 2 D4, and D20 = D10 + D4 has order 20
+(3) p = 5, s = 2 mod 5: reduction $.1^6 + 4*$.1^2 + 1 (squarefree, degree 6); J(F_5) = [ 80 ], chi = X^4 + 6*X^3 + 18*X^2 + 30*X + 25
+(3) p = 19, s = 2 mod 19: reduction 11*$.1^6 + 8*$.1^4 + 11*$.1^2 + 7 (squarefree, degree 6); J(F_19) = [ 20, 20 ], chi = X^4 + 38*X^2 + 361
+    the largest group embedding in all J(F_p) has invariants [ 20 ]
+    hence every 5- and 19-integral s = 2 mod 95 has J_s(Q)_tors exactly [20]
+(4) the G2-invariants of the members [ 2, 97, -93, 192, 287 ] are pairwise distinct
+(5) TorsionSubgroup at s = 2: [ 20 ]
+(5) TorsionSubgroup at s = 97: [ 20 ]
+(5) TorsionSubgroup at s = -93: [ 20 ]
+(5) outside the class: TorsionSubgroup at s = 1: [ 40 ]
+time 0.340 s
+FAMILY_20_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [20]

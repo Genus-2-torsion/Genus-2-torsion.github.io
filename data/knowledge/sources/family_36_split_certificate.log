@@ -1,0 +1,27 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 90c3 = [ 1, -1, 1, -122, 1721 ], conductor 90, torsion [ 12 ]; generators used for the pullbacks: [ (-9 : 49 : 1) ] (2-torsion classes come from f)
+(1) j(E0(a(w), c(w))) = j(E) identically in w
+(1) cover identities h1^4 f1(nn1/h1) = h1 h2 mm1^2 and h2^4 f2(nn2/h2) = h1 h2 mm2^2 hold over Q(w)
+(1) E0^tw has the c-invariants of E; F_w = F0^tw
+(1) C_w : y^2 = f_w(x), coefficients of degrees [ 15, 15, 13, 13, 12, 11, 10 ] in w; y' = kk y maps C_w to y'^2 = tw h1 h2
+(1) phi1 : (x,y) -> (tw nn1/h1, tw kk y mm1/h1^2) onto E0^tw ~ E, phi2 : (x,y) -> (tw nn2/h2, tw kk y mm2/h2^2) onto F
+(1) factor degrees of f_w over Q(w): [ 1, 2, 3 ]; 1 quadratic divisors, so #J(Q(w))[2] = 2
+(G1) F_w has the rational 3-torsion point T; in the model y^2 + A1 xy + A3 y = x^3 with T = (0,0), A3(w) = 25 g(w) * (cube in Q(w)), g = 890428w^3 + 1234359w^2 + 336798w + 98415 (irreducible)
+(G2) Z : x(3Q) = x(T) is irreducible of degree 9 over Q(w) and has genus 1 (the modular curve of Gamma(3) cap Gamma1(9) over the w-line)
+(G3) C0 : z^3 = 25 g(w) has genus 1 and contains R0 = (0, 135) and S = (-81/119, 2700/17); Jac(C0) = [ 0, 0, 1, 0, -1 ], S - R0 = (73/36 : 487/216 : 1) of infinite order
+(G3) base point w = 0: F_w has the rational point (-25 : 525/4 : 1) of order 9 with 3Q = T
+(G3) base point w = -81/119: F_w has the rational point (-6647/20 : -14739/4 : 1) of order 9 with 3Q = T
+(G4) C0 has good reduction at 11 and 37, and S - R0 has order 4 in C0(F_p) for both: every R_k = R0 + 4k(S - R0) reduces to R0, so w(R_k) is p-integral and w(R_k) = 0 mod 11 * 37
+(G4) members R_k for k = [ 0, 1 ]: w = [ 0, -12017497011846120733642914833370/51919337556030167601726711537509 ]
+(3) p = 11, w = 0 mod 11: reduction 10*$.1^6 + 4*$.1^5 + 4*$.1^4 + 9*$.1^3 + 4*$.1^2 + 6*$.1 + 4 (squarefree, degree 6); #J(F_p) = 108 = #E(F_p) #F(F_p) = 12 * 9; J(F_p) = [ 108 ]
+(3) p = 37, w = 0 mod 37: reduction 8*$.1^6 + 23*$.1^5 + 25*$.1^4 + 9*$.1^3 + 14*$.1^2 + 6*$.1 + 4 (squarefree, degree 6); #J(F_p) = 1296 = #E(F_p) #F(F_p) = 36 * 36; J(F_p) = [ 36, 36 ]
+(3) the largest group embedding in all J(F_p) has invariants [ 36 ]
+(3) every p-integral w = 0 mod 407 (p in [11, 37]) has J(Q)_tors inside [36]
+(2) member k = 0, w = 0: F_w has a rational point Q of order 9 with 3Q = T (x(Q) a rational root of Z at w)
+(2) member k = 1, w = -12017497011846120733642914833370/51919337556030167601726711537509: F_w has a rational point Q of order 9 with 3Q = T (x(Q) a rational root of Z at w)
+(4) the G2-invariants of the members k = [ 0, 1 ] are distinct: R -> M_2 is nonconstant on C0, so the R_k give infinitely many isomorphism classes
+(5) w = 0: phi1^*(P12) (order 12) and phi2^*(Q) (order 9) generate a subgroup of J(Q) isomorphic to [36] (Mumford arithmetic); TorsionSubgroup = [ 36 ]
+(5) w = -81/119: phi1^*(P12) (order 12) and phi2^*(Q) (order 9) generate a subgroup of J(Q) isomorphic to [36] (Mumford arithmetic); TorsionSubgroup = [ 36 ]
+(5) control: the base point w = -81/119 (not in the class) is Q-isomorphic to the census curve 36.b
+time 1.720 s
+FAMILY_36_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x F_w) and J(Q)_tors exactly [36]

@@ -144,7 +144,7 @@
       constant (so <span class="m">∞₊ − ∞₋</span> has order 3) and four rational roots; and the same mechanism on the curves of BNSS with one square condition
       relaxed, where the irrational pair of roots still has a rational half. A second [2,2,12] family over a rank-1 elliptic curve passes through the census
       curve 2.2.12.a (<code>family_2_2_12_control_certificate.log</code>).
-      On the split side ten groups are certified exact. For <span class="m">[8,8]</span> (<code>family_88_split_certificate.log</code>) the Jacobians are split by explicit maps
+      On the split side 68 groups are certified exact. For <span class="m">[8,8]</span> (<code>family_88_split_certificate.log</code>) the Jacobians are split by explicit maps
       onto an elliptic curve, the group is marked over the function field, and since <span class="m">#J(𝔽<sub>p</sub>)</span> is always divisible by 256 in that family,
       exactness on a residue class comes from the group structures of <span class="m">J(𝔽<sub>p</sub>)</span> at two primes rather than from their orders.
       For <span class="m">[2,2,2,16]</span> (<code>family_22216_split_certificate.log</code>) the family is a (2,2)-gluing of an elliptic curve with torsion [2,4] and a fixed one with
@@ -162,13 +162,33 @@
       (3,3)-gluings of a fixed elliptic curve with torsion [9] (54b3 resp. 714i1) with partners carrying a rational 2-torsion point resp. full 2-torsion,
       parametrised by a rational curve resp. a genus-1 curve of rank 1; the partners inherit a rational 3-torsion point, but no extra 3-torsion arises
       (it would need ℤ/18 on an elliptic curve over ℚ), and since <span class="m">#J(𝔽<sub>p</sub>)</span> is always divisible by 54 the group structures of
-      <span class="m">J(𝔽<sub>p</sub>)</span> at two resp. three primes cap the torsion.</dd>
+      <span class="m">J(𝔽<sub>p</sub>)</span> at two resp. three primes cap the torsion.
+      Since 19 October 2026 every other split group recorded as "family", except [48], has its own exact family, with one certificate per group
+      (<code>family_&lt;group&gt;_split_certificate.log</code>, e.g. <code>family_2_2_4_split_certificate.log</code> for [2,2,4]).
+      The groups [1]–[10], [12], [2,2], [2,4], [2,6], [2,8], [2,12], [2,2,2], [2,2,4], [2,2,6], [2,2,8] and [2,2,12] come from (3,3)-gluings of a fixed
+      elliptic curve whose torsion is the elliptic part of the group, with partners carrying no level structure, a rational 2-torsion point, or full
+      2-torsion. [2,2,2,2], [2,2,2,4] and [2,2,2,8] come from bielliptic curves with six rational Weierstrass points and one quotient fixed.
+      [3,3], [5,5], [6,6], [3,9] and [4,4] come from (2,2)-gluings of a curve with an isogenous curve. For [3,6] the same gluing is twisted by the
+      automorphism of the 2-torsion that removes the extra 2-torsion, and the 2-rank is fixed by Frobenius elements acting on the Weierstrass points.
+      [16], [2,16], [2,2,16], [4,8], [2,4,4] and [2,2,4,4] come from (2,2)-gluings with an added class of order 4 or 16, computed over an
+      extension of the function field and descended.
+      The other groups of Howe–Leprévost–Poonen's Table 1 ([20], [21], [30], [35], [40], [45], [60], [3,12], [2,24], [5,10], [6,12], [2,4,8],
+      [2,6,6], [2,2,24], [2,2,4,8]), with [15] and [24], come from explicit versions of their families, restricted to a rational curve or to an
+      elliptic curve of positive rank.
+      Three groups that were graded open, [3,24], [2,30] and [2,48], come from the loci of those families on which HLP's Proposition 12 adds
+      torsion; these loci are genus-1 curves of positive rank.
+      Two more open groups, [27] and [36], come from the (3,3)-families of [9] and [12]: on a genus-1 locus a class of order 27 appears (a gain
+      of the gluing, not a pullback), resp. the partner acquires a rational point of order 9. These loci are étale triple covers of genus-1 curves of
+      rank 1, so the members carrying the extra torsion are the points of a coset of a subgroup of infinite order, and the certificates check the
+      class at several members.
+      In each case the group is marked over the function field (or at every member, by injectivity of pullbacks), and the orders or group
+      structures of <span class="m">J(𝔽<sub>p</sub>)</span> at one to three primes cap the torsion on a residue class.</dd>
     <dt><span class="inf-badge family">∞ ⊇</span></dt>
     <dd><b>Family with containment.</b> A positive-dimensional family (infinitely many members in moduli) of curves in the class whose Jacobians have torsion
       <em>containing</em> the group is proven in the cited source: Theorem 1 / Table 1 of Howe–Leprévost–Poonen (2000) and Howe's order-48
       family (2015) on the split side (their Jacobians are isogenous to products of elliptic curves by construction). A group also inherits this grade from any
       recorded group containing it as a subgroup (a lighter badge). On the simple side no group has this grade since 18 October 2026: every family recorded
-      there has been certified exact, and the groups that only inherited the grade have their own exact families. Whether infinitely many members have torsion exactly the group (and, on the simple side, are
+      there has been certified exact, and the groups that only inherited the grade have their own exact families. On the split side only [48] (Howe's family) keeps it since 19 October 2026. Whether infinitely many members have torsion exactly the group (and, on the simple side, are
       geometrically simple) is open.</dd>
     <dt><span class="inf-badge open">?</span></dt>
     <dd><b>Open.</b> No positive-dimensional construction is recorded — this is not a claim that none exists; the group page gives the reason when the record

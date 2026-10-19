@@ -1,0 +1,21 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E1 = E_{2,4}(u/4), P1 = (0,0) of order 4, monic roots (s^2-1/16, -s/2-1/8, s/2-1/8), special first
+E2 = 210e2 = [1,0,0,-1070,7812], torsion [2,8], P2 = (244,3658) of order 8, monic roots (-36, 31/4, 28), x(4P2) = 28
+alpha: roots matched in this order (special root of E1 -> -36, non-special on E2)
+C_u : y^2 = f_u(x) = -(81u^2 + 862u + 81)(81x^2 - u)(1024x^2 + (u - 1)^2)(700x^2 + (u + 1)^2)
+the HLP (Prop. 4) curve is (1148175/4194304*u^7 + 6109425/2097152*u^6 - 1148175/4194304*u^5 - 6109425/1048576*u^4 - 1148175/4194304*u^3 + 6109425/2097152*u^2 + 1148175/4194304*u)^2 f_u: C_u is Q(u)-isomorphic to the gluing
+(1) phi1 = (x^2, y): C_u -> Ea : Y^2 = F(X) ~ E2 and phi2 = (1/x^2, y/x^3): C_u -> Eb : Y^2 = X^3 F(1/X) ~ E1(u/4) over Q(u):
+    J is isogenous over Q to E1 x E2
+(2) over Q(u): A = phi2^*(P1) has order 4, B = phi1^*(P2) has order 8, and the 32 sums iA + jB are distinct:
+    <A, B> = Z/4 x Z/8 is marked over Q(u) (2A != 4B: the gluing sends 2 P1 to a non-special point)
+    pullbacks of matched 2-torsion points cancel: the gluing kernel is graph(alpha)
+(3) p = 11, u = 4 mod 11: reduction 2*$.1^6 + 9*$.1^4 + 3*$.1^2 + 8 (squarefree, degree 6), J(F_11) = [ 2, 4, 16 ] (order 128), chi = X^4 + 6*X^2 + 121
+(3) p = 13, u = 8 mod 13: reduction 9*$.1^6 + 4*$.1^4 + 5*$.1^2 + 10 (squarefree, degree 6), J(F_13) = [ 8, 16 ] (order 128), chi = X^4 - 4*X^3 + 14*X^2 - 52*X + 169
+(3) p = 41, u = 10 mod 41: reduction 27*$.1^6 + 33*$.1^4 + 31*$.1^2 + 25 (squarefree, degree 6), J(F_41) = [ 8, 8, 24 ] (order 1536), chi = X^4 - 4*X^3 + 22*X^2 - 164*X + 1681
+(3) the largest group embedding in all J(F_p) has invariants [ 4, 8 ]
+(3) every u = 3700 mod 5863, p-integral for p in [ 11, 13, 41 ], has J(Q)_tors = <A, B> = [4,8]
+(4) the G2-invariants of the members [ 3700, -2163, 9563, 9563/5864 ] are pairwise distinct
+(5) TorsionSubgroup at u = 3700: [ 4, 8 ]
+(5) TorsionSubgroup at u = -2163: [ 4, 8 ]
+time 0.330 s
+FAMILY_4_8_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [4,8]

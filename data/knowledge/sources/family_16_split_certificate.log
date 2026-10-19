@@ -1,0 +1,19 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E1 = 15a4 = [1,1,1,35,-28], torsion Z/8, P8 = (2,6); monic model Y^2 = (X - 3/4)(X^2 + 2X + 37), 2-torsion field Q(i)
+E2(s) : y^2 = x(x^2 + (6 + 24s - 6s^2)x + 45(s^2+1)^2) = x(x - th2)(x - th2'), th2 = -(3 - 6i)(1 + s i)^2
+C_s : y^2 = f_s(x) = (s^2 - 11s - 1)((s^2 + s - 1)x^2 + 1)(144(s^2+1)^2 x^4 + 24(11s^2 + 4s - 11)x^2 + 125)
+the HLP (Prop. 4) curve, evaluated over Q(i)(s), has coefficients in Q(s) and is (56953125/2*s^8 - 284765625*s^7 - 626484375/2*s^6 - 284765625*s^5 - 683437500*s^4 + 284765625*s^3 - 626484375/2*s^2 + 284765625*s + 56953125/2)^2 f_s
+(1) phi1 = (x^2, y): C_s -> Ea : Y^2 = F(X) ~ E2(s) and phi2 = (1/x^2, y/x^3): C_s -> Eb ~ E1 over Q(s): J is isogenous over Q to E1 x E2(s)
+(2) over F(s), F = splitting field of z^4 - 6z^2 + 45 (degree 8): D16 = phi2^*(R1) + phi1^*(R2), 2R1 = P8, 2R2 = (0,0), has coefficients in Q(s):
+     D16 = (x^2 + (1/6*s^2 - 11/6*s - 1/6)/(s^3 + s)*x + (11/12*s + 1/6)/(s^3 + s), (1/3*s^6 - 7*s^5 + 32*s^4 + 163/3*s^3 - 32*s^2 - 7*s - 1/3)/(s^4 + s^2)*x + (-1/6*s^5 + 4*s^4 - 163/6*s^3 + 36*s^2 + 43/6*s + 1/3)/(s^4 + s^2), 2)
+    over Q(s): 16 D16 = 0 and 8 D16 != 0, so Z/16 is marked; 2 D16 = phi2^*(P8) + phi1^*((0,0))
+(3) p = 7, s = 1 mod 7: reduction 6*$.1^6 + 5*$.1^2 + 4 (squarefree, degree 6), #J(F_7) = 80, chi = X^4 + 2*X^3 + 14*X^2 + 14*X + 49
+(3) p = 23, s = 1 mod 23: reduction 12*$.1^6 + 14*$.1^4 + 7*$.1^2 + 5 (squarefree, degree 6), #J(F_23) = 432, chi = X^4 - 6*X^3 + 46*X^2 - 138*X + 529
+(3) gcd of #J(F_p) = 16 = #<D16>: every s = 1 mod 161, 7- and 23-integral, has J(Q)_tors exactly Z/16
+(4) the G2-invariants of the members [ 1, 162, -160, 162/323 ] are pairwise distinct
+(5) TorsionSubgroup at s = 1: [ 16 ]
+(5) TorsionSubgroup at s = 162: [ 16 ]
+(5) the member s = 0 (E2(0) = 180a2) is Q-isomorphic to the census curve 16.b (outside the class above)
+(5) outside the class, s = -2 has TorsionSubgroup [48] (E2(-2) has a rational point of order 3)
+time 0.300 s
+FAMILY_16_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [16]

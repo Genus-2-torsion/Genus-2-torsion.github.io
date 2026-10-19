@@ -1,0 +1,19 @@
+Loading "pipeline/magma/family_cert_lib.m"
+E = 45a2 = [ 1, -1, 0, -45, -104 ], torsion [ 2, 2 ]; Y^2 = g(u) = (u - e1)(u - e2)(u - e3) with (e1, e2, e3) = [ -4, -13/4, 8 ]; Pgen = (-4 : 2 : 1) of order 2
+(1) lambda = (e3 - e1)/(e2 - e1) = 16; (r1 : r2 : r3) = (m^2 - 16 : m^2 - 2*m + 16 : -m^2 + 32*m - 16) is on the conic r3^2 - r1^2 = lambda (r2^2 - r1^2)
+(1) C_m : y^2 = f(x) = F(x^2), F(u) = c (u - r1^2)(u - r2^2)(u - r3^2), c = (e2 - e1)(r2^2 - r1^2) = -3*m^3 + 51*m^2 - 48*m
+(1) phi1 : (x, y) -> (mu x^2 + k, mu y/s) maps C_m onto E (Y^2 = g(u)): s^2 g(mu x^2 + k) = mu^2 f(x) over Q(m), with s = r2^2 - r1^2, mu = (e2 - e1)/s = -3/16/(m^3 - 17*m^2 + 16*m), k = e1 - mu r1^2 = (3/16*m^4 - 4*m^3 + 62*m^2 - 64*m + 48)/(m^3 - 17*m^2 + 16*m)
+(1) phi2 : (x, y) -> (1/x^2, y/x^3) maps C_m onto E2_m : Y^2 = F2(w) = w^3 F(1/w); so J(C_m) is isogenous over Q to E x E2_m
+    the six Weierstrass points (+-r_i, 0) of C_m are rational over Q(m)
+(2) over Q(m): the 15 pair classes [(x - w)(x - w'), 0] and 0 are 16 classes killed by 2 (J[2] is rational); A = phi1^*(Pgen) = (x^2 - m^4 + 32*m^2 - 256, 0, 2) has order 2; together they generate 16 classes
+    so J(Q(m)) contains G = [2,2,2,2]
+(3) p = 11, m = 9 mod 11: reduction 5*Pp.1^6 + 5*Pp.1^4 + 2*Pp.1^2 + 10 (squarefree, degree 6); J(F_p) = [ 2, 2, 2, 16 ] (order 128), chi = (X^2 - 4*X + 11)(X^2 + 4*X + 11): #E(F_p) = 8, #E2(F_p) = 16
+(3) p = 17, m = 15 mod 17: reduction Pp.1^6 + 10*Pp.1^4 + 7*Pp.1^2 + 16 (squarefree, degree 6); J(F_p) = [ 2, 2, 10, 10 ] (order 400), chi = (X^2 + 2*X + 17)(X^2 + 2*X + 17): #E(F_p) = 20, #E2(F_p) = 20
+(3) the largest group embedding in all J(F_p) has invariants [ 2, 2, 2, 2 ]
+(3) every p-integral m = -2 mod 187 (p in [ 11, 17 ]) has J(Q)_tors = G = [2,2,2,2]
+(4) the G2-invariants of the members [ -2, 185, -189, 372 ] are not all equal: m -> M_2 is nonconstant, so the class gives infinitely many isomorphism classes
+(5) m = -2: TorsionSubgroup [ 2, 2, 2, 2 ]; E2_m = [ 1, -1, 0, -630, 4900 ] (minimal model), conductor 630, torsion [ 2, 2 ]
+(5) m = 185: TorsionSubgroup [ 2, 2, 2, 2 ]; E2_m = [ 1, -1, 0, -60536254660969650885, -180070579119183436714925353784 ] (minimal model), conductor 54692242595865, torsion [ 2, 2 ]
+(5) the member m = -2 is Q-isomorphic to the census curve 2.2.2.2.c
+time 0.200 s
+FAMILY_2_2_2_2_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x E2_m) and J(Q)_tors exactly [2,2,2,2]

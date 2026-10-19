@@ -1,0 +1,22 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_t : y^2 = f_t(x) = (t^3 + 3*t^2 + 3*t + 2)*x^6 + (-3*t^4 - 15*t^3 - 45*t^2 - 69*t - 30)*x^4 + (6*t^4 + 75*t^3 + 225*t^2 + 273*t + 150)*x^2 - 3*t^4 + 3*t^3 + 9*t^2 - 15*t + 6
+    the irreducible factors of f_t over Q(t) have degrees [ 6 ]
+(0) E : y^2 + 3t xy + (t^3 - 1)y = x^3, P = (0,0) of order 3; the 3-division polynomial vanishes at x0 = -(t^2+t+1)
+    and -3 (disc of the y-quadratic at x0) = (3*t^2 + 3*t + 3)^2: C = <(x0, *)> is mu_3, E[3] = <P> + mu_3
+    E1 = E/C, phi : E -> E1 of degree 3, and phi(P) has order 3
+(1) phi1 = (x^2, y) : C_t -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_t -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(t)-isomorphic to E and Eb to E1, so J is isogenous over Q to E x E1 (phi1^* + phi2^* has kernel of order 4)
+    for T in E[2] - 0 the two Weierstrass points x = +-sqrt(R) of C_t over the image (R, 0) of T in Ea lie over the
+    image (1/R, 0) of phi(T) in Eb (checked in Q(t)[x]/(2-division polynomial of E)): C_t is the (2,2)-gluing
+    of E and E1 along phi|E[2], and J = (E x E1)/graph(phi|E[2]) (HLP 2000, Prop. 4)
+(2) over Q(t): Da = phi1^*(P') and Db = phi2^*(phi(P)') have order 3 and Db is not in <Da>,
+    so G = <Da, Db> = [3,3] is marked over Q(t)
+(3) p = 5, t = 2 mod 5: reduction 3*$.1^6 + 4*$.1^4 + 2*$.1^2 + 3 (squarefree, degree 6); J(F_5) = [ 3, 3 ], chi = X^4 - 6*X^3 + 19*X^2 - 30*X + 25
+    #J_t(Q)_tors divides #J(F_5) = 9 = #G, so every 5-integral t = 2 mod 5 has J_t(Q)_tors exactly [3,3]
+(4) the G2-invariants of the members [ 2, 7, -3, 12, 7/6, -8 ] are pairwise distinct
+    the member t = -8 is the census curve 3.3.b (isomorphic over Q)
+(5) TorsionSubgroup at t = 2: [ 3, 3 ]
+(5) TorsionSubgroup at t = 7: [ 3, 3 ]
+(5) TorsionSubgroup at t = -3: [ 3, 3 ]
+time 0.210 s
+FAMILY_3_3_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E x E1) and J(Q)_tors exactly [3,3]

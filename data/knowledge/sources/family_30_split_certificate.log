@@ -1,0 +1,18 @@
+Loading "pipeline/magma/family_cert_lib.m"
+C_s : y^2 = f_s(x) = (-185971387536*s^13 + 101438938656*s^11 - 3794947200*s^10 - 16906489776*s^9 + 1379980800*s^8 + 890087616*s^7 - 104544000*s^6 - 13642992*s^5 + 2956800*s^4 - 142560*s^3 - 28800*s^2 + 3888*s)*x^6 + (104608905489*s^12 - 57059402994*s^10 - 2134657800*s^9 + 9509900499*s^8 + 776239200*s^7 - 960389100*s^6 - 58806000*s^5 + 91258695*s^4 - 13543200*s^3 + 1346622*s^2 - 16200*s - 2187)*x^4 + (2401490025*s^8 - 873269100*s^6 + 338879376*s^5 + 66156750*s^4 - 61614432*s^3 + 8320900*s^2 - 933552*s + 18225)*x^2 - 45163008*s^4 + 8211456*s^2 - 921600*s + 124416
+(0) the HLP (Prop. 4) gluing of E1 = 66c1 and E2 = E_6((33 s^2 - 1)/(9 - 33 s^2)) along psi has coefficients in Q(s),
+    and f_s = h(lambda x)/mu^2 with lambda, mu in Q(s)
+(1) phi1 = (x^2, y) : C_s -> Ea : Y^2 = F(X), phi2 = (1/x^2, y/x^3) : C_s -> Eb : Y^2 = X^3 F(1/X);
+    Ea is Q(s)-isomorphic to E2 = E_6(u) and Eb to E1 = 66c1: J is isogenous over Q to E1 x E2
+(2) over Q(s): D10 = phi2^*(P10) has order 10, D6 = phi1^*(P6) has order 6, 5 D10 = 3 D6, and D30 = D10 + 2 D6 has order 30
+(3) p = 7, s = 1 mod 7: reduction 2*$.1^6 + 2*$.1^4 + 3 (squarefree, degree 6); J(F_7) = [ 2, 30 ], chi = X^4 + 10*X^2 + 49
+(3) p = 13, s = 1 mod 13: reduction 5*$.1^6 + $.1^4 + 8*$.1^2 + 1 (squarefree, degree 6); J(F_13) = [ 120 ], chi = X^4 - 6*X^3 + 34*X^2 - 78*X + 169
+    the largest group embedding in all J(F_p) has invariants [ 30 ]
+    hence every s = 1 mod 91, integral at [ 7, 13 ], has J_s(Q)_tors exactly [30]
+(4) the G2-invariants of the members [ 1, 92, -90, 183, 274 ] are pairwise distinct
+(5) TorsionSubgroup at s = 1: [ 30 ]
+(5) TorsionSubgroup at s = 92: [ 30 ]
+(5) TorsionSubgroup at s = -90: [ 30 ]
+(5) the member s = -1/3 (outside the class) is Q-isomorphic to the census curve 30.b
+time 0.330 s
+FAMILY_30_SPLIT_CERTIFIED: infinitely many genus-2 curves with Jacobian split over Q (isogenous to E1 x E2) and J(Q)_tors exactly [30]

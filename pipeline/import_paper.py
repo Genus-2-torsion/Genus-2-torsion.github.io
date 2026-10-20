@@ -97,15 +97,25 @@ CURVE_CREDIT = {
     "paper-t1-009": ["BSSVY"],              # [9]       713.b.713.1: the fiber t = 2 of Flynn 1991, Result 3 (r = 2), not printed there
     "paper-t1-020": ["BSSVY"],              # [20]      394.a.3152.1: the fiber t = 1 of Leprévost 1997's C_{1,t} (g = 2), not printed there
     "paper-t1-021": ["BSSVY"],              # [21]      388.a.776.1: no rational Weierstrass point, while Leprévost 1991's order-21 curves have one (Leprévost 1995, p. 290)
-    "paper-t1-053": ["BookerSutherland"],   # [3,9]     8436.a.2: not a fiber of Leprévost 1995's [3,9] family C_t
-    "paper-t1-019": ["Leprevost1991"],      # [19]      1468.b.1: PZP2013 prints no curve of order 19 (Leprévost 1991 not seen)
+    # Leprévost's C. R. notes (not seen; zbMATH Open summaries and the full versions, second review of 2026-10-20,
+    # pipeline/magma/leprevost_notes_check.m):
+    # the 1991 note gives one-parameter families, the 1993 note the curves C_l of Leprévost 1995
+    "paper-t1-015": ["BSSVY"],              # [15]      277.a.277.1: not a fiber of the order-15 family (Manuscripta 1992, p. 317), even over Qbar
+    "paper-t1-019": ["BookerSutherland"],   # [19]      1468.b.1: not a fiber of the order-19 family (Manuscripta 1992, p. 322); PZP2013 prints no curve of order 19
+    "paper-t1-022": ["BSSVY"],              # [22]      1192.a.19072.1: not Leprévost 1995's C22
+    "paper-t1-024": ["BSSVY"],              # [24]      1908.a.183168.1: neither C24,1 nor C24,2 of Leprévost 1995
+    "paper-t1-026": ["BookerSutherland"],   # [26]      11016.g.1: not Leprévost 1995's C26
 }
 # [27]: 7776.e.2 is not Leprévost's C27 (which is split over Q, census 27.c) but the order-27 curve
 # y^2 + (6x^3+9x^2+6x-1)y = -3x^2 marked "New" in Table 2 of Howe 2015; Leprévost 1995 has no curve
 # in this class (simple over Q, geometrically split), so the group-level source is replaced as well.
 # [2,28] (simple): 28200.e.1 is f28,2 of Platonov–Petrunin 2015 (p. 221; they prove a point of order 28 and
 # absolute simplicity, and three linear factors give J(Q)[2] = (Z/2)^2), which predates the extended database.
-SOURCES_OVERRIDE = {"paper-t2-022": ["Howe2015"], "paper-t1-050": ["PP2015"]}
+SOURCES_OVERRIDE = {"paper-t2-022": ["Howe2015"], "paper-t1-050": ["PP2015"],
+                    # [3,9] 8436.a.2 (an extended-database curve, not a fiber of Leprévost 1995's family C_t): the Source
+                    # column credits the group to Leprévost 1995, but every C_t is geometrically split
+                    # (pipeline/magma/leprevost_3_9_split.m): the group is dated by this curve (earlier papers not searched)
+                    "paper-t1-053": ["BookerSutherland"]}
 
 
 def credit(name: str, keys: list[str]) -> tuple[list[str], str]:

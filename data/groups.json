@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 08:21 UTC",
+  "generated": "2026-10-20 11:18 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -2955,8 +2955,8 @@
               "Leprevost1991"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1991",
@@ -3661,7 +3661,7 @@
               "PZP2013"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
+            "discovered_by": "Booker–Sutherland (extended database)",
             "credit_differs": true,
             "year": null,
             "historical": false,
@@ -4198,8 +4198,8 @@
               "Leprevost1993"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1993",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1993",
@@ -4412,8 +4412,8 @@
               "Leprevost1993"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1993",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1993",
@@ -4734,8 +4734,8 @@
               "Leprevost1993"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1993",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1993",
@@ -9934,15 +9934,15 @@
               "snapshot_label": "8436.a.2"
             },
             "sources": [
-              "Leprevost1995"
+              "BookerSutherland"
             ],
             "rm": false,
             "discovered_by": "Booker–Sutherland (extended database)",
-            "credit_differs": true,
+            "credit_differs": false,
             "year": null,
             "historical": false,
-            "first_source": "Leprevost1995",
-            "first_source_year": 1995,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
             "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 53 (source: \\cite{Leprevost1995})",
             "new_group": true,
@@ -10075,7 +10075,7 @@
         "undecided": null
       },
       "first_source": {
-        "simple": "Leprevost1995",
+        "simple": "BookerSutherland",
         "qsplit": "HLP2000",
         "gsplit": "Leprevost1995",
         "undecided": null
@@ -10093,7 +10093,7 @@
           "sources": [
             "ThisSite"
           ],
-          "note": "the pencil C_t: y² = (t²x³ + 3(t + 1)x + 1)² + 32t²x³, a line of the [9]-chart of 2026-10-13, with the class [x² + (3x + 1)/t, (2t − 12)x − 4] of order 9 over ℚ(t). Since (4t + 1)f_t = B² + 4t²(tx² − x − 1)³ with B = t²x³ + 6t²x² + (9t + 3)x + 2t + 1, after the base change t = (s² − 1)/4 the class [x² − (x + 1)/t, 2s(2x + 1)] is a second rational point of order 3, not in the span of the first, so [3,9] is marked over ℚ(s). Every 7- and 17-integral s ≡ 5 (mod 119) has #J(𝔽₇) = 81 and #J(𝔽₁₇) = 351 (gcd 27), strict at 17 (family_3_9_certificate.log). The census curve 3.9.a is not on the pencil",
+          "note": "the pencil C_t: y² = (t²x³ + 3(t + 1)x + 1)² + 32t²x³, a line of the [9]-chart of 2026-10-13, with the class [x² + (3x + 1)/t, (2t − 12)x − 4] of order 9 over ℚ(t). Since (4t + 1)f_t = B² + 4t²(tx² − x − 1)³ with B = t²x³ + 6t²x² + (9t + 3)x + 2t + 1, after the base change t = (s² − 1)/4 the class [x² − (x + 1)/t, 2s(2x + 1)] is a second rational point of order 3, not in the span of the first, so [3,9] is marked over ℚ(s). Every 7- and 17-integral s ≡ 5 (mod 119) has #J(𝔽₇) = 81 and #J(𝔽₁₇) = 351 (gcd 27), strict at 17 (family_3_9_certificate.log). The census curve 3.9.a is not on the pencil. Leprévost's family C_t (1995), whose Jacobians contain [3,9], is geometrically split for every rational t ≠ 0, 1: it has a degree-3 map onto an elliptic curve over ℚ(√−3) (leprevost_3_9_split.log)",
           "inherited_from": null
         },
         "split": {

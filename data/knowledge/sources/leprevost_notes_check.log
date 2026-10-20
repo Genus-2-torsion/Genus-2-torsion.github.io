@@ -1,0 +1,18 @@
+(1) Leprevost 1995 C22: #J(Q)_tors = 22 (a point of order 22); G2-invariants [ 2825761/16, 8405/8, 1271/16 ], of 22.a: [ 25600000/149, -1056000/149, -861000/149 ], so not isomorphic over Qbar
+(1) Leprevost 1995 C24,1: #J(Q)_tors = 24 (a point of order 24); G2-invariants [ -38579489651/39744, -150622097/6624, -137288/23 ], of 24.a: [ -51888844699/183168, -34913047/5088, 19321/1272 ], so not isomorphic over Qbar
+(1) Leprevost 1995 C24,2: #J(Q)_tors = 24 (a point of order 24); G2-invariants [ 6240321451/2700, 8289281/150, 0 ], of 24.a: [ -51888844699/183168, -34913047/5088, 19321/1272 ], so not isomorphic over Qbar
+(1) Leprevost 1995 C26: #J(Q)_tors = 26 (a point of order 26); G2-invariants [ 25746925826401/41990400, 84242473237/1749600, 633235057/97200 ], of 26.a: [ 418195493/223074, 216913789/446148, -88250353/2676888 ], so not isomorphic over Qbar
+(2) l = 15: the discriminant is the printed D = -4096 t^4 (t+1)^3 (16t^2 - 216t - 243)
+(2) Leprevost 1992 l = 13 (p. 316): the member t = 2 has #J(Q)_tors = 13 (a point of order 13)
+(2) Leprevost 1992 l = 13 (p. 316): the member t = 3 has #J(Q)_tors = 13 (a point of order 13)
+(2) Leprevost 1992 l = 13 (p. 316): control (the member t = 5/2, moved) found at [ -2/5, 5/2 ]; 13.a: the Igusa-Clebsch equations have the common factor [ <"t - 1", 1>, <"t", 2>, <"t + 1", 1> ] (rational roots [ -1, 0, 1 ]), isomorphic over Q at [ -1, 1 ]
+(2) Leprevost 1992 l = 15 (p. 317): the member t = 2 has #J(Q)_tors = 15 (a point of order 15)
+(2) Leprevost 1992 l = 15 (p. 317): the member t = 3 has #J(Q)_tors = 15 (a point of order 15)
+(2) Leprevost 1992 l = 15 (p. 317): control (the member t = 2/9, moved) found at [ 2/9 ]; 15.a: the Igusa-Clebsch equations have the common factor 1 (rational roots []), isomorphic over Q at []
+(2) Leprevost 1992 l = 17 (p. 319): the member t = 2 has #J(Q)_tors = 17 (a point of order 17)
+(2) Leprevost 1992 l = 17 (p. 319): the member t = 3 has #J(Q)_tors = 17 (a point of order 17)
+(2) Leprevost 1992 l = 17 (p. 319): control (the member t = 4/7, moved) found at [ 4/7 ]; 17.a: the Igusa-Clebsch equations have the common factor [ <"t - 1", 4>, <"t", 4>, <"t + 1", 1> ] (rational roots [ -1, 0, 1 ]), isomorphic over Q at [ -1 ]
+(2) Leprevost 1992 l = 19 (p. 322): the member t = 2 has #J(Q)_tors = 19 (a point of order 19)
+(2) Leprevost 1992 l = 19 (p. 322): the member t = 3 has #J(Q)_tors = 19 (a point of order 19)
+(2) Leprevost 1992 l = 19 (p. 322): control (the member t = 5/3, moved) found at [ 3/5, 5/3 ]; 19.a: the Igusa-Clebsch equations have the common factor [ <"t - 1", 4>, <"t", 8>, <"t + 1", 8> ] (rational roots [ -1, 0, 1 ]), isomorphic over Q at []
+LEPREVOST_NOTES_CHECK_DONE

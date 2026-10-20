@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 08:21 UTC",
+  "generated": "2026-10-20 11:18 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -9157,7 +9157,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1991 (orders 15, 17, 19, 21)",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -9211,7 +9211,7 @@
         "conductor_log": "data/logs/15.a.conductor.log",
         "conductor_cputime_seconds": 0.1
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11319,7 +11319,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1991 (orders 15, 17, 19, 21)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -12986,7 +12986,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1993",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -13041,7 +13041,7 @@
         "conductor_log": "data/logs/22.a.conductor.log",
         "conductor_cputime_seconds": 0.15
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -13435,7 +13435,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1993",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -13491,7 +13491,7 @@
         "conductor_log": "data/logs/24.a.conductor.log",
         "conductor_cputime_seconds": 0.31
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -14396,7 +14396,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1993",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -14451,7 +14451,7 @@
         "conductor_log": "data/logs/26.a.conductor.log",
         "conductor_cputime_seconds": 1.01
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29243,7 +29243,7 @@
       },
       "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 53 (source: \\cite{Leprevost1995})",
       "sources": [
-        "Leprevost1995"
+        "BookerSutherland"
       ],
       "rm": false,
       "notes": "",
@@ -29296,7 +29296,7 @@
         "conductor_log": "data/logs/3.9.a.conductor.log",
         "conductor_cputime_seconds": 0.55
       },
-      "credit_differs": true
+      "credit_differs": false
     },
     {
       "schema": "genus-2-torsion/curve/1",

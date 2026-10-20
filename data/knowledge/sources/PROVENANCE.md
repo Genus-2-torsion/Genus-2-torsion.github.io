@@ -143,6 +143,8 @@ derives from them are in `pipeline/knowledge.py`, which cites them by key.
 | `family_2_4_8_certificate.log` | produced here by `pipeline/magma/family_2_4_8_certificate.m` (uses `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of simple [2,4,8] (found 2026-10-19, torsion_jac/notes/simple248_2026_10_19.md): the same rational curve of the tangent cover, over the genus-1 curve D: σ² = τ⁴ − 36τ² + 36 (Jacobian y² = x³ − 36x, rank 1) on which the quadratic factor B splits; J(𝔽₁₁) ≅ [2,4,16], J(𝔽₅₃) ≅ [2,4,328], strict at 53 |
 | `family_28_certificate.log` | produced here by `pipeline/magma/family_28_certificate.m` (uses `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of simple [28] (2026-10-19, torsion_jac/notes/pf28_2026_10_19.md): the family (8) of Platonov–Fedorov 2018 (Dokl. Math. 98, 468–471), transcribed and checked against the paper's relations (2), (3), its discriminant and its ten printed examples; D = [x − 1, −t⁵(t + 1)] has order 28 over ℚ(t); t ≡ 1 (mod 35), #J(𝔽₅) = 28, #J(𝔽₇) = 56, strict at 7 |
 | `split_11_remark.log` | produced here by `pipeline/magma/split_11_remark.m` | — | remark for the open grade of split [11] (2026-10-20, torsion_jac/notes/split11_2026_10_19.md), not a certificate: the (2,2)-gluing of an elliptic curve over a quadratic field with a point of order 11 to its conjugate (the construction of 11.b, BNSS2026) needs a Galois-isomorphism E[2] → E^σ[2]; the parameters s on the X₁(11) model for which it exists lie under a curve Y with a degree-6 map to the s-line, whose reductions modulo 101, 103, 107 are absolutely irreducible of genus 8, so Y(ℚ) is finite; s = 4/5 (11.b) is the only such s to height 400, and a check without Y (does f^σ have a root in K[x]/(f)?) agrees to height 30 |
+| `leprevost_3_9_split.log` | produced here by `pipeline/magma/leprevost_3_9_split.m` | — | every member of Leprévost's [3,9] family C_t (Leprévost 1995, pp. 302–304) is geometrically split (2026-10-20): over ℚ(√−3)(t), f_t = q·q′ and u = (x² − x)/q, v = y·hh/q² is a map of degree 3 onto c·v² = E(u), E(u) = Res_y(q′(y), u·q(y) − (y² − y)), of genus 1; it specialises at every rational t ≠ 0, 1. Checked at t = 3, 5, −1/2 against the L-polynomials modulo the primes p ≡ 1 (mod 3) below 200. Leprévost leaves the absolute simplicity of J(C_t) open (p. 303–304); Platonov–Zhgun–Petrunin 2013 (Theorem 5) settle t = 3 |
+| `leprevost_notes_check.log` | produced here by `pipeline/magma/leprevost_notes_check.m` | — | the seed curves credited to Leprévost's C. R. notes (1991, 1993), compared with the full versions (equations read from the scans of Leprévost 1995, p. 286, and Manuscripta Math. 75 (1992), pp. 316–322): C₂₂, C₂₄,₁, C₂₄,₂, C₂₆ have points of the claimed orders and are not isomorphic over ℚ̄ to 22.a, 24.a, 26.a; the 1992 families of orders 13, 15, 17, 19 have points of the claimed orders, and a family search (validated on a moved member) finds 13.a at t = ±1, 17.a at t = −1, and no fiber for 15.a and 19.a, even over ℚ̄ |
 | `attribution_check.log` | produced here by `pipeline/magma/attribution_check.m` | — | the comparisons behind the credit errata of 2026-10-14 below: census curves 27.b, 24.b, 25.b, 3.9.b, 6.6.b, 5.5.a, 21.c, 27.c against the curves printed in Leprévost 1995 (C21, C24,1, C24,2, C25, C27, pp. 291–302 of the JTNB scan), Howe 2015 (Table 2, order 27, arXiv:1407.2654v3), HLP 2000 (X₀(22), Cor. 5) and the LMFDB, by G2-invariants and isomorphism over ℚ. It also shows that 21.c (LMFDB 676.a.5408.1, issue #7) is Leprévost's C21 and 27.c (issue #8) is his C27, which is why both are credited to Leprévost 1995 |
 | `seed_credit_check.log` | produced here by `pipeline/magma/seed_credit_check.m` | — | the comparisons behind the credit errata of 2026-10-20 below: census curves against the curves printed in Platonov–Petrunin 2012a (pp. 287–288), 2012b (p. 643), Platonov–Zhgun–Petrunin 2013 (p. 320), Platonov–Petrunin 2015 (p. 221), Elkies 2002 (N = 32), Bruin–Flynn–Testa 2014 (Thm 6, Examples 19–21) and Leprévost 1995 (C₃, p. 303), by isomorphism over ℚ, each transcription checked against the torsion its source claims; the one-parameter families of Flynn 1991 (Result 3), Leprévost 1997 (C₁,ₜ) and Leprévost 1995 (the [3,9] family Cₜ) searched for 9.a, 10.a, 20.a, 3.9.a, each search validated on a moved member; Flynn 1991's order-6 family (Result 1(b)) against 6.a; the rational Weierstrass points of 21.a |
 | `seed_production_check.log` | produced here by `pipeline/magma/seed_production_check.m` | — | for each of the 150 seed curves, isomorphism over ℚ with every production LMFDB curve of the same conductor (read from devmirror.lmfdb.xyz on 2026-10-20): 48 seed curves are production curves, the other 102 are not |
@@ -243,7 +245,7 @@ scans; `seed_credit_check.log`).  A paper is credited with a curve when it print
   f₃₀,₃ and f₃₆), 33.a (Platonov–Petrunin 2012b), 34.a, 39.a, 40.a (Elkies 2002), 25.a (Nicholls 2018, Example 3.1.7),
   2.2.2.10.a (Elkies 2024, Example 2.12), 31.a (Costa et al., newform 1830.2.a.q).  The 8 curves credited to BNSS
   2026 are in neither database, as the paper's "new" says.
-* **Not checked (UNVERIFIED), unchanged.** The source could not be obtained: Ogg 1973 (21.b and 2.10.b are X₁(18) and
+* **Not checked (UNVERIFIED), unchanged** (but see the second review below). The source could not be obtained: Ogg 1973 (21.b and 2.10.b are X₁(18) and
   X₁(16), whose torsion Leprévost 1995, p. 285, attributes to Ogg) and the C. R. notes Leprévost 1991 (15.a, 17.a,
   19.a, and the order-13 part of 13.a) and Leprévost 1993 (22.a, 24.a, 26.a).  Evidence from the same author's full
   versions (Manuscripta Math. 75 (1992), 303–326, for 1991; Leprévost 1995 for 1993): 15.a and 19.a are not fibers of
@@ -252,6 +254,42 @@ scans; `seed_credit_check.log`).  A paper is credited with a curve when it print
 * **Reprints** (the credit is unchanged): Platonov–Petrunin 2012a also print 17.a, 19.b (X₁(13)), 23.a and 29.a.
 * Database credits say only that the curve is in that database; earlier appearances in papers not cited by the tables
   were not searched for.
+
+## Second review of 2026-10-20: Leprévost's C. R. notes, Ogg 1973, and the simple [3,9]
+
+The C. R. notes and Ogg 1973 still could not be read: Gallica and the AMS answer with a bot challenge, and MathSciNet
+gives no review text from here.  zbMATH Open (api.zbmath.org, read 2026-10-20) has summaries of the notes:
+
+* Leprévost 1991 (Zbl 0758.14017): "We construct here, for ℓ = 15, 17, 19 or 21 a family with one parameter t of curves
+  of genus 2 … such that its jacobian has a point of order ℓ rational over ℚ(t)", with the same method in genus g as
+  the full version, Manuscripta Math. 75 (1992), 303–326 (Zbl 0790.14021).  Leprévost 1991a (Zbl 0758.14016) gives a
+  curve over ℚ(t) with a point of order 13; the 1992 paper says that its order-13 family is this one (p. 316).
+* Leprévost 1993 (Zbl 0783.14016): a curve C_ℓ for ℓ = 21, 22, 23, 25, 26, 27 and 29, two curves for ℓ = 24, and the
+  one-parameter [3,9] family.  These are the curves of Theorems 1.2.1–1.2.2 of the full version, Leprévost 1995
+  ("Ce travail, annoncé pour l'essentiel dans [3]", p. 283).
+
+Curve credits changed accordingly (the group-level `sources` are unchanged); the comparisons are in
+`leprevost_notes_check.log`:
+
+* 15.a and 19.a are not fibers of the 1992 families of orders 15 and 19, even over ℚ̄, so they are not curves of the
+  1991 note: LMFDB genus 2 database (BSSVY 2016) for 15.a, Booker–Sutherland (extended database) for 19.a.
+* 22.a, 24.a and 26.a are none of C₂₂, C₂₄,₁, C₂₄,₂, C₂₆ (Leprévost 1995, p. 286): LMFDB genus 2 database (BSSVY 2016)
+  for 22.a and 24.a, Booker–Sutherland (extended database) for 26.a.
+* Unchanged, UNVERIFIED: 13.a (Flynn 1990, confirmed, and Leprévost 1991a; 13.a is the fiber at t = 1 and at t = −1 of
+  the 1992 order-13 family) and 17.a (Leprévost 1991; the fiber t = −1 of the 1992 order-17 family, and Platonov–Petrunin
+  2012a's f₁₇).  Whether the notes single out these fibers can only be seen in the notes.
+* Unchanged, UNVERIFIED: 21.b and 2.10.b (Ogg 1973).  They are X₁(18) and X₁(16); Leprévost 1995, pp. 284–285, cites
+  Ogg's p. 226 for the torsion ℤ/21 and ℤ/2 × ℤ/10 of their Jacobians.  The paper is MR0337974 and Zbl 0273.14008 (no
+  zbMATH review).
+
+The simple [3,9].  The paper's Table 1 credits the geometrically simple [3,9] to Leprévost 1995, whose [3,9] family C_t
+has Jacobians that are generically simple over ℚ (shown at t = 3).  Leprévost writes that he could not decide whether
+they are absolutely simple (pp. 303–304), and Platonov–Zhgun–Petrunin 2013 (Theorem 5) showed that J(C₃) is not.  No
+member is: `leprevost_3_9_split.log` gives a map of degree 3 from every C_t (t ≠ 0, 1) onto an elliptic curve over
+ℚ(√−3).  So the `sources` of the seed curve 3.9.a (8436.a.2, an extended-database curve that is not a fiber of C_t) are
+now Booker–Sutherland (extended database), and the census credits the first geometrically simple [3,9] to it (earlier
+papers were not searched for).  Leprévost 1995 still dates the class "simple over ℚ, split over ℚ̄" of [3,9]
+(3.9.c = C₃).
 
 ## Errata to the copied record (`census_infinity_record.md`, copied verbatim; found by the audit of 2026-09-18, see `notes/`)
 

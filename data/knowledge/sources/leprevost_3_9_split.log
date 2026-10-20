@@ -1,0 +1,25 @@
+(0) f_3 = x^6 + 12x^5 + 24x^4 - 78x^3 + 72x^2 - 36x + 9 is C_3 as reprinted by PZP2013, p. 321
+(0) t = 3: J(Q)_tors = [ 3, 9 ]
+(0) t = 5: J(Q)_tors = [ 3, 9 ]
+(0) t = -1/2: J(Q)_tors = [ 3, 9 ]
+(1) over Q(sqrt -3)(t): f_t = q q', and q^3 E(p/q) = c q' hh^2 with p = x^2 - x, c = -t^2 + t
+(1) q = x^3 + (3*t - w - 3)*x^2 + ((-w - 3)*t + 1/2*(3*w + 3))*x + 1/2*(w + 1)*t
+(1) hh = x^3 + 1/2*(-w - 3)*x^2 + w*t*x + 1/2*(-w + 1)*t
+(1) E(u) = (-12*w*t^4 + 24*w*t^3 - 12*w*t^2)*u^3 + (-9*t^4 + (9*w + 18)*t^3 + 1/2*(-27*w - 9)*t^2 + 1/2*(9*w - 9)*t)*u^2 + (6*t^3 + (-3*w - 9)*t^2 + (3*w + 3)*t)*u - t^2 + t
+(1) gcd(p, q) = 1, deg E = 3, disc E = [
+<$.1, 5>,
+<$.1 - 1, 5>,
+<$.1 + 1/2*(w - 1), 3>
+] != 0: (x, y) -> (p/q, y hh/q^2) maps C_t with degree 3 onto the genus-1 curve c v^2 = E(u)
+(1) j-invariant of the target: (-81*w*t^12 + (486*w + 486)*t^11 + (-891*w - 2673)*t^10 + 6588*t^9 + 1/2*(6399*w - 19197)*t^8 + (-7452*w + 7452)*t^7 + 9396*w*t^6 + (-7452*w - 7452)*t^5 + 1/2*(6399*w + 19197)*t^4 - 6588*t^3 + (-891*w + 2673)*t^2 + (486*w - 486)*t - 81*w)/(t^9 + 1/2*(3*w - 9)*t^8 + (-6*w + 6)*t^7 + 9*w*t^6 + (-6*w - 6)*t^5 + 1/2*(3*w + 9)*t^4 - t^3)
+(2) disc f_t = [
+<tt, 6>,
+<tt - 1, 6>,
+<tt + 1/2*(-w - 1), 1>,
+<tt + 1/2*(w - 1), 1>
+]; rational t where the cover may degenerate: { 0, 1 } (where f_t is not squarefree)
+(2) so for every rational t != 0, 1 the Jacobian of C_t is isogenous over Q(sqrt -3) to a product of two elliptic curves
+(3) t = 3: at 20 primes p = 1 (mod 3) below 200 the L-polynomial of the target divides that of C_t mod p
+(3) t = 5: at 20 primes p = 1 (mod 3) below 200 the L-polynomial of the target divides that of C_t mod p
+(3) t = -1/2: at 20 primes p = 1 (mod 3) below 200 the L-polynomial of the target divides that of C_t mod p
+LEPREVOST_3_9_SPLIT_DONE: every member C_t (t rational, t != 0, 1) of Leprevost's [3,9] family is geometrically split

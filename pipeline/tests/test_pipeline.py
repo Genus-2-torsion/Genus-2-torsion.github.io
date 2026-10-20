@@ -239,10 +239,11 @@ class CreditTests(unittest.TestCase):
             if (c.get("source") or {}).get("name") in import_paper.CURVE_CREDIT:
                 corrected.add(c["id"])
         self.assertEqual(flagged, corrected)
-        self.assertEqual(len(flagged), 52)   # 19 corrected on 2026-10-14, 33 on 2026-10-20
+        self.assertEqual(len(flagged), 55)   # 19 corrected on 2026-10-14; 33 + 4 (Leprévost's notes) - 1 (3.9.a) on 2026-10-20
         self.assertIn("35.a", flagged)
         self.assertNotIn("27.b", flagged)   # its sources were replaced as well (SOURCES_OVERRIDE)
         self.assertNotIn("2.28.a", flagged)   # likewise: Platonov–Petrunin 2015's f28,2 (2026-10-20)
+        self.assertNotIn("3.9.a", flagged)    # likewise: the first geometrically simple [3,9] in the census
 
     def test_seed_database_credits_match_production_check(self):
         """A seed curve credited to the production LMFDB database is isomorphic over Q to a production curve,
@@ -264,10 +265,24 @@ class CreditTests(unittest.TestCase):
                 self.assertTrue(hits[c["id"]], c["id"]); n += 1
             if c["discovery"]["by"] == bs:
                 self.assertEqual(hits[c["id"]], [], c["id"]); n += 1
-        self.assertEqual(n, 102)   # 35 production, 67 extended
+        self.assertEqual(n, 107)   # 38 production, 69 extended
         self.assertTrue((KNOWLEDGE_DIR / "sources" / "seed_credit_check.log").read_text().rstrip().endswith("SEED_CREDIT_CHECK_DONE"))
         c = read_json(CURVES_DIR / "3.9.c.json")   # Leprévost 1995's C_3 (p. 303)
         self.assertEqual((c["sources"], c["discovery"]["by"], c["discovery"]["year"]), (["Leprevost1995"], "Leprévost 1995", 1995))
+
+    def test_leprevost_3_9_family_is_geometrically_split(self):
+        """Every member of Leprévost 1995's [3,9] family covers an elliptic curve (leprevost_3_9_split.log), so the
+        geometrically simple [3,9] is dated by the database curve 3.9.a, not by Leprévost 1995 (2026-10-20)."""
+        log = (KNOWLEDGE_DIR / "sources" / "leprevost_3_9_split.log").read_text()
+        self.assertTrue(log.rstrip().endswith("is geometrically split"))
+        self.assertIn("LEPREVOST_3_9_SPLIT_DONE", log)
+        self.assertEqual(read_json(CURVES_DIR / "3.9.a.json")["sources"], ["BookerSutherland"])
+        g = {e["key"]: e for e in read_json(ROOT / "data" / "groups.json")["groups"]}["3.9"]
+        self.assertEqual(g["first_source"]["simple"], "BookerSutherland")
+        self.assertEqual(g["first_source"]["gsplit"], "Leprevost1995")
+        self.assertTrue((KNOWLEDGE_DIR / "sources" / "leprevost_notes_check.log").read_text().rstrip().endswith("LEPREVOST_NOTES_CHECK_DONE"))
+        for i in ("15.a", "19.a", "22.a", "24.a", "26.a"):   # not curves of Leprévost's C. R. notes (leprevost_notes_check.log)
+            self.assertNotIn("Leprévost", read_json(CURVES_DIR / f"{i}.json")["discovery"]["by"], i)
 
 
 class CertificateTests(unittest.TestCase):

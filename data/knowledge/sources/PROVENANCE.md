@@ -335,6 +335,23 @@ identities, parameterization, and the explicit rational isomorphism from the
 member s = 1 to census example `4.16.a`. The general proof does not depend on
 the two sample torsion computations in the log.
 
+## Prime torsion obstruction for splitting over ℚ (20 October 2026)
+
+[`proofs/qsplit-prime-obstruction.html`](../../../proofs/qsplit-prime-obstruction.html)
+records the elementary consequence of Mazur's theorem that an abelian surface
+split over ℚ has no rational torsion of prime order greater than 7. The argument
+uses an elliptic subvariety and its elliptic quotient, both defined over ℚ.
+The reference is B. Mazur, *Modular curves and the Eisenstein ideal*,
+Publ. Math. IHÉS 47 (1977), 33–186.
+
+This excludes [11], [13], [17], [19], [22], [23], [26], [29], [31], [33], [34],
+[39], [2,22] and [2,26] in the **split over ℚ** class. The census cells and
+group pages link to the proof. The exclusions are generated from the prime
+divisors of the invariant factors by `pipeline/knowledge.py`; they are distinct
+from the infinitude records for all geometrically split Jacobians.
+The known geometrically split, ℚ-simple examples with torsion [11] and [19]
+remain in their own class.
+
 ## LMFDB labels
 
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels

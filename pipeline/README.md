@@ -13,7 +13,7 @@ import_paper.py (seed tables)
 | `fetch_issues.py` | turns open GitHub issues labelled `submission` into `submissions/inbox/issue-<n>.json`. |
 | `verify.py` | validates a submission, runs `magma/verify_lib.m` and `magma/conductor_lib.m` under time limits, applies the acceptance rule (`acceptance()`: new (group, class), or smaller conductor than every census curve with that group and class; `"historical": true` in an inbox file bypasses it), writes the certificate, comments on and closes the issue. `--require-claim` rejects a curve whose computed group differs from the claimed one (used for validation runs). |
 | `build.py` | rebuilds the JSON files the site reads from `data/curves/` and `knowledge.py`. `--check` fails if they are stale (used by CI). |
-| `knowledge.py` | curated, cited facts: the bibliography, and the "infinitely many?" record for every group on the simple and the split side. |
+| `knowledge.py` | curated, cited facts: the bibliography, class-specific impossibility results, and the "infinitely many?" record for every group on the simple and the split side. |
 | `import_paper.py` | converts the paper's `table1.txt` / `table2.txt` (in `data/knowledge/sources/`) into seed submissions; `transcribe_covers.py` extracted the 18 explicit covers of the paper's `verify_split_certificates.m` into `Genus2Torsion_covers.json`. |
 | `magma/verify_lib.m` | the Magma checks (see its header): torsion subgroup, strict-prime certificate of geometric simplicity, irreducible-χ certificate of ℚ-simplicity, splitness certificates (involutions, Richelot isogenies over ℚ and quadratic fields, geometric automorphism group, submitted covers), the split signature, invariants, ℚ-isomorphism with census curves. |
 | `magma/conductor_lib.m` | reduced minimal model, factored discriminant, conductor by Magma's `Conductor` (separate job: needs the discriminant factored; slow for split Jacobians whose curve has bad reduction where the Jacobian does not). Its exponent at 2 uses Ogg's formula (not guaranteed); when `verify_lib.m` finds an isogenous product E₁ × E₂ over ℚ, `verify.py` uses N(E₁)N(E₂) instead (rigorous) and records the disagreement. |
@@ -45,6 +45,12 @@ Every change to `magma/verify_lib.m` changes the SHA-256 recorded in new certifi
 certificates keep the hash of the code that produced them.
 
 ## Adding knowledge
+
+Class-specific impossibility results are returned by `exclusions_record` in `knowledge.py`.
+Each exclusion has a reason, bibliography keys, and a proof URL; `build.py` publishes these
+in the group's `exclusions` field and refuses to build if an exclusion contradicts a recorded
+example in that class. These records are separate from the combined geometrically split
+infinitude status.
 
 Facts about infinitely many realisations live in `knowledge.py` (`_SIMPLE_EXACT`, `_SIMPLE_FAMILY`,
 `_SIMPLE_OPEN_NOTES`, `_SPLIT_FAMILY`, `_SPLIT_OPEN_NOTES`) with their sources in `SOURCES`; copies of

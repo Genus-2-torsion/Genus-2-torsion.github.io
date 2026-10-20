@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 14:08 UTC",
+  "generated": "2026-10-20 14:42 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -50,6 +50,21 @@
       "cite": "Infinitely many split genus-2 Jacobians with rational torsion Z/4Z × Z/16Z, census proof of 20 October 2026. Explicit rational family, exact torsion for every rational parameter, and infinitely many geometric isomorphism classes; standalone Magma certificate and successful log.",
       "url": "proofs/split-4-16.html",
       "used_for": "exact infinitude of split [4,16]; the proof, downloadable LaTeX, pipeline/magma/family_416_split_certificate.m, and data/knowledge/sources/family_416_split_certificate.log"
+    },
+    "QSplitPrimeObstruction": {
+      "short": "prime torsion obstruction for splitting over ℚ",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Prime torsion on abelian surfaces split over Q: a consequence of Mazur's theorem, census proof of 20 October 2026.",
+      "url": "proofs/qsplit-prime-obstruction.html",
+      "used_for": "impossibility in the split-over-ℚ class for every group whose order has a prime divisor greater than 7; applies to 14 current census groups"
+    },
+    "Mazur1977": {
+      "short": "Mazur 1977",
+      "year": 1977,
+      "cite": "B. Mazur, Modular curves and the Eisenstein ideal, Publ. Math. IHÉS 47 (1977), 33–186.",
+      "url": "https://www.numdam.org/item/PMIHES_1977__47__33_0/",
+      "used_for": "rational torsion on elliptic curves; the prime torsion obstruction for abelian surfaces split over ℚ"
     },
     "HLP2000": {
       "short": "Howe–Leprévost–Poonen 2000",

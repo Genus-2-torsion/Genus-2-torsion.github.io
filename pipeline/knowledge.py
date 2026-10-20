@@ -1,6 +1,6 @@
-"""Curated, cited facts used by the census: the bibliography, and for each torsion group and each
-side of the census (geometrically simple / geometrically split) what is known about *infinitely
-many* realisations.
+"""Curated, cited facts used by the census: the bibliography, class-specific impossibility
+results, and for each torsion group and each side of the census (geometrically simple /
+geometrically split) what is known about *infinitely many* realisations.
 
 Nothing here is asserted from memory.  Every entry cites a source in SOURCES, and the sources that
 are tables or records are copied verbatim into data/knowledge/sources/ (see PROVENANCE.md there).
@@ -71,6 +71,19 @@ SOURCES = {
         "url": "proofs/split-4-16.html",
         "used_for": "exact infinitude of split [4,16]; the proof, downloadable LaTeX, pipeline/magma/family_416_split_certificate.m, and data/knowledge/sources/family_416_split_certificate.log",
     },
+    "QSplitPrimeObstruction": {
+        "short": "prime torsion obstruction for splitting over ℚ", "year": 2026,
+        "kind": "proof",
+        "cite": "Prime torsion on abelian surfaces split over Q: a consequence of Mazur's theorem, census proof of 20 October 2026.",
+        "url": "proofs/qsplit-prime-obstruction.html",
+        "used_for": "impossibility in the split-over-ℚ class for every group whose order has a prime divisor greater than 7; applies to 14 current census groups",
+    },
+    "Mazur1977": {
+        "short": "Mazur 1977", "year": 1977,
+        "cite": "B. Mazur, Modular curves and the Eisenstein ideal, Publ. Math. IHÉS 47 (1977), 33–186.",
+        "url": "https://www.numdam.org/item/PMIHES_1977__47__33_0/",
+        "used_for": "rational torsion on elliptic curves; the prime torsion obstruction for abelian surfaces split over ℚ",
+    },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
         "cite": "E. W. Howe, F. Leprévost, B. Poonen, Large torsion subgroups of split Jacobians of curves of genus two or three, Forum Math. 12 (2000), 315–364 (arXiv:math/9809210).",
@@ -129,6 +142,24 @@ SOURCES = {
 }
 
 assert all("year" in v for v in SOURCES.values()), [k for k, v in SOURCES.items() if "year" not in v]
+
+
+def exclusions_record(key: str) -> dict:
+    """Class-specific impossibility, separate from existence and infinitude records."""
+    # All prime divisors of the order occur in the last invariant factor.
+    remaining = int(key.split(".")[-1])
+    for prime in (2, 3, 5, 7):
+        while remaining > 1 and remaining % prime == 0:
+            remaining //= prime
+    if remaining == 1:
+        return {}
+    return {
+        "qsplit": {
+            "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+            "sources": ["QSplitPrimeObstruction", "Mazur1977"],
+            "proof_url": SOURCES["QSplitPrimeObstruction"]["url"],
+        }
+    }
 
 
 def first_source(keys):

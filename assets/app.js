@@ -152,7 +152,12 @@
 
   function exampleCell(list, sources, g, cls, mode) {
     const side = cls === "simple" || cls === "qsplit" || (cls === "gsplit" && !$("#cls-qsplit").checked) ? " side-start" : "";
-    if (!list.length) return el("td", { class: "ex none" + side }, "—");
+    if (!list.length) {
+      const exclusion = (g.exclusions || {})[cls];
+      return el("td", { class: "ex none" + side }, exclusion
+        ? el("a", { href: exclusion.proof_url, title: "Impossible in this class. " + exclusion.reason }, "impossible")
+        : "—");
+    }
     let c = list[0], dim = false;
     const meta = [];
     if (mode === "first") {
@@ -228,7 +233,8 @@
       if (sortSel.value === "order") groups.sort((a, b) => a.order - b.order || a.rank - b.rank);
       for (const g of groups) {
         const has = shown.map((k) => g.known[k]);
-        if (!shown.length || (onlyAll.checked ? !has.every(Boolean) : !has.some(Boolean))) continue;
+        const hasResult = shown.some((k) => g.known[k] || (g.exclusions || {})[k]);
+        if (!shown.length || (onlyAll.checked ? !has.every(Boolean) : !hasResult)) continue;
         const undec = g.classes.undecided.length;
         const tr = el("tr", null,
           el("td", { class: "grp", "data-sort": String(g.rank).padStart(2, "0") + g.group.map((n) => String(n).padStart(4, "0")).join("") },
@@ -321,6 +327,12 @@
       " certified geometrically split, but neither a certificate of splitness over ℚ nor one of simplicity over ℚ was found (see below)."));
     if (undecAll.length) body.append(el("p", { class: "notice" }, undecAll.length + " curve" + (undecAll.length > 1 ? "s" : "") + " with this torsion group " + (undecAll.length > 1 ? "have" : "has") + " a verified torsion subgroup but no certificate of simplicity or splitness (see below)."));
     for (const [cls, name] of CLASSES) {
+      const exclusion = (g.exclusions || {})[cls];
+      if (exclusion) {
+        body.append(el("h3", null, name),
+          el("p", null, el("strong", null, "Impossible. "), exclusion.reason, " ",
+            el("a", { href: exclusion.proof_url }, "Read the proof.")));
+      }
       if (!g.classes[cls].length) continue;
       const fs = g.first_source[cls], src = fs && sources[fs];
       body.append(el("h3", null, name),

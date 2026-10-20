@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prime torsion obstruction for splitting over ℚ — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A consequence of Mazur's theorem: an abelian surface split over Q has no rational torsion of prime order greater than 7. This excludes 14 census groups in the split-over-Q class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=4">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    @media print {
+      header.site, footer.site, .page-nav { display: none; }
+      main.proof { max-width: none; padding: 0; }
+    }
+  </style>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span>impossibility proof</div>
+  <h2>Prime torsion on abelian surfaces split over ℚ</h2>
+  <p class="src">20 October 2026 · A consequence of Mazur's theorem</p>
+  <p>We show that the only primes dividing the order of the rational torsion subgroup of an abelian surface
+    split over <span class="m">ℚ</span> are <span class="m">2, 3, 5</span> and <span class="m">7</span>.
+    Here “split over <span class="m">ℚ</span>” means isogenous over <span class="m">ℚ</span> to a product of elliptic curves over <span class="m">ℚ</span>.</p>
+
+  <section id="proof">
+    <div class="panel">
+      <h3>Proposition</h3>
+      <p>Let <span class="m">A/ℚ</span> be an abelian surface split over <span class="m">ℚ</span>.
+        If a prime <span class="m">ℓ</span> divides <span class="m">#A(ℚ)<sub>tors</sub></span>, then
+        <span class="m">ℓ ∈ {2, 3, 5, 7}</span>.</p>
+    </div>
+    <p><b>Proof.</b> Choose an isogeny <span class="m">E₁ × E₂ → A</span> defined over <span class="m">ℚ</span>,
+      with <span class="m">E₁</span> and <span class="m">E₂</span> elliptic curves over <span class="m">ℚ</span>.
+      The image of <span class="m">E₁ × {0}</span> is an elliptic subvariety <span class="m">E ⊂ A</span>
+      defined over <span class="m">ℚ</span>. The quotient <span class="m">F = A/E</span> is also an elliptic curve
+      over <span class="m">ℚ</span>. Thus there is an exact sequence of abelian varieties over <span class="m">ℚ</span></p>
+    <p class="equation m">0 → E → A → F → 0.</p>
+    <p>Let <span class="m">ℓ &gt; 7</span> be prime. By <a href="#mazur">Mazur's theorem</a>,
+      <span class="m">E(ℚ)[ℓ] = F(ℚ)[ℓ] = 0</span>.
+      For any <span class="m">P ∈ A(ℚ)[ℓ]</span>, its image in <span class="m">F(ℚ)</span> is killed by
+      <span class="m">ℓ</span>, and hence is zero. It follows that <span class="m">P ∈ E(ℚ)[ℓ]</span>,
+      so <span class="m">P = 0</span>. Therefore <span class="m">A(ℚ)[ℓ] = 0</span>.
+      By Cauchy's theorem, <span class="m">ℓ</span> cannot divide <span class="m">#A(ℚ)<sub>tors</sub></span>. ∎</p>
+  </section>
+
+  <section id="census">
+    <h3>Consequences for the census</h3>
+    <p>Each of the following 14 groups has order divisible by a prime greater than <span class="m">7</span>.
+      Hence none can be the rational torsion subgroup of a genus-2 Jacobian split over <span class="m">ℚ</span>.
+      The corresponding cells in the census are labelled <b>impossible</b>.</p>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th>Prime divisor</th><th>Excluded torsion groups in the split-over-ℚ class</th></tr></thead>
+        <tbody>
+          <tr><td>11</td><td><a href="../group.html?g=11">[11]</a>, <a href="../group.html?g=22">[22]</a>, <a href="../group.html?g=33">[33]</a>, <a href="../group.html?g=2.22">[2,22]</a></td></tr>
+          <tr><td>13</td><td><a href="../group.html?g=13">[13]</a>, <a href="../group.html?g=26">[26]</a>, <a href="../group.html?g=39">[39]</a>, <a href="../group.html?g=2.26">[2,26]</a></td></tr>
+          <tr><td>17</td><td><a href="../group.html?g=17">[17]</a>, <a href="../group.html?g=34">[34]</a></td></tr>
+          <tr><td>19</td><td><a href="../group.html?g=19">[19]</a></td></tr>
+          <tr><td>23</td><td><a href="../group.html?g=23">[23]</a></td></tr>
+          <tr><td>29</td><td><a href="../group.html?g=29">[29]</a></td></tr>
+          <tr><td>31</td><td><a href="../group.html?g=31">[31]</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The hypothesis that the splitting is defined over <span class="m">ℚ</span> is essential.
+      The census includes geometrically split Jacobians with torsion <a href="../group.html?g=11">[11]</a>
+      and <a href="../group.html?g=19">[19]</a> that are simple over <span class="m">ℚ</span>.
+      Their elliptic factors appear only after extending the ground field.</p>
+  </section>
+
+  <section id="reference">
+    <h3>Reference</h3>
+    <p id="mazur">B. Mazur, <a href="https://www.numdam.org/item/PMIHES_1977__47__33_0/"><i>Modular curves and the Eisenstein ideal</i></a>,
+      Publications Mathématiques de l'IHÉS <b>47</b> (1977), 33–186.
+      Mazur's classification gives <span class="m">E(ℚ)<sub>tors</sub> ≅ ℤ/nℤ</span> for
+      <span class="m">1 ≤ n ≤ 10</span> or <span class="m">n = 12</span>, or
+      <span class="m">ℤ/2ℤ × ℤ/2mℤ</span> for <span class="m">1 ≤ m ≤ 4</span>.
+      In particular, the only possible prime orders of rational torsion points are
+      <span class="m">2, 3, 5</span> and <span class="m">7</span>.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsplit-prime-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

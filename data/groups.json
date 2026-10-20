@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 14:08 UTC",
+  "generated": "2026-10-20 14:42 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -23,6 +23,7 @@
         "open": "?"
       }
     },
+    "exclusions": "proved impossibility, indexed by class; each entry has a reason, sources and a proof_url; an absent entry makes no impossibility claim",
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 96,
@@ -240,6 +241,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -459,6 +461,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -675,6 +678,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -892,6 +896,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -1106,6 +1111,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -1324,6 +1330,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -1542,6 +1549,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -1757,6 +1765,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -1974,6 +1983,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -2190,6 +2200,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -2348,6 +2359,16 @@
         "qsplit": false,
         "gsplit": true,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 2,
       "infinite": {
@@ -2565,6 +2586,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -2672,6 +2694,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -2887,6 +2919,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -3102,6 +3135,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -3267,6 +3301,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -3372,6 +3407,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -3589,6 +3634,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -3752,6 +3798,16 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -3912,6 +3968,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -4127,6 +4184,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -4236,6 +4294,16 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -4342,6 +4410,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -4504,6 +4582,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -4668,6 +4747,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -4771,6 +4851,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -4982,6 +5072,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -5145,6 +5236,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -5250,6 +5342,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -5412,6 +5514,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -5522,6 +5625,16 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -5629,6 +5742,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -5738,6 +5852,16 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -5841,6 +5965,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -5946,6 +6080,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -6108,6 +6243,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -6212,6 +6348,16 @@
         "qsplit": false,
         "gsplit": false,
         "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
       },
       "n_curves": 1,
       "infinite": {
@@ -6369,6 +6515,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -6474,6 +6621,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -6582,6 +6730,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -6690,6 +6839,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -6795,6 +6945,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -6899,6 +7050,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -7110,6 +7262,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -7325,6 +7478,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -7538,6 +7692,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -7754,6 +7909,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -7969,6 +8125,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -8134,6 +8291,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -8298,6 +8456,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -8463,6 +8622,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -8627,6 +8787,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -8789,6 +8950,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -8897,6 +9059,16 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -9004,6 +9176,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -9112,6 +9285,16 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -9217,6 +9400,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -9322,6 +9506,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -9430,6 +9615,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -9642,6 +9828,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -9864,6 +10051,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -10086,6 +10274,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -10248,6 +10437,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -10358,6 +10548,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -10574,6 +10765,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -10736,6 +10928,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -10897,6 +11090,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -11003,6 +11197,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -11165,6 +11360,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -11273,6 +11469,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -11433,6 +11630,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -11540,6 +11738,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -11646,6 +11845,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -11751,6 +11951,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -11963,6 +12164,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -12182,6 +12384,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -12400,6 +12603,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -12617,6 +12821,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -12781,6 +12986,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -12947,6 +13153,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -13057,6 +13264,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -13165,6 +13373,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -13271,6 +13480,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -13377,6 +13587,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -13538,6 +13749,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -13701,6 +13913,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -13812,6 +14025,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -14079,6 +14293,7 @@
         "gsplit": true,
         "undecided": true
       },
+      "exclusions": {},
       "n_curves": 4,
       "infinite": {
         "simple": {
@@ -14296,6 +14511,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -14514,6 +14730,7 @@
         "gsplit": true,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 3,
       "infinite": {
         "simple": {
@@ -14678,6 +14895,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -14789,6 +15007,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -14898,6 +15117,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -15007,6 +15227,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -15167,6 +15388,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -15277,6 +15499,7 @@
         "gsplit": false,
         "undecided": false
       },
+      "exclusions": {},
       "n_curves": 1,
       "infinite": {
         "simple": {

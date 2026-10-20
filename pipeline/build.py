@@ -4,7 +4,8 @@
   data/groups.json   one record per torsion group: its curves in each of the three classes (and the
                      undecided ones) sorted by conductor, the index of the earliest-dated curve and
                      the earliest source credited for the class, the "infinitely many?" answers for
-                     the simple and the split side (from pipeline/knowledge.py), and counts;
+                     the simple and the split side, class-specific impossibility results
+                     (from pipeline/knowledge.py), and counts;
   data/curves.json   every accepted curve (the certificates in data/curves/, verbatim);
   data/sources.json  the bibliography.
 
@@ -107,6 +108,10 @@ def build():
             first[cls] = min(dated, key=lambda i: (classes[cls][i]["year"], i)) if dated else None
             srcs = [(s["first_source_year"], s["first_source"]) for s in classes[cls] if s["first_source"]]
             first_source[cls] = min(srcs)[1] if srcs else None
+        exclusions = knowledge.exclusions_record(key)
+        for cls in exclusions:
+            if classes[cls]:
+                raise ValueError(f"{key}: a recorded {cls} example contradicts its impossibility proof")
         rec = {
             "key": key, "group": inv, "bracket": group_bracket(inv), "label": group_label(inv),
             "order": group_order(inv), "rank": len(inv),
@@ -114,6 +119,7 @@ def build():
             "first_dated": first,
             "first_source": first_source,
             "known": {cls: bool(classes[cls]) for cls in classes},
+            "exclusions": exclusions,
             "n_curves": len(mine),
             "infinite": {"simple": knowledge.infinite_record("simple", key), "split": knowledge.infinite_record("split", key)},
         }
@@ -126,6 +132,7 @@ def build():
             "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
             "classes": dict(CLASSES), "undecided": dict(UNDECIDED),
             "infinite": {"grades": knowledge.GRADE_TEXT, "labels": knowledge.GRADE_LABEL},
+            "exclusions": "proved impossibility, indexed by class; each entry has a reason, sources and a proof_url; an absent entry makes no impossibility claim",
             "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically",
         },
         "n_groups": len(groups),

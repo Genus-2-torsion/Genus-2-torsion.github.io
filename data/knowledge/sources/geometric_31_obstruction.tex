@@ -1,0 +1,274 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\title{No rational \(31\)-torsion on geometrically split abelian surfaces}
+\author{}
+\date{20 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem}\label{thm:main}
+Let \(A/\Q\) be a geometrically split abelian surface. Then
+\[
+ A(\Q)[31]=0.
+\]
+In particular, \([31]\) does not occur as the rational torsion subgroup
+of a geometrically split genus-\(2\) Jacobian over \(\Q\).
+\end{theorem}
+
+Here ``geometrically split'' means that \(A_{\overline{\Q}}\) is
+isogenous to a product of elliptic curves. We impose no restriction on
+the degree of this isogeny. The theorem does not require a principal
+polarization.
+
+\section{Inputs on torsion}
+
+For a positive integer \(d\), let \(S(d)\) be the set of primes that
+occur as the order of a torsion point on an elliptic curve over a
+number field of degree \(d\). We use the following results.
+\begin{enumerate}
+\item Derickx--Kamienny--Stein--Stoll \cite[Theorem 1.2]{DKSS} prove that
+\[
+ S(4)=\{2,3,5,7,11,13,17\},\qquad
+ S(6)=\{2,3,5,7,11,13,17,19,37\}.
+\]
+Hence an elliptic curve over a field of degree \(1,2,3,4,\) or \(6\)
+has no point of order \(31\). For degrees \(1\) and \(2\), extend
+to a field of degree \(4\); for degree \(3\), extend to one of degree
+\(6\).
+\item Khawaja \cite[Theorem 1.2]{Khawaja} proves that
+\[
+ S(8)=\{2,3,5,7,11,13,17,19,23\}.
+\]
+Thus an elliptic curve over a degree-\(8\) number field has no point
+of order \(31\).
+\item Clark \cite[Theorem 5]{Clark} proves that, if an abelian surface
+over \(\Q\) has everywhere potentially good reduction, its rational
+torsion order belongs to
+\[
+ \{1,\ldots,16,18,19,20,22,24,25,28,30,36,48,60,72\}.
+\]
+None of these integers is divisible by \(31\).
+\end{enumerate}
+
+We also use the standard independence of the semisimplified residual
+representation from the choice of a stable lattice. It applies to
+isomorphic \(p\)-adic representations after transporting a lattice
+through the isomorphism.
+
+\section{The elementary cases and the endomorphism field}
+
+Suppose that \(P\in A(\Q)\) has order \(31\).
+First suppose that \(A_{\overline{\Q}}\) is isogenous to
+\(E_1\times E_2\), where the elliptic curves \(E_1,E_2\) are not
+geometrically isogenous. There are exactly two geometric elliptic
+subvarieties of \(A\). Galois permutes them, so both are defined over
+a field \(K\) with \([K:\Q]\leq2\). Choose one of them, \(E\),
+and put \(F=A_K/E\). The exact sequence
+\[
+ 0\longrightarrow E\longrightarrow A_K\longrightarrow F
+ \longrightarrow0
+\]
+shows that \(P\) either belongs to \(E(K)\) or maps to a point of
+order \(31\) in \(F(K)\). Both possibilities contradict the elliptic
+torsion bounds above.
+
+Next suppose that \(A_{\overline{\Q}}\) is isogenous to \(E^2\),
+where \(E\) has complex multiplication. CM elliptic curves have
+everywhere potentially good reduction. This property is preserved by
+products and isogenies, and descends from a finite extension of the
+ground field. Hence \(A\) has everywhere potentially good reduction,
+and Clark's theorem gives a contradiction.
+
+It remains to consider the case where \(A_{\overline{\Q}}\) is
+isogenous to \(E^2\) for a non-CM elliptic curve \(E\). Then
+\[
+ D=\End^0(A_{\overline{\Q}})\simeq M_2(\Q).
+\]
+Let \(L/\Q\) be the smallest field over which all geometric
+endomorphisms of \(A\) are defined. It is a finite Galois extension.
+Put \(\Gamma=\Gal(L/\Q)\). By Skolem--Noether, its faithful action
+on \(D\) embeds \(\Gamma\) into \(\PGL_2(\Q)\).
+
+A finite subgroup of \(\PGL_2(\mathbb R)\) is cyclic or dihedral:
+it fixes a point of the hyperbolic plane, and its action on the tangent
+plane embeds it in \(O(2)\). If an element of \(\PGL_2(\Q)\) has
+order \(n>2\), the ratio of the eigenvalues of a representative \(M\)
+is a primitive \(n\)-th root of unity \(\zeta\). Thus
+\[
+ \frac{(\operatorname{tr}M)^2}{\det M}
+ =2+\zeta+\zeta^{-1}\in\Q,
+\]
+which implies \(n\in\{3,4,6\}\). Hence \(\Gamma\) is cyclic of
+order \(1,2,3,4,\) or \(6\), or dihedral of order \(4,6,8,\) or
+\(12\). Here the dihedral group of order \(4\) is the Klein four
+group. In particular,
+\[
+ [L:\Q]\in\{1,2,3,4,6,8,12\}.
+\]
+
+Every geometric elliptic subvariety of \(A\) is defined over \(L\):
+it is the image of an integral multiple of an idempotent in \(D\).
+Applying the elliptic exact sequence over \(L\) and the torsion
+bounds from Section~1 excludes every listed degree except \(12\).
+We are therefore left with
+\[
+ \Gamma=D_{12},
+\]
+where the subscript denotes the group order. Its rotation subgroup
+\(C=\langle r\rangle\) has order \(6\). Put \(K=L^C\), so
+\([K:\Q]=2\).
+
+\section{A stable split quadratic order}
+
+Set \(p=31\), \(k=\Q_p\), and \(\mathcal O=\Z_p\). Identify
+\(D\otimes_{\Q}k\) with \(M_2(k)\), and normalize a matrix
+representative \(R\) of \(r\) to have trace \(1\). Since \(r\)
+has projective order \(6\), the characteristic polynomial of \(R\) is
+\[
+ X^2-X+\frac13.
+\]
+Its discriminant \(-1/3\) is a nonzero square modulo \(31\): it is
+\(10\) modulo \(31\), and \(14^2\equiv10\pmod{31}\). Thus its
+eigenvalues \(\alpha,\beta\) lie in \(\mathcal O^\times\), and
+\(\alpha-\beta\) is a unit. It follows that
+\[
+ \mathcal B=\mathcal O[R]\simeq\mathcal O\times\mathcal O.
+\]
+Write \(e_1,e_2\) for its two orthogonal idempotents.
+
+Conjugation by \(\Gamma\) sends \(r\) to \(r\) or \(r^{-1}\).
+The trace-normalized representative of \(r^{-1}\) is \(1-R\), so
+\(\Gamma\) preserves \(\mathcal B\) and permutes
+\(\{e_1,e_2\}\). The rotation subgroup fixes each idempotent, and
+every element outside it exchanges them.
+
+Let \(T=T_p(A)\), and set
+\[
+ T'=\mathcal B T.
+\]
+Since \(\mathcal B\) is finite free over \(\mathcal O\), this is a
+full lattice in \(V_p(A)\). It is stable under
+\(G_{\Q}=\Gal(\overline{\Q}/\Q)\), since both \(T\) and
+\(\mathcal B\) are stable. We obtain
+\[
+ T'=T_1\oplus T_2,\qquad T_i=e_iT'.
+\]
+Each \(T_i\) is free of rank \(2\) over \(\mathcal O\): the
+four-dimensional \(M_2(k)\)-module \(V_p(A)\) is the sum of two
+copies of its standard module. The group \(G_K\) preserves each
+\(T_i\), while every element of \(G_{\Q}\setminus G_K\) exchanges
+the two summands.
+
+\section{The two summands differ by a character}
+
+Put \(V_i=T_i\otimes_{\mathcal O}k\), and choose an off-diagonal
+matrix unit \(X\in e_1M_2(k)e_2\). The action of \(G_K\) on
+\(D\otimes k\) is through \(C\). Consequently
+\[
+ g(X)=\eta(g)X\qquad(g\in G_K),
+\]
+where \(\eta:G_K\to k^\times\) is the eigenvalue-ratio character,
+with value \(\alpha/\beta\) on a lift of \(r\). It factors through
+\(\Gal(L/K)=C\) and has exact order \(6\). Its values are units,
+and its reduction \(\overline\eta\) also has exact order \(6\),
+since reduction is injective on roots of unity of order prime to \(31\).
+
+The matrix unit \(X:V_2\to V_1\) is an isomorphism, and the equality
+\(gXg^{-1}=\eta(g)X\) gives
+\[
+ V_1\simeq\eta\otimes V_2
+\]
+as \(G_K\)-representations. Put \(M_i=T_i/pT_i\). Applying
+lattice independence to this isomorphism gives
+\[
+ M_1^{\mathrm{ss}}\simeq
+ \overline\eta\otimes M_2^{\mathrm{ss}}.
+\]
+This step does not require \(X\) to carry \(T_2\) onto \(T_1\)
+integrally.
+
+\section{The determinant contradiction}
+
+The point \(P\) generates a trivial submodule of
+\(A[p]=T/pT\). By lattice independence, \(T'/pT'\) therefore has a
+trivial \(G_{\Q}\)-composition factor. Restriction to \(G_K\) is
+exact, so at least one of \(M_1,M_2\) has a trivial
+\(G_K\)-composition factor. An element of \(G_{\Q}\setminus G_K\)
+conjugates these two \(G_K\)-modules. Since a trivial module remains
+trivial under conjugation, both have a trivial composition factor.
+
+The relation
+\(M_1^{\mathrm{ss}}\simeq\overline\eta\otimes M_2^{\mathrm{ss}}\)
+shows that \(\overline\eta^{-1}\) is also a composition factor of
+\(M_2\). Since \(M_2\) has dimension \(2\) and
+\(\overline\eta\) is nontrivial, we obtain
+\[
+ M_2^{\mathrm{ss}}\simeq\mathbf1\oplus\overline\eta^{-1},
+ \qquad
+ M_1^{\mathrm{ss}}\simeq\overline\eta\oplus\mathbf1.
+\]
+Hence
+\[
+ \det(T'/pT')|_{G_K}=\det(M_1)\det(M_2)=1.
+\]
+
+Every abelian variety over \(\Q\) has a polarization over \(\Q\).
+The induced nondegenerate alternating pairing on \(V_p(A)\) shows
+that the determinant of its \(p\)-adic representation is the square
+of the \(p\)-adic cyclotomic character. A change of stable lattice
+does not change this determinant. Writing
+\(\chi_p:G_{\Q}\to\F_p^\times\) for the mod-\(p\) cyclotomic
+character, we therefore have
+\[
+ \chi_{31}^2|_{G_K}=1.
+\]
+The character \(\chi_{31}^2\) has order \(15\), and its kernel
+fixes \(\Q(\zeta_{31}+\zeta_{31}^{-1})\), a field of degree \(15\)
+over \(\Q\). The displayed identity would put this field inside the
+quadratic field \(K\), a contradiction. This proves
+Theorem~\ref{thm:main}.
+\hfill\(\square\)
+
+\section{Consequence for the census}
+
+The group
+\href{https://genus-2-torsion.github.io/group.html?g=31}{\([31]\)}
+is impossible in both the class ``split over \(\Q\)'' and the class
+``geometrically split, simple over \(\Q\)''.
+The argument applies to every geometric splitting degree, including
+degrees divisible by \(31\). It uses a stable split quadratic order
+at \(31\), without requiring a stable maximal order or a maximal
+integral endomorphism ring.
+
+\begin{thebibliography}{9}
+\bibitem{DKSS}
+M. Derickx, S. Kamienny, W. Stein and M. Stoll,
+\emph{Torsion points on elliptic curves over number fields of small
+degree}, Algebra \& Number Theory \textbf{17} (2023), 267--308, Theorem 1.2.
+\href{https://arxiv.org/pdf/1707.00364}{arXiv:1707.00364}.
+
+\bibitem{Khawaja}
+M. Khawaja,
+\emph{Torsion primes for elliptic curves over degree \(8\) number fields},
+Research in Number Theory \textbf{10} (2024), article 48, Theorem 1.2.
+\href{https://eprints.whiterose.ac.uk/id/eprint/211212/8/s40993-024-00533-6.pdf}{Published article}.
+
+\bibitem{Clark}
+P. L. Clark,
+\emph{Bounds for torsion on abelian varieties with integral moduli},
+arXiv:math/0407264v2 (2004), Theorem 5.
+\href{https://arxiv.org/pdf/math/0407264}{arXiv:math/0407264}.
+\end{thebibliography}
+
+\end{document}

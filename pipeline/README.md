@@ -53,7 +53,9 @@ in the group's `exclusions` field and refuses to build if an exclusion contradic
 example in that class. These records are separate from the combined geometrically split
 infinitude status. If both split classes are excluded, `infinite_record("split", key)` returns
 `grade: "impossible"` with a proof URL, and the build also rejects a geometrically split example
-whose class over ℚ is undecided. This currently applies to [23] and [29].
+whose class over ℚ is undecided. This currently applies to [23], [29], [31], [33], and [34].
+The exclusions for [35] and [70] apply only to `gsplit`; both have `qsplit` examples, so
+their combined infinitude records retain their existing grades.
 
 Facts about infinitely many realisations live in `knowledge.py` (`_SIMPLE_EXACT`, `_SIMPLE_FAMILY`,
 `_SIMPLE_OPEN_NOTES`, `_SPLIT_FAMILY`, `_SPLIT_OPEN_NOTES`) with their sources in `SOURCES`; copies of

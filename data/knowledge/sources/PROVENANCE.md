@@ -400,6 +400,48 @@ before the conductor (logs `data/logs/<id>.conductor.log`). All 187 curves now h
 - The notes of 3.9.c said the curve "is due to the database cited under Reference". Since 20 October it is
   credited to Leprévost 1995 (C₃), and the note now says so.
 
+## Further geometric exclusions (20 October 2026)
+
+The following complete proofs, with standalone LaTeX sources, add five
+exclusions to the geometrically split, ℚ-simple column:
+
+* [31]: [`geometric-31-obstruction.html`](../../../proofs/geometric-31-obstruction.html)
+  and [`geometric_31_obstruction.tex`](geometric_31_obstruction.tex).
+* [33] and [34]:
+  [`geometric-33-34-obstruction.html`](../../../proofs/geometric-33-34-obstruction.html)
+  and [`geometric_33_34_obstruction.tex`](geometric_33_34_obstruction.tex).
+* [35] and [70]: [`qsimple-35-obstruction.html`](../../../proofs/qsimple-35-obstruction.html)
+  and [`qsimple_35_obstruction.tex`](qsimple_35_obstruction.tex).
+
+The first two proofs exclude rational points of orders 31, 33, and 34
+on every geometrically split abelian surface over ℚ. Their combined
+split infinitude records are therefore `impossible`. The third proof
+requires simplicity over ℚ and excludes a rational point of order 35,
+so it applies to [35] and [70] only in `gsplit`. Both groups have
+split-over-ℚ examples; neither receives a combined `impossible` grade.
+
+The proofs were developed and independently reviewed in
+`random_research/g2_gsplit_exclusions_2026_10_20/proof31.md`,
+`proof_33.md`, `proof_34.md`, and `proof_35_qsimple.md`.
+All allow arbitrary geometric splitting degrees.
+
+For [31], a Galois-stable split quadratic order decomposes the residual
+Tate module into two blocks exchanged over a quadratic field. A rational
+31-point forces an impossible cyclotomic determinant. For [33] and [34],
+the endomorphism-field argument reduces to elliptic isogeny classes over
+fields of degree 1, 2, or 4. Factoring an isogeny by the primary part of
+its kernel combines the two distinct torsion primes on one elliptic curve.
+Derickx–Najman, *Classification of torsion of elliptic curves over quartic
+fields*, Theorem 1.1, excludes orders 33 and 34 there.
+
+For [35] and [70], polarization duality strengthens the cyclotomic
+consequence of the residual tensor argument to ℚ(ζ_p) ⊆ L.
+Applying this at 5 and 7 restricts the endomorphism field to degree
+1, 2, or 4. The same coprime-isogeny argument then contradicts the
+quartic exclusion of order 35. The CM square cases use Clark, Theorem 5;
+[31] also uses the elliptic torsion-prime bounds of
+Derickx–Kamienny–Stein–Stoll and Khawaja.
+
 ## LMFDB labels
 
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels

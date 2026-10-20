@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 16:04 UTC",
+  "generated": "2026-10-20 16:18 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -49,8 +49,8 @@
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 24,
-      "impossible": 2
+      "open": 21,
+      "impossible": 5
     }
   },
   "n_rejected": 0,
@@ -5669,6 +5669,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ has no rational point of order 31. The proof applies to every geometric splitting degree.",
+          "sources": [
+            "Geometric31Obstruction",
+            "DKSS2023",
+            "Khawaja2024",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/geometric-31-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -5683,9 +5693,15 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric31Obstruction",
+            "DKSS2023",
+            "Khawaja2024",
+            "Clark2004"
+          ],
+          "note": "A geometrically split abelian surface over ℚ has no rational point of order 31. The proof applies to every geometric splitting degree.",
+          "proof_url": "proofs/geometric-31-obstruction.html",
           "inherited_from": null
         }
       }
@@ -5896,6 +5912,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
+          "sources": [
+            "Geometric3334Obstruction",
+            "Mazur1977",
+            "DNQuartic2025",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/geometric-33-34-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -5907,9 +5933,15 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric3334Obstruction",
+            "Mazur1977",
+            "DNQuartic2025",
+            "Clark2004"
+          ],
+          "note": "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
+          "proof_url": "proofs/geometric-33-34-obstruction.html",
           "inherited_from": null
         }
       }
@@ -6010,6 +6042,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
+          "sources": [
+            "Geometric3334Obstruction",
+            "Mazur1977",
+            "DNQuartic2025",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/geometric-33-34-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -6021,9 +6063,15 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric3334Obstruction",
+            "Mazur1977",
+            "DNQuartic2025",
+            "Clark2004"
+          ],
+          "note": "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
+          "proof_url": "proofs/geometric-33-34-obstruction.html",
           "inherited_from": null
         }
       }
@@ -6116,7 +6164,17 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 35. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+          "sources": [
+            "QSimple35Obstruction",
+            "DNQuartic2025",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/qsimple-35-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -7086,7 +7144,17 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 35. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+          "sources": [
+            "QSimple35Obstruction",
+            "DNQuartic2025",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/qsimple-35-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {

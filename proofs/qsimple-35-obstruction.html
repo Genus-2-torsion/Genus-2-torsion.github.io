@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No 35-torsion on geometrically split, ℚ-simple surfaces — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that a geometrically split abelian surface over Q that is simple over Q has no rational point of order 35. This excludes [35] and [70] in the geometrically split, Q-simple class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=35">[35]</a>, <a href="../group.html?g=70">[70]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>An obstruction to rational \(35\)-torsion on geometrically split abelian surfaces</h2>
+  <p class="src">20 October 2026 · Geometrically split, simple over ℚ</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and
+      geometrically split. Then \(A(\Q)\) has no point of order \(35\).</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\overline{\Q}}\) is isogenous to a product of elliptic
+    curves. In particular, the groups <a href="../group.html?g=35">[35]</a> and
+    <a href="../group.html?g=70">[70]</a> cannot occur as the rational torsion subgroup of a
+    geometrically split genus-\(2\) Jacobian that is simple over \(\Q\).</p>
+  <p>The hypothesis of simplicity over \(\Q\) is essential. A product of elliptic curves over \(\Q\)
+    with rational points of orders \(5\) and \(7\) has a rational point of order \(35\).</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsimple_35_obstruction.tex">Complete proof (LaTeX source)</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#inputs">Inputs on elliptic torsion and reduction</a></li>
+      <li><a href="#combining">Combining torsion primes in an elliptic isogeny class</a></li>
+      <li><a href="#elementary-cases">Nonisogenous factors and the CM case</a></li>
+      <li><a href="#endomorphism-field">The endomorphism field</a></li>
+      <li><a href="#cyclotomic">An irreducible projective factor and the cyclotomic field</a></li>
+      <li><a href="#primes">The primes \(5\) and \(7\)</a></li>
+      <li><a href="#completion">Completion of the proof</a></li>
+      <li><a href="#census">Consequences for the census</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="inputs">
+    <h3>1. Inputs on elliptic torsion and reduction</h3>
+    <p>By <a href="#derickx-najman">Derickx–Najman, Theorem 1.1</a>, no elliptic curve over a quartic
+      number field has a point of order \(35\). The same holds over fields of degree \(1\) or \(2\),
+      by extending the ground field to degree \(4\).</p>
+    <p>We also use <a href="#clark">Clark's Theorem 5</a>: if an abelian surface over \(\Q\) has
+      everywhere potentially good reduction, the order of its rational torsion subgroup belongs to</p>
+    <div class="equation">\[
+      \{1,\ldots,16,18,19,20,22,24,25,28,30,36,48,60,72\}.
+    \]</div>
+    <p>None of these integers is divisible by \(35\).</p>
+  </section>
+
+  <section id="combining">
+    <h3>2. Combining torsion primes in an elliptic isogeny class</h3>
+    <div class="theorem" id="combining-lemma">
+      <p><strong>Lemma 1.</strong> Let \(p\) and \(q\) be distinct primes. Suppose \(E_p\) and \(E_q\)
+        are \(K\)-isogenous elliptic curves over a number field \(K\), with points of orders \(p\) and
+        \(q\) in \(E_p(K)\) and \(E_q(K)\), respectively. Their \(K\)-isogeny class contains an elliptic
+        curve with a \(K\)-rational point of order \(pq\).</p>
+    </div>
+    <p><strong>Proof.</strong> Choose a \(K\)-isogeny \(f:E_p\to E_q\), and let \(H\) be the \(q\)-primary
+      subgroup of \(\ker f\). Factor \(f\) as</p>
+    <div class="equation">\[
+      E_p\xrightarrow{a}E'=E_p/H\xrightarrow{b}E_q.
+    \]</div>
+    <p>The degree of \(a\) is a power of \(q\), so \(a\) preserves the order of the given \(p\)-torsion
+      point. The degree of \(b\) is prime to \(q\), so its dual maps the given \(q\)-torsion point
+      injectively into \(E'(K)\). The sum of the resulting points has order \(pq\). ∎</p>
+    <p>In the rest of the proof, suppose that \(A(\Q)\) contains a point of order \(35\).
+      Choose nonzero points \(P_p\in A(\Q)[p]\) for \(p\in\{5,7\}\).</p>
+  </section>
+
+  <section id="elementary-cases">
+    <h3>3. Nonisogenous factors and the CM case</h3>
+    <p>Suppose first that \(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\), where \(E_1\) and
+      \(E_2\) are not geometrically isogenous. There are exactly two geometric elliptic subvarieties
+      of \(A\), and Galois permutes them. Since \(A\) is simple over \(\Q\), this action is nontrivial.
+      Thus the two subvarieties \(E\) and \(E^\sigma\) are defined over a quadratic field \(K\), and
+      its nontrivial automorphism \(\sigma\) interchanges them.</p>
+    <p>Put \(F=A_K/E\). The restriction \(E^\sigma\to F\) of the quotient map is a \(K\)-isogeny.
+      Indeed, its kernel is finite, and its image is a nonzero elliptic subvariety of \(F\).
+      Conjugating, we find that \(F^\sigma\) is \(K\)-isogenous to \(E\).</p>
+    <p>For each \(p\in\{5,7\}\), the image of \(P_p\) in \(F(K)\) either has order \(p\) or is zero.
+      In the first case \(F^\sigma(K)\) contains a point of order \(p\). In the second case
+      \(P_p\in E(K)\). Thus, for each \(p\in\{5,7\}\), the \(K\)-isogeny class of \(E\) contains a curve
+      with a \(K\)-rational point of order \(p\).</p>
+    <p>By <a href="#combining-lemma">Lemma 1</a>, this class contains an elliptic curve over \(K\)
+      with a point of order \(35\). This contradicts the quartic torsion classification, after a
+      quadratic extension of \(K\). This argument also covers nonisogenous CM factors.</p>
+    <p>Suppose next that \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\) has complex
+      multiplication. CM elliptic curves have everywhere potentially good reduction. This property
+      is preserved by products and isogenies, and descends from a finite extension of the ground field.
+      Hence \(A\) has everywhere potentially good reduction, and Clark's theorem gives a contradiction.</p>
+    <p>It remains to consider the case \(A_{\overline{\Q}}\sim E^2\), with \(E\) non-CM.</p>
+  </section>
+
+  <section id="endomorphism-field">
+    <h3>4. The endomorphism field</h3>
+    <p>In this case</p>
+    <div class="equation">\[
+      D=\End^0(A_{\overline{\Q}})\simeq M_2(\Q).
+    \]</div>
+    <p>Let \(L/\Q\) be the smallest field over which all geometric endomorphisms of \(A\) are defined,
+      and put \(\Gamma=\Gal(L/\Q)\). The extension \(L/\Q\) is finite Galois.
+      For a number field \(K\subset\overline{\Q}\), write \(G_K=\Gal(\overline{\Q}/K)\).
+      By Skolem–Noether, the faithful
+      action of \(\Gamma\) on \(D\) identifies it with a finite subgroup of</p>
+    <div class="equation">\[
+      \operatorname{Aut}_{\Q}(M_2(\Q))=\PGL_2(\Q).
+    \]</div>
+    <p>A finite subgroup of \(\PGL_2(\mathbb R)\) is cyclic or dihedral. Indeed, its action on the
+      hyperbolic plane fixes a point, and the action on the tangent plane embeds it in \(O(2)\).
+      If an element of \(\PGL_2(\Q)\) has order \(n&gt;2\), the ratio of the eigenvalues of a representative
+      \(M\) is a primitive \(n\)-th root of unity \(\zeta\), and</p>
+    <div class="equation">\[
+      \frac{(\operatorname{tr}M)^2}{\det M}=2+\zeta+\zeta^{-1}\in\Q.
+    \]</div>
+    <p>Hence \(n\in\{3,4,6\}\). It follows that</p>
+    <div class="equation">\[
+      \Gamma\in\{C_1,C_2,C_3,C_4,C_6,D_4,D_6,D_8,D_{12}\},
+    \]</div>
+    <p>where the subscript on a dihedral group denotes its order. In particular, \(D_4=C_2\times C_2\).</p>
+  </section>
+
+  <section id="cyclotomic">
+    <h3>5. An irreducible projective factor and the cyclotomic field</h3>
+    <div class="theorem" id="cyclotomic-lemma">
+      <p><strong>Lemma 2.</strong> Let \(p\) be an odd prime. Suppose \(\Gamma\) preserves a maximal
+        \(\Z_p\)-order \(\mathcal R\) in \(M_2(\Q_p)\), and the induced projective action on its natural
+        two-dimensional residual module is irreducible over \(\F_p\). If \(A(\Q)[p]\neq0\), then
+        \(\Q(\zeta_p)\subseteq L\).</p>
+    </div>
+    <p><strong>Proof.</strong> Write \(\mathcal R=\End_{\Z_p}(\Lambda)\) for a lattice
+      \(\Lambda\subset\Q_p^2\). Let \(T=T_p(A)\), and put</p>
+    <div class="equation">\[
+      T'=\mathcal R T.
+    \]</div>
+    <p>Since \(\mathcal R\) is finite free over \(\Z_p\), this is a full lattice in \(V_p(A)\).
+      It is \(G_{\Q}\)-stable, since \(T\) and \(\mathcal R\) are stable. After choosing a basis of
+      \(\Lambda\), the matrix units of \(\mathcal R=M_2(\Z_p)\) give</p>
+    <div class="equation">\[
+      T'\simeq\Lambda\otimes_{\Z_p}W_0,
+    \]</div>
+    <p>where \(W_0=e_{11}T'\) is free of rank \(2\). The off-diagonal matrix units identify
+      \(e_{11}T'\) and \(e_{22}T'\), giving the displayed decomposition.</p>
+    <p>Put \(\overline V=T'/pT'\). By independence of the semisimplified residual representation from
+      the choice of a stable lattice, \(\overline V\) and \(T/pT=A[p]\) have the same composition
+      factors. Since \(A(\Q)[p]\neq0\), the module \(\overline V\) has a trivial composition factor.</p>
+    <p>The action of \(G_{\Q}\) on \(\overline V\) normalizes \(M_2(\F_p)\) acting on
+      \(U=\Lambda/p\Lambda\). Its projective action on \(U\) factors through \(\Gamma\).
+      Pull back the central extension</p>
+    <div class="equation">\[
+      1\longrightarrow\F_p^\times\longrightarrow\GL_2(\F_p)
+      \longrightarrow\PGL_2(\F_p)\longrightarrow1
+    \]</div>
+    <p>along this projective action of \(G_{\Q}\), and denote the resulting group by \(\widetilde G\).
+      There are two-dimensional \(\widetilde G\)-modules \(U\) and \(W\) with</p>
+    <div class="equation">\[
+      \overline V\simeq U\otimes_{\F_p}W.
+    \]</div>
+    <p>Explicitly, an element \((g,B)\in\widetilde G\) acts on \(U\) through \(B\). Multiplying the
+      action of \(g\) on \(\overline V\) by \(B^{-1}\) on the first factor gives an operator commuting
+      with \(M_2(\F_p)\); it therefore acts on the second factor and defines the action on \(W\).
+      All these actions factor through a common finite quotient of \(\widetilde G\).</p>
+    <p>The module \(U\) is irreducible by assumption. The normal subgroup</p>
+    <div class="equation">\[
+      H=\{(h,I):h\in G_L\}\subseteq\widetilde G
+    \]</div>
+    <p>acts trivially on \(U\). The trivial composition factor of \(\overline V\) remains trivial on
+      pullback to \(\widetilde G\).</p>
+    <p>If \(W\) were reducible, its two composition factors would be characters. Tensoring a
+      composition series with \(U\), the composition factors of \(U\otimes W\) would then be
+      irreducible two-dimensional twists of \(U\). This contradicts the existence of a trivial
+      composition factor. Thus \(W\) is irreducible.</p>
+    <p>The restriction \(W|_H\) is semisimple. To see this in modular characteristic, choose a
+      simple \(H\)-submodule of \(W\). Its \(\widetilde G\)-translates are simple \(H\)-submodules,
+      by normality of \(H\). Their sum is a nonzero \(\widetilde G\)-submodule of \(W\), hence all of \(W\).</p>
+    <p>Restriction to \(H\) preserves the existence of a trivial composition factor. Since
+      \(\overline V|_H\) is two copies of the semisimple module \(W|_H\), it follows that \(W^H\neq0\).
+      Normality of \(H\) makes \(W^H\) a \(\widetilde G\)-submodule. Irreducibility gives \(W^H=W\).
+      Hence \(\overline V|_{G_L}\) is the trivial four-dimensional representation.</p>
+    <p>Choose a polarization of \(A\) over \(\Q\), which exists for every abelian variety over \(\Q\).
+      It gives an isomorphism of rational \(p\)-adic representations</p>
+    <div class="equation">\[
+      V_p(A)\simeq V_p(A)^*\otimes_{\Q_p}\Q_p(1).
+    \]</div>
+    <p>Transport the lattice
+      \(\operatorname{Hom}_{\Z_p}(T',\Z_p)\otimes_{\Z_p}\Z_p(1)\)
+      into \(V_p(A)\) by this isomorphism. Its reduction and \(\overline V\) have the same
+      semisimplification as \(G_L\)-modules. The latter consists of four copies of the trivial
+      character, while the former consists of four copies of the mod-\(p\) cyclotomic character
+      \(\chi_p|_{G_L}\). Therefore \(\chi_p|_{G_L}=1\), which is equivalent to
+      \(\Q(\zeta_p)\subseteq L\). ∎</p>
+    <p>The polarization is used on the rational Tate module. Thus the argument applies even if its
+      degree is divisible by \(p\). The comparison of lattices uses only their residual semisimplifications.</p>
+  </section>
+
+  <section id="primes">
+    <h3>6. The primes \(5\) and \(7\)</h3>
+    <p>Suppose first that \(\Gamma\) has a normal rotation subgroup \(\langle r\rangle\) of order
+      \(n=3\) or \(6\). This occurs for</p>
+    <div class="equation">\[
+      \Gamma\in\{C_3,C_6,D_6,D_{12}\}.
+    \]</div>
+    <p>Normalize a matrix representative of \(r\) to have trace \(1\). The resulting matrix \(R\)
+      has characteristic polynomial</p>
+    <div class="equation">\[
+      \begin{cases}
+        X^2-X+1,&amp;n=3,\\
+        X^2-X+1/3,&amp;n=6.
+      \end{cases}
+    \]</div>
+    <p>The discriminants \(-3\) and \(-1/3\) are nonsquare units modulo \(5\).
+      Hence \(\Q_5[R]\) is the unramified quadratic extension of \(\Q_5\), with ring of integers \(\Z_5[R]\).</p>
+    <p>An \(R\)-stable \(\Z_5\)-lattice in \(\Q_5^2\) is a rank-one \(\Z_5[R]\)-module, hence a
+      fractional ideal of this ring. Since the extension is unramified, all these lattices are
+      homothetic under \(\Q_5^\times\). Moreover, \(\det R\) is a unit, so a homothety class fixed by
+      \(r\) has an \(R\)-stable representative. Thus \(r\) fixes a unique homothety class of lattices.</p>
+    <p>Conjugation by \(\Gamma\) sends \(r\) to \(r\) or \(r^{-1}\). These elements have the same
+      invariant lattice classes. It follows that \(\Gamma\) preserves the unique class above.
+      For a representative \(\Lambda\),</p>
+    <div class="equation">\[
+      \mathcal R=\End_{\Z_5}(\Lambda)
+    \]</div>
+    <p>is a \(\Gamma\)-stable maximal order. Every projective element of \(\Gamma\) has a representative
+      in \(\GL(\Lambda)\), so it acts projectively on \(\Lambda/5\Lambda\). This residual projective
+      action is irreducible, since the reduction of \(R\) has irreducible characteristic polynomial.</p>
+    <p>Since \(A(\Q)[5]\neq0\), <a href="#cyclotomic-lemma">Lemma 2</a> gives
+      \(\Q(\zeta_5)\subseteq L\). Hence \(\Gamma\) has a cyclic quotient of order \(4\). The groups
+      \(C_3\) and \(C_6\) have orders not divisible by \(4\), while the abelianizations of \(D_6\) and \(D_{12}\)
+      are \(C_2\) and \(C_2\times C_2\), respectively. None has a cyclic quotient of order \(4\),
+      a contradiction.</p>
+    <p>The remaining groups with a rotation of order greater than \(2\) are \(C_4\) and \(D_8\).
+      For a rotation of order \(4\), the trace-\(1\) representative has characteristic polynomial</p>
+    <div class="equation">\[
+      X^2-X+\frac12.
+    \]</div>
+    <p>Its discriminant is \(-1\), a nonsquare unit modulo \(7\). The same lattice argument,
+      now over \(\Q_7\), produces a stable maximal order with irreducible residual projective action.
+      Since \(A(\Q)[7]\neq0\), <a href="#cyclotomic-lemma">Lemma 2</a> gives
+      \(\Q(\zeta_7)\subseteq L\). Its degree is \(6\), which divides neither \(4\) nor \(8\),
+      again a contradiction.</p>
+    <p>We are left with</p>
+    <div class="equation">\[
+      \Gamma\in\{C_1,C_2,D_4\}.
+    \]</div>
+    <p>In particular, \([L:\Q]\in\{1,2,4\}\).</p>
+  </section>
+
+  <section id="completion">
+    <h3>7. Completion of the proof</h3>
+    <p>Every geometric elliptic subvariety of \(A\) is defined over \(L\), since it is the image of
+      an integral multiple of an idempotent in \(D\). Choose one, \(E\), and put \(F=A_L/E\).
+      The elliptic curves \(E\) and \(F\) are \(L\)-isogenous: the geometric rational homomorphisms
+      between the factors come from the matrix algebra \(D\), all of whose endomorphisms are
+      defined over \(L\).</p>
+    <p>For each \(p\in\{5,7\}\), the exact sequence</p>
+    <div class="equation">\[
+      0\longrightarrow E\longrightarrow A_L\longrightarrow F\longrightarrow0
+    \]</div>
+    <p>shows that either \(E(L)\) or \(F(L)\) contains a point of order \(p\). Thus their common
+      \(L\)-isogeny class contains curves with rational points of orders \(5\) and \(7\).
+      By <a href="#combining-lemma">Lemma 1</a>, it contains an elliptic curve over \(L\) with a point
+      of order \(35\). Since \([L:\Q]\in\{1,2,4\}\), this contradicts the quartic torsion
+      classification. This proves the theorem. ∎</p>
+  </section>
+
+  <section id="census">
+    <h3>8. Consequences for the census</h3>
+    <p>The groups <a href="../group.html?g=35">[35]</a> and <a href="../group.html?g=70">[70]</a>
+      are impossible in the class “geometrically split, simple over \(\Q\)”.
+      The theorem places no restriction on the geometric splitting degree or on the integral
+      geometric endomorphism ring. It applies to abelian surfaces without assuming a principal polarization.</p>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="derickx-najman"><p>M. Derickx and F. Najman,
+        <a href="https://arxiv.org/html/2412.16016v2"><i>Classification of torsion of elliptic curves
+        over quartic fields</i></a>, arXiv:2412.16016v2 (2025), Theorem 1.1.</p></li>
+      <li id="clark"><p>P. L. Clark,
+        <a href="https://arxiv.org/pdf/math/0407264"><i>Bounds for torsion on abelian varieties with
+        integral moduli</i></a>, arXiv:math/0407264v2 (2004), Theorem 5.</p></li>
+    </ol>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsimple-35-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

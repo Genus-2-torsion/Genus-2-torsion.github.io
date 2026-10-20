@@ -91,23 +91,50 @@ SOURCES = {
         "url": "proofs/geometric-23-29-obstruction.html",
         "used_for": "impossibility of [23] and [29] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
     },
+    "Geometric31Obstruction": {
+        "short": "geometric [31] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational 31-torsion on a geometrically split abelian surface, census proof of 20 October 2026. Elliptic torsion bounds and a Galois-stable split quadratic order in the geometric endomorphism algebra.",
+        "url": "proofs/geometric-31-obstruction.html",
+        "used_for": "impossibility of [31] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
+    },
+    "Geometric3334Obstruction": {
+        "short": "geometric [33] and [34] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational points of order 33 or 34 on geometrically split abelian surfaces, census proof of 20 October 2026. Combining coprime torsion within an elliptic isogeny class, quartic elliptic torsion, and the Galois action on geometric endomorphisms.",
+        "url": "proofs/geometric-33-34-obstruction.html",
+        "used_for": "impossibility of [33] and [34] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
+    },
+    "QSimple35Obstruction": {
+        "short": "ℚ-simple geometric [35] and [70] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational 35-torsion on a geometrically split abelian surface simple over Q, census proof of 20 October 2026. Coprime torsion in elliptic isogeny classes and a cyclotomic obstruction from the polarization.",
+        "url": "proofs/qsimple-35-obstruction.html",
+        "used_for": "impossibility of [35] and [70] only in the geometrically split, simple-over-ℚ class",
+    },
+    "DNQuartic2025": {
+        "short": "Derickx–Najman 2025", "year": 2025,
+        "cite": "M. Derickx, F. Najman, Classification of torsion of elliptic curves over quartic fields, arXiv:2412.16016v2 (2025).",
+        "url": "https://arxiv.org/abs/2412.16016v2",
+        "used_for": "Theorem 1.1: no elliptic curve over a quartic field has a point of order 33, 34, or 35; used in the geometric exclusions",
+    },
     "DKSS2023": {
         "short": "Derickx–Kamienny–Stein–Stoll 2023", "year": 2023,
         "cite": "M. Derickx, S. Kamienny, W. Stein, M. Stoll, Torsion points on elliptic curves over number fields of small degree, Algebra Number Theory 17 (2023), 267–308.",
         "url": "https://arxiv.org/abs/1707.00364",
-        "used_for": "Theorem 1.2: elliptic torsion primes over quartic fields are at most 17; used in the geometric [23] and [29] exclusions",
+        "used_for": "Theorem 1.2: quartic elliptic torsion primes are at most 17, and sextic primes are at most 19 or equal to 37; used in the geometric [23], [29], and [31] exclusions",
     },
     "Khawaja2024": {
         "short": "Khawaja 2024", "year": 2024,
         "cite": "M. Khawaja, Torsion primes for elliptic curves over degree 8 number fields, Res. Number Theory 10 (2024), article 48.",
         "url": "https://doi.org/10.1007/s40993-024-00533-6",
-        "used_for": "Theorem 1.2: elliptic torsion primes over degree-eight fields are at most 23; used in the geometric [29] exclusion",
+        "used_for": "Theorem 1.2: elliptic torsion primes over degree-eight fields are at most 23; used in the geometric [29] and [31] exclusions",
     },
     "Clark2004": {
         "short": "Clark 2004", "year": 2004,
         "cite": "P. L. Clark, Bounds for torsion on abelian varieties with integral moduli, arXiv:math/0407264v2 (2004).",
         "url": "https://arxiv.org/abs/math/0407264",
-        "used_for": "Theorem 5: possible rational torsion orders of abelian surfaces with everywhere potentially good reduction; excludes 23 and 29 in the CM case",
+        "used_for": "Theorem 5: possible rational torsion orders of abelian surfaces with everywhere potentially good reduction; excludes points of orders 23, 29, 31, 33, 34, and 35 in the CM square case",
     },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
@@ -189,6 +216,24 @@ def exclusions_record(key: str) -> dict:
             "reason": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
             "sources": ["Geometric2329Obstruction", "DKSS2023", "Khawaja2024", "Clark2004"],
             "proof_url": SOURCES["Geometric2329Obstruction"]["url"],
+        }
+    elif exponent % 31 == 0:
+        exclusions["gsplit"] = {
+            "reason": "A geometrically split abelian surface over ℚ has no rational point of order 31. The proof applies to every geometric splitting degree.",
+            "sources": ["Geometric31Obstruction", "DKSS2023", "Khawaja2024", "Clark2004"],
+            "proof_url": SOURCES["Geometric31Obstruction"]["url"],
+        }
+    elif exponent % 33 == 0 or exponent % 34 == 0:
+        exclusions["gsplit"] = {
+            "reason": "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
+            "sources": ["Geometric3334Obstruction", "Mazur1977", "DNQuartic2025", "Clark2004"],
+            "proof_url": SOURCES["Geometric3334Obstruction"]["url"],
+        }
+    elif exponent % 35 == 0:
+        exclusions["gsplit"] = {
+            "reason": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 35. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+            "sources": ["QSimple35Obstruction", "DNQuartic2025", "Clark2004"],
+            "proof_url": SOURCES["QSimple35Obstruction"]["url"],
         }
     return exclusions
 

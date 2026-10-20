@@ -1,0 +1,10 @@
+PASS: elliptic torsion orders, labels and all Kummer triples.
+PASS: explicit HLP model, discriminant and nonconstant elliptic j.
+PASS: conic parametrization, matching and the constant nonsquare obstructions.
+PASS: subgroup presentation has invariant factors [4,16].
+Fixed elliptic factor: #F(F_11)=16.
+Fixed elliptic factor: #F(F_13)=16.
+PASS: fixed elliptic factor has exact torsion [2,8].
+PASS: t=-1 seed is Q-isomorphic to census 4.16.a, exact torsion [4,16].
+PASS: s=2, t=-19/49 has exact [4,16] and is not Q-isomorphic to the seed.
+ALL ASSERTIONS PASSED.

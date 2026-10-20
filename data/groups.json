@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 11:18 UTC",
+  "generated": "2026-10-20 14:08 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -43,9 +43,9 @@
       "open": 36
     },
     "split": {
-      "exact": 69,
+      "exact": 70,
       "family": 0,
-      "open": 27
+      "open": 26
     }
   },
   "n_rejected": 0,
@@ -11012,9 +11012,12 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "exact",
+          "sources": [
+            "Split4162026",
+            "HLP2000"
+          ],
+          "note": "For every s ∈ ℚ, put t = −[3(3s² − 10s + 5)² + (3s² − 5)²]/[4(3s² − 5)²] and D = 256t² + 47t + 16. The curve y² = D(16x² + 9t)(175x² − 9(4t − 1)²)(9x² + (4t + 1)²) is smooth of genus 2, its Jacobian splits over ℚ, and its rational torsion is exactly [4,16]. It is the HLP (2,2)-gluing of E_t = [1, −(t² − 1/16), −(t² − 1/16), 0, 0] and F = [47/42, 5/49, 5/49, 0, 0], with exact elliptic torsion [2,4] and [2,8]. Their torsion Kummer images intersect in precisely the identity and (−15, −6, 10), forcing Jacobian torsion order 64; the matching class gives an order-16 point and group [4,16]. The nonconstant elliptic quotient j-invariant proves infinitely many geometric isomorphism classes. The member s = 1 (t = −1) is the census curve 4.16.a. No congruence restrictions or exceptional thin set are needed (complete proof and family_416_split_certificate.log, 2026-10-20).",
           "inherited_from": null
         }
       }

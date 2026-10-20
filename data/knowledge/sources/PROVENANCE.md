@@ -313,6 +313,30 @@ Found by the audit of 2026-10-18 of this site's own certificates (torsion_jac/no
 * [2]: `family_2_certificate.m` of 2026-09-18 listed exact fibers and the class t ≡ 1 (mod 15), on which gcd(#J(𝔽₃), #J(𝔽₅)) = 4, so exactness on that class needed the Hilbert-irreducibility step of the about page. It now uses the class t ≡ 2 (mod 15), with gcd 2.
 * [2,2,2,12]: the certificate cited BNSS Theorem 3.1 and the claim ψ(E) ⊂ S without checking them; step (0) now checks both over the function field of E.
 
+## Split [4,16] infinitude (20 October 2026)
+
+The complete proof is published at [`proofs/split-4-16.html`](../../../proofs/split-4-16.html),
+with LaTeX source [`split_416_infinitude.tex`](split_416_infinitude.tex).
+The standalone certificate is
+[`pipeline/magma/family_416_split_certificate.m`](../../../pipeline/magma/family_416_split_certificate.m);
+[`family_416_split_certificate.log`](family_416_split_certificate.log)
+records its successful execution in Magma V2.30-1 on 20 October 2026.
+The proof and certificate were developed in the local research directory
+`random_research/g2_split_416_infinitude_2026_10_20`.
+
+For every rational parameter, the explicit family is smooth, splits over ℚ,
+and has exact torsion [4,16]. Exactness follows from Mazur's elliptic torsion
+classification and an intersection of torsion Kummer images of order two.
+The varying elliptic quotient has nonconstant j-invariant, giving infinitely
+many geometric isomorphism classes. The construction uses
+Howe–Leprévost–Poonen, Propositions 3–4, with the root correspondence specified
+in the proof. The certificate checks the gluing formula, discriminant, Kummer
+identities, parameterization, and the explicit rational isomorphism from the
+member s = 1 to census example `4.16.a`. The general proof does not depend on
+the two sample torsion computations in the log.
+
+## LMFDB labels
+
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels
 `cond.class.disc.num` (permalinks on www.lmfdb.org) and extended-database labels
 `cond.class.num` (a 2026-08 snapshot of alpha.lmfdb.org, not permanent).  The

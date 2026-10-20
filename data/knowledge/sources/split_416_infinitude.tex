@@ -1,0 +1,344 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\tors}{\mathrm{tors}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\im}{\operatorname{im}}
+\title{Infinitely many split genus-2 Jacobians with rational torsion
+  \(\Z/4\Z\times\Z/16\Z\)}
+\author{}
+\date{20 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give an explicit rational family of smooth genus-2 curves over
+\(\Q\) whose Jacobians split over \(\Q\) and have rational torsion
+subgroup exactly \(\Z/4\Z\times\Z/16\Z\).
+The family contains infinitely many geometric isomorphism classes.
+Exactness follows from the intersection of the torsion Kummer images
+of the two elliptic factors.
+\end{abstract}
+
+\section{The family}
+
+For \(s\in\Q\), put
+\begin{equation}\label{eq:t}
+t=t(s)=-
+\frac{3(3s^2-10s+5)^2+(3s^2-5)^2}{4(3s^2-5)^2},
+\qquad D(t)=256t^2+47t+16.
+\end{equation}
+Let \(C_s\) be the smooth projective model of
+\begin{equation}\label{eq:family}
+y^2=D(t)(16x^2+9t)
+       \bigl(175x^2-9(4t-1)^2\bigr)
+       \bigl(9x^2+(4t+1)^2\bigr).
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+For every \(s\in\Q\), the curve \(C_s\) has genus \(2\), its Jacobian
+is isogenous over \(\Q\) to a product of elliptic curves, and
+\[
+ \Jac(C_s)(\Q)_{\tors}\simeq\Z/4\Z\times\Z/16\Z.
+\]
+The curves \(C_s\), with \(s\in\Q\), contain infinitely many
+\(\overline{\Q}\)-isomorphism classes.
+\end{theorem}
+
+We prove exactness for every rational parameter. In particular,
+the theorem requires no exceptional thin set or congruence restriction.
+
+\section{Parameters and elliptic gluing}
+
+Put
+\[
+ a=\frac{3(3s^2-10s+5)}{2(3s^2-5)},\qquad
+ b=-\frac{5(3s^2-6s+5)}{2(3s^2-5)}.
+\]
+A direct calculation gives
+\begin{equation}\label{eq:conic}
+ a^2=-3(t+1/4),\qquad b^2=-5(t-1/4),\qquad
+ 6b^2-10a^2=15.
+\end{equation}
+The polynomials \(3s^2-5\), \(3s^2-10s+5\), and \(3s^2-6s+5\)
+have no rational zeros. Hence \(a,b\ne0\) and \(t<-1/4\) for every
+rational \(s\). The discriminant of \(D\) is \(-14175\), so
+\(D(t)>0\) for real \(t\).
+
+Let \(m=t^2-1/16\), and consider
+\begin{align*}
+ E_t &: y^2+xy-my=x^3-mx^2,\\
+ F &: y^2+\frac{47}{42}xy+\frac{5}{49}y
+                 =x^3+\frac{5}{49}x^2.
+\end{align*}
+After completing the square in \(y\), their monic cubic models have
+the following ordered roots:
+\begin{equation}\label{eq:roots}
+ \begin{split}
+ (e_1,e_2,e_3)&=(m,-t/2-1/8,t/2-1/8),\\
+ (f_1,f_2,f_3)&=(-15/112,-6/49,-10/63).
+ \end{split}
+\end{equation}
+The roots are distinct for \(t<-1/4\).
+Let \(\alpha:E_t[2]\longrightarrow F[2]\) send the point at \(e_i\)
+to the point at \(f_i\), and let \(\Gamma\) be its graph.
+
+We apply the gluing construction of Howe--Lepr\'evost--Poonen
+\cite[Propositions 3 and 4]{HLP}. In their notation,
+\[
+ a_2=\sum_{i=1}^3 e_i(f_{i+2}-f_{i+1})=-\frac{D(t)}{7056}\ne0,
+\]
+where subscripts are taken modulo \(3\). Thus the correspondence of
+roots is not induced by an affine change of the elliptic \(x\)-coordinate,
+and \(\alpha\) is not the restriction of an isomorphism of elliptic curves
+over \(\overline{\Q}\).
+Consequently
+\[
+ J=(E_t\times F)/\Gamma
+\]
+with its induced principal polarization is a genus-2 Jacobian.
+Write
+\[
+ \phi:E_t\times F\longrightarrow J,\qquad
+ \psi:J\longrightarrow E_t\times F
+\]
+for the gluing isogeny and its dual, so that
+\(\psi\phi=[2]\) and \(\phi\psi=[2]\).
+
+The quotient is precisely the Jacobian of \eqref{eq:family}.
+For completeness, let \(h(X)\) be the sextic in
+\cite[Proposition 4]{HLP}, using the root order \eqref{eq:roots}.
+Its constants \(A,B\) are
+\[
+ A=-\frac{25D(t)}{17076987648},\qquad
+ B=\frac{t(4t-1)^2(4t+1)^2D(t)}{1806336}.
+\]
+If \(g_t(x)\) denotes the right-hand side of \eqref{eq:family}, then
+\begin{equation}\label{eq:scale}
+ h(7x)=\left(\frac{Atm^2}{12096}\right)^2g_t(x).
+\end{equation}
+All factors in this change of variables are nonzero for our parameters.
+The sextic discriminant is
+\begin{equation}\label{eq:disc}
+ \operatorname{disc}_x(g_t)=
+ 56171432824012800\,t(4t-1)^2(4t+1)^2D(t)^{22}\ne0.
+\end{equation}
+Thus every \(C_s\) is smooth of genus \(2\), and its Jacobian splits
+over \(\Q\).
+
+\section{The torsion Kummer images}
+
+We use multiplicative notation for \(\Q^\times/\Q^{\times2}\).
+On an elliptic curve with monic cubic model
+\(Y^2=\prod_{i=1}^3(x-r_i)\), the \(2\)-Kummer map is
+\[
+ \delta:E(\Q)/2E(\Q)\longrightarrow
+          (\Q^\times/\Q^{\times2})^3.
+\]
+For a point away from the nonzero \(2\)-torsion, it is represented by
+\((x-r_1,x-r_2,x-r_3)\).
+At the \(2\)-torsion point with \(x=r_i\), the \(i\)-th component is
+\(\prod_{j\ne i}(r_i-r_j)\), and the other components are \(r_i-r_j\).
+The identity has image \((1,1,1)\).
+We use \eqref{eq:roots} for the coordinate order on the two curves,
+so that their Kummer coordinates agree under \(\alpha\).
+
+Let \(P=(0,0)\) on the displayed generalized Weierstrass model of \(E_t\),
+and let \(Q=(0,0)\) on that of \(F\).
+Let \(T\in E_t[2]\) have \(x=e_2\), and let \(U\in F[2]\)
+have \(x=f_3\).
+The addition law gives
+\[
+ \operatorname{ord}(P)=4,\quad x(2P)=e_1,\qquad
+ \operatorname{ord}(Q)=8,\quad x(4Q)=f_2.
+\]
+In particular, \(P,T\) generate a subgroup of type \([2,4]\),
+and \(Q,U\) generate a subgroup of type \([2,8]\).
+
+The Kummer images, as triples of square classes, are
+\begin{align}
+ \delta_E(P)&=(-m,\,2(t+1/4),\,-2(t-1/4)),&
+ \delta_E(T)&=(-1,t,-t),\label{eq:E-kummer}\\
+ \delta_F(Q)&=(105,6,70),&
+ \delta_F(U)&=(-7,-1,7).\label{eq:F-kummer}
+\end{align}
+By \eqref{eq:conic}, \(m=a^2b^2/15\). Therefore
+\begin{equation}\label{eq:match}
+ \delta_E(P)=(-15,-6,10)=\delta_F(Q+U).
+\end{equation}
+
+\begin{lemma}\label{lem:parents}
+For every rational \(s\),
+\[
+ E_t(\Q)_{\tors}=\langle P,T\rangle\simeq
+        \Z/4\Z\times\Z/2\Z,\qquad
+ F(\Q)_{\tors}=\langle Q,U\rangle\simeq
+        \Z/8\Z\times\Z/2\Z.
+\]
+\end{lemma}
+\begin{proof}
+Mazur's theorem \cite{Mazur} gives the assertion for \(F\).
+For \(E_t\), the only possibilities are \([2,4]\) and \([2,8]\).
+In the latter case its four points of order \(4\) are
+\(\pm P,\pm(P+T)\), and some such point is twice a rational point of
+order \(8\).
+However, the first Kummer coordinates of \(P\) and \(P+T\)
+have square classes \(-15\) and \(15\), respectively.
+Neither is a square in \(\Q\). Their negatives have the same Kummer
+images, so none of these points is divisible by \(2\) in \(E_t(\Q)\).
+This excludes \([2,8]\).
+\end{proof}
+
+Put \(T_E=E_t(\Q)_{\tors}\) and \(T_F=F(\Q)_{\tors}\).
+The first coordinates of their Kummer images are, respectively,
+\[
+ \{1,-15,-1,15\},\qquad \{1,105,-7,-15\}.
+\]
+The two sets have exactly the common square classes \(1\) and \(-15\).
+By \eqref{eq:match}, the complete triples with first coordinate
+\(-15\) also agree. It follows that
+\begin{equation}\label{eq:intersection}
+ \delta_E(T_E)\cap\delta_F(T_F)
+       =\{(1,1,1),(-15,-6,10)\}.
+\end{equation}
+
+\section{Exact torsion of the Jacobian}
+
+Define
+\[
+ M=\{(A,B)\in T_E\times T_F:\delta_E(A)=\delta_F(B)\}.
+\]
+We claim that there is an exact sequence
+\begin{equation}\label{eq:exact}
+ 0\longrightarrow\ker(\psi)(\Q)
+ \longrightarrow J(\Q)_{\tors}
+ \xrightarrow{\ \psi\ }M\longrightarrow0.
+\end{equation}
+Indeed, choose halves \(\widetilde A,\widetilde B\) of \(A,B\).
+The point \(\phi(\widetilde A,\widetilde B)\) is rational if and only if
+every Galois difference of the pair \((\widetilde A,\widetilde B)\)
+lies in \(\Gamma\).
+Since \(E_t[2]\) and \(F[2]\) are rational, this is exactly the equality
+of Kummer classes in the definition of \(M\).
+It is then a lift of \((A,B)\) under \(\psi\).
+The lift is torsion: either this follows from its construction using
+halves of torsion points, or from \(2R=\phi\psi(R)\).
+Conversely, every rational lift gives the equality of Kummer classes.
+This proves \eqref{eq:exact}.
+
+The group scheme
+\[
+ \ker(\psi)=\phi(E_t[2]\times F[2])
+       \simeq(E_t[2]\times F[2])/\Gamma
+\]
+is constant of order \(4\).
+The kernel of the Kummer map on the torsion subgroup of an elliptic
+curve is twice that torsion subgroup, since a half of a torsion point
+is torsion.
+Hence Lemma~\ref{lem:parents} and \eqref{eq:intersection} give
+\[
+ \#M=\#(2T_E)\#(2T_F)
+       \#\bigl(\delta_E(T_E)\cap\delta_F(T_F)\bigr)
+      =2\cdot4\cdot2=16.
+\]
+By \eqref{eq:exact},
+\begin{equation}\label{eq:order}
+ \#J(\Q)_{\tors}=4\cdot16=64.
+\end{equation}
+
+It remains to determine the group structure. Put \(V=Q+U\), which
+has order \(8\), and
+\[
+ X=\phi(P,0),\qquad Y=\phi(0,V).
+\]
+The graph \(\Gamma\) is generated by \((2P,U+4V)\) and \((T,4V)\).
+In the quotient of \(T_E\times T_F\), these relations eliminate
+the generators corresponding to \(T\) and \(U\).
+The remaining relations are \(4X=0\) and \(8Y=0\).
+Thus
+\[
+ H:=\phi(T_E\times T_F)=\langle X,Y\rangle
+       \simeq\Z/4\Z\times\Z/8\Z.
+\]
+The match \eqref{eq:match} gives \(R\in J(\Q)_{\tors}\)
+with \(\psi(R)=(P,V)\). It satisfies
+\[
+ 2R=X+Y.
+\]
+The point \(X+Y\) has order \(8\), so \(R\) has order \(16\).
+Moreover, \(R\notin H\), since \(2H\) has exponent \(4\).
+Therefore \(\langle H,R\rangle\) has order \(64\), and by
+\eqref{eq:order} it is the whole rational torsion subgroup.
+It is generated by \(X,R\), since \(Y=2R-X\).
+The resulting surjection
+\[
+ \Z/4\Z\times\Z/16\Z\longrightarrow J(\Q)_{\tors}
+\]
+is an isomorphism because both groups have order \(64\).
+
+\section{Variation in moduli}
+
+The varying elliptic factor has
+\[
+ j(E_t)=
+ \frac{(256t^4+224t^2+1)^3}
+      {t^2(4t-1)^4(4t+1)^4}.
+\]
+This rational function is nonconstant, and so is \(t(s)\).
+Thus \(j(E_{t(s)})\) assumes infinitely many values for \(s\in\Q\).
+The gluing construction supplies a degree-\(2\) map
+\(C_s\longrightarrow E_t\) over \(\Q\).
+A fixed smooth genus-2 curve over \(\overline{\Q}\) has finitely
+many automorphisms, and hence finitely many involutions and
+degree-\(2\) elliptic quotients up to isomorphism.
+Consequently the infinitely many values of \(j(E_{t(s)})\)
+force infinitely many geometric isomorphism classes of \(C_s\).
+This proves Theorem~\ref{thm:main}.
+
+\section*{Reproducibility and the census example}
+
+The accompanying standalone Magma file \texttt{family\_416\_split\_certificate.m} verifies
+the elliptic point orders, all Kummer identities, the HLP change of
+variables \eqref{eq:scale}, the discriminant \eqref{eq:disc},
+the conic parametrization, and the elliptic \(j\)-formula.
+All assertions passed in Magma V2.30-1.
+The proof above uses only exact identities, elliptic torsion
+classification, and the stated gluing theorem.
+
+At \(s=1\), we have \(t=-1\), and after dividing \(y\) by \(225\)
+the curve becomes
+\[
+ y^2=(16x^2-9)(7x^2-9)(x^2+1).
+\]
+The change of variables \(z=3/x\), \(w=3y/x^3\) gives
+\[
+ w^2=z^6-14z^4-95z^2+1008.
+\]
+Writing \(w=2v+z^3+z\) gives the census example \texttt{4.16.a},
+\[
+ v^2+(z^3+z)v=-4z^4-24z^2+252.
+\]
+Magma independently computes exact torsion \([4,16]\) for this
+specialization and for \(s=2\), where \(t=-19/49\).
+These specialization checks are consistency checks; they are not
+needed for the uniform torsion argument.
+
+\begin{thebibliography}{9}
+\bibitem{HLP}
+E.~W. Howe, F. Lepr\'evost, and B. Poonen,
+\emph{Large torsion subgroups of split Jacobians of curves of genus two or three},
+Forum Math. \textbf{12} (2000), 315--364.
+\url{https://math.mit.edu/~poonen/papers/large.pdf}.
+
+\bibitem{Mazur}
+B. Mazur,
+\emph{Modular curves and the Eisenstein ideal},
+Publ. Math. IHES \textbf{47} (1977), 33--186.
+\url{https://www.numdam.org/item/PMIHES_1977__47__33_0/}.
+\end{thebibliography}
+\end{document}

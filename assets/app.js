@@ -136,7 +136,7 @@
     (keys || []).forEach((k, i) => {
       if (i) out.push(", ");
       const s = sources[k];
-      out.push(s ? el("a", { href: "about.html#src-" + k, title: s.cite }, s.short || k) : k);
+      out.push(s ? el("a", { href: s.kind === "proof" ? s.url : "about.html#src-" + k, title: s.cite }, s.short || k) : k);
     });
     return out;
   }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 05:43 UTC",
+  "generated": "2026-10-20 08:21 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -152,7 +152,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -205,7 +205,7 @@
         "conductor_log": "data/logs/1.a.conductor.log",
         "conductor_cputime_seconds": 0.16
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -1729,7 +1729,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -1811,7 +1811,7 @@
         "conductor_log": "data/logs/3.b.conductor.log",
         "conductor_cputime_seconds": 0.48
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2464,7 +2464,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -2522,7 +2522,7 @@
         "conductor_log": "",
         "conductor_cputime_seconds": null
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2909,7 +2909,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Ogg 1973",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -2963,7 +2963,7 @@
         "conductor_log": "data/logs/5.a.conductor.log",
         "conductor_cputime_seconds": 0.11
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3154,7 +3154,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -3209,7 +3209,7 @@
         "conductor_log": "data/logs/5.b.conductor.log",
         "conductor_cputime_seconds": 0.25
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3603,7 +3603,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Flynn 1991",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -3659,7 +3659,7 @@
         "conductor_log": "data/logs/6.a.conductor.log",
         "conductor_cputime_seconds": 0.35
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -3856,7 +3856,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -3913,7 +3913,7 @@
         "conductor_log": "data/logs/6.b.conductor.log",
         "conductor_cputime_seconds": 0.23
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -4309,7 +4309,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Ogg 1973",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -4366,7 +4366,7 @@
         "conductor_log": "data/logs/7.a.conductor.log",
         "conductor_cputime_seconds": 0.12
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -4564,7 +4564,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -4622,7 +4622,7 @@
         "conductor_log": "data/logs/7.b.conductor.log",
         "conductor_cputime_seconds": 0.19
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5249,7 +5249,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -5305,7 +5305,7 @@
         "conductor_log": "data/logs/8.b.conductor.log",
         "conductor_cputime_seconds": 0.23
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5692,7 +5692,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Flynn 1991",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -5748,7 +5748,7 @@
         "conductor_log": "data/logs/9.a.conductor.log",
         "conductor_cputime_seconds": 0.19
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -5921,7 +5921,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -6001,7 +6001,7 @@
         "conductor_log": "data/logs/9.b.conductor.log",
         "conductor_cputime_seconds": 0.17
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -6421,7 +6421,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Flynn 1991",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -6478,7 +6478,7 @@
         "conductor_log": "data/logs/10.a.conductor.log",
         "conductor_cputime_seconds": 0.1
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -7115,7 +7115,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Ogg 1973",
+        "by": "Platonov–Petrunin 2012a",
         "year": null,
         "historical": false
       },
@@ -7169,7 +7169,7 @@
         "conductor_log": "data/logs/11.a.conductor.log",
         "conductor_cputime_seconds": 0.13
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -8459,7 +8459,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -8514,7 +8514,7 @@
         "conductor_log": "data/logs/14.a.conductor.log",
         "conductor_cputime_seconds": 0.12
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -10586,7 +10586,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -10643,7 +10643,7 @@
         "conductor_log": "data/logs/18.a.conductor.log",
         "conductor_cputime_seconds": 0.24
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11319,7 +11319,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1991 (orders 15, 17, 19, 21); Platonov–Zhgun–Petrunin 2013",
+        "by": "Leprévost 1991 (orders 15, 17, 19, 21)",
         "year": null,
         "historical": false
       },
@@ -11377,7 +11377,7 @@
         "conductor_log": "data/logs/19.a.conductor.log",
         "conductor_cputime_seconds": 0.24
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -11789,7 +11789,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1997",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -11844,7 +11844,7 @@
         "conductor_log": "data/logs/20.a.conductor.log",
         "conductor_cputime_seconds": 0.16
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -12265,7 +12265,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1991 (orders 15, 17, 19, 21)",
+        "by": "LMFDB genus 2 database (BSSVY 2016)",
         "year": null,
         "historical": false
       },
@@ -12321,7 +12321,7 @@
         "conductor_log": "data/logs/21.a.conductor.log",
         "conductor_cputime_seconds": 0.19
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -16760,7 +16760,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Elkies 2002",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -16817,7 +16817,7 @@
         "conductor_log": "data/logs/32.a.conductor.log",
         "conductor_cputime_seconds": 0.27
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -17919,7 +17919,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Platonov–Petrunin 2012b; Platonov 2014",
+        "by": "Platonov–Zhgun–Petrunin 2013",
         "year": null,
         "historical": false
       },
@@ -17999,7 +17999,7 @@
         "conductor_log": "data/logs/36.b.conductor.log",
         "conductor_cputime_seconds": 0.33
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -19139,7 +19139,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Howe 2015; Platonov–Petrunin 2012b; Platonov 2014",
+        "by": "Platonov–Petrunin 2012b",
         "year": null,
         "historical": false
       },
@@ -19197,7 +19197,7 @@
         "conductor_log": "data/logs/48.a.conductor.log",
         "conductor_cputime_seconds": 0.15
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -20368,7 +20368,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -20427,7 +20427,7 @@
         "conductor_log": "data/logs/2.2.b.conductor.log",
         "conductor_cputime_seconds": 0.13
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -21121,7 +21121,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -21178,7 +21178,7 @@
         "conductor_log": "data/logs/2.4.b.conductor.log",
         "conductor_cputime_seconds": 0.21
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -21834,7 +21834,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -21891,7 +21891,7 @@
         "conductor_log": "data/logs/2.6.b.conductor.log",
         "conductor_cputime_seconds": 0.22
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -22559,7 +22559,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -22617,7 +22617,7 @@
         "conductor_log": "data/logs/2.8.b.conductor.log",
         "conductor_cputime_seconds": 0.22
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -27021,13 +27021,13 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Booker–Sutherland (extended database)",
+        "by": "Platonov–Petrunin 2015",
         "year": null,
         "historical": false
       },
       "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 50 (source: \\cite{BookerSutherland})",
       "sources": [
-        "BookerSutherland"
+        "PP2015"
       ],
       "rm": false,
       "notes": "",
@@ -27787,7 +27787,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Bruin–Flynn–Testa 2014",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -27843,7 +27843,7 @@
         "conductor_log": "data/logs/3.3.a.conductor.log",
         "conductor_cputime_seconds": 0.55
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -28034,7 +28034,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -28090,7 +28090,7 @@
         "conductor_log": "",
         "conductor_cputime_seconds": null
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -28771,7 +28771,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -28829,7 +28829,7 @@
         "conductor_log": "data/logs/3.6.b.conductor.log",
         "conductor_cputime_seconds": 0.23
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29237,7 +29237,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Leprévost 1995",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -29296,7 +29296,7 @@
         "conductor_log": "data/logs/3.9.a.conductor.log",
         "conductor_cputime_seconds": 0.55
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -29732,13 +29732,13 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "Booker–Sutherland (extended database)",
-        "year": 2026,
+        "by": "Leprévost 1995",
+        "year": 1995,
         "historical": false
       },
-      "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+      "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16); it is the curve C_3 of F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, p. 303 (the member t = 3 of the [3,9] family C_t), reprinted in Platonov–Zhgun–Petrunin 2013, p. 321 (credit corrected 2026-10-20)",
       "sources": [
-        "BookerSutherland"
+        "Leprevost1995"
       ],
       "rm": false,
       "notes": "First Q-simple, geometrically split example of [3,9] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false); smallest-conductor curve of this torsion group there (LMFDB conductor 6804). The automatic Richelot certificates do not apply (over Q(sqrt(-3)) the working model factors as two cubics and has no Richelot isogeny), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(-3)) (the field over which J splits; the cubic factors of g are the fibre over the point at infinity and the three remaining Weierstrass points). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1). Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",
@@ -31027,7 +31027,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -31085,7 +31085,7 @@
         "conductor_log": "data/logs/4.4.b.conductor.log",
         "conductor_cputime_seconds": 0.16
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -35078,7 +35078,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -35135,7 +35135,7 @@
         "conductor_log": "data/logs/2.2.2.b.conductor.log",
         "conductor_cputime_seconds": 0.21
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",
@@ -35815,7 +35815,7 @@
       },
       "geometrically_isomorphic_to": [],
       "discovery": {
-        "by": "LMFDB genus 2 database (BSSVY 2016)",
+        "by": "Booker–Sutherland (extended database)",
         "year": null,
         "historical": false
       },
@@ -35875,7 +35875,7 @@
         "conductor_log": "",
         "conductor_cputime_seconds": null
       },
-      "credit_differs": false
+      "credit_differs": true
     },
     {
       "schema": "genus-2-torsion/curve/1",

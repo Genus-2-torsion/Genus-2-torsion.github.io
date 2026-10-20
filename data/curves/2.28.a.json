@@ -176,13 +176,13 @@
   },
   "geometrically_isomorphic_to": [],
   "discovery": {
-    "by": "Booker–Sutherland (extended database)",
+    "by": "Platonov–Petrunin 2015",
     "year": null,
     "historical": false
   },
   "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 50 (source: \\cite{BookerSutherland})",
   "sources": [
-    "BookerSutherland"
+    "PP2015"
   ],
   "rm": false,
   "notes": "",

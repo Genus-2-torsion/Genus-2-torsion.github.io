@@ -117,7 +117,13 @@ class KnowledgeTests(unittest.TestCase):
                 t2.append(group_key(ast.literal_eval(line.split("|")[0])))
         self.assertEqual(len(t2), 77)
         self.assertTrue(set(knowledge._SPLIT_FAMILY) <= set(t2))
-        self.assertEqual(len(knowledge._SPLIT_FAMILY) + len(knowledge._SPLIT_OPEN_NOTES), 20)   # HLP Table 1
+        self.assertEqual(len(knowledge._SPLIT_FAMILY) + len([k for k in knowledge._SPLIT_OPEN_NOTES if k != "11"]), 20)   # HLP Table 1
+        # split [11] (2026-10-20): open, with a remark on why the construction of 11.b gives no family
+        rec = knowledge.infinite_record("split", "11")
+        self.assertEqual((rec["grade"], rec["sources"]), ("open", ["BNSS2026", "ThisSite"]))
+        self.assertIn("split_11_remark.log", rec["note"])
+        self.assertTrue((KNOWLEDGE_DIR / "sources" / "split_11_remark.log").exists())
+        self.assertEqual(knowledge.infinite_record("split", "7.7")["sources"], ["HLP2000"])
         self.assertEqual(list(knowledge._SPLIT_FAMILY_OTHER), ["48"])                             # Howe 2015
         self.assertEqual(knowledge.infinite_record("split", "48")["grade"], "exact")             # Howe 2015 family, certified 2026-10-19
         self.assertEqual([k for k in knowledge._recorded_keys("split") if knowledge.infinite_record("split", k)["grade"] == "family"], [])
@@ -233,9 +239,35 @@ class CreditTests(unittest.TestCase):
             if (c.get("source") or {}).get("name") in import_paper.CURVE_CREDIT:
                 corrected.add(c["id"])
         self.assertEqual(flagged, corrected)
-        self.assertEqual(len(flagged), 19)
+        self.assertEqual(len(flagged), 52)   # 19 corrected on 2026-10-14, 33 on 2026-10-20
         self.assertIn("35.a", flagged)
         self.assertNotIn("27.b", flagged)   # its sources were replaced as well (SOURCES_OVERRIDE)
+        self.assertNotIn("2.28.a", flagged)   # likewise: Platonov–Petrunin 2015's f28,2 (2026-10-20)
+
+    def test_seed_database_credits_match_production_check(self):
+        """A seed curve credited to the production LMFDB database is isomorphic over Q to a production curve,
+        and one credited to the extended database is not (seed_production_check.log, 2026-10-20)."""
+        import re
+        hits = {}
+        for line in (KNOWLEDGE_DIR / "sources" / "seed_production_check.log").read_text().splitlines():
+            m = re.match(r"ISO (\S+) (\S+) cands=\d+ \[(.*)\]$", line)
+            if m:
+                hits[m.group(1)] = [h.strip().strip('"') for h in m.group(3).split(",") if h.strip()]
+        self.assertEqual(len(hits), 150)
+        bssvy, bs = knowledge.credit_text(["BSSVY"]), knowledge.credit_text(["BookerSutherland"])
+        n = 0
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            c = read_json(p)
+            if (c.get("source") or {}).get("kind") != "import":
+                continue
+            if c["discovery"]["by"] == bssvy:
+                self.assertTrue(hits[c["id"]], c["id"]); n += 1
+            if c["discovery"]["by"] == bs:
+                self.assertEqual(hits[c["id"]], [], c["id"]); n += 1
+        self.assertEqual(n, 102)   # 35 production, 67 extended
+        self.assertTrue((KNOWLEDGE_DIR / "sources" / "seed_credit_check.log").read_text().rstrip().endswith("SEED_CREDIT_CHECK_DONE"))
+        c = read_json(CURVES_DIR / "3.9.c.json")   # Leprévost 1995's C_3 (p. 303)
+        self.assertEqual((c["sources"], c["discovery"]["by"], c["discovery"]["year"]), (["Leprevost1995"], "Leprévost 1995", 1995))
 
 
 class CertificateTests(unittest.TestCase):

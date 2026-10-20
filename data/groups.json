@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 05:43 UTC",
+  "generated": "2026-10-20 08:21 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -96,8 +96,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -639,8 +639,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -801,8 +801,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -960,8 +960,8 @@
               "Ogg1973"
             ],
             "rm": false,
-            "discovered_by": "Ogg 1973",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Ogg1973",
@@ -1014,8 +1014,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -1176,8 +1176,8 @@
               "Flynn1991"
             ],
             "rm": false,
-            "discovered_by": "Flynn 1991",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Flynn1991",
@@ -1232,8 +1232,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -1395,8 +1395,8 @@
               "Ogg1973"
             ],
             "rm": false,
-            "discovered_by": "Ogg 1973",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Ogg1973",
@@ -1452,8 +1452,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -1667,8 +1667,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -1827,8 +1827,8 @@
               "Flynn1991"
             ],
             "rm": false,
-            "discovered_by": "Flynn 1991",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Flynn1991",
@@ -1883,8 +1883,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -2045,8 +2045,8 @@
               "Flynn1991"
             ],
             "rm": false,
-            "discovered_by": "Flynn 1991",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Flynn1991",
@@ -2258,8 +2258,8 @@
               "Ogg1973"
             ],
             "rm": false,
-            "discovered_by": "Ogg 1973",
-            "credit_differs": false,
+            "discovered_by": "Platonov–Petrunin 2012a",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Ogg1973",
@@ -2363,8 +2363,11 @@
         },
         "split": {
           "grade": "open",
-          "sources": [],
-          "note": "",
+          "sources": [
+            "BNSS2026",
+            "ThisSite"
+          ],
+          "note": "a single curve is known, 11.b (BNSS2026): the (2,2)-gluing of an elliptic curve E over ℚ(√11) with a point of order 11 to its Galois conjugate E^σ. The gluing needs E[2] ≅ E^σ[2] over the quadratic field, which is not automatic. The curves E over quadratic fields with a point of order 11 are parametrised by s ∈ ℚ (via X₁(11)), and the s for which E[2] ≅ E^σ[2] are the images of the rational points of a curve Y of genus at least 8 (a degree-6 cover of the s-line whose reductions modulo 101, 103 and 107 are absolutely irreducible of genus 8). So this construction gives only finitely many curves; to height 400 in s the only one is 11.b (split_11_remark.log; a remark, not a certificate)",
           "inherited_from": null
         }
       }
@@ -2736,8 +2739,8 @@
               "PZP2013"
             ],
             "rm": false,
-            "discovered_by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "PP2012",
@@ -3438,8 +3441,8 @@
               "PZP2013"
             ],
             "rm": false,
-            "discovered_by": "Platonov–Petrunin 2012a; Platonov–Zhgun–Petrunin 2013",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "PP2012",
@@ -3658,8 +3661,8 @@
               "PZP2013"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21); Platonov–Zhgun–Petrunin 2013",
-            "credit_differs": false,
+            "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1991",
@@ -3816,8 +3819,8 @@
               "Leprevost1997"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1997",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1997",
@@ -3980,8 +3983,8 @@
               "Leprevost1991"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1991 (orders 15, 17, 19, 21)",
-            "credit_differs": false,
+            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1991",
@@ -5588,8 +5591,8 @@
               "Elkies2002"
             ],
             "rm": false,
-            "discovered_by": "Elkies 2002",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Elkies2002",
@@ -6068,8 +6071,8 @@
               "Platonov2014"
             ],
             "rm": false,
-            "discovered_by": "Platonov–Petrunin 2012b; Platonov 2014",
-            "credit_differs": false,
+            "discovered_by": "Platonov–Zhgun–Petrunin 2013",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "PP2012b",
@@ -6542,8 +6545,8 @@
               "Platonov2014"
             ],
             "rm": false,
-            "discovered_by": "Howe 2015; Platonov–Petrunin 2012b; Platonov 2014",
-            "credit_differs": false,
+            "discovered_by": "Platonov–Petrunin 2012b",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "PP2012b",
@@ -7071,8 +7074,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -7232,8 +7235,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -7446,8 +7449,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -7661,8 +7664,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -9173,15 +9176,15 @@
               "snapshot_label": "28200.e.1"
             },
             "sources": [
-              "BookerSutherland"
+              "PP2015"
             ],
             "rm": false,
-            "discovered_by": "Booker–Sutherland (extended database)",
+            "discovered_by": "Platonov–Petrunin 2015",
             "credit_differs": false,
             "year": null,
             "historical": false,
-            "first_source": "BookerSutherland",
-            "first_source_year": 2026,
+            "first_source": "PP2015",
+            "first_source_year": 2015,
             "torsion_method": "TorsionSubgroup",
             "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 1, row 50 (source: \\cite{BookerSutherland})",
             "new_group": true,
@@ -9203,7 +9206,7 @@
         "undecided": null
       },
       "first_source": {
-        "simple": "BookerSutherland",
+        "simple": "PP2015",
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -9495,8 +9498,8 @@
               "BFT2014"
             ],
             "rm": false,
-            "discovered_by": "Bruin–Flynn–Testa 2014",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BFT2014",
@@ -9549,8 +9552,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -9768,8 +9771,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -9934,8 +9937,8 @@
               "Leprevost1995"
             ],
             "rm": false,
-            "discovered_by": "Leprévost 1995",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "Leprevost1995",
@@ -10044,17 +10047,17 @@
               "snapshot_label": "6804.a.1"
             },
             "sources": [
-              "BookerSutherland"
+              "Leprevost1995"
             ],
             "rm": false,
-            "discovered_by": "Booker–Sutherland (extended database)",
+            "discovered_by": "Leprévost 1995",
             "credit_differs": false,
-            "year": 2026,
+            "year": 1995,
             "historical": false,
-            "first_source": "BookerSutherland",
-            "first_source_year": 2026,
+            "first_source": "Leprevost1995",
+            "first_source_year": 1995,
             "torsion_method": "generators",
-            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+            "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16); it is the curve C_3 of F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, p. 303 (the member t = 3 of the [3,9] family C_t), reprinted in Platonov–Zhgun–Petrunin 2013, p. 321 (credit corrected 2026-10-20)",
             "new_group": false,
             "new_for_class": true,
             "certificate": "a nonconstant map of degree 3 from y^2 = g to the genus-1 curve v^2 = (-24*w)u^3 + (1/2*(27*w - 117))u^2 + (27*w + 9)u + (9) over X^2 + 3, (x,y) -> (p/q, y*hh/q^2) with p = x^2 + x, q = x^3 + (-w + 1)*x^2 + 1/6*(-5*w - 3)*x + 1/3*(w - 1), hh = x^3 + 1/2*(-w + 3)*x^2 - 2/3*w*x + 1/3*(-w - 1); degree-3 map, defined over Q(sqrt(-3)), from y^2 = g to a genus-1 curve; found by code/gsplit_cover3.m (torsion_jac, 2026-10-16); simple over ℚ: χ_17 = T^4 + 7*T^2 + 289 is irreducible",
@@ -10074,7 +10077,7 @@
       "first_source": {
         "simple": "Leprevost1995",
         "qsplit": "HLP2000",
-        "gsplit": "BookerSutherland",
+        "gsplit": "Leprevost1995",
         "undecided": null
       },
       "known": {
@@ -10481,8 +10484,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -11868,8 +11871,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",
@@ -12086,8 +12089,8 @@
               "BSSVY"
             ],
             "rm": false,
-            "discovered_by": "LMFDB genus 2 database (BSSVY 2016)",
-            "credit_differs": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": true,
             "year": null,
             "historical": false,
             "first_source": "BSSVY",

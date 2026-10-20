@@ -142,7 +142,10 @@ derives from them are in `pipeline/knowledge.py`, which cites them by key.
 | `family_4_8_certificate.log` | produced here by `pipeline/magma/family_4_8_certificate.m` (uses `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of simple [4,8] (found 2026-10-19, torsion_jac/notes/simple248_2026_10_19.md): the [4,8] tangent cover restricted to a rational curve on which the half of [x, 0] is rational; τ ≡ 4 (mod 533), #J(𝔽₁₃) = 128, #J(𝔽₄₁) = 1888, strict at 41 |
 | `family_2_4_8_certificate.log` | produced here by `pipeline/magma/family_2_4_8_certificate.m` (uses `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of simple [2,4,8] (found 2026-10-19, torsion_jac/notes/simple248_2026_10_19.md): the same rational curve of the tangent cover, over the genus-1 curve D: σ² = τ⁴ − 36τ² + 36 (Jacobian y² = x³ − 36x, rank 1) on which the quadratic factor B splits; J(𝔽₁₁) ≅ [2,4,16], J(𝔽₅₃) ≅ [2,4,328], strict at 53 |
 | `family_28_certificate.log` | produced here by `pipeline/magma/family_28_certificate.m` (uses `pipeline/magma/family_cert_lib.m`) | — | exact infinitude of simple [28] (2026-10-19, torsion_jac/notes/pf28_2026_10_19.md): the family (8) of Platonov–Fedorov 2018 (Dokl. Math. 98, 468–471), transcribed and checked against the paper's relations (2), (3), its discriminant and its ten printed examples; D = [x − 1, −t⁵(t + 1)] has order 28 over ℚ(t); t ≡ 1 (mod 35), #J(𝔽₅) = 28, #J(𝔽₇) = 56, strict at 7 |
+| `split_11_remark.log` | produced here by `pipeline/magma/split_11_remark.m` | — | remark for the open grade of split [11] (2026-10-20, torsion_jac/notes/split11_2026_10_19.md), not a certificate: the (2,2)-gluing of an elliptic curve over a quadratic field with a point of order 11 to its conjugate (the construction of 11.b, BNSS2026) needs a Galois-isomorphism E[2] → E^σ[2]; the parameters s on the X₁(11) model for which it exists lie under a curve Y with a degree-6 map to the s-line, whose reductions modulo 101, 103, 107 are absolutely irreducible of genus 8, so Y(ℚ) is finite; s = 4/5 (11.b) is the only such s to height 400, and a check without Y (does f^σ have a root in K[x]/(f)?) agrees to height 30 |
 | `attribution_check.log` | produced here by `pipeline/magma/attribution_check.m` | — | the comparisons behind the credit errata of 2026-10-14 below: census curves 27.b, 24.b, 25.b, 3.9.b, 6.6.b, 5.5.a, 21.c, 27.c against the curves printed in Leprévost 1995 (C21, C24,1, C24,2, C25, C27, pp. 291–302 of the JTNB scan), Howe 2015 (Table 2, order 27, arXiv:1407.2654v3), HLP 2000 (X₀(22), Cor. 5) and the LMFDB, by G2-invariants and isomorphism over ℚ. It also shows that 21.c (LMFDB 676.a.5408.1, issue #7) is Leprévost's C21 and 27.c (issue #8) is his C27, which is why both are credited to Leprévost 1995 |
+| `seed_credit_check.log` | produced here by `pipeline/magma/seed_credit_check.m` | — | the comparisons behind the credit errata of 2026-10-20 below: census curves against the curves printed in Platonov–Petrunin 2012a (pp. 287–288), 2012b (p. 643), Platonov–Zhgun–Petrunin 2013 (p. 320), Platonov–Petrunin 2015 (p. 221), Elkies 2002 (N = 32), Bruin–Flynn–Testa 2014 (Thm 6, Examples 19–21) and Leprévost 1995 (C₃, p. 303), by isomorphism over ℚ, each transcription checked against the torsion its source claims; the one-parameter families of Flynn 1991 (Result 3), Leprévost 1997 (C₁,ₜ) and Leprévost 1995 (the [3,9] family Cₜ) searched for 9.a, 10.a, 20.a, 3.9.a, each search validated on a moved member; Flynn 1991's order-6 family (Result 1(b)) against 6.a; the rational Weierstrass points of 21.a |
+| `seed_production_check.log` | produced here by `pipeline/magma/seed_production_check.m` | — | for each of the 150 seed curves, isomorphism over ℚ with every production LMFDB curve of the same conductor (read from devmirror.lmfdb.xyz on 2026-10-20): 48 seed curves are production curves, the other 102 are not |
 
 ## Errata to the seed import: curve credits (review of 2026-10-14)
 
@@ -190,6 +193,65 @@ the group.  So many Table 1 credits, for example 10.a "Flynn 1991" for 389.a.389
 group-level too.  Deciding which database curves are published curves needs the sources' equations,
 and not all of them are available here.  Note that the site shows `discovery.by` only for curves with
 empty `sources`, so the corrected credits are in `data/curves.json` but not on the seed curves' pages.
+
+## Errata to the seed import: curve credits (review of 2026-10-20)
+
+The 130 seed rows left unchecked on 2026-10-14 were checked: the database credits against the production LMFDB
+(`seed_production_check.log`), the paper credits against the equations printed in the sources (pages read from the
+scans; `seed_credit_check.log`).  A paper is credited with a curve when it prints that curve (up to isomorphism over
+ℚ); a member of a printed family that the paper does not single out is credited to the database it was taken from.
+`sources` (the group's first realisation) is unchanged except for [2,28].
+
+* **Database credits.** 17 curves credited to the production database (BSSVY 2016) are not in it (no production curve
+  has their G2-invariants): 1.a, 3.b, 4.b, 5.b, 6.b, 7.b, 8.b, 9.b, 2.2.b, 2.4.b, 2.6.b, 2.8.b, 3.3.b, 3.6.b, 4.4.b,
+  2.2.2.b, 2.2.4.b.  They are curves of the extended database, now credited to Booker–Sutherland.  The other 23
+  production credits and all 38 extended-database credits were confirmed.
+* **Not the cited paper's curve; now credited to the database.**
+  * 14.a, 18.a: Platonov–Petrunin 2012a print one curve of each order (f₁₄, f₁₈, p. 287), reprinted by
+    Platonov–Zhgun–Petrunin 2013; neither is these curves → production database.
+  * 5.a, 7.a: prime conductors 277 and 461, so not modular curves, which Ogg 1973 treats (a genus-2 Jacobian that is a
+    quotient of some J₁(N) has conductor M² or M₁M₂ with M, M₁, M₂ ≥ 11) → production database.
+  * 6.a: not a member of Flynn 1991's order-6 family (Result 1(b), p. 435: every member has a rational Weierstrass point
+    W and a rational point P with [P − W] of order 6; 6.a has no such pair) → production database.
+  * 10.a: not a fiber of Flynn 1991's order-10 family (Result 3 with r = 1, p. 438) → production database.
+  * 9.a, 20.a: the fibers t = 2 of Flynn 1991's order-9 family (Result 3 with r = 2) and t = 1 of Leprévost 1997's
+    C₁,ₜ (p. 48), which the papers do not single out → production database.
+  * 21.a: it has no rational Weierstrass point, while the order-21 curves of Leprévost 1991 all have one (Leprévost
+    1995, p. 290, on his reference [2] = Leprévost 1991) → production database.
+  * 32.a: not Elkies' printed order-32 curve → extended database.
+  * 3.3.a: none of the curves printed by Bruin–Flynn–Testa 2014; it is the fiber (r, s, t) = (5/2, 16/9, 25/16) of
+    their Theorem 6, which parametrises all curves with a rational (ℤ/3)² of trivial Weil pairing → extended database.
+    (Their Example 19 is printed with (12x³ − 105)², which has torsion [3]; Theorem 6 gives (13x³ − 105)², with [3,3].)
+  * 3.9.a: not a fiber of Leprévost 1995's [3,9] family Cₜ → extended database.
+* **A different paper printed the curve.**
+  * 11.a is f₁₁ of Platonov–Petrunin 2012a (p. 288); its conductor 353 is prime (see 5.a); Flynn 1990 and 1991 contain
+    it only as an unmarked member of their order-11 families.
+  * 36.b is f₃₆ of Platonov–Zhgun–Petrunin 2013 (p. 320), not the f₃₆ of Platonov–Petrunin 2012b.
+  * 48.a is f₄₈,₁ of Platonov–Petrunin 2012b (p. 643, reprinted by Platonov–Zhgun–Petrunin 2013); it is none of
+    Howe 2015's order-48 curves.
+  * 19.a: Platonov–Zhgun–Petrunin 2013 print no curve of order 19, so the credit is Leprévost 1991 alone (not seen).
+  * 2.28.a is f₂₈,₂ of Platonov–Petrunin 2015 (p. 221): they prove a point of order 28 and absolute simplicity, and its
+    three rational linear factors give J(ℚ)[2] = (ℤ/2)², so J(ℚ)_tors = [2,28].  Both `discovery.by` and `sources`
+    are now Platonov–Petrunin 2015, which predates the extended database (the paper's Table 1 credits Booker–Sutherland).
+  * 3.9.c (submitted 2026-10-16 as an extended-database curve) is Leprévost 1995's C₃ (p. 303, the member t = 3 of his
+    [3,9] family, with the printed discriminant −2¹⁸3¹²7), reprinted by Platonov–Zhgun–Petrunin 2013 (p. 321):
+    `discovery` is now Leprévost 1995 (1995), and so are its `sources`.
+* **Confirmed** (the credited paper prints the curve): 63.a and 7.7.a (HLP 2000, §3.6 and p. 16 of the preprint),
+  13.a (Flynn 1990, App. 3.2, read in the author's version), 19.b (X₁(13), Mazur–Tate 1973), 23.a and 29.a (C₂₃ and C₂₉ of Leprévost 1995, the full
+  version of the 1993 note), 27.a and 70.a (Howe 2015), 28.a (Platonov–Petrunin 2012a, Thm 4), 28.b
+  (Platonov–Zhgun–Petrunin 2013, f₂₈,₂; Howe 2015's C₂₈,₁ reprints it), 30.a and 36.a (Platonov–Petrunin 2015,
+  f₃₀,₃ and f₃₆), 33.a (Platonov–Petrunin 2012b), 34.a, 39.a, 40.a (Elkies 2002), 25.a (Nicholls 2018, Example 3.1.7),
+  2.2.2.10.a (Elkies 2024, Example 2.12), 31.a (Costa et al., newform 1830.2.a.q).  The 8 curves credited to BNSS
+  2026 are in neither database, as the paper's "new" says.
+* **Not checked (UNVERIFIED), unchanged.** The source could not be obtained: Ogg 1973 (21.b and 2.10.b are X₁(18) and
+  X₁(16), whose torsion Leprévost 1995, p. 285, attributes to Ogg) and the C. R. notes Leprévost 1991 (15.a, 17.a,
+  19.a, and the order-13 part of 13.a) and Leprévost 1993 (22.a, 24.a, 26.a).  Evidence from the same author's full
+  versions (Manuscripta Math. 75 (1992), 303–326, for 1991; Leprévost 1995 for 1993): 15.a and 19.a are not fibers of
+  the 1992 families of orders 15 and 19, 17.a is the fiber t = −1 of the order-17 family, and 22.a, 24.a, 26.a are
+  none of Leprévost 1995's C₂₂, C₂₄,₁, C₂₄,₂, C₂₆.  17.a is also f₁₇ of Platonov–Petrunin 2012a.
+* **Reprints** (the credit is unchanged): Platonov–Petrunin 2012a also print 17.a, 19.b (X₁(13)), 23.a and 29.a.
+* Database credits say only that the curve is in that database; earlier appearances in papers not cited by the tables
+  were not searched for.
 
 ## Errata to the copied record (`census_infinity_record.md`, copied verbatim; found by the audit of 2026-09-18, see `notes/`)
 

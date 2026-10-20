@@ -166,13 +166,13 @@
   },
   "geometrically_isomorphic_to": [],
   "discovery": {
-    "by": "Booker–Sutherland (extended database)",
-    "year": 2026,
+    "by": "Leprévost 1995",
+    "year": 1995,
     "historical": false
   },
-  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16)",
+  "reference": "LMFDB extended genus 2 database (Booker–Sutherland), curve 6804.a.1 (table g2c_curves_new, label 6804.a1 on devmirror.lmfdb.xyz, read 2026-10-16); it is the curve C_3 of F. Leprévost, Jacobiennes de certaines courbes de genre 2: torsion et simplicité, J. Théor. Nombres Bordeaux 7 (1995), 283–306, p. 303 (the member t = 3 of the [3,9] family C_t), reprinted in Platonov–Zhgun–Petrunin 2013, p. 321 (credit corrected 2026-10-20)",
   "sources": [
-    "BookerSutherland"
+    "Leprevost1995"
   ],
   "rm": false,
   "notes": "First Q-simple, geometrically split example of [3,9] for the census (the gsplit cell is empty). Found by querying the LMFDB genus 2 data (devmirror.lmfdb.xyz, g2c_curves_new: is_simple_base = true, is_simple_geom = false); smallest-conductor curve of this torsion group there (LMFDB conductor 6804). The automatic Richelot certificates do not apply (over Q(sqrt(-3)) the working model factors as two cubics and has no Richelot isogeny), so a splitness certificate is supplied: an explicit degree-3 map to a genus-1 curve over Q(sqrt(-3)) (the field over which J splits; the cubic factors of g are the fibre over the point at infinity and the three remaining Weierstrass points). Checked locally with the census's own pipeline/magma/verify_lib.m (Magma V2.30-1). Submitted by F. Najman; the curve is due to the database cited under Reference, the cover was computed for this submission.",

@@ -328,26 +328,54 @@ def lmfdb_conductor_override(cond: dict | None, lmfdb: dict) -> str:
     return lab
 
 
-def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, now: str, lmfdb: dict) -> dict:
-    inv = res["torsion"]["invariants"]
-    key = group_key(inv)
-    cls = res["class"]
-    certified = cls in CLASSES
-    known_classes = {c["class"] for c in curves if c["group_key"] == key and c["class"] in CLASSES}
-    known_any = any(c["group_key"] == key for c in curves)
-    curve = dict(res["curve"])
+def magma_error(stdout: Path) -> str:
+    """The first Magma error in a job's output (a runtime, user or system error), or ""."""
+    if not stdout.exists():
+        return ""
+    for line in stdout.read_text(errors="replace").splitlines():
+        for tag in ("Runtime error", "System Error", "User error"):
+            if tag in line:
+                return line.split(tag, 1)[1].lstrip(" :'").rstrip("'").strip()
+    return ""
+
+
+def conductor_result(cfile: Path, clog: str) -> dict | None:
+    """The conductor job's result if it finished: the marker is logged and the JSON says ok (Magma carries on
+    after an error, so the marker alone is not enough; the JSON then still holds the minimal model only)."""
+    if "CONDUCTOR_DONE" not in clog or not cfile.exists():
+        return None
+    res = read_json(cfile)
+    return res if res.get("ok") is True and res.get("conductor") else None
+
+
+def conductor_missing_reason(timed_out: bool, error: str) -> str:
+    if timed_out:
+        return "Magma did not finish the conductor computation within the time limit"
+    return "Magma's genus-2 Conductor failed on this curve" + (f": {error}" if error else "")
+
+
+def apply_conductor(curve: dict, cond: dict | None, lmfdb: dict, prod: dict | None,
+                    missing: str = "", partial: dict | None = None) -> None:
+    """Fill the minimal model and conductor fields of curve from the conductor job: cond is its result
+    (None if it did not finish), partial the minimal model it wrote before the conductor, missing the
+    reason the conductor is absent (conductor_missing_reason)."""
     if cond:
         curve.update({"minimal_model": cond["minimal_model"], "minimal_discriminant": cond["minimal_discriminant"],
                       "minimal_discriminant_factored": cond["minimal_discriminant_factored"],
                       "conductor": cond["conductor"], "conductor_factored": cond["conductor_factored"],
                       "conductor_note": cond["conductor_note"]})
     else:
-        curve.update({"minimal_model": None, "minimal_discriminant": "", "minimal_discriminant_factored": "",
-                      "conductor": "", "conductor_factored": "", "conductor_note": "not computed by Magma within the time limit"})
+        missing = missing or conductor_missing_reason(True, "")
+        mm = partial if partial and partial.get("minimal_model") else {}
+        curve.update({"minimal_model": mm.get("minimal_model"), "minimal_discriminant": mm.get("minimal_discriminant", ""),
+                      "minimal_discriminant_factored": mm.get("minimal_discriminant_factored", ""),
+                      "conductor": "", "conductor_factored": "", "conductor_note": "not computed: " + missing})
         if lmfdb.get("label"):
             # the first component of an LMFDB label is the conductor of the Jacobian
             curve["conductor"] = lmfdb["label"].split(".")[0]
-            curve["conductor_note"] = "taken from the LMFDB label " + lmfdb["label"] + " (Magma did not finish the conductor computation within the time limit)"
+            if curve["conductor"].isdigit():
+                curve["conductor_factored"] = _factor_str(int(curve["conductor"]))
+            curve["conductor_note"] = "taken from the LMFDB label " + lmfdb["label"] + " (" + missing + ")"
     curve["conductor_source"] = "magma" if cond else ("lmfdb label" if curve["conductor"] else "")
     override = lmfdb_conductor_override(cond, lmfdb)
     if override:
@@ -358,10 +386,9 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
         curve["conductor_note"] = (f"taken from the LMFDB label {lmfdb['label']}: Magma's genus-2 Conductor gave {cond['conductor']}, "
                                    "with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); "
                                    "the odd parts agree")
-    prod = res["split"].get("isogenous_product")
     if prod:
         # rigorous: the conductor is an isogeny invariant and multiplicative in products
-        magma_val = curve["conductor"]
+        magma_val = cond["conductor"] if cond else ""   # what Magma computed (not the LMFDB label)
         curve["conductor_magma"] = cond["conductor"] if cond else ""
         curve["conductor"] = prod["conductor"]
         curve["conductor_factored"] = " * ".join(prod["conductors"]) + (" (product of the elliptic conductors)")
@@ -373,6 +400,18 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
         else:
             curve["conductor_note"] = (f"N(E1) N(E2) = {prod['conductors'][0]} * {prod['conductors'][1]} for the elliptic curves {prod['ainvs'][0]} and "
                                        f"{prod['ainvs'][1]} to whose product J is isogenous over Q" + (" (Magma's genus-2 Conductor agrees)" if magma_val else ""))
+
+
+def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, now: str, lmfdb: dict,
+                      cond_missing: str = "", cond_partial: dict | None = None) -> dict:
+    inv = res["torsion"]["invariants"]
+    key = group_key(inv)
+    cls = res["class"]
+    certified = cls in CLASSES
+    known_classes = {c["class"] for c in curves if c["group_key"] == key and c["class"] in CLASSES}
+    known_any = any(c["group_key"] == key for c in curves)
+    curve = dict(res["curve"])
+    apply_conductor(curve, cond, lmfdb, res["split"].get("isogenous_product"), cond_missing, cond_partial)
     sources = v.get("sources") or []
     return {
         "schema": SCHEMA_CERTIFICATE,
@@ -405,7 +444,7 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
             "host": HOST, "magma_version": res["magma_version"], "cputime_seconds": res["cputime"],
             "verify_lib_sha256": sha256_file(VERIFY_LIB),
             "log": f"data/logs/{pid}.log",
-            "conductor_log": f"data/logs/{pid}.conductor.log" if cond else "",
+            "conductor_log": f"data/logs/{pid}.conductor.log" if cond or cond_partial else "",
             "conductor_cputime_seconds": cond["cputime"] if cond else None,
         },
     }
@@ -507,17 +546,20 @@ def process(path: Path, args) -> str:
         if v.get("cover") and not res["split"]["cover_accepted"]:
             log(f"  note: the submitted cover was not accepted: {res['split']['cover_error']}")
         # conductor job
-        cond = None
+        cond, cond_missing, cond_partial = None, "", None
         if not args.no_conductor:
             cjob = write_conductor_job(v, jobdir, min(args.mem_gb, 8))
             crc, ctimed = run_magma(cjob, args.conductor_timeout)
             cfile = jobdir / "conductor.json"
             clog = (jobdir / "conductor.log").read_text() if (jobdir / "conductor.log").exists() else ""
-            if not ctimed and cfile.exists() and "CONDUCTOR_DONE" in clog:
-                cond = read_json(cfile)
+            cond = None if ctimed else conductor_result(cfile, clog)
+            if cond:
                 log(f"  conductor {cond['conductor']}")
             else:
-                log("  conductor not computed" + (" (timed out)" if ctimed else ""))
+                cond_missing = conductor_missing_reason(ctimed, magma_error(cjob.with_suffix(".stdout")))
+                if cfile.exists() and "MINIMAL_MODEL_DONE" in clog:
+                    cond_partial = read_json(cfile)
+                log("  conductor not computed: " + cond_missing)
         lmfdb = lmfdb_record(v, res, not args.no_lmfdb)
         log(f"  LMFDB: {lmfdb['label'] or '-'} ({lmfdb['kind']})")
         cond_str = cond["conductor"] if cond else (lmfdb["label"].split(".")[0] if lmfdb.get("label") else "")
@@ -530,11 +572,11 @@ def process(path: Path, args) -> str:
         v["_accepted_because"] = why
         now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
         pid = next_id(group_key(inv), curves)
-        cert = build_certificate(v, res, cond, curves, pid, now, lmfdb)
+        cert = build_certificate(v, res, cond, curves, pid, now, lmfdb, cond_missing, cond_partial)
         write_json(CURVES_DIR / f"{pid}.json", cert)
         LOGS_DIR.mkdir(exist_ok=True)
         shutil.copy(jobdir / "magma.log", LOGS_DIR / f"{pid}.log")
-        if cond and (jobdir / "conductor.log").exists():
+        if (cond or cond_partial) and (jobdir / "conductor.log").exists():
             shutil.copy(jobdir / "conductor.log", LOGS_DIR / f"{pid}.conductor.log")
         log(f"  ACCEPTED as {pid} [{cert['status']}] {group_bracket(inv)} class={cert['class']}"
             + (" NEW GROUP" if cert["new_group"] else " new for this class" if cert["new_for_class"] else " (" + why + ")")

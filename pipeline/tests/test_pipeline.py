@@ -63,6 +63,41 @@ class ValidateTests(unittest.TestCase):
         self.assertEqual(verify.lmfdb_conductor_override(None, {"label": "775.a.1"}), "")
         self.assertEqual(verify._factor_str(176400), "2^4 * 3^2 * 5^2 * 7^2")
 
+    def test_apply_conductor_without_magma_conductor(self):
+        """When Magma's conductor fails, the minimal model it wrote first is kept, the note says why, and an
+        isogenous product's conductor is not described as agreeing with a Magma value that does not exist (2026-10-20)."""
+        partial = {"ok": False, "minimal_model": {"f": ["-2"], "h": []}, "minimal_discriminant": "-28768731136",
+                   "minimal_discriminant_factored": "-1 * 2^22 * 19^3"}
+        why = verify.conductor_missing_reason(False, "Fibre blowups over number fields not yet implemented")
+        curve = {}
+        verify.apply_conductor(curve, None, {"label": "1521.d.2"}, None, why, partial)
+        self.assertEqual((curve["minimal_discriminant"], curve["conductor"], curve["conductor_factored"], curve["conductor_source"]),
+                         ("-28768731136", "1521", "3^2 * 13^2", "lmfdb label"))
+        self.assertIn("failed on this curve: Fibre blowups", curve["conductor_note"])
+        prod = {"ainvs": [["0", "1", "1", "-9", "-15"], ["0", "1", "1", "1", "0"]], "conductors": ["19", "19"], "conductor": "361"}
+        curve = {}
+        verify.apply_conductor(curve, None, {"label": "361.a.1"}, prod, why, partial)
+        self.assertEqual((curve["conductor"], curve["conductor_source"]), ("361", "isogenous product of elliptic curves"))
+        self.assertNotIn("Magma", curve["conductor_note"])
+        curve = {}
+        verify.apply_conductor(curve, None, {}, None, verify.conductor_missing_reason(True, ""), None)
+        self.assertEqual((curve["minimal_model"], curve["conductor"]), (None, ""))
+        self.assertIn("time limit", curve["conductor_note"])
+        # a job that logged its marker after an error (Magma carries on) left only the minimal model: not a result
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            cfile = Path(d) / "conductor.json"
+            cfile.write_text('{"ok":false,"minimal_model":{"f":["1"],"h":[]},"minimal_discriminant":"1","minimal_discriminant_factored":"1"}')
+            self.assertIsNone(verify.conductor_result(cfile, "MINIMAL_MODEL_DONE\nCONDUCTOR_DONE"))
+            cfile.write_text('{"ok":true,"minimal_model":{"f":["1"],"h":[]},"conductor":"361","conductor_factored":"19^2","conductor_note":"","cputime":1}')
+            self.assertEqual(verify.conductor_result(cfile, "CONDUCTOR_DONE")["conductor"], "361")
+            out = Path(d) / "conductor.stdout"
+            out.write_text("System Error: User memory limit has been reached\n")
+            self.assertEqual(verify.magma_error(out), "User memory limit has been reached")
+        # every census curve has a minimal model (the ten missing ones were filled by fill_conductors.py on 2026-10-20)
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            self.assertTrue(read_json(p)["curve"].get("minimal_model"), p.name)
+
     def test_rejects(self):
         for bad in ({"f": "x^7 + 1"}, {"f": "x^5 + 1; quit"}, {"f": "x^5+1", "group": [2, 3]}, {"f": "x^5+1", "class": "cm"},
                     {"f": "x^5+1", "cover": {"p": [1], "q": [1], "hh": [1]}}, {"f": "0"}):

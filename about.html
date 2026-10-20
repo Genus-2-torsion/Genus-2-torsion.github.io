@@ -6,7 +6,7 @@
   <title>About — Torsion of genus 2 Jacobians over ℚ</title>
   <meta name="description" content="Conventions, certificates and sources of the census of rational torsion subgroups of genus 2 Jacobians over Q.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/style.css?v=5">
+  <link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body data-page="about">
 <main>
@@ -210,7 +210,10 @@
       42a1 (torsion ℤ/8) with curves with a point of order 6, over an elliptic curve of rank 2 on which HLP's Proposition 12 adds a point of order
       16; the torsion is exactly ℤ/48 because #J(𝔽₅) = 48 is forced on a residue class.
       In each case the group is marked over the function field (or at every member, by injectivity of pullbacks), and the orders or group
-      structures of <span class="m">J(𝔽<sub>p</sub>)</span> at one to three primes cap the torsion on a residue class.</dd>
+      structures of <span class="m">J(𝔽<sub>p</sub>)</span> at one to three primes cap the torsion on a residue class.
+      The exception is <span class="m">[4,16]</span> (<code>family_416_split_certificate.log</code>, with a <a href="proofs/split-4-16.html">complete proof</a>):
+      an HLP (2,2)-gluing of curves with torsion [2,4] and a fixed curve with torsion [2,8], over a rational curve, whose torsion is exactly
+      [4,16] at every member, from the intersection of the torsion Kummer images of the two elliptic factors; the census curve 4.16.a is a member.</dd>
     <dt><span class="inf-badge family">∞ ⊇</span></dt>
     <dd><b>Family with containment.</b> A positive-dimensional family (infinitely many members in moduli) of curves in the class whose Jacobians have torsion
       <em>containing</em> the group is proven in the cited source: Theorem 1 / Table 1 of Howe–Leprévost–Poonen (2000) and Howe's order-48
@@ -253,6 +256,6 @@
     The design of this site follows the census of <a href="https://x1mn-sporadic.github.io/">sporadic points on X₁(m,n)</a> and the
     <a href="https://elliptic-rank.icarm.cloud/">Elliptic Curve Rank Leaderboard</a>.</p>
 </main>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=20261020-sitefix"></script>
 </body>
 </html>

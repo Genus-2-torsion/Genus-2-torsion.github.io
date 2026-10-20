@@ -380,6 +380,26 @@ and [29]. Their earlier split-over-ℚ exclusions retain the elementary Mazur
 proof link. Since both split classes are excluded, the combined split
 infinitude status is now `impossible`, with a link to the complete geometric proof.
 
+## Curve data corrections (20 October 2026)
+
+Ten curves had no minimal model: 1.c, 4.b, 7.c, 11.b, 2.4.c, 3.3.b, 3.6.c, 3.9.c, 2.2.2.c and 2.2.4.b. Their
+conductor job had not finished, and the job wrote its results only at the end. `pipeline/fill_conductors.py`
+reran `pipeline/magma/conductor_lib.m`, which now writes the reduced minimal model and factored discriminant
+before the conductor (logs `data/logs/<id>.conductor.log`). All 187 curves now have a minimal model.
+
+- For 1.c, 7.c, 11.b, 2.4.c and 3.3.b, Magma's genus-2 `Conductor` stops with "Fibre blowups over number fields
+  not yet implemented". The census had said it "did not finish within the time limit".
+- For 3.6.c, 3.9.c, 2.2.2.c, 4.b and 2.2.4.b, it did not finish. 3.6.c reached the 16 GB memory limit after
+  638 s, and the other four were stopped after about 15 minutes.
+- The conductors shown are unchanged. They come from the LMFDB label (1.c, 7.c, 2.4.c, 3.6.c, 3.9.c, 2.2.2.c,
+  now with their factorisation) or from the elliptic factors N(E₁)N(E₂) (3.3.b, 4.b, 2.2.4.b). 11.b still has no
+  conductor.
+- The notes of 3.3.b, 4.b and 2.2.4.b said "(Magma's genus-2 Conductor agrees)", but Magma had not computed a
+  conductor for them. The value compared was the LMFDB label's. `verify.py` now compares N(E₁)N(E₂) only with
+  Magma's own result, and the three notes are corrected.
+- The notes of 3.9.c said the curve "is due to the database cited under Reference". Since 20 October it is
+  credited to Leprévost 1995 (C₃), and the note now says so.
+
 ## LMFDB labels
 
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels

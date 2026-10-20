@@ -1,0 +1,3 @@
+[0.0200000 s] minimal model y^2 + (0) y = -2*x^6 - 6*x^5 - 8*x^4 - 6*x^3 - 8*x^2 - 6*x - 2, discriminant -28768731136
+[0.0200000 s] discriminant factored: -1 * 2^22 * 19^3
+[0.0200000 s] MINIMAL_MODEL_DONE

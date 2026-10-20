@@ -58,11 +58,27 @@
       "4052580881/640000"
     ],
     "rational_weierstrass_points": 1,
-    "minimal_model": null,
-    "minimal_discriminant": "",
-    "minimal_discriminant_factored": "",
+    "minimal_model": {
+      "f": [
+        "19",
+        "4",
+        "-14",
+        "11",
+        "3",
+        "-5",
+        "2"
+      ],
+      "h": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "268738560000",
+    "minimal_discriminant_factored": "2^16 * 3^8 * 5^4",
     "conductor": "2700",
-    "conductor_factored": "",
+    "conductor_factored": "2^2 * 3^3 * 5^2",
     "conductor_note": "taken from the LMFDB label 2700.b.1 (Magma did not finish the conductor computation within the time limit)",
     "conductor_source": "lmfdb label"
   },
@@ -219,7 +235,7 @@
     "cputime_seconds": "1.43000",
     "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/3.6.c.log",
-    "conductor_log": "",
+    "conductor_log": "data/logs/3.6.c.conductor.log",
     "conductor_cputime_seconds": null
   }
 }

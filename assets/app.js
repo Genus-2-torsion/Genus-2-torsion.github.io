@@ -200,6 +200,7 @@
     $("#stat-qsplit").textContent = data.n_groups_by_class.qsplit;
     $("#stat-gsplit").textContent = data.n_groups_by_class.gsplit;
     $("#stat-inf").textContent = data.n_infinite.simple.exact;
+    $("#stat-inf-split").textContent = data.n_infinite.split.exact;
     $("#stat-generated").textContent = data.generated;
     const tbody = $("#groups tbody");
     const boxes = { simple: $("#cls-simple"), qsplit: $("#cls-qsplit"), gsplit: $("#cls-gsplit") };

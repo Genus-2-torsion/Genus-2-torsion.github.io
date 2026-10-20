@@ -55,12 +55,23 @@
       "112627/1216"
     ],
     "rational_weierstrass_points": 0,
-    "minimal_model": null,
-    "minimal_discriminant": "",
-    "minimal_discriminant_factored": "",
+    "minimal_model": {
+      "f": [
+        "-2",
+        "-6",
+        "-8",
+        "-6",
+        "-8",
+        "-6",
+        "-2"
+      ],
+      "h": []
+    },
+    "minimal_discriminant": "-28768731136",
+    "minimal_discriminant_factored": "-1 * 2^22 * 19^3",
     "conductor": "361",
     "conductor_factored": "19 * 19 (product of the elliptic conductors)",
-    "conductor_note": "N(E1) N(E2) = 19 * 19 for the elliptic curves ['0', '1', '1', '-9', '-15'] and ['0', '1', '1', '1', '0'] to whose product J is isogenous over Q (Magma's genus-2 Conductor agrees)",
+    "conductor_note": "N(E1) N(E2) = 19 * 19 for the elliptic curves ['0', '1', '1', '-9', '-15'] and ['0', '1', '1', '1', '0'] to whose product J is isogenous over Q",
     "conductor_source": "isogenous product of elliptic curves",
     "conductor_magma": ""
   },
@@ -240,7 +251,7 @@
     "cputime_seconds": "0.980000",
     "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/3.3.b.log",
-    "conductor_log": "",
+    "conductor_log": "data/logs/3.3.b.conductor.log",
     "conductor_cputime_seconds": null
   }
 }

@@ -54,12 +54,23 @@
       "8276609/10816"
     ],
     "rational_weierstrass_points": 0,
-    "minimal_model": null,
-    "minimal_discriminant": "",
-    "minimal_discriminant_factored": "",
+    "minimal_model": {
+      "f": [
+        "2",
+        "-10",
+        "12",
+        "6",
+        "-8",
+        "-2",
+        "2"
+      ],
+      "h": []
+    },
+    "minimal_discriminant": "-19138609152",
+    "minimal_discriminant_factored": "-1 * 2^22 * 3^3 * 13^2",
     "conductor": "1521",
-    "conductor_factored": "",
-    "conductor_note": "taken from the LMFDB label 1521.d.1 (Magma did not finish the conductor computation within the time limit)",
+    "conductor_factored": "3^2 * 13^2",
+    "conductor_note": "taken from the LMFDB label 1521.d.1 (Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented)",
     "conductor_source": "lmfdb label"
   },
   "lmfdb": {
@@ -201,7 +212,7 @@
     "cputime_seconds": "0.790000",
     "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/7.c.log",
-    "conductor_log": "",
+    "conductor_log": "data/logs/7.c.conductor.log",
     "conductor_cputime_seconds": null
   }
 }

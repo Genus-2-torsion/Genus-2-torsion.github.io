@@ -1,6 +1,7 @@
 /* conductor_lib.m -- reduced minimal Weierstrass model, factored discriminant and conductor of a
    genus-2 curve y^2 + h(x) y = f(x) over Q.  Run by pipeline/verify.py as a separate Magma job
-   under a time limit, because the conductor needs the discriminant factored.  The job defines
+   under a time limit, because the conductor needs the discriminant factored.  The minimal model is
+   written first (with ok: false), so it survives a failed or timed-out conductor.  The job defines
    fcoeffs, hcoeffs (ascending coefficient strings), LogFile, OutFile, MemGB (optional).
    Magma's conductor exponent at 2 uses Ogg's formula when v_2(disc) >= 12 and prints a warning
    that it gives no correctness guarantee; the certificate records this as conductor_note.  Odd
@@ -40,11 +41,15 @@ Dm := Z!Discriminant(Cm);
 Log(Sprintf("minimal model y^2 + (%o) y = %o, discriminant %o", hm, fm, Dm));
 dfact := FactoredString(Dm);
 Log("discriminant factored: " cat dfact);
+// the minimal model first (ok: false), so that it is kept if the conductor fails or times out
+mm := "\"minimal_model\":{\"f\":" cat JList([Sprint(c) : c in Coefficients(fm)]) cat ",\"h\":" cat JList([Sprint(c) : c in Coefficients(hm)]) cat "}," cat
+  "\"minimal_discriminant\":" cat JStr(Sprint(Dm)) cat ",\"minimal_discriminant_factored\":" cat JStr(dfact);
+Write(OutFile, "{\"ok\":false," cat mm cat "}" : Overwrite := true);
+Log("MINIMAL_MODEL_DONE");
 N := Conductor(Cm);
 note := Valuation(Dm, 2) ge 12 select "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous" else "";
 Log(Sprintf("conductor %o = %o", N, FactoredString(N)));
-Write(OutFile, "{\"ok\":true,\"minimal_model\":{\"f\":" cat JList([Sprint(c) : c in Coefficients(fm)]) cat ",\"h\":" cat JList([Sprint(c) : c in Coefficients(hm)]) cat "}," cat
-  "\"minimal_discriminant\":" cat JStr(Sprint(Dm)) cat ",\"minimal_discriminant_factored\":" cat JStr(dfact) cat
+Write(OutFile, "{\"ok\":true," cat mm cat
   ",\"conductor\":" cat JStr(Sprint(N)) cat ",\"conductor_factored\":" cat JStr(FactoredString(N)) cat ",\"conductor_note\":" cat JStr(note) cat
   ",\"cputime\":" cat Sprint(RealField(6)!Cputime(T0)) cat "}" : Overwrite := true);
 Log("CONDUCTOR_DONE");

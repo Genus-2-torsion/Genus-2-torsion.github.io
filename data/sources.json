@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 14:42 UTC",
+  "generated": "2026-10-20 16:01 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -65,6 +65,35 @@
       "cite": "B. Mazur, Modular curves and the Eisenstein ideal, Publ. Math. IHÉS 47 (1977), 33–186.",
       "url": "https://www.numdam.org/item/PMIHES_1977__47__33_0/",
       "used_for": "rational torsion on elliptic curves; the prime torsion obstruction for abelian surfaces split over ℚ"
+    },
+    "Geometric2329Obstruction": {
+      "short": "geometric [23] and [29] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Geometrically split abelian surfaces cannot have rational 23- or 29-torsion, census proof of 20 October 2026. Elliptic torsion bounds, the endomorphism field, and a residual representation argument.",
+      "url": "proofs/geometric-23-29-obstruction.html",
+      "used_for": "impossibility of [23] and [29] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree"
+    },
+    "DKSS2023": {
+      "short": "Derickx–Kamienny–Stein–Stoll 2023",
+      "year": 2023,
+      "cite": "M. Derickx, S. Kamienny, W. Stein, M. Stoll, Torsion points on elliptic curves over number fields of small degree, Algebra Number Theory 17 (2023), 267–308.",
+      "url": "https://arxiv.org/abs/1707.00364",
+      "used_for": "Theorem 1.2: elliptic torsion primes over quartic fields are at most 17; used in the geometric [23] and [29] exclusions"
+    },
+    "Khawaja2024": {
+      "short": "Khawaja 2024",
+      "year": 2024,
+      "cite": "M. Khawaja, Torsion primes for elliptic curves over degree 8 number fields, Res. Number Theory 10 (2024), article 48.",
+      "url": "https://doi.org/10.1007/s40993-024-00533-6",
+      "used_for": "Theorem 1.2: elliptic torsion primes over degree-eight fields are at most 23; used in the geometric [29] exclusion"
+    },
+    "Clark2004": {
+      "short": "Clark 2004",
+      "year": 2004,
+      "cite": "P. L. Clark, Bounds for torsion on abelian varieties with integral moduli, arXiv:math/0407264v2 (2004).",
+      "url": "https://arxiv.org/abs/math/0407264",
+      "used_for": "Theorem 5: possible rational torsion orders of abelian surfaces with everywhere potentially good reduction; excludes 23 and 29 in the CM case"
     },
     "HLP2000": {
       "short": "Howe–Leprévost–Poonen 2000",

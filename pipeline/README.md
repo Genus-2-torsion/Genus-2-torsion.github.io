@@ -50,7 +50,9 @@ Class-specific impossibility results are returned by `exclusions_record` in `kno
 Each exclusion has a reason, bibliography keys, and a proof URL; `build.py` publishes these
 in the group's `exclusions` field and refuses to build if an exclusion contradicts a recorded
 example in that class. These records are separate from the combined geometrically split
-infinitude status.
+infinitude status. If both split classes are excluded, `infinite_record("split", key)` returns
+`grade: "impossible"` with a proof URL, and the build also rejects a geometrically split example
+whose class over ℚ is undecided. This currently applies to [23] and [29].
 
 Facts about infinitely many realisations live in `knowledge.py` (`_SIMPLE_EXACT`, `_SIMPLE_FAMILY`,
 `_SIMPLE_OPEN_NOTES`, `_SPLIT_FAMILY`, `_SPLIT_OPEN_NOTES`) with their sources in `SOURCES`; copies of

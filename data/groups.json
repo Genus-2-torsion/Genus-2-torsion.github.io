@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20 14:42 UTC",
+  "generated": "2026-10-20 16:01 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -15,12 +15,14 @@
       "grades": {
         "exact": "infinitely many, with this exact torsion group (certified)",
         "family": "a positive-dimensional family with torsion containing the group is proven; exactness for infinitely many members is open",
-        "open": "no positive-dimensional family is recorded (this is not a claim that none exists)"
+        "open": "no positive-dimensional family is recorded (this is not a claim that none exists)",
+        "impossible": "proved impossible: no Jacobian in this class has the torsion group"
       },
       "labels": {
         "exact": "∞",
         "family": "∞ ⊇",
-        "open": "?"
+        "open": "?",
+        "impossible": "∅"
       }
     },
     "exclusions": "proved impossibility, indexed by class; each entry has a reason, sources and a proof_url; an absent entry makes no impossibility claim",
@@ -41,12 +43,14 @@
     "simple": {
       "exact": 60,
       "family": 0,
-      "open": 36
+      "open": 36,
+      "impossible": 0
     },
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 26
+      "open": 24,
+      "impossible": 2
     }
   },
   "n_rejected": 0,
@@ -4419,6 +4423,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
+          "sources": [
+            "Geometric2329Obstruction",
+            "DKSS2023",
+            "Khawaja2024",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/geometric-23-29-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -4434,9 +4448,15 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric2329Obstruction",
+            "DKSS2023",
+            "Khawaja2024",
+            "Clark2004"
+          ],
+          "note": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
+          "proof_url": "proofs/geometric-23-29-obstruction.html",
           "inherited_from": null
         }
       }
@@ -5351,6 +5371,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
+          "sources": [
+            "Geometric2329Obstruction",
+            "DKSS2023",
+            "Khawaja2024",
+            "Clark2004"
+          ],
+          "proof_url": "proofs/geometric-23-29-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -5362,9 +5392,15 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric2329Obstruction",
+            "DKSS2023",
+            "Khawaja2024",
+            "Clark2004"
+          ],
+          "note": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
+          "proof_url": "proofs/geometric-23-29-obstruction.html",
           "inherited_from": null
         }
       }

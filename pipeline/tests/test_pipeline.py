@@ -75,7 +75,7 @@ class KnowledgeTests(unittest.TestCase):
         for side in ("simple", "split"):
             for key in list(knowledge._SIMPLE_EXACT) + list(knowledge._SIMPLE_FAMILY) + list(knowledge._SPLIT_FAMILY) + list(knowledge._SPLIT_EXACT):
                 rec = knowledge.infinite_record(side, key)
-                self.assertIn(rec["grade"], ("exact", "family", "open"))
+                self.assertIn(rec["grade"], ("exact", "family", "open", "impossible"))
                 for s in rec["sources"]:
                     self.assertIn(s, knowledge.SOURCES, f"{side} {key}: unknown source {s}")
 

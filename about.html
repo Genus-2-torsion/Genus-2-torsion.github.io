@@ -6,7 +6,7 @@
   <title>About — Torsion of genus 2 Jacobians over ℚ</title>
   <meta name="description" content="Conventions, certificates and sources of the census of rational torsion subgroups of genus 2 Jacobians over Q.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="assets/style.css?v=4">
+  <link rel="stylesheet" href="assets/style.css?v=5">
 </head>
 <body data-page="about">
 <main>
@@ -99,7 +99,7 @@
     were re-derived by this pipeline and agree with the paper's tables; the class over <span class="m">ℚ</span> of the split curves is new information
     computed here.</p>
 
-  <h3>Impossible in a class</h3>
+  <h3 id="impossible-examples">Impossible in a class</h3>
   <p>A dash in an example column means that no example is recorded. The label
     <a href="proofs/qsplit-prime-obstruction.html">impossible</a> means that a proof excludes that torsion group
     in the indicated class, and links to the proof. For Jacobians split over <span class="m">ℚ</span>,
@@ -108,12 +108,19 @@
     in that column. The result concerns splitting over <span class="m">ℚ</span>; the census has geometrically
     split examples with torsion <a href="group.html?g=11">[11]</a> and <a href="group.html?g=19">[19]</a>
     that are simple over <span class="m">ℚ</span>.</p>
+  <p>The groups <a href="group.html?g=23">[23]</a> and <a href="group.html?g=29">[29]</a> are also impossible
+    in the “geometrically split, simple over <span class="m">ℚ</span>” column. More generally, a geometrically
+    split abelian surface over <span class="m">ℚ</span> has no rational point of order <span class="m">23</span>
+    or <span class="m">29</span>. The <a href="proofs/geometric-23-29-obstruction.html">complete proof</a>
+    combines elliptic torsion bounds with the Galois action on the geometric endomorphism algebra.
+    It applies to every geometric splitting degree. The combined geometrically split
+    <b>∞?</b> cells for these two groups therefore show <span class="inf-badge impossible">∅</span>,
+    linked to the proof.</p>
 
   <h3>Infinitely many?</h3>
   <p>For each group and each side of the census (geometrically simple; geometrically split) the census answers "are infinitely many such Jacobians known?"
-    with one of three grades. There is no "finitely many" grade: no group is known to be realised only finitely often, and among the groups compatible with the
-    elementary constraints — at most four invariant factors, at most two of them divisible by any given odd prime, since <span class="m">J[p](ℚ)</span> is isotropic
-    for the Weil pairing when <span class="m">μ<sub>p</sub> ⊄ ℚ</span> — none is known not to be realised at all (Question 3 of the paper).</p>
+    with one of the following four labels. The label <span class="inf-badge impossible">∅</span> excludes the group
+    on the indicated side of the census.</p>
   <dl class="facts">
     <dt><span class="inf-badge exact">∞</span></dt>
     <dd><b>Certified, exact.</b> Infinitely many pairwise non-isomorphic curves in the class whose Jacobian has torsion subgroup <em>exactly</em> the group.
@@ -162,7 +169,7 @@
       The group <span class="m">[3,9]</span>, graded open until 19 October 2026 (only isolated examples were known), has a family on a line of the [9]-chart:
       a pencil with a class of order 9 over the function field, on which the base change <span class="m">t = (s² − 1)/4</span> makes an independent class of
       order 3 rational (<code>family_3_9_certificate.log</code>).
-      On the split side 69 groups are certified exact. For <span class="m">[8,8]</span> (<code>family_88_split_certificate.log</code>) the Jacobians are split by explicit maps
+      On the split side 70 groups are certified exact. For <span class="m">[8,8]</span> (<code>family_88_split_certificate.log</code>) the Jacobians are split by explicit maps
       onto an elliptic curve, the group is marked over the function field, and since <span class="m">#J(𝔽<sub>p</sub>)</span> is always divisible by 256 in that family,
       exactness on a residue class comes from the group structures of <span class="m">J(𝔽<sub>p</sub>)</span> at two primes rather than from their orders.
       For <span class="m">[2,2,2,16]</span> (<code>family_22216_split_certificate.log</code>) the family is a (2,2)-gluing of an elliptic curve with torsion [2,4] and a fixed one with
@@ -214,6 +221,10 @@
     <dt><span class="inf-badge open">?</span></dt>
     <dd><b>Open.</b> No positive-dimensional construction is recorded — this is not a claim that none exists; the group page gives the reason when the record
       has one (e.g. only isolated examples, or every known example has real multiplication).</dd>
+    <dt><span class="inf-badge impossible">∅</span></dt>
+    <dd><b>Impossible.</b> A proof excludes every Jacobian on this side with the given torsion group.
+      The badge links to that proof. This currently applies to <a href="group.html?g=23">[23]</a> and
+      <a href="group.html?g=29">[29]</a> on the geometrically split side.</dd>
   </dl>
 
   <h3>LMFDB links</h3>

@@ -352,6 +352,34 @@ from the infinitude records for all geometrically split Jacobians.
 The known geometrically split, ℚ-simple examples with torsion [11] and [19]
 remain in their own class.
 
+## Geometric [23] and [29] exclusions (20 October 2026)
+
+The complete proof is published at
+[`proofs/geometric-23-29-obstruction.html`](../../../proofs/geometric-23-29-obstruction.html),
+with standalone LaTeX
+[`geometric_23_29_obstruction.tex`](geometric_23_29_obstruction.tex).
+It proves that every geometrically split abelian surface A/ℚ satisfies
+A(ℚ)[23] = A(ℚ)[29] = 0, without a bound on its geometric splitting degree.
+The proof was developed and independently reviewed in
+`random_research/g2_gsplit_exclusions_2026_10_20/proof_23.md`.
+
+Two nonisogenous elliptic factors descend to a field of degree at most two.
+CM squares are excluded by Clark, *Bounds for torsion on abelian varieties with
+integral moduli*, Theorem 5. In the non-CM square case the endomorphism-field
+Galois group embeds in PGL₂(ℚ). The small-degree cases use
+Derickx–Kamienny–Stein–Stoll, Theorem 1.2 (quartic torsion primes), and Khawaja,
+Theorem 1.2 (degree-eight torsion primes). The remaining cases use a Galois-stable
+maximal local matrix order, a change of Tate lattice preserving composition
+factors, and Clifford theory. A hypothetical rational p-torsion point forces
+the real cyclotomic field ℚ(ζ_p)⁺ into the endomorphism field, contradicting its
+degree. This is a mathematical proof; it does not depend on a search or a
+computed sample of curves.
+
+The new exclusions apply to the geometrically split, ℚ-simple cells for [23]
+and [29]. Their earlier split-over-ℚ exclusions retain the elementary Mazur
+proof link. Since both split classes are excluded, the combined split
+infinitude status is now `impossible`, with a link to the complete geometric proof.
+
 ## LMFDB labels
 
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels

@@ -445,6 +445,7 @@ table.data td.inf { text-align: center; white-space: nowrap; }
 .inf-badge.family { background: var(--warn-soft); color: var(--warn); }
 .inf-badge.inherited { opacity: 0.75; font-weight: 500; }
 .inf-badge.open { background: var(--panel-soft); color: var(--muted); border: 1px solid var(--border); }
+.inf-badge.impossible { background: var(--panel-soft); color: var(--fg); border: 1px solid var(--border); cursor: pointer; }
 .chip.undecided { background: var(--warn-soft); color: var(--warn); }
 .chip.new { background: var(--accent-soft); color: var(--accent-dark); }
 .lmfdb {

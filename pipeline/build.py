@@ -112,6 +112,9 @@ def build():
         for cls in exclusions:
             if classes[cls]:
                 raise ValueError(f"{key}: a recorded {cls} example contradicts its impossibility proof")
+        if "qsplit" in exclusions and "gsplit" in exclusions:
+            if any(c["class"] == "split_undecided_over_Q" for c in classes["undecided"]):
+                raise ValueError(f"{key}: a geometrically split example contradicts its impossibility proof")
         rec = {
             "key": key, "group": inv, "bracket": group_bracket(inv), "label": group_label(inv),
             "order": group_order(inv), "rank": len(inv),
@@ -142,7 +145,7 @@ def build():
         "n_groups_by_class": counts,
         "n_groups_any_split": sum(1 for g in groups if g["known"]["qsplit"] or g["known"]["gsplit"]
                                   or any(c["class"] == "split_undecided_over_Q" for c in g["classes"]["undecided"])),
-        "n_infinite": {side: {grade: sum(1 for g in groups if g["infinite"][side]["grade"] == grade) for grade in ("exact", "family", "open")}
+        "n_infinite": {side: {grade: sum(1 for g in groups if g["infinite"][side]["grade"] == grade) for grade in knowledge.GRADE_LABEL}
                        for side in ("simple", "split")},
         "n_rejected": len(list(REJECTED_DIR.glob("*.json"))),
         "groups": groups,

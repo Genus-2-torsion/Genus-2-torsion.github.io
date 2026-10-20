@@ -8,11 +8,12 @@
   const pageName = document.body.dataset.page || "";
   const CLASSES = [["simple", "geometrically simple"], ["qsplit", "split over ℚ"], ["gsplit", "geometrically split, simple over ℚ"]];
   const CLASS_TEXT = Object.fromEntries(CLASSES);
-  const GRADE = { exact: "∞", family: "∞ ⊇", open: "?" };
+  const GRADE = { exact: "∞", family: "∞ ⊇", open: "?", impossible: "∅" };
   const GRADE_TEXT = {
     exact: "infinitely many, with this exact torsion group (certified)",
     family: "a positive-dimensional family with torsion containing the group is proven; exactness for infinitely many members is open",
     open: "no positive-dimensional family is recorded",
+    impossible: "proved impossible: no Jacobian in this class has the torsion group",
   };
 
   // ---------------------------------------------------------------- utilities
@@ -66,7 +67,7 @@
     const text = status === "certified" ? "certified" : status === "verified" ? "verified · class not certified" : status;
     return el("span", { class: "chip " + (status === "verified" ? "undecided" : status) }, text);
   };
-  const infBadge = (rec) => el("span", { class: "inf-badge " + rec.grade + (rec.inherited_from ? " inherited" : ""),
+  const infBadge = (rec) => el(rec.proof_url ? "a" : "span", { href: rec.proof_url, class: "inf-badge " + rec.grade + (rec.inherited_from ? " inherited" : ""),
     title: GRADE_TEXT[rec.grade] + (rec.note ? " — " + rec.note : "") }, GRADE[rec.grade]);
   const discovery = (by, year) => (by ? by + (year ? " (" + year + ")" : "") : (year ? String(year) : "—"));
   const srcYear = (src) => (src.short.includes(String(src.year)) ? "" : " (" + src.year + ")");
@@ -225,7 +226,7 @@
         sup.append(el("th", { class: "side-split", colspan: n }, "geometrically split"));
         if (shown.includes("qsplit")) cols.append(el("th", { class: "side-start", title: "smallest-conductor known curve whose Jacobian is isogenous over ℚ to a product of elliptic curves" }, "split over ℚ"));
         if (shown.includes("gsplit")) cols.append(el("th", { class: shown.includes("qsplit") ? "" : "side-start", title: "smallest-conductor known curve whose Jacobian is simple over ℚ but splits over ℚ̄" }, "simple over ℚ, split over ℚ̄"));
-        if (showInf.checked) cols.append(el("th", { class: "sortable", title: "infinitely many geometrically split Jacobians with this torsion? ∞ ⊇ family with torsion containing the group (Howe–Leprévost–Poonen) · ? open" }, "∞?"));
+        if (showInf.checked) cols.append(el("th", { class: "sortable", title: "infinitely many geometrically split Jacobians with this torsion? ∞ certified exact · ∞ ⊇ family with containment · ? open · ∅ proved impossible" }, "∞?"));
       }
       thead.append(sup, cols);
       tbody.innerHTML = "";
@@ -243,12 +244,12 @@
           el("td", { class: "num" }, g.order));
         if (showSimple) {
           tr.append(exampleCell(g.classes.simple, sources, g, "simple", mode));
-          if (showInf.checked) tr.append(el("td", { class: "inf", "data-sort": { exact: 0, family: 1, open: 2 }[g.infinite.simple.grade] }, infBadge(g.infinite.simple)));
+          if (showInf.checked) tr.append(el("td", { class: "inf", "data-sort": { exact: 0, family: 1, open: 2, impossible: 3 }[g.infinite.simple.grade] }, infBadge(g.infinite.simple)));
         }
         if (showSplit) {
           if (shown.includes("qsplit")) tr.append(exampleCell(g.classes.qsplit, sources, g, "qsplit", mode));
           if (shown.includes("gsplit")) tr.append(exampleCell(g.classes.gsplit, sources, g, "gsplit", mode));
-          if (showInf.checked) tr.append(el("td", { class: "inf", "data-sort": { exact: 0, family: 1, open: 2 }[g.infinite.split.grade] }, infBadge(g.infinite.split)));
+          if (showInf.checked) tr.append(el("td", { class: "inf", "data-sort": { exact: 0, family: 1, open: 2, impossible: 3 }[g.infinite.split.grade] }, infBadge(g.infinite.split)));
         }
         tbody.append(tr);
       }
@@ -311,8 +312,10 @@
     const body = $("#body");
     const sideBox = (name, known, inf, extra) => el("div", { class: "panel" },
       el("h3", null, name),
-      el("div", { class: "count" }, known),
-      el("p", null, "infinitely many? ", infBadge(inf), " ", el("span", null, GRADE_TEXT[inf.grade]),
+      el("div", { class: "count" }, inf.grade === "impossible" ? "impossible" : known),
+      inf.grade === "impossible"
+        ? el("p", null, inf.note, " ", el("a", { href: inf.proof_url }, "Read the proof."))
+        : el("p", null, "infinitely many? ", infBadge(inf), " ", el("span", null, GRADE_TEXT[inf.grade]),
         inf.note ? ". " + inf.note : null,
         inf.sources && inf.sources.length ? [" (", sourceLinks(sources, inf.sources), ")"] : null),
       extra || null);

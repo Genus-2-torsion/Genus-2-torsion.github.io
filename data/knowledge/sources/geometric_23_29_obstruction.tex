@@ -1,0 +1,332 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\title{Prime torsion on geometrically split abelian surfaces}
+\author{}
+\date{20 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem}\label{thm:main}
+Let \(A/\Q\) be a geometrically split abelian surface. Then
+\[
+ A(\Q)[23]=A(\Q)[29]=0.
+\]
+In particular, neither \([23]\) nor \([29]\) occurs as the rational
+torsion subgroup of a geometrically split genus-\(2\) Jacobian over
+\(\Q\).
+\end{theorem}
+
+Here ``geometrically split'' means that \(A_{\overline{\Q}}\) is
+isogenous to a product of elliptic curves. We impose no restriction on
+the degree of this isogeny. The theorem does not require a principal
+polarization.
+
+\section{Inputs on elliptic torsion and potentially good reduction}
+
+For a positive integer \(d\), let \(S(d)\) be the set of primes that
+occur as the order of a torsion point on an elliptic curve over a number
+field of degree \(d\). We use the following results.
+\begin{enumerate}
+\item Derickx--Kamienny--Stein--Stoll \cite[Theorem 1.2]{DKSS} prove
+that
+\[
+ S(4)=\{2,3,5,7,11,13,17\}.
+\]
+Consequently an elliptic curve over a number field of degree \(1\),
+\(2\), or \(4\) has no point of order \(23\) or \(29\). For degrees
+\(1\) and \(2\), extend the field to one of degree \(4\).
+\item Khawaja \cite[Theorem 1.2]{Khawaja} proves that
+\[
+ S(8)=\{2,3,5,7,11,13,17,19,23\}.
+\]
+In particular, an elliptic curve over a degree-\(8\) number field has
+no point of order \(29\).
+\item Clark \cite[Theorem 5]{Clark} proves that, if an abelian surface
+over \(\Q\) has everywhere potentially good reduction, the order of
+its rational torsion subgroup belongs to
+\[
+ \{1,\ldots,16,18,19,20,22,24,25,28,30,36,48,60,72\}.
+\]
+None of these integers is divisible by \(23\) or \(29\).
+\end{enumerate}
+We also use the standard properties of Tate modules and geometric
+endomorphisms, and the independence of the semisimplified residual
+representation from the choice of a stable lattice.
+
+\section{Nonisogenous factors and the CM case}
+
+Fix \(p\in\{23,29\}\), and suppose that \(P\in A(\Q)\) has order \(p\).
+First suppose that
+\(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\), where \(E_1\)
+and \(E_2\) are not geometrically isogenous. There are exactly two
+geometric elliptic subvarieties of \(A\). Galois permutes them, so
+both are defined over a field \(K\) with \([K:\Q]\leq 2\).
+Choose one of them, \(E\), and set \(F=A_K/E\). There is an exact
+sequence over \(K\)
+\[
+ 0\longrightarrow E\longrightarrow A_K\longrightarrow F
+ \longrightarrow 0.
+\]
+The image of \(P\) in \(F(K)\) either has order \(p\) or is zero. In
+the latter case \(P\in E(K)\). Both possibilities contradict the
+degree-\(4\) elliptic torsion bound above.
+
+Next suppose that \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where
+\(E\) has complex multiplication. CM elliptic curves have everywhere
+potentially good reduction. This property is preserved by products
+and isogenies, and descends from a finite extension of the ground
+field. Hence \(A\) has everywhere potentially good reduction, and
+Clark's theorem gives a contradiction.
+
+It remains to consider the case where
+\(A_{\overline{\Q}}\) is isogenous to \(E^2\) for a non-CM elliptic
+curve \(E\). Then
+\[
+ D=\End^0(A_{\overline{\Q}})\simeq M_2(\Q).
+\]
+
+\section{The field of definition of the endomorphisms}
+
+Let \(L/\Q\) be the smallest field over which all geometric
+endomorphisms of \(A\) are defined. It is a finite Galois extension.
+Put \(\Gamma=\Gal(L/\Q)\). By Skolem--Noether, its faithful action
+on \(D\) identifies \(\Gamma\) with a finite subgroup of
+\[
+ \operatorname{Aut}_{\Q}(M_2(\Q))=\PGL_2(\Q).
+\]
+
+A finite subgroup of \(\PGL_2(\mathbb R)\) is cyclic or dihedral:
+its action on the hyperbolic plane has a fixed point, and the action
+on the tangent plane embeds it in \(O(2)\). If an element of
+\(\PGL_2(\Q)\) has order \(n>2\), the ratio of the eigenvalues of a
+representative \(M\) is a primitive \(n\)-th root of unity \(\zeta\).
+Thus
+\[
+ \frac{(\operatorname{tr}M)^2}{\det M}
+ =2+\zeta+\zeta^{-1}\in\Q,
+\]
+which implies \(n\in\{3,4,6\}\). It follows that \(\Gamma\) is cyclic
+of order \(1,2,3,4,\) or \(6\), or dihedral of order \(4,6,8,\) or
+\(12\). Here the dihedral group of order \(4\) is the Klein four
+group. In particular,
+\[
+ [L:\Q]\in\{1,2,3,4,6,8,12\}.
+\]
+
+Every geometric elliptic subvariety of \(A\) is defined over \(L\).
+Indeed, it is the image of an integral multiple of an idempotent in
+\(D\), and that endomorphism is defined over \(L\). If
+\([L:\Q]\in\{1,2,4\}\), the elliptic exact sequence used in the
+previous section, now over \(L\), excludes \(P\). This includes the
+Klein four case. If \(p=29\), the degree-\(8\) elliptic torsion bound
+also excludes the case \([L:\Q]=8\).
+
+In every remaining case, \(\Gamma\) has a normal cyclic subgroup
+\(\langle r\rangle\) of order \(n\), with
+\[
+ \begin{array}{c|c}
+ p & n\\ \hline
+ 23 & 3,4,\text{ or }6\\
+ 29 & 3\text{ or }6 .
+ \end{array}
+\]
+For a cyclic group take the whole group; for a dihedral group take
+the rotation subgroup.
+
+\section{A stable maximal order}
+
+Set \(k=\Q_p\) and \(\mathcal O=\Z_p\), and identify
+\(D\otimes_{\Q}k\) with \(M_2(k)\).
+Choose a matrix representative of \(r\), and divide it by its
+nonzero trace. The resulting matrix \(R\) has characteristic
+polynomial
+\[
+ X^2-X+\frac1c,\qquad
+ c=
+ \begin{cases}
+ 1,&n=3,\\
+ 2,&n=4,\\
+ 3,&n=6.
+ \end{cases}
+\]
+Its discriminant is respectively \(-3,-1,\) or \(-1/3\).
+Each is a nonsquare unit modulo \(p\) in the cases retained above:
+\(23\equiv-1\pmod{3}\) and \(23\equiv-1\pmod{4}\), while
+\(29\equiv-1\pmod{3}\). Therefore \(k[R]/k\) is the unramified
+quadratic extension, and \(\mathcal O[R]\) is its maximal order.
+
+An \(R\)-stable \(\mathcal O\)-lattice in \(k^2\) is a
+rank-one \(\mathcal O[R]\)-module, hence a fractional ideal of
+\(\mathcal O[R]\). Since the extension is unramified, all such
+lattices are homothetic under \(k^\times\). Moreover, \(\det R\) is
+a unit, so a homothety class fixed by the projective transformation
+\(r\) is represented by an \(R\)-stable lattice. Thus \(r\) fixes a
+unique homothety class of lattices.
+
+The subgroup \(\langle r\rangle\) is normal in \(\Gamma\), and
+conjugation sends \(r\) to \(r\) or \(r^{-1}\). These elements have
+the same fixed lattice classes. It follows that \(\Gamma\)
+preserves the unique class above. Choose a representative
+\(\Lambda\). Then
+\[
+ \mathcal R=\End_{\mathcal O}(\Lambda)
+\]
+is a \(\Gamma\)-stable maximal order in \(M_2(k)\).
+Every element of \(\Gamma\) has a projective representative in
+\(\GL_2(\mathcal O)\) acting on \(\Lambda\). Reduction gives a
+projective action
+\[
+ \Gamma\longrightarrow\PGL_2(\F_p).
+\]
+Its natural two-dimensional projective module is irreducible over
+\(\F_p\), since the reduction of \(R\) has irreducible
+characteristic polynomial.
+
+This construction uses the full endomorphism algebra \(D\).
+It therefore requires no maximality assumption on
+\(\End(A_{\overline{\Q}})\otimes\Z_p\).
+
+\section{A change of Tate lattice}
+
+Let \(V=V_p(A)\) and \(T=T_p(A)\). Define
+\[
+ T'=\mathcal R T.
+\]
+Since \(\mathcal R\) is finite free over \(\mathcal O\), this is a
+full \(\mathcal O\)-lattice in \(V\). It is stable under
+\(G_{\Q}=\Gal(\overline{\Q}/\Q)\), since both \(T\) and
+\(\mathcal R\) are stable. After choosing a basis of \(\Lambda\),
+we have \(\mathcal R=M_2(\mathcal O)\), and the matrix units give
+\[
+ T'\simeq\Lambda\otimes_{\mathcal O} W_0,
+\]
+where \(W_0=e_{11}T'\) is free of rank \(2\) over \(\mathcal O\).
+The off-diagonal matrix units identify \(e_{11}T'\) and
+\(e_{22}T'\), which gives the displayed decomposition.
+
+Put \(\overline V=T'/pT'\). The reductions of two stable lattices
+in the same \(p\)-adic representation have the same
+semisimplification, by Brauer--Nesbitt. Since
+\(T/pT=A[p]\) has a trivial submodule generated by \(P\), the module
+\(\overline V\) has a trivial composition factor. Only this
+composition factor is used; a fixed vector need not survive a
+change of lattice.
+
+The action of \(G_{\Q}\) on \(\overline V\) normalizes the algebra
+\(M_2(\F_p)\) acting on \(U=\Lambda/p\Lambda\). Its induced
+projective action on \(U\) factors through \(\Gamma\). Pull back
+\[
+ 1\longrightarrow\F_p^\times\longrightarrow\GL_2(\F_p)
+ \longrightarrow\PGL_2(\F_p)\longrightarrow1
+\]
+along this projective action of \(G_{\Q}\), and denote the resulting
+group by \(\widetilde G\). Then \(U\) is an actual
+two-dimensional \(\widetilde G\)-module. The centralizer of
+\(M_2(\F_p)\) gives a two-dimensional \(\widetilde G\)-module \(W\)
+such that
+\[
+ \overline V\simeq U\otimes_{\F_p} W.
+\]
+Explicitly, for \((g,B)\in\widetilde G\), the action on \(U\) is
+given by \(B\), and \(B^{-1}\) times the action of \(g\) on
+\(\overline V\) commutes with \(M_2(\F_p)\), so acts on the second
+factor. All these representations factor through a common finite
+quotient of \(\widetilde G\).
+
+The module \(U\) is irreducible by the preceding section. The subgroup
+\[
+ H=\{(h,I):h\in G_L\}
+\]
+is normal in \(\widetilde G\) and acts trivially on \(U\). The
+trivial composition factor of \(\overline V\) remains trivial on
+pullback to \(\widetilde G\).
+
+\section{The determinant contradiction}
+
+We first show that \(W\) is irreducible. Otherwise its two composition
+factors are one-dimensional. Tensoring a composition series with
+\(U\), the composition factors of \(U\otimes W\) would then be
+one-dimensional twists of the irreducible two-dimensional module
+\(U\). There could be no trivial composition factor, a
+contradiction.
+
+Since \(H\) is normal, the restriction \(W|_H\) is semisimple.
+For completeness, this form of Clifford's theorem holds in modular
+characteristic: choose a simple \(H\)-submodule of \(W\). Its
+\(\widetilde G\)-translates are simple \(H\)-submodules, and their
+sum is a nonzero \(\widetilde G\)-submodule, hence all of \(W\).
+Thus \(W|_H\) is a sum of simple \(H\)-modules.
+
+Restriction to \(H\) preserves the existence of a trivial
+composition factor. But \(\overline V|_H\) is two copies of the
+semisimple module \(W|_H\), so \(W\) has a nonzero \(H\)-fixed
+vector. Since \(H\) is normal, \(W^H\) is a
+\(\widetilde G\)-submodule of \(W\). Irreducibility gives
+\(W^H=W\). Hence \(H\) acts trivially on \(\overline V\).
+
+Write \(\chi_p:G_{\Q}\to\F_p^\times\) for the mod-\(p\)
+cyclotomic character. Every abelian variety over \(\Q\) has a
+polarization over \(\Q\). The resulting nondegenerate alternating
+pairing on \(V_p(A)\) shows that the determinant of its
+\(p\)-adic representation is the square of the \(p\)-adic
+cyclotomic character. A change of stable lattice does not change
+this determinant. Reducing modulo \(p\), the trivial action of
+\(H\) therefore gives
+\[
+ \chi_p(h)^2=1\qquad\text{for all }h\in G_L.
+\]
+The character \(\chi_p^2\) has order \((p-1)/2\), and its fixed field
+is the maximal real cyclotomic field
+\(\Q(\zeta_p+\zeta_p^{-1})\). Consequently
+\[
+ \Q(\zeta_p+\zeta_p^{-1})\subseteq L.
+\]
+For \(p=23\), this field has degree \(11\), and for \(p=29\) it has
+degree \(14\). Neither degree divides \([L:\Q]\), whose only prime
+factors are \(2\) and \(3\). This contradiction completes the proof
+of Theorem~\ref{thm:main}.
+\hfill\(\square\)
+
+\section{Consequences for the census}
+
+The groups
+\href{https://genus-2-torsion.github.io/group.html?g=23}{\([23]\)}
+and
+\href{https://genus-2-torsion.github.io/group.html?g=29}{\([29]\)}
+are therefore impossible in the class ``geometrically split, simple
+over \(\Q\)'', as well as in the class ``split over \(\Q\)''.
+The argument applies to every geometric splitting degree, including
+degrees divisible by \(23\) or \(29\).
+
+\begin{thebibliography}{9}
+\bibitem{DKSS}
+M. Derickx, S. Kamienny, W. Stein and M. Stoll,
+\emph{Torsion points on elliptic curves over number fields of small
+degree}, Algebra \& Number Theory \textbf{17} (2023), 267--308, Theorem 1.2.
+\href{https://arxiv.org/pdf/1707.00364}{arXiv:1707.00364}.
+
+\bibitem{Khawaja}
+M. Khawaja,
+\emph{Torsion primes for elliptic curves over degree \(8\) number fields},
+Research in Number Theory \textbf{10} (2024), article 48, Theorem 1.2.
+\href{https://eprints.whiterose.ac.uk/id/eprint/211212/8/s40993-024-00533-6.pdf}{Published article}.
+
+\bibitem{Clark}
+P. L. Clark,
+\emph{Bounds for torsion on abelian varieties with integral moduli},
+arXiv:math/0407264v2 (2004), Theorem 5.
+\href{https://arxiv.org/pdf/math/0407264}{arXiv:math/0407264}.
+\end{thebibliography}
+
+\end{document}

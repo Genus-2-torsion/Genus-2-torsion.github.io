@@ -5,8 +5,7 @@ geometrically split) what is known about *infinitely many* realisations.
 Nothing here is asserted from memory.  Every entry cites a source in SOURCES, and the sources that
 are tables or records are copied verbatim into data/knowledge/sources/ (see PROVENANCE.md there).
 
-Grades of the "infinitely many?" answer (there is no "finitely many" grade: no group is known to be
-realised only finitely often, and no group is known not to be realised at all):
+Grades of the "infinitely many?" answer:
 
   exact   -- certified: infinitely many pairwise non-isomorphic curves whose Jacobian is in the
              class and has J(Q)_tors isomorphic to G *exactly*.  On the simple side this is the
@@ -21,6 +20,7 @@ realised only finitely often, and no group is known not to be realised at all):
              the class, for infinitely many members is not certified.  A group inherits this grade
              from any recorded group containing it (is_subgroup).
   open    -- no positive-dimensional construction is recorded.
+  impossible -- no Jacobian in this side of the census can have the group, by a cited proof.
 """
 
 from __future__ import annotations
@@ -83,6 +83,31 @@ SOURCES = {
         "cite": "B. Mazur, Modular curves and the Eisenstein ideal, Publ. Math. IHÉS 47 (1977), 33–186.",
         "url": "https://www.numdam.org/item/PMIHES_1977__47__33_0/",
         "used_for": "rational torsion on elliptic curves; the prime torsion obstruction for abelian surfaces split over ℚ",
+    },
+    "Geometric2329Obstruction": {
+        "short": "geometric [23] and [29] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Geometrically split abelian surfaces cannot have rational 23- or 29-torsion, census proof of 20 October 2026. Elliptic torsion bounds, the endomorphism field, and a residual representation argument.",
+        "url": "proofs/geometric-23-29-obstruction.html",
+        "used_for": "impossibility of [23] and [29] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
+    },
+    "DKSS2023": {
+        "short": "Derickx–Kamienny–Stein–Stoll 2023", "year": 2023,
+        "cite": "M. Derickx, S. Kamienny, W. Stein, M. Stoll, Torsion points on elliptic curves over number fields of small degree, Algebra Number Theory 17 (2023), 267–308.",
+        "url": "https://arxiv.org/abs/1707.00364",
+        "used_for": "Theorem 1.2: elliptic torsion primes over quartic fields are at most 17; used in the geometric [23] and [29] exclusions",
+    },
+    "Khawaja2024": {
+        "short": "Khawaja 2024", "year": 2024,
+        "cite": "M. Khawaja, Torsion primes for elliptic curves over degree 8 number fields, Res. Number Theory 10 (2024), article 48.",
+        "url": "https://doi.org/10.1007/s40993-024-00533-6",
+        "used_for": "Theorem 1.2: elliptic torsion primes over degree-eight fields are at most 23; used in the geometric [29] exclusion",
+    },
+    "Clark2004": {
+        "short": "Clark 2004", "year": 2004,
+        "cite": "P. L. Clark, Bounds for torsion on abelian varieties with integral moduli, arXiv:math/0407264v2 (2004).",
+        "url": "https://arxiv.org/abs/math/0407264",
+        "used_for": "Theorem 5: possible rational torsion orders of abelian surfaces with everywhere potentially good reduction; excludes 23 and 29 in the CM case",
     },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
@@ -147,19 +172,25 @@ assert all("year" in v for v in SOURCES.values()), [k for k, v in SOURCES.items(
 def exclusions_record(key: str) -> dict:
     """Class-specific impossibility, separate from existence and infinitude records."""
     # All prime divisors of the order occur in the last invariant factor.
-    remaining = int(key.split(".")[-1])
+    exponent = int(key.split(".")[-1])
+    remaining = exponent
     for prime in (2, 3, 5, 7):
         while remaining > 1 and remaining % prime == 0:
             remaining //= prime
-    if remaining == 1:
-        return {}
-    return {
-        "qsplit": {
+    exclusions = {}
+    if remaining > 1:
+        exclusions["qsplit"] = {
             "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
             "sources": ["QSplitPrimeObstruction", "Mazur1977"],
             "proof_url": SOURCES["QSplitPrimeObstruction"]["url"],
         }
-    }
+    if exponent % 23 == 0 or exponent % 29 == 0:
+        exclusions["gsplit"] = {
+            "reason": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
+            "sources": ["Geometric2329Obstruction", "DKSS2023", "Khawaja2024", "Clark2004"],
+            "proof_url": SOURCES["Geometric2329Obstruction"]["url"],
+        }
+    return exclusions
 
 
 def first_source(keys):
@@ -463,6 +494,12 @@ def infinite_record(side: str, key: str) -> dict:
     own inherits the grade 'family' from any recorded group containing it as a subgroup (a family with
     torsion containing H ⊇ G is a family with torsion containing G)."""
     from common import key_to_group, group_bracket
+    exclusions = exclusions_record(key)
+    if side == "split" and "qsplit" in exclusions and "gsplit" in exclusions:
+        exclusion = exclusions["gsplit"]
+        return {"grade": "impossible", "sources": exclusion["sources"],
+                "note": exclusion["reason"], "proof_url": exclusion["proof_url"],
+                "inherited_from": None}
     rec = _direct_record(side, key)
     if rec:
         rec["inherited_from"] = None
@@ -488,9 +525,10 @@ def infinite_record(side: str, key: str) -> dict:
     return {"grade": "open", "sources": [], "note": "", "inherited_from": None}
 
 
-GRADE_LABEL = {"exact": "∞", "family": "∞ ⊇", "open": "?"}
+GRADE_LABEL = {"exact": "∞", "family": "∞ ⊇", "open": "?", "impossible": "∅"}
 GRADE_TEXT = {
     "exact": "infinitely many, with this exact torsion group (certified)",
     "family": "a positive-dimensional family with torsion containing the group is proven; exactness for infinitely many members is open",
     "open": "no positive-dimensional family is recorded (this is not a claim that none exists)",
+    "impossible": "proved impossible: no Jacobian in this class has the torsion group",
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19 14:49 UTC",
+  "generated": "2026-10-20 05:43 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -38,9 +38,9 @@
   "n_groups_any_split": 78,
   "n_infinite": {
     "simple": {
-      "exact": 59,
+      "exact": 60,
       "family": 0,
-      "open": 37
+      "open": 36
     },
     "split": {
       "exact": 69,
@@ -5145,11 +5145,12 @@
       "n_curves": 2,
       "infinite": {
         "simple": {
-          "grade": "open",
+          "grade": "exact",
           "sources": [
-            "Najman2026"
+            "PlatonovFedorov2018",
+            "ThisSite"
           ],
-          "note": "the record mentions Platonov–Petrunin (2012) constructions, not transcribed or certified",
+          "note": "Platonov–Fedorov 2018, formula (8): C_t: y² = a₅x⁵ + a₄x⁴ + a₃x³ + a₂x² + a₁x + (t + 1)⁴(t² + t + 1)², a₅ = −4t⁵(t + 1)(2t + 1)(t² + t + 1)² (a₄, …, a₁ as in (8) and in family_28_certificate.m), built from ω₁² − f = (x − 1)⁵x and ω₃² − ω₄²f = (x − 1)²x⁶, i.e. functions with divisors 5P + Q − 6∞ and 2P + 6Q − 8∞. Over ℚ(t) the class D = [x − 1, −t⁵(t + 1)] = P − ∞ has order 28 (14D = [x − (t + 1)²/(2t + 1), 0], Q − ∞ = −5D). Every 5- and 7-integral t ≡ 1 (mod 35) has #J(𝔽₅) = 28 and #J(𝔽₇) = 56 (gcd 28), strict at 7 (family_28_certificate.log). The census curves 28.a and 28.b are not on the family (28.b is a fiber only over ℚ(√−7))",
           "inherited_from": null
         },
         "split": {

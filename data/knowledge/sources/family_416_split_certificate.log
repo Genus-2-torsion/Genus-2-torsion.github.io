@@ -8,3 +8,4 @@ PASS: fixed elliptic factor has exact torsion [2,8].
 PASS: t=-1 seed is Q-isomorphic to census 4.16.a, exact torsion [4,16].
 PASS: s=2, t=-19/49 has exact [4,16] and is not Q-isomorphic to the seed.
 ALL ASSERTIONS PASSED.
+CERTIFIED: split [4,16] family identities and exact torsion calculations.

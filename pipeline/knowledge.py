@@ -271,20 +271,6 @@ _SPLIT_FAMILY_OTHER = {
 }
 # split side: certified here (exact torsion for infinitely many members, Jacobians split by construction)
 _SPLIT_EXACT = {
-    "4.16": (
-        "For every s ∈ ℚ, put t = −[3(3s² − 10s + 5)² + (3s² − 5)²]/[4(3s² − 5)²] and D = 256t² + 47t + 16. "
-        "The curve y² = D(16x² + 9t)(175x² − 9(4t − 1)²)(9x² + (4t + 1)²) is smooth of genus 2, "
-        "its Jacobian splits over ℚ, and its rational torsion is exactly [4,16]. "
-        "It is the HLP (2,2)-gluing of E_t = [1, −(t² − 1/16), −(t² − 1/16), 0, 0] and "
-        "F = [47/42, 5/49, 5/49, 0, 0], with exact elliptic torsion [2,4] and [2,8]. "
-        "Their torsion Kummer images intersect in precisely the identity and (−15, −6, 10), "
-        "forcing Jacobian torsion order 64; the matching class gives an order-16 point and group [4,16]. "
-        "The nonconstant elliptic quotient j-invariant proves infinitely many geometric isomorphism classes. "
-        "The member s = 1 (t = −1) is the census curve 4.16.a. "
-        "No congruence restrictions or exceptional thin set are needed "
-        "(complete proof and family_416_split_certificate.log, 2026-10-20).",
-        ["Split4162026", "HLP2000"],
-    ),
     "8.8": ("the conjugation self-gluing of the X₁(8) curve E_t at t = m²/(m² + 1) (Genus2TorsionNotebook): with N = m⁸ − 4m⁶ − 2m⁴ − 4m² + 1 and F(u) = −N(u + 1)(16m⁸(u + 1)² − N²u), C_m: y² = F(x²); (x, y) ↦ (x², y) and (x, y) ↦ (1/x², y/x³) map C_m onto E′: Y² = F(u) ≅ E_t, so J(C_m) is isogenous over ℚ to E′ × E′. [8,8] is marked over ℚ(m). Here #J(𝔽_p) = #E′(𝔽_p)² is always divisible by 256, so the group structure is used instead: every m ≡ 2 (mod 4381) has the reductions of m = 2 at 13 and 337, with J(𝔽₁₃) = (ℤ/16)² (no odd part, 2-rank 2) and J(𝔽₃₃₇) = [8,8,40,40] (2-primary exponent 8), so J(ℚ)_tors is exactly [8,8] (family_88_split_certificate.log)", ["ThisSite", "Genus2TorsionNotebook"]),
     "2.2.2.16": ("the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of E₁ = E_{2,4}(t) with E₂ = E_{2,8}(−20/31) along the identity on the labelled 2-torsion, on the fibre t = Aa², t + 1/4 = Bc², t − 1/4 = Ce², (A, B, C) = (−1788961, 11195, −138818), of the locus where the Kummer images of the rational torsion of E₁ and E₂ agree completely; this fibre is a 2-covering of E_d: y² = x³ − d²x, d = 554577910 (rank 1). C_t: y² = −A(t)(k₁t − x²)(k₂(t − 1/4)² − x²)(x² + k₃(t + 1/4)²) maps onto E₂ by (x, y) ↦ (x², y) and onto E₁(t) by (x, y) ↦ (1/x², y/x³), so J is isogenous over ℚ to E₁ × E₂. [2,2,2,16] is marked over the function field of the fibre: the class of order 16 is the sum of the pullbacks of halves of the points of order 4 and 8, computed over ℚ(√22390, √69409)(n) and descending to ℚ(n). For R = P + (d, 0) + 12kP on E_d (P of order 6 mod 11 and 4 mod 13) the curve C_{x(R)/4d} has the reductions of the census curve 2.2.2.16.a (k = 0) at 11 and 13, where J(𝔽₁₁) ≅ J(𝔽₁₃) ≅ [2,2,2,16], so J(ℚ)_tors is exactly [2,2,2,16]; the G2-invariants at k = 0 and at 3P + (d, 0) differ (family_22216_split_certificate.log)", ["ThisSite"]),
     "14": ("the (3,3)-gluings, in the normal form of Bröker–Howe–Lauter–Stevenhagen (arXiv:1403.6911), of E = 26b1 (torsion ℤ/7) with the partners F that have a rational 2-torsion point. The partners anti-symplectically 3-congruent to E form a rational curve, and so does the cover on which F has a rational 2-torsion point (Γ(3) ∩ Γ₀(2) has genus 0); this gives C_v over ℚ(v) with explicit degree-3 maps onto E and F_v, so J is isogenous over ℚ to E × F_v. Pullback is injective on torsion of order prime to 3 (φ_*φ^* = [3]), so ℤ/14 ⊂ J(ℚ). Every 7- and 71-integral v ≡ 0 (mod 497) has the reductions of v = 0 (the census curve 14.b, the gluing of 26b1 and 52a1) at 7 and 71, where #J(𝔽₇) = 70 and #J(𝔽₇₁) = 4774, so J(ℚ)_tors is exactly [14]; the G2-invariants at v = 0 and v = 497 differ (family_14_split_certificate.log)", ["ThisSite"]),
@@ -356,6 +342,20 @@ _SPLIT_EXACT = {
     "2.2.4.8": ("the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4 and §3.7) of E₁ = E_{2,8}(t) with E₂ = E_{2,8}(u) along the identity on the 2-torsion points labelled as in HLP Table 5, where (t, u) is the section 2σ of HLP's elliptic surface (5), X(t)y² = X(u), X = (8u² − 1)(8u² + 8u + 1), σ = (t, −1), zero section (t, 1) (u of degree 9 in t), so a half of (T₂, T₂′) gives a new rational point of order 2 (HLP Prop. 12). Up to a square C_t: y² = F(x²), with (x, y) ↦ (x², y) onto E₂ and (x, y) ↦ (1/x², y/x³) onto E₁, so J is isogenous over ℚ to E₁ × E₂. Over ℚ(t) the sextic splits into linear factors (J[2] rational), and with the pullbacks of the points of order 8 it generates [2,2,4,8] (128 elements at t = 4). Here #J(𝔽_p) is always divisible by 256, so the group structure is used: every 13- and 41-integral t ≡ 4 (mod 533) has the reductions of t = 4 at 13 and 41, where J(𝔽₁₃) ≅ [2,2,8,8] and J(𝔽₄₁) ≅ [2,2,4,96], so J(ℚ)_tors is exactly [2,2,4,8]; the G2-invariants of the members differ (family_2_2_4_8_split_certificate.log)", ["ThisSite", "HLP2000"]),
     # split [48] from Howe 2015 (2026-10-19, torsion_jac notes/hlpEC_48_2026_10_19.md)
     "48": ("Howe 2015, Theorems 3.1 and 3.2: the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of the fixed curve F = 42a1: y² = x³ − 31x² + 256x (Q = (32, 96) of order 8) with E_s: y² = x(x² + a_s x + b_s) (P of order 6), Howe's C^s₂₄: d y² = x⁶ + c₄x⁴ + c₂x² + c₀; (x, y) ↦ (x², y) and (x, y) ↦ (1/x², y/x³) map it onto F and E_s, so J is isogenous over ℚ to E_s × F, and the image of (2P, Q) has order 24 over ℚ(s). On Howe's curve D: w² = z³ + 14z² + 196z (9408q1, rank 2), s = −21[(z² + 196)(z² + 56z + 196) + 32(z + 14)(z − 14)w]/(z⁴ − 896z³ − 24696z² − 175616z + 38416), the identity A(B − 32) = ℓ²n² in ℚ(√−7)(D) and HLP Prop. 12 give a rational point of order 16 whose double is the image of (3P, Q), so ℤ/48 ⊂ J(ℚ). For R_k = (1 + 8k)P₂, P₂ = (7, −49), s(R_k) ≡ 3 (mod 5), where J(𝔽₅) = ℤ/48, so J(ℚ)_tors is exactly [48]; the G2-invariants at s = 3 and s = 21/31 differ. The members over P₁, P₂, P₃ are Howe's Corollary 3.5 curves; the census curve 48.a is not a member (its Jacobian has no factor 42a1) (family_48_split_certificate.log)", ["ThisSite", "Howe2015", "HLP2000"]),
+    "4.16": (
+        "For every s ∈ ℚ, put t = −[3(3s² − 10s + 5)² + (3s² − 5)²]/[4(3s² − 5)²] and D = 256t² + 47t + 16. "
+        "The curve y² = D(16x² + 9t)(175x² − 9(4t − 1)²)(9x² + (4t + 1)²) is smooth of genus 2, "
+        "its Jacobian splits over ℚ, and its rational torsion is exactly [4,16]. "
+        "It is the HLP (2,2)-gluing of E_t = [1, −(t² − 1/16), −(t² − 1/16), 0, 0] and "
+        "F = [47/42, 5/49, 5/49, 0, 0], with exact elliptic torsion [2,4] and [2,8]. "
+        "Their torsion Kummer images intersect in precisely the identity and (−15, −6, 10), "
+        "forcing Jacobian torsion order 64; the matching class gives an order-16 point and group [4,16]. "
+        "The nonconstant elliptic quotient j-invariant proves infinitely many geometric isomorphism classes. "
+        "The member s = 1 (t = −1) is the census curve 4.16.a. "
+        "No congruence restrictions or exceptional thin set are needed "
+        "(complete proof and family_416_split_certificate.log, 2026-10-20).",
+        ["Split4162026", "HLP2000"],
+    ),
 }
 _SPLIT_OPEN_NOTES = {
     # split [11] (2026-10-19, torsion_jac notes/split11_2026_10_19.md)

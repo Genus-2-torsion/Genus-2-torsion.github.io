@@ -131,4 +131,5 @@ assert Invariants(TG2) eq [4,16];
 assert not IsIsomorphic(Cseed,C2);
 print "PASS: s=2, t=-19/49 has exact [4,16] and is not Q-isomorphic to the seed.";
 print "ALL ASSERTIONS PASSED.";
+print "CERTIFIED: split [4,16] family identities and exact torsion calculations.";
 quit;

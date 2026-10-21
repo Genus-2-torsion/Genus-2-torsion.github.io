@@ -78,11 +78,18 @@ SOURCES = {
         "url": "proofs/qsplit-prime-obstruction.html",
         "used_for": "impossibility in the split-over-ℚ class for every group whose order has a prime divisor greater than 7; applies to 14 current census groups",
     },
+    "QSplitTwoRankObstruction": {
+        "short": "2-rank obstruction for splitting over ℚ", "year": 2026,
+        "kind": "proof",
+        "cite": "The 2-rank of abelian surfaces split over Q: a consequence of Mazur's theorem, census proof of 21 October 2026.",
+        "url": "proofs/qsplit-two-rank-obstruction.html",
+        "used_for": "impossibility of [2,2,14] and [2,2,2,10] in the split-over-ℚ class: a rational point of order 7 forces 2-rank at most 2, and 2-rank 4 excludes points of order 5 and 7",
+    },
     "Mazur1977": {
         "short": "Mazur 1977", "year": 1977,
         "cite": "B. Mazur, Modular curves and the Eisenstein ideal, Publ. Math. IHÉS 47 (1977), 33–186.",
         "url": "https://www.numdam.org/item/PMIHES_1977__47__33_0/",
-        "used_for": "rational torsion on elliptic curves; the prime torsion obstruction for abelian surfaces split over ℚ",
+        "used_for": "Theorem (8): rational torsion on elliptic curves; the prime torsion and 2-rank obstructions for abelian surfaces split over ℚ",
     },
     "Geometric2329Obstruction": {
         "short": "geometric [23] and [29] exclusion proof (2026)", "year": 2026,
@@ -112,11 +119,53 @@ SOURCES = {
         "url": "proofs/qsimple-35-obstruction.html",
         "used_for": "impossibility of [35] and [70] only in the geometrically split, simple-over-ℚ class",
     },
+    "Geometric22Obstruction": {
+        "short": "geometric [22] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational points of order 22 on geometrically split abelian surfaces, census proof of 21 October 2026. A residual tensor argument at 11 for non-CM geometric squares, torsion of quadratic Q-curves and of CM elliptic curves, and coprime torsion in an elliptic isogeny class over a quadratic field.",
+        "url": "proofs/geometric-22-obstruction.html",
+        "used_for": "impossibility of [22] and [2,22] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
+    },
+    "Geometric2639Obstruction": {
+        "short": "geometric [26] and [39] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational points of order 26 or 39 on geometrically split abelian surfaces, census proof of 21 October 2026. Coprime torsion in elliptic isogeny classes over fields of degree at most 4, a local point count at 2 and 3 for CM squares, residual representations at 13 for non-CM squares, and, for a cyclic sextic endomorphism field, the rational points of X_0(39)/w_3 and the 3-torsion; Magma checks in geometric_26_39_x039_w3.log.",
+        "url": "proofs/geometric-26-39-obstruction.html",
+        "used_for": "impossibility of [26], [2,26] and [39] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
+    },
+    "QSimple13Obstruction": {
+        "short": "ℚ-simple geometric [13] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational 13-torsion on a geometrically split genus-2 Jacobian simple over Q, census proof of 21 October 2026. Case analysis of the Galois action on the geometric endomorphism algebra; in the only two cases that allow a rational point of order 13, the isogeny class carries no principal polarization, or only product polarizations. Standalone Magma scripts and logs.",
+        "url": "proofs/qsimple-13-obstruction.html",
+        "used_for": "impossibility of [13] in the geometrically split, simple-over-ℚ class; uses the principal polarization of the Jacobian",
+    },
+    "QSimple30Obstruction": {
+        "short": "ℚ-simple geometric [30] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational 30-torsion on a geometrically split abelian surface simple over Q, census proof of 21 October 2026. Coprime torsion in elliptic isogeny classes, a local obstruction at 2 for CM squares (no Q_2-point of order 15, via good reduction over a totally ramified extension and Tate's theorem), and a residual Galois argument at 5 for non-CM squares.",
+        "url": "proofs/qsimple-30-obstruction.html",
+        "used_for": "impossibility of [30], [60] and [2,30] only in the geometrically split, simple-over-ℚ class",
+    },
+    "QSimple63Obstruction": {
+        "short": "ℚ-simple geometric [63] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational 63-torsion on a geometrically split abelian surface simple over Q, census proof of 21 October 2026. Coprime torsion in elliptic isogeny classes, residual representations at 7, the 3-torsion of non-CM squares with cyclic sextic endomorphism field, and the cubic 21-torsion of 162b1 with a point count at 5; Magma checks in qsimple_63_arithmetic.log.",
+        "url": "proofs/qsimple-63-obstruction.html",
+        "used_for": "impossibility of [63] only in the geometrically split, simple-over-ℚ class",
+    },
+    "QSimpleRankTwoObstruction": {
+        "short": "ℚ-simple geometric [5,5], [5,10] and [7,7] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Rational p-torsion of rank two on geometrically split abelian surfaces simple over Q, census proof of 21 October 2026. Polarization duality restricts the residual composition factors to 1, χ and χ⁻¹ for p ≥ 5; the Galois action on the geometric endomorphism algebra and complex conjugation then give a contradiction.",
+        "url": "proofs/qsimple-rank-two-obstruction.html",
+        "used_for": "impossibility of [5,5], [5,10] and [7,7] only in the geometrically split, simple-over-ℚ class",
+    },
     "DNQuartic2025": {
         "short": "Derickx–Najman 2025", "year": 2025,
         "cite": "M. Derickx, F. Najman, Classification of torsion of elliptic curves over quartic fields, arXiv:2412.16016v2 (2025).",
         "url": "https://arxiv.org/abs/2412.16016v2",
-        "used_for": "Theorem 1.1: no elliptic curve over a quartic field has a point of order 33, 34, or 35; used in the geometric exclusions",
+        "used_for": "Theorem 1.1: no elliptic curve over a quartic field has a point of order 26, 30, 33, 34, 35, or 39; used in the geometric exclusions",
     },
     "DKSS2023": {
         "short": "Derickx–Kamienny–Stein–Stoll 2023", "year": 2023,
@@ -135,6 +184,102 @@ SOURCES = {
         "cite": "P. L. Clark, Bounds for torsion on abelian varieties with integral moduli, arXiv:math/0407264v2 (2004).",
         "url": "https://arxiv.org/abs/math/0407264",
         "used_for": "Theorem 5: possible rational torsion orders of abelian surfaces with everywhere potentially good reduction; excludes points of orders 23, 29, 31, 33, 34, and 35 in the CM square case",
+    },
+    "ClarkXarles2008": {
+        "short": "Clark–Xarles 2008", "year": 2008,
+        "cite": "P. L. Clark, X. Xarles, Local bounds for torsion points on abelian varieties, Canad. J. Math. 60 (2008), 532–555.",
+        "url": "https://doi.org/10.4153/CJM-2008-026-x",
+        "used_for": "Theorem 1.4: possible rational torsion orders of abelian surfaces over ℚ with everywhere anisotropic (e.g. potentially good) reduction, the published form of Clark 2004, Theorem 5; the CM square cases of the geometric exclusions",
+    },
+    "Beauville2010": {
+        "short": "Beauville 2010", "year": 2010,
+        "cite": "A. Beauville, Finite subgroups of PGL₂(K), in Vector bundles and complex geometry, Contemp. Math. 522, Amer. Math. Soc., 2010, 23–29 (arXiv:0909.3942).",
+        "url": "https://arxiv.org/abs/0909.3942",
+        "used_for": "Introduction and Proposition 1.1: the finite subgroups of PGL₂(ℚ) are cyclic of order 1, 2, 3, 4, 6 or dihedral of order 4, 6, 8, 12; used in the geometric exclusions",
+    },
+    "MilneAV2008": {
+        "short": "Milne, Abelian varieties (2008)", "year": 2008,
+        "cite": "J. S. Milne, Abelian varieties (v2.00), course notes, 2008.",
+        "url": "https://www.jmilne.org/math/CourseNotes/AV.pdf",
+        "used_for": "Theorem I.10.15 (Hom(A,B) ⊗ ℤ_ℓ → Hom(T_ℓA, T_ℓB) is injective) and Section I.13 (Weil pairings); used in the geometric exclusions",
+    },
+    "KenkuMomose1988": {
+        "short": "Kenku–Momose 1988", "year": 1988,
+        "cite": "M. A. Kenku, F. Momose, Torsion points on elliptic curves defined over quadratic fields, Nagoya Math. J. 109 (1988), 125–149.",
+        "url": "https://doi.org/10.1017/S0027763000002816",
+        "used_for": "Theorem (0.1): torsion of elliptic curves over quadratic fields; used in the geometric exclusions",
+    },
+    "LeFournNajman2020": {
+        "short": "Le Fourn–Najman 2020", "year": 2020,
+        "cite": "S. Le Fourn, F. Najman, Torsion of Q-curves over quadratic fields, Math. Res. Lett. 27 (2020), no. 1, 209–225 (arXiv:1803.03460).",
+        "url": "https://arxiv.org/abs/1803.03460",
+        "used_for": "Theorem 1.1 and Proposition 3.2: no ℚ-curve over a quadratic field has a point of order 11; used in the geometric [22] exclusion",
+    },
+    "BourdonClark2020": {
+        "short": "Bourdon–Clark 2020", "year": 2020,
+        "cite": "A. Bourdon, P. L. Clark, Torsion points and isogenies on CM elliptic curves, J. London Math. Soc. (2) 102 (2020), no. 2, 580–622 (arXiv:1906.07121).",
+        "url": "https://arxiv.org/abs/1906.07121",
+        "used_for": "Theorem 4.1: degrees of CM points of prime order; used in the CM cases of the geometric exclusions",
+    },
+    "SerreTate1968": {
+        "short": "Serre–Tate 1968", "year": 1968,
+        "cite": "J.-P. Serre, J. Tate, Good reduction of abelian varieties, Ann. of Math. (2) 88 (1968), 492–517.",
+        "url": "https://doi.org/10.2307/1970722",
+        "used_for": "the Néron–Ogg–Shafarevich criterion (Theorem 1, Corollary 2), reduction of prime-to-p torsion (Lemma 2), potential good reduction of CM abelian varieties (Theorem 6), good reduction over a totally ramified extension (p. 498); used in the CM cases of the geometric exclusions",
+    },
+    "Tate1966": {
+        "short": "Tate 1966", "year": 1966,
+        "cite": "J. Tate, Endomorphisms of abelian varieties over finite fields, Invent. Math. 2 (1966), 134–144.",
+        "url": "https://doi.org/10.1007/BF01404549",
+        "used_for": "Theorem 2(c): over a finite field, Q ⊗ End(B) = Q[π] exactly when the characteristic polynomial of Frobenius has no multiple root; used in the CM square case of the ℚ-simple [30] exclusion",
+    },
+    "DEvHMZB2021": {
+        "short": "Derickx–Etropolski–van Hoeij–Morrow–Zureick-Brown 2021", "year": 2021,
+        "cite": "M. Derickx, A. Etropolski, M. van Hoeij, J. S. Morrow, D. Zureick-Brown, Sporadic cubic torsion, Algebra Number Theory 15 (2021), 1837–1864 (arXiv:2007.13929).",
+        "url": "https://doi.org/10.2140/ant.2021.15.1837",
+        "used_for": "Theorem A: torsion of elliptic curves over cubic fields (no point of order 26 or 39; the only cubic points of order 21 come from 162b1 over ℚ(ζ₉)⁺, Section 6.2 of arXiv v2); used in the geometric [26] and [39] and the ℚ-simple [63] exclusions",
+    },
+    "Faltings1983": {
+        "short": "Faltings 1983", "year": 1983,
+        "cite": "G. Faltings, Endlichkeitssätze für abelsche Varietäten über Zahlkörpern, Invent. Math. 73 (1983), 349–366; Erratum, Invent. Math. 75 (1984), 381.",
+        "url": "https://doi.org/10.1007/BF01388432",
+        "used_for": "§5, Satz 3, Satz 4 and Korollar 1: semisimplicity of V_ℓ and the Tate conjecture for homomorphisms; used in the cyclic sextic case of the geometric [26] and [39] exclusion",
+    },
+    "BBDN2014": {
+        "short": "Bosman–Bruin–Dujella–Najman 2014", "year": 2014,
+        "cite": "J. Bosman, P. Bruin, A. Dujella, F. Najman, Ranks of elliptic curves with prescribed torsion over number fields, Int. Math. Res. Not. IMRN 2014, no. 11, 2885–2923 (arXiv:1201.0252).",
+        "url": "https://doi.org/10.1093/imrn/rnt013",
+        "used_for": "Theorem 11(1), Lemmas 12 and 13, Theorem 9(1) and §4.1 (numbering of arXiv:1201.0252v1): elliptic curves over quadratic fields with a point of order 13; used in the ℚ-simple [13] exclusion",
+    },
+    "Vukorepa2022": {
+        "short": "Vukorepa 2022", "year": 2022,
+        "cite": "B. Vukorepa, Isogenies over quadratic fields of elliptic curves with rational j-invariant, arXiv:2203.10672v1 (2022).",
+        "url": "https://arxiv.org/abs/2203.10672",
+        "used_for": "Theorem 1: cyclic isogeny degrees over quadratic fields of non-CM elliptic curves with rational j-invariant; used in the ℚ-simple [13] exclusion",
+    },
+    "Box2021": {
+        "short": "Box 2021", "year": 2021,
+        "cite": "J. Box, Quadratic points on modular curves with infinite Mordell–Weil group, Math. Comp. 90 (2021), 321–343 (arXiv:1906.05206).",
+        "url": "https://doi.org/10.1090/mcom/3547",
+        "used_for": "§4.5: the quadratic points on X₀(65), an input of Vukorepa 2022, Theorem 1; used in the ℚ-simple [13] exclusion",
+    },
+    "Kenku1979": {
+        "short": "Kenku 1979", "year": 1979,
+        "cite": "M. A. Kenku, The modular curve X₀(39) and rational isogeny, Math. Proc. Cambridge Philos. Soc. 85 (1979), 21–23.",
+        "url": "https://doi.org/10.1017/S0305004100055444",
+        "used_for": "no rational cyclic 39-isogeny (also checked in qsimple_13_x0_39.log); used in the ℚ-simple [13] exclusion",
+    },
+    "Kenku1980": {
+        "short": "Kenku 1980", "year": 1980,
+        "cite": "M. A. Kenku, The modular curve X₀(169) and rational isogeny, J. London Math. Soc. (2) 22 (1980), 239–244.",
+        "url": "https://doi.org/10.1112/jlms/s2-22.2.239",
+        "used_for": "no rational cyclic 169-isogeny; used in the ℚ-simple [13] exclusion",
+    },
+    "Elkies2004": {
+        "short": "Elkies 2004", "year": 2004,
+        "cite": "N. D. Elkies, On elliptic K-curves, in Modular curves and abelian varieties, Progr. Math. 224, Birkhäuser, Basel, 2004, 81–91.",
+        "url": "https://doi.org/10.1007/978-3-0348-7919-4_6",
+        "used_for": "the reduction of a quadratic K-curve to one isomorphic to its conjugate (credited in the ℚ-simple [13] proof, which gives the argument in full)",
     },
     "HLP2000": {
         "short": "Howe–Leprévost–Poonen 2000", "year": 2000,
@@ -196,45 +341,85 @@ SOURCES = {
 assert all("year" in v for v in SOURCES.values()), [k for k, v in SOURCES.items() if "year" not in v]
 
 
+# Reasons and literature for the exclusions of 21 October 2026, keyed by the group they were proved for.
+GSPLIT_REASON = {
+    "22": "A geometrically split abelian surface over ℚ has no rational point of order 22. The proof applies to every geometric splitting degree.",
+    "26": "A geometrically split abelian surface over ℚ has no rational point of order 26 or 39. The proof applies to every geometric splitting degree.",
+    "13": "A geometrically split genus-2 Jacobian over ℚ with a rational point of order 13 is not simple over ℚ. The proof applies to every geometric splitting degree and uses the principal polarization.",
+    "30": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 30. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+    "63": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 63. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+    "p.p": "If a geometrically split abelian surface over ℚ is simple over ℚ, its rational p-torsion has rank at most 1 for every prime p ≥ 5. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+}
+GSPLIT_SOURCES = {"22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "p.p": ["Beauville2010", "MilneAV2008"]}
+
+
+# gsplit proofs that need simplicity over ℚ (the others apply to every geometrically split surface)
+QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
+                "QSimpleRankTwoObstruction"}
+
+
 def exclusions_record(key: str) -> dict:
     """Class-specific impossibility, separate from existence and infinitude records."""
     # All prime divisors of the order occur in the last invariant factor.
-    exponent = int(key.split(".")[-1])
+    invariants = [int(n) for n in key.split(".")] if key != "1" else []
+    exponent = invariants[-1] if invariants else 1
+    order = 1
+    for n in invariants:
+        order *= n
     remaining = exponent
     for prime in (2, 3, 5, 7):
         while remaining > 1 and remaining % prime == 0:
             remaining //= prime
+
+    def rank(p):
+        return sum(1 for n in invariants if n % p == 0)
+
+    def record(proof, reason, sources):
+        return {"reason": reason, "sources": [proof] + sources, "proof_url": SOURCES[proof]["url"]}
+
     exclusions = {}
     if remaining > 1:
-        exclusions["qsplit"] = {
-            "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
-            "sources": ["QSplitPrimeObstruction", "Mazur1977"],
-            "proof_url": SOURCES["QSplitPrimeObstruction"]["url"],
-        }
+        exclusions["qsplit"] = record(
+            "QSplitPrimeObstruction",
+            "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+            ["Mazur1977"])
+    elif (order % 7 == 0 and rank(2) >= 3) or (rank(2) == 4 and (order % 5 == 0 or order % 7 == 0)):
+        exclusions["qsplit"] = record(
+            "QSplitTwoRankObstruction",
+            "A Jacobian split over ℚ contains an elliptic curve over ℚ with an elliptic quotient over ℚ. By Mazur's theorem, a rational point of order 7 then forces rational 2-rank at most 2, and rational 2-rank 4 excludes rational points of orders 5 and 7.",
+            ["Mazur1977"])
     if exponent % 23 == 0 or exponent % 29 == 0:
-        exclusions["gsplit"] = {
-            "reason": "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
-            "sources": ["Geometric2329Obstruction", "DKSS2023", "Khawaja2024", "Clark2004"],
-            "proof_url": SOURCES["Geometric2329Obstruction"]["url"],
-        }
+        exclusions["gsplit"] = record(
+            "Geometric2329Obstruction",
+            "A geometrically split abelian surface over ℚ has no rational point of order 23 or 29. The proof applies to every geometric splitting degree.",
+            ["DKSS2023", "Khawaja2024", "Clark2004", "ClarkXarles2008"])
     elif exponent % 31 == 0:
-        exclusions["gsplit"] = {
-            "reason": "A geometrically split abelian surface over ℚ has no rational point of order 31. The proof applies to every geometric splitting degree.",
-            "sources": ["Geometric31Obstruction", "DKSS2023", "Khawaja2024", "Clark2004"],
-            "proof_url": SOURCES["Geometric31Obstruction"]["url"],
-        }
+        exclusions["gsplit"] = record(
+            "Geometric31Obstruction",
+            "A geometrically split abelian surface over ℚ has no rational point of order 31. The proof applies to every geometric splitting degree.",
+            ["DKSS2023", "Khawaja2024", "Clark2004", "ClarkXarles2008"])
     elif exponent % 33 == 0 or exponent % 34 == 0:
-        exclusions["gsplit"] = {
-            "reason": "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
-            "sources": ["Geometric3334Obstruction", "Mazur1977", "DNQuartic2025", "Clark2004"],
-            "proof_url": SOURCES["Geometric3334Obstruction"]["url"],
-        }
+        exclusions["gsplit"] = record(
+            "Geometric3334Obstruction",
+            "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
+            ["Mazur1977", "DNQuartic2025", "Clark2004", "ClarkXarles2008"])
+    elif exponent % 22 == 0:
+        exclusions["gsplit"] = record("Geometric22Obstruction", GSPLIT_REASON["22"], GSPLIT_SOURCES["22"])
+    elif exponent % 26 == 0 or exponent % 39 == 0:
+        exclusions["gsplit"] = record("Geometric2639Obstruction", GSPLIT_REASON["26"], GSPLIT_SOURCES["26"])
+    elif exponent % 13 == 0:
+        exclusions["gsplit"] = record("QSimple13Obstruction", GSPLIT_REASON["13"], GSPLIT_SOURCES["13"])
     elif exponent % 35 == 0:
-        exclusions["gsplit"] = {
-            "reason": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 35. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
-            "sources": ["QSimple35Obstruction", "DNQuartic2025", "Clark2004"],
-            "proof_url": SOURCES["QSimple35Obstruction"]["url"],
-        }
+        exclusions["gsplit"] = record(
+            "QSimple35Obstruction",
+            "A geometrically split abelian surface that is simple over ℚ has no rational point of order 35. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+            ["DNQuartic2025", "Clark2004", "ClarkXarles2008"])
+    elif exponent % 30 == 0:
+        exclusions["gsplit"] = record("QSimple30Obstruction", GSPLIT_REASON["30"], GSPLIT_SOURCES["30"])
+    elif exponent % 63 == 0:
+        exclusions["gsplit"] = record("QSimple63Obstruction", GSPLIT_REASON["63"], GSPLIT_SOURCES["63"])
+    elif any(rank(p) >= 2 for p in range(5, exponent + 1) if all(p % q for q in range(2, p))):
+        exclusions["gsplit"] = record("QSimpleRankTwoObstruction", GSPLIT_REASON["p.p"], GSPLIT_SOURCES["p.p"])
     return exclusions
 
 
@@ -542,8 +727,13 @@ def infinite_record(side: str, key: str) -> dict:
     exclusions = exclusions_record(key)
     if side == "split" and "qsplit" in exclusions and "gsplit" in exclusions:
         exclusion = exclusions["gsplit"]
-        return {"grade": "impossible", "sources": exclusion["sources"],
-                "note": exclusion["reason"], "proof_url": exclusion["proof_url"],
+        note, sources = exclusion["reason"], exclusion["sources"]
+        if exclusion["sources"][0] in QSIMPLE_ONLY:
+            # the proof covers only the ℚ-simple class; the split-over-ℚ class has its own exclusion
+            note = exclusions["qsplit"]["reason"] + " " + note
+            sources = sources + [k for k in exclusions["qsplit"]["sources"] if k not in sources]
+        return {"grade": "impossible", "sources": sources,
+                "note": note, "proof_url": exclusion["proof_url"],
                 "inherited_from": None}
     rec = _direct_record(side, key)
     if rec:

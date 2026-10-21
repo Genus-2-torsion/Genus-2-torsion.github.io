@@ -1,0 +1,27 @@
+Magma V2.30-1
+MODEL Hyperelliptic Curve defined by y^2 + (-x^4 - x^3 - x^2 - x - 1)*y = -2*x^7 + 2*x^5 - 7*x^4 + 2*x^3 - 2*x over Rational Field
+pole orders of j at the four cusps: [ 39, 13, 3, 1 ]
+CHECK #X(F_p) = p + 1 - Tr(T_p | S_2(Gamma_0(39))) for all primes p < 100, p != 3, 13: ok
+CHECK Phi_3(j, j o w3) = 0 and Phi_13(j, j o w13) = 0 in the function field;
+      Phi_13(j, j o w3), Phi_3(j, j o w13), Phi_3(j, j o w39), Phi_3(j, j) are nonzero: ok
+dim S_2(Gamma_0(39))^{w_3 = +1} = 1
+QUOTIENT Curve over Rational Field defined by
+x[2]^2 - x[1]*x[3],
+-1/4*x[1]^2 - 3/2*x[1]*x[2] + 1/4*x[2]^2 + 15/2*x[2]*x[3] + 27/4*x[3]^2 + x[4]^2
+rational points found on X_0(39)/w_3: [ (2 : 0 : 0 : 1), (-2 : 0 : 0 : 1), (6 : -4 : 8/3 : 1), (-6 : 4 : -8/3 : 1) ]
+X_0(39)/w_3 is isomorphic over Q to Elliptic Curve defined by y^2 + x*y = x^3 + x^2 - 4*x - 5 over Rational Field
+Cremona label 39a1
+39a1: torsion Z/2 x Z/2, #Sel^2 = 4, rank 0 (unconditional)
+images of the 4 points in 39a1: [ (0 : 1 : 0), (2 : -1 : 1), (-5/4 : 5/8 : 1), (-2 : 1 : 1) ]
+CHECK X_0(39)/w_3 has exactly 4 rational points: ok
+fibre over (2 : 0 : 0 : 1): two rational points, both cusps: {@ (0 : 1 : 1), (1 : 1 : 0) @}
+fibre over (-2 : 0 : 0 : 1): two rational points, both cusps: {@ (0 : 0 : 1), (1 : 0 : 0) @}
+fibre over (6 : -4 : 8/3 : 1): one conjugate pair over Q(sqrt(-7)): {@ (1/4*(-s + 3) : 1/32*(-21*s + 7) : 1), (1/4*(s + 3) : 1/32*(21*s + 7) : 1) @}
+   point (1/4*(-s + 3) : 1/32*(-21*s + 7) : 1): j = 1/16*(284931*s - 24759) (not CM), w_3 maps it to its conjugate
+   point (1/4*(s + 3) : 1/32*(21*s + 7) : 1): j = 1/16*(-284931*s - 24759) (not CM), w_3 maps it to its conjugate
+fibre over (-6 : 4 : -8/3 : 1): one conjugate pair over Q(sqrt(-7)): {@ (1/4*(-s + 3) : 1/8*(-3*s + 1) : 1), (1/4*(s + 3) : 1/8*(3*s + 1) : 1) @}
+   point (1/4*(-s + 3) : 1/8*(-3*s + 1) : 1): j = 1/1099511627776*(-167371429164111*s + 37303581492261) (not CM), w_3 maps it to its conjugate
+   point (1/4*(s + 3) : 1/8*(3*s + 1) : 1): j = 1/1099511627776*(167371429164111*s + 37303581492261) (not CM), w_3 maps it to its conjugate
+CHECK X_0(39)(Q) = the 4 cusps; the other two fibres are conjugate pairs over Q(sqrt(-7)): ok
+CONCLUSION: if K is a quadratic field and x in X_0(39)(K) is not rational with pi(x) rational, then K = Q(sqrt(-7)).
+ALL_CHECKS_PASSED

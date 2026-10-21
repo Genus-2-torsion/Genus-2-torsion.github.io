@@ -1,0 +1,943 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Ad}{Ad}
+\title{An obstruction to rational \(63\)-torsion on geometrically split abelian surfaces}
+\author{}
+\date{21 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem}\label{thm:main}
+Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and
+geometrically split. Then \(A(\Q)\) has no point of order \(63\).
+\end{theorem}
+
+Here ``geometrically split'' means that \(A_{\overline{\Q}}\) is
+isogenous to a product of elliptic curves. The theorem places no
+restriction on the degree of this isogeny, on the field of definition of
+the geometric endomorphisms, on the integral endomorphism ring, or on the
+polarization; in particular, it does not require a principal
+polarization. Consequently, the group
+\href{https://genus-2-torsion.github.io/group.html?g=63}{\([63]\)}
+cannot occur as the rational torsion subgroup of a geometrically split
+genus-\(2\) Jacobian that is simple over \(\Q\).
+
+The hypothesis of simplicity over \(\Q\) is essential. A product of
+elliptic curves over \(\Q\) with rational points of orders \(7\) and
+\(9\) has a rational point of order \(63\), and the census contains a
+genus-\(2\) Jacobian that is split over \(\Q\) and has torsion subgroup
+\([63]\).
+
+\section{Inputs}\label{sec:inputs}
+
+We use the following results on torsion points of elliptic curves.
+\begin{enumerate}
+\item Kenku--Momose \cite[Theorem (0.1)]{KM}: let \(N\) be a product of
+powers of \(2,3,5,7,11,13\), and let \(m\mid N\). If \(X_1(m,N)\) has
+positive genus and
+\[
+ (m,N)\notin\{(1,11),(1,13),(1,14),(1,15),(1,16),(1,18),(2,10),(2,12)\},
+\]
+then \(Y_1(m,N)(k)=\emptyset\) for every quadratic field \(k\). The
+curve \(X_1(21)=X_1(1,21)\) has genus \(5\). Hence \emph{no elliptic
+curve over a quadratic field has a point of order \(21\)}.
+\item Mazur \cite[Theorem (7\('\))]{Mazur}: if an elliptic curve over
+\(\Q\) has a rational point of order \(m\), then \(m\leq10\) or
+\(m=12\). In particular \(Y_1(21)(\Q)=\emptyset\).
+\item Derickx--Etropolski--van Hoeij--Morrow--Zureick-Brown
+\cite[Theorem A]{DEvHMZB} classify the torsion of elliptic curves over
+cubic fields. Theorem A states in addition that the elliptic curve with
+Cremona label 162b1,
+\[
+ y^2+xy+y=x^3-x^2-5x+5,
+\]
+over \(\Q(\zeta_9)^+=\Q[x]/(x^3-3x+1)\) is the unique elliptic curve
+over a cubic field with torsion \(\Z/21\Z\). We use the precise
+statement proved in \cite[Section 6.2]{DEvHMZB}: the only closed points
+of degree \(3\) on \(X_1(21)\) are two points \(D_0\) and \(D_0'\).
+\end{enumerate}
+
+For the reduction of abelian varieties we use the following results of
+Serre--Tate \cite{ST}. Let \(K\) be a finite extension of \(\Q_p\) with
+residue field \(k\), let \(A\) be an abelian variety over \(K\), and let
+\(\ell\neq p\) be a prime.
+\begin{enumerate}
+\item[(a)] (N\'eron--Ogg--Shafarevich, \cite[Theorem 1]{ST}.) \(A\) has
+good reduction if and only if the inertia group of \(K\) acts trivially
+on \(T_\ell(A)\). By \cite[Corollary 2 of Theorem 1]{ST}, two
+\(K\)-isogenous abelian varieties both have, or both do not have, good
+reduction.
+\item[(b)] (\cite[Lemma 2]{ST}.) For \(m\) prime to \(p\), reduction is
+an isomorphism from the inertia invariants of \(A[m]\) onto the
+\(m\)-torsion of the special fibre of the N\'eron model, compatible with
+the Galois action. Hence, if \(A\) has good reduction \(\widetilde A\),
+then \(A(K)[m]\) injects into \(\widetilde A(k)\), and
+\(T_\ell(A)\cong T_\ell(\widetilde A)\) compatibly with Frobenius.
+\item[(c)] (\cite[\S2, p.~498]{ST}.) If \(A\) has potentially good
+reduction, then there is a finite extension \(K'/K\) with residue field
+\(k\) over which \(A\) has good reduction.
+\end{enumerate}
+
+For an abelian surface \(B\) over \(\F_q\), \(\#B(\F_q)=P(1)\), where
+\(P\) is the characteristic polynomial of Frobenius, and the complex
+roots of \(P\) have absolute value \(\sqrt q\) (Weil). Hence
+\(\#B(\F_q)\leq(1+\sqrt q)^4\).
+
+We also use the following standard facts: the independence of the
+semisimplified residual representation from the choice of a stable
+lattice (Brauer--Nesbitt), which applies to isomorphic \(p\)-adic
+representations after transporting a lattice through the isomorphism;
+the Skolem--Noether theorem; Poincar\'e's complete reducibility theorem;
+Galois descent for twists of projective varieties by a cocycle with
+values in the automorphism group; the Weil pairing; and the existence of
+a polarization defined over \(\Q\) on every abelian variety over \(\Q\).
+
+\emph{Notation.} For a number field \(K\subset\overline{\Q}\), put
+\(G_K=\Gal(\overline{\Q}/K)\). For a prime \(\ell\), \(T_\ell\) and
+\(V_\ell=T_\ell\otimes\Q_\ell\) denote the Tate module and the rational
+Tate module. For a stable lattice \(T'\) in a \(p\)-adic representation,
+\(T'/pT'\) is its residual module and \((\cdot)^{\mathrm{ss}}\) denotes
+semisimplification. We write \(\overline\chi_p\) for the mod-\(p\)
+cyclotomic character. A rational point of order \(p\) spans a trivial
+submodule of \(A[p]=T_p(A)/pT_p(A)\); by lattice independence, the
+residual module of every \(G_{\Q}\)-stable lattice in \(V_p(A)\) then has
+a trivial composition factor.
+
+\section{Setup and two lemmas on elliptic curves}\label{sec:setup}
+
+Throughout the proof, \(A/\Q\) is an abelian surface that is simple over
+\(\Q\) and geometrically split, and we suppose that \(P\in A(\Q)\) has
+order \(63\). Put
+\[
+ P_7=9P,\qquad P_3=21P,
+\]
+of orders \(7\) and \(3\). Exactly one of the following holds:
+\begin{itemize}
+\item[(N)] \(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\),
+where \(E_1\) and \(E_2\) are not isogenous;
+\item[(CM)] \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\)
+has complex multiplication;
+\item[(S)] \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\)
+has no complex multiplication.
+\end{itemize}
+
+\begin{lemma}[Combining coprime torsion]\label{lem:combine}
+Let \(m,n\) be coprime positive integers and \(K\) a number field.
+Suppose \(E_m\) and \(E_n\) are \(K\)-isogenous elliptic curves over
+\(K\) with points of orders \(m\) and \(n\) in \(E_m(K)\) and
+\(E_n(K)\), respectively. Then their \(K\)-isogeny class contains an
+elliptic curve with a \(K\)-rational point of order \(mn\).
+\end{lemma}
+
+\begin{proof}
+Let \(f:E_m\to E_n\) be a \(K\)-isogeny, and let \(H\) be the subgroup
+of \(\ker f\) consisting of the elements whose order is divisible only
+by primes dividing \(n\). It is a characteristic subgroup of \(\ker f\),
+hence \(G_K\)-stable, and \(f\) factors over \(K\) as
+\[
+ E_m\xrightarrow{\ a\ }E'=E_m/H\xrightarrow{\ b\ }E_n .
+\]
+The degree of \(a\) is prime to \(m\), so \(a\) is injective on
+\(E_m[m]\) and maps the given point of order \(m\) to a point of order
+\(m\) in \(E'(K)\). The degree of \(b\) is prime to \(n\); since
+\(b\circ\hat b=[\deg b]\) is injective on \(E_n[n]\), so is the dual
+isogeny \(\hat b\), which maps the given point of order \(n\) to a point
+of order \(n\) in \(E'(K)\). The sum of the two points has order
+\(mn\).
+\end{proof}
+
+\begin{lemma}\label{lem:sequence}
+Let \(X\) be an abelian surface over a field \(k\), let \(E\subset X\)
+be an elliptic curve defined over \(k\), and put \(F=X/E\). If
+\(Q\in X(k)\) has prime order \(q\), then either \(Q\in E(k)\), or the
+image of \(Q\) in \(F(k)\) has order \(q\).
+\end{lemma}
+
+\begin{proof}
+The image has order dividing \(q\). If it is zero, then
+\(Q\in E(\overline k)\cap X(k)=E(k)\).
+\end{proof}
+
+\section{Nonisogenous factors}\label{sec:nonisogenous}
+
+Suppose that \(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\),
+where \(E_1\) and \(E_2\) are not isogenous. By Poincar\'e's theorem,
+every elliptic curve in \(A_{\overline{\Q}}\) is isogenous to \(E_1\)
+or to \(E_2\), and so is the image of a nonzero homomorphism
+\(E_i\to A_{\overline{\Q}}\). For \(i=1,2\), the space
+\(\Hom(E_i,A_{\overline{\Q}})\otimes\Q\) has dimension one over the
+division algebra \(\End^0(E_i)\). Hence all nonzero homomorphisms
+\(E_i\to A_{\overline{\Q}}\) have the same image, and
+\(A_{\overline{\Q}}\) contains exactly two elliptic curves.
+
+The group \(G_{\Q}\) permutes these two elliptic curves. If it fixed
+them, they would be defined over \(\Q\), and \(A\) would not be simple
+over \(\Q\). Hence they are exchanged. They are defined over a quadratic
+field \(K\), and the nontrivial automorphism \(\sigma\) of \(K\)
+interchanges them; call them \(E\) and \(E^\sigma\).
+
+Put \(F=A_K/E\). The composite \(E^\sigma\hookrightarrow A_K\to F\) has
+finite kernel \(E\cap E^\sigma\), so it is a \(K\)-isogeny. Applying
+\(\sigma\), we find that \(F^\sigma\) is \(K\)-isogenous to \(E\).
+
+Let \(q\in\{3,7\}\). By Lemma~\ref{lem:sequence} over \(K\), either
+\(P_q\in E(K)\), or the image of \(P_q\) in \(F(K)\) has order \(q\);
+in the second case, its conjugate under \(\sigma\) is a point of order
+\(q\) in \(F^\sigma(K)\). Thus the \(K\)-isogeny class of \(E\) contains
+curves with \(K\)-rational points of orders \(3\) and \(7\). By
+Lemma~\ref{lem:combine}, it contains an elliptic curve over the
+quadratic field \(K\) with a point of order \(21\). This contradicts the
+theorem of Kenku and Momose.
+
+\section{The CM case: a local argument at \texorpdfstring{\(2\)}{2}}\label{sec:cm}
+
+Suppose that \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\)
+has complex multiplication. The curve \(E\) is defined over a number
+field and its \(j\)-invariant is an algebraic integer, so \(E\) has
+potentially good reduction at every prime \cite[\S2]{ST}. Over a finite
+extension of \(\Q_2\), the surface \(A\) becomes isogenous to \(E^2\)
+and \(E\) acquires good reduction. By (a), \(A\) acquires good reduction
+there as well, so \(A_{\Q_2}\) has potentially good reduction.
+
+By (c), there is a finite extension \(K'/\Q_2\) with residue field
+\(\F_2\) over which \(A\) has good reduction \(\widetilde A\). Since
+\(63\) is odd, (b) embeds the subgroup of \(A(\Q)\subseteq A(K')\)
+generated by \(P\) into \(\widetilde A(\F_2)\). Therefore
+\[
+ 63\leq\#\widetilde A(\F_2)\leq(1+\sqrt2)^4=17+12\sqrt2<34,
+\]
+a contradiction. In fact,
+\(\#\widetilde A(\F_2)\in\{1,\dots,16,19,20,25\}\) for every abelian surface
+over \(\F_2\) (see Section~\ref{sec:computations}).
+Alternatively, Clark \cite[Theorem 5]{Clark} lists the possible orders
+of the rational torsion subgroup of an abelian surface over \(\Q\) with
+everywhere potentially good reduction, and \(63\) is not among them.
+This case does not use simplicity over \(\Q\).
+
+\section{Non-CM squares: the endomorphism field}\label{sec:endomorphism-field}
+
+From now on, suppose that \(A_{\overline{\Q}}\) is isogenous to \(E^2\),
+where \(E\) has no complex multiplication. Then
+\[
+ D=\End^0(A_{\overline{\Q}})\simeq M_2(\Q).
+\]
+Let \(L\) be the smallest field over which all geometric endomorphisms
+of \(A\) are defined. It is a finite Galois extension of \(\Q\). Put
+\(\Gamma=\Gal(L/\Q)\). The group \(G_{\Q}\) acts on \(D\) by
+\(g(\varphi)=g\circ\varphi\circ g^{-1}\), and this action factors
+through a faithful action of \(\Gamma\). By Skolem--Noether,
+\(g(\varphi)=R_g\varphi R_g^{-1}\) for some
+\(R_g\in D^\times=\GL_2(\Q)\), unique up to \(\Q^\times\), and
+\(g\mapsto[R_g]\) embeds \(\Gamma\) in
+\(\operatorname{Aut}(M_2(\Q))=\PGL_2(\Q)\). On Tate modules,
+\(g(\varphi x)=g(\varphi)\,g(x)\) for \(\varphi\in D\) and
+\(x\in V_\ell(A)\).
+
+\emph{Finite subgroups of \(\PGL_2(\Q)\).} A finite subgroup of
+\(\PGL_2(\mathbb R)\) is cyclic or dihedral: it fixes a point of the
+hyperbolic plane, and its action on the tangent plane embeds it in
+\(O(2)\). If an element \([M]\in\PGL_2(\Q)\) has finite order \(n>2\),
+then \(M\) has distinct eigenvalues whose ratio is a primitive \(n\)-th
+root of unity \(\zeta\), and
+\[
+ \frac{(\operatorname{tr}M)^2}{\det M}=2+\zeta+\zeta^{-1}\in\Q .
+\]
+Hence \(n\in\{3,4,6\}\), and
+\[
+ \Gamma\in\{C_1,C_2,C_3,C_4,C_6,V_4,D_6,D_8,D_{12}\},
+\]
+where \(D_{2n}\) is the dihedral group of order \(2n\) and
+\(V_4=C_2\times C_2\).
+
+\emph{Trace-one representatives.} If \([M]\) has order
+\(n\in\{3,4,6\}\), then \(\operatorname{tr}M\neq0\), and we may scale
+\(M\) to a representative \(R\) with \(\operatorname{tr}R=1\). Then
+\(1/\det R=2+\zeta+\zeta^{-1}=c\), where \(c=1,2,3\) for \(n=3,4,6\), so
+that
+\[
+ R^2-R+\tfrac1c=0,\qquad
+ \operatorname{disc}\bigl(X^2-X+\tfrac1c\bigr)=1-\tfrac4c=-3,\ -1,\ -\tfrac13 .
+\]
+Since \(R(1-R)=1/c\) is a scalar, the trace-one representative of
+\([M]^{-1}\) is \(1-R\). An element \([M]\) of order \(2\) has a
+representative \(R\) with \(\operatorname{tr}R=0\), and then
+\(R^2=-\det R\) is a nonzero scalar.
+
+\emph{The trivial group.} If \(\Gamma=C_1\), then \(\End^0_{\Q}(A)=D\)
+contains a nontrivial idempotent, and \(A\) is not simple over \(\Q\).
+Hence \(\Gamma\neq C_1\).
+
+\begin{lemma}\label{lem:subvarieties}
+Every elliptic curve \(C\subset A_{\overline{\Q}}\) is defined over
+\(L\), and any two such curves are \(L\)-isogenous. If \(E\subset A_L\)
+is one of them, then \(A_L/E\) is \(L\)-isogenous to \(E\).
+\end{lemma}
+
+\begin{proof}
+By Poincar\'e's theorem, \(C\) has a complement, and \(C\) is the image
+of \(\varphi=ne\in\End(A_{\overline{\Q}})\) for a rank-one idempotent
+\(e\in D\) and an integer \(n\geq1\). Since \(\varphi\) is defined over
+\(L\), so is its image. Let \(C'\) be another elliptic curve, the image
+of \(\varphi'=n'e'\). Since \(D\simeq M_2(\Q)\), there is \(X\in D\)
+with \(e'Xe\neq0\); choose \(k\geq1\) with
+\(kX\in\End(A_{\overline{\Q}})\), and put
+\(\psi=\varphi'\circ kX\circ\varphi\). Then \(\psi\) is defined over
+\(L\), its image lies in \(C'\), and \(\psi\circ\varphi=n\psi\neq0\), so
+\(\psi\) does not vanish on \(C\). Thus \(\psi|_C:C\to C'\) is an
+\(L\)-isogeny. Finally, if \(E'\subset A_L\) is an elliptic curve with
+\(E\cap E'\) finite (for instance the image of an integral multiple of
+\(1-e\)), then \(E'\to A_L/E\) is an \(L\)-isogeny, and \(E'\) is
+\(L\)-isogenous to \(E\).
+\end{proof}
+
+\begin{corollary}\label{cor:21}
+There is an elliptic curve \(E''\) over \(L\), \(L\)-isogenous to every
+elliptic curve in \(A_L\), such that \(E''(L)\) contains a point of
+order \(21\).
+\end{corollary}
+
+\begin{proof}
+Choose an elliptic curve \(E\subset A_L\) and put \(F=A_L/E\). By
+Lemma~\ref{lem:sequence} over \(L\), for \(q\in\{3,7\}\), either
+\(P_q\in E(L)\), or its image in \(F(L)\) has order \(q\). By
+Lemma~\ref{lem:subvarieties}, \(F\) is \(L\)-isogenous to \(E\). So the
+\(L\)-isogeny class of \(E\) contains curves with \(L\)-rational points
+of orders \(3\) and \(7\), and Lemma~\ref{lem:combine} gives \(E''\). By
+Lemma~\ref{lem:subvarieties}, \(E''\) is \(L\)-isogenous to every
+elliptic curve in \(A_L\).
+\end{proof}
+
+\section{Three lemmas on residual representations}\label{sec:residual}
+
+In this section \(p\) is an odd prime. Put \(V=V_p(A)\), \(T=T_p(A)\),
+and \(D_p=D\otimes\Q_p\simeq M_2(\Q_p)\). The algebra \(D_p\) acts on
+\(V\), and \(g(\varphi x)=g(\varphi)\,g(x)\) for \(g\in G_{\Q}\),
+\(\varphi\in D_p\) and \(x\in V\). As a \(D_p\)-module, \(V\) is the sum
+of two copies of the standard module \(\Q_p^2\).
+
+\begin{lemma}[Polarization]\label{lem:polarization}
+Let \(T'\subset V\) be a \(G_{\Q}\)-stable lattice such that every
+composition factor of \(T'/pT'\) is trivial as a \(G_L\)-module. Then
+\(\Q(\zeta_p)\subseteq L\).
+\end{lemma}
+
+\begin{proof}
+A polarization of \(A\) defined over \(\Q\) and the Weil pairing give a
+nondegenerate alternating \(G_{\Q}\)-equivariant pairing on \(V\) with
+values in \(\Q_p(1)\), hence an isomorphism
+\(V\simeq V^*\otimes\Q_p(1)\). Transport the lattice
+\(\Hom_{\Z_p}(T',\Z_p)\otimes\Z_p(1)\) into \(V\) by this isomorphism.
+Its residual module is \((T'/pT')^*\otimes\mu_p\), whose
+\(G_L\)-composition factors are four copies of
+\(\overline\chi_p|_{G_L}\). By lattice independence over \(G_L\), these
+agree with the composition factors of \(T'/pT'\), which are trivial.
+Hence \(\overline\chi_p|_{G_L}=1\), that is,
+\(\Q(\zeta_p)\subseteq L\). The degree of the polarization plays no
+role.
+\end{proof}
+
+\begin{lemma}[Unramified order]\label{lem:unramified}
+Suppose \(\mathcal B\subset D_p\) is a \(\Z_p\)-order isomorphic to the
+ring of integers of the unramified quadratic extension of \(\Q_p\), such
+that \(R_g\mathcal BR_g^{-1}=\mathcal B\) for all \(g\in\Gamma\).
+Suppose also that some \(g_0\in\Gamma\) has a representative
+\(R_{g_0}\in\mathcal B^\times\) whose reduction in
+\(\mathcal B/p\mathcal B\simeq\F_{p^2}\) does not lie in \(\F_p\). If
+\(A(\Q)[p]\neq0\), then \(\Q(\zeta_p)\subseteq L\).
+\end{lemma}
+
+\begin{proof}
+\emph{A stable maximal order.} The field \(\mathcal B\otimes\Q_p\) makes
+\(\Q_p^2\) a one-dimensional vector space over it, so the
+\(\mathcal B\)-stable lattices in \(\Q_p^2\) are the fractional ideals
+of the discrete valuation ring \(\mathcal B\) times a fixed vector.
+Since \(p\) is a uniformizer of \(\mathcal B\), they form a single
+homothety class \(\{p^j\Lambda\}\). For \(g\in\Gamma\), the lattice
+\(R_g\Lambda\) is stable under \(R_g\mathcal BR_g^{-1}=\mathcal B\), so
+\(R_g\Lambda=p^j\Lambda\) for some \(j\). Rescaling, we choose for each
+\(g\in\Gamma\) a representative \(M_g\in\GL(\Lambda)\), unique up to
+\(\Z_p^\times\); for \(g_0\) we take \(M_{g_0}=R_{g_0}\), which lies in
+\(\GL(\Lambda)\) because \(\mathcal B^\times\) preserves \(\Lambda\).
+Thus \(\Gamma\) preserves the maximal order
+\(\mathcal R=\End_{\Z_p}(\Lambda)\simeq M_2(\Z_p)\).
+
+\emph{A tensor decomposition.} Put \(T'=\mathcal RT\). It is a lattice
+in \(V\), and it is \(G_{\Q}\)-stable because
+\(g(\varphi t)=g(\varphi)\,g(t)\) and \(g(\mathcal R)=\mathcal R\). By
+Morita equivalence,
+\[
+ T'\simeq\Lambda\otimes_{\Z_p}W_0,\qquad W_0=\Hom_{\mathcal R}(\Lambda,T'),
+\]
+with \(W_0\) free of rank \(2\). Let \(\widetilde G\) be the group of
+pairs \((g,M)\) with \(g\in G_{\Q}\), \(M\in\GL(\Lambda)\) and
+\([M]=[M_{g|_L}]\) in \(\PGL(\Lambda)\). For \((g,M)\in\widetilde G\),
+the map \(t\mapsto M^{-1}g(t)\) is an \(\mathcal R\)-linear automorphism
+of \(T'\), hence equals \(1\otimes w\) for a unique
+\(w=w(g,M)\in\GL(W_0)\). Thus \(\widetilde G\) acts linearly on
+\(\Lambda\) through \(M\) and on \(W_0\) through \(w\), and \((g,M)\)
+acts on \(T'\) as \(g=M\otimes w\). Reducing modulo \(p\),
+\[
+ \overline V:=T'/pT'\simeq U\otimes_{\F_p}W,\qquad
+ U=\Lambda/p\Lambda,\quad W=W_0/pW_0,
+\]
+as \(\widetilde G\)-modules, and these actions factor through a finite
+quotient of \(\widetilde G\). The subgroup
+\(H=\{(h,1):h\in G_L\}\) is normal in \(\widetilde G\), acts trivially
+on \(U\), and acts on \(\overline V\) as \(G_L\) does.
+
+\emph{\(U\) is irreducible.} The element \((g,R_{g_0})\), for any lift
+\(g\) of \(g_0\), acts on \(U\simeq\mathcal B/p\mathcal B=\F_{p^2}\) by
+multiplication by an element of \(\F_{p^2}\setminus\F_p\). Its
+characteristic polynomial over \(\F_p\) is irreducible, so it fixes no
+line of \(U\).
+
+\emph{\(W\) is irreducible.} Since \(A(\Q)[p]\neq0\), the module
+\(\overline V\) has a trivial composition factor, as a
+\(G_{\Q}\)-module and hence as a \(\widetilde G\)-module. If \(W\) had a
+stable line \(\ell\), then \(\overline V\) would have the composition
+factors \(U\otimes\ell\) and \(U\otimes(W/\ell)\), both irreducible of
+dimension \(2\), which is impossible.
+
+\emph{\(G_L\) acts trivially on \(\overline V\).} The restriction
+\(W|_H\) is semisimple: if \(S\subseteq W\) is a simple
+\(H\)-submodule, then its \(\widetilde G\)-translates are simple
+\(H\)-submodules because \(H\) is normal, and their sum is a nonzero
+\(\widetilde G\)-submodule, hence equal to \(W\). The module
+\(\overline V|_H\simeq W|_H\oplus W|_H\) has a trivial composition
+factor, so \(W^H\neq0\). Since \(H\) is normal, \(W^H\) is
+\(\widetilde G\)-stable, so \(W^H=W\). Hence \(G_L\) acts trivially on
+\(\overline V=U\otimes W\), and Lemma~\ref{lem:polarization} gives
+\(\Q(\zeta_p)\subseteq L\).
+\end{proof}
+
+\begin{lemma}[Split blocks]\label{lem:split}
+Suppose \(\mathcal B=\Z_pe_1\oplus\Z_pe_2\subset D_p\), where
+\(e_1,e_2\) are orthogonal idempotents of rank one with \(e_1+e_2=1\),
+is preserved by \(\Gamma\), and some element of \(\Gamma\) exchanges
+\(e_1\) and \(e_2\). Let \(\Gamma_0\) be the stabilizer of \(e_1\), of
+index \(2\), and \(K=L^{\Gamma_0}\). Then \(G_K\) acts on the line
+\(e_1D_pe_2\) by a character \(\eta\) that factors through
+\(\Gal(L/K)\); its values are roots of unity, hence lie in
+\(\Z_p^\times\). If the reduction \(\overline\eta\) is nontrivial and
+\(A(\Q)[p]\neq0\), then \(\Q(\zeta_p)\subseteq L\).
+\end{lemma}
+
+\begin{proof}
+Put \(T'=\mathcal BT\), a \(G_{\Q}\)-stable lattice, and
+\(T_i=e_iT'\), so that \(T'=T_1\oplus T_2\). The group \(G_K\) preserves
+each \(T_i\), since \(g(e_it)=e_ig(t)\), while every element of
+\(G_{\Q}\setminus G_K\) maps \(T_1\) onto \(T_2\) and \(T_2\) onto
+\(T_1\). Put \(V_i=T_i\otimes\Q_p\) and \(M_i=T_i/pT_i\), both of
+dimension \(2\).
+
+Choose \(0\neq X\in e_1D_pe_2\). It restricts to an isomorphism
+\(V_2\to V_1\), and for \(g\in G_K\) and \(v\in V_2\) we have
+\(g(Xv)=\eta(g)X\,g(v)\). Hence \(V_1\simeq\eta\otimes V_2\) as
+\(G_K\)-representations, and lattice independence gives
+\[
+ M_1^{\mathrm{ss}}\simeq\overline\eta\otimes M_2^{\mathrm{ss}}.
+\]
+Since \(A(\Q)[p]\neq0\), the \(G_K\)-module \(M_1\oplus M_2\) has a
+trivial composition factor, so one of the \(M_i\) has one. An element
+\(\tau\in G_{\Q}\setminus G_K\) identifies \(M_{3-i}\) with the
+conjugate of \(M_i\) by \(\tau\), and the conjugate of a trivial
+composition factor is trivial. So both \(M_1\) and \(M_2\) have a
+trivial composition factor. Write
+\(M_2^{\mathrm{ss}}=\mathbf 1\oplus\alpha\). Then
+\(M_1^{\mathrm{ss}}=\overline\eta\oplus\overline\eta\alpha\) contains
+\(\mathbf 1\), and \(\overline\eta\neq\mathbf 1\), so
+\(\alpha=\overline\eta^{-1}\). All four composition factors are powers
+of \(\overline\eta\), hence trivial on \(G_L\), and
+Lemma~\ref{lem:polarization} gives \(\Q(\zeta_p)\subseteq L\).
+\end{proof}
+
+\section{The prime \texorpdfstring{\(7\)}{7}: the endomorphism field is cyclic of order \texorpdfstring{\(2\), \(3\) or \(6\)}{2, 3 or 6}}\label{sec:prime-7}
+
+We apply the lemmas of Section~\ref{sec:residual} with \(p=7\), using
+\(A(\Q)[7]\ni P_7\neq0\). The field \(\Q(\zeta_7)\) is cyclic of degree
+\(6\) over \(\Q\). So if \(\Q(\zeta_7)\subseteq L\), then \(\Gamma\) has
+a quotient isomorphic to \(C_6\). Modulo \(7\), the discriminants of the
+trace-one rotations are
+\[
+ -3\equiv4=2^2,\qquad -1\equiv6,\qquad -\tfrac13\equiv2=3^2\pmod 7,
+\]
+and \(6\) is not a square modulo \(7\).
+
+\emph{\(\Gamma=D_6\) or \(D_{12}\).} Let \(r\) be a rotation of order
+\(n=3\) or \(6\) generating the rotation subgroup, and \(R\) its
+trace-one representative. Every element of \(\Gamma\) conjugates \(r\)
+to \(r^{\pm1}\), so it maps \(R\) to \(R\) or to \(1-R\). Hence
+\(\mathcal B=\Z_7[R]\), a \(\Z_7\)-order since \(R^2-R+1/c=0\) with
+\(c\in\{1,3\}\), is preserved by \(\Gamma\). Its discriminant is a
+nonzero square modulo \(7\), so by Hensel's lemma the roots
+\(\lambda_1,\lambda_2\) of \(X^2-X+1/c\) lie in \(\Z_7^\times\) and
+\(\lambda_1-\lambda_2\) is a unit. Thus
+\(\mathcal B\simeq\Z_7\times\Z_7\), with idempotents
+\(e_1=(R-\lambda_2)/(\lambda_1-\lambda_2)\) and
+\(e_2=(R-\lambda_1)/(\lambda_2-\lambda_1)\). The rotations fix \(R\),
+hence \(e_1\) and \(e_2\). Since \(\lambda_1+\lambda_2=1\), the
+reflections, which map \(R\) to \(1-R\), exchange \(e_1\) and \(e_2\).
+The stabilizer of \(e_1\) is the rotation subgroup. For
+\(X\in e_1D_7e_2\) we have \(RXR^{-1}=(\lambda_1/\lambda_2)X\), so
+\(\eta\) maps a lift of \(r\) to \(\lambda_1/\lambda_2\), a primitive
+\(n\)-th root of unity. As \(7\nmid n\), reduction modulo \(7\) is
+injective on \(n\)-th roots of unity, so \(\overline\eta\) has order
+\(n\geq3\). Lemma~\ref{lem:split} gives \(\Q(\zeta_7)\subseteq L\). But
+the abelianizations of \(D_6\) and \(D_{12}\) are \(C_2\) and
+\(C_2\times C_2\), which have no quotient \(C_6\). This is a
+contradiction.
+
+\emph{\(\Gamma=D_8\) or \(C_4\).} Let \(r\) be a rotation of order
+\(4\) and \(R\) its trace-one representative, with
+\(R^2-R+\tfrac12=0\). As before, every element of \(\Gamma\) maps \(R\)
+to \(R\) or \(1-R\), so \(\mathcal B=\Z_7[R]\) is preserved by
+\(\Gamma\). Since \(X^2-X+4\), the reduction of \(X^2-X+\tfrac12\), has
+discriminant \(-15\equiv6\), a nonsquare modulo \(7\), it is irreducible
+over \(\F_7\). Hence \(\mathcal B\) is the ring of integers of the
+unramified quadratic extension of \(\Q_7\). Moreover
+\(R\in\mathcal B^\times\), since \(\det R=\tfrac12\) is a unit, and its
+reduction is a root of an irreducible quadratic, so it does not lie in
+\(\F_7\). Lemma~\ref{lem:unramified} gives \(\Q(\zeta_7)\subseteq L\).
+But \(C_4\) has no quotient \(C_6\), and the abelianization
+\(C_2\times C_2\) of \(D_8\) has none either. This is a contradiction.
+
+\emph{\(\Gamma=V_4\).} The map \([M]\mapsto v_7(\det M)\bmod2\) is a
+well-defined homomorphism \(\Gamma\to\Z/2\Z\). Choose \(r\neq1\) in its
+kernel, and a representative \(R\) of trace \(0\), scaled by a power of
+\(7\) so that \(\det R\in\Z_7^\times\). Then \(R^2=a\) with
+\(a=-\det R\in\Q^\times\cap\Z_7^\times\). Since \(\Gamma\) is abelian,
+every \(R_g\) conjugates \(R\) to a trace-zero representative of \(r\)
+with the same square, that is, to \(\pm R\). Hence
+\(\mathcal B=\Z_7[R]\) is preserved by \(\Gamma\). Its discriminant
+\(4a\) is a unit.
+\begin{itemize}
+\item If \(a\) is not a square modulo \(7\), then \(X^2-a\) is
+irreducible modulo \(7\), so \(\mathcal B\) is the ring of integers of
+the unramified quadratic extension of \(\Q_7\). Also
+\(R\in\mathcal B^\times\) and its reduction does not lie in \(\F_7\).
+Lemma~\ref{lem:unramified} applies with \(g_0=r\).
+\item If \(a\) is a square modulo \(7\), then \(a=b^2\) with
+\(b\in\Z_7^\times\), and \(\mathcal B\simeq\Z_7\times\Z_7\), with
+idempotents \(e_\pm=(1\pm R/b)/2\). Some element of \(\Gamma\)
+conjugates \(R\) to \(-R\): otherwise every \(R_g\) would lie in the
+centralizer \((\Q_7[R])^\times\simeq\Q_7^\times\times\Q_7^\times\) of
+\(R\), and \(\Gamma\) would embed in its image \(\Q_7^\times\) in
+\(\PGL_2(\Q_7)\), whose finite subgroups are cyclic. That element
+exchanges \(e_+\) and \(e_-\). The stabilizer of \(e_+\) is
+\(\{1,r\}\), and \(r\) acts on \(e_+D_7e_-\) by
+\(RXR^{-1}=(b/(-b))X=-X\). Thus \(\overline\eta\) is the nontrivial
+quadratic character, and Lemma~\ref{lem:split} applies.
+\end{itemize}
+In both cases \(\Q(\zeta_7)\subseteq L\), which is impossible since
+\([L:\Q]=4\).
+
+Together with \(\Gamma\neq C_1\) (Section~\ref{sec:endomorphism-field}),
+this shows:
+
+\begin{proposition}\label{prop:cyclic}
+In case \textup{(S)}, \(\Gamma\) is cyclic of order \(2\), \(3\) or
+\(6\).
+\end{proposition}
+
+\section{The quadratic case}\label{sec:quadratic}
+
+If \(\Gamma=C_2\), then \(L\) is a quadratic field, and
+Corollary~\ref{cor:21} gives an elliptic curve over \(L\) with an
+\(L\)-rational point of order \(21\). This contradicts the theorem of
+Kenku and Momose.
+
+\section{The cyclic sextic case: no rational \texorpdfstring{\(3\)}{3}-torsion}\label{sec:sextic}
+
+In this section \(\Gamma=\langle r\rangle\simeq C_6\). Let \(R\) be the
+trace-one representative of \(r\), so \(R^2-R+\tfrac13=0\), and let
+\(K=L^{\langle r^2\rangle}\) be the quadratic subfield of \(L\). We show
+that \(A[3]^{\mathrm{ss}}\) has no trivial composition factor. Since
+\(P_3\) is a rational point of order \(3\), this excludes
+\(\Gamma=C_6\).
+
+\subsection{\texorpdfstring{\(L\)}{L} is totally real}\label{sec:real}
+
+Fix an embedding \(\overline{\Q}\subset\mathbb C\), and let
+\(c\in G_{\Q}\) be complex conjugation. Put
+\(H=H_1(A(\mathbb C),\mathbb R)\), a real vector space of dimension
+\(4\) with the complex structure \(J_A\) of the complex torus
+\(A(\mathbb C)\). The algebra
+\(D_{\mathbb R}=D\otimes\mathbb R\simeq M_2(\mathbb R)\) acts faithfully
+on \(H\), commuting with \(J_A\). Since the simple
+\(M_2(\mathbb R)\)-module is \(\mathbb R^2\), we have
+\(H\simeq\mathbb R^2\otimes W\) with \(\dim W=2\), the algebra
+\(D_{\mathbb R}\) acting on the first factor. The commutant of
+\(M_2(\mathbb R)\otimes1\) is \(1\otimes\End(W)\), so \(J_A=1\otimes J\)
+with \(J^2=-1\).
+
+Complex conjugation on \(A(\mathbb C)\) induces an involution \(c_*\) of
+\(H\) that anticommutes with \(J_A\), and the action of \(c\) on \(D\) is
+\(\varphi\mapsto c_*\varphi c_*^{-1}\). By Skolem--Noether, there is
+\(M\in\GL_2(\mathbb R)\) with
+\(c_*(\varphi\otimes1)c_*^{-1}=M\varphi M^{-1}\otimes1\); then
+\((M^{-1}\otimes1)c_*\) commutes with \(M_2(\mathbb R)\otimes1\), so
+\(c_*=M\otimes N\) with \(N\in\GL(W)\). The relation
+\(c_*J_A=-J_Ac_*\) gives \(NJ=-JN\). In a basis of \(W\) with
+\(J=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)\), this
+forces \(N=\left(\begin{smallmatrix}a&b\\b&-a\end{smallmatrix}\right)\),
+so \(N^2=(a^2+b^2)\cdot1\) with \(a^2+b^2>0\). From \(c_*^2=1\) we get
+\(M^2\otimes N^2=1\), so \(M^2=\mu\cdot1\) with
+\(\mu=(a^2+b^2)^{-1}>0\). If \(M\) is not a scalar, its minimal
+polynomial is \(X^2-\mu\), its eigenvalues are \(\pm\sqrt\mu\), and
+\(\det M=-\mu<0\).
+
+On the other hand, the action of \(c\) on \(D\) is \(\Ad(R_c)\) with
+\([R_c]\in\Gamma\), so \(M\) is a real multiple of \(R_c\), and
+\(\det M\) has the sign of \(\det R_c\); this sign is well defined on
+\(\PGL_2(\mathbb R)\). Every element of \(\Gamma\) is \([R^k]\) with
+\(\det R^k=3^{-k}>0\). Hence \(M\) is a scalar, \(c\) acts trivially on
+\(D\), and \(c\in G_L\). Thus \(L\subset\mathbb R\), and since \(L/\Q\)
+is Galois, \(L\) is totally real. In particular \(K\) is a real
+quadratic field.
+
+\subsection{An isogenous surface with an action of \texorpdfstring{\(\Z[\zeta_6]\)}{Z[zeta6]}}\label{sec:normalization}
+
+We have \(\End^0_{\Q}(A)=D^\Gamma=\Q[R]\simeq\Q(\sqrt{-3})\), the
+centralizer of \(R\). Put \(u=3R-1\). Then
+\[
+ u^2-u+1=0,\qquad R=\frac{1+u}3,\qquad R^2=\frac u3,
+\]
+so \(u\) is a primitive sixth root of unity. Put \(\mathcal O=\Z[u]\).
+Choose \(m\geq1\) with \(mu\in\End_{\Q}(A)\), let
+\(\iota:A\to A\times A\) be \(a\mapsto(ma,(mu)(a))\), and put
+\(A'=\iota(A)\). It is \(\Q\)-isogenous to \(A\), since
+\(\ker\iota\subseteq A[m]\). The endomorphism \(U(x,y)=(y,y-x)\) of
+\(A\times A\) is defined over \(\Q\) and satisfies \(U^2-U+1=0\). It
+preserves \(A'\): given \(a\), choose \(a''\) with \(ma''=a\); since
+\((mu)^2=m(mu)-m^2\) in \(\End(A)\),
+\[
+ U(\iota(a))=\bigl((mu)(a),\,(mu)(a)-ma\bigr)=\iota\bigl((mu)(a'')\bigr).
+\]
+So \(\mathcal O\subseteq\End_{\Q}(A')\), with \(u\) acting as \(U\). The
+isogeny \(A\to A'\) identifies \(D\) with \(\End^0(A'_{\overline{\Q}})\),
+compatibly with the Galois action and with \(u\mapsto U\); we use the
+same letters on \(A'\). By lattice independence,
+\(A'[3]^{\mathrm{ss}}\simeq A[3]^{\mathrm{ss}}\).
+
+\subsection{The twist}\label{sec:twist}
+
+For \(g\in G_{\Q}\), write \(g|_L=r^{k(g)}\) with \(k(g)\in\Z/6\Z\), and
+put \(\xi(g)=u^{-2k(g)}\). Then
+\(\xi:G_{\Q}\to\mu_3=\langle u^2\rangle\subset\Aut_{\Q}(A')\) is a
+homomorphism. Since its values are defined over \(\Q\), it is a
+cocycle, and Galois descent gives an abelian surface \(B/\Q\) and an
+isomorphism \(f:A'_{\overline{\Q}}\to B_{\overline{\Q}}\) with
+\({}^gf=f\circ\xi(g)\) for all \(g\in G_{\Q}\). Transporting
+endomorphisms by \(f\), the Galois action on \(D\) becomes
+\[
+ \varphi\longmapsto\Ad\bigl(\xi(g)R^{k(g)}\bigr)\varphi
+ =\Ad\bigl(S^{k(g)}\bigr)\varphi,\qquad
+ S=u^{-2}R,\quad S^2=u^{-4}\cdot\frac u3=-\frac13 .
+\]
+Put \(T=3S=u^{-2}(1+u)\in\mathcal O\), so that \(T^2=-3\). We deduce:
+\begin{itemize}
+\item \(\mathcal O\) commutes with \(\xi\), so
+\(f\mathcal Of^{-1}\subseteq\End_{\Q}(B)\); we write \(u\) and \(T\)
+for the corresponding endomorphisms of \(B\);
+\item \(B_{\overline{\Q}}\simeq A'_{\overline{\Q}}\) is isogenous to the
+square of an elliptic curve without CM;
+\item since \(\Ad(S^2)=1\), all geometric endomorphisms of \(B\) are
+defined over \(K\), and \({}^\tau\varphi=T\varphi T^{-1}\) for
+\(\tau\in G_{\Q}\setminus G_K\);
+\item for \(x\in A'(\overline{\Q})\),
+\(g(f(x))=f\bigl(\xi(g)\,g(x)\bigr)\).
+\end{itemize}
+
+\subsection{A cyclic \texorpdfstring{\(3\)}{3}-isogeny}\label{sec:isogeny}
+
+Choose a rank-one idempotent \(e\in D\) and \(n\geq1\) with
+\(ne\in\End(B_K)\), and let \(E_0=ne(B)\), an elliptic curve over \(K\).
+Let \(\tau\in G_{\Q}\setminus G_K\). Since
+\(3\,{}^\tau(ne)=-T(ne)T\), we get \(\tau(E_0)=T(E_0)\). Moreover
+\(T(E_0)\neq E_0\): otherwise \(T|_{E_0}\) would be an endomorphism of
+\(E_0\) with square \(-3\), and \(E_0\) would have CM. As \(T\) is
+defined over \(\Q\), the restrictions \(T|_{E_0}:E_0\to\tau E_0\) and
+\(T|_{\tau E_0}:\tau E_0\to E_0\) are \(K\)-isogenies conjugate under
+\(\tau\), hence of the same degree \(d\), and their composite is
+\([-3]\) on \(E_0\). So \(d^2=9\), and \(T|_{E_0}\) is a cyclic
+\(K\)-isogeny of degree \(3\).
+
+\subsection{Conclusion}
+
+\begin{lemma}\label{lem:sextic}
+If \(\Gamma\simeq C_6\), then \(A[3]^{\mathrm{ss}}\) has no trivial
+composition factor. In particular \(A(\Q)[3]=0\).
+\end{lemma}
+
+\begin{proof}
+Suppose \(A[3]^{\mathrm{ss}}\) has a trivial composition factor.
+\begin{enumerate}
+\item \emph{Reduction to \(A'[T]\).} Since \(T^2=-3\), multiplication by
+\(T\) maps \(A'[3]\) into \(A'[T]=\ker T\), with kernel \(A'[T]\). As
+\(\#A'[3]=81\) and \(\#A'[T]=\deg T=9\), the map is onto, and it is
+\(G_{\Q}\)-equivariant because \(T\) is defined over \(\Q\). Hence
+\(A'[3]^{\mathrm{ss}}\simeq(A'[T]^{\mathrm{ss}})^{2}\), and
+\(A'[T]^{\mathrm{ss}}\) has a trivial composition factor.
+\item \emph{Passage to \(B[T]\).} In \(\mathcal O\), the elements \(T\)
+and \(\zeta_3-1=u^2-1\) generate the same prime ideal above \(3\). So
+\(\mu_3\) acts trivially on \(A'[T]\), and by the last item of
+Section~\ref{sec:twist}, \(f:A'[T]\to B[T]\) is \(G_{\Q}\)-equivariant.
+Hence \(B[T]^{\mathrm{ss}}\) has a trivial composition factor.
+\item \emph{Two lines in \(B[T]\).} The group \(B[T]\) is a
+two-dimensional \(\F_3\)-vector space. Put
+\(G=\ker(T|_{E_0})\subset B[T]\), a \(G_K\)-stable line with character
+\(\alpha\). Then \(\tau(G)=\ker(T|_{\tau E_0})\), on which \(G_K\) acts
+by \(\alpha^\tau(g)=\alpha(\tau^{-1}g\tau)\). Also
+\(\ker(T|_{\tau E_0})=T(E_0[3])\), since \(T(E_0[3])\) is killed by
+\(T^2=-3\) and both groups have order \(3\). As \(G_K\)-modules,
+\(T(E_0[3])\simeq E_0[3]/G\), and the Weil pairing gives
+\(E_0[3]/G\simeq\Hom(G,\mu_3)\). Hence
+\[
+ \alpha^\tau=\alpha^{-1}\,\overline\chi_3|_{G_K}.
+\]
+\item \emph{If \(\tau G=G\),} then \(\alpha^\tau=\alpha\), so
+\(\overline\chi_3|_{G_K}=\alpha^2=1\), because \(\alpha\) takes values
+in \(\F_3^\times=\{\pm1\}\).
+\item \emph{If \(\tau G\neq G\),} then \(B[T]=G\oplus\tau G\) as
+\(G_K\)-modules, with characters \(\alpha\) and \(\alpha^\tau\). The
+trivial composition factor forces one of them to be trivial, and then
+both are. So \(\overline\chi_3|_{G_K}=1\).
+\end{enumerate}
+In both cases \(\zeta_3\in K\), that is, \(K=\Q(\sqrt{-3})\). This
+contradicts Section~\ref{sec:real}.
+\end{proof}
+
+\section{The cyclic cubic case: the curve 162b1}\label{sec:cubic}
+
+By Proposition~\ref{prop:cyclic} and Sections~\ref{sec:quadratic}
+and~\ref{sec:sextic}, it remains to treat
+\(\Gamma=\langle r\rangle\simeq C_3\), with \(L\) a cyclic cubic field.
+
+\subsection{The field \texorpdfstring{\(L\)}{L} and the isogeny class}\label{sec:field}
+
+By Corollary~\ref{cor:21}, there is an elliptic curve \(E''\) over \(L\)
+and a point \(P''\in E''(L)\) of order \(21\), where \(E''\) is
+\(L\)-isogenous to every elliptic curve in \(A_L\). The pair
+\((E'',P'')\) defines a point \(x\in Y_1(21)(L)\), and \(Y_1(21)\) is a
+fine moduli space because \(21\geq4\). By Mazur's theorem, \(x\) is not
+rational, so its field of definition is \(L\) and \(x\) is a geometric
+point of a closed point of degree \(3\) on \(X_1(21)\).
+
+Let \(E_{162}\) denote the curve 162b1. Over \(\Q(\zeta_9)^+\) its
+torsion subgroup is \(\Z/21\Z\) (Section~\ref{sec:computations}), so it
+has exactly \(12\) points of order \(21\), forming six classes
+\(\{\pm Q\}\). Since \(\Aut(E_{162})=\{\pm1\}\), these give six distinct
+points of \(Y_1(21)\), each defined over \(\Q(\zeta_9)^+\) and not over
+\(\Q\). They form two closed points of degree \(3\), which by
+\cite[Section 6.2]{DEvHMZB} are \(D_0\) and \(D_0'\), and they are all
+the geometric points of \(D_0\) and \(D_0'\). Hence \(x\) is one of
+them. Therefore \(L=\Q(\zeta_9)^+\), and
+\((E'',P'')\simeq(E_{162},\pm Q)\) over \(L\) for some \(Q\). In
+particular, every elliptic curve in \(A_L\) is \(L\)-isogenous to
+\(E_{162}\).
+
+\subsection{Untwisting}\label{sec:untwisting}
+
+Now \(R^2-R+1=0\), so \(u:=R\) is a primitive sixth root of unity in
+\(\End^0_{\Q}(A)=D^\Gamma=\Q[R]\), and we put \(\mathcal O=\Z[u]\) and
+\(F=\Q(u)\simeq\Q(\sqrt{-3})\). As in Section~\ref{sec:normalization},
+we replace \(A\) by a \(\Q\)-isogenous surface \(A'\) with
+\(\mathcal O\subseteq\End_{\Q}(A')\). For \(g\in G_{\Q}\), write
+\(g|_L=r^{k(g)}\) with \(k(g)\in\Z/3\Z\), and put \(\xi(g)=u^{2k(g)}\).
+This is a homomorphism \(G_{\Q}\to\mu_3\subset\Aut_{\Q}(A')\) with
+kernel \(G_L\). As in Section~\ref{sec:twist}, it gives a twist \(B/\Q\)
+and \(f:A'_{\overline{\Q}}\to B_{\overline{\Q}}\) with
+\({}^gf=f\circ\xi(g)\). The Galois action on \(D\) becomes
+\[
+ \Ad\bigl(\xi(g)R^{k(g)}\bigr)=\Ad\bigl(u^{3k(g)}\bigr)=\Ad(\pm1)=\mathrm{id}.
+\]
+So every geometric endomorphism of \(B\) is defined over \(\Q\), and
+\(\End^0_{\Q}(B)\simeq M_2(\Q)\). Let \(e\in\End^0_{\Q}(B)\) be a
+rank-one idempotent and \(E_1\) the image of an integral multiple of
+\(e\), an elliptic curve over \(\Q\). By Lemma~\ref{lem:subvarieties}
+applied to \(B\), whose endomorphism field is \(\Q\), the surface \(B\)
+is \(\Q\)-isogenous to \(E_1^2\).
+
+We claim that \(E_1\) is \(\Q\)-isogenous to \(E_{162}\). Since
+\(\xi|_{G_L}=1\), the isomorphism \(f\) is defined over \(L\), so
+\(B_L\simeq A'_L\), and the \(\Q\)-isogeny \(A'\to A\) maps
+\(f^{-1}(E_1)\) onto an elliptic curve in \(A_L\). Hence \(E_1\) is
+\(L\)-isogenous to an elliptic curve in \(A_L\), and by
+Section~\ref{sec:field} to \(E_{162}\). The group
+\(\Hom_{\overline{\Q}}(E_1,E_{162})\) is free of rank one over \(\Z\),
+because \(E_1\) has no CM. The group \(G_{\Q}\) acts on it through a
+character \(\varepsilon:G_{\Q}\to\Aut(\Z)=\{\pm1\}\). This character is
+trivial on \(G_L\), because there is a nonzero homomorphism defined over
+\(L\). So \(\varepsilon\) factors through \(\Gal(L/\Q)\simeq C_3\), and
+is therefore trivial. Hence every geometric homomorphism
+\(E_1\to E_{162}\) is defined over \(\Q\), which proves the claim. In
+particular \(a_p(E_1)=a_p(E_{162})\) for every prime \(p\nmid6\).
+
+\subsection{Frobenius at \texorpdfstring{\(5\)}{5}}\label{sec:frobenius}
+
+Since \(\End^0_{\Q}(B)\simeq M_2(\Q)\) commutes with \(G_{\Q}\), the
+module \(V_\ell(B)\) is \(\Q_\ell^2\otimes eV_\ell(B)\), with
+\(M_2(\Q)\) acting on the first factor, and
+\(eV_\ell(B)\simeq V_\ell(E_1)\) as \(G_{\Q}\)-modules. The subfield
+\(F\subset M_2(\Q)\) makes \(\Q^2\) a one-dimensional \(F\)-vector
+space. Hence
+\[
+ V_\ell(B)\simeq(F\otimes\Q_\ell)\otimes_{\Q_\ell}V_\ell(E_1),
+\]
+with \(F\) acting on the first factor and \(G_{\Q}\) on the second. By
+the last relation of Section~\ref{sec:twist}, transporting through \(f\),
+an element \(g\in G_{\Q}\) acts on \(V_\ell(A')\) as
+\(\xi(g)^{-1}\otimes\rho_{E_1}(g)\). Also \(V_\ell(A)\simeq V_\ell(A')\).
+
+The field \(L=\Q(\zeta_9)^+\) is unramified at \(5\), so \(\xi\) is
+unramified at \(5\), and so is \(V_\ell(E_1)\) for \(\ell\neq5\), since
+\(E_1\) is \(\Q\)-isogenous to \(E_{162}\), which has conductor \(162\).
+By (a), \(A\) has good reduction at \(5\). The prime \(5\) is inert in
+\(L\) (equivalently, \(5\not\equiv\pm1\pmod9\)), so
+\(\mathrm{Frob}_5\) generates \(\Gal(L/\Q)\), and
+\(\zeta=\xi(\mathrm{Frob}_5)^{-1}\) is a primitive cube root of unity in
+\(F\). Over \(\overline{\Q}_\ell\), the eigenvalues of
+\(\mathrm{Frob}_5\) on \(V_\ell(A)\) are
+\(\omega\beta_1,\omega\beta_2,\omega^{-1}\beta_1,\omega^{-1}\beta_2\),
+where \(\omega\) is the image of \(\zeta\) under an embedding
+\(F\to\overline{\Q}_\ell\) and \(\beta_1,\beta_2\) are the roots of
+\(X^2-a_5X+5\). With \(a_5=a_5(E_{162})=0\), the characteristic
+polynomial of \(\mathrm{Frob}_5\) is
+\[
+ P_5(X)=N_{F/\Q}\bigl(X^2-a_5\zeta X+5\zeta^2\bigr)
+ =(X^2+5\zeta^2)(X^2+5\zeta)=X^4-5X^2+25 .
+\]
+By (b), the reduction \(\widetilde A\) of \(A\) at \(5\) satisfies
+\[
+ \#\widetilde A(\F_5)=P_5(1)=21 .
+\]
+Since \(63\) is prime to \(5\), (b) embeds
+\(\langle P\rangle\simeq\Z/63\Z\) into \(\widetilde A(\F_5)\). But
+\(63\) does not divide \(21\). This contradiction completes the proof of
+Theorem~\ref{thm:main}.
+\hfill\(\square\)
+
+The value \(21\) depends only on the \(\Q\)-isogeny class, so no choice
+of lattice, polarization or isogenous model avoids it. The bound is
+attained: the census curve 21.b has torsion \(\Z/21\Z\), and its
+Frobenius polynomials agree with the formula above for all primes
+\(5\leq p<300\) (Section~\ref{sec:computations}).
+
+\section{Computations and a consistency check}\label{sec:computations}
+
+The script
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_63_arithmetic.m}{\texttt{qsimple\_63\_arithmetic.m}}
+checks, with an assertion for each claim, every numerical fact used
+above:
+\begin{enumerate}
+\item the residues modulo \(7\) of Section~\ref{sec:prime-7}:
+\(-3\equiv4\) and \(-\tfrac13\equiv2\) are squares, \(-1\equiv6\) is
+not, and \(X^2-X+4\) and \(X^2-a\), for \(a\) a nonsquare, are
+irreducible over \(\F_7\);
+\item that \(\#B(\F_2)\in\{1,\dots,16,19,20,25\}\) for every abelian
+surface \(B\) over \(\F_2\), by exhaustive enumeration of the
+\(2\)-Weil polynomials \(X^4+aX^3+bX^2+2aX+4\) (Section~\ref{sec:cm});
+\item the identities in \(\Q(\sqrt{-3})\) of Sections~\ref{sec:sextic}
+and~\ref{sec:cubic}, including \(S^2=-\tfrac13\), \(T^2=-3\), and the
+equality of the ideals \((T)\) and \((\zeta_3-1)\);
+\item that \(\Q[x]/(x^3-3x+1)\) is the cyclic cubic field
+\(\Q(\zeta_9)^+\), of discriminant \(81\), in which \(5\) is inert;
+\item that 162b1 has the model above, conductor \(162\), non-integral
+\(j\)-invariant \(-140625/8\) (hence no CM), and \(a_5=0\), and that its
+torsion subgroup over \(\Q(\zeta_9)^+\) is \(\Z/21\Z\), with \(12\)
+points of order \(21\), for instance \((1-2\alpha,2-2\alpha)\) where
+\(\alpha^3-3\alpha+1=0\);
+\item the polynomial \(P_5(X)=X^4-5X^2+25\) and the value \(P_5(1)=21\)
+of Section~\ref{sec:cubic}.
+\end{enumerate}
+
+The script
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_63_census_21b.m}{\texttt{qsimple\_63\_census\_21b.m}}
+is a consistency check and is not used in the proof. The census curve
+21.b,
+\[
+ y^2+(x^3+x+1)y=x^5+2x^4+2x^3+x^2
+\]
+(LMFDB 324.a.648.1) is listed in the class ``geometrically split, simple
+over \(\Q\)'' with torsion \(\Z/21\Z\). The script checks that, for
+every prime \(5\leq p<300\), the characteristic polynomial of Frobenius
+of its Jacobian equals \((X^2-a_pX+p)^2\) if \(p\equiv\pm1\pmod9\) and
+\(N_{F/\Q}(X^2-a_p\zeta X+p\zeta^2)\) otherwise, with
+\(a_p=a_p(E_{162})\), as predicted by Section~\ref{sec:cubic}. It also
+checks that \(\#J(\F_5)=21\) and
+\(J(\Q)_{\mathrm{tors}}\simeq\Z/21\Z\). So the argument stops exactly
+at \([21]\).
+
+Both scripts were run in Magma V2.30-1, and both logs end with
+\texttt{ALL\_CHECKS\_PASSED}. No step depends on the generalized Riemann
+hypothesis.
+
+\section{Consequence for the census}
+
+The group
+\href{https://genus-2-torsion.github.io/group.html?g=63}{\([63]\)} is
+impossible in the class ``geometrically split, simple over \(\Q\)''. The
+theorem places no restriction on the geometric splitting degree, the
+endomorphism field, the integral geometric endomorphism ring, or the
+polarization.
+
+Simplicity over \(\Q\) is essential: \([63]\) has an example in the class
+``split over \(\Q\)'' (the curve 63.a). Thus this exclusion does not
+imply \(\emptyset\) on the combined geometrically split side, and the
+combined geometrically split ``\(\infty\)?'' grade of \([63]\) is
+unchanged.
+
+\begin{thebibliography}{9}
+\bibitem{KM}
+M. A. Kenku and F. Momose,
+\emph{Torsion points on elliptic curves defined over quadratic fields},
+Nagoya Math. J. \textbf{109} (1988), 125--149, Theorem (0.1).
+\href{https://doi.org/10.1017/S0027763000002816}{doi:10.1017/S0027763000002816}.
+
+\bibitem{Mazur}
+B. Mazur,
+\emph{Modular curves and the Eisenstein ideal},
+Publ. Math. IH\'ES \textbf{47} (1977), 33--186, Theorem (7\('\)).
+\href{https://www.numdam.org/item/PMIHES_1977__47__33_0/}{Numdam}.
+
+\bibitem{DEvHMZB}
+M. Derickx, A. Etropolski, M. van Hoeij, J. S. Morrow and
+D. Zureick-Brown,
+\emph{Sporadic cubic torsion},
+Algebra \& Number Theory \textbf{15} (2021), 1837--1864, Theorem A and
+Section 6.2 (numbering of arXiv version 2).
+\href{https://doi.org/10.2140/ant.2021.15.1837}{doi:10.2140/ant.2021.15.1837};
+\href{https://arxiv.org/abs/2007.13929}{arXiv:2007.13929}.
+
+\bibitem{ST}
+J.-P. Serre and J. Tate,
+\emph{Good reduction of abelian varieties},
+Ann. of Math. (2) \textbf{88} (1968), 492--517, Theorem 1 and its
+Corollary 2, Lemma 2, and \S2 (p.~496 and p.~498).
+\href{https://doi.org/10.2307/1970722}{doi:10.2307/1970722}.
+
+\bibitem{Clark}
+P. L. Clark,
+\emph{Bounds for torsion on abelian varieties with integral moduli},
+arXiv:math/0407264v2 (2004), Theorem 5.
+\href{https://arxiv.org/pdf/math/0407264}{arXiv:math/0407264}.
+The same list is Theorem~1.4 of P. L. Clark and X. Xarles, \emph{Local bounds for torsion points on abelian varieties}, Canad. J. Math. \textbf{60} (2008), 532--555, \href{https://doi.org/10.4153/CJM-2008-026-x}{doi:10.4153/CJM-2008-026-x}, for abelian surfaces with everywhere anisotropic reduction, which includes potentially good reduction.
+\end{thebibliography}
+
+\end{document}

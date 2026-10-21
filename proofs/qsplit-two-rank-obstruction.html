@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2-rank obstruction for splitting over ℚ — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A consequence of Mazur's theorem: on an abelian surface split over Q, a rational point of order 7 forces rational 2-rank at most 2, and full rational 2-torsion excludes points of order 5 and 7. This excludes [2,2,14] and [2,2,2,10] in the split-over-Q class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    @media print {
+      header.site, footer.site, .page-nav { display: none; }
+      main.proof { max-width: none; padding: 0; }
+    }
+  </style>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=2.2.14">[2,2,14]</a><span class="sep">›</span><a href="../group.html?g=2.2.2.10">[2,2,2,10]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>The 2-rank of abelian surfaces split over ℚ</h2>
+  <p class="src">21 October 2026 · A consequence of Mazur's theorem</p>
+  <p>We show that the groups <a href="../group.html?g=2.2.14">[2,2,14]</a> and
+    <a href="../group.html?g=2.2.2.10">[2,2,2,10]</a> do not occur in the rational torsion of an abelian surface
+    split over <span class="m">ℚ</span>. Here “split over <span class="m">ℚ</span>” means isogenous over
+    <span class="m">ℚ</span> to a product of elliptic curves over <span class="m">ℚ</span>. The degree of the isogeny
+    is arbitrary, and no polarization is used. For a finite abelian group <span class="m">M</span> and a prime
+    <span class="m">p</span>, write <span class="m">r<sub>p</sub>(M) = dim<sub>𝔽<sub>p</sub></sub> M[p]</span>.</p>
+
+  <section id="proof">
+    <div class="panel">
+      <h3>Proposition</h3>
+      <p>Let <span class="m">A/ℚ</span> be an abelian surface split over <span class="m">ℚ</span>, and put
+        <span class="m">T = A(ℚ)<sub>tors</sub></span>.</p>
+      <ol>
+        <li>If <span class="m">T</span> has a point of order <span class="m">7</span>, then
+          <span class="m">r<sub>2</sub>(T) ≤ 2</span>.</li>
+        <li>If <span class="m">r<sub>2</sub>(T) = 4</span>, then <span class="m">T</span> has no point of order
+          <span class="m">5</span> or <span class="m">7</span>.</li>
+      </ol>
+      <p>In particular, <span class="m">T</span> contains no subgroup isomorphic to
+        <span class="m">[2,2,14] ≅ (ℤ/2)<sup>3</sup> × ℤ/7</span> or to
+        <span class="m">[2,2,2,10] ≅ (ℤ/2)<sup>4</sup> × ℤ/5</span>.</p>
+    </div>
+    <p><b>Proof.</b> Choose an isogeny <span class="m">E × E′ → A</span> defined over <span class="m">ℚ</span>,
+      with <span class="m">E</span> and <span class="m">E′</span> elliptic curves over <span class="m">ℚ</span>.
+      The image of <span class="m">E × {0}</span> is an elliptic subvariety <span class="m">E₁ ⊂ A</span>
+      defined over <span class="m">ℚ</span>, and the quotient <span class="m">E₂ = A/E₁</span> is an elliptic curve
+      over <span class="m">ℚ</span>. The exact sequence <span class="m">0 → E₁ → A → E₂ → 0</span> of abelian
+      varieties over <span class="m">ℚ</span> gives, for every integer <span class="m">m ≥ 1</span>, an exact sequence</p>
+    <p class="equation m">0 → E₁(ℚ)[m] → A(ℚ)[m] → E₂(ℚ)[m].</p>
+    <p>Taking <span class="m">m = p</span> prime, we obtain two consequences:</p>
+    <ol type="a">
+      <li><span class="m">r<sub>p</sub>(T) ≤ r<sub>p</sub>(E₁(ℚ)<sub>tors</sub>) + r<sub>p</sub>(E₂(ℚ)<sub>tors</sub>)</span>;</li>
+      <li>if <span class="m">T</span> has a point of order <span class="m">p</span>, then <span class="m">E₁(ℚ)</span>
+        or <span class="m">E₂(ℚ)</span> has one. Indeed, if <span class="m">E₁(ℚ)[p] = 0</span>, the sequence embeds
+        <span class="m">A(ℚ)[p]</span> into <span class="m">E₂(ℚ)[p]</span>.</li>
+    </ol>
+    <p>By <a href="#mazur">Mazur's theorem</a>, the torsion subgroup of an elliptic curve over <span class="m">ℚ</span>
+      is <span class="m">ℤ/n</span> with <span class="m">1 ≤ n ≤ 10</span> or <span class="m">n = 12</span>, or
+      <span class="m">ℤ/2 × ℤ/2m</span> with <span class="m">1 ≤ m ≤ 4</span>. We use three consequences.
+      First, its 2-rank is at most <span class="m">2</span>. Second, the only group in the list with a point of order
+      <span class="m">7</span> is <span class="m">ℤ/7</span>, which has 2-rank <span class="m">0</span>. Third, the groups
+      of 2-rank <span class="m">2</span> are <span class="m">ℤ/2 × ℤ/2m</span> with <span class="m">m ≤ 4</span>, of
+      orders <span class="m">4, 8, 12, 16</span>, so none of them has a point of order <span class="m">5</span>
+      or <span class="m">7</span>.</p>
+    <p>(1) By (b), one of the curves, say <span class="m">E<sub>i</sub></span>, has a rational point of order
+      <span class="m">7</span>. Its torsion is then <span class="m">ℤ/7</span>, so
+      <span class="m">r<sub>2</sub>(E<sub>i</sub>(ℚ)<sub>tors</sub>) = 0</span>. The other curve has 2-rank at most
+      <span class="m">2</span>. By (a), <span class="m">r<sub>2</sub>(T) ≤ 0 + 2 = 2</span>.</p>
+    <p>(2) If <span class="m">r<sub>2</sub>(T) = 4</span>, then (a) forces
+      <span class="m">r<sub>2</sub>(E₁(ℚ)<sub>tors</sub>) = r<sub>2</sub>(E₂(ℚ)<sub>tors</sub>) = 2</span>.
+      Neither curve then has a rational point of order <span class="m">5</span> or <span class="m">7</span>,
+      so by (b) neither does <span class="m">T</span>. ∎</p>
+    <p>The same argument bounds the odd part of <span class="m">T</span> when <span class="m">r<sub>2</sub>(T) = 4</span>.
+      Its order divides <span class="m">9</span>, because both curves then have odd torsion of order
+      <span class="m">1</span> or <span class="m">3</span>. Among the census groups this excludes nothing beyond
+      [2,2,2,10].</p>
+  </section>
+
+  <section id="census">
+    <h3>Consequences for the census</h3>
+    <p>The group <a href="../group.html?g=2.2.14">[2,2,14]</a> has 2-rank <span class="m">3</span> and a point of order
+      <span class="m">7</span>. The group <a href="../group.html?g=2.2.2.10">[2,2,2,10]</a> has 2-rank <span class="m">4</span>
+      and a point of order <span class="m">5</span>. Neither can be the rational torsion subgroup of a genus-2 Jacobian
+      split over <span class="m">ℚ</span>, for any splitting degree. The corresponding cells in the census are labelled
+      <b>impossible</b>. No other census group meets the hypotheses of the proposition.</p>
+    <p>The hypothesis that the splitting is defined over <span class="m">ℚ</span> is essential. A Jacobian that is
+      geometrically split but simple over <span class="m">ℚ</span> need not contain an elliptic curve over
+      <span class="m">ℚ</span>, and the argument says nothing about that class or about geometrically simple Jacobians.
+      Both groups have geometrically simple examples in the census.</p>
+  </section>
+
+  <section id="reference">
+    <h3>Reference</h3>
+    <p id="mazur">B. Mazur, <a href="https://www.numdam.org/item/PMIHES_1977__47__33_0/"><i>Modular curves and the Eisenstein ideal</i></a>,
+      Publications Mathématiques de l'IHÉS <b>47</b> (1977), 33–186, Theorem (8).
+      Mazur's classification gives <span class="m">E(ℚ)<sub>tors</sub> ≅ ℤ/nℤ</span> for
+      <span class="m">1 ≤ n ≤ 10</span> or <span class="m">n = 12</span>, or
+      <span class="m">ℤ/2ℤ × ℤ/2mℤ</span> for <span class="m">1 ≤ m ≤ 4</span>.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsplit-two-rank-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

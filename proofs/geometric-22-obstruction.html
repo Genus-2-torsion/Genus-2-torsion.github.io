@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No points of order 22 on geometrically split surfaces — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that a geometrically split abelian surface over Q has no rational point of order 22, excluding [22] and [2,22] from the geometrically split classes of the genus-2 torsion census.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          R: '\\mathbb{R}', Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Aut: '\\operatorname{Aut}', Lie: '\\operatorname{Lie}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=22">[22]</a>, <a href="../group.html?g=2.22">[2,22]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>No rational points of order \(22\) on geometrically split abelian surfaces</h2>
+  <p class="src">21 October 2026 · Geometric splitting obstruction</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be a geometrically split abelian surface. Then \(A(\Q)\) contains
+      no point of order \(22\).</p>
+    <p>More precisely, if \(A(\Q)[11]\neq0\), then \(A\) is simple over \(\Q\), and \(A_{\overline{\Q}}\) is
+      isogenous to \(E_1\times E_2\) for elliptic curves \(E_1,E_2\) that are not isogenous over \(\overline{\Q}\).</p>
+    <p>In particular, neither <a href="../group.html?g=22">[22]</a> nor <a href="../group.html?g=2.22">[2,22]</a>
+      occurs as the rational torsion subgroup of a geometrically split genus-\(2\) Jacobian over \(\Q\).</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\overline{\Q}}\) is isogenous to a product of elliptic curves.
+    We impose no restriction on the degree of this isogeny, on the integral endomorphism ring, or on the field
+    of definition of the endomorphisms. The theorem does not require a principal polarization, and its proof
+    uses no computer calculation.</p>
+  <p>Throughout, \(G_K=\Gal(\overline{\Q}/K)\) for a number field \(K\subset\overline{\Q}\). For a prime \(p\),
+    we write \(T=T_p(A)\) and \(V=V_p(A)=T\otimes_{\Z_p}\Q_p\), and \(\chi_p:G_{\Q}\to\F_p^\times\) for the
+    mod-\(p\) cyclotomic character.</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/geometric_22_obstruction.tex">Complete proof (LaTeX source)</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#inputs">Inputs</a></li>
+      <li><a href="#coprime-torsion">Coprime torsion in an elliptic isogeny class</a></li>
+      <li><a href="#subvarieties">Elliptic subvarieties and the endomorphism field</a></li>
+      <li><a href="#endomorphism-field">The endomorphism field of a non-CM square</a></li>
+      <li><a href="#tensor-lemma">A residual tensor lemma</a></li>
+      <li><a href="#rotations">Rotations of order 3, 4, and 6</a></li>
+      <li><a href="#klein-four">The Klein four group</a></li>
+      <li><a href="#small-field">Endomorphism field of degree at most 2</a></li>
+      <li><a href="#cm-square">The CM square</a></li>
+      <li><a href="#completion">Completion of the proof</a></li>
+      <li><a href="#census">Consequence for the census</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="inputs">
+    <h3>1. Inputs</h3>
+    <p>We use the following results on elliptic curves.</p>
+    <ol type="a">
+      <li>
+        <p><a href="#mazur">Mazur, Theorem (8)</a>. The torsion subgroup of \(E(\Q)\), for an elliptic curve
+          \(E/\Q\), is \(\Z/m\) with \(m\leq10\) or \(m=12\), or \(\Z/2\times\Z/2\nu\) with \(\nu\leq4\).
+          In particular, no elliptic curve over \(\Q\) has a rational point of order \(11\).</p>
+      </li>
+      <li>
+        <p><a href="#km">Kenku–Momose, Theorem (0.1)</a>. Let \(N\) be a product of powers of
+          \(2,3,5,7,11,13\), and let \(m\mid N\). If \(X_1(m,N)\) has positive genus and</p>
+        <div class="equation">\[
+          \begin{aligned}(m,N)\notin\{&amp;(1,11),(1,13),(1,14),(1,15),\\
+          &amp;(1,16),(1,18),(2,10),(2,12)\},\end{aligned}
+        \]</div>
+        <p>then \(Y_1(m,N)(k)=\emptyset\) for every quadratic field \(k\). We apply this with \((m,N)=(1,22)\).
+          The curve \(X_1(22)\) has genus \(1+180/12-20/2=6\): the group \(\pm\Gamma_1(22)\) has index \(180\)
+          in \(\mathrm{SL}_2(\Z)\), and \(X_1(22)\) has \(20\) cusps and no elliptic points. Hence <em>no
+          elliptic curve over a quadratic field has a rational point of order \(22\)</em>. This agrees with the
+          complete list of torsion groups over quadratic fields, as restated in
+          <a href="#lfn">Le Fourn–Najman, Theorem 2.1</a>.</p>
+      </li>
+      <li>
+        <p><a href="#lfn">Le Fourn–Najman, Theorem 1.1</a>. A \(\Q\)-curve is an elliptic curve over a number
+          field that is isogenous over \(\overline{\Q}\) to all of its \(\Gal(\overline{\Q}/\Q)\)-conjugates;
+          curves with complex multiplication are allowed. If \(E\) is a \(\Q\)-curve over a quadratic field
+          \(K\), then \(E(K)\) has no point of order \(11\). Indeed, no group in the list of their
+          Theorem 1.1 has an element of order \(11\). The key case is
+          <a href="#lfn">Le Fourn–Najman, Proposition 3.2</a>, which excludes the torsion group \(\Z/11\);
+          by <a href="#lfn">Le Fourn–Najman, Theorem 2.1</a>, it is the only torsion group over a quadratic
+          field that contains a point of order \(11\).</p>
+      </li>
+      <li>
+        <p><a href="#bc">Bourdon–Clark, Theorem 4.1</a>. Let \(\mathcal O\) be an order of conductor \(f\) in
+          an imaginary quadratic field \(M\) (denoted \(K\) there), and put \(w=\#\mathcal O^\times\). Let
+          \(M(f)\) be the ring class field of conductor \(f\). It equals \(M(j(E))\) for every elliptic curve
+          \(E\) with complex multiplication by \(\mathcal O\). By part (a) of the theorem, there is a positive
+          integer \(T(\mathcal O,1,N)\) with the following property. For every \(d\geq1\), there exist a
+          number field \(F\supseteq M(f)\) with \([F:M(f)]=d\) and an \(\mathcal O\)-CM elliptic curve
+          \(E/F\) with an \(F\)-rational point of order \(N\) if and only if \(T(\mathcal O,1,N)\mid d\).
+          Parts (d) and (e) compute this integer for a prime \(N=\ell\geq5\); we take \(a=0\) and \(b=1\) there.
+          Then \(T(\mathcal O,1,\ell)=\widetilde T/w\), where \(\widetilde T=\ell^2-1\) if \(\ell\nmid f\) and
+          \(\ell\) is inert in \(M\) (part (d)(i)). In each of the remaining cases (d)(ii)–(v),
+          \(\widetilde T=\ell-1\).</p>
+        <p>For \(\ell=11\), we have \(\widetilde T\in\{120,10\}\). If \(w\neq2\), then \(\mathcal O=\Z[i]\) or
+          \(\mathcal O=\Z[\zeta_3]\). Then \(f=1\), and \(11\) is inert in \(M\), because \(11\equiv3\pmod4\)
+          and \(11\equiv2\pmod3\). These two orders give \(T=120/4=30\) and \(T=120/6=20\). In all other cases
+          \(w=2\) and \(T\in\{60,5\}\). Every value is divisible by \(5\). Consequently: <em>if an elliptic
+          curve \(E\) with complex multiplication by an order in \(M\) is defined over a number field
+          \(F\supseteq M(j(E))\) and has an \(F\)-rational point of order \(11\), then
+          \(5\mid[F:M(j(E))]\).</em></p>
+      </li>
+    </ol>
+    <p>We also use two standard facts about \(p\)-adic representations.</p>
+    <ol type="a" start="5">
+      <li>
+        <p><strong>Lattice independence.</strong> Let \(T_1,T_2\) be stable \(\Z_p\)-lattices in a
+          finite-dimensional \(\Q_p\)-representation of a group. Then \(T_1/pT_1\) and \(T_2/pT_2\) have the
+          same composition factors. Indeed, the characteristic polynomial of each group element on
+          \(T_i/pT_i\) is the reduction of its characteristic polynomial on the rational representation, and the
+          Brauer–Nesbitt theorem applies. The statement also applies to isomorphic representations, after
+          transporting a lattice through the isomorphism.</p>
+      </li>
+      <li>
+        <p><strong>Determinant.</strong> Every abelian variety over \(\Q\) has a polarization defined over
+          \(\Q\). It induces a nondegenerate alternating \(G_{\Q}\)-equivariant pairing
+          \(V_p(A)\times V_p(A)\to\Q_p(1)\). Hence the determinant of \(G_{\Q}\) acting on \(V_p(A)\) is the
+          square of the \(p\)-adic cyclotomic character. Therefore, for every \(G_{\Q}\)-stable lattice
+          \(T'\subset V_p(A)\), the determinant of \(G_{\Q}\) on \(T'/pT'\) is \(\chi_p^2\). The kernel of
+          \(\chi_p^2\) is \(G_{\Q(\zeta_p+\zeta_p^{-1})}\). For \(p=11\), this field has degree \(5\) over
+          \(\Q\).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="coprime-torsion">
+    <h3>2. Coprime torsion in an elliptic isogeny class</h3>
+    <p><strong>Lemma 1.</strong> Let \(E_1,E_2\) be \(K\)-isogenous elliptic curves over a number field \(K\).
+      Suppose that \(E_1(K)\) contains a point of prime order \(r\), and \(E_2(K)\) contains a point of a
+      distinct prime order \(s\). Then their \(K\)-isogeny class contains an elliptic curve with a
+      \(K\)-rational point of order \(rs\).</p>
+    <p><em>Proof.</em> Choose a \(K\)-isogeny \(f:E_1\to E_2\). Let \(N_s\) be the \(s\)-primary subgroup scheme
+      of \(\ker(f)\), and factor \(f\) as</p>
+    <div class="equation">\[
+      E_1\xrightarrow{\ q\ }E'=E_1/N_s\xrightarrow{\ f'\ }E_2.
+    \]</div>
+    <p>The degree of \(q\) is a power of \(s\), so \(q\) maps the given point of order \(r\) to a point of order
+      \(r\) in \(E'(K)\). The degree of \(f'\) is prime to \(s\), so \(f'\) induces a Galois-equivariant
+      isomorphism \(E'[s]\simeq E_2[s]\). Thus \(E'(K)\) also contains a point of order \(s\). The sum of the
+      two points has order \(rs\). ∎</p>
+  </section>
+
+  <section id="subvarieties">
+    <h3>3. Elliptic subvarieties and the endomorphism field</h3>
+    <p>Let \(A/\Q\) be an abelian surface. Put \(D=\End^0(A_{\overline{\Q}})=\End(A_{\overline{\Q}})\otimes\Q\),
+      and let \(L\) be the smallest field over which all endomorphisms of \(A_{\overline{\Q}}\) are defined.
+      It is a finite Galois extension of \(\Q\). The group \(\Gamma=\Gal(L/\Q)\) acts faithfully on \(D\) by
+      \(\Q\)-algebra automorphisms, \(\varphi\mapsto\varphi^\sigma\). For \(\sigma\in G_{\Q}\),
+      \(\varphi\in\End(A_{\overline{\Q}})\), and \(x\in A(\overline{\Q})\), we have
+      \(\sigma(\varphi(x))=\varphi^\sigma(\sigma(x))\).</p>
+    <p><strong>Lemma 2.</strong> (a) Every abelian subvariety \(B\) of \(A_{\overline{\Q}}\) is the image of an
+      endomorphism \(\varepsilon\) of \(A_{\overline{\Q}}\) with \(\varepsilon|_B=[n]\) for some \(n\geq1\).
+      In particular, \(B\) is defined over \(L\). (b) If \(B_1,B_2\) are abelian subvarieties of
+      \(A_{\overline{\Q}}\), then every homomorphism \(B_1\to B_2\) over \(\overline{\Q}\) is defined over
+      \(L\).</p>
+    <p><em>Proof.</em> (a) By Poincaré's complete reducibility theorem, there is an abelian subvariety \(B'\)
+      with \(B+B'=A_{\overline{\Q}}\) and \(B\cap B'\) finite. The addition map
+      \(\mu:B\times B'\to A_{\overline{\Q}}\) is an isogeny. Choose an isogeny \(\nu\) in the other direction
+      and \(n\geq1\) with \(\mu\circ\nu=[n]\) and \(\nu\circ\mu=[n]\). Put
+      \(\varepsilon=\iota_B\circ\mathrm{pr}_1\circ\nu\), where \(\iota_B\) is the inclusion. For \(b\in B\) we
+      get \(\varepsilon(b)=\mathrm{pr}_1(\nu(\mu(b,0)))=nb\). Thus \(\varepsilon(A_{\overline{\Q}})=B\). Since
+      \(\varepsilon\) is defined over \(L\), every \(\sigma\in G_L\) satisfies
+      \(\sigma(B)=\varepsilon^\sigma(A_{\overline{\Q}})=B\). By Galois descent, \(B\) is defined over \(L\).</p>
+    <p>(b) Let \(\varepsilon_1\) be as in (a) for \(B_1\), and let \(\iota_2\) be the inclusion of \(B_2\). For
+      a homomorphism \(\varphi:B_1\to B_2\), the endomorphism \(\psi=\iota_2\circ\varphi\circ\varepsilon_1\) of
+      \(A_{\overline{\Q}}\) is fixed by \(G_L\). Since \(\iota_2\) and \(\varepsilon_1\) are defined over
+      \(L\), every \(\sigma\in G_L\) satisfies
+      \(\iota_2\circ\varphi^\sigma\circ\varepsilon_1=\psi^\sigma=\iota_2\circ\varphi\circ\varepsilon_1\). As
+      \(\varepsilon_1\) maps onto \(B_1\) and \(\iota_2\) is injective, \(\varphi^\sigma=\varphi\). ∎</p>
+    <p><strong>The case of an elliptic curve over \(\Q\).</strong> Suppose that \(P\in A(\Q)\) has order \(11\),
+      and that \(A\) contains an elliptic curve \(E\) defined over \(\Q\). Put \(F=A/E\), an elliptic curve
+      over \(\Q\). Either \(P\in E(\Q)\), or \(P\) maps to a point of order \(11\) in \(F(\Q)\). Both
+      possibilities contradict Mazur's theorem. Hence \(A(\Q)[11]\neq0\) implies that \(A\) is simple over
+      \(\Q\).</p>
+    <p><strong>Splitting types.</strong> Now let \(A\) be geometrically split, so that \(A_{\overline{\Q}}\) is
+      isogenous to \(E_1\times E_2\). Exactly one of the following holds.</p>
+    <ul>
+      <li>(N) \(E_1\) and \(E_2\) are not isogenous over \(\overline{\Q}\).</li>
+      <li>(S) \(E_1\) and \(E_2\) are isogenous to an elliptic curve \(E\) without complex multiplication.
+        Then \(D\simeq M_2(\Q)\).</li>
+      <li>(CM) \(E_1\) and \(E_2\) are isogenous to an elliptic curve \(E\) with complex multiplication by an
+        order in an imaginary quadratic field \(M\). Then \(D\simeq M_2(M)\), with centre \(M\).</li>
+    </ul>
+    <p>In cases (S) and (CM), every elliptic subvariety and every elliptic quotient of \(A_{\overline{\Q}}\) is
+      isogenous to \(E\): a nonzero homomorphism between such a curve and \(E^2\) gives a nonzero
+      homomorphism between that curve and \(E\). Sections <a href="#endomorphism-field">4</a>–<a
+      href="#small-field">8</a> show that \(A(\Q)[11]=0\) in case (S), and
+      Section <a href="#cm-square">9</a> shows the same in case (CM). Section <a href="#completion">10</a>
+      treats case (N).</p>
+  </section>
+
+  <section id="endomorphism-field">
+    <h3>4. The endomorphism field of a non-CM square</h3>
+    <p>Assume case (S) and fix an isomorphism \(D\simeq M_2(\Q)\). By the Skolem–Noether theorem, each
+      \(\gamma\in\Gamma\) acts on \(D\) as conjugation by a matrix \(S_\gamma\in\GL_2(\Q)\), unique up to
+      \(\Q^\times\). Since the action is faithful, \(\gamma\mapsto[S_\gamma]\) embeds \(\Gamma\) into
+      \(\PGL_2(\Q)\).</p>
+    <p><strong>Lemma 3.</strong> The group \(\Gamma\) is cyclic of order \(1,2,3,4\), or \(6\), or dihedral of
+      order \(4,6,8\), or \(12\). We write these groups as</p>
+    <div class="equation">\[
+      C_1,\ C_2,\ C_3,\ C_4,\ C_6,\qquad D_4,\ D_6,\ D_8,\ D_{12},
+    \]</div>
+    <p>where the subscript denotes the group order. The group \(D_4\) is the Klein four group.</p>
+    <p><em>Proof.</em> A finite subgroup of \(\PGL_2(\R)\) fixes a point of the hyperbolic plane, and its action
+      on the tangent plane at that point embeds it in \(O(2)\). Hence it is cyclic or dihedral.</p>
+    <p>Let \([S]\in\PGL_2(\Q)\) have finite order \(n&gt;2\). If \(S\) had a repeated eigenvalue \(\lambda\),
+      then \(S=\lambda(I+N)\) with \(N\) nilpotent and nonzero, and \(S^n=\lambda^n(I+nN)\) would not be scalar.
+      Hence \(S\) has distinct eigenvalues \(\lambda_1,\lambda_2\). The order of \([S]\) equals the order of
+      \(\zeta=\lambda_1/\lambda_2\), so \(\zeta\) is a primitive \(n\)-th root of unity, and</p>
+    <div class="equation">\[
+      \frac{(\operatorname{tr}S)^2}{\det S}=2+\zeta+\zeta^{-1}\in\Q.
+    \]</div>
+    <p>The number \(\zeta+\zeta^{-1}\) has degree \(\varphi(n)/2\) over \(\Q\), so \(\varphi(n)=2\) and
+      \(n\in\{3,4,6\}\). A cyclic group of order \(n\), and a dihedral group of order \(2n\), contain elements
+      of order \(n\). This gives the list. ∎</p>
+    <p>If \(\Gamma\in\{C_3,C_4,C_6,D_6,D_8,D_{12}\}\), let \(\langle\rho\rangle\) be its rotation subgroup, of
+      order \(n\in\{3,4,6\}\). For a cyclic group it is the whole group; for a dihedral group it is the cyclic
+      subgroup of index \(2\). Every element of \(\Gamma\) conjugates \(\rho\) to \(\rho\) or to
+      \(\rho^{-1}\).</p>
+    <p>From now on until the end of Section <a href="#small-field">8</a>, set \(p=11\), \(k=\Q_{11}\),
+      \(\mathcal O=\Z_{11}\), \(T=T_{11}(A)\), and \(V=V_{11}(A)\). The isomorphism \(D\simeq M_2(\Q)\) extends
+      to \(D\otimes_{\Q}k\simeq M_2(k)\), which acts on \(V\). For \(\sigma\in G_{\Q}\) with image
+      \(\gamma\in\Gamma\), \(x\in D\otimes_{\Q}k\), and \(v\in V\), we have</p>
+    <div class="equation">\[
+      \sigma(xv)=(S_\gamma xS_\gamma^{-1})\,\sigma(v). \tag{1}
+    \]</div>
+  </section>
+
+  <section id="tensor-lemma">
+    <h3>5. A residual tensor lemma</h3>
+    <p><strong>Lemma 4.</strong> Assume case (S), and suppose that \(A(\Q)\) contains a point \(P\) of order
+      \(11\). Suppose that there is an \(\mathcal O\)-lattice \(\Lambda\subset k^2\) with the following two
+      properties.</p>
+    <ol type="i">
+      <li>For every \(\gamma\in\Gamma\), we have \(S_\gamma\Lambda=\lambda\Lambda\) for some
+        \(\lambda\in k^\times\).</li>
+      <li>Some \(\gamma_0\in\Gamma\) has a representative \(S\in k^\times S_{\gamma_0}\) with
+        \(S\Lambda=\Lambda\) whose reduction \(\overline S\in\GL(\Lambda/11\Lambda)\) has no eigenvector.</li>
+    </ol>
+    <p>Then \(\Q(\zeta_{11}+\zeta_{11}^{-1})\subseteq L\). In particular, \(5\) divides \([L:\Q]\).</p>
+    <p><em>Proof.</em> Let \(\mathcal R=\End_{\mathcal O}(\Lambda)\simeq M_2(\mathcal O)\), a maximal order in
+      \(M_2(k)\). By (i), \(S_\gamma\mathcal RS_\gamma^{-1}=\End_{\mathcal O}(S_\gamma\Lambda)=\mathcal R\) for
+      every \(\gamma\). Put \(T'=\mathcal RT\). This is a finitely generated \(\mathcal O\)-submodule of \(V\)
+      containing \(T\), hence a full lattice, and it is \(G_{\Q}\)-stable by (1).</p>
+    <p>Let \(e_{ij}\) be the matrix units of \(\mathcal R\simeq M_2(\mathcal O)\) with respect to a basis of
+      \(\Lambda\), and put \(W_0=e_{11}T'\). Then \(T'=e_{11}T'\oplus e_{22}T'\), and
+      \(e_{21}:e_{11}T'\to e_{22}T'\) is an isomorphism with inverse \(e_{12}\). Hence
+      \(T'\simeq\Lambda\otimes_{\mathcal O}W_0\) as \(\mathcal R\)-modules, with \(W_0\) free of rank \(2\).
+      Reducing modulo \(11\), we obtain</p>
+    <div class="equation">\[
+      \overline V=T'/11T'\simeq U\otimes_{\F_{11}}\overline W_0,\qquad U=\Lambda/11\Lambda,
+    \]</div>
+    <p>where \(\mathcal R/11\mathcal R=\End(U)\) acts on the first factor.</p>
+    <p>By (i), each \(\sigma\in G_{\Q}\), with image \(\gamma\in\Gamma\), has a representative
+      \(S_\sigma\in k^\times S_\gamma\) with \(S_\sigma\Lambda=\Lambda\). It is unique up to
+      \(\mathcal O^\times\), so its reduction \(\overline S_\sigma\in\GL(U)\) is well defined up to
+      \(\F_{11}^\times\). By (1), \(\sigma(xv)=(\overline S_\sigma x\overline S_\sigma^{-1})\sigma(v)\) for
+      \(x\in\End(U)\) and \(v\in\overline V\).</p>
+    <p>The modules \(\overline V\) and \(A[11]=T/11T\) are reductions of two \(G_{\Q}\)-stable lattices in
+      \(V\). By lattice independence, they have the same composition factors. The point \(P\) spans a trivial
+      submodule of \(A[11]\), so \(\overline V\) has a trivial \(G_{\Q}\)-composition factor.</p>
+    <p>Consider the group</p>
+    <div class="equation">\[
+      \widetilde G=\{(\sigma,\beta)\in G_{\Q}\times\GL(U):\beta\in\F_{11}^\times\overline S_\sigma\},
+    \]</div>
+    <p>which acts on \(\overline V\) through \(\sigma\), and on \(U\) through \(\beta\). Its composition factors
+      on \(\overline V\) are the same as those of \(G_{\Q}\). For \((\sigma,\beta)\in\widetilde G\), the map
+      \((\beta^{-1}\otimes1)\circ\sigma\) on \(\overline V\) commutes with \(\End(U)\otimes1\). Hence it equals
+      \(1\otimes w(\sigma,\beta)\) for a unique \(w(\sigma,\beta)\in\GL(\overline W_0)\). Then \(\sigma\) acts
+      on \(\overline V\) as \(\beta\otimes w(\sigma,\beta)\), and \(w\) is a homomorphism. Writing \(W\) for
+      \(\overline W_0\) with this action, we get an isomorphism of \(\widetilde G\)-modules</p>
+    <div class="equation">\[
+      \overline V\simeq U\otimes W.
+    \]</div>
+    <p>The module \(U\) is irreducible. Indeed, for any \(\sigma_0\in G_{\Q}\) with image \(\gamma_0\), the
+      element \((\sigma_0,\overline S)\) lies in \(\widetilde G\), and \(\overline S\) has no eigenvector by
+      (ii). This is the point where the projective Galois action on \(U\) is used, and not only the structure
+      of an order.</p>
+    <p>The module \(W\) is also irreducible. Otherwise its composition factors are two characters
+      \(\psi_1,\psi_2\), and the composition factors of \(U\otimes W\) are the irreducible two-dimensional
+      modules \(U\otimes\psi_1\) and \(U\otimes\psi_2\). This contradicts the trivial composition factor of
+      \(\overline V\).</p>
+    <p>The subgroup \(H=\{(h,1):h\in G_L\}\) is normal in \(\widetilde G\) and acts trivially on \(U\). The
+      restriction \(W|_H\) is semisimple by Clifford's theorem. Explicitly, the \(\widetilde G\)-translates of a
+      simple \(H\)-submodule of \(W\) are simple \(H\)-submodules, and their sum is a nonzero
+      \(\widetilde G\)-submodule, hence equal to \(W\). Now \(\overline V|_H\simeq W|_H\oplus W|_H\) has a
+      trivial composition factor. Thus the semisimple module \(W|_H\) contains a trivial submodule, so
+      \(W^H\neq0\). Since \(H\) is normal, \(W^H\) is a \(\widetilde G\)-submodule, so \(W^H=W\). Hence \(G_L\)
+      acts trivially on \(U\otimes W=\overline V\).</p>
+    <p>By fact (f) of Section <a href="#inputs">1</a>, the determinant of \(G_{\Q}\) on \(\overline V\) is
+      \(\chi_{11}^2\). Therefore \(\chi_{11}^2|_{G_L}=1\), and \(\Q(\zeta_{11}+\zeta_{11}^{-1})\subseteq L\).
+      This field has degree \(5\). ∎</p>
+  </section>
+
+  <section id="rotations">
+    <h3>6. Rotations of order 3, 4, and 6</h3>
+    <p>Assume case (S), let \(P\in A(\Q)\) have order \(11\), and suppose that
+      \(\Gamma\in\{C_3,C_4,C_6,D_6,D_8,D_{12}\}\), with rotation \(\rho\) of order \(n\in\{3,4,6\}\). Choose a
+      representative \(R\in\GL_2(\Q)\) of \(\rho\). If \(\operatorname{tr}R=0\), the Cayley–Hamilton theorem
+      gives \(R^2=-\det R\), so \(\rho^2=1\). Hence \(\operatorname{tr}R\neq0\), and we normalize \(R\) to have
+      trace \(1\). By the proof of Lemma 3, \(1/\det R=2+\zeta_n+\zeta_n^{-1}\), which equals \(1,2,3\) for
+      \(n=3,4,6\). Thus the characteristic polynomial of \(R\) is</p>
+    <div class="equation">\[
+      X^2-X+\frac1c,\qquad c=1,2,3\quad\text{for }n=3,4,6,
+    \]</div>
+    <p>with discriminant \(-3\), \(-1\), \(-1/3\), respectively. Modulo \(11\), these are \(8\), \(10\), and
+      \(7\), since \(3^{-1}\equiv4\). The nonzero squares modulo \(11\) are \(1,3,4,5,9\). Hence none of the
+      three discriminants is a square modulo \(11\). Since \(1/c\) is a unit, the polynomial is irreducible
+      modulo \(11\) with unit discriminant. So \(k'=k[R]\) is the unramified quadratic extension of \(k\), and
+      \(\mathcal O[R]\) is its ring of integers.</p>
+    <p><em>Stable lattices.</em> The plane \(k^2\) is a one-dimensional \(k'\)-vector space. An
+      \(\mathcal O[R]\)-stable lattice is a finitely generated \(\mathcal O[R]\)-submodule spanning it, hence of
+      the form \(\mathcal O[R]u\). Since \(11\) is a uniformizer of \(\mathcal O[R]\), any two such lattices
+      differ by a power of \(11\). Fix one, \(\Lambda\).</p>
+    <p><em>Property (i).</em> Let \(\gamma\in\Gamma\). Then \(S_\gamma RS_\gamma^{-1}\) is a scalar multiple of
+      \(R\) or of \(R^{-1}=(1-R)/\det R\). It has trace \(1\), so it equals \(R\) or \(1-R\). Hence
+      \(S_\gamma\) normalizes \(\mathcal O[R]\). Thus \(S_\gamma\Lambda\) is \(\mathcal O[R]\)-stable, and so it
+      is a power of \(11\) times \(\Lambda\).</p>
+    <p><em>Property (ii).</em> Take \(\gamma_0=\rho\) and \(S=R\). Then \(R\Lambda\subseteq\Lambda\), and
+      \(\det R=1/c\) is a unit, so \(R\Lambda=\Lambda\). The reduction \(\overline R\) has the irreducible
+      characteristic polynomial \(X^2-X+1/c\) over \(\F_{11}\), so it has no eigenvector.</p>
+    <p>Lemma 4 now gives \(5\mid|\Gamma|\). This is impossible for groups of order \(3,4,6,8,12\). Hence
+      \(\Gamma\in\{C_1,C_2,D_4\}\).</p>
+  </section>
+
+  <section id="klein-four">
+    <h3>7. The Klein four group</h3>
+    <p>Assume case (S), let \(P\in A(\Q)\) have order \(11\), and suppose that \(\Gamma=D_4\simeq C_2\times C_2\).
+      The map</p>
+    <div class="equation">\[
+      \delta:\Gamma\to\Z/2\Z,\qquad \gamma\mapsto v_{11}(\det S_\gamma)\bmod2,
+    \]</div>
+    <p>is well defined, because rescaling \(S_\gamma\) by \(t\) multiplies the determinant by \(t^2\). It is a
+      homomorphism. Since \(|\Gamma|=4\), its kernel contains a nonidentity element \(r\). Choose a
+      representative \(R\in\GL_2(\Q)\) of \(r\). Since \(r^2=1\), we have \(R^2=aI\) with \(a\in\Q^\times\). As
+      \(R\) is not scalar, its minimal and characteristic polynomials equal \(X^2-a\). Hence
+      \(\operatorname{tr}R=0\) and \(\det R=-a\), so \(v_{11}(a)\) is even. Replacing \(R\) by
+      \(11^{-v_{11}(a)/2}R\), we may assume that \(a\) is an \(11\)-adic unit. Put</p>
+    <div class="equation">\[
+      \mathcal B=\mathcal O[R]=\mathcal O+\mathcal OR.
+    \]</div>
+    <p>Since \(\Gamma\) is abelian, \(S_\gamma RS_\gamma^{-1}=\mu R\) with \(\mu\in\Q^\times\) for every
+      \(\gamma\in\Gamma\). Squaring gives \(aI=\mu^2aI\), so \(\mu=\pm1\). We write \(\mu=\epsilon(\gamma)\).
+      This defines a homomorphism \(\epsilon:\Gamma\to\{\pm1\}\) with \(\epsilon(r)=1\). In particular, every
+      \(S_\gamma\) normalizes \(\mathcal B\).</p>
+    <p><strong>The nonsplit case.</strong> Suppose that \(a\) is not a square modulo \(11\). Then \(X^2-a\) is
+      irreducible modulo \(11\) with unit discriminant \(4a\), and \(\mathcal B\) is the ring of integers of the
+      unramified quadratic extension of \(k\). The argument of Section <a href="#rotations">6</a> applies
+      verbatim. All \(\mathcal B\)-stable lattices are powers of \(11\) times one of them, \(\Lambda\). Each
+      \(S_\gamma\) maps \(\Lambda\) to a \(\mathcal B\)-stable lattice. The representative \(R\) of \(r\)
+      satisfies \(R\Lambda=\Lambda\), since \(\det R=-a\) is a unit. Its reduction has the irreducible
+      characteristic polynomial \(X^2-\overline a\). Lemma 4 gives \(5\mid4\), a contradiction.</p>
+    <p><strong>The split case.</strong> Suppose that \(a\) is a nonzero square modulo \(11\). By Hensel's lemma,
+      \(a=\alpha^2\) with \(\alpha\in\mathcal O^\times\). Put</p>
+    <div class="equation">\[
+      e_1=\frac{\alpha+R}{2\alpha},\qquad e_2=\frac{\alpha-R}{2\alpha}.
+    \]</div>
+    <p>These are orthogonal idempotents in \(\mathcal B\) with \(e_1+e_2=1\) and \(R=\alpha(e_1-e_2)\), so
+      \(\mathcal B\simeq\mathcal O\times\mathcal O\). In a basis of \(k^2\) consisting of eigenvectors of \(R\),
+      we have \(e_1=E_{11}\) and \(e_2=E_{22}\). Put \(X=E_{12}\) and \(Y=E_{21}\) in this basis. Then</p>
+    <div class="equation">\[
+      XY=e_1,\qquad YX=e_2,\qquad e_1M_2(k)e_2=kX.
+    \]</div>
+    <p><em>The character \(\epsilon\) is nontrivial.</em> Otherwise every \(S_\gamma\) commutes with \(R\), and
+      is therefore diagonal in the eigenbasis. The image of the diagonal torus in \(\PGL_2(k)\) is isomorphic to
+      \(k^\times\), via \(\operatorname{diag}(x,y)\mapsto x/y\). The map \(\Gamma\to\PGL_2(\Q)\to\PGL_2(k)\) is
+      injective. Thus \(\Gamma\) would embed in \(k^\times\). Finite subgroups of the multiplicative group of a
+      field are cyclic, but \(\Gamma\) is not.</p>
+    <p>Hence \(\ker\epsilon=\{1,r\}\). Let \(K=L^{\ker\epsilon}\), a quadratic field. For
+      \(\gamma\in\ker\epsilon\), \(S_\gamma\) commutes with \(e_1\) and \(e_2\). For
+      \(\gamma\notin\ker\epsilon\), \(S_\gamma RS_\gamma^{-1}=-R\), so \(S_\gamma\) exchanges \(e_1\) and
+      \(e_2\).</p>
+    <p><em>Two blocks.</em> Put \(T'=\mathcal BT\). It is a full lattice in \(V\), and it is \(G_{\Q}\)-stable by
+      (1). We have</p>
+    <div class="equation">\[
+      T'=T_1\oplus T_2,\qquad T_i=e_iT'.
+    \]</div>
+    <p>By (1), \(G_K\) preserves \(T_1\) and \(T_2\), and every element of \(G_{\Q}\setminus G_K\) maps \(T_1\)
+      onto \(T_2\) and \(T_2\) onto \(T_1\). Put \(V_i=T_i\otimes_{\mathcal O}k=e_iV\). The maps
+      \(X:V_2\to V_1\) and \(Y:V_1\to V_2\) are inverse isomorphisms, since \(YX=e_2\) and \(XY=e_1\). Thus each
+      \(V_i\) has dimension \(2\), and each \(T_i\) is free of rank \(2\).</p>
+    <p><em>The blocks differ by a character.</em> Let \(\sigma\in G_K\) have image \(\gamma\in\ker\epsilon\).
+      Since \(S_\gamma\) commutes with \(e_1,e_2\), we have \(S_\gamma XS_\gamma^{-1}\in e_1M_2(k)e_2=kX\).
+      Write \(S_\gamma XS_\gamma^{-1}=\eta(\sigma)X\). This defines a character \(\eta:G_K\to k^\times\), which
+      factors through \(\Gal(L/K)=\{1,r\}\). For \(r\) we compute</p>
+    <div class="equation">\[
+      RXR^{-1}=(e_1-e_2)X(e_1-e_2)=-X,
+    \]</div>
+    <p>using \(X=e_1Xe_2\). Hence \(\eta\) is the quadratic character of \(L/K\), with values \(\pm1\). It is
+      trivial on \(G_L\), and its reduction \(\overline\eta\) modulo \(11\) is nontrivial.</p>
+    <p>By (1), \(\sigma(Xv)=\eta(\sigma)X\sigma(v)\) for \(\sigma\in G_K\) and \(v\in V_2\). Thus \(X\) is a
+      \(G_K\)-isomorphism \(\eta\otimes V_2\to V_1\). Put \(M_i=T_i/11T_i\). The lattice \(XT_2\subset V_1\) is
+      \(G_K\)-stable, and its reduction is isomorphic to \(\overline\eta\otimes M_2\). By lattice independence
+      in \(V_1\),</p>
+    <div class="equation">\[
+      M_1^{\mathrm{ss}}\simeq\overline\eta\otimes M_2^{\mathrm{ss}}.
+    \]</div>
+    <p>This does not require \(X\) to carry \(T_2\) onto \(T_1\).</p>
+    <p><em>Both blocks contain the trivial character.</em> By lattice independence, \(\overline V=T'/11T'\) has a
+      trivial \(G_{\Q}\)-composition factor, because \(A[11]\) does. As a \(G_K\)-module,
+      \(\overline V=M_1\oplus M_2\), so some \(M_i\) has a trivial \(G_K\)-composition factor. Let
+      \(\tau\in G_{\Q}\setminus G_K\). Then \(t\mapsto\tau(t)\) maps \(T_1\) onto \(T_2\), and
+      \(\tau(\sigma t)=(\tau\sigma\tau^{-1})\tau(t)\). So \(M_2\) is the \(\tau\)-conjugate of \(M_1\). A
+      composition factor \(\psi\) of one block gives the composition factor
+      \(\sigma\mapsto\psi(\tau^{-1}\sigma\tau)\) of the other. The trivial character is unchanged, so both
+      blocks have a trivial composition factor. Write \(M_1^{\mathrm{ss}}=\mathbf1\oplus\psi_1\) and
+      \(M_2^{\mathrm{ss}}=\mathbf1\oplus\psi_2\). The relation above gives</p>
+    <div class="equation">\[
+      \mathbf1\oplus\psi_1\simeq\overline\eta\oplus\overline\eta\psi_2.
+    \]</div>
+    <p>Since \(\overline\eta\neq\mathbf1\), we get \(\overline\eta\psi_2=\mathbf1\), so
+      \(\psi_2=\overline\eta\), and then \(\psi_1=\overline\eta\). Hence</p>
+    <div class="equation">\[
+      M_1^{\mathrm{ss}}\simeq M_2^{\mathrm{ss}}\simeq\mathbf1\oplus\overline\eta.
+    \]</div>
+    <p><em>The determinant contradiction.</em> On \(G_K\), the determinant of \(\overline V\) is
+      \(\det M_1\cdot\det M_2=\overline\eta^2=1\). By fact (f) of Section <a href="#inputs">1</a>,
+      \(\chi_{11}^2|_{G_K}=1\). This puts \(\Q(\zeta_{11}+\zeta_{11}^{-1})\), a field of degree \(5\), inside
+      the quadratic field \(K\). This is a contradiction.</p>
+    <p>We conclude that \(\Gamma\neq D_4\). No invariant maximal order was assumed in this section.</p>
+  </section>
+
+  <section id="small-field">
+    <h3>8. Endomorphism field of degree at most 2</h3>
+    <p>Assume case (S), let \(P\in A(\Q)\) have order \(11\), and suppose that \(\Gamma\in\{C_1,C_2\}\).</p>
+    <p>If \(\Gamma=C_1\), then \(L=\Q\). Choose an isogeny \(E^2\to A_{\overline{\Q}}\), and let \(B\) be the
+      image of \(E\times0\). By Lemma 2(a), \(B\) is an elliptic curve over \(\Q\) contained in \(A\). This
+      contradicts Section <a href="#subvarieties">3</a>.</p>
+    <p>If \(\Gamma=C_2\), then \(L\) is quadratic. Let \(B\) be as before. By Lemma 2(a), it is an elliptic
+      curve over \(L\) contained in \(A_L\). Put \(C=A_L/B\), an elliptic curve over \(L\). For
+      \(\tau\in G_{\Q}\), the conjugates \(B^\tau\) and \(C^\tau\) are an elliptic subvariety and an elliptic
+      quotient of \(A_{\overline{\Q}}\), because \(A\) is defined over \(\Q\). By
+      Section <a href="#subvarieties">3</a>, all of them are isogenous to \(E\) over \(\overline{\Q}\). Hence
+      \(B\) and \(C\) are \(\Q\)-curves over the quadratic field \(L\). The point \(P\) either lies in \(B(L)\)
+      or maps to a point of order \(11\) in \(C(L)\). Both possibilities contradict the theorem of
+      <a href="#lfn">Le Fourn and Najman</a>.</p>
+    <p>Together with Sections <a href="#rotations">6</a> and <a href="#klein-four">7</a>, this proves that
+      \(A(\Q)[11]=0\) in case (S).</p>
+    <p><strong>Remark.</strong> For the statement about points of order \(22\), the input (c) can be replaced
+      here by Kenku–Momose. Let \(B'\) be the image of \(0\times E\). It is an elliptic curve over \(L\), with
+      \(B+B'=A_L\) and \(B\cap B'\) finite. The quotient map therefore restricts to an \(L\)-isogeny
+      \(B'\to C\). By Lemma 2(b), every isogeny \(B\to B'\) over \(\overline{\Q}\) is defined over \(L\). Hence
+      \(B\) and \(C\) lie in one \(L\)-isogeny class. Given a rational point of order \(22\), its multiples of
+      orders \(2\) and \(11\) give \(L\)-rational points of these orders on curves in this class. Lemma 1 then
+      gives an elliptic curve over the quadratic field \(L\) with a rational point of order \(22\),
+      contradicting input (b). The input (c) is used only for the sharper statement that a non-CM geometric
+      square has no rational point of order \(11\).</p>
+  </section>
+
+  <section id="cm-square">
+    <h3>9. The CM square</h3>
+    <p>Assume case (CM), so that \(D\simeq M_2(M)\), with centre \(M\).</p>
+    <p><em>The degree \([L:\Q]\) is prime to \(5\).</em> Suppose not. By Cauchy's theorem, \(\Gamma\) contains an
+      element \(\gamma\) of order \(5\). It acts on the centre \(M\) by a field automorphism. Since
+      \(\Aut(M/\Q)\) has order \(2\), this action is trivial. Thus \(\gamma\) acts on \(D\) by an
+      \(M\)-algebra automorphism. By the Skolem–Noether theorem, it is conjugation by some \(R\in\GL_2(M)\).
+      Since \(\Gamma\) acts faithfully, \([R]\) has order \(5\) in \(\PGL_2(M)\). As in the proof of Lemma 3,
+      the eigenvalues of \(R\) are distinct, and their ratio \(\zeta\) is a primitive fifth root of unity.
+      Hence</p>
+    <div class="equation">\[
+      t=\frac{(\operatorname{tr}R)^2}{\det R}=2+\zeta+\zeta^{-1}\in M.
+    \]</div>
+    <p>Since \(\zeta+\zeta^{-1}\) is a root of \(X^2+X-1\), the element \(t\) is a root of \(X^2-3X+1\), whose
+      discriminant is \(5\). Thus \(\sqrt5\in M\), and \(M=\Q(\sqrt5)\). This contradicts the fact that \(M\) is
+      imaginary quadratic.</p>
+    <p><em>The field \(L\) contains the relevant ring class fields.</em> Choose an isogeny
+      \(E^2\to A_{\overline{\Q}}\), and let \(B\) be the image of \(E\times0\). By Lemma 2, \(B\) is an elliptic
+      curve over \(L\), and all its geometric endomorphisms are defined over \(L\). Thus
+      \(\End(B_L)\otimes\Q\simeq M\). The action of \(\End(B_L)\) on the one-dimensional \(L\)-vector space
+      \(\Lie(B)\) gives a ring homomorphism \(\End(B_L)\otimes\Q\to L\). It is injective because \(M\) is a
+      field. Since \(M/\Q\) is Galois, it follows that \(M\subseteq L\). Put \(C=A_L/B\), an elliptic curve
+      over \(L\). It is geometrically isogenous to \(E\), so it also has complex multiplication by an order in
+      \(M\). For \(Z\in\{B,C\}\), we have \(j(Z)\in L\) and \(M\subseteq L\), so</p>
+    <div class="equation">\[
+      M(j(Z))\subseteq L.
+    \]</div>
+    <p><em>Conclusion.</em> Suppose that \(P\in A(\Q)\) has order \(11\). Either \(P\in B(L)\), or \(P\) maps to
+      a point of order \(11\) in \(C(L)\). In either case, some \(Z\in\{B,C\}\) has an \(L\)-rational point of
+      order \(11\). Input (d) gives \(5\mid[L:M(j(Z))]\), and hence \(5\mid[L:\Q]\). This contradicts the first
+      step. Hence \(A(\Q)[11]=0\) in case (CM).</p>
+    <p>This step cannot be replaced by <a href="#clark">Clark's list, Theorem 5</a>, of torsion orders for
+      abelian surfaces with everywhere potentially good reduction, because that list contains \(22\). The divisibility in input (d) holds for
+      every imaginary quadratic order, including orders whose conductor is divisible by \(11\).</p>
+  </section>
+
+  <section id="completion">
+    <h3>10. Completion of the proof</h3>
+    <p>Let \(A/\Q\) be geometrically split, and suppose that \(P\in A(\Q)\) has order \(22\). Put
+      \(P_2=11P\) and \(P_{11}=2P\), of orders \(2\) and \(11\). By Section <a href="#subvarieties">3</a>,
+      \(A\) is simple over \(\Q\). By Sections <a href="#rotations">6</a>–<a href="#cm-square">9</a>, \(A\) is
+      of type (N). These two steps prove the second assertion of the <a href="#theorem">theorem</a>, since they
+      use only \(P_{11}\).</p>
+    <p><em>The two elliptic subvarieties.</em> Choose an isogeny \(E_1\times E_2\to A_{\overline{\Q}}\), and let
+      \(B_i\) be the image of \(E_i\). Then \(B_i\) is isogenous to \(E_i\), and \(B_1\cap B_2\) is finite. Let
+      \(B\) be any elliptic subvariety of \(A_{\overline{\Q}}\). By Poincaré's theorem, \(B\) is isogenous to
+      \(E_1\) or to \(E_2\). The quotient \(A_{\overline{\Q}}/B_1\) is an elliptic curve isogenous to \(B_2\),
+      hence to \(E_2\). If \(B\) is isogenous to \(E_1\), the composite
+      \(B\to A_{\overline{\Q}}\to A_{\overline{\Q}}/B_1\) is zero, because \(E_1\) and \(E_2\) are not
+      isogenous. Thus \(B\subseteq B_1\), and \(B=B_1\). Similarly, \(B=B_2\) if \(B\) is isogenous to \(E_2\).
+      Hence \(B_1,B_2\) are the only elliptic subvarieties of \(A_{\overline{\Q}}\).</p>
+    <p>The group \(G_{\Q}\) permutes \(\{B_1,B_2\}\). Neither curve is defined over \(\Q\), since \(A\) is
+      simple over \(\Q\). Hence the stabilizer of \(B_1\) has index \(2\). It equals \(G_K\) for a quadratic
+      field \(K\). Let \(\sigma\) be the nontrivial automorphism of \(K\). Then \(E=B_1\) is defined over \(K\),
+      and \(B_2=E^\sigma\).</p>
+    <p><em>One isogeny class.</em> Put \(F=A_K/E\). The quotient map restricts to a \(K\)-isogeny
+      \(E^\sigma\to F\), because \(E\cap E^\sigma\) is finite. Applying \(\sigma\), we obtain a \(K\)-isogeny
+      \(E\to F^\sigma\).</p>
+    <p>For each \(\ell\in\{2,11\}\), the exact sequence</p>
+    <div class="equation">\[
+      0\longrightarrow E\longrightarrow A_K\xrightarrow{\ \pi\ }F\longrightarrow0
+    \]</div>
+    <p>shows the following. Either \(P_\ell\in E(K)\), or \(\pi(P_\ell)\) is a point of order \(\ell\) in
+      \(F(K)\). In the second case, \(\pi^\sigma(P_\ell)=\sigma(\pi(P_\ell))\) is a point of order \(\ell\) in
+      \(F^\sigma(K)\), since \(P_\ell\) is rational. Thus the \(K\)-isogeny class of \(E\) contains curves with
+      \(K\)-rational points of orders \(2\) and \(11\). Lemma 1 produces an elliptic curve over the quadratic
+      field \(K\) with a \(K\)-rational point of order \(22\). This contradicts input (b), and proves the
+      theorem. ∎</p>
+  </section>
+
+  <section id="census">
+    <h3>11. Consequence for the census</h3>
+    <p>The groups <a href="../group.html?g=22">[22]</a> and <a href="../group.html?g=2.22">[2,22]</a> are
+      impossible in the class “geometrically split, simple over \(\Q\)”. Both groups were already impossible in
+      the class “split over \(\Q\)”, by <a href="qsplit-prime-obstruction.html">Mazur's theorem applied to an
+      elliptic subvariety and its elliptic quotient</a>. Hence both geometrically split example columns are
+      impossible for these two groups, and their combined geometrically split <b>∞?</b> entry becomes
+      <span class="inf-badge impossible">∅</span>. No other group in the census contains an element of
+      order \(22\).</p>
+    <p>The point of order \(2\) cannot be omitted. The census group <a href="../group.html?g=11">[11]</a> has a
+      geometrically split example that is simple over \(\Q\), namely <a href="../curve.html?id=11.b">11.b</a>.
+      By the theorem, its two geometric elliptic factors are not isogenous over \(\overline{\Q}\).</p>
+    <p>The argument applies to every geometric splitting degree, including degrees divisible by \(2\) or
+      \(11\). It uses no maximal integral endomorphism ring and no principal polarization.</p>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="bc"><p>A. Bourdon and P. L. Clark,
+        <a href="https://arxiv.org/pdf/1906.07121"><i>Torsion points and isogenies on CM elliptic curves</i></a>,
+        J. London Math. Soc. (2) <b>102</b> (2020), 580–622, Theorem 4.1(a), (d), (e) (numbering of
+        arXiv:1906.07121v1).</p></li>
+      <li id="clark"><p>P. L. Clark, <a href="https://arxiv.org/pdf/math/0407264"><i>Bounds for torsion on abelian
+        varieties with integral moduli</i></a>, arXiv:math/0407264v2 (2004), Theorem 5. The same list is Theorem 1.4 of
+        P. L. Clark and X. Xarles, <a href="https://doi.org/10.4153/CJM-2008-026-x"><i>Local bounds for torsion points on
+        abelian varieties</i></a>, Canad. J. Math. <b>60</b> (2008), 532–555.</p></li>
+      <li id="km"><p>M. A. Kenku and F. Momose,
+        <a href="https://doi.org/10.1017/S0027763000002816"><i>Torsion points on elliptic curves defined over
+        quadratic fields</i></a>, Nagoya Math. J. <b>109</b> (1988), 125–149, Theorem (0.1).</p></li>
+      <li id="lfn"><p>S. Le Fourn and F. Najman,
+        <a href="https://arxiv.org/pdf/1803.03460"><i>Torsion of \(\Q\)-curves over quadratic fields</i></a>,
+        Math. Res. Lett. <b>27</b> (2020), 209–225, Theorem 1.1, Proposition 3.2, and Theorem 2.1 (numbering
+        of arXiv:1803.03460v3).</p></li>
+      <li id="mazur"><p>B. Mazur,
+        <a href="https://www.numdam.org/item/PMIHES_1977__47__33_0/"><i>Modular curves and the Eisenstein
+        ideal</i></a>, Publications Mathématiques de l'IHÉS <b>47</b> (1977), 33–186, Theorem (8).</p></li>
+    </ol>
+    <p>Related proofs: <a href="geometric-33-34-obstruction.html">orders 33 and 34</a>, which use the same
+      residual tensor argument at \(11\), and <a href="geometric-31-obstruction.html">order 31</a>, which uses
+      a stable split quadratic order.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/geometric-22-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

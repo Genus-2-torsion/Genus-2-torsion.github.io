@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No 30-torsion on geometrically split, ℚ-simple surfaces — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that a geometrically split abelian surface over Q that is simple over Q has no rational point of order 30. This excludes [30], [60] and [2,30] in the geometrically split, Q-simple class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Aut: '\\operatorname{Aut}', Hom: '\\operatorname{Hom}',
+          tr: '\\operatorname{tr}', spe: '\\operatorname{sp}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=30">[30]</a>, <a href="../group.html?g=60">[60]</a>, <a href="../group.html?g=2.30">[2,30]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>An obstruction to rational \(30\)-torsion on geometrically split abelian surfaces</h2>
+  <p class="src">21 October 2026 · Geometrically split, simple over ℚ</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and
+      geometrically split. Then \(A(\Q)\) has no point of order \(30\).</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\overline{\Q}}\) is isogenous to a product of elliptic
+    curves. We impose no restriction on the degree of this isogeny, on the integral endomorphism ring,
+    or on the polarization; the theorem does not require a principal polarization. Each of the groups
+    <a href="../group.html?g=30">[30]</a>, <a href="../group.html?g=60">[60]</a> and
+    <a href="../group.html?g=2.30">[2,30]</a> contains a point of order \(30\). Hence none of them occurs
+    as the rational torsion subgroup of a geometrically split genus-\(2\) Jacobian that is simple over \(\Q\).</p>
+  <p>The hypothesis of simplicity over \(\Q\) is essential. A product of elliptic curves over \(\Q\)
+    with rational points of orders \(5\) and \(6\) has a rational point of order \(30\), and the census
+    contains Jacobians split over \(\Q\) with each of the three torsion groups. Simplicity is used only in
+    <a href="#nonisogenous">Section 3</a>. <a href="#hypotheses">Section 10</a> records the stronger
+    statements that the other sections prove for geometric squares.</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsimple_30_obstruction.tex">Complete proof (LaTeX source)</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#inputs">Inputs</a></li>
+      <li><a href="#combining">Combining coprime torsion in an elliptic isogeny class</a></li>
+      <li><a href="#nonisogenous">Nonisogenous geometric factors</a></li>
+      <li><a href="#cm-square">The CM square case: a local obstruction at \(2\)</a></li>
+      <li><a href="#endomorphism-field">The non-CM square case: the endomorphism field</a></li>
+      <li><a href="#cyclotomic">Polarization duality and an irreducible projective factor</a></li>
+      <li><a href="#rotations">Rotations of order \(3\) or \(6\)</a></li>
+      <li><a href="#dihedral">The dihedral group of order \(8\)</a></li>
+      <li><a href="#completion">Completion of the proof</a></li>
+      <li><a href="#hypotheses">Where the hypotheses are used</a></li>
+      <li><a href="#census">Consequences for the census</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="inputs">
+    <h3>1. Inputs</h3>
+    <p>For a number field \(K\subset\overline{\Q}\) we write \(G_K=\Gal(\overline{\Q}/K)\), and
+      \(\chi_p:G_{\Q}\to\F_p^\times\) denotes the mod-\(p\) cyclotomic character. We use the following results.</p>
+    <ol>
+      <li>
+        <p><strong>Elliptic torsion.</strong> <a href="#dn">Derickx–Najman, Theorem 1.1</a>, list the torsion
+          groups of elliptic curves over quartic number fields. The exponent of each group in the list is at
+          most \(24\), and none is divisible by \(30\). Hence no elliptic curve over a number field of
+          degree \(1\), \(2\) or \(4\) has a point of order \(30\); for degrees \(1\) and \(2\), extend the
+          ground field to a field of degree \(4\). For degree \(1\) this is also
+          <a href="#mazur">Mazur's Theorem (8)</a>. For degree \(2\) it is also a special case of
+          <a href="#km">Kenku–Momose, Theorem (0.1)</a>, applied to \((m,N)=(1,30)\): the curve \(X_1(30)\) has
+          genus \(9\), and \((1,30)\) is not one of the exceptions listed there.</p>
+      </li>
+      <li>
+        <p><strong>Good reduction.</strong> Let \(K\) be a finite extension of \(\Q_2\), let \(A/K\) be an abelian
+          variety, and let \(\ell\) be an odd prime. We use the following results of
+          <a href="#serre-tate">Serre–Tate</a>.</p>
+        <ol type="a">
+          <li><p>(Theorem 1 and its Corollary 2, p. 493.) \(A\) has good reduction if and only if the inertia
+            group of \(K\) acts trivially on \(T_\ell(A)\). Good reduction is invariant under \(K\)-isogeny.</p></li>
+          <li><p>(Lemma 2, p. 495.) Suppose that \(A\) has good reduction, and let \(B\) be the special fibre of
+            its Néron model, an abelian variety over the residue field \(k\). For every odd \(m\), reduction
+            gives an isomorphism \(A(\overline K)[m]\to B(\overline k)[m]\), compatible with the action of
+            \(\Gal(\overline K/K)\), which acts on the target through \(\Gal(\overline k/k)\). In particular,
+            \(A(K)[m]\) injects into \(B(k)\), and \(T_\ell(A)\simeq T_\ell(B)\) equivariantly.</p></li>
+          <li><p>(Theorem 6(a), p. 503.) An abelian variety over \(K\) with complex multiplication defined
+            over \(K\), in the sense of Serre–Tate, §4, has potential good reduction. This applies to an
+            elliptic curve \(E/K\) such that \(\Q\otimes\End_K(E)\) is an imaginary quadratic field.</p></li>
+          <li><p>(§2, “The case of a finite residue field”, p. 498.) If \(A\) has potential good reduction,
+            there is a finite totally ramified extension \(K'/K\) such that \(A_{K'}\) has good reduction.
+            This consequence is stated explicitly in <a href="#clark-xarles">Clark–Xarles, §2.4</a>, and in
+            <a href="#clark">Clark, §2.1</a>.</p></li>
+        </ol>
+      </li>
+      <li>
+        <p><strong>Endomorphisms over finite fields.</strong> Let \(B\) be an abelian variety over a finite
+          field \(k\), with Frobenius endomorphism \(\pi\), and let \(f\) be the characteristic polynomial of
+          \(\pi\). By <a href="#tate">Tate, Theorem 2(c)</a>, the algebra \(\Q\otimes\End_k(B)\) equals
+          \(\Q[\pi]\) if and only if \(f\) has no multiple root.</p>
+      </li>
+      <li>
+        <p><strong>Weil's theorems.</strong> Let \(B\) be an abelian surface over \(\F_2\), with Frobenius
+          endomorphism \(\pi\), and let \(\ell\) be an odd prime. The characteristic polynomial of \(\pi\) on
+          \(V_\ell(B)\) has the form</p>
+        <div class="equation">\[
+          P(T)=T^4+aT^3+bT^2+2aT+4,\qquad a,b\in\Z,
+        \]</div>
+        <p>its complex roots have absolute value \(\sqrt2\), and \(\#B(\F_2)=P(1)\). The arithmetic
+          Frobenius \(x\mapsto x^2\) of \(\Gal(\overline{\F}_2/\F_2)\) acts on \(B(\overline{\F}_2)\), and
+          hence on \(T_\ell(B)\), as \(\pi\). An endomorphism of \(B_{\overline{\F}_2}\) is defined over
+          \(\F_2\) if and only if it commutes with \(\pi\).</p>
+      </li>
+      <li>
+        <p><strong>Lattices.</strong> Let \(G\) be a group and \(V\) a finite-dimensional
+          \(\Q_p\)-representation of \(G\). If \(T_1,T_2\subset V\) are \(G\)-stable \(\Z_p\)-lattices, then
+          \((T_1/pT_1)^{\mathrm{ss}}\simeq(T_2/pT_2)^{\mathrm{ss}}\). Indeed, the characteristic polynomial of
+          each \(g\in G\) on \(T_i/pT_i\) is the reduction of its characteristic polynomial on \(V\), and the
+          Brauer–Nesbitt theorem shows that a semisimple representation over a field is determined by these
+          polynomials. We apply this to isomorphic representations by transporting a lattice through the
+          isomorphism. Composition factors are always counted with multiplicity. Rational torsion is never
+          treated as an isogeny invariant: only composition factors are compared.</p>
+      </li>
+    </ol>
+    <p><a href="#clark">Clark's Theorem 5</a> lists the possible orders of the rational torsion subgroup of an
+      abelian surface over \(\Q\) with everywhere potentially good reduction;
+      <a href="#clark-xarles">Theorem 1.4 of Clark–Xarles</a> gives the same list for the larger class of
+      surfaces with everywhere anisotropic reduction. The list contains \(30\) and \(60\). Thus, unlike the
+      case of rational <a href="qsimple-35-obstruction.html">\(35\)-torsion</a>, it does not settle the
+      CM square case here. <a href="#cm-square">Section 4</a> replaces it with a local argument at \(2\).</p>
+  </section>
+
+  <section id="combining">
+    <h3>2. Combining coprime torsion in an elliptic isogeny class</h3>
+    <div class="theorem" id="combining-lemma">
+      <p><strong>Lemma 1.</strong> Let \(m\) and \(n\) be coprime positive integers, and let \(K\) be a number
+        field. Suppose \(E_m\) and \(E_n\) are \(K\)-isogenous elliptic curves over \(K\), with points of
+        orders \(m\) and \(n\) in \(E_m(K)\) and \(E_n(K)\), respectively. Then their \(K\)-isogeny class
+        contains an elliptic curve with a \(K\)-rational point of order \(mn\).</p>
+    </div>
+    <p><strong>Proof.</strong> Choose a \(K\)-isogeny \(f:E_m\to E_n\). Let \(C\subseteq\ker f\) be the
+      subgroup of points whose order divides a power of \(n\). It is stable under \(\Gal(\overline K/K)\),
+      because \(\ker f\) is. Hence \(E'=E_m/C\) is an elliptic curve over \(K\), and \(f\) factors as</p>
+    <div class="equation">\[
+      E_m\xrightarrow{\;a\;}E'=E_m/C\xrightarrow{\;b\;}E_n,
+    \]</div>
+    <p>with \(a\) and \(b\) defined over \(K\). The order of \(\ker a=C\) is prime to \(m\), so \(a\) maps
+      the given point \(P\) of order \(m\) to a point of order \(m\). The order of \(\ker b\simeq\ker f/C\) is
+      prime to \(n\). Let \(Q\in E_n(K)\) be the given point of order \(n\), and let \(\hat b\) be the dual
+      isogeny, so that \(b\circ\hat b=[\deg b]\). If \(\hat b(kQ)=0\), then \((\deg b)kQ=0\), hence \(kQ=0\).
+      Thus \(\hat b(Q)\in E'(K)\) has order \(n\), and \(a(P)+\hat b(Q)\in E'(K)\) has order \(mn\). Since
+      \(E'\) is \(K\)-isogenous to \(E_m\), this proves the lemma. ∎</p>
+    <p>Applying the lemma first with \((m,n)=(2,3)\) and then with \((m,n)=(6,5)\), we see: if a
+      \(K\)-isogeny class of elliptic curves contains curves with \(K\)-rational points of each of the orders
+      \(2\), \(3\) and \(5\), then it contains a curve with a \(K\)-rational point of order \(30\).</p>
+    <p>For the rest of the proof, suppose that \(A(\Q)\) contains a point of order \(30\), and choose nonzero
+      points \(P_p\in A(\Q)[p]\) for \(p\in\{2,3,5\}\). Exactly one of the following holds:</p>
+    <ul>
+      <li>\(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\), where \(E_1\) and \(E_2\) are not
+        geometrically isogenous (<a href="#nonisogenous">Section 3</a>);</li>
+      <li>\(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\) has complex multiplication
+        (<a href="#cm-square">Section 4</a>);</li>
+      <li>\(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\) has no complex multiplication
+        (<a href="#endomorphism-field">Sections 5–9</a>).</li>
+    </ul>
+  </section>
+
+  <section id="nonisogenous">
+    <h3>3. Nonisogenous geometric factors</h3>
+    <p>Suppose that \(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\), where \(E_1\) and \(E_2\) are not
+      geometrically isogenous. Fix an isogeny \(\psi:A_{\overline{\Q}}\to E_1\times E_2\). If
+      \(C\subset A_{\overline{\Q}}\) is an elliptic curve, then \(\psi(C)\) is an elliptic curve isogenous to
+      \(C\). Its two projections cannot both be nonzero, since \(\Hom(E_1,E_2)=0\). Hence \(\psi(C)\) equals
+      \(E_1\times0\) or \(0\times E_2\), and \(C\) is the identity component of \(\psi^{-1}(E_1\times0)\) or of
+      \(\psi^{-1}(0\times E_2)\). Thus \(A_{\overline{\Q}}\) has exactly two elliptic subvarieties
+      \(C_1\neq C_2\).</p>
+    <p>The group \(G_{\Q}\) permutes \(\{C_1,C_2\}\). If it fixed both, each would be defined over \(\Q\), and
+      \(A\) would contain an elliptic curve over \(\Q\), contradicting simplicity over \(\Q\). This is the only
+      place where simplicity over \(\Q\) is used. Hence the stabilizer of \(C_1\) is \(G_K\) for a quadratic
+      field \(K\), and the nontrivial automorphism \(\sigma\) of \(K\) interchanges the two subvarieties.
+      Write \(E=C_1\) and \(E^\sigma=C_2\); both are elliptic curves over \(K\).</p>
+    <p>Put \(F=A_K/E\), with quotient map \(q:A_K\to F\). The restriction of \(q\) to \(E^\sigma\) has finite
+      kernel \(E\cap E^\sigma\) and nonzero image, so it is a \(K\)-isogeny \(E^\sigma\to F\). Conjugating by
+      \(\sigma\), we obtain a \(K\)-isogeny \(E\to F^\sigma\).</p>
+    <p>Let \(p\in\{2,3,5\}\). If \(q(P_p)=0\), then \(P_p\in E(K)\) has order \(p\). Otherwise \(q(P_p)\in F(K)\)
+      has order \(p\), and its conjugate \(\sigma(q(P_p))\in F^\sigma(K)\) also has order \(p\). In both cases,
+      a curve in the \(K\)-isogeny class of \(E\) has a \(K\)-rational point of order \(p\). By
+      <a href="#combining-lemma">Lemma 1</a>, this class contains an elliptic curve over the quadratic field
+      \(K\) with a point of order \(30\). This contradicts input 1.</p>
+  </section>
+
+  <section id="cm-square">
+    <h3>4. The CM square case: a local obstruction at \(2\)</h3>
+    <p>We prove a stronger local statement. It does not use simplicity over \(\Q\) or the point of order \(2\).</p>
+    <div class="theorem" id="cm-proposition">
+      <p><strong>Proposition 2.</strong> Let \(A\) be an abelian surface over \(\Q_2\) such that
+        \(A_{\overline{\Q}_2}\) is isogenous to \(E^2\) for an elliptic curve \(E\) with complex multiplication.
+        Then \(A(\Q_2)\) has no point of order \(15\).</p>
+    </div>
+    <p>If \(A/\Q\) is geometrically isogenous to the square of a CM elliptic curve, then so is \(A_{\Q_2}\),
+      and \(A(\Q)\subseteq A(\Q_2)\). Hence the proposition excludes the CM square case of the theorem.</p>
+    <p><strong>Proof.</strong> Let \(M\) be the imaginary quadratic field of complex multiplication of \(E\).
+      Then \(\End^0(A_{\overline{\Q}_2})\simeq M_2(M)\), with center \(M\). Suppose that \(A(\Q_2)\) contains a
+      point of order \(15\).</p>
+    <p><em>Step 1: good reduction over a totally ramified extension.</em> Choose a finite extension
+      \(K_0/\Q_2\) such that \(E\) and all its endomorphisms are defined over \(K_0\), and \(A_{K_0}\) is
+      \(K_0\)-isogenous to \(E^2\). By Serre–Tate, Theorem 6(a), \(E\) has good reduction over a finite
+      extension \(K_1/K_0\). Then \(E^2\) has good reduction over \(K_1\), and so does the isogenous surface
+      \(A_{K_1}\), by Serre–Tate, Corollary 2 of Theorem 1. Thus \(A\) has potential good reduction. By
+      Serre–Tate, p. 498, there is a finite totally ramified extension \(K'/\Q_2\) over which \(A\) has good
+      reduction. Since \(K'/\Q_2\) is totally ramified, the residue field of \(K'\) is \(\F_2\). Let \(B/\F_2\) be
+      the special fibre of the Néron model of \(A_{K'}\).</p>
+    <p><em>Step 2: the number of points.</em> By input 2(b), \(A(K')[15]\) injects into \(B(\F_2)\). Since
+      \(A(\Q_2)\subseteq A(K')\), the group \(B(\F_2)\) contains a point of order \(15\), so
+      \(15\mid\#B(\F_2)\). Let \(\pi\) be the Frobenius endomorphism of \(B\), and \(P\) its characteristic
+      polynomial, as in input 4. If \(\alpha_1,\ldots,\alpha_4\) are the roots of \(P\), then</p>
+    <div class="equation">\[
+      \#B(\F_2)=P(1)=\prod_{i=1}^4|1-\alpha_i|\le(1+\sqrt2)^4=17+12\sqrt2&lt;34,
+    \]</div>
+    <p>so \(\#B(\F_2)\in\{15,30\}\).</p>
+    <p><em>Step 3: the only possible Weil polynomial.</em> Write \(P(T)=T^4+aT^3+bT^2+2aT+4\) as in input 4.
+      Then \(P(T)=T^2\,Q(T+2/T)\) with \(Q(x)=x^2+ax+b-4\). If \(\beta_1,\beta_2\) are the roots of \(Q\), then</p>
+    <div class="equation">\[
+      P(T)=(T^2-\beta_1T+2)(T^2-\beta_2T+2),\qquad a=-(\beta_1+\beta_2),\qquad b=4+\beta_1\beta_2 .
+    \]</div>
+    <p>Each \(\beta_i\) equals \(\alpha+2/\alpha\) for a root \(\alpha\) of \(P\). Since \(|\alpha|=\sqrt2\),
+      we have \(2/\alpha=\overline\alpha\), so \(\beta_i=2\operatorname{Re}\alpha\) is real and
+      \(|\beta_i|\le2\sqrt2\). Consequently \(|a|\le4\sqrt2\), so \(|a|\le5\). Next,
+      \(\beta_1\beta_2\le(\beta_1+\beta_2)^2/4\). Also \((2\sqrt2-\beta_1)(2\sqrt2-\beta_2)\ge0\) and
+      \((2\sqrt2+\beta_1)(2\sqrt2+\beta_2)\ge0\), which give \(\beta_1\beta_2\ge2\sqrt2|\beta_1+\beta_2|-8\).
+      Hence</p>
+    <div class="equation">\[
+      2\sqrt2\,|a|-4\;\le\;b\;\le\;\frac{a^2}{4}+4. \tag{1}
+    \]</div>
+    <p>Moreover \(P(1)=5+3a+b\).</p>
+    <p>If \(P(1)=15\), then \(b=10-3a\). The upper bound in (1) gives \(a^2+12a-24\ge0\). Since \(a\) is an
+      integer with \(|a|\le5\), this forces \(a\ge2\). The lower bound then gives
+      \((3+2\sqrt2)a\le14\), so \(a\le14/(3+2\sqrt2)&lt;2.41\). Hence \(a=2\) and \(b=4\).</p>
+    <p>If \(P(1)=30\), then \(b=25-3a\). The upper bound gives \(a^2+12a-84\ge0\), which forces \(a\ge5\).
+      The lower bound gives \((3+2\sqrt2)a\le29\), so \(a\le29/(3+2\sqrt2)&lt;4.98\). This is a contradiction.
+      Therefore</p>
+    <div class="equation">\[
+      P(T)=T^4+2T^3+4T^2+4T+4=(T^2+2)(T^2+2T+2),\qquad \tr(\pi\mid V_\ell(B))=-2. \tag{2}
+    \]</div>
+    <p><em>Step 4: the endomorphism algebra of \(B\).</em> The two factors in (2) are distinct irreducible
+      quadratic polynomials, so \(P\) has no multiple root. By input 3,
+      \(\End^0_{\F_2}(B)=\Q[\pi]\). The minimal polynomial of \(\pi\) divides \(P\) and vanishes at every root of
+      \(P\), so it equals \(P\). Therefore</p>
+    <div class="equation">\[
+      \End^0_{\F_2}(B)=\Q[\pi]\simeq\Q[T]/(T^2+2)\times\Q[T]/(T^2+2T+2)\simeq\Q(\sqrt{-2})\times\Q(i). \tag{3}
+    \]</div>
+    <p><em>Step 5: specialization of the CM centre.</em> Fix an odd prime \(\ell\). Since \(A_{K'}\) has good
+      reduction, the inertia group of \(K'\) acts trivially on \(T_\ell(A)\). An element \(\tau\) of
+      \(\Gal(\overline{\Q}_2/K')\) sends an endomorphism \(\varphi\) of \(A_{\overline{\Q}_2}\) to
+      \(\tau\varphi\tau^{-1}\), and on \(T_\ell(A)\) this is conjugation by the action of \(\tau\). Endomorphisms
+      act faithfully on \(T_\ell(A)\). Hence inertia fixes every geometric endomorphism, and all geometric
+      endomorphisms of \(A\) are defined over a finite unramified extension \(K''/K'\). The Néron model of
+      \(A_{K''}\) is the base change of that of \(A_{K'}\), so its special fibre is the base change of \(B\)
+      to the residue field of \(K''\). By the Néron mapping property, each endomorphism of \(A_{K''}\) extends to the Néron model and
+      restricts to an endomorphism of the special fibre. This gives a unital ring homomorphism</p>
+    <div class="equation">\[
+      \spe:\End^0(A_{\overline{\Q}_2})\longrightarrow\End^0(B_{\overline{\F}_2}).
+    \]</div>
+    <p>Under the isomorphism \(T_\ell(A)\simeq T_\ell(B)\) of input 2(b), \(\spe(\varphi)\) acts on
+      \(T_\ell(B)\) as \(\varphi\) acts on \(T_\ell(A)\). Hence \(\spe\) is injective. Since that isomorphism is
+      Galois-equivariant, \(\spe\) is equivariant for the action of \(\Gal(\overline{\Q}_2/K')\), which acts on
+      \(\End^0(B_{\overline{\F}_2})\) through \(\Gal(\overline{\F}_2/\F_2)\). By input 4, the arithmetic
+      Frobenius acts there as \(\psi\mapsto\pi\psi\pi^{-1}\).</p>
+    <p>The centre \(M\) of \(\End^0(A_{\overline{\Q}_2})\) is stable under \(\Gal(\overline{\Q}_2/K')\). This
+      group acts on \(M\) through \(\Gal(\overline{\F}_2/\F_2)\), since inertia acts trivially, and by field
+      automorphisms. Hence a Frobenius element acts on \(M\) either trivially or by complex conjugation
+      \(m\mapsto\overline m\). Accordingly, either \(\pi\spe(m)\pi^{-1}=\spe(m)\) for all \(m\in M\), or
+      \(\pi\spe(m)\pi^{-1}=\spe(\overline m)\) for all \(m\in M\). We need not know which case occurs: the
+      CM field need not be contained in \(K'\).</p>
+    <p><em>Step 6: trivial action.</em> Suppose \(\pi\) commutes with \(\spe(M)\). By input 4, \(\spe(M)\) is
+      contained in \(\End^0_{\F_2}(B)\), which is the algebra (3). Composing the unital embedding
+      \(M\to\Q(\sqrt{-2})\times\Q(i)\) with the two projections gives unital ring homomorphisms from the field
+      \(M\) to \(\Q(\sqrt{-2})\) and to \(\Q(i)\). They are injective, and all three fields have degree \(2\),
+      so \(M\simeq\Q(\sqrt{-2})\) and \(M\simeq\Q(i)\). This is impossible.</p>
+    <p><em>Step 7: nontrivial action.</em> Suppose \(\pi\spe(m)\pi^{-1}=\spe(\overline m)\) for all
+      \(m\in M\). Put \(V=V_\ell(B)\otimes_{\Q_\ell}\overline{\Q}_\ell\), and let \(\iota_1,\iota_2\) be the two
+      embeddings of \(M\) into \(\overline{\Q}_\ell\), with \(\iota_2(m)=\iota_1(\overline m)\). Since
+      \(M\otimes\overline{\Q}_\ell\simeq\overline{\Q}_\ell\times\overline{\Q}_\ell\), we have
+      \(V=V_1\oplus V_2\), where \(\spe(m)\) acts on \(V_j\) as \(\iota_j(m)\). If \(v\in V_1\), then</p>
+    <div class="equation">\[
+      \spe(m)\,\pi v=\pi\,\spe(\overline m)\,v=\iota_1(\overline m)\,\pi v=\iota_2(m)\,\pi v,
+    \]</div>
+    <p>so \(\pi V_1\subseteq V_2\), and similarly \(\pi V_2\subseteq V_1\). With respect to the decomposition
+      \(V=V_1\oplus V_2\), the matrix of \(\pi\) has zero diagonal blocks, so \(\tr(\pi\mid V)=0\). This
+      contradicts (2).</p>
+    <p>Both cases are impossible, which proves the proposition. ∎</p>
+    <p>The reduction \(B\) may have more endomorphisms than \(A\); only the injective specialization of the
+      centre \(M\) is used. We do not enlarge \(K'\) to make \(M\) defined over it, because such an enlargement
+      need not remain totally ramified.</p>
+  </section>
+
+  <section id="endomorphism-field">
+    <h3>5. The non-CM square case: the endomorphism field</h3>
+    <p>In this section and the next four, \(A_{\overline{\Q}}\) is isogenous to \(E_0^2\) for an elliptic
+      curve \(E_0\) without complex multiplication. Then</p>
+    <div class="equation">\[
+      D=\End^0(A_{\overline{\Q}})\simeq M_2(\End^0(E_0))=M_2(\Q).
+    \]</div>
+    <p>The group \(G_{\Q}\) acts on the finitely generated \(\Z\)-module \(\End(A_{\overline{\Q}})\) by
+      \(g\cdot\varphi=g\varphi g^{-1}\), and each endomorphism is defined over a number field. Let \(L\) be the
+      fixed field of the kernel of this action, that is, the smallest field over which all geometric
+      endomorphisms of \(A\) are defined. It is a finite Galois extension of \(\Q\). Put \(\Gamma=\Gal(L/\Q)\).
+      It acts faithfully on \(D\) by \(\Q\)-algebra automorphisms. By Skolem–Noether,
+      \(\Aut_{\Q}(M_2(\Q))=\PGL_2(\Q)\), so \(\Gamma\) is a finite subgroup of \(\PGL_2(\Q)\). For
+      \(\gamma\in\Gamma\) we choose a representative \(S_\gamma\in\GL_2(\Q)\), so that \(\gamma\) acts on \(D\) as
+      \(x\mapsto S_\gamma xS_\gamma^{-1}\).</p>
+    <p>A finite subgroup of \(\PGL_2(\mathbb R)\) is cyclic or dihedral. Indeed, it acts by isometries on the
+      hyperbolic plane, it fixes a point there, and its action on the tangent plane at that point embeds it
+      in \(O(2)\). Let an element of \(\PGL_2(\Q)\) have order \(n&gt;2\), and let \(S\) be a representative.
+      Then the ratio of the two eigenvalues of \(S\) is a primitive \(n\)-th root of unity \(\zeta\), and</p>
+    <div class="equation">\[
+      \frac{(\tr S)^2}{\det S}=2+\zeta+\zeta^{-1}\in\Q .
+    \]</div>
+    <p>Hence \(n\in\{3,4,6\}\). It follows that</p>
+    <div class="equation">\[
+      \Gamma\in\{C_1,C_2,C_3,C_4,C_6,D_4,D_6,D_8,D_{12}\},
+    \]</div>
+    <p>where \(C_n\) is cyclic of order \(n\) and the subscript on a dihedral group denotes its order; thus
+      \(D_4=C_2\times C_2\). When \(\Gamma\) is \(C_n\) or \(D_{2n}\) with \(n\ge3\), its rotation subgroup is
+      the unique cyclic subgroup \(\langle r\rangle\) of order \(n\). It is normal, and
+      \(\gamma r\gamma^{-1}\in\{r,r^{-1}\}\) for every \(\gamma\in\Gamma\).</p>
+    <p><strong>Trace-one representatives.</strong> Let \(r\in\Gamma\) have order \(n\ge3\), and let \(S\) be a
+      representative. Then \(\tr S\neq0\): otherwise \(S^2=-\det S\) is scalar by Cayley–Hamilton, and \(r\)
+      would have order at most \(2\). Put \(R=S/\tr S\). Its characteristic polynomial is \(X^2-X+d\), where
+      \(1/d=(\tr R)^2/\det R=2+\zeta+\zeta^{-1}\). Thus</p>
+    <div class="equation">\[
+      X^2-X+1\ (n=3),\qquad X^2-X+\tfrac12\ (n=4),\qquad X^2-X+\tfrac13\ (n=6),
+    \]</div>
+    <p>with discriminants \(-3\), \(-1\) and \(-1/3\), respectively. Since \(R(1-R)=d\), the trace-one
+      representative of \(r^{-1}\) is \(1-R\).</p>
+    <p><strong>Elliptic subvarieties.</strong> Let \(C\subset A_{\overline{\Q}}\) be an elliptic curve. By
+      Poincaré's reducibility theorem there is an elliptic curve \(C'\subset A_{\overline{\Q}}\), a complement
+      of \(C\), such that the addition map \(\mu:C\times C'\to A_{\overline{\Q}}\) is an isogeny. Choose an
+      isogeny \(\psi:A_{\overline{\Q}}\to C\times C'\) with \(\psi\circ\mu=[N]\) for some integer \(N\ge1\).
+      Composing \(\psi\) with the first projection and the inclusion of \(C\) gives an endomorphism
+      \(\varepsilon_C\) of \(A_{\overline{\Q}}\) with image \(C\), whose restriction to \(C\) is multiplication
+      by \(N\). Since \(\varepsilon_C\) is defined over \(L\), so is its image \(C\). Thus every elliptic curve
+      in \(A_{\overline{\Q}}\) is defined over \(L\). Each of them is isogenous to \(E_0\): composing its
+      inclusion with an isogeny \(A_{\overline{\Q}}\to E_0^2\) and a suitable projection gives a nonzero
+      homomorphism to \(E_0\).</p>
+  </section>
+
+  <section id="cyclotomic">
+    <h3>6. Polarization duality and an irreducible projective factor</h3>
+    <p>Let \(p\) be a prime, \(T=T_p(A)\) and \(V=V_p(A)\). The algebra \(D\otimes\Q_p\simeq M_2(\Q_p)\) acts
+      faithfully on \(V\), and \(G_{\Q}\) acts compatibly: \(g(xv)=(g\cdot x)(gv)\) for \(x\in D\otimes\Q_p\) and
+      \(v\in V\), where \(G_{\Q}\) acts on \(D\) through \(\Gamma\).</p>
+    <div class="theorem" id="duality-lemma">
+      <p><strong>Lemma 3 (polarization duality).</strong> Let \(T''\subset V\) be a \(G_{\Q}\)-stable lattice,
+        let \(H\subseteq G_{\Q}\) be a subgroup, and let \(Y\) be the semisimplification of \(T''/pT''\) as an
+        \(H\)-module. Then \(Y\simeq Y^*\otimes\chi_p|_H\).</p>
+    </div>
+    <p><strong>Proof.</strong> Every abelian variety over \(\Q\) has a polarization over \(\Q\). Combined with the
+      Weil pairing, it gives a nondegenerate alternating \(G_{\Q}\)-equivariant pairing
+      \(V\times V\to\Q_p(1)\), hence an isomorphism \(V\simeq V^*\otimes\Q_p(1)\). The lattice
+      \(\Hom_{\Z_p}(T'',\Z_p)\otimes\Z_p(1)\) is \(G_{\Q}\)-stable, with reduction
+      \((T''/pT'')^*\otimes\chi_p\). Transport it into \(V\) through this isomorphism. By input 5 over \(H\), its
+      residual semisimplification is \(Y\). On the other hand, dualizing and twisting are exact, so it is also
+      \(Y^*\otimes\chi_p|_H\). ∎</p>
+    <p>The polarization is used only on the rational Tate module, so its degree may be divisible by \(p\).</p>
+    <div class="theorem" id="cyclotomic-lemma">
+      <p><strong>Lemma 4.</strong> Let \(p\) be an odd prime. Suppose \(\Gamma\) preserves a maximal
+        \(\Z_p\)-order \(\mathcal R\) of \(D\otimes\Q_p\), and the induced projective action of \(\Gamma\) on the
+        natural two-dimensional residual module of \(\mathcal R\) is irreducible over \(\F_p\). If
+        \(A(\Q)[p]\neq0\), then \(\Q(\zeta_p)\subseteq L\).</p>
+    </div>
+    <p>To make the hypothesis precise, write \(\mathcal R=\End_{\Z_p}(\Lambda)\) for a lattice
+      \(\Lambda\subset\Q_p^2\). An element \(\gamma\in\Gamma\) preserves \(\mathcal R\) exactly when
+      \(S_\gamma\Lambda\) is homothetic to \(\Lambda\). We may then rescale \(S_\gamma\) so that
+      \(S_\gamma\in\GL(\Lambda)\). It is unique up to \(\Z_p^\times\), and its reduction gives a homomorphism
+      \(\Gamma\to\PGL(\Lambda/p\Lambda)\). The hypothesis is that no line in \(U=\Lambda/p\Lambda\) is stable
+      under this projective action.</p>
+    <p><strong>Proof.</strong> Put \(T'=\mathcal R T\). It is a full lattice in \(V\), because \(\mathcal R\) is
+      finite over \(\Z_p\). It is \(G_{\Q}\)-stable, because \(T\) and \(\mathcal R\) are. Choosing a basis of
+      \(\Lambda\) identifies \(\mathcal R\) with \(M_2(\Z_p)\). The matrix unit \(e_{21}\) maps \(e_{11}T'\)
+      isomorphically onto \(e_{22}T'\), with inverse \(e_{12}\). This gives</p>
+    <div class="equation">\[
+      T'\simeq\Lambda\otimes_{\Z_p}W_0,\qquad W_0=e_{11}T',
+    \]</div>
+    <p>where \(W_0\) is free of rank \(2\) and \(\mathcal R\) acts on the first factor.</p>
+    <p>Put \(\overline V=T'/pT'=U\otimes_{\F_p}\overline W_0\). By input 5, \(\overline V\) and \(T/pT=A[p]\) have
+      the same composition factors. Since \(A(\Q)[p]\neq0\), the module \(\overline V\) has a trivial
+      composition factor.</p>
+    <p>For \(g\in G_{\Q}\) with image \(\gamma\in\Gamma\), and \(x\in\mathcal R\), we have
+      \(g\circ\overline x\circ g^{-1}=\overline{S_\gamma xS_\gamma^{-1}}\) on \(\overline V\). Pull back the
+      central extension</p>
+    <div class="equation">\[
+      1\longrightarrow\F_p^\times\longrightarrow\GL_2(\F_p)\longrightarrow\PGL_2(\F_p)\longrightarrow1
+    \]</div>
+    <p>along the projective action of \(G_{\Q}\) on \(U\). The result is the group \(\widetilde G\) of pairs
+      \((g,\theta)\), with \(g\in G_{\Q}\) and \(\theta\in\GL(U)\) a lift of the projective class of
+      \(\overline{S_\gamma}\). For such a pair, \(g(\overline x\otimes1)g^{-1}=\theta\overline x\theta^{-1}\otimes1\)
+      for \(x\in\mathcal R\), because scalars cancel. Hence the operator \((\theta^{-1}\otimes1)\circ g\) on
+      \(\overline V\) commutes with \(M_2(\F_p)\otimes1\). The commutant of \(M_2(\F_p)\otimes1\) in
+      \(\End(U\otimes\overline W_0)\) is \(1\otimes\End(\overline W_0)\). Hence
+      \((\theta^{-1}\otimes1)\circ g=1\otimes w(g,\theta)\) for a unique \(w(g,\theta)\in\GL(\overline W_0)\).
+      By uniqueness, \(w\) is a homomorphism. Let \(W\) denote \(\overline W_0\) with this action of
+      \(\widetilde G\), and let \(\widetilde G\) act on \(U\) through \(\theta\). Then</p>
+    <div class="equation">\[
+      \overline V\simeq U\otimes_{\F_p}W
+    \]</div>
+    <p>as \(\widetilde G\)-modules, where \(\widetilde G\) acts on \(\overline V\) through its projection to
+      \(G_{\Q}\). Since this projection is surjective, a composition series of \(\overline V\) as a
+      \(G_{\Q}\)-module is one as a \(\widetilde G\)-module, so \(\overline V\) has a trivial
+      \(\widetilde G\)-composition factor.</p>
+    <p>The module \(U\) is irreducible by hypothesis. Since \(G_L\) acts trivially on \(D\), the pairs
+      \((h,1)\) with \(h\in G_L\) lie in \(\widetilde G\). They form a normal subgroup</p>
+    <div class="equation">\[
+      \widetilde H=\{(h,1):h\in G_L\}\subseteq\widetilde G,
+    \]</div>
+    <p>which acts trivially on \(U\).</p>
+    <p>If \(W\) had a \(\widetilde G\)-stable line \(W_1\), then \(\overline V\) would have the filtration
+      \(0\subset U\otimes W_1\subset U\otimes W\). Both graded pieces are twists of \(U\) by characters, hence
+      irreducible of dimension \(2\). By the Jordan–Hölder theorem, \(\overline V\) would have no trivial
+      composition factor. Thus \(W\) is irreducible.</p>
+    <p>The restriction \(W|_{\widetilde H}\) is semisimple. Indeed, choose a simple \(\widetilde H\)-submodule
+      of \(W\). Its \(\widetilde G\)-translates are simple \(\widetilde H\)-submodules, because \(\widetilde H\)
+      is normal. Their sum is a nonzero \(\widetilde G\)-submodule of \(W\), hence all of \(W\).</p>
+    <p>Therefore \(\overline V|_{\widetilde H}\simeq W|_{\widetilde H}\oplus W|_{\widetilde H}\) is semisimple.
+      It has a trivial composition factor, so \(\overline V^{\widetilde H}\neq0\). Since
+      \(\overline V^{\widetilde H}=U\otimes W^{\widetilde H}\), also \(W^{\widetilde H}\neq0\). The subspace
+      \(W^{\widetilde H}\) is \(\widetilde G\)-stable, because \(\widetilde H\) is normal, and \(W\) is
+      irreducible, so \(W^{\widetilde H}=W\). Hence \(G_L\) acts trivially on \(\overline V\).</p>
+    <p>Apply <a href="#duality-lemma">Lemma 3</a> to \(T''=T'\) and \(H=G_L\). Then \(Y\) is four copies of the
+      trivial character, while \(Y^*\otimes\chi_p\) is four copies of \(\chi_p|_{G_L}\). Hence
+      \(\chi_p|_{G_L}=1\), which is equivalent to \(\Q(\zeta_p)\subseteq L\). ∎</p>
+  </section>
+
+  <section id="rotations">
+    <h3>7. Rotations of order \(3\) or \(6\)</h3>
+    <p>Suppose that</p>
+    <div class="equation">\[
+      \Gamma\in\{C_3,C_6,D_6,D_{12}\},
+    \]</div>
+    <p>and let \(r\) generate the rotation subgroup, of order \(n\in\{3,6\}\). Let \(R\) be its trace-one
+      representative. Its characteristic polynomial is \(X^2-X+1\) or \(X^2-X+\frac13\), with discriminant
+      \(-3\) or \(-\frac13\), respectively. Modulo \(5\) these discriminants are \(2\) and \(3\), and neither is a
+      square. Hence the reduction of the characteristic polynomial modulo \(5\) is irreducible over
+      \(\F_5\). Thus \(\Q_5[R]\) is the unramified quadratic extension of \(\Q_5\), and \(\Z_5[R]\) is its ring of integers.</p>
+    <p>An \(R\)-stable \(\Z_5\)-lattice \(\Lambda\subset\Q_5^2\) is a finitely generated torsion-free module over
+      the discrete valuation ring \(\Z_5[R]\), and \(\Q_5^2\) has dimension \(1\) over \(\Q_5[R]\). Hence
+      \(\Lambda\) is free of rank \(1\) over \(\Z_5[R]\). Since the uniformizer of \(\Z_5[R]\) is \(5\), any two
+      such lattices are homothetic under \(\Q_5^\times\). Now suppose \(r\) fixes the homothety class of a
+      lattice \(\Lambda\), so \(R\Lambda=c\Lambda\) for some \(c\in\Q_5^\times\). Comparing indices gives
+      \(v_5(\det R)=2v_5(c)\). Since \(\det R\in\{1,\frac13\}\) is a \(5\)-adic unit, \(c\) is a unit and
+      \(R\Lambda=\Lambda\). Hence \(r\) fixes exactly one homothety class \([\Lambda_0]\).</p>
+    <p>Let \(\gamma\in\Gamma\). Since \(\gamma^{-1}r\gamma=r^{\pm1}\), we have
+      \(S_\gamma^{-1}RS_\gamma=c'R^{\pm1}\) for a scalar \(c'\). As \(R^{\pm1}\Lambda_0=\Lambda_0\), we get
+      \(R(S_\gamma\Lambda_0)=c'S_\gamma\Lambda_0\). Thus the class of \(S_\gamma\Lambda_0\) is fixed by \(r\),
+      hence equals \([\Lambda_0]\). It follows that</p>
+    <div class="equation">\[
+      \mathcal R=\End_{\Z_5}(\Lambda_0)
+    \]</div>
+    <p>is a \(\Gamma\)-stable maximal order. The projective action of \(r\) on \(\Lambda_0/5\Lambda_0\) is given by
+      the reduction of \(R\in\GL(\Lambda_0)\). Its characteristic polynomial is irreducible over \(\F_5\), so it
+      has no eigenvector. Hence no line in \(\Lambda_0/5\Lambda_0\) is stable, and the residual projective
+      action is irreducible.</p>
+    <p>Since \(A(\Q)[5]\neq0\), <a href="#cyclotomic-lemma">Lemma 4</a> gives \(\Q(\zeta_5)\subseteq L\). Then
+      \(\Gamma\) has a quotient \(\Gal(\Q(\zeta_5)/\Q)\simeq C_4\). But \(C_3\) and \(C_6\) have order prime
+      to \(4\), and the abelianizations of \(D_6\) and \(D_{12}\) are \(C_2\) and \(C_2\times C_2\). None of these
+      groups has a cyclic quotient of order \(4\), a contradiction.</p>
+  </section>
+
+  <section id="dihedral">
+    <h3>8. The dihedral group of order \(8\)</h3>
+    <p>Suppose \(\Gamma=D_8\), with rotation subgroup \(\langle r\rangle\) of order \(4\). Let \(R\) be the
+      trace-one representative of \(r\). Its characteristic polynomial \(X^2-X+\frac12\) has discriminant
+      \(-1\), which is congruent to \(2^2\) modulo \(5\). By Hensel's lemma, its roots \(\lambda_1,\lambda_2\) lie
+      in \(\Z_5\). They are units, since \(\lambda_1\lambda_2=\frac12\), and \(\lambda_1-\lambda_2=\pm\sqrt{-1}\) is a unit. Their ratio
+      \(\zeta=\lambda_1/\lambda_2\) satisfies \(\zeta+\zeta^{-1}=1/d-2=0\), so \(\zeta^2=-1\), and \(\zeta\) is a
+      primitive fourth root of unity. The ring</p>
+    <div class="equation">\[
+      \mathcal B=\Z_5[R]=\Z_5e_1\oplus\Z_5e_2,\qquad
+      e_1=\frac{R-\lambda_2}{\lambda_1-\lambda_2},\quad e_2=\frac{R-\lambda_1}{\lambda_2-\lambda_1},
+    \]</div>
+    <p>is a split quadratic order with orthogonal idempotents \(e_1,e_2\), and \(R=\lambda_1e_1+\lambda_2e_2\).
+      Since \(R\) is not scalar, each \(e_i\) is a rank-one idempotent of \(M_2(\Q_5)\).</p>
+    <p>The rotations act by conjugation by powers of \(R\), so they fix \(R\), \(e_1\) and \(e_2\). A reflection
+      \(s\) satisfies \(srs^{-1}=r^{-1}\). Hence \(S_sRS_s^{-1}\) represents \(r^{-1}\) and has trace \(1\), so
+      it is the trace-one representative \(1-R\) of \(r^{-1}\). Since \(\lambda_1+\lambda_2=1\), it sends \(e_1\) to
+      \((\lambda_1-R)/(\lambda_1-\lambda_2)=e_2\). Hence \(\mathcal B\) is \(\Gamma\)-stable: rotations fix
+      \(e_1\) and \(e_2\), and reflections interchange them. This holds even though \(\Gamma\) need not
+      preserve any maximal order.</p>
+    <p>Let \(K=L^{\langle r\rangle}\), a quadratic field. Put \(T'=\mathcal BT_5(A)\). As in Section 6, it is a
+      \(G_{\Q}\)-stable full lattice in \(V=V_5(A)\). We have</p>
+    <div class="equation">\[
+      T'=T_1\oplus T_2,\qquad T_i=e_iT'.
+    \]</div>
+    <p>Each \(T_i\) is a direct summand of \(T'\), hence free. The four-dimensional \(M_2(\Q_5)\)-module \(V\) is
+      the sum of two copies of the standard module, so \(V_i=e_iV\) has dimension \(2\) and \(T_i\) has rank
+      \(2\). The group \(G_K\) preserves each \(T_i\). Every element \(\tau\in G_{\Q}\setminus G_K\) satisfies
+      \(\tau T_1=T_2\) and \(\tau T_2=T_1\).</p>
+    <p>The space \(e_1(D\otimes\Q_5)e_2\) is one-dimensional. Let \(X\) span it. The group \(G_K\) acts on
+      \(D\otimes\Q_5\) through \(\langle r\rangle\), fixing \(e_1\) and \(e_2\), so</p>
+    <div class="equation">\[
+      g\cdot X=\eta(g)X\qquad(g\in G_K)
+    \]</div>
+    <p>for a character \(\eta:G_K\to\Z_5^\times\), trivial on \(G_L\). Since
+      \(RXR^{-1}=(\lambda_1/\lambda_2)X\), its value on a lift of \(r\) is \(\zeta\). Thus \(\eta\) has exact
+      order \(4\). Its reduction \(\overline\eta\) also has exact order \(4\), because \(\zeta^2=-1\) and
+      \(-1\not\equiv1\) modulo \(5\).</p>
+    <p>As a nonzero element of \(e_1M_2(\Q_5)e_2\), the matrix \(X\) maps the line \(e_2\Q_5^2\) isomorphically
+      onto \(e_1\Q_5^2\). Since \(V\) is a sum of two copies of \(\Q_5^2\), the map \(X:V_2\to V_1\) is an
+      isomorphism. For \(g\in G_K\) and \(v\in V_2\) we have
+      \(g(Xv)=\eta(g)X(gv)\). Hence \(X\) is a \(G_K\)-isomorphism \(\eta\otimes V_2\to V_1\). Put
+      \(\overline T_i=T_i/5T_i\). Input 5, applied to the lattices \(T_1\) and \(X(T_2)\) of \(V_1\), gives</p>
+    <div class="equation">\[
+      \overline T_1^{\,\mathrm{ss}}\simeq\overline\eta\otimes\overline T_2^{\,\mathrm{ss}} \tag{4}
+    \]</div>
+    <p>as \(G_K\)-modules. This step does not require \(X\) to carry \(T_2\) onto \(T_1\).</p>
+    <p>By input 5, \(T'/5T'=\overline T_1\oplus\overline T_2\) has the same composition factors as \(A[5]\), so it
+      has a trivial \(G_K\)-composition factor. Hence one of \(\overline T_1,\overline T_2\) has one. An element
+      \(\tau\in G_{\Q}\setminus G_K\) maps \(\overline T_1\) onto \(\overline T_2\) and intertwines the action of
+      \(g\in G_K\) on \(\overline T_1\) with that of \(\tau g\tau^{-1}\) on \(\overline T_2\). Conjugation preserves
+      trivial composition factors, so both \(\overline T_1\) and \(\overline T_2\) have one. By (4),
+      \(\overline T_1^{\,\mathrm{ss}}\) contains both \(\mathbf 1\) and \(\overline\eta\otimes\mathbf 1=\overline\eta\).
+      Since \(\overline\eta\neq\mathbf 1\) and \(\dim\overline T_1=2\),</p>
+    <div class="equation">\[
+      \overline T_1^{\,\mathrm{ss}}\simeq\mathbf 1\oplus\overline\eta,\qquad
+      \overline T_2^{\,\mathrm{ss}}\simeq\mathbf 1\oplus\overline\eta^{-1}.
+    \]</div>
+    <p>Since \(\overline\eta\) is trivial on \(G_L\), the restriction of \(T'/5T'\) to \(G_L\) has four trivial
+      composition factors.
+      <a href="#duality-lemma">Lemma 3</a>, with \(T''=T'\) and \(H=G_L\), gives \(\chi_5|_{G_L}=1\), that is,
+      \(\Q(\zeta_5)\subseteq L\). Then \(D_8\) would have a cyclic quotient of order \(4\). This is impossible,
+      since its abelianization is \(C_2\times C_2\).</p>
+    <p>Alternatively, apply Lemma 3 with \(H=G_K\). The \(G_K\)-composition factors of \(T'/5T'\) are
+      \(\mathbf 1,\mathbf 1,\overline\eta,\overline\eta^{-1}\), and the trivial character is the only one of
+      multiplicity at least \(2\). The dual twist consists of
+      \(\chi_5,\chi_5,\chi_5\overline\eta^{-1},\chi_5\overline\eta\), in which \(\chi_5|_{G_K}\) has
+      multiplicity at least \(2\). Hence \(\chi_5|_{G_K}=1\), which would put the quartic field
+      \(\Q(\zeta_5)\) inside the quadratic field \(K\).</p>
+  </section>
+
+  <section id="completion">
+    <h3>9. Completion of the proof</h3>
+    <p>Sections 7 and 8 leave</p>
+    <div class="equation">\[
+      \Gamma\in\{C_1,C_2,C_4,D_4\},
+    \]</div>
+    <p>so \([L:\Q]\in\{1,2,4\}\). By Section 5, every elliptic curve in \(A_{\overline{\Q}}\) is defined over
+      \(L\). Choose one, \(E\), and put \(F=A_L/E\), with quotient map \(q:A_L\to F\).</p>
+    <p>The elliptic curves \(E\) and \(F\) are \(L\)-isogenous. Indeed, let \(E'\) be a complement of \(E\) as
+      in Section 5, so that \(E\cap E'\) is finite; it is defined over \(L\). Both \(E\) and \(E'\) are isogenous
+      to \(E_0\), so there is a nonzero homomorphism \(h:E\to E'\) over \(\overline{\Q}\). Let
+      \(\varepsilon_E\) be the endomorphism of Section 5, with image \(E\) and restriction \([N]\) to \(E\).
+      Then \(\varphi=h\circ\varepsilon_E\), viewed as an endomorphism of \(A_{\overline{\Q}}\), is defined over
+      \(L\), and \(\varphi(E)=E'\). The composite</p>
+    <div class="equation">\[
+      E\xrightarrow{\;\varphi|_E\;}E'\xrightarrow{\;q|_{E'}\;}F
+    \]</div>
+    <p>is defined over \(L\). Both maps are isogenies: the first is \(Nh\), and the second has finite kernel
+      \(E\cap E'\).</p>
+    <p>For each \(p\in\{2,3,5\}\), the exact sequence</p>
+    <div class="equation">\[
+      0\longrightarrow E\longrightarrow A_L\xrightarrow{\;q\;}F\longrightarrow0
+    \]</div>
+    <p>shows that \(P_p\) lies in \(E(L)\) or maps to a point of order \(p\) in \(F(L)\). Thus the common
+      \(L\)-isogeny class of \(E\) and \(F\) contains curves with \(L\)-rational points of orders \(2\), \(3\)
+      and \(5\). By <a href="#combining-lemma">Lemma 1</a>, it contains an elliptic curve over \(L\) with a point of
+      order \(30\). Since \([L:\Q]\in\{1,2,4\}\), this contradicts input 1.</p>
+    <p>All three geometric types of Section 2 lead to a contradiction, which proves the theorem. ∎</p>
+  </section>
+
+  <section id="hypotheses">
+    <h3>10. Where the hypotheses are used</h3>
+    <p>Simplicity over \(\Q\) is used only in Section 3, where it forces Galois to interchange the two
+      geometric elliptic subvarieties. The other sections prove two stronger statements:</p>
+    <ul>
+      <li>If \(A/\Q_2\) is an abelian surface that is geometrically isogenous to the square of a CM elliptic
+        curve, then \(A(\Q_2)\) has no point of order \(15\) (<a href="#cm-proposition">Proposition 2</a>).
+        In particular, such an \(A/\Q\) has no rational point of order \(15\).</li>
+      <li>If \(A/\Q\) is an abelian surface that is geometrically isogenous to the square of an elliptic curve
+        without complex multiplication, then \(A(\Q)\) has no point of order \(30\) (Sections 5–9), whether or
+        not \(A\) is simple over \(\Q\).</li>
+    </ul>
+    <p>Hence an abelian surface over \(\Q\) with a rational point of order \(30\) that is geometrically split
+      is geometrically isogenous to a product of two elliptic curves that are not geometrically isogenous,
+      and it is not simple over \(\Q\). In Section 3 the points of orders \(2\), \(3\) and \(5\) enter only
+      through Lemma 1. In Section 4 the points of orders \(3\) and \(5\) together give the contradiction, and
+      the point of order \(2\) is not used. In the non-CM square case, the point of order \(5\) drives
+      Sections 7 and 8, and the points of orders \(2\) and \(3\) enter only through Lemma 1 in Section 9.</p>
+    <p>No step uses the degree of a geometric splitting isogeny, the maximality of the integral endomorphism
+      ring, or a principal polarization. No numerical computation is required: the only finite check, the
+      determination of the Weil polynomial in Section 4, is carried out by hand.</p>
+  </section>
+
+  <section id="census">
+    <h3>11. Consequences for the census</h3>
+    <p>The groups <a href="../group.html?g=30">[30]</a>, <a href="../group.html?g=60">[60]</a> and
+      <a href="../group.html?g=2.30">[2,30]</a> are impossible in the class “geometrically split, simple over
+      \(\Q\)”. They are the only census groups containing a point of order \(30\).</p>
+    <p>Simplicity over \(\Q\) is essential. All three groups have examples in the class “split over \(\Q\)”:
+      <a href="../curve.html?id=30.b">30.b</a>, <a href="../curve.html?id=60.a">60.a</a> and
+      <a href="../curve.html?id=2.30.a">2.30.a</a>. By Section 10, the two elliptic factors of each of these
+      Jacobians are not geometrically isogenous. Thus these exclusions do not change the combined
+      geometrically split <b>∞?</b> grade of any of the three groups, which remains certified exact, through
+      families split over \(\Q\). The group [30] also keeps its geometrically simple example
+      <a href="../curve.html?id=30.a">30.a</a>.</p>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="dn"><p>M. Derickx and F. Najman,
+        <a href="https://arxiv.org/abs/2412.16016v2"><i>Classification of torsion of elliptic curves over quartic
+        fields</i></a>, arXiv:2412.16016v2 (2025), Theorem 1.1.</p></li>
+      <li id="mazur"><p>B. Mazur, <a href="https://www.numdam.org/item/PMIHES_1977__47__33_0/"><i>Modular curves
+        and the Eisenstein ideal</i></a>, Publications Mathématiques de l'IHÉS <b>47</b> (1977), 33–186,
+        Theorem (8).</p></li>
+      <li id="km"><p>M. A. Kenku and F. Momose, <a href="https://doi.org/10.1017/S0027763000002816"><i>Torsion
+        points on elliptic curves defined over quadratic fields</i></a>, Nagoya Mathematical Journal <b>109</b>
+        (1988), 125–149, Theorem (0.1).</p></li>
+      <li id="serre-tate"><p>J.-P. Serre and J. Tate, <a href="https://doi.org/10.2307/1970722"><i>Good reduction
+        of abelian varieties</i></a>, Annals of Mathematics <b>88</b> (1968), 492–517: Theorem 1 and its
+        Corollary 2 (p. 493), Lemma 2 (p. 495), the case of a finite residue field in §2 (p. 498), and
+        Theorem 6(a) (p. 503).</p></li>
+      <li id="tate"><p>J. Tate, <a href="https://doi.org/10.1007/BF01404549"><i>Endomorphisms of abelian varieties
+        over finite fields</i></a>, Inventiones Mathematicae <b>2</b> (1966), 134–144, Theorem 2(c).</p></li>
+      <li id="clark-xarles"><p>P. L. Clark and X. Xarles,
+        <a href="https://doi.org/10.4153/CJM-2008-026-x"><i>Local bounds for torsion points on abelian
+        varieties</i></a>, Canadian Journal of Mathematics <b>60</b> (2008), 532–555, §2.4 and Theorem 1.4.
+        Theorem 1.4 concerns abelian surfaces with everywhere anisotropic reduction, a class that includes
+        potentially good reduction.</p></li>
+      <li id="clark"><p>P. L. Clark, <a href="https://arxiv.org/abs/math/0407264"><i>Bounds for torsion on abelian
+        varieties with integral moduli</i></a>, arXiv:math/0407264v2 (2004), §2.1 and Theorem 5.</p></li>
+    </ol>
+    <p>Related proofs: <a href="qsimple-35-obstruction.html">order 35</a>, and
+      <a href="geometric-33-34-obstruction.html">orders 33 and 34</a>.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsimple-30-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

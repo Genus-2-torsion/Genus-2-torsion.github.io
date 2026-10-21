@@ -1,0 +1,22 @@
+Magma V2.30-1
+model: Hyperelliptic Curve defined by y^2 + (-x^3 - 1)*y = -2*x^5 + 2*x^4 - 5*x^3 + 2*x^2 - 2*x over Rational Field
+CHECK model: #X(F_p) = p+1-tr T_p for 3 <= p < 100, p <> 13
+CHECK w_2 is the moduli Atkin-Lehner involution (Phi_2 test at 5 quadratic points)
+X_0(26)/w_2 is isomorphic to [ 1, 0, 1, -5, -8 ]
+26a1
+26a1: rank 0 (proved), torsion Z/3
+rational points of the quotient: [ (0 : 1 : 0), (4 : -9 : 1), (4 : 4 : 1) ]
+ images: [ (0 : 1 : 0), (4 : -9 : 1), (4 : 4 : 1) ]
+H_{-52} = t^2 - 6896880000*t - 567663552000000
+fibre over a rational point of X_0(26)/w_2 (reduced degree 2):
+   (-1 : r1 : 1) over a field of degree 2: j has minimal polynomial Y^2 - 6896880000*Y - 567663552000000
+   (-1 : -r1 : 1) over a field of degree 2: j has minimal polynomial Y^2 - 6896880000*Y - 567663552000000
+fibre over a rational point of X_0(26)/w_2 (reduced degree 2):
+   (0 : 1 : 1) : rational cusp
+   (1 : 1 : 0) : rational cusp
+fibre over a rational point of X_0(26)/w_2 (reduced degree 2):
+   (0 : 0 : 1) : rational cusp
+   (1 : 0 : 0) : rational cusp
+CHECK fibres: 4 rational cusps and one conjugate pair over Q(sqrt 13) with j a root of H_{-52}
+CHECK X_0(26)(Q) consists of the 4 rational cusps
+ALL_CHECKS_PASSED

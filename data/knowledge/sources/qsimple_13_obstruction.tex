@@ -1,0 +1,1109 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+\newenvironment{statement}[1]{\par\medskip\noindent\phantomsection\textbf{#1}\ }{\par\medskip}
+\setlength{\emergencystretch}{3em}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\NS}{NS}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\tr}{tr}
+\title{No rational \(13\)-torsion on geometrically split Jacobians that are simple over \(\Q\)}
+\author{}
+\date{21 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem*}
+Let \(C/\Q\) be a curve of genus \(2\) whose Jacobian \(J\) is geometrically split. If
+      \(J(\Q)\) contains a point of order \(13\), then \(J\) is not simple over \(\Q\).
+\end{theorem*}
+
+\begin{corollary*}
+No geometrically split genus-\(2\) Jacobian over \(\Q\) has a rational point of
+      order \(13\). In particular, \href{https://genus-2-torsion.github.io/group.html?g=13}{\([13]\)}, \href{https://genus-2-torsion.github.io/group.html?g=26}{\([26]\)}, \href{https://genus-2-torsion.github.io/group.html?g=2.26}{\([2,26]\)} and \href{https://genus-2-torsion.github.io/group.html?g=39}{\([39]\)} do not occur as the rational torsion
+      subgroup of a geometrically split genus-\(2\) Jacobian over \(\Q\).
+\end{corollary*}
+
+Here ``geometrically split'' means that \(J_{\bar\Q}\) is isogenous to a product of two elliptic curves;
+    we impose no restriction on the degree of this isogeny, on the field of definition of the geometric
+    endomorphisms, or on the integral endomorphism ring. The proof uses the principal polarization of \(J\),
+    and this cannot be avoided: there are abelian surfaces over \(\Q\) that are simple over \(\Q\), geometrically
+    split, and have a rational point of order \(13\) (Section~\ref{remarks}). Proposition 2 shows that each of them is of one of two special types.
+
+The Magma scripts and logs cited below are published with this proof at \url{https://genus-2-torsion.github.io/data/knowledge/sources/}.
+
+\section{Conventions and standard facts}\label{facts}
+
+For a field \(k\) we write \(G_k=\Gal(\bar k/k)\). For a prime \(\ell\), \(\chi_\ell\) is the
+      \(\ell\)-adic cyclotomic character and \(\bar\chi_\ell\) its reduction modulo \(\ell\); thus
+      \(\bar\chi_{13}:G_{\Q}\to\F_{13}^\times\) is surjective of order \(12\). For an abelian variety \(X\)
+      over a field \(k\) of characteristic \(0\), \(T_\ell X\) is its \(\ell\)-adic Tate module,
+      \(V_\ell X=T_\ell X\otimes\Q_\ell\), \(\End^0=\End\otimes\Q\), \(\Hom^0=\Hom\otimes\Q\), and
+      \(X\sim_k Y\) means that \(X\) and \(Y\) are isogenous over \(k\). For a \(G\)-stable
+      \(\Z_\ell\)-lattice \(\Lambda\) in a \(\Q_\ell[G]\)-module we put \(\bar\Lambda=\Lambda/\ell\Lambda\),
+      and \((\cdot)^{\mathrm{ss}}\) denotes semisimplification. A ``constituent'' is a Jordan--Hölder factor.
+      For a character \(\eta\) of \(G_K\) and \(\tau\in G_{\Q}\) normalizing \(G_K\) we put
+      \(\eta^\tau(g)=\eta(\tau^{-1}g\tau)\), and similarly for representations.
+
+We use the following standard facts.
+
+\begin{itemize}
+\item \textbf{(F1) Lattices and isogenies.} Let \(A\) be an abelian variety over a number field \(k\).
+          A \(k\)-isogeny \(f:B\to A\) gives \(G_k\)-stable lattices \(f_*T_\ell B\subset V_\ell A\), equal to
+          \(T_\ell A\) for almost all \(\ell\). If \(f:B\to A\) and \(f':B'\to A\) are \(k\)-isogenies with
+          \(f'_*T_\ell B'=\alpha\, f_*T_\ell B\) for every \(\ell\), for some \(\alpha\in\End^0_k(A)^\times\),
+          then \(B\cong_k B'\): the quasi-isogeny \(f^{-1}\alpha^{-1}f'\) is an isomorphism. For an
+          elliptic curve \(E/k\), every \(G_k\)-stable lattice \(\Lambda\subset V_\ell E\) is \(h_*^{-1}(T_\ell P)\)
+          for some \(k\)-isogeny \(h:E\to P\) of \(\ell\)-power degree, up to multiplication by a power of \(\ell\).
+\item \textbf{(F2) Riemann forms.} A polarization \(\lambda\) of an abelian variety \(B/\Q\) gives a
+          \(G_{\Q}\)-equivariant alternating pairing \(E^\lambda:T_\ell B\times T_\ell B\to\Z_\ell(1)\),
+          nondegenerate on \(V_\ell B\). The polarization is principal if and only if \(E^\lambda\) is perfect
+          on \(T_\ell B\) for every \(\ell\). The class of \(\lambda\) lies in
+          \(\NS(B_{\bar\Q})^{G_{\Q}}\), and a quasi-isogeny identifies the spaces
+          \(\NS(\cdot_{\bar\Q})\otimes\Q\) compatibly with the Galois action and the Riemann forms.
+\item \textbf{(F3) Néron--Severi group of a square.} Let \(E\) be an elliptic curve without CM over an
+          algebraically closed field, with Weil pairing \(e\). Then \(\NS(E\times E)\cong\Sym_2(\Z)\), the
+          symmetric integral \(2\times2\) matrices: \(S\) corresponds to the class whose Riemann form on
+          \(T_\ell E\otimes\Z^2\) is \((v\otimes a,w\otimes b)\mapsto a^{t}Sb\cdot e(v,w)\). A positive definite
+          \(S\) is a polarization of degree \((\det S)^2\), and \(S=I\) is the product polarization.
+          An endomorphism \(N\in M_2(\Z)=\End(E\times E)\) has degree \((\det N)^2\).
+\item \textbf{(F4) Brauer--Nesbitt.} For a continuous representation of a profinite group \(G\) on a
+          finite-dimensional \(\Q_\ell\)-vector space \(V\), the semisimplification \(\bar\Lambda^{\mathrm{ss}}\)
+          does not depend on the \(G\)-stable lattice \(\Lambda\subset V\), and the constituents of any
+          quotient \(\Lambda_1/\Lambda_2\) of stable lattices \(\Lambda_2\subset\Lambda_1\) lie among those of
+          \(\bar\Lambda^{\mathrm{ss}}\). The same applies to two isomorphic representations, after
+          transporting a lattice through the isomorphism.
+\item \textbf{(F5) Burnside and Nakayama.} If a subgroup \(H\subset\GL_n(\Z_\ell)\) has absolutely
+          irreducible reduction modulo \(\ell\), then the \(\Z_\ell\)-span of \(H\) is \(M_n(\Z_\ell)\):
+          by Burnside's theorem its reduction spans \(M_n(\F_\ell)\), and Nakayama's lemma lifts this.
+\item \textbf{(F6) Morita.} Let \(\mathcal O\) be \(\Z_\ell\), a finite étale \(\Z_\ell\)-algebra, or
+          the ring of integers of a finite extension of \(\Q_\ell\), and let \(W=\mathcal O^2\) with its
+          natural \(M_2(\mathcal O)\)-action. Every \(M_2(\mathcal O)\)-stable \(\Z_\ell\)-lattice
+          \(\Lambda\subset W\otimes\Q\) equals \(\mathfrak aW\) for a fractional \(\mathcal O\)-ideal
+          \(\mathfrak a\). Indeed \(\Lambda=e_{11}\Lambda\oplus e_{22}\Lambda\), the matrix unit \(e_{21}\)
+          maps \(e_{11}\Lambda\) isomorphically onto \(e_{22}\Lambda\), and \(e_{11}\Lambda\) is an
+          \(\mathcal O\)-lattice in a free module of rank one over \(\mathcal O\otimes\Q\), hence of the form
+          \(\mathfrak a\,e_{11}W\).
+\item \textbf{(F7) Forms of a square.} Let \(E\) be an elliptic curve without CM over a number field
+          \(k\). Then \(\End^0(E^2_{\bar k})=M_2(\Q)\) consists of endomorphisms defined over \(k\), and
+          abelian varieties \(X/k\) with \(X_{\bar k}\sim E^2_{\bar k}\) correspond, up to \(k\)-isogeny, to
+          \(\GL_2(\Q)\)-conjugacy classes of continuous homomorphisms \(\rho:G_k\to\GL_2(\Q)\), which have
+          finite image. We write \(X\sim_k E\otimes\rho\). Then \(G_k\) acts on
+          \(\End^0(X_{\bar k})\cong M_2(\Q)\) by \(\mathrm{Ad}\circ\rho\), and \(\End^0_k(X)\) is the
+          commutant of \(\rho(G_k)\) in \(M_2(\Q)\). If \(\Lambda\cong\Z^2\) is \(\Z[i]\) or \(\Z[\zeta_3]\)
+          and \(\psi:G_k\to\Lambda^\times\) is a character of finite order, then \(E\otimes\Lambda(\psi)\)
+          denotes the twist of \(E\otimes_{\Z}\Lambda\cong E^2\) by the cocycle \(g\mapsto\psi(g)\) (acting
+          by multiplication on \(\Lambda\)); its Tate module is \(T_\ell E\otimes\Lambda\), on which \(g\)
+          acts by \(\rho_{E,\ell}(g)\otimes\psi(g)\).
+\item \textbf{(F8) Product polarizations are not Jacobians.} If \((B,\lambda)\) is a principally polarized
+          abelian surface over \(\Q\) such that \((B_{\bar\Q},\lambda)\) is isomorphic to a product
+          \(E_1\times E_2\) with the product polarization, then \((B,\lambda)\) is not the Jacobian of a
+          curve of genus \(2\): the theta divisor of a genus-\(2\) Jacobian is irreducible, while that of
+          a product is \(E_1\times\{0\}\cup\{0\}\times E_2\).
+\item \textbf{(F9) Elliptic curves over \(\Q\).} No elliptic curve over \(\Q\) has a rational point of
+          order \(13\) (Mazur~\cite[Theorem (7\({}'\))]{Maz}). No elliptic curve over \(\Q\) has a rational cyclic
+          isogeny of degree \(26\), \(39\), or \(169\): for \(26\) and \(39\) this is part of the computations
+          \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_26.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}26.m}} and \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_39.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}39.m}} (the rational points of \(X_0(26)\) and
+          \(X_0(39)\) are cusps; for \(39\) see also Kenku~\cite{Ken79}), and for \(169\) it is
+          Kenku~\cite{Ken80}. In particular, an elliptic curve over \(\Q\) has at most one rational
+          subgroup of order \(13\): two of them, \(C\neq C'\), would give the cyclic isogeny
+          \(E/C'\to E\to E/C\) of degree \(169\).
+\item \textbf{(F10) Faltings.} For abelian varieties \(X,Y\) over a number field \(k\), \(V_\ell X\) is a
+          semisimple \(G_k\)-module and \(\Hom_k(X,Y)\otimes\Z_\ell\to{}\) \(\Hom_{G_k}(T_\ell X,T_\ell Y)\) is an
+          isomorphism (Faltings~\cite[§5, Satz 3 and Korollar 1]{Fal}). In particular, for an elliptic
+          curve \(E/k\) without CM, \(V_\ell E\) is an irreducible \(G_k\)-module.
+\end{itemize}
+
+\begin{statement}{Lemma 1.}\label{lemma-sequence}
+Let \(X\) be an abelian surface over a number field \(k\), let \(E\subset X\) be an elliptic curve
+          defined over \(k\), and let \(Q\in X(k)\) have prime order \(q\). Then either \(Q\in E(k)\), or the
+          image of \(Q\) in \((X/E)(k)\) has order \(q\).
+\end{statement}
+
+\emph{Proof.} The image of \(Q\) is zero exactly when \(Q\in E\). \qed
+
+\section{The case distinction and the main proposition}\label{cases}
+
+Let \(A/\Q\) be an abelian surface that is simple over \(\Q\), with
+      \(A_{\bar\Q}\sim E_1\times E_2\). Exactly one of the following holds:
+
+\begin{itemize}
+\item \textbf{(N)} \(E_1\) and \(E_2\) are not isogenous;
+\item \textbf{(CM)} \(E_1\sim E_2=:E\) and \(E\) has complex multiplication;
+\item \textbf{(S)} \(E_1\sim E_2=:E\) and \(E\) has no complex multiplication.
+\end{itemize}
+
+In case (S), \(D:=\End^0(A_{\bar\Q})\cong M_2(\Q)\). Let \(L\) be the smallest field over which all
+      geometric endomorphisms of \(A\) are defined; it is a finite Galois extension of \(\Q\). The group
+      \(\Gamma=\Gal(L/\Q)\) acts faithfully on \(D\), and \(\End^0_{\Q}(A)=D^\Gamma\). By Skolem--Noether
+      this action embeds \(\Gamma\) into \(\operatorname{Aut}(M_2(\Q))=\PGL_2(\Q)\); we write
+      \(g\mapsto[R_g]\), so that \(g\) acts on \(D\) by \(\mathrm{Ad}(R_g)\).
+
+A finite subgroup of \(\PGL_2(\mathbb R)\) is cyclic or dihedral: it fixes a point of the
+      hyperbolic plane and embeds into \(O(2)\). If \([R]\in\PGL_2(\Q)\) has order \(n>2\), the ratio of
+      the eigenvalues of \(R\) is a primitive \(n\)-th root of unity \(\zeta\), and
+      \((\tr R)^2/\det R=2+\zeta+\zeta^{-1}\in\Q\); hence \(n\in\{3,4,6\}\). Therefore
+
+\[
+\Gamma\in\{C_1,\ C_2,\ C_3,\ C_4,\ C_6,\ V_4,\ D_6,\ D_8,\ D_{12}\},
+\]
+
+where \(D_{2n}\) is dihedral of order \(2n\) (so \(D_6\cong S_3\)) and \(V_4\) is the Klein four group.
+      An element \(r\) of order \(n\in\{3,4,6\}\) has a unique representative \(R\) with \(\tr R=1\); its
+      characteristic polynomial is \(X^2-X+1/c\) with \(c=1,2,3\) respectively, of discriminant
+      \(-3,-1,-1/3\).
+
+Every elliptic subvariety of \(A_{\bar\Q}\) is the image of an integral multiple of a rank-one
+      idempotent of \(D\), so it is defined over \(L\). If \(E,E'\subset A_L\) are elliptic subvarieties,
+      every geometric homomorphism \(E'\to E\) is defined over \(L\): composing with an \(L\)-rational
+      quasi-projection \(A\to E'\) and the inclusion \(E\subset A\) embeds \(\Hom^0(E'_{\bar\Q},E_{\bar\Q})\)
+      \(G_L\)-equivariantly into \(D\), on which \(G_L\) acts trivially.
+
+\begin{statement}{Proposition 2.}\label{prop-main}
+Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and geometrically split, with
+          \(A(\Q)[13]\neq0\). Then \(A\) is of type (S) and \(\Gamma\cong C_2\) or \(\Gamma\cong C_3\). Moreover:
+
+\begin{enumerate}
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\item if \(\Gamma\cong C_3\), no abelian surface that is \(\Q\)-isogenous to \(A\) admits a principal
+              polarization over \(\Q\);
+\item if \(\Gamma\cong C_2\), then for every principally polarized abelian surface \((B,\lambda)\) over
+              \(\Q\) with \(B\sim_{\Q}A\), the pair \((B_{\bar\Q},\lambda)\) is isomorphic to a product of two
+              elliptic curves with the product polarization.
+\end{enumerate}
+\end{statement}
+
+\emph{Proof of the Theorem from Proposition 2.} Let \(J\) be the Jacobian of a genus-\(2\) curve over
+      \(\Q\), geometrically split, with a rational point of order \(13\), and suppose that \(J\) is simple over
+      \(\Q\). Apply Proposition 2 to \(A=J\). If \(\Gamma\cong C_3\), the principal polarization of \(J\)
+      contradicts (a). If \(\Gamma\cong C_2\), part (b) says that \(J\) with its canonical polarization is
+      geometrically a product with the product polarization, which contradicts (F8). \qed
+
+\emph{Proof of the Corollary.} If \(J\) is split over \(\Q\), it contains an elliptic curve
+      \(E\) over \(\Q\), and by \hyperref[lemma-sequence]{Lemma~1} a rational point of order \(13\) on \(J\) gives one
+      on \(E\) or on \(J/E\), contrary to (F9). If \(J\) is simple over \(\Q\), apply the Theorem. \qed
+
+The proof of Proposition 2 occupies Section~\ref{type-n} to Section~\ref{c2}: type (N) in Section~\ref{type-n}, type
+      (CM) in Section~\ref{type-cm}, \(\Gamma\in\{C_1,V_4,D_6,D_8,D_{12}\}\) in Section~\ref{noncyclic}, \(\Gamma=C_6\) in
+      Section~\ref{c6}, \(\Gamma=C_4\) in Section~\ref{c4}, \(\Gamma=C_3\) in Section~\ref{c3}, and \(\Gamma=C_2\) in Section~\ref{c2}.
+      In all cases except \(C_3\) and \(C_2\) we show that \(A(\Q)[13]=0\); no polarization hypothesis is
+      needed there.
+
+\section{Two non-isogenous geometric factors}\label{type-n}
+
+Suppose that \(A\) is of type (N) and that \(P\in A(\Q)\) has order \(13\).
+
+\begin{enumerate}
+\item \(A_{\bar\Q}\) has exactly two elliptic subvarieties: for each \(E_i\), the space
+          \(\Hom^0(E_i,A_{\bar\Q})\) has rank one over \(\End^0(E_i)\), so all nonzero maps
+          \(E_i\to A_{\bar\Q}\) have the same image.
+\item \(G_{\Q}\) permutes these two subvarieties. If it fixed them, they would be defined over \(\Q\)
+          and \(A\) would not be simple over \(\Q\). Hence they are exchanged, and they are \(E\) and
+          \(E^\sigma\) for an elliptic curve \(E\) over a quadratic field \(K\), where \(\sigma\) generates
+          \(\Gal(K/\Q)\).
+\item The quotient map restricts to a \(K\)-isogeny \(E^\sigma\to A_K/E\), so \(A_K/E\sim_K E^\sigma\).
+\item By \hyperref[lemma-sequence]{Lemma~1}, either \(E(K)\) or \((A_K/E)(K)\) has a point of order \(13\). So there is
+          an elliptic curve \(E''/K\) with a \(K\)-point of order \(13\) and \(E''\sim_K E\) or
+          \(E''\sim_K E^\sigma\).
+\item By Bosman--Bruin--Dujella--Najman~\cite[Theorem 11(1)]{BBDN}, an elliptic curve over a quadratic field with a point of order
+          \(13\) is isomorphic over that field to its Galois conjugate: \(E''\cong_K E''^\sigma\).
+\item Conjugating the isogeny of step 4 by \(\sigma\), we obtain \(E\sim_K E^\sigma\) in both cases, for
+          instance \(E^\sigma\sim_K E''\cong_K E''^\sigma\sim_K E\) in the first case. This contradicts the
+          assumption that \(E_1\) and \(E_2\) are not isogenous. \qed
+\end{enumerate}
+
+\section{Factors with complex multiplication}\label{type-cm}
+
+Suppose that \(A\) is of type (CM), with CM field \(M\), and that \(A(\Q)[13]\neq0\).
+
+\begin{statement}{Lemma 3.}\label{lemma-cm-field}
+The field \(M\) is \(\Q(i)\) or \(\Q(\sqrt{-3})\).
+\end{statement}
+
+\emph{Proof.}
+
+\begin{enumerate}
+\item \emph{Good reduction over a totally ramified extension of \(\Q_2\).} The curve \(E\) has
+          potentially good reduction everywhere, because it has CM (its \(j\)-invariant is an algebraic
+          integer), and hence so does \(A\): good reduction
+          over a finite extension passes to products and isogenies (Serre--Tate~\cite[§1, Theorem~1 and Corollaries~2 and~3]{ST}).
+          By \cite[§2, Theorem~2(i)]{ST}, the inertia group \(I\subset G_{\Q_2}\) acts on \(T_3A\) through a finite
+          quotient. Put \(N=I\cap\ker(\rho_{A,3})\), an open normal subgroup of \(I\) that is normal in
+          \(G_{\Q_2}\). The group \(G_{\Q_2}/N\) is an extension of \(G_{\Q_2}/I\cong\hat\Z\) by the finite
+          group \(I/N\); since \(\hat\Z\) is free, the extension splits, and there is a closed subgroup
+          \(H\supseteq N\) with \(H\cap I=N\) and \(HI=G_{\Q_2}\). Its fixed field \(F\) is a finite extension
+          of \(\Q_2\) with residue field \(\F_2\), i.e. totally ramified, whose inertia group \(N\) acts
+          trivially on \(T_3A\). By the Néron--Ogg--Shafarevich criterion \cite[§1, Theorem~1]{ST}, \(A\) has good reduction
+          \(\bar A/\F_2\) over \(F\). Prime-to-\(2\) torsion of \(A(F)\) injects into \(\bar A(\F_2)\), so
+          \(13\) divides \(\#\bar A(\F_2)=P(1)\), where \(P\) is the characteristic polynomial of the
+          Frobenius endomorphism \(\pi\) of \(\bar A\).
+\item \emph{The Weil polynomial.} Write
+
+\[
+P(T)=(T^2-\beta_1T+2)(T^2-\beta_2T+2)=T^4+aT^3+bT^2+2aT+4
+\]
+
+with real \(|\beta_i|\le2\sqrt2\). The script \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_cm_weil.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}cm\_\allowbreak{}weil.m}} enumerates all such
+          integer pairs \((a,b)\) exactly; the values of \(P(1)\) are \(1,\dots,16,19,20,25\), and the only
+          polynomial with \(13\mid P(1)\) is
+
+\[
+P(T)=T^4+2T^3+2T^2+4T+4,\qquad P(1)=13.
+\]
+
+It is irreducible, and its root field is \(\Q(\zeta_{12})\).
+\item \emph{Frobenius commutes with \(M\).} All geometric endomorphisms of \(A\) are defined over a
+          finite extension \(F'\) of \(F\) and reduce injectively into \(\End^0(\bar A_{\bar\F_2})\), compatibly
+          with the Galois action: if \(g\in G_F\) induces the Frobenius of the residue field, then the
+          reduction of \(g(m)\) is \(\pi\bar m\pi^{-1}\). The field \(M\) is the centre of
+          \(\End^0(A_{\bar\Q})=M_2(M)\), so \(g(m)\in\{m,\bar m\}\) for \(m\in M\). If \(g\) acted on \(M\) by
+          complex conjugation, then \(\pi\bar s\pi^{-1}=-\bar s\) for the reduction \(\bar s\) of
+          \(s=\sqrt{-d}\in M\), so \(\pi\) and \(-\pi\) would be conjugate and \(P(T)=P(-T)\), i.e. \(a=0\).
+          But \(a=2\). Hence \(\pi\) commutes with the reduction of \(M\).
+\item \emph{Conclusion.} The endomorphisms of \(\bar A_{\bar\F_2}\) commuting with \(\pi\) are those defined
+          over \(\F_2\). Since \(P\) has no multiple root, \(\End^0_{\F_2}(\bar A)=\Q(\pi)\cong\Q(\zeta_{12})\)
+          by Tate~\cite[Theorem 2(c)]{Tat}. So \(M\) embeds into \(\Q(\zeta_{12})\), whose imaginary quadratic
+          subfields are \(\Q(i)\) and \(\Q(\sqrt{-3})\). \qed
+\end{enumerate}
+
+Let \(E_M/\Q\) be \(y^2=x^3-x\) if \(M=\Q(i)\), and \(y^2=x^3+1\) if \(M=\Q(\sqrt{-3})\). It has CM by
+      \(\mathcal O_M\), defined over \(M\), and good ordinary reduction at \(13\), which splits in \(M\)
+      (conductors \(32\) and \(36\); \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_cm_weil.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}cm\_\allowbreak{}weil.m}}).
+
+\begin{statement}{Proposition 4.}\label{prop-cm}
+If \(A\) is of type (CM), then \(A(\Q)[13]=0\).
+\end{statement}
+
+\emph{Proof.} Suppose \(A(\Q)[13]\neq0\); by \hyperref[lemma-cm-field]{Lemma~3}, \(M\) is \(\Q(i)\) or
+      \(\Q(\sqrt{-3})\).
+
+\begin{enumerate}
+\item \emph{The twisting representation.} Since \(A_{\bar\Q}\sim E_M^2\), the surface \(A\) is a form of
+          \(E_M^2\) in the isogeny category, given by a cocycle \(g\mapsto a_g\in\GL_2(M)=\operatorname{Aut}^0(E^2_{M,\bar\Q})\),
+          where \(G_{\Q}\) acts on \(\GL_2(M)\) through \(\Gal(M/\Q)\). On \(G_M\) the cocycle is a continuous
+          homomorphism \(\rho:G_M\to\GL_2(M)\), so it has finite image. An element of \(\GL_2(M)\) of finite
+          order \(n\) has eigenvalues of degree at most \(2\) over \(M\), so \(\varphi(n)\le4\) and
+          \(13\nmid n\); hence \(13\nmid\#\rho(G_M)\). Transport by a quasi-isogeny shows that
+          \(g\in G_M\) acts on \(V_\ell A\cong V_\ell E_M\otimes_{M\otimes\Q_\ell}(M\otimes\Q_\ell)^2\) by
+          \(\rho_{E_M,\ell}(g)\otimes\rho(g)\).
+\item \emph{The two \(\mathfrak p\)-components.} Write \(13=\mathfrak p\bar{\mathfrak p}\) in \(M\), with
+          embeddings \(\iota_{\mathfrak p},\iota_{\bar{\mathfrak p}}:M\to\Q_{13}\), and
+          \(V_{13}E_M=V_{\mathfrak p}\oplus V_{\bar{\mathfrak p}}\), on which \(G_M\) acts by characters
+          \(\alpha_{\mathfrak p},\alpha_{\bar{\mathfrak p}}:G_M\to\Z_{13}^\times\). Then
+          \(V_{13}A=V_{\mathfrak p}(A)\oplus V_{\bar{\mathfrak p}}(A)\), with
+          \(V_{\mathfrak p}(A)\cong\alpha_{\mathfrak p}\otimes\iota_{\mathfrak p}\rho\) as \(G_M\)-modules. This is the
+          decomposition under the centre \(M\) of \(\End^0(A_{\bar\Q})\); since inner automorphisms act
+          trivially on the centre, \(G_{\Q}\) acts on \(M\) through \(\Gal(M/\Q)\).
+\item \emph{Duality.} Fix a polarization of \(A\) over \(\Q\). Its Rosati involution is positive, so it
+          is complex conjugation on the centre \(M\), and the Riemann form satisfies
+          \(E(mx,y)=E(x,\bar my)\). For \(m\in M\setminus\Q\) and \(x,y\in V_{\mathfrak p}(A)\) this gives
+          \((\iota_{\mathfrak p}(m)-\iota_{\mathfrak p}(\bar m))E(x,y)=0\), so \(V_{\mathfrak p}(A)\) is isotropic, and
+          \(E\) pairs it perfectly with \(V_{\bar{\mathfrak p}}(A)\): \(V_{\bar{\mathfrak p}}(A)\cong V_{\mathfrak p}(A)^\vee(1)\)
+          as \(G_M\)-modules.
+\item \emph{Complex conjugation.} Complex conjugation \(c\) satisfies \(cm=\bar mc\) on \(V_{13}A\), so it
+          maps \(V_{\mathfrak p}(A)\) onto \(V_{\bar{\mathfrak p}}(A)\) and \(V_{\bar{\mathfrak p}}(A)\cong V_{\mathfrak p}(A)^c\).
+\item \emph{Both residual pieces are \(\mathbf 1\oplus\bar\chi_{13}\).} A rational point of order \(13\) gives a
+          trivial \(G_M\)-constituent of \(A[13]\), hence, by (F4) applied to the lattice
+          \((T_{13}A\cap V_{\mathfrak p}(A))\oplus(T_{13}A\cap V_{\bar{\mathfrak p}}(A))\), of
+          \(\bar V_{\mathfrak p}^{\mathrm{ss}}\) or \(\bar V_{\bar{\mathfrak p}}^{\mathrm{ss}}\). By step 4 both contain
+          \(\mathbf 1\). Write \(\bar V_{\mathfrak p}^{\mathrm{ss}}=\mathbf 1\oplus\beta\); by step 3,
+          \(\bar V_{\bar{\mathfrak p}}^{\mathrm{ss}}=\bar\chi_{13}\oplus\beta^{-1}\bar\chi_{13}\), and since
+          \(\bar\chi_{13}|_{G_M}\neq1\) we get \(\beta=\bar\chi_{13}\):
+
+\[
+\bar V_{\mathfrak p}(A)^{\mathrm{ss}}\cong\bar V_{\bar{\mathfrak p}}(A)^{\mathrm{ss}}\cong\mathbf 1\oplus\bar\chi_{13}\qquad\text{as }G_M\text{-modules}.
+\]
+
+Therefore \(\bar\rho^{\mathrm{ss}}\cong\bar\alpha_{\mathfrak p}^{-1}\oplus\bar\alpha_{\mathfrak p}^{-1}\bar\chi_{13}\),
+          where \(\bar\rho\) is the reduction of \(\iota_{\mathfrak p}\rho\), which is defined because \(\rho\) has
+          finite image of order prime to \(13\).
+\item \emph{Inertia above \(13\).} At each place \(v\mid13\) of \(M\) we have \(M_v=\Q_{13}\), and \(E_M\) has
+          good ordinary reduction. The connected part of \(E_M[13^\infty]\) at \(v\) is \(\mathcal O_M\)-stable,
+          hence equal to \(E_M[\mathfrak p^\infty]\) or \(E_M[\bar{\mathfrak p}^\infty]\); the inertia group \(I_v\)
+          acts on it by \(\chi_{13}\) and trivially on the étale quotient. Since
+          \(\alpha_{\bar{\mathfrak p}}(g)=\alpha_{\mathfrak p}(c^{-1}gc)\) and \(c\) exchanges the two places
+          above \(13\), there is a place \(w\mid13\) with \(\alpha_{\mathfrak p}|_{I_w}=\chi_{13}|_{I_w}\).
+          There, \(\bar\rho^{\mathrm{ss}}|_{I_w}\cong\bar\chi_{13}^{-1}\oplus\mathbf 1\).
+\item \emph{Contradiction.} Choose \(g_0\in I_w\) such that \(\bar\chi_{13}(g_0)\) generates
+          \(\F_{13}^\times\). The eigenvalues of \(\iota_{\mathfrak p}\rho(g_0)\) are roots of unity of order prime
+          to \(13\), on which reduction is injective, so they are the Teichmüller lifts of
+          \(\bar\chi_{13}(g_0)^{-1}\) and \(1\): a primitive \(12\)-th root of unity and \(1\). Hence
+          \(\det\rho(g_0)\in M\) is a primitive \(12\)-th root of unity. But \(\Q(i)\) and \(\Q(\sqrt{-3})\)
+          contain only \(4\) and \(6\) roots of unity. \qed
+\end{enumerate}
+
+\section{Trivial or non-cyclic endomorphism group}\label{noncyclic}
+
+In this section \(A\) is of type (S), \(p\) is an odd prime, \(V=V_p(A)\) and \(T=T_p(A)\). The group
+      \(G_{\Q}\) acts on \(D\otimes\Q_p\) through \(\Gamma\), and \(g(xt)=g(x)\,g(t)\) for \(x\in D\otimes\Q_p\) and
+      \(t\in V\).
+
+\begin{statement}{Lemma 5 (polarization).}\label{lemma-a}
+Let \(T'\subset V\) be a \(G_{\Q}\)-stable lattice such that \((T'/pT')|_{G_L}\) has trivial
+          semisimplification. Then \(\Q(\zeta_p)\subseteq L\).
+\end{statement}
+
+\emph{Proof.} A polarization of \(A\) over \(\Q\) gives \(V\cong V^\vee\otimes\Q_p(1)\). Transport the
+      lattice \(\Hom(T',\Z_p)\otimes\Z_p(1)\) into \(V\). Its reduction has semisimplification
+      \((\bar\chi_p|_{G_L})^{4}\) as a \(G_L\)-module, while \(T'/pT'\) has \(\mathbf 1^4\). By (F4) over
+      \(G_L\), \(\bar\chi_p|_{G_L}=1\). The degree of the polarization plays no role. \qed
+
+\begin{statement}{Lemma 6 (unramified order).}\label{lemma-b}
+Suppose that \(\Gamma\) normalizes an unramified quadratic \(\Z_p\)-order \(B\subset D\otimes\Q_p\)
+          (the ring of integers of an unramified quadratic extension of \(\Q_p\)), that some \(g\in\Gamma\) is
+          represented by a unit \(R_g\in B^\times\) whose reduction lies in \(\F_{p^2}\setminus\F_p\), and that
+          \(A(\Q)[p]\neq0\). Then \(\Q(\zeta_p)\subseteq L\).
+\end{statement}
+
+\emph{Proof.}
+
+\begin{enumerate}
+\item \emph{A \(\Gamma\)-stable maximal order.} The \(B\)-stable lattices in \(\Q_p^2\) are the fractional
+          ideals of \(B\otimes\Q\) times a fixed vector, so they form one homothety class \([\Lambda]\). For
+          \(g\in\Gamma\), \(R_g\Lambda\) is again \(B\)-stable, so \(\Gamma\) preserves \([\Lambda]\) and the maximal
+          order \(\mathcal R=\End(\Lambda)\cong M_2(\Z_p)\).
+\item \emph{Tensor decomposition.} Put \(T'=\mathcal R T\), a \(G_{\Q}\)-stable lattice. By the argument of (F6), with \(e_{11}T'\) now of rank \(2\) over \(\Z_p\), \(T'=e_{11}T'\oplus e_{21}e_{11}T'\cong\Lambda\otimes W_0\) with \(W_0=e_{11}T'\). Let \(\bar V=T'/pT'\) and \(U=\Lambda/p\Lambda\). The action of \(G_{\Q}\)
+          on \(\bar V\) normalizes the action of \(M_2(\F_p)=\End(U)\), and its projective action on \(U\)
+          factors through \(\Gamma\). Pulling back \(1\to\F_p^\times\to\GL(U)\to\PGL(U)\to1\) along it gives a
+          group \(\tilde G\) and two-dimensional \(\tilde G\)-modules \(U,W\) with \(\bar V\cong U\otimes W\); an
+          element \((g,M)\) acts on \(U\) by \(M\), and \((M^{-1}\otimes1)\circ g\) commutes with \(\End(U)\), so
+          it acts on the second factor.
+\item \emph{\(U\) is irreducible.} For the element \(g\) of the hypothesis, \(R_g\in B^\times\subset\GL(\Lambda)\)
+          induces the action of \(g\) on \(\mathcal R\), so \(\tilde G\) contains elements acting on \(U\) by the
+          reduction of \(R_g\). That is multiplication by an element of \(\F_{p^2}\setminus\F_p\) on the
+          one-dimensional \(\F_{p^2}\)-space \(U\), which has no eigenvector in \(U\).
+\item \emph{\(W\) is irreducible.} By (F4) and \(A(\Q)[p]\neq0\), \(\bar V\) has a trivial constituent. If
+          \(W\) had a stable line \(\ell\), then \(U\otimes\ell\) and \(U\otimes W/\ell\) would be irreducible of
+          dimension \(2\), and \(\bar V\) would have no trivial constituent.
+\item \emph{\(\bar V|_{G_L}\) is trivial.} The subgroup \(H=\{(h,1):h\in G_L\}\) is normal in \(\tilde G\)
+          and acts trivially on \(U\). By Clifford's theorem, \(W|_H\) is semisimple. Since
+          \(\bar V|_H\cong W|_H^{\oplus2}\) has a trivial constituent, \(W^H\neq0\); as \(W^H\) is
+          \(\tilde G\)-stable and \(W\) is irreducible, \(W^H=W\).
+\item Lemma 5 now gives \(\Q(\zeta_p)\subseteq L\). \qed
+\end{enumerate}
+
+\begin{statement}{Lemma 7 (split blocks).}\label{lemma-c}
+Suppose that \(\Gamma\) normalizes a split étale order \(B=\Z_pe_1\oplus\Z_pe_2\subset D\otimes\Q_p\),
+          and that some element of \(\Gamma\) exchanges \(e_1\) and \(e_2\). Let \(K\subset L\) be the fixed field
+          of the index-\(2\) subgroup fixing \(e_1\). Suppose that \(G_K\) acts on the line
+          \(e_1(D\otimes\Q_p)e_2\) by a character \(\eta\) that factors through \(\Gal(L/K)\) and has
+          \(\bar\eta\neq1\). If \(A(\Q)[p]\neq0\), then \(\Q(\zeta_p)\subseteq L\).
+\end{statement}
+
+\emph{Proof.} Put \(T'=BT=T_1\oplus T_2\) with \(T_i=e_iT'\), and \(M_i=T_i/pT_i\), \(V_i=T_i\otimes\Q_p\).
+      The group \(G_K\) preserves each \(T_i\), and elements of \(G_{\Q}\setminus G_K\) exchange them. A
+      nonzero \(X\in e_1(D\otimes\Q_p)e_2\) maps \(V_2\) isomorphically onto \(V_1\) and satisfies
+      \(g(Xv)=\eta(g)Xg(v)\) for \(g\in G_K\), so \(V_1\cong\eta\otimes V_2\) and, by (F4),
+      \(M_1^{\mathrm{ss}}\cong\bar\eta\otimes M_2^{\mathrm{ss}}\). The rational \(p\)-torsion point gives a trivial
+      \(G_K\)-constituent of \(M_1\oplus M_2\); conjugation by an element outside \(G_K\) exchanges the two
+      blocks and preserves the trivial character, so both \(M_i\) have a trivial constituent. Writing
+      \(M_2^{\mathrm{ss}}=\mathbf 1\oplus\alpha\), we get \(M_1^{\mathrm{ss}}=\bar\eta\oplus\bar\eta\alpha\ni\mathbf 1\),
+      so \(\alpha=\bar\eta^{-1}\). All four constituents are trivial on \(G_L\), and Lemma 5 applies. \qed
+
+We apply these lemmas with \(p=13\), assuming \(A(\Q)[13]\neq0\). Note that \(-1\equiv5^2\),
+      \(-3\equiv6^2\) and \(-1/3\equiv2^2\pmod{13}\).
+
+\begin{itemize}
+\item \textbf{\(\Gamma=C_1\).} Then \(\End^0_{\Q}(A)=D=M_2(\Q)\), and \(A\) is not simple over \(\Q\).
+\item \textbf{\(\Gamma=D_{2n}\), \(n\in\{3,4,6\}\).} Let \(R\) be the trace-one representative of a rotation
+          \(r\) of order \(n\). A reflection conjugates \(r\) to \(r^{-1}\), whose trace-one representative is
+          \(1-R\) (as \(R(1-R)=1/c\)); so \(B=\Z_{13}[R]\) is \(\Gamma\)-stable. Its discriminant
+          \(-3,-1,-1/3\) is a nonzero square modulo \(13\), so \(B\) is split, with idempotents fixed by the
+          rotations and exchanged by the reflections. For \(X\in e_1De_2\), \(\mathrm{Ad}(R)X=(\lambda_1/\lambda_2)X\),
+          where \(\lambda_1/\lambda_2\) is a primitive \(n\)-th root of unity in \(\Z_{13}^\times\); its reduction
+          still has order \(n\). Lemma 7 gives \(\Q(\zeta_{13})\subseteq L\), so \(\Gamma\) surjects onto
+          \(\Gal(\Q(\zeta_{13})/\Q)\cong C_{12}\). But the abelianization of \(D_{2n}\) has exponent \(2\).
+\item \textbf{\(\Gamma=V_4\).} The map \([M]\mapsto v_{13}(\det M)\bmod2\) is a well-defined homomorphism
+          \(\Gamma\to\Z/2\); choose \(r\neq1\) in its kernel. A representative \(R\) of \(r\) has trace \(0\)
+          and \(R^2=a\in\Q^\times\) with \(v_{13}(a)\) even; scale \(R\) so that \(a\) is a \(13\)-adic unit.
+          Since \(\Gamma\) is abelian, every \(g\in\Gamma\) sends \(R\) to \(\pm R\), so \(B=\Z_{13}[R]\) is a
+          \(\Gamma\)-stable étale order. If \(a\) is not a square modulo \(13\), \(B\) is unramified and \(R\) is a
+          unit of \(B\) with reduction in \(\F_{169}\setminus\F_{13}\); Lemma 6 applies. If \(a\) is a square,
+          \(B\) is split. Some \(g\in\Gamma\) sends \(R\) to \(-R\), since otherwise \(\Gamma\) would lie in the
+          torus \((\Q_{13}[R])^\times/\Q_{13}^\times\cong\Q_{13}^\times\), whose finite subgroups are cyclic; this
+          \(g\) exchanges the idempotents, the subgroup fixing them is \(\{1,r\}\), and \(r\) acts on
+          \(e_1De_2\) by \(-1\). Lemma 7 applies. In both cases \(\Q(\zeta_{13})\subseteq L\), which is
+          impossible since \([L:\Q]=4\).
+\end{itemize}
+
+Hence, if \(A(\Q)[13]\neq0\), then \(\Gamma\in\{C_2,C_3,C_4,C_6\}\).
+
+\section{The case \(\Gamma=C_6\)}\label{c6}
+
+In this section \(A_{\bar\Q}\sim E^2\) with \(E\) without CM and \(\Gamma=\langle r\rangle\cong C_6\). Let
+      \(R\) be the trace-one representative of \(r\), so \(R^2-R+\tfrac13=0\), and let \(K=L^{\langle r^2\rangle}\)
+      be the quadratic subfield of \(L\).
+
+\textbf{\(L\) is totally real.} Fix an embedding \(\bar\Q\subset\mathbb C\), let \(c\) be complex
+      conjugation and \(H=H_1(A(\mathbb C),\mathbb R)\). As a module over \(D_{\mathbb R}=M_2(\mathbb R)\),
+      \(H=U\otimes W\) with \(U=\mathbb R^2\) the standard module. The complex structure commutes with \(D\),
+      so it is \(1\otimes J\) with \(J^2=-1\). The map \(c_*\) satisfies \(c_*\phi=c(\phi)c_*\) for \(\phi\in D\),
+      where \(c\) acts on \(D\) by \(\mathrm{Ad}(M)\) for some \(M\in\GL_2(\mathbb R)\); hence
+      \(c_*=M\otimes N\). Antiholomorphy gives \(NJ=-JN\), so in a suitable basis
+      \(N=\left(\begin{smallmatrix}a&b\\b&-a\end{smallmatrix}\right)\) and \(N^2=(a^2+b^2)I\). From
+      \(c_*^2=1\), \(M^2\) is a positive scalar, so either \(M\) is scalar, or \(M\) has eigenvalues
+      \(\pm\mu\) with \(\mu\) real and \(\det M<0\). Every element of \(\Gamma\) is \([R^k]\) with
+      \(\det(\lambda R^k)=\lambda^2 3^{-k}>0\) for real \(\lambda\). Hence \(c\) acts trivially on \(D\), i.e.
+      \(c\in G_L\). As this holds for every embedding, \(L\) is totally real; in particular \(K\) is real.
+
+\textbf{Normalization.} \(\End^0_{\Q}(A)=D^\Gamma=\Q[R]\cong\Q(\sqrt{-3})\). The element \(u=3R-1\)
+      satisfies \(u^2-u+1=0\), and \(R=(1+u)/3\), \(R^2=u/3\). Put \(\mathcal O=\Z[u]\) and choose \(m\ge1\)
+      with \(mu\in\End_{\Q}(A)\). The image \(A'\) of \(a\mapsto(ma,mua)\) in \(A^2\) is \(\Q\)-isogenous to
+      \(A\), and \(u\) acts on it by the integral endomorphism \((x,y)\mapsto(y,y-x)\) of \(A^2\). So
+      \(\mathcal O\subset\End_{\Q}(A')\) and \(A'[13]^{\mathrm{ss}}\cong A[13]^{\mathrm{ss}}\).
+
+\textbf{A twist.} Write \(g|_L=r^{k(g)}\) and \(\xi(g)=u^{-2k(g)}\in\mu_3\subset\operatorname{Aut}_{\Q}(A')\);
+      this is a homomorphism, hence a cocycle. Let \(B/\Q\) be the twist, with
+      \(f:A'_{\bar\Q}\to B_{\bar\Q}\) and \(f^{-1}\circ g(f)=\xi(g)\). Transported by \(f\), the action of \(g\)
+      on \(D\) becomes \(\mathrm{Ad}(\xi(g)R^{k(g)})=\mathrm{Ad}(S^{k(g)})\) with \(S=u^{-2}R\), and
+      \(S^2=u^{-4}\cdot u/3\) \({}=-1/3\) is scalar. Put \(T=3S=u^{-2}(1+u)\in\mathcal O\); then \(T^2=-3\). Since
+      \(\mathcal O\) commutes with \(\xi\), we have \(\mathcal O\subset\End_{\Q}(B)\); all geometric
+      endomorphisms of \(B\) are defined over \(K\), and \(\tau(\phi)=T\phi T^{-1}\) for
+      \(\tau\in G_{\Q}\setminus G_K\). On Tate modules, \(f\) identifies the action of \(g\) on \(T_\ell B\) with
+      \(x\mapsto\xi(g)\,g(x)\) on \(T_\ell A'\).
+
+\textbf{A \(3\)-isogeny.} Choose a rank-one idempotent \(e\in D\) and \(n\) with
+      \(ne\in\End(B_K)\), and put \(E_0=ne(B)\), an elliptic curve over \(K\). For \(\tau\notin G_K\),
+      \(\tau(E_0)\) is the image of \(T(ne)T^{-1}\), so \(\tau(E_0)=T(E_0)\). Moreover \(T(E_0)\neq E_0\),
+      since otherwise \(T|_{E_0}\) would be an endomorphism with square \(-3\). The isogenies
+      \(T|_{E_0}:E_0\to\tau E_0\) and \(T|_{\tau E_0}:\tau E_0\to E_0\) are Galois conjugate, hence have the same
+      degree \(d\), and their composite is \([-3]\); so \(d=3\). Thus \(T|_{\tau E_0}:\tau(E_0)\to E_0\) is a
+      cyclic \(K\)-isogeny of degree \(3\).
+
+\begin{statement}{Proposition 8.}\label{prop-c6}
+Let \(A/\Q\) be an abelian surface with \(A_{\bar\Q}\sim E^2\), \(E\) without CM, and
+          \(\Gamma\cong C_6\). Then \(A[13]^{\mathrm{ss}}\) has no one-dimensional constituent. In particular
+          \(A(\Q)[13]=0\).
+\end{statement}
+
+\emph{Proof.} Suppose that \(A[13]^{\mathrm{ss}}\) has a one-dimensional constituent.
+
+\begin{enumerate}
+\item \emph{The \(\mathfrak l\)-block.} Since \(-3\equiv6^2\pmod{13}\),
+          \(\mathcal O\otimes\Z_{13}=\Z_{13}\times\Z_{13}\), with primes \(\mathfrak l,\bar{\mathfrak l}\), and
+          \(T_{13}A'=T_{\mathfrak l}\oplus T_{\bar{\mathfrak l}}\) with both summands \(G_{\Q}\)-stable of rank \(2\).
+          Relabel so that \(T_{\mathfrak l}(A')/13\) has a one-dimensional constituent.
+\item \emph{Transfer to \(B\).} By the twist, \(T_{\mathfrak l}(B)\cong T_{\mathfrak l}(A')\otimes\xi_{\mathfrak l}\)
+          with \(\xi_{\mathfrak l}:G_{\Q}\to\mu_3(\Z_{13})\). So \(T_{\mathfrak l}(B)/13\) is reducible and has a
+          \(G_{\Q}\)-stable line \(\bar C\).
+\item \emph{\(V_{13}E_0\) is the \(\mathfrak l\)-block.} The map
+          \(\iota:V_{13}E_0\to V_{13}B\to V_{\mathfrak l}(B)\) is \(G_K\)-equivariant. By (F10), \(V_{13}E_0\) is
+          irreducible, so \(\iota\) is injective or zero. If it were zero, \(V_{13}E_0=V_{\bar{\mathfrak l}}(B)\)
+          would be \(T\)-stable, so the abelian subvariety \(E_0+T(E_0)\) would have the same \(V_{13}\) as
+          \(E_0\), forcing \(T(E_0)=E_0\). Hence \(\iota\) is an isomorphism.
+\item \emph{The curve \(P\).} By (F1), the lattice \(\iota^{-1}(T_{\mathfrak l}B)\) gives an elliptic curve
+          \(P/K\), a \(K\)-isogeny \(h:E_0\to P\) of \(13\)-power degree, and a \(G_K\)-isomorphism
+          \(\iota_P:T_{13}P\to T_{\mathfrak l}B\). Put \(C=\iota_P^{-1}(\bar C)\), a \(G_K\)-stable subgroup of
+          order \(13\) of \(P\).
+\item \emph{An isogeny \(P^\tau\to P\).} Fix \(\tau\notin G_K\) and let
+          \(\Phi=\iota_P^{-1}\circ\tau_B\circ\iota_P\circ\tau_*^{-1}\) \({}:T_{13}(P^\tau)\to T_{13}P\), where \(\tau_B\) is
+          the action of \(\tau\) on \(T_{\mathfrak l}B\). Since \(\tau^{-1}g\tau\in G_K\) for \(g\in G_K\) and
+          \(\iota_P\) is \(G_K\)-linear, \(\Phi\) is \(G_K\)-equivariant. By (F10),
+          \(\Phi=\lambda\nu_0\), where \(\nu_0\) generates \(\Hom_K(P^\tau,P)\cong\Z\) (nonzero via \(T\)) and
+          \(\lambda\in\Z_{13}\). As \(\Phi\) is invertible, \(\lambda\in\Z_{13}^\times\) and
+          \(13\nmid\deg\nu_0\). A generator is a cyclic isogeny.
+\item \emph{\(\deg\nu_0=3\).} The \(K\)-isogeny \(h\circ T|_{\tau E_0}\circ\widehat{h^\tau}:P^\tau\to P\) has
+          degree \(3\cdot13^{2a}\) and equals \(n\nu_0\) for some \(n\in\Z\). Since \(13\nmid\deg\nu_0\) and
+          \(3\cdot13^{2a}\) is not a square, \(\deg\nu_0=3\).
+\item \emph{\(\nu_0\) respects the \(13\)-structure.} Since \(\tau_B(\bar C)=\bar C\), we get
+          \(\Phi(\tau C)=C\), hence \(\nu_0(\tau C)=C\).
+\item \emph{A point of \(Y_0(39)(K)\).} Put \(\nu_0^\tau=\tau(\nu_0):P\to P^\tau\). Then
+          \(\nu_0\nu_0^\tau\in\End_K(P)=\Z\) has degree \(9\), so it is \(\pm3\) and
+          \(\nu_0^\tau(P[3])=\ker\nu_0\). Applying \(\tau\) to \(\nu_0(\tau C)=C\) gives \(\nu_0^\tau(C)=\tau C\).
+          The point \(x=(P,\ \ker\nu_0^\tau+C)\in Y_0(39)(K)\) satisfies
+
+\[
+\tau(x)=(P^\tau,\ \ker\nu_0+\tau C)=w_3(x),
+\]
+
+using the isomorphism \(P/\ker\nu_0^\tau\cong P^\tau\) induced by \(\nu_0^\tau\). The isogeny
+          \(\nu_0^\tau\) of degree \(3\) carries the \(13\)-structure \(C\) to \(\tau C\); this is the moduli
+          action of \(w_3\).
+\item \emph{\(x\) is not rational.} If \(\tau(x)=x\), then \(w_3(x)=x\), and \(P\) would have a cyclic
+          endomorphism of degree \(3\), hence CM; but \(P\sim E_0\).
+\item \emph{Contradiction.} The image of \(x\) in \(X_0(39)/w_3\) is fixed by \(\Gal(K/\Q)\), hence rational.
+          By \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_39.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}39.m}}, \(X_0(39)/w_3\) is the elliptic curve 39a1, of rank \(0\) with torsion
+          \(\Z/2\times\Z/2\); above two of its four rational points lie the four rational cusps of
+          \(X_0(39)\), and above each of the other two lies a pair of conjugate points with residue field
+          \(\Q(\sqrt{-7})\). The non-rational point \(x\) therefore has residue field \(\Q(\sqrt{-7})\subseteq K\),
+          so \(K=\Q(\sqrt{-7})\), contradicting the fact that \(K\) is real. \qed
+\end{enumerate}
+
+\section{The case \(\Gamma=C_4\)}\label{c4}
+
+In this section \(A\) is of type (S), \(\Gamma=\langle r\rangle\cong C_4\), and \(K\) is the
+      quadratic subfield of \(L\). The trace-one representative \(R\) of \(r\) has \(\det R=\tfrac12\). Put
+      \(J=2R-1\); then \(J^2=-1\), \(R=(1+J)/2\) and \(R^2=J/2\). So \(\Gal(L/K)=\langle r^2\rangle\) acts on \(D\) by
+      \(\mathrm{Ad}(J)\), and \(\End^0_K(A_K)\) is the centralizer \(\Q(J)\cong\Q(i)\) of \(J\), a field: \textbf{\(A_K\)
+      is simple over \(K\)}. We show that \(A(\Q)[13]=0\).
+
+\begin{statement}{Lemma 9 (degree class).}\label{lemma-degree}
+Let \(X\) be an elliptic curve without CM over a number field \(L_1\supseteq L\), and
+          \(h:X^2\to A_{L_1}\) a quasi-isogeny defined over \(L_1\). For \(g\in G_{\Q}\) let \(\mu_g\) be a
+          generator of \(\Hom(X^g_{\bar\Q},X_{\bar\Q})\cong\Z\). If \(\det R_g>0\), then
+          \(\deg\mu_g\equiv\det R_g\pmod{\Q^{\times2}}\).
+\end{statement}
+
+\emph{Proof.} Put \(N_g=h^{-1}\circ g(h)\) \(\in\Hom^0((X^g)^2,X^2)=M_2(\Q)\mu_g\) and write \(N_g=\mu_gN_0\)
+      with \(N_0\in\GL_2(\Q)\). For \(Y\in M_2(\Z)=\End(X^2)\), \(g(hYh^{-1})=g(h)Yg(h)^{-1}\) \({}=hN_0YN_0^{-1}h^{-1}\),
+      so in the identification \(D\cong M_2(\Q)\) given by \(h\), \(g\) acts by \(\mathrm{Ad}(N_0)\). Hence
+      \([N_0]\) is conjugate to \([R_g]\) in \(\PGL_2(\Q)\), and \(\det N_0\equiv\det R_g\) modulo
+      \(\Q^{\times2}\); in particular \(\det N_0>0\). Since \(\deg g(h)=\deg h\), (F3) gives
+      \(1=\deg N_g=(\deg\mu_g)^2(\det N_0)^2\), so \(\det N_0=1/\deg\mu_g\). \qed
+
+\begin{statement}{Lemma 10.}\label{lemma-two-subgroup}
+Let \(X\) be an elliptic curve without CM. Two distinct subgroups \(D_1,D_2\subset X[2]\) of order
+          \(2\) have non-isomorphic quotients \(X/D_1\), \(X/D_2\).
+\end{statement}
+
+\emph{Proof.} Let \(\pi_i:X\to X/D_i\) and suppose \(\phi:X/D_1\to X/D_2\) is an isomorphism. Then
+      \(\hat\pi_2\phi\pi_1\) is an endomorphism of degree \(4\), hence \(\pm2=\pm\hat\pi_2\pi_2\). So
+      \(\hat\pi_2\circ(\phi\pi_1\mp\pi_2)=0\), and \(\phi\pi_1=\pm\pi_2\) because \(X\) is connected and
+      \(\ker\hat\pi_2\) is finite. Hence \(D_1=D_2\). \qed
+
+Suppose now that \(A(\Q)[13]\neq0\).
+
+\textbf{Step 1: a curve over \(K\).}
+
+\begin{enumerate}
+\item Let \(E\subset A_L\) be an elliptic subvariety and \(\sigma\) the nontrivial element of \(\Gal(L/K)\).
+          Then \(E^\sigma\neq E\), since otherwise \(E\) would be defined over \(K\). So
+          \(A_L\sim_L E\times E^\sigma\sim_L E^2\).
+\item Apply \hyperref[lemma-degree]{Lemma~9} with \(X=E\), \(L_1=L\), and a lift \(g\) of \(\sigma\): since
+          \(\det R_g=\det R^2=\tfrac14\), a generator \(\mu:E^\sigma\to E\) of \(\Hom(E^\sigma,E)\) has square
+          degree \(m^2\). It is defined over \(L\) (Section~\ref{cases}), and its kernel is cyclic, since \(\mu\) is
+          primitive.
+\item \emph{The middle curve.} Let \(H_1\subset\ker\mu\) be the subgroup of order \(m\), which is
+          \(G_L\)-stable, and \(E_c=E^\sigma/H_1\). Then \(\mu\) factors as \(E^\sigma\to E_c\to E\) through two cyclic
+          isogenies of degree \(m\). The conjugate \(\sigma(\mu):E\to E^\sigma\) and the dual \(\hat\mu\) both
+          generate \(\Hom(E,E^\sigma)\cong\Z\), so \(\sigma(\mu)=\pm\hat\mu\). The unique subgroup of order \(m\)
+          of \(\ker\sigma(\mu)=\ker\hat\mu\) is both \(\sigma(H_1)\) and the kernel of
+          \(\hat\beta:E\to E_c\), where \(\beta:E_c\to E\) is the second factor. Hence
+          \(E_c^\sigma=E/\sigma(H_1)\cong E_c\), and \(j(E_c)\in K\).
+\item Let \(E_K\) be a model of \(E_c\) over \(K\); it exists, and \(j(E_K)\neq0,1728\). By (F7) over \(K\),
+          \(A_K\sim_K E_K\otimes\rho_K\), and the projective image of \(\rho_K\) is \(\langle[J]\rangle\cong C_2\).
+\item The finite subgroups of \(\GL_2(\Q)\) with projective image of order \(2\) are \(\{1,g\}\) and
+          \(\{\pm1,\pm g\}\) with \(g^2=1\), \(g\neq\pm1\), and \(\langle g\rangle\) with \(g^2=-1\). In the first two
+          cases \(g\) is diagonalizable over \(\Q\) and \(A_K\) would split over \(K\). So
+          \(\rho_K(G_K)\cong C_4\) and \(A_K\sim_K E_K\otimes\Z[i](\psi_K)\) for a character
+          \(\psi_K:G_K\to\mu_4\) of order \(4\).
+\end{enumerate}
+
+\textbf{Step 2: a \(K\)-rational \(2\)-isogeny to the conjugate.}
+
+\begin{enumerate}
+\item Choose \(\tau\in G_{\Q}\) with \(\tau|_K\neq\mathrm{id}\); then \(\tau|_L\in\{r,r^3\}\) and
+          \(\tau^2\in G_K\), so \(E_K^{\tau^2}=E_K\). Over the kernel field \(L_1\) of \(\psi_K\) we have
+          \(A_{L_1}\sim_{L_1}E_K^2\) with all endomorphisms defined over \(L_1\), so \(L_1\supseteq L\).
+          \hyperref[lemma-degree]{Lemma~9} with \(\det R_\tau\in\{\tfrac12,\tfrac18\}\) shows that a generator
+          \(\mu:E_K^\tau\to E_K\) of \(\Hom(E^\tau_{K,\bar\Q},E_{K,\bar\Q})\) has degree \(2n^2\).
+\item Every \(g\in G_K\) maps \(\mu\) to \(\pm\mu\). So the cyclic group \(\ker\mu\) and all its subgroups
+          are \(K\)-rational, and \(\mu\) factors as
+          \(E_K^\tau\xrightarrow{\ n\ }Y_1\xrightarrow{\ 2\ }Y_2\xrightarrow{\ n\ }E_K\) through cyclic
+          isogenies, the first two defined over \(K\) and the last one defined over \(K\) up to sign. Thus
+          \(Y_2\) is \(K\)-isogenous to a quadratic twist of \(E_K\).
+\item As in Step 1, \(\tau(\mu)=\pm\hat\mu\), and comparing the unique cyclic factorizations of
+          \(\tau(\mu)\) and \(\hat\mu\) gives \(Y_1^\tau\cong Y_2\) over \(\bar\Q\).
+\item Put \(X_0=Y_2\), a curve over \(K\). Let \(\varepsilon:G_K\to\{\pm1\}\) be the character by which \(G_K\) acts
+          on the last factor \(Y_2\to E_K\) of \(\mu\); this factor is then a \(K\)-isogeny \(Y_2\to E_K\otimes\varepsilon\),
+          so \(A_K\sim_K X_0\otimes\Z[i](\varepsilon\psi_K)\), and \(\varepsilon\psi_K\) has order \(4\) because
+          \((\varepsilon\psi_K)^2=\psi_K^2\neq1\). We replace \(\psi_K\) by \(\varepsilon\psi_K\), so that
+          \(A_K\sim_K X_0\otimes\Z[i](\psi_K)\) with \(\psi_K\) of order \(4\). Let \(\nu:X_0\to Y_1\) be the dual of \(Y_1\to Y_2\), a \(K\)-rational cyclic isogeny of
+          degree \(2\). Then \(Y_1\cong X_0^\tau\) over \(\bar\Q\) (as \(\tau^2\in G_K\)); both curves are defined
+          over \(K\) and have \(j\neq0,1728\), so \(Y_1\cong_K(X_0^\tau)^\eta\) for a character
+          \(\eta:G_K\to\{\pm1\}\).
+\end{enumerate}
+
+\textbf{Step 3: the \(13\)-structure.} Let \(\iota\in\Z_{13}\) with \(\iota^2=-1\), and
+      \(\psi_{K,\pm}=(i\mapsto\pm\iota)\circ\psi_K\). Then
+      \(V_{13}A_K\cong V\otimes\psi_{K,+}\oplus V\otimes\psi_{K,-}\) with \(V=V_{13}X_0\). Write \(\bar\chi=\bar\chi_{13}\).
+
+\begin{enumerate}
+\item A rational point of order \(13\) gives a trivial constituent, so by (F4) \(X_0[13]^{\mathrm{ss}}\) contains
+          \(\alpha=\bar\psi_{K,+}^{-1}\) or \(\bar\psi_{K,-}^{-1}\), a character of order \(4\) (reduction is
+          injective on \(\mu_4\)). Hence \(X_0[13]\) is reducible over \(K\); let \(C\subset X_0[13]\) be a
+          \(K\)-rational line, with character \(\beta\). Then \(X_0[13]^{\mathrm{ss}}=\beta\oplus\bar\chi\beta^{-1}\)
+          and \(\alpha\in\{\beta,\bar\chi\beta^{-1}\}\).
+\item As \(G_K\)-modules, \(X_0^\tau[13]\cong X_0[13]^\tau\); and via \(\nu\), which has degree prime to \(13\),
+          \(X_0^\tau[13]\cong Y_1[13]\otimes\eta\) \({}\cong X_0[13]\otimes\eta\). Comparing semisimplifications,
+          \(\beta^\tau\in\{\beta\eta,\ \bar\chi\beta^{-1}\eta\}\).
+\item The second option is impossible: it gives \(\beta\beta^\tau=\bar\chi\eta\). If \(\beta=\alpha\), the left
+          side has order dividing \(4\); if \(\beta=\bar\chi\alpha^{-1}\), it gives \(\bar\chi=\alpha\alpha^\tau\eta\).
+          Either way \(\bar\chi^4|_{G_K}=1\), whereas \(\bar\chi|_{G_K}\) has order \(12\) or \(6\).
+\item Hence \(\beta^\tau=\beta\eta\). Also \(\beta\neq\bar\chi\beta^{-1}\), since \(\bar\chi=\beta^2\) would
+          again force \(\bar\chi^4|_{G_K}=1\). So \(\tau(C)\) is the unique \(G_K\)-stable line of \(X_0^\tau[13]\)
+          with character \(\beta^\tau\), and under \(Y_1\cong(X_0^\tau)^\eta\) it corresponds to \(\nu(C)\), which
+          has character \(\beta\eta=\beta^\tau\) there.
+\end{enumerate}
+
+\textbf{Step 4: a rational point of \(X_0(26)/w_2\).} Put \(x=(X_0,\ C+\ker\nu)\in Y_0(26)(K)\). Then
+
+\[
+w_2(x)=\bigl(X_0/\ker\nu,\ \nu(C)+\nu(X_0[2])\bigr)\cong\bigl(Y_1,\ \nu(C)+\ker\hat\nu\bigr).
+\]
+
+Under \(Y_1\cong X_0^\tau\), \(\nu(C)\) corresponds to \(\tau(C)\) by Step 3. The subgroup \(\ker\hat\nu\)
+      has quotient \(Y_1/\ker\hat\nu\cong X_0\), and \((\ker\nu)^\tau\subset X_0^\tau[2]\) has quotient
+      \(Y_1^\tau\cong X_0^{\tau^2}=X_0\); by \hyperref[lemma-two-subgroup]{Lemma~10} they correspond. Hence
+      \(\tau(x)=w_2(x)\) in \(X_0(26)\), and the image of \(x\) in \(X_0(26)/w_2\) is fixed by \(\Gal(K/\Q)\),
+      i.e. rational.
+
+\textbf{Computation.} By \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_26.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}26.m}}, Magma's model of \(X_0(26)\) and its involution
+      \(w_2\) are checked against the Hecke traces and the modular polynomial \(\Phi_2\); the quotient
+      \(X_0(26)/w_2\) is the elliptic curve 26a1 \(=[1,0,1,-5,-8]\), of rank \(0\) with torsion \(\Z/3\). Above
+      its three rational points lie the four rational cusps of \(X_0(26)\) and one pair of conjugate points
+      over \(\Q(\sqrt{13})\) whose \(j\)-invariant is a root of the Hilbert class polynomial \(H_{-52}\), so they
+      are CM points. The point \(x\) is neither a cusp nor a CM point, because \(X_0\sim E\) has no CM. This
+      contradiction shows that \textbf{\(\Gamma=C_4\) is impossible when \(A(\Q)[13]\neq0\)}. \qed
+
+\section{The case \(\Gamma=C_3\): no principal polarization}\label{c3}
+
+In this section \(A\) is of type (S), \(\Gamma=\langle r\rangle\cong C_3\), and \(A[13]^{\mathrm{ss}}\) has a
+      trivial constituent. This hypothesis and the conclusion are invariant under \(\Q\)-isogeny.
+
+\textbf{Structure.} The trace-one representative \(R\) of \(r\) satisfies \(R^2-R+1=0\) and \(R^3=-1\).
+      Put \(w=-R\); then \(w^3=1\), \(\mathrm{Ad}(w)=\mathrm{Ad}(R)\), and \(w\in D^\Gamma=\End^0_{\Q}(A)\).
+      Replacing \(A\) by the image of \(a\mapsto(Na,Nwa,Nw^2a)\) in \(A^3\) for suitable \(N\), on which \(w\)
+      acts as the cyclic shift, we may assume \(\Z[w]\subset\End_{\Q}(A)\). Let \(k:G_{\Q}\to\Z/3\) with
+      \(g|_L=r^{k(g)}\), and twist \(A\) by the homomorphism \(\xi(g)=w^{-k(g)}\). On the twist \(B\), \(g\) acts on
+      \(D\) by \(\mathrm{Ad}(w^{-k}R^k)=\mathrm{Ad}((-1)^k)=\mathrm{id}\), so \(\End^0_{\Q}(B)=M_2(\Q)\) and
+      \(B\sim_{\Q}E_1^2\) for an elliptic curve \(E_1/\Q\) without CM. The image of \(w\) in \(M_2(\Q)\) has order
+      \(3\), so it is conjugate to multiplication by \(\zeta_3\) on \(\Z[\zeta_3]\cong\Z^2\). Untwisting,
+
+\[
+A\sim_{\Q}E_1\otimes\Z[\zeta_3](\psi),\qquad \psi(g)=\zeta_3^{k(g)},\quad \ker\psi=G_L.
+\]
+
+\textbf{\(E_1\) has a rational \(13\)-isogeny and no rational \(3\)-isogeny.}
+
+\begin{enumerate}
+\item Since \(13\) splits in \(\Q(\zeta_3)\), \(V_{13}A=V\otimes\psi_1\oplus V\otimes\psi_2\) with
+          \(V=V_{13}E_1\) and characters \(\psi_i:G_{\Q}\to\mu_3(\Z_{13})\). A trivial constituent of
+          \(A[13]^{\mathrm{ss}}\) forces \(E_1[13]^{\mathrm{ss}}\) to contain some \(\bar\psi_i^{-1}\), so \(E_1[13]\) is
+          reducible and \(E_1\) has a rational \(13\)-isogeny.
+\item A rational \(3\)-isogeny would then give a rational cyclic \(39\)-isogeny, excluded by (F9). So
+          \(\bar\rho=\bar\rho_{E_1,3}\) is irreducible. It is absolutely irreducible: otherwise its image would
+          lie in a non-split Cartan subgroup \(\F_9^\times\), whose only element of order \(2\) is \(-1\), of
+          determinant \(1\), while complex conjugation has order \(2\) and determinant \(-1\).
+\item \emph{Clifford.} \(\bar\rho|_{G_L}\) is semisimple, since \(G_L\) is normal of index \(3\). Suppose that
+          over \(\bar\F_3\) it is \(\chi_1\oplus\chi_2\). If \(\chi_1\neq\chi_2\), the group \(G_{\Q}/G_L\) of order
+          \(3\) fixes both isotypic lines and \(\bar\rho\) is reducible over \(\bar\F_3\). If \(\chi_1=\chi_2\),
+          \(\bar\rho(G_L)\) is scalar and the projective image is generated by the class of one \(\bar\rho(g)\),
+          whose eigenvalue ratio is a cube root of unity in characteristic \(3\), hence \(1\); so
+          \(\bar\rho(g)\) is a scalar times a unipotent, and \(\bar\rho\) is either reducible or has scalar
+          image, which complex conjugation excludes. Hence \textbf{\(\bar\rho_{E_1,3}|_{G_L}\) is absolutely
+          irreducible}.
+\end{enumerate}
+
+\textbf{The \(3\)-adic obstruction.} Let \(\mathcal O=\Z_3[\zeta_3]\), a discrete valuation ring with
+      uniformizer \(\pi=1-\zeta_3\), and \(T=T_3E_1\).
+
+\begin{enumerate}
+\item On \(T_3(E_1\otimes\Z[\zeta_3](\psi))=T\otimes\mathcal O\), \(g\) acts by \(\rho(g)\otimes\psi(g)\). For
+          \(g\in G_L\) this is \(\rho(g)\otimes1\), and by (F5) these elements span \(M_2(\Z_3)\otimes1\). For
+          \(\tau\) with \(\psi(\tau)=\zeta_3\), \((\rho(\tau)^{-1}\otimes1)(\rho(\tau)\otimes\zeta_3)=1\otimes\zeta_3\).
+          So the \(\Z_3\)-algebra generated by \(G_{\Q}\) is \(M_2(\mathcal O)\).
+\item By (F6) and (F1), every \(B'\sim_{\Q}A\) has \(T_3B'=\pi^k(T\otimes\mathcal O)\) inside \(V_3A\), for some
+          \(k\in\Z\).
+\item By (F3), \(\NS(A_{\bar\Q})\otimes\Q\) is the space of symmetric bilinear forms on
+          \(\Q(\zeta_3)\cong\Q^2\), with \(g\) acting through multiplication by \(\psi(g)\), a rotation of order
+          dividing \(3\). The symmetric square of the two-dimensional rotation representation is the trivial
+          representation plus a two-dimensional one, so the invariants are spanned by
+          \(h_0(a,b)=\operatorname{Tr}_{\Q(\zeta_3)/\Q}(a\bar b)\). By (F2), any polarization of any
+          \(B'\sim_{\Q}A\) has Riemann form \(c\cdot e\otimes h_0\) on \(V_3A\), with \(c\in\Q^\times\) and \(e\) the
+          Weil pairing of \(E_1\).
+\item On \(\mathcal O\) with basis \(1,\zeta_3\), the form \(h_0\) has Gram matrix
+          \(\left(\begin{smallmatrix}2&-1\\-1&2\end{smallmatrix}\right)\), of determinant \(3\); on
+          \(\pi^k\mathcal O\), \(h_0(\pi^ka,\pi^kb)=3^kh_0(a,b)\), so \(\det(c\,h_0|_{\pi^k\mathcal O})=3^{2k+1}c^2\)
+          has odd \(3\)-adic valuation. Since \(e\) is perfect on \(T\),
+          \(\det(e\otimes ch_0)\) on \(T\otimes\pi^k\mathcal O\) is a unit times \((3^{2k+1}c^2)^2\), of
+          valuation \(4k+2+4v_3(c)\neq0\). So the Riemann form is never perfect on \(T_3B'\).
+\end{enumerate}
+
+By (F2), \textbf{no abelian surface \(\Q\)-isogenous to \(A\) has a principal polarization}; this is
+      Proposition 2(a). \qed
+
+\section{The case \(\Gamma=C_2\): only product polarizations}\label{c2}
+
+In this section \(A\) is of type (S), \(\Gamma=\Gal(K/\Q)=\langle\sigma\rangle\) with \(K=L\) quadratic,
+      and \(A(\Q)[13]\neq0\). Write \(\bar\chi=\bar\chi_{13}\) and let \(\varepsilon_K\) be the quadratic
+      character of \(K\).
+
+\subsection{Structure}\label{c2-structure}
+
+\begin{enumerate}
+\item \emph{A \(13\)-point over \(K\).} Since \(\End^0(A_K)=D\cong M_2(\Q)\), \(A_K\sim_K E_1^2\) for an elliptic
+          curve \(E_1\subset A_K\) over \(K\), and \(A_K/E_1\sim_K E_1\). By \hyperref[lemma-sequence]{Lemma~1}, some elliptic
+          curve \(E'\sim_K E_1\) has a \(K\)-point \(P'\) of order \(13\).
+\item \emph{A model over \(\Q\).} By Bosman--Bruin--Dujella--Najman~\cite[Theorem 11(1)]{BBDN}, \(E'\cong_K E'^\sigma\). So \(j(E')\in\Q\),
+          and \(j(E')\neq0,1728\) since \(E'\) has no CM. Hence there are an elliptic curve \(E_0/\Q\) without
+          CM and a character \(\kappa:G_K\to\{\pm1\}\) with \(E'\cong_K E_0\otimes\kappa\); and
+          \(A_{\bar\Q}\sim E_0^2\).
+\item \emph{The rational \(13\)-isogeny.} Let \(C_0\subset E_0[13]\) correspond to \(\langle P'\rangle\); then
+          \(G_K\) acts on \(C_0\) by \(\kappa\). For \(\tau\in G_{\Q}\setminus G_K\), \(\tau(C_0)\) is \(G_K\)-stable with
+          character \(\kappa^\tau\). If \(\tau(C_0)\neq C_0\), then \(E_0[13]\cong C_0\oplus\tau(C_0)\) as
+          \(G_K\)-modules, and \(\bar\chi|_{G_K}=\kappa\kappa^\tau\) would have order at most \(2\); but it has order
+          \(12\) or \(6\). So \(C_0\) is a rational subgroup of order \(13\), and by (F9) it is the only one.
+\item \emph{Its character.} Let \(\varphi:G_{\Q}\to\F_{13}^\times\) be the character of \(C_0\). Then
+          \(\varphi|_{G_K}=\kappa\), so \(\varphi^2\in\{\mathbf 1,\varepsilon_K\}\). If \(\varphi^2=\mathbf 1\), the
+          quadratic twist \(E_0\otimes\varphi\) would have a rational point of order \(13\), contrary to (F9).
+          \textbf{Hence \(\varphi\) has order \(4\) and \(\varphi^2=\varepsilon_K\).} Moreover \(E_0[13]^{\mathrm{ss}}=
+          \varphi\oplus\bar\chi\varphi^{-1}\).
+\item \emph{\(K\) is real.} For complex conjugation \(c\), \(\bar\rho_{E_0,13}(c)\) has eigenvalues \(1\) and
+          \(-1\), and \(\varphi(c)\) is one of them; so \(\varepsilon_K(c)=\varphi(c)^2=1\). (This agrees with
+          Bosman--Bruin--Dujella--Najman~\cite[Theorem 9(1)]{BBDN}, which is not needed here.)
+\item \emph{The isogeny class.} By (F7) over \(\Q\), \(A\sim_{\Q}E_0\otimes\rho\) with projective image of
+          \(\rho\) equal to \(\Gamma\cong C_2\). As in Section~\ref{c4}, Step 1, simplicity of \(A\) over \(\Q\) forces
+          \(\rho(G_{\Q})=\langle g\rangle\) with \(g^2=-1\), i.e. \(A\sim_{\Q}E_0\otimes\Z[i](\psi')\) for a character
+          \(\psi':G_{\Q}\to\mu_4\) of order \(4\). Fix \(\iota\in\Z_{13}\) with \(\iota^2=-1\) and \(\iota\equiv5\pmod{13}\),
+          and for a character \(\psi:G_{\Q}\to\mu_4\) put \(\psi_\pm=(i\mapsto\pm\iota)\circ\psi\), so that
+          \(\psi_-=\psi_+^{-1}\) and
+
+\[
+V_{13}\bigl(E_0\otimes\Z[i](\psi)\bigr)=V\otimes\psi_+\ \oplus\ V\otimes\psi_-,\qquad V=V_{13}E_0.
+\]
+
+Let \(\omega:\mu_4(\F_{13})\to\mu_4(\Z[i])\) be the isomorphism with \(\omega(5)=i\); then
+          \(\bar\psi_+=\omega^{-1}\circ\psi\). A trivial residual constituent of \(V\otimes\psi'_\pm\) requires
+          \(\bar\psi'_\pm\in\{\varphi^{-1},\ \bar\chi^{-1}\varphi\}\). Only \(\varphi^{-1}\) has order \(4\), because
+          \((\bar\chi^{-1}\varphi)^4=\bar\chi^{-4}\neq\mathbf 1\). Hence \(\psi'=\psi^{\pm1}\) with \(\psi:=\omega\circ\varphi\),
+          and since complex conjugation on \(\Z[i]\) identifies the twists by \(\psi\) and \(\psi^{-1}\),
+
+\[
+A\sim_{\Q}A_\psi:=E_0\otimes\Z[i](\psi),\qquad \psi=\omega\circ\varphi,\quad \psi^2=\varepsilon_K,\quad \bar\psi_+=\varphi,\ \bar\psi_-=\varphi^{-1}.
+\]
+\item \emph{Polarizations of \(A_\psi\).} By (F3), \(\NS((A_\psi)_{\bar\Q})=\Sym_2(\Z)\), and \(g\) acts by
+          \(S\mapsto\psi(g)^tS\psi(g)\), where \(\psi(g)\) is a rotation by a multiple of \(90^\circ\) on
+          \(\Z[i]=\Z\oplus\Z i\). The invariants are \(\Z\cdot I\): the \(G_{\Q}\)-invariant part of
+          \(\NS((A_\psi)_{\bar\Q})\) is \(\Z\theta_0\), where \(\theta_0\) is the product polarization, which is
+          principal. The same holds for \(A'_\psi:=(E_0/C_0)\otimes\Z[i](\psi)\), with \(\theta'_0\). By (F2), for every
+          \(B\sim_{\Q}A_\psi\) the \(G_{\Q}\)-invariant part of \(\NS(B_{\bar\Q})\otimes\Q\) is one-dimensional.
+\end{enumerate}
+
+\subsection{Admissible primes \(\ell\neq13\)}\label{c2-lattices}
+
+Call a prime \(\ell\neq13\) \emph{admissible} if \(\bar\rho_{E_0,\ell}|_{G_K}\) is absolutely irreducible.
+
+\begin{statement}{Lemma 11.}\label{lemma-lattice}
+Let \(\ell\neq13\) be admissible and \(\mathcal O=\Z_\ell[i]\). Every \(G_{\Q}\)-stable lattice in
+          \(V_\ell A_\psi\) is \(\mathfrak a\,(T_\ell E_0\otimes\mathcal O)\) for a fractional \(\mathcal O\)-ideal
+          \(\mathfrak a\).
+\end{statement}
+
+\emph{Proof.} For \(g\in G_K\), \(\psi(g)=\pm1\), so \(g\) acts by \((\psi(g)\rho(g))\otimes1\); these elements
+      form a quadratic twist of \(\rho(G_K)\), whose reduction is still absolutely irreducible, and by (F5)
+      they span \(M_2(\Z_\ell)\otimes1\). For \(\tau\notin G_K\), \(\psi(\tau)=\pm i\) and
+      \((\rho(\tau)^{-1}\otimes1)(\rho(\tau)\otimes\psi(\tau))=\pm1\otimes i\). So the \(\Z_\ell\)-algebra generated by
+      \(G_{\Q}\) is \(M_2(\mathcal O)\), and (F6) applies; \(\mathcal O\) is \(\Z_\ell\times\Z_\ell\), the unramified
+      quadratic extension of \(\Z_\ell\), or \(\Z_2[i]\). \qed
+
+\subsection{The prime \(13\)}\label{c2-thirteen}
+
+Let \(e_\pm\) be the idempotents of \(\Z_{13}[i]=\Z_{13}e_+\oplus\Z_{13}e_-\) with \(ie_\pm=\pm\iota e_\pm\), so
+      that \(V_{13}A_\psi=V\otimes\psi_+e_+\oplus V\otimes\psi_-e_-\). Since \(E_0[13]^{\mathrm{ss}}=\varphi\oplus\bar\chi\varphi^{-1}\)
+      and \(\varphi^2=\varepsilon_K\):
+
+\begin{itemize}
+\item the residual constituents of \(V\otimes\psi_+\) are \(\{\varepsilon_K,\ \bar\chi\}\);
+\item those of \(V\otimes\psi_-\) are \(\{\mathbf 1,\ \bar\chi\varepsilon_K\}\).
+\end{itemize}
+
+These sets are disjoint, because \(\varepsilon_K\neq\mathbf 1\) and \(\bar\chi\notin\{\mathbf 1,\varepsilon_K\}\).
+
+\begin{statement}{Lemma 12 (splitting).}\label{lemma-split}
+Let \(X,Y\) be finite-dimensional \(\Q_\ell[G]\)-modules whose residual constituents are disjoint.
+          Then every \(G\)-stable lattice \(\Lambda\subset X\oplus Y\) equals \((\Lambda\cap X)\oplus(\Lambda\cap Y)\).
+\end{statement}
+
+\emph{Proof.} Let \(p_X,p_Y\) be the projections. The map \(\lambda\mapsto p_X(\lambda)\) induces
+      isomorphisms of \(G\)-modules
+
+\[
+\Lambda/\bigl((\Lambda\cap X)\oplus(\Lambda\cap Y)\bigr)\cong p_X\Lambda/(\Lambda\cap X)\cong p_Y\Lambda/(\Lambda\cap Y).
+\]
+
+By (F4), the constituents of the middle module lie among those of \(X\), and those of the right-hand
+      module among those of \(Y\). Hence all three are zero. \qed
+
+Now let \((B,\lambda)\) be principally polarized with \(B\sim_{\Q}A_\psi\), and fix a \(\Q\)-isogeny
+      \(f:B\to A_\psi\); we identify \(T_\ell B\) with \(f_*T_\ell B\subset V_\ell A_\psi\).
+
+\begin{enumerate}
+\item By Lemma 12, \(T_{13}B=\Lambda_+e_+\oplus\Lambda_-e_-\) with \(G_{\Q}\)-stable lattices
+          \(\Lambda_\pm\subset V\); twisting by the scalar characters \(\psi_\pm\) does not change stability.
+\item The \(G_{\Q}\)-stable lattices in \(V\) correspond, up to homothety, to rational cyclic isogenies of
+          \(13\)-power degree from \(E_0\). By (F9) the only nontrivial one is \(E_0\to E_0/C_0\). So each
+          \(\Lambda_\pm\) is homothetic to \(T=T_{13}E_0\) or to \(T'\), where \(T'\supset T\) and \(T'/T=C_0\);
+          that is, \(T'=T_{13}(E_0/C_0)\) under the isogeny.
+\item Let \(E_\theta\) be the Riemann form of \(\theta_0\); it is \(e\otimes h_0\) with
+          \(h_0(z,z')=\operatorname{Re}(z\bar z')=\tfrac12\operatorname{Tr}(z\bar z')\). Complex conjugation on
+          \(\Z[i]\) exchanges \(e_+\) and \(e_-\), so \(h_0(e_\pm,e_\pm)=0\) and \(h_0(e_+,e_-)=\tfrac12\), and
+
+\[
+E_\theta(x_+e_++x_-e_-,\,y_+e_++y_-e_-)=\tfrac12\bigl(e(x_+,y_-)+e(x_-,y_+)\bigr).
+\]
+\item By Section~\ref{c2-structure}, item 7, the Riemann form of \(\lambda\) is \(cE_\theta\) for some
+          \(c\in\Q^\times\). It is perfect on \(T_{13}B\) if and only if \(\Lambda_-=(2/c)\Lambda_+^*\), where
+          \(\Lambda^*=\{v\in V:e(v,\Lambda)\subseteq\Z_{13}\}\).
+\item \(T^*=T\). If \(T=\langle c_1,d_1\rangle\) with \(C_0=\langle\bar c_1\rangle\), then
+          \(T'=\langle c_1/13,d_1\rangle\) and \(T'^*=\langle c_1,13d_1\rangle=13T'\).
+\item Hence \((\Lambda_+,\Lambda_-)=(13^aT,13^bT)\) or \((13^aT',13^bT')\): the mixed shapes are not
+          dual to each other. In the first case \(T_{13}B=\mathfrak a_{13}(T\otimes\Z_{13}[i])\) \({}=\mathfrak a_{13}T_{13}A_\psi\)
+          with \(\mathfrak a_{13}=13^a\Z_{13}e_+\oplus13^b\Z_{13}e_-\). In the second case the same holds with
+          \(T'\), i.e. relative to \(A'_\psi\), where we identify \(V_\ell A'_\psi=V_\ell A_\psi\) via
+          \(E_0\to E_0/C_0\); for \(\ell\neq13\) the lattices \(T_\ell A'_\psi\) and \(T_\ell A_\psi\) agree.
+\end{enumerate}
+
+\subsection{Conclusion, assuming every prime is admissible}\label{c2-conclusion}
+
+\begin{statement}{Proposition 13.}\label{prop-c2}
+If every prime \(\ell\neq13\) is admissible, then every principally polarized \((B,\lambda)\) with
+          \(B\sim_{\Q}A_\psi\) is isomorphic to \((A_\psi,\theta_0)\) or to \((A'_\psi,\theta'_0)\). In particular
+          \((B_{\bar\Q},\lambda)\) is a product of elliptic curves with the product polarization, and
+          \((B,\lambda)\) is not a Jacobian.
+\end{statement}
+
+\emph{Proof.} By Lemmas 11 and 12 and the discussion above, \(T_\ell B=\mathfrak a_\ell\,T_\ell A^{(\prime)}_\psi\)
+      for every \(\ell\), with \(\mathfrak a_\ell=\Z_\ell[i]\) for almost all \(\ell\). These local ideals come from a
+      fractional ideal \(\mathfrak a\) of the principal ideal domain \(\Z[i]\), say \(\mathfrak a=\alpha\Z[i]\). Since
+      \(\alpha\in\Q(i)\subseteq\End^0_{\Q}(A_\psi)\), (F1) gives \(B\cong A^{(\prime)}_\psi\). The only principal
+      polarization on \(A^{(\prime)}_\psi\) is \(\theta_0^{(\prime)}\), since \(n\theta_0^{(\prime)}\) has degree \(n^4\).
+      Geometrically \((A_\psi,\theta_0)\cong(E_0^2,\text{product})\) and \((A'_\psi,\theta'_0)\cong((E_0/C_0)^2,\text{product})\);
+      by (F8) these are not Jacobians. \qed
+
+\subsection{Every prime \(\ell\neq13\) is admissible}\label{c2-admissible}
+
+Suppose that \(\bar\rho=\bar\rho_{E_0,\ell}|_{G_K}\) is not absolutely irreducible. Then either it is
+      reducible over \(\F_\ell\), or it is irreducible but its commutant contains \(\F_{\ell^2}\), so that its
+      image lies in a non-split Cartan subgroup \(C_{ns}(\ell)\cong\F_{\ell^2}^\times\). For \(\ell=2\),
+      \(\GL_2(\F_2)\cong S_3\): the image \(S_3\) is absolutely irreducible, images of order at most \(2\) fix a
+      nonzero vector (reducible case), and the remaining case is the image \(C_3=C_{ns}(2)\).
+
+\textbf{(a) Reducible over \(\F_\ell\).} A \(G_K\)-stable line \(L_\ell\subset E_0[\ell]\) together with \(C_0\)
+      gives a \(K\)-rational cyclic \(13\ell\)-isogeny of \(E_0\), a curve without CM with \(j(E_0)\in\Q\).
+
+\begin{itemize}
+\item For \(\ell=2\), the cubic \(2\)-division polynomial of \(E_0\) has a root in the quadratic field \(K\),
+          hence a rational root; so \(E_0\) has a rational cyclic \(26\)-isogeny, contrary to (F9).
+\item For odd \(\ell\neq13\), Vukorepa~\cite[Theorem 1]{Vuk} states: if \(E\) is an elliptic curve without CM with
+          \(j(E)\in\Q\) and a cyclic \(n\)-isogeny defined over a quadratic field, then \(n\le18\) with \(n\neq14\), or \(n\) is one of
+          \(20\), \(21\), \(24\), \(25\), \(32\), \(36\), \(37\). Since \(13\ell\ge39\) is not in this list, this case is impossible.
+          In Vukorepa~\cite{Vuk} the relevant cases are treated in Lemma 4.1 (``Case \(q=13\)'', with \(q=17,37\) for
+          \(\ell=17,37\)): for \(\ell=5\) through the quadratic points of \(X_0(65)\) determined in
+          Box~\cite[§4.5]{Box}; for \(\ell=7\) through the quadratic points of \(X_0(91)\) determined in
+          \cite[§13]{Vuk}; for \(\ell=11,17,37\) because the isogeny descends to \(\Q\); and for \(\ell=3\)
+          through a genus-\(2\) curve of rank \(0\) on which \(j\) is a cube (part (4) of
+          \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_13.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}13.m}} re-checks this curve). For the remaining primes there is no
+          \(K\)-rational \(\ell\)-isogeny at all (\cite[§3]{Vuk}).
+\end{itemize}
+
+\textbf{(b) \(\ell\) odd, image in \(C_{ns}(\ell)\).} Complex conjugation \(c\) lies in \(G_K\) because \(K\) is
+      real. Then \(\bar\rho(c)\in\F_{\ell^2}^\times\) has order dividing \(2\), so \(\bar\rho(c)=\pm1\), of determinant
+      \(1\); but \(\det\bar\rho(c)=\bar\chi_\ell(c)=-1\).
+
+\textbf{(c) \(\ell=2\), image \(C_3\).} Then \(G_K\) permutes the roots of the \(2\)-division cubic by even
+      permutations, so the discriminant \(\Delta(E_0)\) is a square in \(K\): \(\Delta(E_0)\in\Q^{\times2}\) or
+      \(\Delta(E_0)\in d_K\Q^{\times2}\), where \(K=\Q(\sqrt{d_K})\). Since \(j-1728=c_6^2/\Delta\) and
+      \(j(E_0)\neq1728\), \(\Delta(E_0)\equiv j(E_0)-1728\) modulo \(\Q^{\times2}\).
+
+\begin{itemize}
+\item \textbf{(c1) \(\Delta(E_0)\in d_K\Q^{\times2}\).} Let \(C\) be the genus-\(2\) curve
+          \(y^2+(x^3+x^2+1)y=x^2+x\). By \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x1_13.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x1\_\allowbreak{}13.m}}, the Tate normal form
+          \(Y^2+(1-c)XY-bY=X^3-bX^2\) with \(r=1-xy\), \(s=1-xy/(y+1)\), \(b=rs(r-1)\), \(c=s(r-1)\) has \((0,0)\)
+          of exact order \(13\) over the function field of \(C\). The induced map \(C\to X_1(13)\) is
+          non-constant between curves of genus \(2\), hence an isomorphism over \(\Q\), and the \(j\)-invariant
+          is a rational function \(j(x)\in\Q(x)\) with denominator \(x^{13}(x+1)^{13}(x^3+4x^2+x-1)\). The
+          hyperelliptic involution is \((x,y)\mapsto(x,-y-x^3-x^2-1)\), with quotient map \(x\).
+
+The pair \((E',\pm P')\) is a point of \(Y_1(13)\) with residue field \(K\), since
+          \(Y_1(13)(\Q)=\emptyset\) by (F9). By Bosman--Bruin--Dujella--Najman~\cite[Lemmas 12 and 13]{BBDN} (\(J_1(13)(\Q)\cong\Z/19\Z\), every
+          class being represented by a divisor supported on the cusps), as in the proof of
+          \cite[Theorem 9(1)]{BBDN}, this point lies in a fibre of \(x\) over a rational point. The
+          two points at infinity of \(C\) are rational, so \(x=t\in\Q\), \(K=\Q(\sqrt{D(t)})\) with
+          \(D(t)=(t^3+t^2+1)^2+4(t^2+t)\), and \(j(E_0)=j(E')=j(t)\).
+
+The script also verifies
+
+\[
+j(t)-1728=-\frac{D(t)\,g(t)^2}{t^{13}(t+1)^{13}(t^3+4t^2+t-1)}
+\]
+
+with \(g\in\Q[t]\) of degree \(18\); here \(g(t)\neq0\) because \(j\neq1728\). So the condition
+          \((j(t)-1728)D(t)\in\Q^{\times2}\) means that \(t\) is the \(x\)-coordinate of a rational point on
+
+\[
+C_1:\ s^2=-t(t+1)(t^3+4t^2+t-1)=-t^5-5t^4-5t^3+t.
+\]
+
+The Mordell--Weil rank of \(J(C_1)(\Q)\) is \(0\) unconditionally: the cubic field
+          \(\Q[t]/(t^3+4t^2+t-1)\) of discriminant \(169\) has trivial class group (computed with
+          \texttt{Proof := {\char34}Full{\char34}}), and \(\#\mathrm{Sel}_2(J(C_1))=\#J(C_1)(\Q)[2]=4\). Chabauty's method for rank
+          \(0\) gives \(C_1(\Q)=\{(-1,0),(0,0),\infty\}\), i.e. \(t\in\{-1,0,\infty\}\), which are cusps (poles of
+          \(j\)). Contradiction.
+\item \textbf{(c2) \(\Delta(E_0)\in\Q^{\times2}\).} Since \(E_0\) has a rational \(13\)-isogeny,
+          \(j(E_0)=j_{13}(u)\) for some \(u\in\Q^\times\), where
+
+\[
+j_{13}(u)=\frac{(u^2+5u+13)(u^4+7u^3+20u^2+19u+1)^3}{u}
+\]
+
+parametrizes \(X_0(13)\) (see \cite[§3.3]{Vuk}). The script \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_13.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}13.m}} checks
+          that \(\Phi_{13}(j_{13}(u),j_{13}(13/u))\) vanishes identically and that \(\deg j_{13}=14\), so
+          \(u\mapsto(j_{13}(u),j_{13}(13/u))\) is a birational parametrization of \(X_0(13)\). It also verifies
+          \(j_{13}(u)-1728\) \({}=(u^2+6u+13)h(u)^2/u\) with \(h\) of degree \(6\) and no rational root, so
+          \(j-1728\in\Q^{\times2}\) means \(s^2=u^3+6u^2+13u\). With \(u=X-2\) this is \(Y^2=X^3+X-10\), the curve
+          52a1, of rank \(0\) with torsion \(\Z/2\Z\). Its rational points are \(\infty\) and \((u,s)=(0,0)\), which
+          are cusps. Contradiction.
+\end{itemize}
+
+Hence every prime \(\ell\neq13\) is admissible, and Proposition 13 proves Proposition 2(b). This
+      completes the proof of Proposition 2 and of the Theorem. \qed
+
+\section{Computations}\label{computations}
+
+Each script below is self-contained, asserts every fact it reports, and ends with
+      \texttt{ALL\_CHECKS\_PASSED}. They were run in Magma V2.30-1 on 21 October 2026; the logs are
+      linked next to the scripts. No result depends on the generalized Riemann hypothesis: Magma's
+      class group computations are rigorous unless \texttt{SetClassGroupBounds({\char34}GRH{\char34})} is called,
+      which none of the scripts does.
+
+\begin{itemize}
+\item \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_cm_weil.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}cm\_\allowbreak{}weil.m}} (\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_cm_weil.log}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}cm\_\allowbreak{}weil.log}}): the exact enumeration of the
+          Weil polynomials of abelian surfaces over \(\F_2\), the polynomial \(T^4+2T^3+2T^2+4T+4\) and its root
+          field \(\Q(\zeta_{12})\), and the facts about \(\Q(i)\), \(\Q(\sqrt{-3})\) and \(E_M\) used in
+          Section~\ref{type-cm}.
+\item \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_39.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}39.m}} (\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_39.log}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}39.log}}): the model of \(X_0(39)\), the moduli check of
+          \(w_3\), \(X_0(39)/w_3\cong\) 39a1 of rank \(0\), and the fibres over its four rational points
+          (Section~\ref{c6}); hence \(X_0(39)(\Q)\) consists of cusps (F9).
+\item \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_26.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}26.m}} (\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_26.log}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}26.log}}): the model of \(X_0(26)\), the moduli check of
+          \(w_2\), \(X_0(26)/w_2\cong\) 26a1 of rank \(0\), and the fibres over its three rational points,
+          including \(H_{-52}\) (Section~\ref{c4}); hence \(X_0(26)(\Q)\) consists of cusps (F9).
+\item \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x1_13.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x1\_\allowbreak{}13.m}} (\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x1_13.log}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x1\_\allowbreak{}13.log}}): the model of \(X_1(13)\), the \(j\)-map, the
+          factorization of \(j-1728\), and the unconditional determination of \(C_1(\Q)\)
+          (Section~\ref{c2-admissible}, (c1)); also the example of Section~\ref{remarks}.
+\item \href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_13.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}13.m}} (\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x0_13.log}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x0\_\allowbreak{}13.log}}): the parametrization \(j_{13}\) of \(X_0(13)\), the
+          factorization of \(j_{13}-1728\), the curve 52a1 (Section~\ref{c2-admissible}, (c2)), and the cross-check of
+          the genus-\(2\) curve \(w^3=u^2(u^2+5u+13)\) used in Vukorepa~\cite{Vuk} for \(\ell=3\).
+\end{itemize}
+
+The inputs from the literature that were not recomputed here are
+      Bosman--Bruin--Dujella--Najman~\cite[Theorem 11(1), Lemmas 12 and 13]{BBDN}, Vukorepa~\cite[Theorem 1]{Vuk} (including the computations
+      on \(X_0(65)\) in Box~\cite[§4.5]{Box} and on \(X_0(91)\) in \cite[§13]{Vuk}), Mazur's and Kenku's
+      theorems in (F9), Faltings' theorems (F10), Tate's theorem in Section~\ref{type-cm}, and the criterion of
+      Néron--Ogg--Shafarevich.
+
+\section{Consequence for the census}\label{census}
+
+The group \href{https://genus-2-torsion.github.io/group.html?g=13}{\([13]\)} is impossible in the class ``geometrically split, simple over \(\Q\)''. It was
+      already impossible in the class ``split over \(\Q\)'' by Mazur's theorem
+      (\href{https://genus-2-torsion.github.io/proofs/qsplit-prime-obstruction.html}{prime torsion obstruction}). Hence no geometrically split
+      genus-\(2\) Jacobian over \(\Q\) has a rational point of order \(13\), and the combined geometrically
+      split \(\infty\)? cell of \href{https://genus-2-torsion.github.io/group.html?g=13}{\([13]\)} becomes \(\emptyset\).
+
+The theorem applies to every group containing a point of order \(13\). Among the census groups these
+      are \href{https://genus-2-torsion.github.io/group.html?g=13}{\([13]\)}, \href{https://genus-2-torsion.github.io/group.html?g=26}{\([26]\)}, \href{https://genus-2-torsion.github.io/group.html?g=2.26}{\([2,26]\)} and \href{https://genus-2-torsion.github.io/group.html?g=39}{\([39]\)}. The last three are also excluded, in both geometrically
+      split classes, by \href{https://genus-2-torsion.github.io/proofs/geometric-26-39-obstruction.html}{the proof for orders 26 and 39}, which shows
+      independently that no geometrically split abelian surface over \(\Q\), principally polarized or not,
+      has a rational point of order \(26\) or \(39\). For \href{https://genus-2-torsion.github.io/group.html?g=13}{\([13]\)} the principal polarization is essential;
+      see Section~\ref{remarks}.
+
+The argument places no restriction on the geometric splitting degree, the field of definition of
+      the geometric endomorphisms, or the integral endomorphism ring.
+
+\section{Remarks}\label{remarks}
+
+\begin{enumerate}
+\item \emph{The Jacobian hypothesis cannot be dropped.} Let \(E\) be an elliptic curve without CM over a
+          quadratic field \(K\) with a point of order \(13\). By Bosman--Bruin--Dujella--Najman~\cite[Theorem 9(1)]{BBDN}, \(K\) is real and
+          \(E\) has false complex multiplication by \(\Q(\sqrt{-1})\), which by the definition in \cite[§4.1]{BBDN} means that
+          \(\End^0_{\Q}(\operatorname{Res}_{K/\Q}E)\) contains \(\Q(i)\); this algebra has dimension \(2\), because
+          \(E\) has no CM and \(E\cong_K E^\sigma\) \cite[Theorem 11(1)]{BBDN}, so
+          \(\End^0_{\Q}(\operatorname{Res}_{K/\Q}E)\cong\Q(i)\). So it is simple over \(\Q\) and geometrically
+          split, and its group of rational points \(E(K)\) contains a point of order \(13\). Such curves exist: the
+          two points of the curve \(C\) of Section~\ref{c2-admissible} with \(x=-2\) are defined over \(K=\Q(\sqrt{17})\)
+          and give such a curve \(E\), with \(j\)-invariant \(-60698457/40960\); this is the \(j\)-invariant of the curve
+          \([1,-1,0,-139,965]\) over \(\Q\), which has a rational \(13\)-isogeny
+          (\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_13_x1_13.m}{\texttt{qsimple\_\allowbreak{}13\_\allowbreak{}x1\_\allowbreak{}13.m}}, part (5)). These surfaces are of type \(\Gamma=C_2\); by Proposition 2(b), all
+          principal polarizations in their isogeny classes are product polarizations.
+\item \emph{What is proved for abelian surfaces.} For a geometrically split abelian surface \(A/\Q\) that
+          is simple over \(\Q\) and has \(A(\Q)[13]\neq0\), with any polarization: \(A\) is not of type (N) or (CM),
+          and in type (S) \(\Gamma\notin\{C_1,C_4,C_6,V_4,D_6,D_8,D_{12}\}\). If \(\Gamma=C_3\), no surface in the
+          \(\Q\)-isogeny class of \(A\) is principally polarized; if \(\Gamma=C_2\), every principally polarized
+          surface in it is geometrically a product with the product polarization.
+\item \emph{Earlier ingredients.} The argument for \(\Gamma=C_6\) and for non-cyclic \(\Gamma\) is the
+          \(13\)-part of the argument used for orders \(26\) and \(39\); the construction of the curve \(E_c\)
+          in Section~\ref{c4} is a special case of Elkies's reduction of quadratic \(K\)-curves
+          (Elkies~\cite{Elk}); the argument is given here in full.
+\end{enumerate}
+\begin{thebibliography}{Ken80}
+
+\bibitem[BBDN]{BBDN}
+J. Bosman, P. Bruin, A. Dujella and F. Najman,
+\emph{Ranks of elliptic curves with prescribed torsion over number fields},
+Int. Math. Res. Not. IMRN \textbf{2014}, no.~11, 2885--2923;
+     \href{https://arxiv.org/abs/1201.0252}{arXiv:1201.0252v1}. Theorem~9(1), Theorem~11(1),
+     Lemmas~12 and~13 and \S4.1 are cited in the numbering of arXiv:1201.0252v1.
+
+\bibitem[Vuk]{Vuk}
+B. Vukorepa,
+\emph{Isogenies over quadratic fields of elliptic curves with rational \(j\)-invariant},
+\href{https://arxiv.org/abs/2203.10672}{arXiv:2203.10672v1} (2022), Theorem~1; Lemma~4.1 and
+     \S\S3, 13.
+
+\bibitem[Box]{Box}
+J. Box,
+\emph{Quadratic points on modular curves with infinite Mordell--Weil group},
+Math. Comp. \textbf{90} (2021), 321--343, \S4.5 (numbering of arXiv:1906.05206v3).
+     \href{https://arxiv.org/abs/1906.05206}{arXiv:1906.05206}.
+
+\bibitem[Maz]{Maz}
+B. Mazur,
+\emph{Modular curves and the Eisenstein ideal},
+Publ. Math. IH\'ES \textbf{47} (1977), 33--186, Theorem~(7$'$).
+     \href{https://www.numdam.org/item/PMIHES_1977__47__33_0/}{Numdam}.
+
+\bibitem[Ken79]{Ken79}
+M. A. Kenku,
+\emph{The modular curve \(X_0\)(39) and rational isogeny},
+Math. Proc. Cambridge Philos. Soc. \textbf{85} (1979), 21--23.
+
+\bibitem[Ken80]{Ken80}
+M. A. Kenku,
+\emph{The modular curve \(X_0\)(169) and rational isogeny},
+J. London Math. Soc. (2) \textbf{22} (1980), 239--244.
+
+\bibitem[Fal]{Fal}
+G. Faltings,
+\emph{Endlichkeitss\"atze f\"ur abelsche Variet\"aten \"uber Zahlkörpern},
+Invent. Math. \textbf{73} (1983), 349--366, \S5, Satz~3 and Korollar~1.
+
+\bibitem[ST]{ST}
+J.-P. Serre and J. Tate,
+\emph{Good reduction of abelian varieties},
+Ann. of Math. (2) \textbf{88} (1968), 492--517, \S1, Theorem~1 and Corollaries~2--3 (p.~493); \S2, Theorem~2(i) (p.~496).
+
+\bibitem[Tat]{Tat}
+J. Tate,
+\emph{Endomorphisms of abelian varieties over finite fields},
+Invent. Math. \textbf{2} (1966), 134--144, Theorem~2(c).
+
+\bibitem[Elk]{Elk}
+N. D. Elkies,
+\emph{On elliptic \(K\)-curves},
+in: \emph{Modular curves and abelian varieties}, Progr. Math. \textbf{224}, Birkh\"auser, Basel, 2004,
+     81--91.
+
+\end{thebibliography}
+
+\end{document}

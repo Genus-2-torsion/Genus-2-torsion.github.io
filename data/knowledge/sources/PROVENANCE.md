@@ -442,6 +442,86 @@ quartic exclusion of order 35. The CM square cases use Clark, Theorem 5;
 [31] also uses the elliptic torsion-prime bounds of
 Derickx–Kamienny–Stein–Stoll and Khawaja.
 
+## Further exclusions (21 October 2026)
+
+Seven complete proofs add exclusions in both split classes. Each proof page links its standalone
+LaTeX source, and the Magma checks it relies on are listed below with their logs (Magma V2.30-1).
+
+* `qsplit`, [2,2,14] and [2,2,2,10]:
+  [`qsplit-two-rank-obstruction.html`](../../../proofs/qsplit-two-rank-obstruction.html). Mazur's
+  theorem applied to an elliptic subvariety and its quotient: a rational point of order 7 forces
+  rational 2-rank at most 2, and rational 2-rank 4 excludes points of orders 5 and 7.
+* [22] and [2,22], every geometrically split surface:
+  [`geometric-22-obstruction.html`](../../../proofs/geometric-22-obstruction.html) and
+  [`geometric_22_obstruction.tex`](geometric_22_obstruction.tex). A rational 11-point forces
+  simplicity over ℚ and excludes geometric squares (a residual tensor argument at 11 for non-CM
+  squares, Le Fourn–Najman for quadratic ℚ-curves, Bourdon–Clark for CM squares). Two
+  Galois-conjugate, non-isogenous factors over a quadratic field would then carry a point of order 22,
+  contradicting Kenku–Momose, Theorem (0.1).
+* [26], [2,26] and [39], every geometrically split surface:
+  [`geometric-26-39-obstruction.html`](../../../proofs/geometric-26-39-obstruction.html) and
+  [`geometric_26_39_obstruction.tex`](geometric_26_39_obstruction.tex). Endomorphism fields of degree
+  at most 4 reduce to elliptic torsion over fields of degree at most 4 (Kenku–Momose,
+  Derickx–Etropolski–van Hoeij–Morrow–Zureick-Brown, Derickx–Najman); CM squares fail a point count
+  over 𝔽₂ or 𝔽₃; residual representations at 13 leave a cyclic sextic endomorphism field, where a
+  rational 13-point would give a point of X₀(39)/w₃ ≅ 39a1 (rank 0) outside its four rational
+  points. Checks: [`geometric_26_39_x039_w3.m`](geometric_26_39_x039_w3.m)
+  ([log](geometric_26_39_x039_w3.log)); supplementary
+  [`geometric_26_39_checks.m`](geometric_26_39_checks.m) ([log](geometric_26_39_checks.log)).
+* [13], geometrically split and simple over ℚ:
+  [`qsimple-13-obstruction.html`](../../../proofs/qsimple-13-obstruction.html) and
+  [`qsimple_13_obstruction.tex`](qsimple_13_obstruction.tex). Rational 13-torsion is excluded on every
+  ℚ-simple, geometrically split abelian surface except non-CM squares with endomorphism field of
+  degree 2 or 3; in the cubic case no surface in the isogeny class is principally polarized, and in
+  the quadratic case every principal polarization in the isogeny class is a product polarization (a
+  lattice argument using Vukorepa's classification of quadratic isogenies). Checks:
+  [`qsimple_13_cm_weil.m`](qsimple_13_cm_weil.m) ([log](qsimple_13_cm_weil.log)),
+  [`qsimple_13_x0_39.m`](qsimple_13_x0_39.m) ([log](qsimple_13_x0_39.log)),
+  [`qsimple_13_x0_26.m`](qsimple_13_x0_26.m) ([log](qsimple_13_x0_26.log)),
+  [`qsimple_13_x1_13.m`](qsimple_13_x1_13.m) ([log](qsimple_13_x1_13.log), including a genus-2 curve
+  of rank 0 proved unconditionally) and [`qsimple_13_x0_13.m`](qsimple_13_x0_13.m)
+  ([log](qsimple_13_x0_13.log)).
+* [30], [60] and [2,30], simple over ℚ only:
+  [`qsimple-30-obstruction.html`](../../../proofs/qsimple-30-obstruction.html) and
+  [`qsimple_30_obstruction.tex`](qsimple_30_obstruction.tex). Coprime torsion in an elliptic isogeny
+  class and Derickx–Najman for non-isogenous factors and endomorphism fields of degree 1, 2 or 4; for
+  CM squares, good reduction over a totally ramified extension of ℚ₂ and Tate's theorem exclude a point
+  of order 15; for non-CM squares, polarization duality at 5 restricts the endomorphism field.
+  Clark's Theorem 5 permits orders 30 and 60, so it does not settle the CM case.
+* [63], simple over ℚ only:
+  [`qsimple-63-obstruction.html`](../../../proofs/qsimple-63-obstruction.html) and
+  [`qsimple_63_obstruction.tex`](qsimple_63_obstruction.tex). Residual representations at 7 force a
+  cyclic endomorphism field of order 2, 3 or 6; the sextic case fails at 3, and in the cubic case
+  Derickx–Etropolski–van Hoeij–Morrow–Zureick-Brown (Theorem A, §6.2) force the isogeny class of a
+  twist of 162b1², on which #A(𝔽₅) = 21. Checks:
+  [`qsimple_63_arithmetic.m`](qsimple_63_arithmetic.m) ([log](qsimple_63_arithmetic.log));
+  consistency check with census 21.b: [`qsimple_63_census_21b.m`](qsimple_63_census_21b.m)
+  ([log](qsimple_63_census_21b.log)). The point (2α−3, 2α−2) printed after Theorem A of
+  arXiv:2007.13929v2 is not on 162b1; the script uses (1−2α, 2−2α), which has order 21.
+* [5,5], [5,10] and [7,7], simple over ℚ only:
+  [`qsimple-rank-two-obstruction.html`](../../../proofs/qsimple-rank-two-obstruction.html) and
+  [`qsimple_rank_two_obstruction.tex`](qsimple_rank_two_obstruction.tex). For p ≥ 5, rational
+  p-torsion of rank two and polarization duality restrict the residual composition factors to 1, χ
+  and χ⁻¹; the Galois action on the geometric endomorphism algebra and complex conjugation then give a
+  contradiction. The statement fails for p = 3 (census 3.3.c and 3.9.c).
+
+The combined split infinitude records of [13], [22], [26], [39], [2,22] and [2,26] are now
+`impossible`. The other groups above have examples in the class not covered by their proof, so their
+combined records are unchanged. [26], [2,26] and [39] rest on the [26]/[39] proof, not on the [13]
+proof.
+
+The proofs of [22], [30], [5,5]/[5,10]/[7,7] were developed in
+`random_research/g2_gsplit_exclusions_2026_10_20/` (`proof_22.md`, `proof_30_qsimple.md`,
+`cm_15_obstruction.md`, `proof_odd_rank_two_qsimple.md`); those of [2,2,14], [2,2,2,10], [26], [39]
+and [63] in `random_research/exclusions_2026_10_21/` (`prove_qsplit/`, `prove_gsplit/`), and [13] in
+`random_research/gsplit13_2026_10_21/proof_13_gsplit.md`. Each was independently reviewed
+(`exclusions_2026_10_21/review_*`), and each published page was checked against its reviewed source.
+
+The same day, the proof pages of 20 October gained the published reference for Clark's Theorem 5
+(Clark–Xarles, Canad. J. Math. 60 (2008), Theorem 1.4), Mazur's theorem number (8), one line on
+semisimplicity in the [23]/[29] proof, and one line on why E and F are L-isogenous in the [35]/[70]
+proof.
+
 ## LMFDB labels
 
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels

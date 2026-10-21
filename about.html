@@ -26,11 +26,13 @@
     <dd>A smooth projective curve <span class="m">X</span> of genus 2 over <span class="m">ℚ</span>, given by an affine model
       <span class="m">y² + h(x)y = f(x)</span> with <span class="m">deg f ≤ 6</span>, <span class="m">deg h ≤ 3</span>. Curves are recorded up to isomorphism
       over <span class="m">ℚ</span>; the verifier works on the even model <span class="m">y² = 4f + h²</span>, made integral, and records the reduced minimal
-      Weierstrass model and the conductor when Magma can factor the discriminant quickly. For a Jacobian isogenous over <span class="m">ℚ</span> to a product
+      Weierstrass model and the conductor. For a Jacobian isogenous over <span class="m">ℚ</span> to a product
       <span class="m">E₁ × E₂</span> found by the Richelot search, the conductor is <span class="m">N(E₁)N(E₂)</span> (rigorous: an isogeny invariant, with the elliptic
       conductors from Tate's algorithm). Otherwise the conductor exponent at 2 is computed by Magma with Ogg's formula when <span class="m">v₂(Δ) ≥ 12</span>, without
       a correctness guarantee — an audit found it too large by <span class="m">2¹⁰</span> or <span class="m">2²⁰</span> for nine split curves — and this is flagged on the
-      curve's page. Odd exponents are rigorous.</dd>
+      curve's page. Odd exponents are rigorous. When Magma's genus-2 conductor fails or does not finish, or when its exponent at 2 disagrees
+      with the LMFDB label while the odd parts agree, the conductor is read off the LMFDB label. The one curve with neither,
+      <a href="curve.html?id=11.b">11.b</a>, has no conductor yet.</dd>
     <dt>the group</dt>
     <dd><span class="m">J(ℚ)<sub>tors</sub></span>, written as a list of invariant factors <span class="m">[n₁, …, n_r] = ℤ/n₁ ⊕ … ⊕ ℤ/n_r</span> with
       <span class="m">n₁ | … | n_r</span>, <span class="m">[ ]</span> for the trivial group, as in the paper. The groups are listed in the paper's order:
@@ -59,7 +61,8 @@
   </dl>
 
   <h3>How a curve is certified</h3>
-  <p>Every submission is verified from scratch by <code>pipeline/magma/verify_lib.m</code> (Magma V2.29) on Mordell.</p>
+  <p>Every submission is verified from scratch by <code>pipeline/magma/verify_lib.m</code> on Mordell, with Magma V2.29-4 (the 160 curves verified up to 16 October 2026) or V2.30-1 (all later verifications);
+    each curve's page records the version used.</p>
   <ol class="steps">
     <li><b>Torsion.</b> First the gcd of <span class="m">#J(𝔽<sub>p</sub>)</span> over 25 good primes <span class="m">p ≥ 3</span> is computed (reduction is injective on
       torsion, so <span class="m">#J(ℚ)<sub>tors</sub></span> divides it). If the submitter gave generators — points of the Jacobian of the even model
@@ -107,23 +110,39 @@
     of every prime order greater than <span class="m">7</span>. This marks 14 census groups as impossible
     in that column. The result concerns splitting over <span class="m">ℚ</span>; the census has geometrically
     split examples with torsion <a href="group.html?g=11">[11]</a> and <a href="group.html?g=19">[19]</a>
-    that are simple over <span class="m">ℚ</span>.</p>
+    that are simple over <span class="m">ℚ</span>. The same argument shows that a rational point of order
+    <span class="m">7</span> forces rational 2-rank at most 2, and that rational 2-rank 4 excludes points of
+    order <span class="m">5</span> and <span class="m">7</span>. This
+    <a href="proofs/qsplit-two-rank-obstruction.html">excludes</a> <a href="group.html?g=2.2.14">[2,2,14]</a> and
+    <a href="group.html?g=2.2.2.10">[2,2,2,10]</a> in that column.</p>
   <p>A geometrically split abelian surface over <span class="m">ℚ</span> has no rational point of order
-    <span class="m">23</span>, <span class="m">29</span>, <span class="m">31</span>,
-    <span class="m">33</span>, or <span class="m">34</span>. Complete proofs are available for
+    <span class="m">22</span>, <span class="m">23</span>, <span class="m">26</span>, <span class="m">29</span>,
+    <span class="m">31</span>, <span class="m">33</span>, <span class="m">34</span>, or <span class="m">39</span>.
+    Complete proofs are available for
+    <a href="proofs/geometric-22-obstruction.html">[22] and [2,22]</a>,
     <a href="proofs/geometric-23-29-obstruction.html">[23] and [29]</a>,
+    <a href="proofs/geometric-26-39-obstruction.html">[26], [2,26] and [39]</a>,
     <a href="proofs/geometric-31-obstruction.html">[31]</a>, and
     <a href="proofs/geometric-33-34-obstruction.html">[33] and [34]</a>, each with downloadable LaTeX.
     The proofs combine elliptic torsion bounds with the Galois action on the geometric endomorphism
     algebra and apply to every geometric splitting degree. Both split example columns are therefore
-    labelled impossible for these five groups, and their combined geometrically split <b>∞?</b> cells
+    labelled impossible for these ten groups, and their combined geometrically split <b>∞?</b> cells
     show <span class="inf-badge impossible">∅</span>, linked to the corresponding proof.</p>
-  <p>The groups <a href="group.html?g=35">[35]</a> and <a href="group.html?g=70">[70]</a> are also impossible
-    in the “geometrically split, simple over <span class="m">ℚ</span>” column.
-    The <a href="proofs/qsimple-35-obstruction.html">proof</a> excludes a rational point of order
-    <span class="m">35</span> on a geometrically split abelian surface that is simple over
-    <span class="m">ℚ</span>. Simplicity over <span class="m">ℚ</span> is essential: both groups
-    have examples in the split-over-<span class="m">ℚ</span> class. Thus these two exclusions do
+  <p>A geometrically split genus-2 Jacobian with a rational point of order <span class="m">13</span> is
+    not simple over <span class="m">ℚ</span> (<a href="proofs/qsimple-13-obstruction.html">proof</a>).
+    Together with Mazur's theorem in the split-over-<span class="m">ℚ</span> column, this makes
+    <a href="group.html?g=13">[13]</a> impossible on the whole geometrically split side, and its
+    <b>∞?</b> cell shows <span class="inf-badge impossible">∅</span>.</p>
+  <p>The following groups are impossible only in the “geometrically split, simple over
+    <span class="m">ℚ</span>” column: <a href="group.html?g=30">[30]</a>, <a href="group.html?g=60">[60]</a>
+    and <a href="group.html?g=2.30">[2,30]</a> (<a href="proofs/qsimple-30-obstruction.html">no point of order
+    30</a>), <a href="group.html?g=35">[35]</a> and <a href="group.html?g=70">[70]</a>
+    (<a href="proofs/qsimple-35-obstruction.html">no point of order 35</a>), <a href="group.html?g=63">[63]</a>
+    (<a href="proofs/qsimple-63-obstruction.html">no point of order 63</a>), and
+    <a href="group.html?g=5.5">[5,5]</a>, <a href="group.html?g=5.10">[5,10]</a> and <a href="group.html?g=7.7">[7,7]</a>
+    (<a href="proofs/qsimple-rank-two-obstruction.html">rational <span class="m">p</span>-torsion of rank at most
+    1 for <span class="m">p ≥ 5</span></a>). Simplicity over <span class="m">ℚ</span> is essential: each of
+    these groups has examples in the split-over-<span class="m">ℚ</span> class. Thus these exclusions do
     not imply <span class="inf-badge impossible">∅</span> on the combined geometrically split side.</p>
 
   <h3>Infinitely many?</h3>
@@ -235,9 +254,12 @@
       has one (e.g. only isolated examples, or every known example has real multiplication).</dd>
     <dt><span class="inf-badge impossible">∅</span></dt>
     <dd><b>Impossible.</b> A proof excludes every Jacobian on this side with the given torsion group.
-      The badge links to that proof. This currently applies to <a href="group.html?g=23">[23]</a>,
-      <a href="group.html?g=29">[29]</a>, <a href="group.html?g=31">[31]</a>,
-      <a href="group.html?g=33">[33]</a>, and <a href="group.html?g=34">[34]</a>
+      The badge links to that proof. This currently applies to <a href="group.html?g=13">[13]</a>,
+      <a href="group.html?g=22">[22]</a>, <a href="group.html?g=23">[23]</a>,
+      <a href="group.html?g=26">[26]</a>, <a href="group.html?g=29">[29]</a>,
+      <a href="group.html?g=31">[31]</a>, <a href="group.html?g=33">[33]</a>,
+      <a href="group.html?g=34">[34]</a>, <a href="group.html?g=39">[39]</a>,
+      <a href="group.html?g=2.22">[2,22]</a>, and <a href="group.html?g=2.26">[2,26]</a>
       on the geometrically split side.</dd>
   </dl>
 

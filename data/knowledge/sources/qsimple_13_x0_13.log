@@ -1,0 +1,17 @@
+Magma V2.30-1
+CHECK Phi_13(j13(u), j13(13/u)) = 0 identically; deg j13 = 14
+CHECK j13 - 1728 = (u^2+6u+13) h(u)^2/u with h = v^6 + 10*v^5 + 46*v^4 + 108*v^3 + 122*v^2 + 38*v - 1
+s^2 = u^3+6u^2+13u is [ 0, 0, 0, 1, -10 ]
+52a1
+CHECK 52a1 has rank 0 (proved) and torsion Z/2; its points are infinity and (u,s) = (0,0)
+L3: hyperelliptic model Hyperelliptic Curve defined by y^2 = 9*x^6 - 90*x^3 - 243 over Rational Field, rank bounds 0 0, torsion [ 6 ]
+L3 Chabauty0: {@ (1 : -3 : 0), (1 : 3 : 0) @}
+   preimage on w^3 = u^2(u^2+5u+13): Scheme over Rational Field defined by
+uu^4 - 13*uu^2 + ww^3,
+uu,
+-uu^4 - 5*uu^3 - 13*uu^2 + ww^3
+   preimage on w^3 = u^2(u^2+5u+13): Scheme over Rational Field defined by
+uu^4 - 13*uu^2 - ww^3,
+uu,
+-uu^4 - 5*uu^3 - 13*uu^2 + ww^3
+ALL_CHECKS_PASSED

@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No rank-two p-torsion for p ≥ 5 on geometrically split, ℚ-simple surfaces — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that a geometrically split abelian surface over Q that is simple over Q satisfies dim A(Q)[p] ≤ 1 for every prime p ≥ 5. This excludes [5,5], [5,10] and [7,7] in the geometrically split, Q-simple class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          R: '\\mathbb{R}', C: '\\mathbb{C}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Lie: '\\operatorname{Lie}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=5.5">[5,5]</a>, <a href="../group.html?g=5.10">[5,10]</a>, <a href="../group.html?g=7.7">[7,7]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>Rational \(p\)-torsion of rank two on geometrically split, \(\Q\)-simple abelian surfaces</h2>
+  <p class="src">21 October 2026 · Geometrically split, simple over ℚ</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and
+      geometrically split, and let \(p\geq5\) be a prime. Then</p>
+    <div class="equation">\[
+      \dim_{\F_p}A(\Q)[p]\leq1.
+    \]</div>
+    <p>In particular, the groups <a href="../group.html?g=5.5">[5,5]</a>, <a href="../group.html?g=5.10">[5,10]</a>
+      and <a href="../group.html?g=7.7">[7,7]</a> cannot occur as the rational torsion subgroup of a
+      geometrically split genus-\(2\) Jacobian that is simple over \(\Q\).</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\overline{\Q}}\) is isogenous to a product of elliptic
+    curves. We impose no restriction on the degree of this isogeny. The theorem does not require a
+    principal polarization.</p>
+  <p>The hypothesis of simplicity over \(\Q\) is essential. A product of two elliptic curves over \(\Q\),
+    each with a rational point of order \(5\), has \((\Z/5\Z)^2\) in its rational torsion, and each of the
+    three groups has an example split over \(\Q\) in the census. The bound \(p\geq5\) is also needed: the
+    census contains geometrically split Jacobians, simple over \(\Q\), with torsion
+    <a href="../group.html?g=3.3">[3,3]</a> and <a href="../group.html?g=3.9">[3,9]</a>.
+    Section 7 says where the proof uses each hypothesis.</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsimple_rank_two_obstruction.tex">Complete proof (LaTeX source)</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#notation">Notation and standard facts</a></li>
+      <li><a href="#rank-two">Consequences of rational torsion of rank two</a></li>
+      <li><a href="#nonisogenous">Nonisogenous geometric factors</a></li>
+      <li><a href="#cm-square">The square of a CM elliptic curve</a></li>
+      <li><a href="#endomorphism-field">The square of a non-CM elliptic curve: the endomorphism field</a></li>
+      <li><a href="#complex-conjugation">Complex conjugation and cyclic endomorphism fields</a></li>
+      <li><a href="#hypotheses">Where the hypotheses are used</a></li>
+      <li><a href="#census">Consequence for the census</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="notation">
+    <h3>1. Notation and standard facts</h3>
+    <p>Fix an embedding \(\overline{\Q}\subset\C\). For a number field \(K\subset\overline{\Q}\), write
+      \(G_K=\Gal(\overline{\Q}/K)\), and let \(c\in G_{\Q}\) be complex conjugation. Let \(p\) be an odd
+      prime, and put</p>
+    <div class="equation">\[
+      T=T_p(A),\qquad V=T\otimes_{\Z_p}\Q_p,\qquad A[p]=T/pT,
+    \]</div>
+    <p>with their actions of \(G_{\Q}\). Let \(\rho:G_{\Q}\to\GL(T)\) be the action on \(T\), and
+      \(\chi:G_{\Q}\to\F_p^\times\) the mod-\(p\) cyclotomic character. Since \(\chi\) is surjective, it has
+      order \(p-1\); in particular \(\chi\neq\mathbf 1\). For a finite-dimensional representation \(M\) of
+      \(G_{\Q}\) over \(\F_p\), we write \(M^{\mathrm{ss}}\) for its semisimplification and \(M^*\) for its dual.</p>
+    <p>Let \(D=\End(A_{\overline{\Q}})\otimes\Q\). The group \(G_{\Q}\) acts on \(D\) by \(\Q\)-algebra
+      automorphisms, \({}^\sigma\varphi=\sigma\circ\varphi\circ\sigma^{-1}\). An element of \(D\) fixed by
+      \(G_K\) is defined over \(K\). Let \(L\) be the smallest field over which all geometric endomorphisms
+      of \(A\) are defined. It is a finite Galois extension of \(\Q\), and \(\Gamma=\Gal(L/\Q)\) acts
+      faithfully on \(D\). We use the following standard facts.</p>
+    <ol>
+      <li id="F1">
+        <p><strong>(F1) Tate modules.</strong> The map
+          \(\End(A_{\overline{\Q}})\otimes\Z_p\to\End_{\Z_p}(T)\) is injective
+          (<a href="#milne">Milne, Theorem I.10.15</a>, applied over \(\overline{\Q}\)). Hence
+          \(D\otimes_{\Q}\Q_p\to\End_{\Q_p}(V)\) is injective. It is \(G_{\Q}\)-equivariant when
+          \(G_{\Q}\) acts on \(\End_{\Q_p}(V)\) by conjugation:
+          \(T_p({}^\sigma\varphi)=\rho(\sigma)\,T_p(\varphi)\,\rho(\sigma)^{-1}\).</p>
+      </li>
+      <li id="F2">
+        <p><strong>(F2) Lattice independence.</strong> Let \(W\) be a finite-dimensional
+          \(\Q_p\)-vector space with a continuous action of \(G_{\Q}\). For a \(G_{\Q}\)-stable
+          \(\Z_p\)-lattice \(\Lambda\subset W\), the semisimplification of \(\Lambda/p\Lambda\) depends
+          only on the isomorphism class of \(W\). Indeed, the characteristic polynomials on
+          \(\Lambda/p\Lambda\) are the reductions of those on \(W\), and the Brauer–Nesbitt theorem
+          applies. In particular, a lattice may be transported through an isomorphism of representations.</p>
+      </li>
+      <li id="F3">
+        <p><strong>(F3) Polarization.</strong> Every abelian variety over \(\Q\) has a polarization over
+          \(\Q\). Combined with the Weil pairing (<a href="#milne">Milne, Section I.13</a>), it gives a
+          nondegenerate alternating \(G_{\Q}\)-equivariant pairing \(V\times V\to\Q_p(1)\), hence an
+          isomorphism</p>
+        <div class="equation">\[
+          V\simeq V^*\otimes_{\Q_p}\Q_p(1).
+        \]</div>
+        <p>The polarization is used only on the rational Tate module, so its degree may be divisible by \(p\).</p>
+      </li>
+      <li id="F4">
+        <p><strong>(F4) Idempotents over \(\Q\).</strong> If \(D\) contains an idempotent \(e\neq0,1\)
+          fixed by \(G_{\Q}\), then \(A\) is not simple over \(\Q\). Indeed, \(e\) is defined over \(\Q\),
+          so \(ne\in\End(A)\) for some integer \(n\geq1\). Its image is an abelian subvariety of \(A\)
+          over \(\Q\). It is nonzero because \(e\neq0\). It is proper because
+          \(ne\circ n(1-e)=0\) and \(n(1-e)\neq0\), so \(ne\) is not an isogeny.</p>
+      </li>
+      <li id="F5">
+        <p><strong>(F5) Complex conjugation.</strong> Since \(A\) is defined over \(\R\), complex
+          conjugation of coordinates gives an antiholomorphic involution \(\mathcal C\) of \(A(\C)\)
+          which is a group automorphism. Write \(A(\C)=\Lie(A_{\C})/\Lambda\) with
+          \(\Lambda=H_1(A(\C),\Z)\), so that \(H=\Lambda\otimes\R\) is identified with \(\Lie(A_{\C})\),
+          and let \(J\) be the complex structure on \(H\). The map \(\mathcal C\) lifts to an
+          \(\R\)-linear involution \(c_H\) of \(H\), its differential at \(0\), and</p>
+        <div class="equation">\[
+          c_HJ=-Jc_H,
+        \]</div>
+        <p>because \(\mathcal C\) is antiholomorphic. Each \(\varphi\in D\) acts on \(H\) by an
+          \(\R\)-linear map \(\rho_H(\varphi)\) commuting with \(J\): this is the analytic representation,
+          equivalently the rational representation on \(H_1(A(\C),\Q)\) tensored with \(\R\). The
+          resulting map \(\rho_H:D\otimes_{\Q}\R\to\End_{\R}(H)\) is injective. Finally, for
+          \(\varphi\in\End(A_{\overline{\Q}})\) we have \({}^c\varphi=\mathcal C\circ\varphi\circ\mathcal C\)
+          on \(A(\C)\), since both sides are morphisms (the right-hand side is \(\varphi\) with
+          complex-conjugated coefficients) that agree on \(A(\overline{\Q})\). Therefore, by linearity,</p>
+        <div class="equation">\[
+          \rho_H({}^c\varphi)=c_H\,\rho_H(\varphi)\,c_H^{-1}\qquad(\varphi\in D).
+        \]</div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="rank-two">
+    <h3>2. Consequences of rational torsion of rank two</h3>
+    <p>In this section \(p\) is an odd prime and \(\dim_{\F_p}A(\Q)[p]\geq2\). Simplicity over \(\Q\)
+      and geometric splitting are not used here.</p>
+    <div class="theorem" id="lemma-1">
+      <p><strong>Lemma 1.</strong> We have \(A[p]^{\mathrm{ss}}\simeq\mathbf 1^2\oplus\chi^2\). Every
+        composition factor of \(\End_{\F_p}(A[p])\), on which \(G_{\Q}\) acts by conjugation, is one of
+        \(\mathbf 1\), \(\chi\), \(\chi^{-1}\).</p>
+    </div>
+    <p><strong>Proof.</strong> The subspace \(A(\Q)[p]=A[p]^{G_{\Q}}\) is a trivial submodule of dimension at
+      least \(2\). Thus \(\mathbf 1\) occurs in \(A[p]^{\mathrm{ss}}\) with some multiplicity \(m\geq2\).</p>
+    <p>Transport the lattice \(\operatorname{Hom}_{\Z_p}(T,\Z_p)\otimes_{\Z_p}\Z_p(1)\) into \(V\)
+      through the isomorphism of <a href="#F3">(F3)</a>. Its reduction is \(A[p]^*\otimes\chi\).
+      By <a href="#F2">(F2)</a>,</p>
+    <div class="equation">\[
+      A[p]^{\mathrm{ss}}\simeq\bigl(A[p]^*\otimes\chi\bigr)^{\mathrm{ss}}
+      =\bigl(A[p]^{\mathrm{ss}}\bigr)^*\otimes\chi.
+    \]</div>
+    <p>The multiplicity of \(\chi\) on the right equals the multiplicity of \(\mathbf 1\) in
+      \((A[p]^{\mathrm{ss}})^*\), which is \(m\). Hence \(\chi\) occurs at least twice in
+      \(A[p]^{\mathrm{ss}}\). Since \(\chi\neq\mathbf 1\) and \(\dim A[p]=4\), it follows that
+      \(m=2\) and \(A[p]^{\mathrm{ss}}\simeq\mathbf 1^2\oplus\chi^2\).</p>
+    <p>For the second claim, \(\End_{\F_p}(A[p])\simeq A[p]\otimes A[p]^*\). In the Grothendieck group of
+      finite-dimensional \(\F_p[G_{\Q}]\)-modules, the class of a module is the sum of the classes of its
+      composition factors. Tensor product over \(\F_p\) is exact in each variable, so the class of
+      \(M\otimes N\) depends only on the classes of \(M\) and \(N\), bilinearly. Since
+      \((A[p]^*)^{\mathrm{ss}}\simeq\mathbf 1^2\oplus\chi^{-2}\), we get</p>
+    <div class="equation">\[
+      [\End_{\F_p}(A[p])]=\bigl(2[\mathbf 1]+2[\chi]\bigr)\bigl(2[\mathbf 1]+2[\chi^{-1}]\bigr)
+      =8[\mathbf 1]+4[\chi]+4[\chi^{-1}].
+    \]</div>
+    <p>This determines the composition factors. ∎</p>
+    <p>This statement concerns composition factors. It does not assert that \(A[p]\) or its endomorphism
+      module is semisimple. Only \(\chi\neq\mathbf 1\) was used, so Lemma 1 holds for every odd \(p\).</p>
+    <div class="theorem" id="lemma-2">
+      <p><strong>Lemma 2.</strong> Let \(B\subseteq\End_{\Q_p}(V)\) be a \(G_{\Q}\)-stable
+        \(\Q_p\)-subspace, and put</p>
+      <div class="equation">\[
+        B_{\Z_p}=B\cap\End_{\Z_p}(T).
+      \]</div>
+      <p>Then \(B_{\Z_p}\) is a \(G_{\Q}\)-stable \(\Z_p\)-lattice in \(B\), and reduction gives a
+        \(G_{\Q}\)-equivariant injection</p>
+      <div class="equation">\[
+        B_{\Z_p}/pB_{\Z_p}\hookrightarrow\End_{\F_p}(A[p]).
+      \]</div>
+      <p>Consequently, for every \(G_{\Q}\)-stable lattice \(\Lambda\subseteq B\), every composition
+        factor of \(\Lambda/p\Lambda\) is one of \(\mathbf 1\), \(\chi\), \(\chi^{-1}\).</p>
+    </div>
+    <p><strong>Proof.</strong> The module \(B_{\Z_p}\) is a submodule of the finite free
+      \(\Z_p\)-module \(\End_{\Z_p}(T)\), hence finite free. It spans \(B\), because \(p^kX\in\End_{\Z_p}(T)\)
+      for every \(X\in B\) and \(k\) large. It is \(G_{\Q}\)-stable because \(B\) and \(\End_{\Z_p}(T)\) are.
+      It is saturated in \(\End_{\Z_p}(T)\): if \(X\in B_{\Z_p}\) and \(X\in p\End_{\Z_p}(T)\), then
+      \(p^{-1}X\in B\cap\End_{\Z_p}(T)=B_{\Z_p}\). Thus
+      \(B_{\Z_p}\cap p\End_{\Z_p}(T)=pB_{\Z_p}\), which is the injectivity of the reduction map.</p>
+    <p>By the Jordan–Hölder theorem, the composition factors of \(B_{\Z_p}/pB_{\Z_p}\) are among those
+      of \(\End_{\F_p}(A[p])\), which are listed in <a href="#lemma-1">Lemma 1</a>. By
+      <a href="#F2">(F2)</a>, \(\Lambda/p\Lambda\) and \(B_{\Z_p}/pB_{\Z_p}\) have the same
+      semisimplification. ∎</p>
+    <div class="theorem" id="corollary-3">
+      <p><strong>Corollary 3.</strong> Suppose that \(p\geq5\) and \(\dim_{\F_p}A(\Q)[p]\geq2\). Let
+        \(\varepsilon:G_{\Q}\to\{\pm1\}\) be a nontrivial character. Then there is no nonzero
+        \(\delta\in D\) with \({}^\sigma\delta=\varepsilon(\sigma)\delta\) for all \(\sigma\in G_{\Q}\).</p>
+    </div>
+    <p><strong>Proof.</strong> Suppose such a \(\delta\) exists. By <a href="#F1">(F1)</a>, its image
+      in \(\End_{\Q_p}(V)\) is nonzero, and \(B=\Q_p\delta\) is a \(G_{\Q}\)-stable line on which
+      \(G_{\Q}\) acts through \(\varepsilon\). The lattice \(\Z_p\delta\) reduces to the character</p>
+    <div class="equation">\[
+      \overline\varepsilon:G_{\Q}\to\{\pm1\}\subset\F_p^\times,
+    \]</div>
+    <p>which is nontrivial because \(-1\neq1\) in \(\F_p\). By <a href="#lemma-2">Lemma 2</a>,
+      \(\overline\varepsilon\) is one of \(\mathbf 1\), \(\chi\), \(\chi^{-1}\). It is not \(\mathbf 1\).
+      It has order \(2\), whereas \(\chi\) and \(\chi^{-1}\) have order \(p-1\geq4\). This is a
+      contradiction. ∎</p>
+    <p>From now on, \(A\) is simple over \(\Q\) and geometrically split, \(p\geq5\), and we suppose,
+      to reach a contradiction, that \(\dim_{\F_p}A(\Q)[p]\geq2\). Exactly one of the following holds:
+      \(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\) with \(E_1,E_2\) not isogenous;
+      \(A_{\overline{\Q}}\) is isogenous to \(E^2\) with \(E\) a CM elliptic curve;
+      \(A_{\overline{\Q}}\) is isogenous to \(E^2\) with \(E\) without CM.
+      We treat these cases in Sections 3, 4, and 5–6.</p>
+  </section>
+
+  <section id="nonisogenous">
+    <h3>3. Nonisogenous geometric factors</h3>
+    <p>Suppose that \(A_{\overline{\Q}}\) is isogenous to \(E_1\times E_2\), where \(E_1\) and \(E_2\)
+      are not geometrically isogenous. Since \(\operatorname{Hom}(E_1,E_2)=0\),</p>
+    <div class="equation">\[
+      D\simeq\End^0(E_1)\times\End^0(E_2),
+    \]</div>
+    <p>where each factor is \(\Q\) or an imaginary quadratic field. The only idempotents of this product of
+      two fields other than \(0\) and \(1\) are \(e_1=(1,0)\) and \(e_2=(0,1)\). The group \(G_{\Q}\) acts by
+      algebra automorphisms, so it permutes \(\{e_1,e_2\}\). If it fixed \(e_1\), then \(A\) would not be
+      simple over \(\Q\), by <a href="#F4">(F4)</a>. Hence the permutation action defines a nontrivial
+      character \(\varepsilon:G_{\Q}\to\{\pm1\}\), with \(\varepsilon(\sigma)=-1\) exactly when \(\sigma\)
+      exchanges \(e_1\) and \(e_2\). The element</p>
+    <div class="equation">\[
+      \delta=e_1-e_2
+    \]</div>
+    <p>satisfies \({}^\sigma\delta=\varepsilon(\sigma)\delta\). This contradicts
+      <a href="#corollary-3">Corollary 3</a>.</p>
+    <p>This argument also covers elliptic factors with complex multiplication; only the two idempotents
+      are used. Simplicity over \(\Q\) is used to show that \(\varepsilon\) is nontrivial.</p>
+  </section>
+
+  <section id="cm-square">
+    <h3>4. The square of a CM elliptic curve</h3>
+    <p>Suppose that \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\) has complex multiplication
+      by an imaginary quadratic field \(M\). Then \(D\simeq M_2(M)\), and its centre \(Z=Z(D)\) is an
+      imaginary quadratic field isomorphic to \(M\). Choose \(\delta\in Z\) with \(\delta^2=-d\) for a
+      rational number \(d&gt;0\). Since \(G_{\Q}\) acts on \(D\) by algebra automorphisms, it preserves
+      \(Z\) and acts on it by field automorphisms. Hence there is a character
+      \(\varepsilon:G_{\Q}\to\{\pm1\}\) with</p>
+    <div class="equation">\[
+      {}^\sigma\delta=\varepsilon(\sigma)\delta\qquad(\sigma\in G_{\Q}).
+    \]</div>
+    <p>We show that \(\varepsilon(c)=-1\). Choose an isogeny \(f:A_{\C}\to E_{\C}^2\). Conjugation by
+      \(f\) identifies \(D\) with \(\End^0(E^2)=M_2(\End^0(E))\). The field \(\End^0(E)\) acts on the
+      one-dimensional space \(\Lie(E_{\C})\) through a field embedding into \(\C\), so the
+      centre of \(M_2(\End^0(E))\) acts on \(\Lie(E_{\C}^2)=\Lie(E_{\C})^2\) by complex scalars.
+      Transporting through the \(\C\)-linear isomorphism \(df:\Lie(A_{\C})\to\Lie(E^2_{\C})\), we find a
+      field embedding \(\iota:Z\to\C\) such that</p>
+    <div class="equation">\[
+      \rho_H(z)=\iota(z)\qquad(z\in Z),
+    \]</div>
+    <p>where the right-hand side means multiplication by the complex number \(\iota(z)\) on
+      \(H=\Lie(A_{\C})\). By <a href="#F5">(F5)</a>, and since \(c_H\) is \(\C\)-antilinear,</p>
+    <div class="equation">\[
+      \rho_H({}^c\delta)=c_H\,\iota(\delta)\,c_H^{-1}=\overline{\iota(\delta)}=-\iota(\delta)=\rho_H(-\delta).
+    \]</div>
+    <p>Here \(\overline{\iota(\delta)}=-\iota(\delta)\) because \(\iota(\delta)^2=-d&lt;0\). Since
+      \(\rho_H\) is injective, \({}^c\delta=-\delta\). Thus \(\varepsilon\) is nontrivial, and
+      <a href="#corollary-3">Corollary 3</a> gives a contradiction.</p>
+    <p>Simplicity over \(\Q\) is not used in this case.</p>
+  </section>
+
+  <section id="endomorphism-field">
+    <h3>5. The square of a non-CM elliptic curve: the endomorphism field</h3>
+    <p>Suppose finally that \(A_{\overline{\Q}}\) is isogenous to \(E^2\), where \(E\) has no complex
+      multiplication. Then</p>
+    <div class="equation">\[
+      D\simeq M_2(\Q).
+    \]</div>
+    <p>By Skolem–Noether, every \(\Q\)-algebra automorphism of \(M_2(\Q)\) is inner. The faithful action
+      of \(\Gamma\) on \(D\) therefore identifies \(\Gamma\) with a finite subgroup of
+      \(\operatorname{Aut}(M_2(\Q))=\PGL_2(\Q)\).</p>
+    <div class="theorem" id="lemma-4">
+      <p><strong>Lemma 4.</strong> A finite subgroup of \(\PGL_2(\Q)\) is isomorphic to one of</p>
+      <div class="equation">\[
+        C_1,\ C_2,\ C_3,\ C_4,\ C_6,\ D_4,\ D_6,\ D_8,\ D_{12},
+      \]</div>
+      <p>where the subscript on a dihedral group denotes its order. In particular, \(D_4=C_2\times C_2\),
+        and the order of such a group divides \(24\).</p>
+    </div>
+    <p><strong>Proof.</strong> This is a special case of <a href="#beauville">Beauville, Introduction and
+      Proposition 1.1</a>. For completeness: a finite subgroup of \(\PGL_2(\R)\) acts by isometries on the
+      hyperbolic plane, so it fixes a point. Its action on the tangent plane at that point embeds it in
+      \(O(2)\), so it is cyclic or dihedral. If an element of \(\PGL_2(\Q)\) has order \(n&gt;2\), the
+      ratio of the eigenvalues of a representative \(M\) is a primitive \(n\)-th root of unity \(\zeta\).
+      Thus</p>
+    <div class="equation">\[
+      \frac{(\operatorname{tr}M)^2}{\det M}=2+\zeta+\zeta^{-1}\in\Q,
+    \]</div>
+    <p>which forces \(\varphi(n)=2\), that is, \(n\in\{3,4,6\}\). ∎</p>
+    <div class="theorem" id="proposition-5">
+      <p><strong>Proposition 5.</strong> In the present case,</p>
+      <div class="equation">\[
+        (p,\Gamma)\in\{(5,C_4),\ (7,C_6)\},\qquad L=\Q(\zeta_p).
+      \]</div>
+    </div>
+    <p><strong>Proof.</strong> Since \(p\geq5\) and \(|\Gamma|\) divides \(24\), the prime \(p\) does not
+      divide \(|\Gamma|\).</p>
+    <p>Let \(B\subseteq\End_{\Q_p}(V)\) be the image of \(D\otimes_{\Q}\Q_p\), which is isomorphic to it
+      by <a href="#F1">(F1)</a>, and let \(B_{\Z_p}\) be the lattice of <a href="#lemma-2">Lemma 2</a>.
+      The group \(G_{\Q}\) acts on \(B\) through \(\Gamma\), and this action is faithful because the action
+      on \(D\) is. Put \(\overline B=B_{\Z_p}/pB_{\Z_p}\).</p>
+    <p><em>The action of \(\Gamma\) on \(\overline B\) is faithful.</em> Let \(g\in\Gamma\) act trivially on
+      \(\overline B\), and suppose \(g\neq1\). Choosing a basis of \(B_{\Z_p}\), write
+      \(g=1+p^kY\) with \(k\geq1\) and \(Y\) a matrix over \(\Z_p\) that is nonzero modulo \(p\). Let \(m\)
+      be the order of \(g\); it divides \(|\Gamma|\), so \(p\nmid m\). Since \(2k\geq k+1\),</p>
+    <div class="equation">\[
+      1=g^m\equiv1+mp^kY\pmod{p^{k+1}},
+    \]</div>
+    <p>which is impossible because \(m\) is a unit in \(\Z_p\). Hence \(g=1\).</p>
+    <p><em>\(\Gamma\) is abelian, and \(\overline B\) is a sum of characters.</em> By Maschke's theorem,
+      \(\overline B\) is a semisimple \(\F_p[\Gamma]\)-module, so it is the direct sum of its composition
+      factors. By <a href="#lemma-2">Lemma 2</a>, each of these is one of \(\mathbf 1\), \(\chi\),
+      \(\chi^{-1}\). Thus</p>
+    <div class="equation">\[
+      \overline B\simeq\psi_1\oplus\psi_2\oplus\psi_3\oplus\psi_4,\qquad
+      \psi_i\in\{\mathbf 1,\chi,\chi^{-1}\},
+    \]</div>
+    <p>where each \(\psi_i\) is trivial on \(G_L\). Since \(\Gamma\) acts faithfully, it embeds in
+      \((\F_p^\times)^4\), so \(\Gamma\) is abelian.</p>
+    <p><em>The cyclotomic field.</em> If \(\Gamma\) were trivial, every element of \(D\) would be defined
+      over \(\Q\), including the idempotent \(\left(\begin{smallmatrix}1&amp;0\\0&amp;0\end{smallmatrix}\right)\).
+      This contradicts simplicity over \(\Q\), by <a href="#F4">(F4)</a>. Hence \(\Gamma\neq1\), and by
+      faithfulness some \(\psi_i\) is nontrivial, so it is \(\chi\) or \(\chi^{-1}\). This character is
+      trivial on \(G_L\), so \(G_L\subseteq\ker\chi=G_{\Q(\zeta_p)}\), that is,
+      \(\Q(\zeta_p)\subseteq L\). Hence \(\Gamma\) has a cyclic quotient
+      \(\Gal(\Q(\zeta_p)/\Q)\) of order \(p-1\geq4\).</p>
+    <p><em>The list.</em> The abelian groups in <a href="#lemma-4">Lemma 4</a> are \(C_1,C_2,C_3,C_4,C_6\)
+      and \(D_4=C_2\times C_2\). Their cyclic quotients have orders dividing \(1,2,3,4,6\) and \(2\),
+      respectively. A cyclic quotient of even order \(p-1\geq4\) occurs only for \(\Gamma=C_4\) with
+      \(p=5\) and for \(\Gamma=C_6\) with \(p=7\). In both cases \([L:\Q]=|\Gamma|=p-1=[\Q(\zeta_p):\Q]\),
+      so \(L=\Q(\zeta_p)\). ∎</p>
+  </section>
+
+  <section id="complex-conjugation">
+    <h3>6. Complex conjugation and cyclic endomorphism fields</h3>
+    <p>Let \(\operatorname{sgn}:\PGL_2(\R)\to\{\pm1\}\) be the sign of the determinant of a representative.
+      It is well defined, since \(\det(\lambda M)=\lambda^2\det M\), and it is a homomorphism.
+      Every isomorphism \(D\otimes_{\Q}\R\simeq M_2(\R)\) gives an isomorphism
+      \(\operatorname{Aut}(D\otimes_{\Q}\R)\simeq\PGL_2(\R)\), unique up to conjugation, so the sign of an
+      element of \(\Gamma\subseteq\operatorname{Aut}(D)\subseteq\operatorname{Aut}(D\otimes_{\Q}\R)\)
+      is well defined.</p>
+    <div class="theorem" id="lemma-6">
+      <p><strong>Lemma 6.</strong> An element of finite order of \(\PGL_2(\R)\) with negative determinant
+        has order \(2\). Consequently, if \(\Gamma\) is cyclic of order greater than \(2\), every element of
+        \(\Gamma\) has sign \(+1\).</p>
+    </div>
+    <p><strong>Proof.</strong> Scale a representative so that \(\det M=-1\). Its characteristic polynomial
+      \(X^2-tX-1\) has discriminant \(t^2+4&gt;0\), so \(M\) has real eigenvalues \(\lambda\neq\mu\) with
+      \(\lambda\mu=-1\). If \(M^n\) is scalar, then \(\lambda^n=\mu^n\). Since \(\lambda\) and \(\mu\) are
+      real of opposite signs, this gives \(\mu=-\lambda\), hence \(\lambda^2=1\) and \(M^2=I\). The class of
+      \(M\) is not trivial because \(\det M&lt;0\), so it has order \(2\).</p>
+    <p>If \(\Gamma=\langle g\rangle\) has order greater than \(2\), then \(\operatorname{sgn}(g)=+1\) by the
+      first part, and so every power of \(g\) has sign \(+1\). ∎</p>
+    <div class="theorem" id="lemma-7">
+      <p><strong>Lemma 7.</strong> In the situation of Section 5, the class in \(\PGL_2(\R)\) of the action
+        of \(c\) on \(D\otimes_{\Q}\R\) is either trivial or has sign \(-1\). Consequently, if \(\Gamma\)
+        is cyclic of order greater than \(2\), then \(L\) is totally real.</p>
+    </div>
+    <p><strong>Proof.</strong> Let \(H\), \(J\), \(c_H\) and \(\rho_H\) be as in <a href="#F5">(F5)</a>.
+      The image \(\rho_H(D\otimes_{\Q}\R)\) is a copy of \(M_2(\R)\) inside \(\End_{\R}(H)\simeq M_4(\R)\).
+      Every module over \(M_2(\R)\) is a sum of copies of the standard module \(U=\R^2\). Hence there is a
+      two-dimensional real vector space \(W\) with</p>
+    <div class="equation">\[
+      H\simeq U\otimes_{\R}W,\qquad \rho_H(D\otimes_{\Q}\R)=\End_{\R}(U)\otimes1.
+    \]</div>
+    <p>The commutant of \(\End_{\R}(U)\otimes1\) in \(\End_{\R}(U\otimes W)\) is \(1\otimes\End_{\R}(W)\).
+      Since \(J\) commutes with \(\rho_H(D)\), we have \(J=1\otimes J_W\) with \(J_W^2=-1\).</p>
+    <p>By <a href="#F5">(F5)</a>, conjugation by \(c_H\) preserves \(\End_{\R}(U)\otimes1\) and induces on it
+      the action of \(c\) on \(D\otimes_{\Q}\R\). By Skolem–Noether, this automorphism is conjugation by
+      \(M\otimes1\) for some \(M\in\GL(U)\), and the class \([M]\in\PGL_2(\R)\) is the image of \(c\). Then
+      \((M^{-1}\otimes1)c_H\) commutes with \(\End_{\R}(U)\otimes1\), so</p>
+    <div class="equation">\[
+      c_H=M\otimes N\qquad\text{for some }N\in\GL(W).
+    \]</div>
+    <p>The relation \(c_HJ=-Jc_H\) gives \(M\otimes(NJ_W+J_WN)=0\), so \(NJ_W=-J_WN\). In a basis of
+      \(W\) with \(J_W=\left(\begin{smallmatrix}0&amp;-1\\1&amp;0\end{smallmatrix}\right)\), this means</p>
+    <div class="equation">\[
+      N=\begin{pmatrix}a&amp;b\\b&amp;-a\end{pmatrix},\qquad N^2=(a^2+b^2)I,
+    \]</div>
+    <p>with \(a^2+b^2&gt;0\) because \(N\) is invertible. Since \(c_H^2=1\), we get
+      \((a^2+b^2)M^2\otimes1=1\otimes1\), so \(M^2=sI\) with \(s=(a^2+b^2)^{-1}&gt;0\).
+      If \([M]\) is not trivial, then \(M\) is not scalar, its minimal polynomial is \(X^2-s\), and its
+      eigenvalues are \(\sqrt s\) and \(-\sqrt s\). Thus \(\det M=-s&lt;0\).</p>
+    <p>Now let \(\Gamma\) be cyclic of order greater than \(2\). By <a href="#lemma-6">Lemma 6</a>, the
+      image of \(c\) in \(\Gamma\) has sign \(+1\), so it is trivial by the first part. Since \(\Gamma\) acts
+      faithfully on \(D\), the restriction of \(c\) to \(L\) is trivial, so \(L\subset\R\). As \(L/\Q\) is
+      Galois, \(L\) is totally real. ∎</p>
+    <p><strong>Completion of the proof.</strong> In Section 5, \(\Gamma\) is cyclic of order \(p-1\geq4\) and
+      \(L=\Q(\zeta_p)\). By <a href="#lemma-7">Lemma 7</a>, \(L\) is totally real. But \(\Q(\zeta_p)\) is not
+      real, a contradiction. Together with Sections 3 and 4, this shows that
+      \(\dim_{\F_p}A(\Q)[p]\geq2\) is impossible, and proves the theorem. ∎</p>
+  </section>
+
+  <section id="hypotheses">
+    <h3>7. Where the hypotheses are used</h3>
+    <p><strong>The bound \(p\geq5\).</strong> Lemmas 1 and 2 hold for every odd prime. The bound
+      \(p\geq5\) is used in exactly three places.</p>
+    <ol>
+      <li><p>In <a href="#corollary-3">Corollary 3</a>, which serves Sections 3 and 4: a nontrivial
+        quadratic character is neither \(\chi\) nor \(\chi^{-1}\), because \(\chi\) has order
+        \(p-1\geq4\).</p></li>
+      <li><p>In <a href="#proposition-5">Proposition 5</a>: \(p\nmid|\Gamma|\), so that Maschke's theorem
+        applies and \(\Gamma\) acts faithfully on \(\overline B\).</p></li>
+      <li><p>In <a href="#proposition-5">Proposition 5</a>: the cyclic quotient of order \(p-1\geq4\)
+        leaves only \(\Gamma=C_4\) and \(\Gamma=C_6\), which are cyclic of order greater than \(2\).</p></li>
+    </ol>
+    <p>The theorem is false for \(p=3\). The census contains the geometrically split Jacobians
+      <a href="../curve.html?id=3.3.c">3.3.c</a>, with torsion <a href="../group.html?g=3.3">[3,3]</a>,
+      and <a href="../curve.html?id=3.9.c">3.9.c</a>, with torsion <a href="../group.html?g=3.9">[3,9]</a>,
+      both certified simple over \(\Q\). For \(p=3\), the character \(\chi_3\) is itself the quadratic
+      character of \(\Q(\sqrt{-3})\), so the first use of \(p\geq5\) listed above breaks down when \(\varepsilon\) is this character.
+      This is what happens for 3.9.c. The extended genus-\(2\) data of
+      <a href="#booker-sutherland">Booker–Sutherland</a> list the geometric endomorphism algebra
+      \(\Q\times\Q\) for it (label 6804.a.1), and its census splitting certificate is defined over
+      \(\Q(\sqrt{-3})\). So the character \(\varepsilon\) of Section 3 is \(\chi_3\).</p>
+    <p>For 3.3.c, the second use listed above breaks down. With \(Y=2y+x^3\), its model becomes \(Y^2=x^6-52x^3+784\), which has
+      the geometric automorphisms</p>
+    <div class="equation">\[
+      (x,Y)\mapsto(\zeta_3x,\,Y),\qquad (x,Y)\mapsto\bigl(\sqrt[3]{784}/x,\ 28Y/x^3\bigr).
+    \]</div>
+    <p>The first is defined over \(\Q(\zeta_3)\) and the second over \(\Q(\sqrt[3]{784})\), and over no
+      smaller fields. Automorphisms of a curve of genus \(2\) act faithfully on its Jacobian, so \(L\)
+      contains \(\Q(\zeta_3,\sqrt[3]{784})\). This field has Galois group \(S_3\) over \(\Q\), so \(3\)
+      divides \(|\Gamma|\). The same data list \(D=M_2(\Q)\) and Sato–Tate group \(J(E_3)\) for 3.3.c
+      (label 1764.d.2), so it falls under Section 5.</p>
+    <p><strong>Simplicity over \(\Q\).</strong> It is used only twice: in Section 3, to make
+      \(\varepsilon\) nontrivial, and in Proposition 5, to exclude \(\Gamma=1\). The proof therefore shows,
+      without assuming simplicity over \(\Q\), that \(\dim_{\F_p}A(\Q)[p]\leq1\) for \(p\geq5\) whenever
+      \(A_{\overline{\Q}}\) is isogenous to the square of a CM elliptic curve, or to the square of a non-CM
+      elliptic curve with \(\Gamma\neq1\). The case \(\Gamma=1\) genuinely occurs: the census curve
+      <a href="../curve.html?id=5.5.a">5.5.a</a>, with torsion [5,5], is isogenous over \(\Q\) to the product
+      of the elliptic curves 11a1 and 11a3, which are isogenous over \(\Q\) and have no CM. So
+      \(D=M_2(\Q)\) and all its elements are defined over \(\Q\).</p>
+    <p><strong>What is not used.</strong> The proof uses no bound on the degree of a geometric splitting
+      isogeny and no assumption on the integral endomorphism ring. The polarization may have degree divisible
+      by \(p\). A principal polarization is not assumed. The Weil pairing alone does not exclude rational
+      \(p\)-torsion of rank two, as the examples split over \(\Q\) show. The proof uses the full Galois
+      action on \(A[p]\) and on the geometric endomorphism algebra.</p>
+  </section>
+
+  <section id="census">
+    <h3>8. Consequence for the census</h3>
+    <p>A group \(A(\Q)_{\mathrm{tors}}\) of one of the forms [5,5], [5,10] or [7,7] has
+      \(\dim_{\F_p}A(\Q)[p]=2\) for \(p=5\) or \(p=7\). Hence the groups
+      <a href="../group.html?g=5.5">[5,5]</a>, <a href="../group.html?g=5.10">[5,10]</a> and
+      <a href="../group.html?g=7.7">[7,7]</a> are impossible in the class “geometrically split, simple over
+      \(\Q\)”. No other census group contains \((\Z/p\Z)^2\) for a prime \(p\geq5\).</p>
+    <p>Simplicity over \(\Q\) is essential. Each of the three groups has a certified example split over
+      \(\Q\): <a href="../curve.html?id=5.5.a">5.5.a</a>, <a href="../curve.html?id=5.10.a">5.10.a</a> and
+      <a href="../curve.html?id=7.7.a">7.7.a</a>. The exclusion therefore concerns the “geometrically
+      split, simple over \(\Q\)” column only. It does not change the combined geometrically split
+      <b>∞?</b> grade of any of the three groups, and none of them becomes ∅ on the geometrically split
+      side. The theorem says nothing about geometrically simple Jacobians; for example,
+      <a href="../group.html?g=5.5">[5,5]</a> has the geometrically simple example
+      <a href="../curve.html?id=5.5.b">5.5.b</a>.</p>
+    <p>The theorem applies to every geometric splitting degree, including degrees divisible by \(p\).
+      It does not require a principal polarization.</p>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="beauville"><p>A. Beauville,
+        <a href="https://arxiv.org/pdf/0909.3942"><i>Finite subgroups of \(\PGL_2(K)\)</i></a>,
+        in <i>Vector bundles and complex geometry</i>, Contemp. Math. <b>522</b>, Amer. Math. Soc., 2010,
+        23–29, Introduction and Proposition 1.1. arXiv:0909.3942.</p></li>
+      <li id="milne"><p>J. S. Milne,
+        <a href="https://www.jmilne.org/math/CourseNotes/AV.pdf"><i>Abelian varieties</i></a>,
+        course notes, version 2.00 (2008), Chapter I, Theorem 10.15 and Section 13.</p></li>
+      <li id="booker-sutherland"><p>A. R. Booker and A. V. Sutherland,
+        <a href="https://alpha.lmfdb.org/Genus2Curve/Q/"><i>Genus 2 curves of small conductor</i></a>,
+        in preparation; preliminary data in the alpha version of the LMFDB (curves 1764.d.2 and 6804.a.1).
+        Used only for the remark on \(p=3\) in Section 7.</p></li>
+    </ol>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsimple-rank-two-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

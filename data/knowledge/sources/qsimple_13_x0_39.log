@@ -1,0 +1,24 @@
+Magma V2.30-1
+model: Hyperelliptic Curve defined by y^2 + (-x^4 - x^3 - x^2 - x - 1)*y = -2*x^7 + 2*x^5 - 7*x^4 + 2*x^3 - 2*x over Rational Field
+CHECK model: #X(F_p) = p+1-tr T_p for p < 100, p <> 3, 13
+CHECK w_3 is the moduli Atkin-Lehner involution (Phi_3 test at 5 quadratic points)
+X_0(39)/w_3 is isomorphic to [ 1, 1, 0, -4, -5 ]
+39a1
+39a1: rank 0 (proved), torsion Z/2 x Z/2
+rational points of the quotient: [ (2 : 0 : 0 : 1), (-2 : 0 : 0 : 1), (6 : -4 : 8/3 : 1), (-6 : 4 : -8/3 : 1) ]
+ images: [ (0 : 1 : 0), (2 : -1 : 1), (-5/4 : 5/8 : 1), (-2 : 1 : 1) ]
+fibre over a rational point of X_0(39)/w_3 (reduced degree 2):
+   (0 : 1 : 1) : rational cusp
+   (1 : 1 : 0) : rational cusp
+fibre over a rational point of X_0(39)/w_3 (reduced degree 2):
+   (0 : 0 : 1) : rational cusp
+   (1 : 0 : 0) : rational cusp
+fibre over a rational point of X_0(39)/w_3 (reduced degree 2):
+   (1/21*(8*r1 + 14) : r1 : 1) over a field of discriminant -7: j has minimal polynomial Y^2 + 24759/8*Y + 35557045713/16, CM: false
+   (1/42*(-16*r1 + 35) : 1/16*(-16*r1 + 7) : 1) over a field of discriminant -7: j has minimal polynomial Y^2 + 24759/8*Y + 35557045713/16, CM: false
+fibre over a rational point of X_0(39)/w_3 (reduced degree 2):
+   (1/3*(2*r1 + 2) : r1 : 1) over a field of discriminant -7: j has minimal polynomial Y^2 - 37303581492261/549755813888*Y + 735684947279128956753/4503599627370496, CM: false
+   (1/6*(-4*r1 + 5) : 1/4*(-4*r1 + 1) : 1) over a field of discriminant -7: j has minimal polynomial Y^2 - 37303581492261/549755813888*Y + 735684947279128956753/4503599627370496, CM: false
+CHECK fibres: 4 rational cusps, and 2 conjugate pairs of non-CM points over Q(sqrt -7)
+CHECK X_0(39)(Q) consists of the 4 rational cusps
+ALL_CHECKS_PASSED

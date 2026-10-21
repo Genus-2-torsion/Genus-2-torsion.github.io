@@ -1,0 +1,5 @@
+Magma version V2.30-1
+discriminant of the model of 21.b: [ <2, 3>, <3, 4> ]
+(a) Frobenius polynomials agree with the prediction at all 60 primes 5 <= p < 300
+(b) #J(F_5) = 21 and J(Q)_tors = Z/21
+ALL_CHECKS_PASSED

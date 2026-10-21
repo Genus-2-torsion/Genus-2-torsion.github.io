@@ -187,6 +187,37 @@ class KnowledgeTests(unittest.TestCase):
             self.assertIn(name, knowledge.infinite_record(side, key)["note"])
             self.assertTrue((KNOWLEDGE_DIR / "sources" / name).exists(), name)
 
+    def test_exclusions(self):
+        """The census groups excluded in each class, with the proof page of each exclusion (2026-10-21)."""
+        keys = [e["key"] for e in read_json(ROOT / "data" / "groups.json")["groups"]]
+        found = {cls: {} for cls in ("qsplit", "gsplit")}
+        for key in keys:
+            for cls, ex in knowledge.exclusions_record(key).items():
+                found[cls][key] = ex["sources"][0]
+                self.assertTrue((ROOT / ex["proof_url"]).exists(), ex["proof_url"])
+                for s in ex["sources"]:
+                    self.assertIn(s, knowledge.SOURCES, (key, cls, s))
+        mazur = ["11", "13", "17", "19", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26"]
+        self.assertEqual(found["qsplit"], {**{k: "QSplitPrimeObstruction" for k in mazur},
+                                           "2.2.14": "QSplitTwoRankObstruction", "2.2.2.10": "QSplitTwoRankObstruction"})
+        self.assertEqual(found["gsplit"], {
+            "22": "Geometric22Obstruction", "2.22": "Geometric22Obstruction",
+            "23": "Geometric2329Obstruction", "29": "Geometric2329Obstruction",
+            "26": "Geometric2639Obstruction", "2.26": "Geometric2639Obstruction", "39": "Geometric2639Obstruction",
+            "31": "Geometric31Obstruction", "33": "Geometric3334Obstruction", "34": "Geometric3334Obstruction",
+            "13": "QSimple13Obstruction",
+            "30": "QSimple30Obstruction", "60": "QSimple30Obstruction", "2.30": "QSimple30Obstruction",
+            "35": "QSimple35Obstruction", "70": "QSimple35Obstruction",
+            "63": "QSimple63Obstruction",
+            "5.5": "QSimpleRankTwoObstruction", "5.10": "QSimpleRankTwoObstruction", "7.7": "QSimpleRankTwoObstruction"})
+        impossible = sorted(k for k in keys if knowledge.infinite_record("split", k)["grade"] == "impossible")
+        self.assertEqual(impossible, sorted(["13", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26"]))
+        # [17] stays open: no valid argument is known in the cyclic quartic case
+        self.assertNotIn("gsplit", knowledge.exclusions_record("17"))
+        rec = knowledge.infinite_record("split", "13")
+        self.assertIn("Mazur1977", rec["sources"])
+        self.assertTrue(rec["note"].startswith(knowledge.exclusions_record("13")["qsplit"]["reason"]))
+
     def test_certificate_logs_complete(self):
         # every certificate log ends in its CERTIFIED marker and records no Magma error (a failed assert stops
         # `magma -b script.m` before the marker, but the exit status is 0, so the log is what must be checked)

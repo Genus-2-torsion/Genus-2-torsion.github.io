@@ -27,6 +27,27 @@ p = 89: chi = x^4 + 4*x^3 - 10*x^2 + 356*x + 7921, Q(pi + p/pi) = Q(sqrt(3))
 p = 97: chi = x^4 + 10*x^3 + 82*x^2 + 970*x + 9409, Q(pi + p/pi) = Q(sqrt(137))
 distinct real quadratic fields: 10
 no RM over Q: true
+C: absolutely strict primes below 100: [ 13, 19, 29, 43, 53, 59, 67, 71, 89, 97 ]
+C: p = 13, chi = x^4 + x^3 - 8*x^2 + 13*x + 169, quadratic subfields of discriminant { 137 }
+C: q = 19, chi = x^4 - x^3 + 10*x^2 - 19*x + 361, quadratic subfields of discriminant { 113 }
+C: K_p and K_q are not isomorphic and have no common quadratic subfield
+End(J_Qbar) = Z: true
+2.22.a: absolutely strict primes below 100: [ 5, 11, 19, 31, 37, 43, 53, 61, 67, 83, 89, 97 ]
+2.22.a: quadratic subfields at the absolutely strict primes: [
+<5, { 5 }>,
+<11, { 5 }>,
+<19, { 5 }>,
+<31, { 5 }>,
+<37, { 5 }>,
+<43, { 5 }>,
+<53, { 5 }>,
+<61, { 5 }>,
+<67, { 5 }>,
+<83, { 5 }>,
+<89, { 5 }>,
+<97, { 5 }>
+]
+control 2.22.a (RM by Z[phi]) certified End = Z: false (expected false)
 WARNING: Using Ogg's formula when v_2(D)>=12, no correctness guarantee
 WARNING: Using Ogg's formula when v_2(disc)>=12, no correctness guarantee
 conductor: 30066300 = [ <2, 2>, <3, 2>, <5, 2>, <11, 1>, <3037, 1> ]

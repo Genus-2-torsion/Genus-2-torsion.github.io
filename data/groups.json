@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10 06:17 UTC",
+  "generated": "2026-11-10 08:06 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -9348,7 +9348,7 @@
             "Najman2026",
             "Sutherland2026pc"
           ],
-          "note": "two curves with real multiplication by ℤ[φ] (φ² = φ + 1) are known, and one without: A. Sutherland's curve y² + (x² + x)y = 9x⁶ + 111x⁵ + 279x⁴ − 485x³ − 282x² + 1836x + 1456 (conductor 30066300), with End(J_ℚ̄) = ℤ according to Sutherland; its torsion, geometric simplicity (strict at 13) and the absence of RM over ℚ are checked in sutherland_2_22_check.log",
+          "note": "two curves with real multiplication by ℤ[φ] (φ² = φ + 1) are known, and one without: A. Sutherland's curve y² + (x² + x)y = 9x⁶ + 111x⁵ + 279x⁴ − 485x³ − 282x² + 1836x + 1456 (conductor 30066300) has End(J_ℚ̄) = ℤ; its torsion and End(J_ℚ̄) = ℤ (the Frobenius fields at 13 and 19 are quartic CM fields with no common quadratic subfield) are checked in sutherland_2_22_check.log",
           "inherited_from": null
         },
         "split": {

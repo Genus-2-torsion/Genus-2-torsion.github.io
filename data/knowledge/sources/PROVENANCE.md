@@ -525,6 +525,37 @@ The same day, the proof pages of 20 October gained the published reference for C
 semisimplicity in the [23]/[29] proof, and one line on why E and F are L-isogenous in the [35]/[70]
 proof.
 
+## Geometric [17] exclusion (10 November 2026)
+
+[`geometric-17-obstruction.html`](../../../proofs/geometric-17-obstruction.html) and
+[`geometric_17_obstruction.tex`](geometric_17_obstruction.tex) prove that no geometrically split abelian
+surface over ℚ has a rational point of order 17, with no polarization or simplicity hypothesis. This
+settles the case of [17] left open on 21 October 2026. Endomorphism fields of degree at most 2 reduce to
+elliptic torsion over fields of degree at most 2 (Mazur; Kamienny, Theorem 3.1); CM squares fail a point
+count over 𝔽₂; residual representations at 17 exclude every endomorphism field except a cyclic quartic
+one. There a rational 17-point gives a non-cuspidal point of X₀(34) over the real quadratic subfield that
+w₂ maps to its conjugate, and X₀(34)/w₂ ≅ 17a2 (rank 0, unconditionally) shows that such points are
+defined over ℚ(√−15) only. The supporting computations are in `geometric_17_checks.m` (Weil polynomials
+over 𝔽₂, residues modulo 17, and the model of X₀(34) with its j-function and w₂, verified against the
+classical modular polynomials Φ₂ and Φ₁₇; the quotient by w₂ and its fibres), with its log
+`geometric_17_checks.log` (Magma V2.30-1, 10 November 2026; it ends with `ALL_CHECKS_PASSED`). The result
+supersedes the closing remark of `geometric_33_34_obstruction.tex`, which left rational 17-torsion open.
+
+## [2,2,14] in the geometrically split, ℚ-simple class (10 November 2026)
+
+[`qsimple-2214-obstruction.html`](../../../proofs/qsimple-2214-obstruction.html) and
+[`qsimple_2214_obstruction.tex`](qsimple_2214_obstruction.tex) prove that on a geometrically split
+abelian surface over ℚ that is simple over ℚ, a rational point of order 7 forces rational 2-torsion of
+rank at most 2; no polarization hypothesis is used. If the elliptic curves of the surface are defined
+over a quadratic field (type (N), or a non-CM square with quadratic endomorphism field), the 2-primary
+torsion is controlled by two isogenous elliptic curves over that field, one with a point of order 7, and
+Kenku–Momose (no ℤ/28, no ℤ/2 × ℤ/14 over quadratic fields) bounds it by 4. CM squares fail a point
+count over 𝔽₃. By Proposition 8 of `qsimple_63_obstruction.tex` the remaining endomorphism fields are
+cyclic of degree 3 or 6; there the Galois determinant over ℚ(√−3) = End⁰_ℚ(A) is the cyclotomic
+character times a character of exact order 3 or 6, whose reduction modulo 2 has order 3, which rules out
+2-rank 3. With the 2-rank obstruction over ℚ, [2,2,14] is impossible on the whole geometrically split
+side. The proof uses no computer calculation beyond the genera of X₁(28) and X₁(2,14) (10 and 4).
+
 ## LMFDB labels
 
 The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production labels

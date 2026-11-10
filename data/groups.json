@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10 12:08 UTC",
+  "generated": "2026-11-10 22:56 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -49,8 +49,8 @@
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 15,
-      "impossible": 11
+      "open": 13,
+      "impossible": 13
     }
   },
   "n_rejected": 0,
@@ -3449,6 +3449,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ has no rational point of order 17. The proof applies to every geometric splitting degree.",
+          "sources": [
+            "Geometric17Obstruction",
+            "Mazur1977",
+            "Kamienny1992",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/geometric-17-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -3462,9 +3472,15 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric17Obstruction",
+            "Mazur1977",
+            "Kamienny1992",
+            "SerreTate1968"
+          ],
+          "note": "A geometrically split abelian surface over ℚ has no rational point of order 17. The proof applies to every geometric splitting degree.",
+          "proof_url": "proofs/geometric-17-obstruction.html",
           "inherited_from": null
         }
       }
@@ -13674,6 +13690,16 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-two-rank-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "If a geometrically split abelian surface over ℚ is simple over ℚ and has a rational point of order 7, its rational 2-torsion has rank at most 2. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+          "sources": [
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "KenkuMomose1988",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-2214-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -13687,9 +13713,17 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "KenkuMomose1988",
+            "SerreTate1968",
+            "QSplitTwoRankObstruction",
+            "Mazur1977"
+          ],
+          "note": "A Jacobian split over ℚ contains an elliptic curve over ℚ with an elliptic quotient over ℚ. By Mazur's theorem, a rational point of order 7 then forces rational 2-rank at most 2, and rational 2-rank 4 excludes rational points of orders 5 and 7. If a geometrically split abelian surface over ℚ is simple over ℚ and has a rational point of order 7, its rational 2-torsion has rank at most 2. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+          "proof_url": "proofs/qsimple-2214-obstruction.html",
           "inherited_from": null
         }
       }

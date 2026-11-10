@@ -112,6 +112,20 @@ SOURCES = {
         "url": "proofs/geometric-33-34-obstruction.html",
         "used_for": "impossibility of [33] and [34] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
     },
+    "Geometric17Obstruction": {
+        "short": "geometric [17] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "No rational 17-torsion on geometrically split abelian surfaces, census proof of 10 November 2026. Elliptic torsion over fields of degree at most 2, a point count at 2 for CM squares, residual representations at 17, and, for a cyclic quartic endomorphism field, a point of X₀(34) over a real quadratic field that w₂ maps to its conjugate; Magma checks in geometric_17_checks.log.",
+        "url": "proofs/geometric-17-obstruction.html",
+        "used_for": "impossibility of [17] (and of every group with a point of order 17) for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree and of the polarization",
+    },
+    "QSimple2214Obstruction": {
+        "short": "ℚ-simple geometric [2,2,14] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Rational 7-torsion and the 2-rank of geometrically split abelian surfaces, census proof of 10 November 2026. On a geometrically split abelian surface over Q that is simple over Q, a rational point of order 7 forces rational 2-torsion of rank at most 2: Kenku–Momose over the quadratic field of definition of the elliptic curves, a point count at 3 for CM squares, and a determinant argument modulo 2 for cyclic cubic and sextic endomorphism fields.",
+        "url": "proofs/qsimple-2214-obstruction.html",
+        "used_for": "impossibility of [2,2,14] in the geometrically split, simple-over-ℚ class; with QSplitTwoRankObstruction, on the whole geometrically split side",
+    },
     "QSimple35Obstruction": {
         "short": "ℚ-simple geometric [35] and [70] exclusion proof (2026)", "year": 2026,
         "kind": "proof",
@@ -202,6 +216,12 @@ SOURCES = {
         "cite": "J. S. Milne, Abelian varieties (v2.00), course notes, 2008.",
         "url": "https://www.jmilne.org/math/CourseNotes/AV.pdf",
         "used_for": "Theorem I.10.15 (Hom(A,B) ⊗ ℤ_ℓ → Hom(T_ℓA, T_ℓB) is injective) and Section I.13 (Weil pairings); used in the geometric exclusions",
+    },
+    "Kamienny1992": {
+        "short": "Kamienny 1992", "year": 1992,
+        "cite": "S. Kamienny, Torsion points on elliptic curves and q-coefficients of modular forms, Invent. Math. 109 (1992), 221–229.",
+        "url": "https://doi.org/10.1007/BF01232025",
+        "used_for": "Theorem 3.1: the torsion of an elliptic curve over a quadratic field has no prime divisor greater than 13; used in the geometric [17] exclusion",
     },
     "KenkuMomose1988": {
         "short": "Kenku–Momose 1988", "year": 1988,
@@ -347,20 +367,22 @@ SOURCES = {
 assert all("year" in v for v in SOURCES.values()), [k for k, v in SOURCES.items() if "year" not in v]
 
 
-# Reasons and literature for the exclusions of 21 October 2026, keyed by the group they were proved for.
+# Reasons and literature for the exclusions of 21 October and 10 November 2026, keyed by the group they were proved for.
 GSPLIT_REASON = {
+    "17": "A geometrically split abelian surface over ℚ has no rational point of order 17. The proof applies to every geometric splitting degree.",
     "22": "A geometrically split abelian surface over ℚ has no rational point of order 22. The proof applies to every geometric splitting degree.",
     "26": "A geometrically split abelian surface over ℚ has no rational point of order 26 or 39. The proof applies to every geometric splitting degree.",
     "13": "A geometrically split genus-2 Jacobian over ℚ with a rational point of order 13 is not simple over ℚ. The proof applies to every geometric splitting degree and uses the principal polarization.",
     "30": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 30. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
     "63": "A geometrically split abelian surface that is simple over ℚ has no rational point of order 63. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+    "2.2.14": "If a geometrically split abelian surface over ℚ is simple over ℚ and has a rational point of order 7, its rational 2-torsion has rank at most 2. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
     "p.p": "If a geometrically split abelian surface over ℚ is simple over ℚ, its rational p-torsion has rank at most 1 for every prime p ≥ 5. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
 }
-GSPLIT_SOURCES = {"22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "p.p": ["Beauville2010", "MilneAV2008"]}
+GSPLIT_SOURCES = {"17": ["Mazur1977", "Kamienny1992", "SerreTate1968"], "22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "2.2.14": ["QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "p.p": ["Beauville2010", "MilneAV2008"]}
 
 
 # gsplit proofs that need simplicity over ℚ (the others apply to every geometrically split surface)
-QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
+QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2214Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
                 "QSimpleRankTwoObstruction"}
 
 
@@ -409,6 +431,8 @@ def exclusions_record(key: str) -> dict:
             "Geometric3334Obstruction",
             "A geometrically split abelian surface over ℚ has no rational point of order 33 or 34. The proof applies to every geometric splitting degree.",
             ["Mazur1977", "DNQuartic2025", "Clark2004", "ClarkXarles2008"])
+    elif exponent % 17 == 0:
+        exclusions["gsplit"] = record("Geometric17Obstruction", GSPLIT_REASON["17"], GSPLIT_SOURCES["17"])
     elif exponent % 22 == 0:
         exclusions["gsplit"] = record("Geometric22Obstruction", GSPLIT_REASON["22"], GSPLIT_SOURCES["22"])
     elif exponent % 26 == 0 or exponent % 39 == 0:
@@ -424,6 +448,8 @@ def exclusions_record(key: str) -> dict:
         exclusions["gsplit"] = record("QSimple30Obstruction", GSPLIT_REASON["30"], GSPLIT_SOURCES["30"])
     elif exponent % 63 == 0:
         exclusions["gsplit"] = record("QSimple63Obstruction", GSPLIT_REASON["63"], GSPLIT_SOURCES["63"])
+    elif order % 7 == 0 and rank(2) >= 3:
+        exclusions["gsplit"] = record("QSimple2214Obstruction", GSPLIT_REASON["2.2.14"], GSPLIT_SOURCES["2.2.14"])
     elif any(rank(p) >= 2 for p in range(5, exponent + 1) if all(p % q for q in range(2, p))):
         exclusions["gsplit"] = record("QSimpleRankTwoObstruction", GSPLIT_REASON["p.p"], GSPLIT_SOURCES["p.p"])
     return exclusions

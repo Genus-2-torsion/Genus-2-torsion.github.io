@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No rational 17-torsion on geometrically split abelian surfaces — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that no geometrically split abelian surface over Q has a rational point of order 17. This excludes [17] in the geometrically split, Q-simple class, and with Mazur's theorem in every geometrically split class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', NS: '\\operatorname{NS}',
+          Sym: '\\operatorname{Sym}', tr: '\\operatorname{tr}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=17">[17]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>No rational \(17\)-torsion on geometrically split abelian surfaces</h2>
+  <p class="src">10 November 2026 · Geometrically split</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be a geometrically split abelian surface. Then \(A(\Q)\) contains no point of
+      order \(17\).</p>
+    <p><strong>Corollary.</strong> No geometrically split genus-\(2\) Jacobian over \(\Q\) has a rational point of order \(17\).
+      Equivalently, a genus-\(2\) Jacobian over \(\Q\) with a rational point of order \(17\) is
+      geometrically simple. In particular,
+      <a href="../group.html?g=17">[17]</a> does not occur as the rational
+      torsion subgroup of a geometrically split genus-\(2\) Jacobian over \(\Q\).</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\bar\Q}\) is isogenous to a product of two elliptic
+    curves. We impose no restriction on the degree of this isogeny, on the field of definition of the
+    geometric endomorphisms, or on the integral endomorphism ring; we do not assume that \(A\) is
+    principally polarized, and we do not assume that \(A\) is simple over \(\Q\). For surfaces that
+    are isogenous over \(\Q\) to a product of two elliptic curves the theorem follows from Mazur's
+    theorem
+    (<a href="qsplit-prime-obstruction.html">prime torsion
+    obstruction</a>); the new case is that of surfaces that are simple over \(\Q\). The theorem contains
+    the statement about order \(34\) of the
+    <a href="geometric-33-34-obstruction.html">proof for orders
+    33 and 34</a>.</p>
+  <p>The proof distinguishes cases according to the geometric endomorphism algebra
+    (<a href="#cases">Section 2</a>). Most cases are settled by the known results on torsion of elliptic curves
+    over fields of degree at most \(2\) (<a href="#small-degree">Section 3</a>), by counting points on a
+    reduction at \(2\) (<a href="#good-reduction">Section 4</a>), or by comparing lattices in the \(17\)-adic
+    Tate module (<a href="#lattices">Section 5</a>). In the one remaining case the geometric endomorphisms are
+    defined over a cyclic quartic field. There a rational point of order \(17\) produces a
+    non-cuspidal point of the modular curve \(X_0(34)\) over a <em>real</em> quadratic field \(K\)
+    which the Atkin–Lehner involution \(w_2\) maps to its conjugate (<a href="#c4">Section 6</a>). The
+    rational points of \(X_0(34)/w_2\) show that such a point exists only for
+    \(K=\Q(\sqrt{-15})\) (<a href="#x034">Section 7</a>).</p>
+  <p>The Magma script and its log cited below are published with this proof, as
+    <a href="../data/knowledge/sources/geometric_17_checks.m"><code>geometric_<wbr>17_<wbr>checks.m</code></a>
+    and
+    <a href="../data/knowledge/sources/geometric_17_checks.log"><code>geometric_<wbr>17_<wbr>checks.log</code></a>.</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/geometric_17_obstruction.tex">Complete proof (LaTeX source)</a></li>
+    <li><a href="../data/knowledge/sources/geometric_17_checks.m">Magma script <code>geometric_17_checks.m</code></a> and its <a href="../data/knowledge/sources/geometric_17_checks.log">log</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#facts">Conventions and standard facts</a></li>
+      <li><a href="#cases">The case distinction</a></li>
+      <li><a href="#small-degree">Elliptic curves over fields of degree at most \(2\)</a></li>
+      <li><a href="#good-reduction">Potentially good reduction at \(2\)</a></li>
+      <li><a href="#lattices">Type (S): lattices in the Tate module</a></li>
+      <li><a href="#c4">The case \(\Gamma=C_4\)</a></li>
+      <li><a href="#x034">The curve \(X_0(34)\)</a></li>
+      <li><a href="#census">Proof of the Theorem and consequence for the census</a></li>
+      <li><a href="#remarks">Remarks</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="facts">
+    <h3>1. Conventions and standard facts</h3>
+    <p>All number fields are subfields of a fixed algebraic closure \(\bar\Q\) of \(\Q\). For a field
+      \(k\) we write \(G_k=\Gal(\bar k/k)\). For a prime \(\ell\), \(\chi_\ell\) is the \(\ell\)-adic
+      cyclotomic character and \(\bar\chi_\ell\) its reduction modulo \(\ell\); thus
+      \(\bar\chi_{17}:G_{\Q}\to\F_{17}^\times\) is surjective of order \(16\). For an abelian variety
+      \(X\) over a field \(k\) of characteristic \(0\), \(T_\ell X\) is its \(\ell\)-adic Tate module,
+      \(V_\ell X=T_\ell X\otimes\Q_\ell\), \(\End^0=\End\otimes\Q\), \(\Hom^0=\Hom\otimes\Q\), and
+      \(X\sim_k Y\) means that \(X\) and \(Y\) are isogenous over \(k\). A quasi-isogeny is an
+      invertible element of \(\Hom^0\). An elliptic curve is “without CM” if its endomorphism ring
+      over \(\bar\Q\) is \(\Z\). For a \(G\)-stable \(\Z_\ell\)-lattice \(\Lambda\) in a
+      \(\Q_\ell[G]\)-module we put \(\bar\Lambda=\Lambda/\ell\Lambda\), and \((\cdot)^{\mathrm{ss}}\)
+      denotes semisimplification. A “constituent” is a Jordan–Hölder factor.</p>
+    <p><em>Conjugates.</em> For a variety \(Y\) over \(\bar\Q\) and \(g\in G_{\Q}\), \(Y^g\) is the base
+      change of \(Y\) along \(g:\bar\Q\to\bar\Q\), and \(g:Y(\bar\Q)\to Y^g(\bar\Q)\) is the induced
+      bijection. A morphism \(f:Y\to Z\) has the conjugate \(g(f):Y^g\to Z^g\), characterized by
+      \(g(f)(g(P))=g(f(P))\). We have \((Y^g)^h=Y^{hg}\). If \(Y\) is defined over a number field
+      \(k\), then \(Y^g\) depends only on the restriction of \(g\) to \(k\), and \(Y^g=Y\) for
+      \(g\in G_k\); a morphism \(f\) between varieties defined over \(k\) is defined over \(k\) if and
+      only if \(g(f)=f\) for all \(g\in G_k\). Conjugation is compatible with composition, with duals
+      of isogenies and with degrees.</p>
+    <p>For a character \(\eta\) of \(G_K\), where \(K\) is a number field, and \(\tau\in G_{\Q}\)
+      normalizing \(G_K\), we put \(\eta^\tau(g)=\eta(\tau^{-1}g\tau)\); similarly, for a
+      \(G_K\)-module \(M\), \(M^\tau\) is \(M\) with \(g\) acting as \(\tau^{-1}g\tau\). If \(X\) is an
+      abelian variety over \(K\), then \(\tau\) induces an isomorphism of \(G_K\)-modules
+      \(X[n]^\tau\cong X^\tau[n]\), because \(\tau(g'v)=(\tau g'\tau^{-1})\tau(v)\) for \(g'\in G_K\).</p>
+    <p>We use the following standard facts.</p>
+    <ul>
+      <li>
+        <p><strong>(F1) Degrees.</strong> The degree extends multiplicatively to quasi-isogenies between
+          abelian varieties of dimension \(d\), by \(\deg(f/n)=\deg(f)/n^{2d}\). Let \(X\) be an elliptic
+          curve over \(\bar\Q\) without CM, so that \(\End(X^2)=M_2(\Z)\). An element \(N\in M_2(\Z)\) with
+          \(\det N\neq0\) has degree \((\det N)^2\): write \(N=U\,\mathrm{diag}(d_1,d_2)\,U'\) with
+          \(U,U'\in\GL_2(\Z)\); the outer factors are automorphisms and the middle one has degree
+          \(d_1^2d_2^2\). Hence \(\deg N=(\det N)^2\) for all \(N\in\GL_2(\Q)\). If \(\mu:X'\to X\) is an
+          isogeny of elliptic curves, then \(\mathrm{diag}(\mu,\mu):X'^2\to X^2\) has degree
+          \((\deg\mu)^2\).</p>
+      </li>
+      <li>
+        <p><strong>(F2) Brauer–Nesbitt.</strong> For a continuous representation of a profinite group \(G\)
+          on a finite-dimensional \(\Q_\ell\)-vector space \(V\), the semisimplification
+          \(\bar\Lambda^{\mathrm{ss}}\) does not depend on the \(G\)-stable lattice \(\Lambda\subset V\).
+          The same applies to two isomorphic representations, after transporting a lattice through the
+          isomorphism. Indeed, after scaling we may assume \(\Lambda'\subseteq\Lambda\); the \(G\)-stable lattices
+          \(M_i=\Lambda'+\ell^i\Lambda\) satisfy \(M_0=\Lambda\), \(M_i=\Lambda'\) for large \(i\), and
+          \(\ell M_i\subseteq M_{i+1}\subseteq M_i\). For \(G\)-stable lattices \(M'\subseteq M\) with
+          \(\ell M\subseteq M'\), both \(M/\ell M\) and \(M'/\ell M'\) have the composition factors of
+          \(M/M'\) and of \(M'/\ell M\): the first contains \(M'/\ell M\) with quotient \(M/M'\), the second
+          contains \(\ell M/\ell M'\cong M/M'\) with quotient \(M'/\ell M\).</p>
+      </li>
+      <li>
+        <p><strong>(F3) Forms of a square.</strong> Let \(k\) be a number field, \(E\) an elliptic curve over
+          \(k\) without CM, \(B\) an abelian surface over \(k\), and \(f:E^2_{\bar k}\to B_{\bar k}\) a
+          quasi-isogeny. For \(g\in G_k\) put</p>
+        <div class="equation">\[
+          \rho(g)=f^{-1}\circ g(f)\in\operatorname{Aut}^0(E^2_{\bar k})=\GL_2(\Q).
+        \]</div>
+        <ol type="i">
+          <li>
+            <p>\(\rho:G_k\to\GL_2(\Q)\) is a homomorphism with finite image. Indeed
+              \(\rho(gh)\)<wbr>\({}=f^{-1}g(f)\cdot g\bigl(f^{-1}h(f)\bigr)\)<wbr>\({}=\rho(g)\rho(h)\), because the elements of
+              \(M_2(\Q)=\End^0(E^2_{\bar k})\) are defined over \(k\); and \(\rho\) is trivial on \(G_{k'}\)
+              for a finite extension \(k'\) of \(k\) over which \(f\) is defined.</p>
+          </li>
+          <li>
+            <p>For \(\varphi\in\End^0(B_{\bar k})\) we have
+              \(f^{-1}g(\varphi)f\)<wbr>\({}=\rho(g)\,(f^{-1}\varphi f)\,\rho(g)^{-1}\), as one sees by applying \(g\) to
+              \(f^{-1}\varphi f\in M_2(\Q)\). So, in the identification \(\End^0(B_{\bar k})\cong M_2(\Q)\)
+              given by \(f\), the element \(g\) acts by \(\mathrm{Ad}(\rho(g))\), and \(\End^0_k(B)\)
+              corresponds to the commutant of \(\rho(G_k)\) in \(M_2(\Q)\).</p>
+          </li>
+          <li>
+            <p>\(f\) induces an isomorphism \(V_\ell(E)\otimes_{\Q}\Q^2=V_\ell(E^2)\)<wbr>\({}\to V_\ell(B)\)
+              under which \(g\in G_k\) acts on the left-hand side by \(\rho_{E,\ell}(g)\otimes\rho(g)\):
+              indeed \(g(f(v))=g(f)(gv)\)<wbr>\({}=f\bigl(\rho(g)(gv)\bigr)\).</p>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <p><strong>(F4) Elliptic curves over fields of degree at most \(2\).</strong> No elliptic curve over
+          \(\Q\) or over a quadratic field has a rational point of order \(17\). Over \(\Q\) this is part
+          of Mazur's theorem <a href="#maz">[Maz, Theorem (8)]</a>. Over quadratic fields it is Kamienny's theorem
+          <a href="#kam">[Kam, Theorem 3.1]</a>: the order of the torsion subgroup of an elliptic curve over a quadratic field is not
+          divisible by any prime greater than \(13\). (In the notation of <a href="#dkss">[DKSS, Section 1]</a>, where
+          \(S(d)\) is the set of primes that occur as the order of a point on an elliptic curve over a
+          number field of degree \(d\): \(S(1)=\mathrm{Primes}(7)\) and \(S(2)=\mathrm{Primes}(13)\).)</p>
+      </li>
+    </ul>
+    <div class="theorem" id="lemma-sequence">
+      <p><strong>Lemma 1.</strong> Let \(X\) be an abelian surface over a number field \(k\), let \(E\subset X\) be an elliptic
+        curve defined over \(k\), and let \(Q\in X(k)\) have prime order \(q\). Then either
+        \(Q\in E(k)\), or the image of \(Q\) in \((X/E)(k)\) has order \(q\).</p>
+    </div>
+    <p><strong>Proof.</strong> The image of \(Q\) is zero exactly when \(Q\in E\). ∎</p>
+  </section>
+
+  <section id="cases">
+    <h3>2. The case distinction</h3>
+    <p>Let \(A/\Q\) be a geometrically split abelian surface, with \(A_{\bar\Q}\sim E_1\times E_2\).
+      Exactly one of the following holds:</p>
+    <ul>
+      <li>
+        <p><strong>(N)</strong> \(E_1\) and \(E_2\) are not isogenous;</p>
+      </li>
+      <li>
+        <p><strong>(CM)</strong> \(E_1\sim E_2=:E\) and \(E\) has complex multiplication;</p>
+      </li>
+      <li>
+        <p><strong>(S)</strong> \(E_1\sim E_2=:E\) and \(E\) has no complex multiplication.</p>
+      </li>
+    </ul>
+    <p>In case (S), \(D:=\End^0(A_{\bar\Q})\cong M_2(\Q)\). Let \(L\) be the smallest field over which
+      all geometric endomorphisms of \(A\) are defined; it is a finite Galois extension of \(\Q\). The
+      group \(\Gamma=\Gal(L/\Q)\) acts faithfully on \(D\), and \(\End^0_{\Q}(A)=D^\Gamma\). By
+      Skolem–Noether this action embeds \(\Gamma\) into \(\operatorname{Aut}(M_2(\Q))=\PGL_2(\Q)\);
+      we write \(g\mapsto[R_g]\), so that \(g\) acts on \(D\) by \(\mathrm{Ad}(R_g)\); for
+      \(g\in G_{\Q}\) we put \(R_g=R_{g|_L}\). The trace and
+      the determinant of an element of \(D\) are those of the corresponding matrix; they do not depend
+      on the isomorphism \(D\cong M_2(\Q)\).</p>
+    <p>A finite subgroup of \(\PGL_2(\mathbb R)\) is cyclic or dihedral: \(\PGL_2(\mathbb R)\) acts on the
+      hyperbolic plane by isometries (an element of negative determinant by
+      \(z\mapsto(a\bar z+b)/(c\bar z+d)\)), a finite subgroup fixes a point, and the stabilizer of a
+      point is isomorphic to \(O(2)\). If \([R]\in\PGL_2(\Q)\) has order \(n&gt;2\), the ratio
+      of the eigenvalues of \(R\) is a primitive \(n\)-th root of unity \(\zeta\), and
+      \((\tr R)^2/\det R\)<wbr>\({}=2+\zeta+\zeta^{-1}\in\Q\); hence \(n\in\{3,4,6\}\). Therefore</p>
+    <div class="equation">\[
+      \Gamma\in\{C_1,\ C_2,\ C_3,\ C_4,\ C_6,\ V_4,\ D_6,\ D_8,\ D_{12}\},
+    \]</div>
+    <p>where \(D_{2n}\) is dihedral of order \(2n\) (so \(D_6\cong S_3\)) and \(V_4\) is the Klein four
+      group. An element \(r\) of order \(n\in\{3,4,6\}\) has a unique representative \(R\) with
+      \(\tr R=1\) (the trace is nonzero, since otherwise \(R^2\) would be a scalar); its
+      characteristic polynomial is \(t^2-t+1/c\) with \(c=1,2,3\) respectively, of discriminant
+      \(-3,-1,-1/3\). Since \(R(1-R)=1/c\), the trace-one representative of \(r^{-1}\) is \(1-R\).</p>
+    <p>Every elliptic subvariety of \(A_{\bar\Q}\) is the image of an integral multiple of a rank-one
+      idempotent of \(D\), so it is defined over \(L\). If \(E,E'\subset A_L\) are elliptic
+      subvarieties, every geometric homomorphism \(E'\to E\) is defined over \(L\): composing with an
+      \(L\)-rational quasi-projection \(A\to E'\) and the inclusion \(E\subset A\) embeds
+      \(\Hom^0(E'_{\bar\Q},E_{\bar\Q})\) \(G_L\)-equivariantly into \(D\), on which \(G_L\) acts
+      trivially.</p>
+    <p>The Theorem is proved case by case: type (N), and type (S) with \(\Gamma\in\{C_1,C_2\}\), in
+      <a href="#small-degree">Section 3</a>; type (CM) in <a href="#good-reduction">Section 4</a>; type (S) with
+      \(\Gamma\in\{C_3,C_6,V_4,D_6,D_8,D_{12}\}\) in <a href="#lattices">Section 5</a>; and type (S) with
+      \(\Gamma=C_4\) in Sections <a href="#c4">6</a> and <a href="#x034">7</a>. The proof is assembled in
+      <a href="#census">Section 8</a>.</p>
+  </section>
+
+  <section id="small-degree">
+    <h3>3. Elliptic curves over fields of degree at most \(2\)</h3>
+    <div class="theorem" id="lemma-small">
+      <p><strong>Lemma 2.</strong> Let \(A\) be an abelian surface over \(\Q\) and \(k\) a number field with \([k:\Q]\le2\) such
+        that \(A_k\) contains an elliptic curve defined over \(k\). Then \(A(\Q)\) contains no point of
+        order \(17\).</p>
+    </div>
+    <p><strong>Proof.</strong> Let \(E\subset A_k\) be an elliptic curve defined over \(k\), and suppose that
+      \(Q\in A(\Q)\) has order \(17\). By <a href="#lemma-sequence">Lemma 1</a> over \(k\), either
+      \(Q\in E(k)\) or the image of \(Q\) in \((A_k/E)(k)\) has order \(17\). Both \(E\) and \(A_k/E\)
+      are elliptic curves over a field of degree at most \(2\), which contradicts (F4). ∎</p>
+    <p><strong>Type (N).</strong> Let \(A\) be of type (N). Then \(A_{\bar\Q}\) has exactly two elliptic
+      subvarieties: an elliptic subvariety is isogenous to \(E_1\) or to \(E_2\), and for each \(i\)
+      the space \(\Hom^0(E_i,A_{\bar\Q})\) has rank one over the field \(\End^0(E_i)\), so all nonzero
+      maps \(E_i\to A_{\bar\Q}\) have the same image \(B_i\); and \(B_1\neq B_2\) because they are not
+      isogenous. The group \(G_{\Q}\) permutes \(B_1\) and \(B_2\). The stabilizer of \(B_1\) is an
+      open subgroup of index at most \(2\); its fixed field \(k\) has degree at most \(2\), and \(B_1\)
+      is defined over \(k\). By <a href="#lemma-small">Lemma 2</a>, \(A(\Q)\) has no point of order
+      \(17\).</p>
+    <p><strong>Type (S) with \(\Gamma\in\{C_1,C_2\}\).</strong> Here \([L:\Q]\le2\), and \(A_{\bar\Q}\sim E^2\)
+      contains an elliptic subvariety, which is defined over \(L\) by <a href="#cases">Section 2</a>. By
+      <a href="#lemma-small">Lemma 2</a> with \(k=L\), \(A(\Q)\) has no point of order \(17\).</p>
+    <p>This argument does not extend to all the remaining groups \(\Gamma\): for \([L:\Q]=4\) the
+      analogue of (F4) fails, since elliptic curves over quartic fields can have a point of order
+      \(17\) (see Remark 1 in <a href="#remarks">Section 9</a>).</p>
+  </section>
+
+  <section id="good-reduction">
+    <h3>4. Potentially good reduction at \(2\)</h3>
+    <div class="theorem" id="prop-good">
+      <p><strong>Proposition 3.</strong> Let \(A\) be an abelian surface over \(\Q\) with potentially good reduction at \(2\). Then
+        \(A(\Q)\) contains no point of order \(17\).</p>
+    </div>
+    <p>Here “potentially good reduction at \(2\)” means that \(A\) acquires good reduction over a
+      finite extension \(F'\) of \(\Q_2\); for example \(F'=k_v\) when \(A_k\) has good reduction at a
+      prime \(v\mid2\) of a number field \(k\). We fix an embedding \(\bar\Q\subset\bar\Q_2\), so that
+      \(G_{\Q_2}\subseteq G_{\Q}\).</p>
+    <p><strong>Proof.</strong></p>
+    <ol>
+      <li>
+        <p><em>Good reduction over a totally ramified extension of \(\Q_2\).</em> Let
+          \(I\subset G_{\Q_2}\) be the inertia group. By the Néron–Ogg–Shafarevich criterion
+          <a href="#st">[ST, Theorem 1]</a>, the inertia group \(I\cap G_{F'}\) of \(F'\) acts trivially on \(T_3A\); as it
+          has finite index in \(I\), the group \(I\) acts on \(T_3A\) through a finite quotient. Put \(N=I\cap\ker(\rho_{A,3})\), an open normal subgroup of \(I\) that is normal
+          in \(G_{\Q_2}\). The group \(G_{\Q_2}/N\) is an extension of \(G_{\Q_2}/I\cong\hat\Z\) by the
+          finite group \(I/N\). Since \(\hat\Z\) is a free profinite group on one generator, the extension
+          splits: mapping the generator to a lift of the Frobenius element defines a continuous section.
+          So there is a closed subgroup \(H\supseteq N\) of \(G_{\Q_2}\) with \(H\cap I=N\) and
+          \(HI=G_{\Q_2}\); it has index \([I:N]\). Its fixed field \(F\) is a finite extension of \(\Q_2\)
+          with residue field \(\F_2\), i.e. totally ramified, and its inertia group \(N\) acts trivially
+          on \(T_3A\). By the same criterion, \(A\) has
+          good reduction \(\bar A/\F_2\) over \(F\). Prime-to-\(2\) torsion of \(A(F)\) injects into
+          \(\bar A(\F_2)\): for odd \(m\), the \(m\)-torsion of the Néron model of \(A_F\), an abelian
+          scheme over the ring of integers \(\mathcal O_F\), is finite étale over \(\mathcal O_F\), so
+          reduction is injective on \(A(F)[m]\). So, if \(A(\Q)\) has a point of order \(17\), then \(17\) divides
+          \(\#\bar A(\F_2)=P(1)\), where \(P\) is the characteristic polynomial of the Frobenius
+          endomorphism \(\pi\) of \(\bar A\).</p>
+      </li>
+      <li>
+        <p><em>The Weil polynomial.</em> The polynomial \(P\in\Z[T]\) is monic of degree \(4\), its
+          complex roots have absolute value \(\sqrt2\) by Weil's theorem, and \(P(0)=\deg\pi=4\). The
+          non-real roots form pairs \(\omega,\bar\omega\) with \(\omega\bar\omega=2\); each pair
+          contributes a factor \(T^2-\beta T+2\) with \(\beta=\omega+\bar\omega\) real and
+          \(|\beta|&lt;2\sqrt2\). The possible real roots \(\sqrt2\) and \(-\sqrt2\) are conjugate over
+          \(\Q\), so they have the same multiplicity \(m\in\{0,1,2\}\). If \(m=1\), then
+          \(P=(T^2-2)(T^2-\beta T+2)\) and \(P(0)=-4\), which is excluded. If \(m=2\), then
+          \(P=(T^2-2)^2\)<wbr>\({}=(T^2-2\sqrt2\,T+2)(T^2\)<wbr>\({}+2\sqrt2\,T+2)\). In all cases</p>
+        <div class="equation">\[
+          P(T)=(T^2-\beta_1T+2)(T^2-\beta_2T+2)=T^4+aT^3+bT^2+2aT+4
+        \]</div>
+        <p>with real numbers \(|\beta_i|\le2\sqrt2\) and integers \(a=-(\beta_1+\beta_2)\),
+          \(b=\beta_1\beta_2+4\), and</p>
+        <div class="equation">\[
+          P(1)=5+3a+b=(3-\beta_1)(3-\beta_2).
+        \]</div>
+      </li>
+      <li>
+        <p><em>\(P(1)\) is not divisible by \(17\).</em> Put \(x_i=3-\beta_i\). Then
+          \(0&lt;3-2\sqrt2\le x_i\)<wbr>\({}\le3+2\sqrt2\), so \(P(1)=x_1x_2\) is a positive integer and
+          \(P(1)\le(3+2\sqrt2)^2\)<wbr>\({}=17+12\sqrt2&lt;34\), because \(288&lt;289\). Suppose that \(17\) divides
+          \(P(1)\). Then \(x_1x_2=17\), and both \(x_i\) lie in the interval
+          \([\,17/(3+2\sqrt2),\ 3+2\sqrt2\,]\)<wbr>\({}=[\,51-34\sqrt2,\ 3+2\sqrt2\,]\). The function
+          \(x\mapsto x+17/x\) is convex on this interval and takes the same value \(54-32\sqrt2\) at both
+          endpoints, which are exchanged by \(x\mapsto17/x\); and it is at least \(2\sqrt{17}\). Hence the
+          integer \(x_1+x_2=6+a\) satisfies</p>
+        <div class="equation">\[
+          8&lt;2\sqrt{17}\ \le\ 6+a\ \le\ 54-32\sqrt2&lt;9,
+        \]</div>
+        <p>where the outer inequalities are \(64&lt;68\) and \(2025&lt;2048\). This is impossible. ∎</p>
+      </li>
+    </ol>
+    <p>As a check, part (A) of the script
+      <a href="../data/knowledge/sources/geometric_17_checks.m"><code>geometric_<wbr>17_<wbr>checks.m</code></a>
+      (see <a href="#x034">Section 7</a>) enumerates all pairs of integers \((a,b)\) for which
+      \(T^4+aT^3+bT^2+2aT+4\) has all its roots of absolute value \(\sqrt2\). There are \(35\) of them,
+      and the values of \(P(1)\) are \(1,\dots,16,19,20,25\).</p>
+    <p><strong>Type (CM).</strong> Let \(A\) be of type (CM). The curve \(E\) has potentially good reduction
+      everywhere, because it has CM (its \(j\)-invariant is an algebraic integer; see <a href="#st">[ST, §2]</a>). Over a suitable
+      number field \(k\), \(A_k\) is isogenous to \(E_k^2\) and \(E_k\) has good reduction at the
+      primes above \(2\). For a prime \(\ell\neq2\), \(V_\ell(A_k)\cong V_\ell(E_k)^2\) as
+      \(G_k\)-modules, and this is unramified at every prime \(v\mid2\) of \(k\); so \(A_k\) has good
+      reduction at \(v\) by the Néron–Ogg–Shafarevich criterion <a href="#st">[ST, Theorem 1]</a>. So \(A\) has
+      potentially good reduction at \(2\), and by <a href="#prop-good">Proposition 3</a>, \(A(\Q)\) has no point of order
+      \(17\).</p>
+  </section>
+
+  <section id="lattices">
+    <h3>5. Type (S): lattices in the Tate module</h3>
+    <p>In this section \(A\) is of type (S), \(p\) is an odd prime, \(V=V_p(A)\) and \(T=T_p(A)\). The
+      group \(G_{\Q}\) acts on \(D\otimes\Q_p\) through \(\Gamma\), and \(g(xv)=g(x)\,g(v)\) for
+      \(x\in D\otimes\Q_p\) and \(v\in V\). We fix an isomorphism
+      \(D\otimes\Q_p\cong\End_{\Q_p}(S)\) with \(S=\Q_p^2\); as a \(D\otimes\Q_p\)-module, \(V\) is
+      isomorphic to \(S\oplus S\).</p>
+    <div class="theorem" id="lemma-pol">
+      <p><strong>Lemma 4 (polarization).</strong> Let \(T'\subset V\) be a \(G_{\Q}\)-stable lattice such that \((T'/pT')|_{G_L}\) has trivial
+        semisimplification. Then \(\Q(\zeta_p)\subseteq L\).</p>
+    </div>
+    <p><strong>Proof.</strong> A polarization of \(A\) defined over \(\Q\) gives an isomorphism of
+      \(G_{\Q}\)-modules \(V\cong\Hom(V,\Q_p(1))\). Transport the lattice \(\Hom(T',\Z_p(1))\) into
+      \(V\). Its reduction is \(\Hom(T'/pT',\mu_p)\), whose semisimplification as a \(G_L\)-module
+      consists of four copies of \(\bar\chi_p|_{G_L}\), while that of \(T'/pT'\) consists of four
+      copies of the trivial character. By (F2) over \(G_L\), \(\bar\chi_p|_{G_L}=1\), that is, \(\Q(\zeta_p)\subseteq L\), since \(\Q(\zeta_p)\) is the
+      fixed field of \(\ker\bar\chi_p\). The degree of the
+      polarization plays no role. ∎</p>
+    <div class="theorem" id="lemma-unram">
+      <p><strong>Lemma 5 (unramified order).</strong> Suppose that \(\Gamma\) normalizes an unramified quadratic \(\Z_p\)-order
+        \(\mathcal B\subset D\otimes\Q_p\) (the ring of integers of an unramified quadratic extension of \(\Q_p\)
+        contained in \(D\otimes\Q_p\)), that some \(g_0\in\Gamma\) acts on \(D\otimes\Q_p\) by
+        \(\mathrm{Ad}(R_0)\) for a unit \(R_0\in\mathcal B^\times\) whose reduction lies in
+        \(\F_{p^2}\setminus\F_p\), and that \(A(\Q)[p]\neq0\). Then \(\Q(\zeta_p)\subseteq L\).</p>
+    </div>
+    <p><strong>Proof.</strong></p>
+    <ol>
+      <li>
+        <p><em>A \(\Gamma\)-stable maximal order.</em> The field \(\mathcal B\otimes\Q_p\) acts on \(S\), which
+          is a one-dimensional vector space over it. Since \(\mathcal B\) is a discrete valuation ring with
+          uniformizer \(p\), the \(\mathcal B\)-stable lattices in \(S\) are the lattices \(p^k\Lambda\),
+          \(k\in\Z\), where \(\Lambda=\mathcal Bv_0\) for a fixed nonzero \(v_0\in S\). For \(g\in\Gamma\) choose
+          any \(R_g\in(D\otimes\Q_p)^\times\) inducing the action of \(g\). Then \(R_g\Lambda\) is stable under
+          \(R_g\mathcal BR_g^{-1}=\mathcal B\), so \(R_g\Lambda=p^{k(g)}\Lambda\), and \(M_g:=p^{-k(g)}R_g\) lies in
+          \(\GL(\Lambda)\). It induces the action of \(g\) on \(D\otimes\Q_p\) and is determined by \(g\)
+          up to a factor in \(\Z_p^\times\). Consequently \(\Gamma\) preserves the maximal order
+          \(\mathcal R=\End(\Lambda)\cong M_2(\Z_p)\), which contains \(\mathcal B\), and
+          \(g\mapsto[\bar M_g]\in\PGL(U)\) is a homomorphism, where \(U=\Lambda/p\Lambda\) and
+          \(\bar M_g\) is the reduction of \(M_g\).</p>
+      </li>
+      <li>
+        <p><em>Tensor decomposition.</em> Put \(T'=\mathcal RT\). It is a \(G_{\Q}\)-stable lattice in
+          \(V\) and an \(\mathcal R\)-module. Choose a basis \(\lambda_1,\lambda_2\) of \(\Lambda\) and let
+          \(e_{ik}\in\mathcal R\) be the matrix units, \(e_{ik}\lambda_l=\delta_{kl}\lambda_i\). Then
+          \(T'=e_{11}T'\oplus e_{22}T'\), and \(e_{21}:e_{11}T'\to e_{22}T'\) is an isomorphism with
+          inverse \(e_{12}\). So \(W_0=e_{11}T'\) is free of rank \(2\) over \(\Z_p\), and</p>
+        <div class="equation">\[
+          \Lambda\otimes_{\Z_p}W_0\to T',\qquad\lambda_l\otimes w\mapsto e_{l1}w,
+        \]</div>
+        <p>is an isomorphism of \(\mathcal R\)-modules. Let \(\bar V=T'/pT'\) and \(W=W_0/pW_0\). Then
+          \(\bar V\cong U\otimes W\) as modules over \(\mathcal R/p\mathcal R=\End(U)\). For
+          \(g\in G_{\Q}\), let \(\bar g\) be its action on \(\bar V\), and write \(M_g\) for the matrix
+          attached to the image of \(g\) in \(\Gamma\). From \(g(xv)=M_gxM_g^{-1}\,g(v)\) for
+          \(x\in\mathcal R\) and \(v\in T'\) we get
+          \(\bar g\circ(\bar x\otimes1)\)<wbr>\({}=(\bar M_g\bar x\bar M_g^{-1}\otimes1)\circ\bar g\) for all
+          \(\bar x\in\End(U)\). Hence \((\bar M_g^{-1}\otimes1)\circ\bar g\) commutes with
+          \(\End(U)\otimes1\), so it is of the form \(1\otimes N_g\) with \(N_g\in\GL(W)\), and
+          \(\bar g=\bar M_g\otimes N_g\). Let</p>
+        <div class="equation">\[
+          \tilde G=\{(g,M)\in G_{\Q}\times\GL(U)\ :\ M\in\F_p^\times\bar M_g\}.
+        \]</div>
+        <p>This is a group, by step 1. For \((g,M)\in\tilde G\) there is a unique \(N\in\GL(W)\) with
+          \(\bar g=M\otimes N\), and \((g,M)\mapsto N\) is a homomorphism, since
+          \(\bar g\bar g'=MM'\otimes NN'\). So \(U\) and \(W\) are two-dimensional \(\tilde G\)-modules,
+          and \(\bar V\cong U\otimes W\) as \(\tilde G\)-modules, where \(\tilde G\) acts on \(\bar V\)
+          through its projection to \(G_{\Q}\).</p>
+      </li>
+      <li>
+        <p><em>\(U\) is irreducible.</em> We may take \(M_{g_0}=R_0\), since \(R_0\Lambda=\Lambda\). So
+          \(\tilde G\) contains an element acting on \(U\cong\mathcal B/p\mathcal B=\F_{p^2}\) as multiplication by an
+          element of \(\F_{p^2}\setminus\F_p\), which has no eigenvector in \(U\).</p>
+      </li>
+      <li>
+        <p><em>\(W\) is irreducible.</em> The lattices \(T\) and \(T'\) have the same reduction up to
+          semisimplification, by (F2). As \(A(\Q)[p]\neq0\), the trivial character is a constituent of
+          \(T/pT\), hence of \(\bar V\). If \(W\) had a \(\tilde G\)-stable line \(W_1\), then
+          \(U\otimes W_1\) and \(U\otimes W/W_1\) would be irreducible \(\tilde G\)-modules of dimension \(2\),
+          and \(\bar V\) would have no one-dimensional \(\tilde G\)-constituent, hence no one-dimensional
+          \(G_{\Q}\)-constituent: \(\tilde G\) maps onto \(G_{\Q}\), since it contains \((g,\bar M_g)\) for
+          every \(g\), and it acts on \(\bar V\) through this map.</p>
+      </li>
+      <li>
+        <p><em>\(G_L\) acts trivially on \(\bar V\).</em> For \(h\in G_L\), \(\bar M_h\) is a scalar, so
+          \(H=\{(h,1):h\in G_L\}\) is a subgroup of \(\tilde G\). It is normal, because \(G_L\) is normal
+          in \(G_{\Q}\), and it acts trivially on \(U\). By Clifford's theorem, \(W|_H\) is semisimple: the
+          \(\tilde G\)-translates of a simple \(H\)-submodule are simple \(H\)-submodules whose sum is a
+          nonzero \(\tilde G\)-submodule, hence all of \(W\). Since
+          \(\bar V|_H\cong W|_H\oplus W|_H\) has a trivial constituent (the restriction of a trivial
+          constituent of \(\bar V\)) and \(W|_H\) is semisimple, \(W^H\neq0\); as \(W^H\) is
+          \(\tilde G\)-stable and \(W\) is irreducible, \(W^H=W\). So \(G_L\) acts trivially on
+          \(\bar V=T'/pT'\).</p>
+      </li>
+      <li>
+        <p><a href="#lemma-pol">Lemma 4</a> now gives \(\Q(\zeta_p)\subseteq L\). ∎</p>
+      </li>
+    </ol>
+    <div class="theorem" id="lemma-split">
+      <p><strong>Lemma 6 (split blocks).</strong> Suppose that \(\Gamma\) normalizes a split étale order
+        \(\mathcal B=\Z_pe_1\oplus\Z_pe_2\subset D\otimes\Q_p\), where \(e_1,e_2\) are nonzero orthogonal
+        idempotents with \(e_1+e_2=1\), and that some element of \(\Gamma\) exchanges \(e_1\) and
+        \(e_2\). Let \(K\subset L\) be the fixed field of the subgroup of index \(2\) of \(\Gamma\) that
+        fixes \(e_1\). Then \(\Gal(L/K)\) acts on the line \(e_1(D\otimes\Q_p)e_2\) by a character
+        \(\eta\). If \(\eta\neq1\) and \(A(\Q)[p]\neq0\), then \(\Q(\zeta_p)\subseteq L\).</p>
+    </div>
+    <p><strong>Proof.</strong> Every element of \(\Gamma\) permutes the two primitive idempotents \(e_1,e_2\) of
+      \(\mathcal B\); the elements fixing \(e_1\) also fix \(e_2=1-e_1\) and hence preserve the line
+      \(e_1(D\otimes\Q_p)e_2\). The character \(\eta\) has finite order, so its values are roots of
+      unity in \(\Z_p^\times\), on which reduction modulo \(p\) is injective; thus
+      \(\bar\eta\neq1\). We regard \(\eta\) as a character of \(G_K\).</p>
+    <p>Put \(T'=\mathcal BT=T_1\oplus T_2\) with \(T_i=e_iT\); it is a \(G_{\Q}\)-stable lattice. Let
+      \(M_i=T_i/pT_i\) and \(V_i=T_i\otimes\Q_p=e_iV\), of dimension \(2\). The group \(G_K\) preserves
+      each \(T_i\), and an element \(\tau\in G_{\Q}\setminus G_K\) exchanges them, so that
+      \(M_2\cong M_1^{\tau}\). A nonzero \(\xi\in e_1(D\otimes\Q_p)e_2\) maps \(V_2\) isomorphically
+      onto \(V_1\) and satisfies \(g(\xi v)=\eta(g)\,\xi\,g(v)\) for \(g\in G_K\). So \(\xi(T_2)\) is a
+      \(G_K\)-stable lattice in \(V_1\) with reduction \(\bar\eta\otimes M_2\), and by (F2),
+      \(M_1^{\mathrm{ss}}\cong\bar\eta\otimes M_2^{\mathrm{ss}}\).</p>
+    <p>The rational point of order \(p\) gives a trivial constituent of \(T/pT\), hence, by (F2), a
+      trivial \(G_K\)-constituent of \(M_1\oplus M_2\). Since \(M_2\cong M_1^\tau\), both \(M_i\) have
+      a trivial constituent. Writing \(M_2^{\mathrm{ss}}=\mathbf 1\oplus\alpha\), we get
+      \(M_1^{\mathrm{ss}}=\bar\eta\oplus\bar\eta\alpha\ni\mathbf 1\), so \(\alpha=\bar\eta^{-1}\). All
+      four constituents \(\mathbf 1,\bar\eta^{-1},\bar\eta,\mathbf 1\) of \(T'/pT'\) are trivial on
+      \(G_L\), and <a href="#lemma-pol">Lemma 4</a> applies. ∎</p>
+    <p>We apply these lemmas with \(p=17\), assuming \(A(\Q)[17]\neq0\). Note that the squares in
+      \(\F_{17}^\times\) are \(1,2,4,8,9,13,15,16\); so \(-1\equiv4^2\) is a square, while
+      \(-3\equiv14\) and \(-1/3\equiv11\) are not. These residues are also verified in part (B) of the
+      script.</p>
+    <ul>
+      <li>
+        <p><strong>\(\Gamma\in\{C_3,C_6,D_6,D_{12}\}\).</strong> Let \(n=3\) if \(\Gamma\in\{C_3,D_6\}\) and
+          \(n=6\) if \(\Gamma\in\{C_6,D_{12}\}\), and let \(r\in\Gamma\) have order \(n\). The subgroup \(\langle r\rangle\) is
+          normal, so \(grg^{-1}\in\{r,r^{-1}\}\) for every \(g\in\Gamma\). Let \(R\) be the trace-one
+          representative of \(r\); its characteristic polynomial is \(t^2-t+1/c\) with \(c=1\) for \(n=3\)
+          and \(c=3\) for \(n=6\). For \(g\in\Gamma\), the element \(\mathrm{Ad}(R_g)R\) has trace one and
+          represents \(grg^{-1}\), so it is \(R\) or \(1-R\). Hence \(\mathcal B=\Z_{17}[R]\) is normalized by
+          \(\Gamma\). The discriminant \(-3\), respectively \(-1/3\), of \(t^2-t+1/c\) is a \(17\)-adic
+          unit and a non-square modulo \(17\); so \(\mathcal B\) is an unramified quadratic order, \(R\) is a unit
+          of \(\mathcal B\) (its norm is \(1/c\)), and the reduction of \(R\) lies in \(\F_{289}\setminus\F_{17}\).
+          <a href="#lemma-unram">Lemma 5</a> with \(g_0=r\) gives \(\Q(\zeta_{17})\subseteq L\). This is
+          impossible, because \([L:\Q]\le12&lt;16\).</p>
+      </li>
+      <li>
+        <p><strong>\(\Gamma=D_8\).</strong> Let \(r\) be a rotation of order \(4\) and \(R\) its trace-one
+          representative, with characteristic polynomial \(t^2-t+\tfrac12\) of discriminant \(-1\). This
+          polynomial has two roots \(\lambda_1\equiv11\) and \(\lambda_2\equiv7\pmod{17}\) in \(\Z_{17}\).
+          So \(\mathcal B=\Z_{17}[R]\), which is normalized by \(\Gamma\) as before, is split, with idempotents
+          \(e_1=(R-\lambda_2)/(\lambda_1-\lambda_2)\) and \(e_2=(\lambda_1-R)/(\lambda_1-\lambda_2)\). The
+          rotations fix \(R\), hence \(e_1\) and \(e_2\); the reflections map \(R\) to \(1-R\), and
+          exchange \(e_1\) and \(e_2\) because \(1-\lambda_2=\lambda_1\). So \(K\) is the fixed field of
+          \(\langle r\rangle\). For \(\xi\in e_1(D\otimes\Q_{17})e_2\) we have
+          \(\mathrm{Ad}(R)\xi=(\lambda_1/\lambda_2)\xi\), and \(\lambda_1/\lambda_2\equiv4\pmod{17}\) is
+          not \(1\). <a href="#lemma-split">Lemma 6</a> gives \(\Q(\zeta_{17})\subseteq L\), which is
+          impossible because \([L:\Q]=8\).</p>
+      </li>
+      <li>
+        <p><strong>\(\Gamma=V_4\).</strong> The map \([M]\mapsto v_{17}(\det M)\bmod2\) is a well-defined
+          homomorphism \(\Gamma\to\Z/2\); choose \(r\neq1\) in its kernel. A representative \(R\) of \(r\)
+          has \(R^2=d\in\Q^\times\) and is not a scalar, so \(\tr R=0\) and \(d=-\det R\); thus
+          \(v_{17}(d)\) is even, and we scale \(R\) so that \(d\) is a \(17\)-adic unit. Since \(\Gamma\) is
+          abelian, every \(g\in\Gamma\) maps \(R\) to a rational multiple \(\lambda R\) with
+          \(\lambda^2=1\). So \(\mathcal B=\Z_{17}[R]\) is an étale order normalized by \(\Gamma\). If \(d\) is not
+          a square modulo \(17\), then \(\mathcal B\) is unramified and \(R\) is a unit of \(\mathcal B\) with reduction in
+          \(\F_{289}\setminus\F_{17}\); <a href="#lemma-unram">Lemma 5</a> applies with \(g_0=r\). If \(d\) is
+          a square modulo \(17\), then \(d=\delta^2\) with \(\delta\in\Z_{17}^\times\), and \(\mathcal B\) is split with
+          idempotents \(e_1=(1+R/\delta)/2\) and \(e_2=(1-R/\delta)/2\). Some \(g\in\Gamma\) maps \(R\) to \(-R\):
+          otherwise \(\Gamma\) would lie in the image of the centralizer \(\Q_{17}[R]^\times\) of \(R\),
+          that is, in \(\Q_{17}[R]^\times/\Q_{17}^\times\cong\Q_{17}^\times\), whose finite subgroups are
+          cyclic. This \(g\) exchanges \(e_1\) and \(e_2\), the subgroup fixing them is \(\{1,r\}\), and
+          \(r\) acts on \(e_1(D\otimes\Q_{17})e_2\) by \(\delta/(-\delta)=-1\). <a href="#lemma-split">Lemma 6</a>
+          applies. In both cases \(\Q(\zeta_{17})\subseteq L\), which is impossible because
+          \([L:\Q]=4\).</p>
+      </li>
+    </ul>
+    <p>Together with <a href="#small-degree">Section 3</a> this shows: if \(A\) is of type (S) and
+      \(A(\Q)[17]\neq0\), then \(\Gamma=C_4\).</p>
+  </section>
+
+  <section id="c4">
+    <h3>6. The case \(\Gamma=C_4\)</h3>
+    <p>In this section \(A\) is of type (S), \(\Gamma=\langle r\rangle\cong C_4\), \(s=r^2\), and \(K\)
+      is the quadratic subfield of \(L\), so that \(\Gal(L/K)=\{1,s\}\). The trace-one representative
+      \(R\) of \(r\) has \(\det R=\tfrac12\). Put \(J=2R-1\); then \(J^2=-1\), \(R=(1+J)/2\) and
+      \(R^2=J/2\). So \(s\) acts on \(D\) by \(\mathrm{Ad}(J)\), and \(\End^0_K(A_K)\) is the
+      centralizer \(\Q(J)\cong\Q(i)\) of \(J\), a field: <strong>\(A_K\) is simple over \(K\)</strong>.
+      Moreover <strong>\(K\) is real</strong>: complex conjugation restricts to an element of order at most
+      \(2\) of the cyclic group \(\Gamma\), hence to an element of \(\{1,s\}=\Gal(L/K)\).</p>
+    <p>We assume that \(A(\Q)[17]\neq0\) and derive a contradiction.</p>
+    <div class="theorem" id="lemma-degree">
+      <p><strong>Lemma 7 (degree class).</strong> Let \(X\) be an elliptic curve over \(\bar\Q\) without CM and \(h:X^2\to A_{\bar\Q}\) a
+        quasi-isogeny. For \(g\in G_{\Q}\), the curve \(X^g\) is isogenous to \(X\); let \(\mu_g\) be a
+        generator of \(\Hom(X^g,X)\cong\Z\). If \(\det R_g&gt;0\), then
+        \(\deg\mu_g\equiv\det R_g\pmod{\Q^{\times2}}\).</p>
+    </div>
+    <p><strong>Proof.</strong> The conjugate \(g(h):(X^g)^2\to A_{\bar\Q}\) is a quasi-isogeny, so
+      \(X^g\sim X\). Put \(N_g=h^{-1}\circ g(h)\). It lies in \(\Hom^0((X^g)^2,X^2)\), whose elements
+      are the \(N_0\circ\mathrm{diag}(\mu_g,\mu_g)\) with \(N_0\in M_2(\Q)\); so
+      \(N_g=N_0\circ\mathrm{diag}(\mu_g,\mu_g)\) with \(N_0\in\GL_2(\Q)\). For
+      \(Y\in M_2(\Q)=\End^0(X^2)\), the conjugate \(g(Y)\in\End^0((X^g)^2)\) is given by the same
+      matrix, and \(\mathrm{diag}(\mu_g,\mu_g)\circ g(Y)\)<wbr>\({}=Y\circ\mathrm{diag}(\mu_g,\mu_g)\). Hence</p>
+    <div class="equation">\[
+      g(hYh^{-1})=g(h)\,g(Y)\,g(h)^{-1}=h\,N_0YN_0^{-1}\,h^{-1}.
+    \]</div>
+    <p>So, in the identification \(D\cong M_2(\Q)\) given by \(h\), \(g\) acts by \(\mathrm{Ad}(N_0)\).
+      Therefore \(N_0\) is a rational multiple of the matrix of \(R_g\), and
+      \(\det N_0\equiv\det R_g\) modulo \(\Q^{\times2}\); in particular \(\det N_0&gt;0\). Since
+      \(\deg g(h)=\deg h\), (F1) gives
+      \(1=\deg N_g\)<wbr>\({}=(\det N_0)^2(\deg\mu_g)^2\), so \(\deg\mu_g=1/\det N_0\). ∎</p>
+    <p><strong>Step 1: a curve over \(K\).</strong></p>
+    <ol>
+      <li>
+        <p>Let \(E\subset A_L\) be an elliptic subvariety. Then \(E^s\neq E\), since otherwise \(E\)
+          would be defined over \(K\). So \(A_L\sim_LE\times E^s\). The curve \(E\) has no CM.</p>
+      </li>
+      <li>
+        <p>Apply <a href="#lemma-degree">Lemma 7</a> with \(X=E\) and a lift \(g\) of \(s\): since
+          \(\det R_g=\det R^2=\tfrac14\), a generator \(\kappa:E^s\to E\) of \(\Hom(E^s,E)\) has square
+          degree \(m^2\). It is defined over \(L\) (<a href="#cases">Section 2</a>), and its kernel is cyclic, since
+          \(\kappa\) is not divisible by an integer greater than \(1\).</p>
+      </li>
+      <li>
+        <p><em>The middle curve.</em> Let \(H_1\subset\ker\kappa\) be the subgroup of order \(m\), which
+          is \(G_L\)-stable, and \(E_c=E^s/H_1\). Then \(\kappa\) factors as
+          \(E^s\xrightarrow{\ \kappa_1\ }E_c\xrightarrow{\ \kappa_2\ }E\) through two cyclic isogenies of degree
+          \(m\). The conjugate \(s(\kappa):E\to E^s\) and the dual \(\hat\kappa\) both generate
+          \(\Hom(E,E^s)\cong\Z\), so \(s(\kappa)=\pm\hat\kappa\). The unique subgroup of order \(m\) of
+          \(\ker s(\kappa)=\ker\hat\kappa\) is both \(s(H_1)\) and the kernel of \(\hat\kappa_2:E\to E_c\).
+          Hence \(E_c^s=E/s(H_1)\cong E_c\), and \(j(E_c)\in K\).</p>
+      </li>
+      <li>
+        <p>Let \(E_K\) be an elliptic curve over \(K\) with \(j(E_K)=j(E_c)\). It has no CM, so
+          \(j(E_K)\neq0,1728\), and \(A_{\bar\Q}\sim E_K^2\). Fix a quasi-isogeny
+          \(f:E_K^2\to A_{\bar\Q}\) and let \(\rho_K:G_K\to\GL_2(\Q)\) be the homomorphism of (F3) for
+          \(k=K\). By (F3)(ii), \(\mathrm{Ad}\circ\rho_K\) is the action of \(G_K\) on \(D\); its kernel is
+          \(G_L\), so the finite group \(G=\rho_K(G_K)\) has an image of order \(2\) in \(\PGL_2(\Q)\).</p>
+      </li>
+      <li>
+        <p><em>\(G\) is cyclic of order \(4\).</em> The scalars in \(G\) have finite order, so they lie
+          in \(\{\pm1\}\). Let \(g_0\in G\) be a non-scalar element. By item 4, \(G\) is generated by
+          \(g_0\) and its scalars, so \(G\) is abelian, and \(g_0^2\) is a scalar: \(g_0^2\in\{\pm1\}\). If
+          \(g_0^2=1\), the idempotents \((1\pm g_0)/2\) would be nontrivial elements of the commutant of
+          \(G\), which is isomorphic to the field \(\End^0_K(A_K)\) by (F3)(ii); this is impossible. So
+          \(g_0^2=-1\) and \(G=\langle g_0\rangle\).
+          Fix \(\iota\in\Z_{17}\) with \(\iota^2=-1\), and let \(\psi:G_K\to\mu_4(\Z_{17})\) be the
+          character with \(\psi(g)=\iota^k\) when \(\rho_K(g)=g_0^k\); it has order \(4\). Decomposing
+          \(\Q_{17}^2\) into the eigenlines of \(g_0\), (F3)(iii) gives an isomorphism of
+          \(G_K\)-modules</p>
+        <div class="equation">\[
+          V_{17}(A)\cong V_{17}(E_K)\otimes\psi\ \oplus\ V_{17}(E_K)\otimes\psi^{-1}.
+        \]</div>
+      </li>
+    </ol>
+    <p><strong>Step 2: a \(2\)-isogeny to the conjugate curve.</strong></p>
+    <ol>
+      <li>
+        <p>Choose \(\tau\in G_{\Q}\) with \(\tau|_K\neq\mathrm{id}\); then \(\tau|_L\in\{r,r^3\}\)
+          and \(\tau^2\in G_K\). The curve \(E_K^\tau\) is defined over \(K\), and
+          \((E_K^\tau)^\tau=E_K\). <a href="#lemma-degree">Lemma 7</a> with \(X=E_K\), \(h=f\) and
+          \(R_\tau\in\{R,1-R\}\), of determinant \(\tfrac12\), shows that a generator \(\mu:E_K^\tau\to E_K\) of
+          \(\Hom(E_K^\tau,E_K)\) has degree \(2n^2\) for an integer \(n\ge1\).</p>
+      </li>
+      <li>
+        <p>For \(g\in G_K\), \(g(\mu)\) is again a generator, so \(g(\mu)=\varepsilon(g)\mu\) with a
+          character \(\varepsilon:G_K\to\{\pm1\}\). So the cyclic group \(\ker\mu\) of order \(2n^2\) and
+          all its subgroups are \(G_K\)-stable. Let \(Y_1\) and \(Y_2\) be the quotients of \(E_K^\tau\)
+          by the subgroups of order \(n\) and \(2n\) of \(\ker\mu\); they are elliptic curves over \(K\),
+          and</p>
+        <div class="equation">\[
+          \mu=c\circ b\circ a,\qquad E_K^\tau\xrightarrow{\ a\ }Y_1\xrightarrow{\ b\ }Y_2
+          \xrightarrow{\ c\ }E_K,
+        \]</div>
+        <p>with cyclic isogenies \(a,b,c\) of degrees \(n,2,n\). Here \(a\) and \(b\) are defined over
+          \(K\), and \(g(c)=\varepsilon(g)c\) for \(g\in G_K\).</p>
+      </li>
+      <li>
+        <p><em>A commutative square.</em> As in Step 1, \(\tau(\mu):E_K\to E_K^\tau\) and
+          \(\hat\mu\) both generate \(\Hom(E_K,E_K^\tau)\), so \(\tau(\mu)=\pm\hat\mu\). Now
+          \(\tau(\mu)=\tau(c)\circ\tau(b)\circ\tau(a)\) and \(\hat\mu=\hat a\circ\hat b\circ\hat c\). The
+          kernels of \(\tau(a)\) and of \(\hat c\) are both the subgroup of order \(n\) of the cyclic group
+          \(\ker\tau(\mu)=\ker\hat\mu\), and the kernels of \(\tau(b)\circ\tau(a)\) and of
+          \(\hat b\circ\hat c\) are both its subgroup of order \(2n\). So there are unique isomorphisms</p>
+        <div class="equation">\[
+          \theta_1:Y_1^\tau\to Y_2,\quad\theta_1\circ\tau(a)=\hat c,\qquad\qquad
+          \theta_2:Y_2^\tau\to Y_1,\quad\theta_2\circ\tau(b)\circ\tau(a)=\hat b\circ\hat c.
+        \]</div>
+        <p>Since \(\tau(a)\) is surjective, \(\theta_2\circ\tau(b)=\hat b\circ\theta_1\). Taking duals (the
+          dual of an isomorphism is its inverse) we get</p>
+        <div class="equation">\[
+          \tau(\hat b)\circ\theta_2^{-1}=\theta_1^{-1}\circ b.
+        \]</div>
+      </li>
+      <li>
+        <p><em>Notation.</em> Put \(E_0=Y_2\), an elliptic curve over \(K\) without CM; let
+          \(\nu=\hat b:E_0\to Y_1\), a \(K\)-rational isogeny of degree \(2\), and
+          \(\varphi=\theta_2^{-1}:Y_1\to E_0^\tau\), an isomorphism over \(\bar\Q\). The last formula
+          reads \(\tau(\nu)\circ\varphi=\theta_1^{-1}\circ\hat\nu\), and therefore</p>
+        <div class="equation">\[
+          \varphi(\ker\hat\nu)=\ker\tau(\nu)=\tau(\ker\nu).
+        \]</div>
+        <p>Both \(Y_1\) and \(E_0^\tau\) are defined over \(K\) and have \(j\neq0,1728\), so
+          \(g(\varphi)=\eta(g)\varphi\) for \(g\in G_K\), with a character \(\eta:G_K\to\{\pm1\}\).
+          Finally \(c:E_0\to E_K\) induces an isomorphism \(V_{17}(E_K)\cong V_{17}(E_0)\otimes\varepsilon\)
+          of \(G_K\)-modules, so that</p>
+        <div class="equation">\[
+          V_{17}(A)\cong V_0\otimes\psi_1\ \oplus\ V_0\otimes\psi_2,\qquad V_0=V_{17}(E_0),\quad
+          \psi_1=\varepsilon\psi,\quad\psi_2=\varepsilon\psi^{-1},
+        \]</div>
+        <p>and \(\psi_1,\psi_2\) have order \(4\), because \(\psi_i^2=\psi^{\pm2}\neq1\); note that
+          \(\psi_2=\psi_1^{-1}\), since \(\varepsilon^2=1\).</p>
+      </li>
+    </ol>
+    <p><strong>Step 3: the \(17\)-structure.</strong> Write \(\bar\chi=\bar\chi_{17}|_{G_K}\); it has order
+      \(16\) or \(8\), because \(\bar\chi_{17}(G_K)\)<wbr>\({}\cong\Gal(\Q(\zeta_{17})/K\cap\Q(\zeta_{17}))\) and
+      \(K\cap\Q(\zeta_{17})\) is \(\Q\) or \(\Q(\sqrt{17})\).</p>
+    <ol>
+      <li>
+        <p>The lattice \(T_{17}(E_0)\otimes\psi_1\oplus T_{17}(E_0)\otimes\psi_2\) has reduction
+          \(E_0[17]\otimes\bar\psi_1\oplus E_0[17]\otimes\bar\psi_2\). A rational point of order \(17\)
+          gives a trivial constituent of \(A[17]\), so by (F2) over \(G_K\), \(E_0[17]^{\mathrm{ss}}\)
+          contains \(\alpha=\bar\psi_1^{-1}\) or \(\alpha=\bar\psi_2^{-1}\), a character of order \(4\)
+          (reduction is injective on \(\mu_4(\Z_{17})\)). Hence \(E_0[17]\) is reducible over \(K\); let
+          \(C\subset E_0[17]\) be a \(G_K\)-stable line, with character \(\beta\). By the Weil pairing,
+          \(E_0[17]^{\mathrm{ss}}=\beta\oplus\bar\chi\beta^{-1}\), and
+          \(\alpha\in\{\beta,\bar\chi\beta^{-1}\}\).</p>
+      </li>
+      <li>
+        <p>As \(G_K\)-modules, \(E_0^\tau[17]\cong E_0[17]^\tau\) (<a href="#facts">Section 1</a>). On the other
+          hand the isogeny \(\varphi\circ\nu:E_0\to E_0^\tau\) has degree \(2\) and satisfies
+          \(g(\varphi\circ\nu)=\eta(g)\,\varphi\circ\nu\) for \(g\in G_K\), so it induces
+          \(E_0^\tau[17]\cong E_0[17]\otimes\eta\). Comparing semisimplifications, and using
+          \(\bar\chi^\tau=\bar\chi\), we get \(\beta^\tau\in\{\beta\eta,\ \bar\chi\beta^{-1}\eta\}\).</p>
+      </li>
+      <li>
+        <p>The second option is impossible: it gives \(\beta\beta^\tau=\bar\chi\eta\). If
+          \(\beta=\alpha\), the left side has order dividing \(4\); if \(\beta=\bar\chi\alpha^{-1}\), it
+          gives \(\bar\chi=\alpha\alpha^\tau\eta\). Either way \(\bar\chi^4=1\), whereas \(\bar\chi\) has
+          order \(16\) or \(8\).</p>
+      </li>
+      <li>
+        <p>Hence \(\beta^\tau=\beta\eta\). Also \(\beta\neq\bar\chi\beta^{-1}\), since
+          \(\bar\chi=\beta^2\) would give \(\beta=\alpha\) and again \(\bar\chi^4=1\). So the two
+          constituents of \(E_0^\tau[17]\) are distinct, and \(E_0^\tau[17]\) has at most one
+          \(G_K\)-stable line with character \(\beta^\tau\). Both \(\tau(C)\) and \(\varphi(\nu(C))\) are
+          such lines: \(G_K\) acts on the first by \(\beta^\tau\) and on the second by
+          \(\beta\eta=\beta^\tau\). Therefore</p>
+        <div class="equation">\[
+          \varphi(\nu(C))=\tau(C).
+        \]</div>
+      </li>
+    </ol>
+    <p><strong>Step 4: a point of \(X_0(34)\).</strong> We use the description of \(X_0(34)\) and of its
+      Atkin–Lehner involution \(w_2\) recalled in <a href="#x034">Section 7</a>, (M2) and (M3). The subgroup
+      \(C+\ker\nu\subset E_0\) is cyclic of order \(34\) and \(G_K\)-stable, so by (M2)</p>
+    <div class="equation">\[
+      x=(E_0,\ C+\ker\nu)
+    \]</div>
+    <p>is a non-cuspidal point of \(X_0(34)(K)\). By (M3),</p>
+    <div class="equation">\[
+      w_2(x)=\bigl(E_0/\ker\nu,\ \nu(C)+\nu(E_0[2])\bigr)=\bigl(Y_1,\ \nu(C)+\ker\hat\nu\bigr).
+    \]</div>
+    <p>Applying the isomorphism \(\varphi:Y_1\to E_0^\tau\) and using Step 3 and Step 2,</p>
+    <div class="equation">\[
+      w_2(x)=\bigl(E_0^\tau,\ \tau(C)+\tau(\ker\nu)\bigr)=x^\tau=x^\sigma,
+    \]</div>
+    <p>where \(\sigma=\tau|_K\) is the nontrivial automorphism of \(K\). By
+      <a href="#prop-x034">Proposition 9</a> below, \(K=\Q(\sqrt{-15})\). This contradicts the fact that
+      \(K\) is real. Hence \(A(\Q)[17]=0\).</p>
+  </section>
+
+  <section id="x034">
+    <h3>7. The curve \(X_0(34)\)</h3>
+    <p><strong>Standard facts.</strong> Let \(j\) be the modular \(j\)-function on the upper half-plane
+      \(\mathfrak H\), with \(q\)-expansion \(q^{-1}+744+196884q+\cdots\) in \(q=e^{2\pi iz}\), and put
+      \(j_d(z)=j(dz)\) for an integer \(d\ge1\). We use the following standard facts about the modular
+      curve \(X_0(N)\); see for example <a href="#ds">[DS, Section 1.5 and Sections 7.5–7.7]</a> and
+      <a href="#di">[DI, Part II]</a>.</p>
+    <ul>
+      <li>
+        <p><strong>(M1)</strong> The field of modular functions for \(\Gamma_0(N)\) is \(\mathbb C(j,j_N)\).
+          Its degree over \(\mathbb C(j)\) is the index of \(\Gamma_0(N)\) in \(\mathrm{SL}_2(\Z)\), which
+          is \(54\) for \(N=34\). The curve \(X_0(N)\) is the smooth projective curve over \(\Q\) with
+          function field \(\Q(j,j_N)\); its complex points are \(\Gamma_0(N)\backslash\mathfrak H^*\), and
+          its cusps are the poles of \(j\). For a prime \(N\) there are two cusps, \(\infty\) and \(0\);
+          they are exchanged by the Fricke involution \(z\mapsto-1/(Nz)\), which exchanges \(j\) and
+          \(j_N\).</p>
+      </li>
+      <li>
+        <p><strong>(M2)</strong> The non-cuspidal points of \(X_0(N)(\bar\Q)\) correspond to the
+          \(\bar\Q\)-isomorphism classes of pairs \((E,C)\), where \(E\) is an elliptic curve over
+          \(\bar\Q\) and \(C\subset E\) is a cyclic subgroup of order \(N\). The correspondence is
+          compatible with the action of \(G_{\Q}\), where \((E,C)^g=(E^g,g(C))\); in particular a pair
+          defined over a number field \(K\) gives a point of \(X_0(N)(K)\). (For pairs without CM, the only
+          ones used below, this is proved after the list.) At the point \((E,C)\) the
+          function \(j\) takes the value \(j(E)\) and, for \(d\mid N\), the function \(j_d\) takes the value
+          \(j(E/C[d])\). Over \(\mathbb C\), the orbit of \(z\in\mathfrak H\) corresponds to the pair
+          \((\mathbb C/(\Z+\Z z),\langle1/N\rangle)\).</p>
+      </li>
+      <li>
+        <p><strong>(M3)</strong> The matrix \(W_2=\begin{pmatrix}2&amp;1\\34&amp;18\end{pmatrix}\), of determinant
+          \(2\), normalizes \(\Gamma_0(34)\), and \(z\mapsto W_2z\) induces the Atkin–Lehner involution
+          \(w_2\) of \(X_0(34)\). It is an automorphism of order \(2\) defined over \(\Q\), and on
+          non-cuspidal points it is given by</p>
+        <div class="equation">\[
+          w_2(E,C)=\bigl(E/C[2],\ (C+E[2])/C[2]\bigr);
+        \]</div>
+        <p>in particular \(j\circ w_2=j_2\).</p>
+      </li>
+    </ul>
+    <p><em>The compatibility in (M2) for pairs without CM.</em> (a) If \(E\) has no CM, then \((E,C)\) is
+      determined up to isomorphism by \(j(E)\) and \(j(E/C)\). Indeed, let \(C,C'\subset E\) be cyclic
+      of order \(N\) with \(E/C\cong E/C'\), let \(\pi,\pi'\) be the quotient maps and
+      \(\theta:E/C\to E/C'\) an isomorphism. Then \(\hat\pi'\circ\theta\circ\pi\in\End(E)=\Z\) has
+      degree \(N^2\), so it equals \(\pm N=\pm\hat\pi'\circ\pi'\). Hence
+      \(\hat\pi'\circ(\theta\circ\pi\mp\pi')=0\); as \(\hat\pi'\) has finite kernel and \(E\) is
+      connected, \(\theta\circ\pi=\pm\pi'\), and \(C=\ker\pi=\ker\pi'=C'\). (b) Since \(j\) and \(j_N\)
+      lie in \(\Q(X_0(N))\), we have \(h(g(P))=g(h(P))\) for \(h\in\{j,j_N\}\), \(g\in G_{\Q}\) and
+      \(P\in X_0(N)(\bar\Q)\) not a cusp. If \(P\) corresponds to \((E,C)\) with \(E\) without CM, then
+      \(g(P)\) and the point corresponding to \((E^g,g(C))\) both have \(j\)-value \(g(j(E))=j(E^g)\)
+      and \(j_N\)-value \(g(j(E/C))=j(E^g/g(C))\); since \(E^g\) has no CM, they coincide by (a). In
+      particular a pair without CM defined over \(K\) gives a point fixed by \(G_K\), that is, a point
+      of \(X_0(N)(K)\).</p>
+    <p>The two descriptions of \(w_2\) in (M3) agree, as the following computation shows. (That \(w_2\)
+      is defined over \(\Q\) is not used below; it also follows from
+      <a href="#lemma-model">Lemma 8</a>.) Put
+      \(z'=W_2z\)<wbr>\({}=(2z+1)/(34z+18)\). Since \((34z+18)-17(2z+1)=1\), we have
+      \(\Z(34z+18)+\Z(2z+1)\)<wbr>\({}=\Z+\Z\cdot2z\), so multiplication by \(34z+18\) is an isomorphism
+      \(\mathbb C/(\Z+\Z z')\)<wbr>\({}\to\mathbb C/(\Z+\Z\cdot2z)\). It maps \(1/34\) to \(z+9/17\), which
+      generates the subgroup \(\langle z\rangle+\langle1/17\rangle\), because
+      \(17(z+9/17)\equiv z\) and \(2(z+9/17)\equiv1/17\) modulo \(\Z+\Z\cdot2z\). On the other hand,
+      for \(E=\mathbb C/(\Z+\Z z)\) and \(C=\langle1/34\rangle\), multiplication by \(2\) is an
+      isomorphism \(E/C[2]=\mathbb C/(\tfrac12\Z+\Z z)\)<wbr>\({}\to\mathbb C/(\Z+\Z\cdot2z)\); it maps
+      \((C+E[2])/C[2]\), which is generated by \(1/34\) and \(z/2\), onto
+      \(\langle1/17\rangle+\langle z\rangle\).</p>
+    <p><strong>The script.</strong> The computations of this proof are carried out by the script
+      <a href="../data/knowledge/sources/geometric_17_checks.m"><code>geometric_<wbr>17_<wbr>checks.m</code></a>
+      (<a href="../data/knowledge/sources/geometric_17_checks.log"><code>geometric_<wbr>17_<wbr>checks.log</code></a>),
+      which was run in Magma V2.30-1 <a href="#magma">[Magma]</a> on 10 November 2026. It loads no files and uses only
+      Magma's built-in databases, it asserts every value quoted in this proof, and it ends with
+      <code>ALL_CHECKS_PASSED</code>. The SHA-256 checksums of the script and of the log are
+      <code>15b9fcd1144ce0f7<wbr>e2d6677831f1aebd<wbr>b62b33c416cfb330<wbr>bcda60c786d21de0</code>
+      and
+      <code>a4c7c5a9d8873ebd<wbr>795c5a68d33bb93b<wbr>2f56700d8e1460f7<wbr>d0c472d96a5d8bb2</code>. Its parts (A) and (B) are
+      the checks quoted in Sections <a href="#good-reduction">4</a> and <a href="#lattices">5</a>. Part (C) concerns the
+      plane quartic</p>
+    <div class="equation">\[
+      \mathcal X:\quad x^4-y^4+x^3z+3xy^2z-2x^2z^2+xz^3+z^4=0,
+    \]</div>
+    <p>which is the model of \(X_0(34)\) in Magma's database of small modular curves, together with the
+      two maps</p>
+    <div class="equation">\[
+      \omega_2:(x:y:z)\mapsto(z:-y:x),\qquad\omega_{17}:(x:y:z)\mapsto(x:-y:z)
+    \]</div>
+    <p>and the rational function \(j_{\mathcal X}\) on \(\mathcal X\) that Magma provides as the
+      \(j\)-function of this model. (In the script these are <code>X</code>, <code>w2</code>, <code>w17</code> and
+      <code>j</code>.) We do not rely on the correctness of this database: the script verifies the
+      following facts, and <a href="#lemma-model">Lemma 8</a> deduces from them that
+      \((\mathcal X,j_{\mathcal X},\omega_2)\) is a model of \((X_0(34),j,w_2)\).</p>
+    <ul>
+      <li>
+        <p><strong>(C0)</strong> For \(N\in\{2,17\}\), let \(\Phi_N(u,v)\in\Z[u,v]\) be the polynomial
+          returned by Magma's <code>ClassicalModularPolynomial</code>. It has degree \(N+1\) in each variable
+          and is monic in \(v\). The script computes the \(q\)-expansion of \(j=E_4^3/\Delta\) from the
+          definitions of \(E_4\) and \(\Delta\), and finds \(\Phi_2(j,j_2)=O(q^{72})\) and
+          \(\Phi_{17}(j,j_{17})=O(q^{402})\).</p>
+      </li>
+      <li>
+        <p><strong>(C1)</strong> \(\mathcal X\) is a nonsingular plane quartic; so it is a smooth projective
+          geometrically irreducible curve of genus \(3\).</p>
+      </li>
+      <li>
+        <p><strong>(C2a)</strong> \(\omega_2\) and \(\omega_{17}\) are involutions of \(\mathcal X\), the
+          function \(j_{\mathcal X}\) has degree \(54\), and
+          \(\Phi_2(j_{\mathcal X},j_{\mathcal X}\circ\omega_2)=0\); the last identity is an exact
+          computation in the function field of \(\mathcal X\). The degree is computed twice: by Magma's
+          function field arithmetic, and as \(4\cdot53-158\): here \(j_{\mathcal X}=j_{\rm num}/j_{\rm den}\)
+          with forms \(j_{\rm num},j_{\rm den}\) of degree \(53\), and \(158\) is the length of the base scheme
+          \(\mathcal X\cap\{j_{\rm num}=j_{\rm den}=0\}\). Thus \(j_{\mathcal X}\) has \(54\) poles counted with multiplicity.</p>
+      </li>
+      <li>
+        <p><strong>(C2c)</strong> For each integer \(2\le x_0\le502\), the polynomial \(f(x_0,Y,1)\), where
+          \(f\) is the equation of \(\mathcal X\), is a squarefree quartic. At each of the resulting
+          \(4\cdot501=2004\) geometric points \((x_0:y_0:1)\) of \(\mathcal X\), the functions
+          \(j_{\mathcal X}\) and \(j_{\mathcal X}\circ\omega_{17}\) are regular, and
+          \(\Phi_{17}(j_{\mathcal X},j_{\mathcal X}\circ\omega_{17})\) vanishes. (The script works in the
+          number fields generated by the roots \(y_0\).)</p>
+      </li>
+      <li>
+        <p><strong>(C3)</strong> The quotient of \(\mathcal X\) by \(\omega_2\) is a nonsingular curve
+          \(\mathcal Y\subset\mathbb P^3\) of genus \(1\), with a morphism \(\pi:\mathcal X\to\mathcal Y\)
+          of degree \(2\) defined over \(\Q\) such that \(\pi\circ\omega_2=\pi\). The curve \(\mathcal Y\)
+          is isomorphic over \(\Q\) to the elliptic curve</p>
+        <div class="equation">\[
+          \text{17a2}:\quad y^2+xy+y=x^3-x^2-6x-4,
+        \]</div>
+        <p>whose torsion subgroup is \(\Z/2\times\Z/2\) and whose \(2\)-Selmer group has order \(4\). So
+          its rank is \(0\), and \(\mathcal Y\) has exactly four rational points. This is unconditional:
+          the curve has full rational \(2\)-torsion, so no class group of a number field enters the
+          \(2\)-descent.</p>
+      </li>
+      <li>
+        <p><strong>(C4)</strong> The fibres of \(\pi\) over the four rational points of \(\mathcal Y\) are
+          as follows. Two fibres consist of two rational points each; these four points are</p>
+        <div class="equation">\[
+          (0:1:1),\quad(-1:1:0),\quad(0:-1:1),\quad(1:1:0),
+        \]</div>
+        <p>and \(j_{\mathcal X}\) has poles of order \(34,17,2,1\) at them, respectively. Each of the
+          other two fibres is a single closed point of degree \(2\) with residue field
+          \(\Q(\sqrt{-15})\), namely</p>
+        <div class="equation">\[
+          \Bigl(\tfrac{7\pm\sqrt{-15}}8:\tfrac{1\mp\sqrt{-15}}8:1\Bigr)\qquad\text{and}\qquad
+          \Bigl(\tfrac{7\pm\sqrt{-15}}8:\tfrac{-1\pm\sqrt{-15}}8:1\Bigr).
+        \]</div>
+        <p>At these points \(j_{\mathcal X}\) is finite, and its values have the minimal polynomials</p>
+        <div class="equation">\[
+          Y^2-\tfrac{11779}{4}\,Y+\tfrac{25153757}{8}\qquad\text{and}\qquad
+          Y^2+\tfrac{7319387769191}{17179869184}\,Y+\tfrac{81029690385834182553917}{2251799813685248},
+        \]</div>
+        <p>one for each of the two closed points.</p>
+      </li>
+      <li>
+        <p><strong>(C4\('\))</strong> The involution \(\omega_2\) maps each of the four points over
+          \(\Q(\sqrt{-15})\) in (C4) to its conjugate. (This also follows from (C3) and (C4): \(\omega_2\)
+          preserves the fibres of \(\pi\) and has no fixed point in a fibre with two geometric points.)</p>
+      </li>
+    </ul>
+    <p>The script contains two further consistency checks: in (C1) it compares the number of points of
+      \(\mathcal X\) over \(\F_p\) with the traces of the Hecke operators on \(S_2(\Gamma_0(34))\) for
+      the primes \(3\le p&lt;100\), \(p\neq17\), and in (C2b) it tests \(\omega_2\) and \(\omega_{17}\)
+      against \(\Phi_2\) and \(\Phi_{17}\) at five points over number fields. These two checks and
+      (C4\('\)) are not used in the proof of the Theorem.</p>
+    <div class="theorem" id="lemma-model">
+      <p><strong>Lemma 8 (the model).</strong> There is an isomorphism \(\Theta:\mathcal X\to X_0(34)\) of curves over \(\Q\) such that
+        \(j\circ\Theta=j_{\mathcal X}\) and \(\Theta\circ\omega_2=w_2\circ\Theta\). In particular
+        \(\Theta\) maps the poles of \(j_{\mathcal X}\) onto the cusps of \(X_0(34)\).</p>
+    </div>
+    <p><strong>Proof.</strong></p>
+    <ol>
+      <li>
+        <p><em>\(\Phi_N(j,j_N)=0\) for \(N\in\{2,17\}\).</em> The function \(g=\Phi_N(j,j_N)\) is a
+          modular function for \(\Gamma_0(N)\) that is holomorphic on \(\mathfrak H\). In terms of the
+          local parameter \(q\) at the cusp \(\infty\), \(j\) has a simple pole and \(j_N\) a pole of order
+          \(N\); by the Fricke involution in (M1), \(j\) has a pole of order \(N\) and \(j_N\) a simple pole at
+          the cusp \(0\). So a
+          monomial \(j^aj_N^b\) with \(a,b\le N+1\) has a pole of order at most \((N+1)^2\) at each cusp.
+          If \(g\) were nonzero and vanished at \(\infty\), all its poles would be at the cusp \(0\), and
+          \(g\) would have at most \((N+1)^2\) zeros, counted with multiplicity. But by (C0), \(g\)
+          vanishes at \(\infty\) to order at least \(72&gt;9\) for \(N=2\) and at least \(402&gt;324\) for
+          \(N=17\). Hence \(g=0\).</p>
+      </li>
+      <li>
+        <p><em>\(\Q(X_0(34))=\Q(j,j_2,j_{17})\), of degree \(54\) over \(\Q(j)\).</em> For
+          \(\gamma\in\mathrm{SL}_2(\Z)\) we have \(j_d\circ\gamma=j_d\) if and only if
+          \(\gamma\in\Gamma_0(d)\): with \(\delta=\mathrm{diag}(d,1)\) we have
+          \(j_d\circ\gamma=j\circ(\delta\gamma\delta^{-1})\circ\delta\), and this equals \(j\circ\delta\)
+          exactly when \(\delta\gamma\delta^{-1}\in\mathrm{SL}_2(\Z)\). (If \(j\circ M=j\) for some
+          \(M\in\mathrm{SL}_2(\Q)\), then \(\mathfrak H\) is the union of the countably many closed sets
+          \(\{z:\gamma^{-1}Mz=z\}\), \(\gamma\in\mathrm{SL}_2(\Z)\), so some \(\gamma^{-1}M\) fixes a
+          nonempty open set and equals \(\pm1\); hence \(M=\pm\gamma\in\mathrm{SL}_2(\Z)\).) Hence the pairs
+          \((j_2\circ\gamma,j_{17}\circ\gamma)\), for \(\gamma\) in a set of representatives of
+          \(\Gamma_0(34)\backslash\mathrm{SL}_2(\Z)\), are \(54\) distinct pairs, and for all but finitely
+          many \(c\in\Q\) the \(54\) functions \(\vartheta\circ\gamma\), where
+          \(\vartheta=j_2+c\,j_{17}\), are distinct. They are roots of the minimal polynomial of
+          \(\vartheta\) over \(\mathbb C(j)\), whose coefficients are invariant under
+          \(\mathrm{SL}_2(\Z)\). So \([\mathbb C(j,j_2,j_{17}):\mathbb C(j)]\ge54\); as this field is
+          contained in \(\mathbb C(j,j_{34})\), of degree \(54\) by (M1), the two fields are equal.</p>
+        <p>Elements of \(\Q((q))\) that are linearly independent over \(\Q(j)\) remain linearly
+          independent over \(\mathbb C(j)\): in a relation with coefficients in \(\mathbb C[j]\), expand
+          the complex coefficients in a basis of a finite-dimensional \(\Q\)-vector space containing
+          them. So \([M:\Q(j)]=[\mathbb C(j)M:\mathbb C(j)]\) for every field
+          \(\Q(j)\subseteq M\subset\Q((q))\) that is finite over \(\Q(j)\). The functions
+          \(j_2,j_{17},j_{34}\) are algebraic over \(\Q(j)\): the first two by step 1, and \(j_{34}\) is a
+          root of \(\Phi_{17}(j_2,v)\). Therefore the fields \(\Q(j,j_{34})\), \(\Q(j,j_2,j_{17})\) and
+          \(\Q(j,j_2,j_{17},j_{34})\) all have degree \(54\) over \(\Q(j)\), and they coincide.</p>
+      </li>
+      <li>
+        <p><em>The isomorphism \(\Theta\).</em> The \(\Q(j)\)-algebra</p>
+        <div class="equation">\[
+          \mathcal A=\Q(j)[v_2,v_{17}]/\bigl(\Phi_2(j,v_2),\ \Phi_{17}(j,v_{17})\bigr)
+        \]</div>
+        <p>has dimension \(3\cdot18=54\) by (C0), and by step 1 it maps onto \(\Q(j,j_2,j_{17})\) via
+          \(v_d\mapsto j_d\). By step 2 this map is an isomorphism, so \(\mathcal A\) is a field,
+          isomorphic to \(\Q(X_0(34))\). By (C2a) and (C2c), the assignment</p>
+        <div class="equation">\[
+          j\mapsto j_{\mathcal X},\qquad v_2\mapsto j_{\mathcal X}\circ\omega_2,\qquad
+          v_{17}\mapsto j_{\mathcal X}\circ\omega_{17}
+        \]</div>
+        <p>defines a homomorphism from \(\mathcal A\) to the function field \(\Q(\mathcal X)\). For (C2c),
+          note that \(h=\Phi_{17}(j_{\mathcal X},j_{\mathcal X}\circ\omega_{17})\) has a divisor of poles
+          of degree at most \(18\cdot54+18\cdot54=1944\), and that it vanishes at \(2004\) points; so
+          \(h=0\). The homomorphism is injective, and
+          \([\Q(\mathcal X):\Q(j_{\mathcal X})]=54\)<wbr>\({}=[\mathcal A:\Q(j)]\), so it is an isomorphism
+          \(\Q(X_0(34))\to\Q(\mathcal X)\). It corresponds to an isomorphism
+          \(\Theta:\mathcal X\to X_0(34)\) over \(\Q\) with \(j\circ\Theta=j_{\mathcal X}\) and
+          \(j_2\circ\Theta=j_{\mathcal X}\circ\omega_2\).</p>
+      </li>
+      <li>
+        <p><em>\(\Theta\circ\omega_2=w_2\circ\Theta\).</em> Put
+          \(w=\Theta\circ\omega_2\circ\Theta^{-1}\). Then \(j\circ w=j_2=j\circ w_2\) by step 3 and (M3),
+          so the automorphism \(u=w\circ w_2^{-1}\) of \(X_0(34)\) satisfies \(j\circ u=j\). Thus \(u\)
+          permutes the poles of \(j\) and preserves their orders. By (C4), transported by \(\Theta\),
+          these orders are \(34,17,2,1\); their sum is \(54=\deg j\), so these are all the poles. Hence
+          \(u\) fixes the simple pole \(P_\infty\) of \(j\). The function \(1/j\) is a uniformizer at
+          \(P_\infty\) and is fixed by \(u\); so \(u\) acts trivially on the completed local ring at
+          \(P_\infty\), hence on the function field, and \(u=1\). ∎</p>
+      </li>
+    </ol>
+    <div class="theorem" id="prop-x034">
+      <p><strong>Proposition 9.</strong> Let \(K\) be a quadratic field with nontrivial automorphism \(\sigma\), and let
+        \(x\in X_0(34)(K)\) be a non-cuspidal point with \(w_2(x)=x^\sigma\). Then
+        \(K=\Q(\sqrt{-15})\).</p>
+    </div>
+    <p><strong>Proof.</strong> Let \(x'=\Theta^{-1}(x)\in\mathcal X(K)\), with \(\Theta\) as in
+      <a href="#lemma-model">Lemma 8</a>; it is not a pole of \(j_{\mathcal X}\), and
+      \(\omega_2(x')=x'^\sigma\). Then
+      \(\pi(x')^\sigma=\pi(x'^\sigma)\)<wbr>\({}=\pi(\omega_2(x'))=\pi(x')\), so \(\pi(x')\) is one of the four
+      rational points of \(\mathcal Y\) of (C3). By (C4), the fibres of \(\pi\) over two of them
+      consist of poles of \(j_{\mathcal X}\). So \(x'\) lies in one of the other two fibres, each of
+      which is a single closed point with residue field \(\Q(\sqrt{-15})\). Hence
+      \(\Q(\sqrt{-15})\subseteq K\), and \(K=\Q(\sqrt{-15})\). ∎</p>
+    <p>Conversely, by (C4\('\)) the four points over \(\Q(\sqrt{-15})\) do satisfy
+      \(w_2(x)=x^\sigma\). So the fact that \(K\) is real is essential in <a href="#c4">Section 6</a>. As a by-product, the rational
+      points of \(X_0(34)\) are its four cusps.</p>
+    <p><em>A check by hand of (C3) and (C4).</em> Put \(a=x+z\) and \(b=x-z\). Then \(\omega_2\) becomes
+      \((a:b:y)\mapsto(-a:b:y)\), and the equation of \(\mathcal X\) becomes</p>
+    <div class="equation">\[
+      8f=a^4+(8b^2+6y^2)\,a^2-(b^2+2y^2)(b^2+4y^2),
+    \]</div>
+    <p>a quadratic polynomial in \(a^2\) with discriminant \(4W^2\), where
+      \(W^2=17b^4+30b^2y^2+17y^4\). The map \((a:b:y)\)<wbr>\({}\mapsto(b:y:a^2+4b^2+3y^2)\) identifies the quotient
+      \(\mathcal X/\omega_2\) with this genus-\(1\) curve. It has the four rational points
+      \((b:y:W)=(\pm1:1:\pm8)\), and by (C3) no others. Above a rational point,
+      \(a^2=W-4b^2-3y^2\), which is \(1\) for \(W=8\) and \(-15\) for \(W=-8\). The value \(1\) gives the
+      four rational points of (C4), and the value \(-15\) gives the points over \(\Q(\sqrt{-15})\).</p>
+  </section>
+
+  <section id="census">
+    <h3>8. Proof of the Theorem and consequence for the census</h3>
+    <p><em>Proof of the Theorem.</em> Let \(A/\Q\) be a geometrically split abelian surface. By
+      <a href="#cases">Section 2</a> it is of type (N), (CM) or (S). In types (N) and (CM), \(A(\Q)\) has no point
+      of order \(17\) by <a href="#small-degree">Section 3</a> and <a href="#good-reduction">Section 4</a>. In type (S) the
+      group \(\Gamma\) is one of the nine groups of <a href="#cases">Section 2</a>: the groups \(C_1\) and \(C_2\)
+      are treated in <a href="#small-degree">Section 3</a>, the groups \(C_3,C_6,V_4,D_6,D_8,D_{12}\) in
+      <a href="#lattices">Section 5</a>, and \(C_4\) in <a href="#c4">Section 6</a>, using
+      <a href="#prop-x034">Proposition 9</a>. ∎</p>
+    <p><em>Proof of the Corollary.</em> The Jacobian of a curve of genus \(2\) over \(\Q\) is an abelian
+      surface over \(\Q\). ∎</p>
+    <p>The group <a href="../group.html?g=17">[17]</a> is impossible in the
+      class “geometrically split, simple over \(\Q\)”. It was already impossible in the class “split
+      over \(\Q\)” by Mazur's theorem
+      (<a href="qsplit-prime-obstruction.html">prime torsion
+      obstruction</a>). Hence no geometrically split genus-\(2\) Jacobian over \(\Q\) has a rational point
+      of order \(17\), and the combined geometrically split cell of
+      <a href="../group.html?g=17">[17]</a>, whose grade was open
+      (“\(\infty\)?” on the census), becomes impossible (\(\emptyset\)).</p>
+    <p>The Theorem applies to every group containing a point of order \(17\). Among the census groups
+      these are <a href="../group.html?g=17">[17]</a> and
+      <a href="../group.html?g=34">[34]</a>. The latter was already
+      excluded in both geometrically split classes by the
+      <a href="geometric-33-34-obstruction.html">proof for orders
+      33 and 34</a>.</p>
+    <p>The argument places no restriction on the geometric splitting degree, the field of definition of
+      the geometric endomorphisms, or the integral endomorphism ring, and it does not use a principal
+      polarization.</p>
+  </section>
+
+  <section id="remarks">
+    <h3>9. Remarks</h3>
+    <ol>
+      <li>
+        <p><em>Fields of degree \(4\).</em> By Derickx, Kamienny, Stein and Stoll
+          <a href="#dkss">[DKSS, Theorem 1.2]</a>, \(S(4)=\mathrm{Primes}(17)\): there are elliptic curves over quartic
+          fields with a point of order \(17\). This is why the argument of <a href="#small-degree">Section 3</a>
+          cannot be used when \([L:\Q]\ge4\). For \(\Gamma=C_3\), where \([L:\Q]=3\), it could be used,
+          since \(S(3)=\mathrm{Primes}(13)\) by Parent's theorem, as quoted in <a href="#dkss">[DKSS, Section 1]</a>; we
+          treat \(C_3\) together with \(C_6\) in <a href="#lattices">Section 5</a> instead.</p>
+      </li>
+      <li>
+        <p><em>Quadratic points of \(X_0(34)\).</em> Ozman and Siksek <a href="#os">[OS]</a> determined all
+          quadratic points of \(X_0(34)\) (their Main Theorem and Table 8.1). The non-cuspidal ones are
+          defined over \(\Q(\sqrt{-1})\), \(\Q(\sqrt{-2})\) and \(\Q(\sqrt{-15})\). Those over
+          \(\Q(\sqrt{-15})\) are the points \(P_5\), \(P_6\) of their table and the conjugates; they have
+          no CM, the involution \(w_2\) maps each of them to its conjugate, and their \(j\)-invariants
+          \((2041\theta+11779)/8\) and \((-53184785340479\,\theta\)<wbr>\({}-7319387769191)\)<wbr>\({}/34359738368\), with
+          \(\theta^2=-15\), have the minimal polynomials of (C4). Since none of the three fields is real,
+          their theorem gives a second proof of the last step of <a href="#c4">Section 6</a>. The proof above does
+          not depend on it.</p>
+      </li>
+      <li>
+        <p><em>Potentially good reduction.</em> By Clark <a href="#cla">[Cla]</a>, the order of the rational torsion
+          subgroup of an abelian surface over \(\Q\) with potentially good reduction everywhere belongs to
+          \(\{1,\ldots,16,18,19,20,22,24,\)<wbr>\({}25,28,30,36,48,60,72\}\), which contains no multiple of \(17\).
+          <a href="#prop-good">Proposition 3</a> is the part of this statement that is needed here; it only
+          uses the reduction at \(2\).</p>
+      </li>
+      <li>
+        <p><em>Relation to the earlier proofs.</em> The Theorem supersedes the last sentence of the
+          <a href="geometric-33-34-obstruction.html">proof for orders
+          33 and 34</a>, which left rational \(17\)-torsion open. The lemmas of <a href="#lattices">Section 5</a> and the
+          construction of <a href="#c4">Section 6</a> are the analogues for \(p=17\) of those in the
+          <a href="qsimple-13-obstruction.html">proof for order 13</a>;
+          they are given here in full. For \(p=17\) the non-residues \(-3\) and \(-1/3\) dispose of the
+          groups \(C_3\) and \(C_6\) together with the dihedral groups, so that \(C_4\) is the only group
+          which requires a modular curve; and, in contrast to order \(13\), neither a principal
+          polarization nor simplicity over \(\Q\) is needed. The construction of the curve \(E_c\) in
+          <a href="#c4">Section 6</a> is a special case of Elkies's reduction of quadratic \(K\)-curves
+          (Elkies <a href="#elk">[Elk]</a>).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="cla"><p>[Cla] P. L. Clark, <a href="https://arxiv.org/pdf/math/0407264"><i>Bounds for torsion on abelian varieties with integral moduli</i></a>,
+        arXiv:math/0407264v2 (2004), Theorem 5. <a href="https://arxiv.org/pdf/math/0407264">https://arxiv.org/pdf/math/0407264</a>.
+        The same list is Theorem 1.4 of P. L. Clark and X. Xarles, <i>Local bounds for torsion points
+        on abelian varieties</i>, Canad. J. Math. <b>60</b> (2008), 532–555,
+        <a href="https://doi.org/10.4153/CJM-2008-026-x">doi:10.4153/CJM-2008-026-x</a>, for abelian surfaces
+        with everywhere anisotropic reduction, which includes potentially good reduction.</p></li>
+      <li id="dkss"><p>[DKSS] M. Derickx, S. Kamienny, W. Stein and M. Stoll, <a href="https://arxiv.org/abs/1707.00364"><i>Torsion points on elliptic curves over
+        number fields of small degree</i></a>, Algebra Number Theory <b>17</b> (2023), 267–308;
+        <a href="https://arxiv.org/abs/1707.00364">arXiv:1707.00364</a>.</p></li>
+      <li id="di"><p>[DI] F. Diamond and J. Im, <i>Modular forms and modular curves</i>, in: <i>Seminar on Fermat's
+        Last Theorem (Toronto, 1993–1994)</i>, CMS Conf. Proc. <b>17</b>, Amer. Math. Soc., Providence,
+        1995, 39–133.</p></li>
+      <li id="ds"><p>[DS] F. Diamond and J. Shurman, <i>A First Course in Modular Forms</i>, Graduate Texts in Mathematics
+        <b>228</b>, Springer, New York, 2005.</p></li>
+      <li id="elk"><p>[Elk] N. D. Elkies, <i>On elliptic \(K\)-curves</i>, in: <i>Modular curves and abelian varieties</i>,
+        Progr. Math. <b>224</b>, Birkhäuser, Basel, 2004, 81–91.</p></li>
+      <li id="kam"><p>[Kam] S. Kamienny, <a href="https://doi.org/10.1007/BF01232025"><i>Torsion points on elliptic curves and \(q\)-coefficients of modular forms</i></a>,
+        Invent. Math. <b>109</b> (1992), 221–229, Theorem 3.1.
+        <a href="https://doi.org/10.1007/BF01232025">doi:10.1007/BF01232025</a>.</p></li>
+      <li id="magma"><p>[Magma] W. Bosma, J. Cannon and C. Playoust, <a href="https://doi.org/10.1006/jsco.1996.0125"><i>The Magma algebra system I: the user language</i></a>,
+        J. Symbolic Comput. <b>24</b> (1997), 235–265.
+        <a href="https://doi.org/10.1006/jsco.1996.0125">doi:10.1006/jsco.1996.0125</a>.</p></li>
+      <li id="maz"><p>[Maz] B. Mazur, <a href="https://www.numdam.org/item/PMIHES_1977__47__33_0/"><i>Modular curves and the Eisenstein ideal</i></a>, Publ. Math. IHÉS <b>47</b> (1977),
+        33–186, Theorem (8). <a href="https://www.numdam.org/item/PMIHES_1977__47__33_0/">Numdam</a>.</p></li>
+      <li id="os"><p>[OS] E. Ozman and S. Siksek, <a href="https://arxiv.org/abs/1806.08192"><i>Quadratic points on modular curves</i></a>, Math. Comp. <b>88</b>
+        (2019), 2461–2484; <a href="https://arxiv.org/abs/1806.08192">arXiv:1806.08192</a>.</p></li>
+      <li id="st"><p>[ST] J.-P. Serre and J. Tate, <a href="https://doi.org/10.2307/1970722"><i>Good reduction of abelian varieties</i></a>, Ann. of Math. (2)
+        <b>88</b> (1968), 492–517: Theorem 1 (p. 493; the criterion of Néron, Ogg and Shafarevich)
+        and §2 (p. 496).
+        <a href="https://doi.org/10.2307/1970722">doi:10.2307/1970722</a>.</p></li>
+    </ol>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/geometric-17-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

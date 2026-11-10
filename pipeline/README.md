@@ -54,13 +54,13 @@ in the group's `exclusions` field and refuses to build if an exclusion contradic
 example in that class. These records are separate from the combined geometrically split
 infinitude status. If both split classes are excluded, `infinite_record("split", key)` returns
 `grade: "impossible"` with a proof URL, and the build also rejects a geometrically split example
-whose class over ℚ is undecided. This currently applies to [13], [22], [23], [26], [29], [31],
-[33], [34], [39], [2,22], and [2,26]. For [13] the `gsplit` proof needs simplicity over ℚ
-(`QSIMPLE_ONLY`), so the combined note also states the `qsplit` reason.
+whose class over ℚ is undecided. This currently applies to [13], [17], [22], [23], [26], [29], [31],
+[33], [34], [39], [2,22], [2,26], and [2,2,14]. For [13] and [2,2,14] the `gsplit` proofs need
+simplicity over ℚ (`QSIMPLE_ONLY`), so their combined notes also state the `qsplit` reason.
 The exclusions for [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] apply only to
 `gsplit`; all have `qsplit` examples, so their combined infinitude records retain their existing
-grades. The `qsplit` exclusions of [2,2,14] and [2,2,2,10] leave their combined records unchanged,
-because the `gsplit` class is open for both.
+grades. The `qsplit` exclusion of [2,2,2,10] leaves its combined record unchanged, because its
+`gsplit` class is open.
 
 Facts about infinitely many realisations live in `knowledge.py` (`_SIMPLE_EXACT`, `_SIMPLE_FAMILY`,
 `_SIMPLE_OPEN_NOTES`, `_SPLIT_FAMILY`, `_SPLIT_OPEN_NOTES`) with their sources in `SOURCES`; copies of

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10 08:06 UTC",
+  "generated": "2026-11-10 22:56 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -97,6 +97,22 @@
       "cite": "No rational points of order 33 or 34 on geometrically split abelian surfaces, census proof of 20 October 2026. Combining coprime torsion within an elliptic isogeny class, quartic elliptic torsion, and the Galois action on geometric endomorphisms.",
       "url": "proofs/geometric-33-34-obstruction.html",
       "used_for": "impossibility of [33] and [34] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree"
+    },
+    "Geometric17Obstruction": {
+      "short": "geometric [17] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "No rational 17-torsion on geometrically split abelian surfaces, census proof of 10 November 2026. Elliptic torsion over fields of degree at most 2, a point count at 2 for CM squares, residual representations at 17, and, for a cyclic quartic endomorphism field, a point of X₀(34) over a real quadratic field that w₂ maps to its conjugate; Magma checks in geometric_17_checks.log.",
+      "url": "proofs/geometric-17-obstruction.html",
+      "used_for": "impossibility of [17] (and of every group with a point of order 17) for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree and of the polarization"
+    },
+    "QSimple2214Obstruction": {
+      "short": "ℚ-simple geometric [2,2,14] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 7-torsion and the 2-rank of geometrically split abelian surfaces, census proof of 10 November 2026. On a geometrically split abelian surface over Q that is simple over Q, a rational point of order 7 forces rational 2-torsion of rank at most 2: Kenku–Momose over the quadratic field of definition of the elliptic curves, a point count at 3 for CM squares, and a determinant argument modulo 2 for cyclic cubic and sextic endomorphism fields.",
+      "url": "proofs/qsimple-2214-obstruction.html",
+      "used_for": "impossibility of [2,2,14] in the geometrically split, simple-over-ℚ class; with QSplitTwoRankObstruction, on the whole geometrically split side"
     },
     "QSimple35Obstruction": {
       "short": "ℚ-simple geometric [35] and [70] exclusion proof (2026)",
@@ -202,6 +218,13 @@
       "cite": "J. S. Milne, Abelian varieties (v2.00), course notes, 2008.",
       "url": "https://www.jmilne.org/math/CourseNotes/AV.pdf",
       "used_for": "Theorem I.10.15 (Hom(A,B) ⊗ ℤ_ℓ → Hom(T_ℓA, T_ℓB) is injective) and Section I.13 (Weil pairings); used in the geometric exclusions"
+    },
+    "Kamienny1992": {
+      "short": "Kamienny 1992",
+      "year": 1992,
+      "cite": "S. Kamienny, Torsion points on elliptic curves and q-coefficients of modular forms, Invent. Math. 109 (1992), 221–229.",
+      "url": "https://doi.org/10.1007/BF01232025",
+      "used_for": "Theorem 3.1: the torsion of an elliptic curve over a quadratic field has no prime divisor greater than 13; used in the geometric [17] exclusion"
     },
     "KenkuMomose1988": {
       "short": "Kenku–Momose 1988",

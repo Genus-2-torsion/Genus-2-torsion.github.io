@@ -68,14 +68,17 @@ Mazur's theorem excludes the 14 census groups whose order has a prime divisor gr
 from the **split over ℚ** class; the proof is in `proofs/qsplit-prime-obstruction.html`.
 The same argument excludes [2,2,14] and [2,2,2,10] from that class
 (`proofs/qsplit-two-rank-obstruction.html`).
-The groups [22], [23], [26], [29], [31], [33], [34], [39], [2,22], and [2,26] are excluded
+The groups [17], [22], [23], [26], [29], [31], [33], [34], [39], [2,22], and [2,26] are excluded
 for all **geometrically split** abelian surfaces over ℚ. Complete proofs and downloadable LaTeX
-are available from `proofs/geometric-22-obstruction.html`,
+are available from `proofs/geometric-17-obstruction.html`, `proofs/geometric-22-obstruction.html`,
 `proofs/geometric-23-29-obstruction.html`, `proofs/geometric-26-39-obstruction.html`,
 `proofs/geometric-31-obstruction.html`, and `proofs/geometric-33-34-obstruction.html`.
 A geometrically split Jacobian with a rational point of order 13 is not simple over ℚ
 (`proofs/qsimple-13-obstruction.html`), so with Mazur's theorem [13] is excluded on the whole
-geometrically split side as well. These eleven groups have combined split infinitude records
+geometrically split side as well. Likewise, a rational point of order 7 on a geometrically split
+abelian surface that is simple over ℚ forces rational 2-rank at most 2
+(`proofs/qsimple-2214-obstruction.html`), so with the 2-rank obstruction over ℚ, [2,2,14] is
+excluded on the whole geometrically split side. These thirteen groups have combined split infinitude records
 `impossible`, and their badges link directly to the corresponding proof.
 The groups [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] are excluded only in
 the **geometrically split, simple over ℚ** class, by `proofs/qsimple-30-obstruction.html`,

@@ -1,0 +1,383 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+\newenvironment{statement}[1]{\par\medskip\noindent\phantomsection\textbf{#1}\ }{\par\medskip}
+\setlength{\emergencystretch}{3em}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\tr}{tr}
+\title{Rational \(7\)-torsion and the \(2\)-rank of geometrically split abelian surfaces}
+\author{}
+\date{10 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem*}
+Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and geometrically split. If
+\(A(\Q)\) has a point of order \(7\), then \(A(\Q)[2]\cong(\Z/2)^r\) with \(r\le2\).
+\end{theorem*}
+
+\begin{corollary*}
+No genus-\(2\) Jacobian over \(\Q\) that is geometrically split and simple over \(\Q\) has a
+rational torsion subgroup containing \((\Z/2)^3\times\Z/7\). In particular,
+\href{https://genus-2-torsion.github.io/group.html?g=2.2.14}{\([2,2,14]\)} does not occur as the
+rational torsion subgroup of such a Jacobian. Together with the
+\href{https://genus-2-torsion.github.io/proofs/qsplit-two-rank-obstruction.html}{\(2\)-rank
+obstruction for surfaces split over \(\Q\)}, no geometrically split genus-\(2\) Jacobian over
+\(\Q\) has rational torsion subgroup \([2,2,14]\).
+\end{corollary*}
+
+Here ``geometrically split'' means that \(A_{\bar\Q}\) is isogenous to a product of two elliptic
+curves. We impose no restriction on the degree of this isogeny, on the field of definition of the
+geometric endomorphisms or on the integral endomorphism ring, and we do not assume that \(A\) is
+principally polarized.
+
+The proof distinguishes the cases of the
+\href{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html}{proof for order 63},
+whose results we use (Section~\ref{inputs}). If the elliptic curves in \(A_{\bar\Q}\) are defined
+over a quadratic field, the \(2\)-primary torsion of \(A(\Q)\) is controlled by that of two
+isogenous elliptic curves over this field, one of which has a point of order \(7\); Kenku and
+Momose's theorem then bounds it (Section~\ref{quadratic}). The CM case follows from a point count
+at \(3\) (Section~\ref{cm}). By the proof for order 63, the only remaining endomorphism fields are
+cyclic of degree \(3\) or \(6\). There the Galois action on the Tate module has a determinant over
+\(\Q(\sqrt{-3})\) whose reduction modulo \(2\) has order \(3\), and this is incompatible with
+\(2\)-rank \(3\) (Section~\ref{cyclic}).
+
+\section{Conventions and inputs}\label{inputs}
+
+All number fields are subfields of a fixed algebraic closure \(\bar\Q\). For a number field \(k\)
+we write \(G_k=\Gal(\bar\Q/k)\). For a prime \(\ell\), \(\chi_\ell\) is the \(\ell\)-adic
+cyclotomic character, \(T_\ell\) is the Tate module and \(V_\ell=T_\ell\otimes\Q_\ell\). For an
+abelian variety \(X\), \(\End^0=\End\otimes\Q\) and \(\Hom^0=\Hom\otimes\Q\). For a variety \(Y\)
+over \(\bar\Q\) and \(g\in G_{\Q}\), \(Y^g\) is the conjugate variety, \(g:Y(\bar\Q)\to
+Y^g(\bar\Q)\) the induced bijection, and a morphism \(f:Y\to Z\) has the conjugate
+\(g(f):Y^g\to Z^g\), characterized by \(g(f)(g(P))=g(f(P))\). For \(K\) a quadratic field we write
+\(\sigma\) for its nontrivial automorphism.
+
+We use the following.
+\begin{itemize}
+\item \textbf{(I1) Kenku--Momose} \cite[Theorem~(0.1)]{KM}: let \(N\) be a product of powers of
+\(2,3,5,7,11,13\), and let \(m\mid N\). If \(X_1(m,N)\) has positive genus and \((m,N)\) is not one
+of \((1,11)\), \((1,13)\), \((1,14)\), \((1,15)\), \((1,16)\), \((1,18)\), \((2,10)\), \((2,12)\),
+then \(Y_1(m,N)(k)=\emptyset\) for every quadratic field \(k\). The curves \(X_1(28)=X_1(1,28)\) and
+\(X_1(2,14)\) have genus \(10\) and \(4\). Hence \emph{for every quadratic field \(k\) and every elliptic curve
+\(E\) over \(k\), the group \(E(k)\) has no subgroup isomorphic to \(\Z/28\) or to
+\(\Z/2\times\Z/14\).}
+
+\item \textbf{(I2) Serre--Tate}, as stated in Section~1 of the
+\href{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html#inputs}{proof for
+order 63}: let \(K\) be a finite extension of \(\Q_p\) with residue field \(k\), and \(A\) an
+abelian variety over \(K\). (a) Good reduction is detected by the inertia action on
+\(T_\ell(A)\), \(\ell\neq p\), and is preserved by \(K\)-isogenies \cite[\S1, Theorem~1 and
+Corollary~2]{ST}. (b) If \(A\) has good reduction \(\widetilde A\) and \(m\) is prime to \(p\),
+then \(A(K)[m]\) injects into \(\widetilde A(k)\) \cite[Lemma~2]{ST}. (c) If \(A\) has
+potentially good reduction, then it has good reduction over a finite extension of \(K\) with
+residue field \(k\) \cite[\S2]{ST}. For an abelian surface \(B\) over \(\F_q\),
+\(\#B(\F_q)\le(1+\sqrt q)^4\) by Weil's theorem.
+
+\item \textbf{(I3) The case distinction.} Let \(A/\Q\) be a geometrically split abelian surface.
+Exactly one of the following holds: \textbf{(N)} \(A_{\bar\Q}\) is isogenous to \(E_1\times E_2\)
+with \(E_1\), \(E_2\) not isogenous; \textbf{(CM)} \(A_{\bar\Q}\) is isogenous to \(E^2\) with
+\(E\) a CM curve; \textbf{(S)} \(A_{\bar\Q}\) is isogenous to \(E^2\) with \(E\) without CM. In case
+(S), \(D=\End^0(A_{\bar\Q})\cong M_2(\Q)\); \(L\) is the smallest field over which all geometric
+endomorphisms of \(A\) are defined, a finite Galois extension of \(\Q\); and
+\(\Gamma=\Gal(L/\Q)\) acts faithfully on \(D\), the element \(g\) acting by
+\(\varphi\mapsto g(\varphi)=R_g\varphi R_g^{-1}\) with \(R_g\in D^\times\) unique up to
+\(\Q^\times\). Thus \(\Gamma\) embeds in \(\PGL_2(\Q)\), and \(\End^0_{\Q}(A)=D^\Gamma\). An element
+\(r\in\Gamma\) of order \(n\in\{3,4,6\}\) has a unique representative \(R\) with \(\tr R=1\), and
+\(R^2-R+1/c=0\) with \(c=1,2,3\) respectively. (Sections~2 and~5 of the
+\href{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html}{proof for order 63}.)
+
+\item \textbf{(I4)} \cite[Lemma~2]{P63} Let \(X\) be an abelian surface over a number field
+\(k\), \(E\subset X\) an elliptic curve defined over \(k\), and \(Q\in X(k)\) of prime order
+\(q\). Then either \(Q\in E(k)\), or the image of \(Q\) in \((X/E)(k)\) has order \(q\).
+
+\item \textbf{(I5)} \cite[Lemma~3]{P63} In case (S), every elliptic curve in \(A_{\bar\Q}\) is
+defined over \(L\), and any two of them are \(L\)-isogenous.
+
+\item \textbf{(I6)} \cite[Proposition~8]{P63} Let \(A\) be of type (S) and simple over \(\Q\),
+and suppose that \(A(\Q)\) has a point of order \(7\). Then \(\Gamma\) is cyclic of order \(2\),
+\(3\) or \(6\). The standing hypothesis of that proof is a point of order \(63\), but the proof of
+Proposition~8 (its Section~7, together with \(\Gamma\neq C_1\) from Section~5) uses only simplicity
+over \(\Q\) and the point of order \(7\), through Lemmas~6 and~7 there with \(p=7\) and their common input, Lemma~5, which uses a
+polarization over \(\Q\) of arbitrary degree.
+
+\item \textbf{(I7) Lattices and pairings.} For a continuous representation of a profinite group
+on a finite-dimensional \(\Q_\ell\)-vector space, the composition factors of the reduction of a
+stable lattice do not depend on the lattice (Brauer--Nesbitt); the same holds for two isomorphic
+representations, after transporting a lattice through the isomorphism. For an isogeny \(u:E\to E'\) of
+elliptic curves and the Weil pairings \(e\) on \(V_\ell\), \(e(ux,uy)=\deg(u)\,e(x,y)\); this extends to
+quasi-isogenies, with \(\deg(u/m)=\deg(u)/m^2\). Moreover
+\(e(gx,gy)=\chi_\ell(g)\,e(x,y)\) for \(g\in G_{\Q}\), where \(g:V_\ell(E)\to V_\ell(E^g)\).
+\end{itemize}
+
+\section{Elliptic curves over a quadratic field}\label{quadratic}
+
+\begin{statement}{Lemma 1.}\label{lemma-km}
+Let \(K\) be a quadratic field and let \(E'\) and \(E''\) be \(K\)-isogenous elliptic curves over
+\(K\). If \(E'(K)\) has a point of order \(7\), then \(E''(K)[2^\infty]\) has order at most \(2\).
+\end{statement}
+
+\emph{Proof.} The \(G_K\)-module \(E'[7]\) has the trivial character as a composition factor, and
+since its determinant is the cyclotomic character \(\bar\chi_7\), its composition factors are
+\(\mathbf 1\) and \(\bar\chi_7|_{G_K}\). By (I7), applied to the isomorphism \(V_7(E')\cong V_7(E'')\) induced by the \(K\)-isogeny, so
+are those of \(E''[7]\). Let
+\(C\subset E''[7]\) be a \(G_K\)-stable line. If \(G_K\) acts trivially on \(C\), put
+\(E'''=E''\). Otherwise \(G_K\) acts on \(C\) by \(\bar\chi_7\), hence trivially on
+\(E''[7]/C\); put \(E'''=E''/C\); it contains the subgroup \(E''[7]/C\) of order \(7\), whose points
+are \(K\)-rational because \(G_K\) acts trivially on it. In both cases \(E'''(K)\) has a point of order \(7\), and the \(K\)-isogeny
+\(E''\to E'''\) has degree \(1\) or \(7\), so it maps \(E''[2^\infty]\) isomorphically and
+\(G_K\)-equivariantly onto \(E'''[2^\infty]\). If \(E''(K)[2^\infty]\) had order at least \(4\), it
+would contain \(\Z/4\) or \(\Z/2\times\Z/2\), and \(E'''(K)\) would contain a subgroup isomorphic to
+\(\Z/28\) or to \(\Z/2\times\Z/14\), contradicting (I1). \qed
+
+\begin{statement}{Proposition 2.}\label{prop-quadratic}
+Let \(A\) be an abelian surface over \(\Q\), \(K\) a quadratic field and \(E\subset A_K\) an
+elliptic curve defined over \(K\) with \(E^\sigma\neq E\). If \(A(\Q)\) has a point of order
+\(7\), then \(A(\Q)[2^\infty]\) has order at most \(4\).
+\end{statement}
+
+\emph{Proof.}
+\begin{enumerate}
+\item \emph{A sequence.} Choose \(\tilde\sigma\in G_{\Q}\) restricting to \(\sigma\) on \(K\). The
+curve \(E^\sigma=\tilde\sigma(E)\subset A_K\) is defined over \(K\) and different from \(E\), so
+\(E\cap E^\sigma\) is finite. Let \(\pi:A_K\to Y:=A_K/E^\sigma\) be the quotient map; it is
+defined over \(K\), and its restriction to \(E\) has the finite kernel \(E\cap E^\sigma\), so it is
+a \(K\)-isogeny \(E\to Y\). If \(P\in A(\Q)\) and \(\pi(P)=0\), then \(P\in E^\sigma\), hence
+\(P=\tilde\sigma(P)\in\tilde\sigma(E^\sigma)=E\), and \(P\in E(K)\). So the sequence
+\[0\to A(\Q)[2^\infty]\cap E(K)\to A(\Q)[2^\infty]\xrightarrow{\ \pi\ }Y(K)[2^\infty]\]
+is exact, and \(\#A(\Q)[2^\infty]\le\#E(K)[2^\infty]\cdot\#Y(K)[2^\infty]\).
+
+\item \emph{A point of order \(7\).} Let \(P_7\in A(\Q)\) have order \(7\). By (I4) over \(K\),
+applied to \(E^\sigma\subset A_K\), either \(P_7\in E^\sigma\), and then \(P_7\in E(K)\) by step 1,
+or \(\pi(P_7)\in Y(K)\) has order \(7\). So \(E(K)\) or \(Y(K)\) has a point of order \(7\).
+
+\item Since \(E\) and \(Y\) are \(K\)-isogenous, \hyperref[lemma-km]{Lemma~1} gives
+\(\#E(K)[2^\infty]\le2\) and \(\#Y(K)[2^\infty]\le2\), and step 1 gives
+\(\#A(\Q)[2^\infty]\le4\). \qed
+\end{enumerate}
+
+\medskip
+\textbf{Type (N).} Let \(A\) be of type (N) and simple over \(\Q\). Then \(A_{\bar\Q}\) contains
+exactly two elliptic curves; \(G_{\Q}\) exchanges them, since otherwise they would be defined over
+\(\Q\); so they are defined over a quadratic field \(K\), and \(\sigma\) exchanges them
+(Section~3 of the
+\href{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html#nonisogenous}{proof
+for order 63}). \hyperref[prop-quadratic]{Proposition~2} applies.
+
+\medskip
+\textbf{Type (S) with \(\Gamma=C_2\).} Let \(A\) be of type (S), simple over \(\Q\), with
+\(\Gamma\cong C_2\). Then \(K:=L\) is quadratic, and every elliptic curve \(E\subset A_{\bar\Q}\) is
+defined over \(K\) by (I5). If \(E^\sigma=E\), then \(E\) would be stable under \(G_{\Q}\), hence
+an elliptic curve in \(A\) defined over \(\Q\), and \(A\) would not be simple over \(\Q\). So
+\(E^\sigma\neq E\), and \hyperref[prop-quadratic]{Proposition~2} applies.
+
+\section{The CM case: a point count at \(3\)}\label{cm}
+
+Let \(A\) be of type (CM), and let \(P_7\in A(\Q)\) have order \(7\). The CM curve \(E\) has
+integral \(j\)-invariant and hence potentially good reduction at every prime \cite[\S2]{ST}. Over a finite
+extension of \(\Q_3\), \(A\) becomes isogenous to \(E^2\) and \(E\) acquires good reduction; by
+(I2)(a), \(A\) acquires good reduction there. By (I2)(c), there is a finite extension \(K'\) of
+\(\Q_3\) with residue field \(\F_3\) over which \(A\) has good reduction \(\widetilde A\). The
+subgroup of \(A(\Q)\subseteq A(K')\) generated by \(P_7\) and \(A(\Q)[2^\infty]\) has order
+\(7\cdot\#A(\Q)[2^\infty]\), which is prime to \(3\); by (I2)(b) it injects into
+\(\widetilde A(\F_3)\). Hence
+\[7\cdot\#A(\Q)[2^\infty]\ \le\ (1+\sqrt3)^4=28+16\sqrt3\ <\ 56,\]
+because \(16\sqrt3<28\) is equivalent to \(768<784\). So \(\#A(\Q)[2^\infty]\le4\). This case does
+not use simplicity over \(\Q\).
+
+\section{Type (S) with \(\Gamma\) cyclic of order \(3\) or \(6\)}\label{cyclic}
+
+In this section \(A\) is of type (S), \(\Gamma=\langle r\rangle\) is cyclic of order
+\(n\in\{3,6\}\), and \(R\) is the trace-one representative of \(r\), with \(R^2-R+1/c=0\) and
+\(c=1\) or \(3\). Put \(F=\Q[R]\subset D\). The discriminant of \(t^2-t+1/c\) is \(-3\) or
+\(-1/3\), so \(F\) is a field isomorphic to \(\Q(\sqrt{-3})\). Since \(R\) is not a scalar, its
+centralizer in \(D\) is \(F\), so \(\End^0_{\Q}(A)=D^\Gamma=F\). We write \(\bar x\) for the
+conjugate of \(x\in F\) and \(N(x)=x\bar x\); thus \(\bar R=1-R\) and \(N(R)=\det R=1/c>0\). The
+two roots \(R,\bar R\) of \(t^2-t+1/c\) are the eigenvalues of \(R\), so \(R/\bar R\) is a
+primitive \(n\)-th root of unity (Section~5 of the
+\href{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html#endomorphism-field}{proof
+for order 63}); explicitly \(R/\bar R=(1\pm\sqrt{-3})/2\) when \(n=6\), and \((-1\pm\sqrt{-3})/2\)
+when \(n=3\).
+
+\begin{statement}{Lemma 3 (determinant).}\label{lemma-det}
+Let \(\ell\) be a prime. Then \(V_\ell(A)\) is a free \(F\otimes\Q_\ell\)-module of rank \(2\), on
+which \(G_{\Q}\) acts \(F\otimes\Q_\ell\)-linearly, and the determinant
+\(\delta_\ell:G_{\Q}\to(F\otimes\Q_\ell)^\times\) of this action is \(\delta_\ell=\chi_\ell\,
+\varepsilon\), where \(\varepsilon:G_{\Q}\to F^\times\) is the character that factors through
+\(\Gamma\) and maps \(r\) to \(R/\bar R\). In particular \(\varepsilon\) has order \(n\).
+\end{statement}
+
+\emph{Proof.}
+\begin{enumerate}
+\item \emph{The multiplicity space.} Choose an elliptic curve \(E\subset A_L\); it is defined over
+\(L\) by (I5). Put \(H=\Hom^0(E_{\bar\Q},A_{\bar\Q})\), a \(\Q\)-vector space of dimension \(2\).
+Every element of \(H\) is defined over \(L\): if \(p\in\Hom^0(A_L,E)\) is a quasi-projection defined over
+\(L\) (that is, \(p\circ i=1\) for the inclusion \(i\); for instance the map induced by a
+rank-one idempotent \(e\in D\) with image \(E\), which exists by Poincar\'e reducibility, as the
+projection along a complement of \(E\), and is defined over \(L\) like every element of \(D\)), then \(h\mapsto h\circ p\) embeds \(H\)
+\(G_L\)-equivariantly into \(D\), on which \(G_L\) acts trivially. The algebra \(D\) acts
+on \(H\) by composition, faithfully because \(D\) is simple and the action is unital; so \(D=\End_{\Q}(H)\) as \(\dim_{\Q}H=2\), and \(H\) is a
+one-dimensional \(F\)-vector space. The evaluation map
+\[\Phi:V_\ell(E)\otimes_{\Q}H\to V_\ell(A),\qquad v\otimes h\mapsto h(v),\]
+is an isomorphism: for a basis \(h_1,h_2\) of \(H\), a nonzero integer multiple of \((h_1,h_2):E^2\to A_{\bar\Q}\)
+is a homomorphism, and it is an isogeny (otherwise its image would be an elliptic curve \(E_1\), and
+\(h_1,h_2\) would be linearly dependent in the one-dimensional space \(\Hom^0(E,E_1)\)); \(\Phi\) is
+the map it induces, up to that integer. The
+map \(\Phi\) is \(F\)-linear, \(F\) acting on \(H\). Hence \(V_\ell(A)\cong
+V_\ell(E)\otimes_{\Q_\ell}(F\otimes\Q_\ell)\) is free of rank \(2\) over \(F\otimes\Q_\ell\). As
+\(F=\End^0_{\Q}(A)\), the action of \(G_{\Q}\) is \(F\otimes\Q_\ell\)-linear.
+
+\item \emph{The action of \(g\in G_{\Q}\).} The curve \(E^g\subset A_L\) is \(L\)-isogenous to
+\(E\) by (I5); choose an invertible \(u\in\Hom^0(E,E^g)\). Define
+\(B:V_\ell(E)\to V_\ell(E)\) by \(B(v)=u^{-1}(g(v))\) and \(C:H\to H\) by \(C(h)=g(h)\circ u\).
+For \(v\in V_\ell(E)\) and \(h\in H\),
+\[g\bigl(h(v)\bigr)=g(h)\bigl(g(v)\bigr)=g(h)\bigl(u(Bv)\bigr)=C(h)(Bv),\]
+so \(g\circ\Phi=\Phi\circ(B\otimes C)\). For \(\varphi\in D\) we have
+\(C(\varphi\circ h)=g(\varphi)\circ C(h)\); so \(C\in\GL(H)=D^\times\) satisfies
+\(g(\varphi)=C\varphi C^{-1}\). In particular \(C\) commutes with \(F=D^\Gamma\), so \(C\) is
+multiplication by an element \(\gamma\in F^\times\), and
+\[\delta_\ell(g)=\det(B)\,\gamma^2.\]
+By (I7), \(e(Bv,Bw)=\deg(u)^{-1}e(g(v),g(w))=\deg(u)^{-1}\chi_\ell(g)\,e(v,w)\) for the Weil
+pairing \(e\) of \(E\), so \(\det B=\chi_\ell(g)/\deg(u)\). Hence
+\[\delta_\ell(g)=\chi_\ell(g)\,\varepsilon(g),\qquad \varepsilon(g):=\gamma^2/\deg(u)\in F^\times.\]
+The element \(\varepsilon(g)=\delta_\ell(g)/\chi_\ell(g)\) does not depend on the choice of \(u\),
+and its definition does not involve \(\ell\).
+
+\item \emph{\(\varepsilon\) is a character of \(\Gamma\).} It is a homomorphism, being a quotient of
+two homomorphisms to the commutative group \((F\otimes\Q_\ell)^\times\). For \(g\in G_L\) we may
+take \(u=1\), since \(E^g=E\); then \(C(h)=g(h)=h\) for all \(h\in H\), so \(\gamma=1\) and
+\(\varepsilon(g)=1\). Hence \(\varepsilon\) factors through \(\Gamma\), and its values are roots of
+unity in \(F\), of norm \(1\).
+
+\item \emph{The value at \(r\).} Let \(g\) restrict to \(r\). Both \(C\) and \(R\) induce the
+action of \(g\) on \(D\), so \(\gamma=\lambda R\) with \(\lambda\in\Q^\times\) (Skolem--Noether). Then
+\(\varepsilon(g)=\mu R^2\) with \(\mu=\lambda^2/\deg(u)>0\), and
+\(1=N(\varepsilon(g))=\mu^2N(R)^2\) gives \(\mu=1/N(R)\). So
+\(\varepsilon(g)=R^2/(R\bar R)=R/\bar R\). \qed
+\end{enumerate}
+
+Step~4 uses \(N(R)=1/c>0\). For \(\Gamma=C_2\) the same computation, with \(R^2=d\) and
+\(N(R)=-d\), gives \(\varepsilon=1\) when \(\End^0_{\Q}(A)=\Q(\sqrt d)\) is real; this is one
+reason why \(\Gamma=C_2\) is treated by Proposition~2 instead.
+
+\begin{statement}{Proposition 4.}\label{prop-cyclic}
+Let \(A\) be of type (S) with \(\Gamma\) cyclic of order \(3\) or \(6\). Then the
+\(\F_2[G_{\Q}]\)-module \(A[2]\) has a composition factor on which \(G_{\Q}\) acts nontrivially.
+In particular \(A(\Q)[2]\) has rank at most \(2\).
+\end{statement}
+
+\emph{Proof.} Take \(\ell=2\). Since \(-3\equiv5\pmod8\), the prime \(2\) is inert in \(F\), so
+\(F\otimes\Q_2\) is the unramified quadratic extension of \(\Q_2\); let \(\mathcal O\) be its ring
+of integers, with residue field \(\F_4\). The lattice \(T'=\mathcal O\,T_2(A)\subset V_2(A)\) is
+\(G_{\Q}\)-stable and is a free \(\mathcal O\)-module of rank \(2\). So \(M=T'/2T'\) is a
+two-dimensional \(\F_4\)-vector space on which \(G_{\Q}\) acts \(\F_4\)-linearly, with
+\(\F_4\)-determinant the reduction of \(\delta_2=\chi_2\varepsilon\) modulo \(2\mathcal O\). As
+\(\chi_2\) takes values in \(1+2\Z_2\), this determinant is the reduction \(\bar\varepsilon\) of
+\(\varepsilon\). By \hyperref[lemma-det]{Lemma~3}, \(\varepsilon(r)^2\) is a primitive cube root of
+unity \(\zeta\), and \(\zeta\not\equiv1\pmod{2\mathcal O}\) because \(N(1-\zeta)=3\) is a unit at
+\(2\). So \(\bar\varepsilon\neq1\).
+
+Suppose that all composition factors of \(A[2]=T_2(A)/2T_2(A)\) are trivial. By (I7), applied to
+the lattices \(T_2(A)\) and \(T'\), all composition factors of the \(\F_2[G_{\Q}]\)-module \(M\)
+are trivial. In a basis adapted to a composition series, the image of \(G_{\Q}\) in
+\(\GL_{\F_2}(M)\) consists of unipotent upper triangular matrices, so it is a \(2\)-group. Its
+image under the \(\F_4\)-determinant is then a \(2\)-group in \(\F_4^\times\), which has order
+\(3\); so \(\bar\varepsilon=1\), a contradiction.
+
+If \(A(\Q)[2]\) had rank at least \(3\), then \(G_{\Q}\) would act trivially on a
+three-dimensional subspace of \(A[2]\) and, since \(\GL_1(\F_2)=1\), on the one-dimensional
+quotient; all composition factors of \(A[2]\) would be trivial. \qed
+
+\medskip
+\hyperref[prop-cyclic]{Proposition~4} uses neither a point of order \(7\) nor simplicity over
+\(\Q\).
+
+\section{Proof of the Theorem and consequence for the census}\label{census}
+
+\emph{Proof of the Theorem.} Let \(A/\Q\) be simple over \(\Q\) and geometrically split, with a
+rational point of order \(7\). By (I3), \(A\) is of type (N), (CM) or (S). In type (N),
+\(\#A(\Q)[2^\infty]\le4\) by Section~\ref{quadratic}; in type (CM), by Section~\ref{cm}. In type
+(S), \(\Gamma\) is cyclic of order \(2\), \(3\) or \(6\) by (I6). If \(\Gamma=C_2\), then
+\(\#A(\Q)[2^\infty]\le4\) by Section~\ref{quadratic}; if \(\Gamma\) has order \(3\) or \(6\), then
+\(A(\Q)[2]\) has rank at most \(2\) by \hyperref[prop-cyclic]{Proposition~4}. In all cases
+\(A(\Q)[2]\) has rank at most \(2\). \qed
+
+\medskip
+\emph{Proof of the Corollary.} The Jacobian of a curve of genus \(2\) over \(\Q\) is an abelian
+surface over \(\Q\), and \((\Z/2)^3\times\Z/7\) has a point of order \(7\) and \(2\)-rank \(3\).
+For Jacobians split over \(\Q\), the
+\href{https://genus-2-torsion.github.io/proofs/qsplit-two-rank-obstruction.html}{\(2\)-rank
+obstruction} shows that a rational point of order \(7\) forces \(2\)-rank at most \(2\). \qed
+
+\medskip
+The group \href{https://genus-2-torsion.github.io/group.html?g=2.2.14}{\([2,2,14]\)} is impossible
+in the class ``geometrically split, simple over \(\Q\)''. It was already impossible in the class
+``split over \(\Q\)''. Hence the combined geometrically split cell of
+\([2,2,14]\), whose grade was open (``\(\infty\)?'' on the census), becomes impossible
+(\(\emptyset\)).
+
+The argument places no restriction on the geometric splitting degree, the field of definition of
+the geometric endomorphisms, or the integral endomorphism ring, and it does not use a principal
+polarization.
+
+\section{Remarks}\label{remarks}
+
+\begin{enumerate}
+\item \emph{The group \([2,28]\).} In types (N) and (CM), and in type (S) with \(\Gamma=C_2\), the
+proof gives \(\#A(\Q)[2^\infty]\le4\) when \(A(\Q)\) has a point of order \(7\). So a
+geometrically split abelian surface over \(\Q\), simple over \(\Q\), whose rational torsion
+contains \(\Z/2\times\Z/28\) is of type (S) with \(\Gamma\) cyclic of order \(3\) or \(6\). These
+two cases are not settled here, and the census cell of
+\href{https://genus-2-torsion.github.io/group.html?g=2.28}{\([2,28]\)} for geometrically split
+Jacobians that are simple over \(\Q\) stays open.
+
+\item \emph{Modular surfaces.} If \(A\) is the abelian surface \(A_f\) attached to a weight-\(2\)
+newform \(f\) whose coefficient field is \(\End^0_{\Q}(A)\), then \(\delta_\ell\) is the
+cyclotomic character times the nebentypus of \(f\), so \(\varepsilon\) corresponds to the
+nebentypus or to its inverse, depending on the identification of \(F\) with the coefficient field;
+in particular both have order \(|\Gamma|\). For
+example, \(J_1(13)\) and \(J_1(18)\) are the surfaces of the newforms 13.2.e.a and 18.2.c.a, with
+nebentypus of order \(6\) and \(3\); their Sato--Tate groups in the LMFDB (curves 169.a.169.1 and
+324.a.648.1) are \(E_6\) and \(E_3\), whose component groups \(\Gamma\) are cyclic of order \(6\)
+and \(3\). This is consistent with \hyperref[lemma-det]{Lemma~3}, and is not used in the proof.
+
+\item \emph{The point of order \(7\) is needed.} Without it, rational \(2\)-rank \(3\) occurs on
+\(\Q\)-simple, geometrically split Jacobians of type (N), of type (CM), and of type (S) with
+\(\Gamma=C_2\): the LMFDB curves 2560.a.819200.1, 4096.b.65536.1 and 25600.f.512000.1 have rational
+torsion subgroup \(\Z/2\times\Z/2\times\Z/2\) and Sato--Tate groups \(N(\mathrm{SU}(2)\times
+\mathrm{SU}(2))\), \(J(C_2)\) and \(J(E_1)\). By \hyperref[prop-cyclic]{Proposition~4}, this cannot
+happen when \(\Gamma\) is cyclic of order \(3\) or \(6\).
+\end{enumerate}
+
+\begin{thebibliography}{P63}
+
+\bibitem[KM]{KM}
+M. A. Kenku and F. Momose, \emph{Torsion points on elliptic curves defined over quadratic fields},
+Nagoya Math. J. \textbf{109} (1988), 125--149, Theorem~(0.1).
+\href{https://doi.org/10.1017/S0027763000002816}{doi:10.1017/S0027763000002816}.
+
+\bibitem[P63]{P63}
+Census proof of 21 October 2026, \emph{An obstruction to rational \(63\)-torsion on geometrically
+split abelian surfaces},
+\url{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html}: Lemmas~2, 3
+and~5--7, Proposition~8, and Sections~1, 2, 3, 5, 6 and~7.
+
+\bibitem[ST]{ST}
+J.-P. Serre and J. Tate, \emph{Good reduction of abelian varieties}, Ann. of Math. (2)
+\textbf{88} (1968), 492--517: Theorem~1 and Corollary~2 (p.~493), Lemma~2 (p.~495), \S2
+(pp.~496 and~498). \href{https://doi.org/10.2307/1970722}{doi:10.2307/1970722}.
+
+\end{thebibliography}
+
+\end{document}

@@ -204,16 +204,18 @@ class KnowledgeTests(unittest.TestCase):
             "22": "Geometric22Obstruction", "2.22": "Geometric22Obstruction",
             "23": "Geometric2329Obstruction", "29": "Geometric2329Obstruction",
             "26": "Geometric2639Obstruction", "2.26": "Geometric2639Obstruction", "39": "Geometric2639Obstruction",
+            "17": "Geometric17Obstruction",
             "31": "Geometric31Obstruction", "33": "Geometric3334Obstruction", "34": "Geometric3334Obstruction",
             "13": "QSimple13Obstruction",
             "30": "QSimple30Obstruction", "60": "QSimple30Obstruction", "2.30": "QSimple30Obstruction",
             "35": "QSimple35Obstruction", "70": "QSimple35Obstruction",
             "63": "QSimple63Obstruction",
+            "2.2.14": "QSimple2214Obstruction",
             "5.5": "QSimpleRankTwoObstruction", "5.10": "QSimpleRankTwoObstruction", "7.7": "QSimpleRankTwoObstruction"})
         impossible = sorted(k for k in keys if knowledge.infinite_record("split", k)["grade"] == "impossible")
-        self.assertEqual(impossible, sorted(["13", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26"]))
-        # [17] stays open: no valid argument is known in the cyclic quartic case
-        self.assertNotIn("gsplit", knowledge.exclusions_record("17"))
+        self.assertEqual(impossible, sorted(["13", "17", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26", "2.2.14"]))
+        # [17] has its own proof; [34] keeps the earlier proof for orders 33 and 34
+        self.assertEqual(knowledge.infinite_record("split", "17")["proof_url"], "proofs/geometric-17-obstruction.html")
         rec = knowledge.infinite_record("split", "13")
         self.assertIn("Mazur1977", rec["sources"])
         self.assertTrue(rec["note"].startswith(knowledge.exclusions_record("13")["qsplit"]["reason"]))

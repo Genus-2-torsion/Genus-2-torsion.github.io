@@ -1,0 +1,42 @@
+Magma V2.30-1
+number of polynomials T^4 + a T^3 + b T^2 + 2 a T + 4 with all roots of absolute value sqrt 2: 35
+values of P(1): [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 25 ]
+CHECK (A): no abelian surface over F_2 has a number of points divisible by 17
+CHECK (B): -3 and -1/3 are non-squares modulo 17, -1 = 4^2, X^2 - X + 1/2 has the roots 11 and 7 with ratio of order 4, and F_17^* has order 16
+N = 2: j(q) known modulo q^77; Phi_N(j(q), j(q^N)) = O(q^72); (N+1)^2 = 9
+N = 17: j(q) known modulo q^707; Phi_N(j(q), j(q^N)) = O(q^402); (N+1)^2 = 324
+CHECK (C0): Phi_2 and Phi_17 are the classical modular polynomials
+model: x^4 - y^4 + x^3*z + 3*x*y^2*z - 2*x^2*z^2 + x*z^3 + z^4
+CHECK (C1): nonsingular plane quartic, #X(F_p) = p+1-tr T_p for 3 <= p < 100, p <> 17
+CHECK (C2a): deg j = 54, w2 = (z:-y:x), w17 = (x:-y:z), and Phi_2(j, j o w2) = 0 in the function field of X
+CHECK (C2b): Phi_2 and Phi_17 tests with Magma's jInvariant at 5 points over number fields
+deg jden = 53, length of the base scheme = 158
+Phi_17(j, j o w17) vanishes at 2004 geometric points of X (x0 = 2..502, 501 values used)
+CHECK (C2c): Phi_17(j, j o w17) = 0 in the function field of X
+quotient curve: Curve over Rational Field defined by
+2*x[1]^2 - 5*x[1]*x[2] + x[2]^2 - 3*x[2]*x[3] + 2*x[3]^2 + 3*x[4]^2,
+x[1]*x[3] - 2*x[2]*x[3] + x[4]^2
+CHECK (C3a): Yq is a nonsingular curve of genus 1 and pi : X -> Yq has degree 2 with pi o w2 = pi
+X_0(34)/w_2 is isomorphic to [ 1, -1, 1, -6, -4 ]
+17a2
+[1,-1,1,-6,-4]: conductor 17, torsion Z/2 x Z/2, 2-Selmer group of order 4, rank 0
+rational points of the quotient: [ (-1 : -1 : -1 : 1), (15 : 7 : -1 : 1), (1 : 1 : 1 : 1), (-15 : -7 : 1 : 1) ]
+ images: [ (0 : 1 : 0), (-5/4 : 1/8 : 1), (3 : -2 : 1), (-1 : 0 : 1) ]
+CHECK (C3b): the quotient has exactly 4 rational points
+fibre over the rational point (-1 : -1 : -1 : 1) of X_0(34)/w_2:
+   rational point (0 : 1 : 1) : cusp (pole of j of order 34), w2 maps it to (-1 : 1 : 0)
+   rational point (-1 : 1 : 0) : cusp (pole of j of order 17), w2 maps it to (0 : 1 : 1)
+fibre over the rational point (15 : 7 : -1 : 1) of X_0(34)/w_2:
+   one place of degree 2, residue field of discriminant -15, j has minimal polynomial Y^2 + 7319387769191/17179869184*Y + 81029690385834182553917/2251799813685248
+fibre over the rational point (1 : 1 : 1 : 1) of X_0(34)/w_2:
+   rational point (0 : -1 : 1) : cusp (pole of j of order 2), w2 maps it to (1 : 1 : 0)
+   rational point (1 : 1 : 0) : cusp (pole of j of order 1), w2 maps it to (0 : -1 : 1)
+fibre over the rational point (-15 : -7 : 1 : 1) of X_0(34)/w_2:
+   one place of degree 2, residue field of discriminant -15, j has minimal polynomial Y^2 - 11779/4*Y + 25153757/8
+CHECK (C4): the fibres are 2+2 rational cusps (all the poles of j, of orders 34, 17, 2, 1) and two pairs of conjugate points over Q(sqrt -15)
+   point (1/8*(s + 7) : 1/8*(-s + 1) : 1) over Q(s), s^2 = -15, above (15 : 7 : -1 : 1): w2 maps it to its conjugate
+   point (1/8*(-s + 7) : 1/8*(s + 1) : 1) over Q(s), s^2 = -15, above (15 : 7 : -1 : 1): w2 maps it to its conjugate
+   point (1/8*(s + 7) : 1/8*(s - 1) : 1) over Q(s), s^2 = -15, above (-15 : -7 : 1 : 1): w2 maps it to its conjugate
+   point (1/8*(-s + 7) : 1/8*(-s - 1) : 1) over Q(s), s^2 = -15, above (-15 : -7 : 1 : 1): w2 maps it to its conjugate
+CHECK (C4'): the four points over Q(sqrt -15), with w2(P) equal to the conjugate of P
+ALL_CHECKS_PASSED

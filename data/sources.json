@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21 11:14 UTC",
+  "generated": "2026-11-10 06:17 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -314,6 +314,13 @@
       "cite": "A. R. Booker and A. V. Sutherland, Genus 2 curves of small conductor, in preparation; preliminary data in the alpha version of the LMFDB.",
       "url": "https://alpha.lmfdb.org/Genus2Curve/Q/",
       "used_for": "seed curves taken from the extended database"
+    },
+    "Sutherland2026pc": {
+      "short": "Sutherland 2026 (personal communication)",
+      "year": 2026,
+      "cite": "A. V. Sutherland, personal communication to F. Najman (November 2026): the curve y² + (x² + x)y = 9x⁶ + 111x⁵ + 279x⁴ − 485x³ − 282x² + 1836x + 1456, with J(ℚ)_tors ≅ ℤ/2 ⊕ ℤ/22 and End(J_ℚ̄) = ℤ. Torsion, geometric simplicity, the absence of RM over ℚ and the conductor checked here (data/knowledge/sources/sutherland_2_22_check.log).",
+      "url": "data/knowledge/sources/sutherland_2_22_check.log",
+      "used_for": "the [2,22] example without real multiplication (note on the simple [2,22] row of the ∞ column)"
     },
     "LMFDB": {
       "short": "LMFDB",

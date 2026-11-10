@@ -299,6 +299,12 @@ SOURCES = {
         "url": "https://alpha.lmfdb.org/Genus2Curve/Q/",
         "used_for": "seed curves taken from the extended database",
     },
+    "Sutherland2026pc": {
+        "short": "Sutherland 2026 (personal communication)", "year": 2026,
+        "cite": "A. V. Sutherland, personal communication to F. Najman (November 2026): the curve y² + (x² + x)y = 9x⁶ + 111x⁵ + 279x⁴ − 485x³ − 282x² + 1836x + 1456, with J(ℚ)_tors ≅ ℤ/2 ⊕ ℤ/22 and End(J_ℚ̄) = ℤ. Torsion, geometric simplicity, the absence of RM over ℚ and the conductor checked here (data/knowledge/sources/sutherland_2_22_check.log).",
+        "url": "data/knowledge/sources/sutherland_2_22_check.log",
+        "used_for": "the [2,22] example without real multiplication (note on the simple [2,22] row of the ∞ column)",
+    },
     "LMFDB": {
         "short": "LMFDB", "year": 2026,
         "cite": "The LMFDB Collaboration, The L-functions and modular forms database, https://www.lmfdb.org, 2026.",
@@ -545,7 +551,7 @@ _SIMPLE_FAMILY = {
 _SIMPLE_OPEN_NOTES = {
     "6.6": "two isolated geometrically simple examples are known (one on the contact-6 × cubic-contact locus, one on the A(12)-type chart of 2026-10-13); no rational or positive-rank curve through them is known (the contact-6 × contact-6 locus itself is split)",
     "31": "every known example has real multiplication (by ℤ[√2]); a single curve is known",
-    "2.22": "every known example has real multiplication (by ℤ[φ], φ² = φ + 1); two curves are known",
+    "2.22": "two curves with real multiplication by ℤ[φ] (φ² = φ + 1) are known, and one without: A. Sutherland's curve y² + (x² + x)y = 9x⁶ + 111x⁵ + 279x⁴ − 485x³ − 282x² + 1836x + 1456 (conductor 30066300), with End(J_ℚ̄) = ℤ according to Sutherland; its torsion, geometric simplicity (strict at 13) and the absence of RM over ℚ are checked in sutherland_2_22_check.log",
     "2.2.20": "the displayed curve is the unique one in its one-parameter family (BNSS2026, §'A second order-80 group', by Chabauty); Elkies' family gives infinitely many Jacobians of order 80, but with group [2,2,2,10]",
 }
 
@@ -754,6 +760,8 @@ def infinite_record(side: str, key: str) -> dict:
     if key in notes:
         if side == "split" and key == "11":
             src = ["BNSS2026", "ThisSite"]
+        elif side == "simple" and key == "2.22":
+            src = ["BNSS2026", RECORD, "Sutherland2026pc"]
         else:
             src = ["BNSS2026", RECORD] if key in ("31", "2.22", "2.2.20") else ([RECORD] if side == "simple" else ["HLP2000"])
         return {"grade": "open", "sources": src, "note": notes[key], "inherited_from": None}

@@ -1,0 +1,34 @@
+C: Hyperelliptic Curve defined by y^2 + (x^2 + x)*y = 9*x^6 + 111*x^5 + 279*x^4 - 485*x^3 - 282*x^2 + 1836*x + 1456 over Rational Field
+torsion: [ 2, 22 ]
+reduced minimal model: Hyperelliptic Curve defined by y^2 + (x^2 + x)*y = 9*x^6 + 57*x^5 - 141*x^4 - 672*x^3 + 1872*x^2 + 330*x over Rational Field
+discriminant: -39058468871400000000000000 = [ <2, 15>, <3, 12>, <5, 14>, <11, 2>, <3037, 1> ]
+strict primes below 100: [ 13, 19, 29, 43, 53, 59, 67, 71, 89, 97 ]
+geometrically simple: true
+p = 7: chi reducible
+p = 13: chi = x^4 + x^3 - 8*x^2 + 13*x + 169, Q(pi + p/pi) = Q(sqrt(137))
+p = 17: chi reducible
+p = 19: chi = x^4 - x^3 + 10*x^2 - 19*x + 361, Q(pi + p/pi) = Q(sqrt(113))
+p = 23: chi reducible
+p = 29: chi = x^4 + x^3 - 36*x^2 + 29*x + 841, Q(pi + p/pi) = Q(sqrt(377))
+p = 31: chi reducible
+p = 37: chi reducible
+p = 41: chi reducible
+p = 43: chi = x^4 - 2*x^3 - 2*x^2 - 86*x + 1849, Q(pi + p/pi) = Q(sqrt(89))
+p = 47: chi reducible
+p = 53: chi = x^4 + 8*x^3 + 102*x^2 + 424*x + 2809, Q(pi + p/pi) = Q(sqrt(5))
+p = 59: chi = x^4 - x^3 + 10*x^2 - 59*x + 3481, Q(pi + p/pi) = Q(sqrt(433))
+p = 61: chi = x^4 + 62*x^2 + 3721, Q(pi + p/pi) = Q(sqrt(15))
+p = 67: chi = x^4 + 3*x^3 + 58*x^2 + 201*x + 4489, Q(pi + p/pi) = Q(sqrt(313))
+p = 71: chi = x^4 - 5*x^3 + 26*x^2 - 355*x + 5041, Q(pi + p/pi) = Q(sqrt(489))
+p = 73: chi reducible
+p = 79: chi = x^4 - 82*x^2 + 6241, Q(pi + p/pi) = Q(sqrt(15))
+p = 83: chi reducible
+p = 89: chi = x^4 + 4*x^3 - 10*x^2 + 356*x + 7921, Q(pi + p/pi) = Q(sqrt(3))
+p = 97: chi = x^4 + 10*x^3 + 82*x^2 + 970*x + 9409, Q(pi + p/pi) = Q(sqrt(137))
+distinct real quadratic fields: 10
+no RM over Q: true
+WARNING: Using Ogg's formula when v_2(D)>=12, no correctness guarantee
+WARNING: Using Ogg's formula when v_2(disc)>=12, no correctness guarantee
+conductor: 30066300 = [ <2, 2>, <3, 2>, <5, 2>, <11, 1>, <3037, 1> ]
+odd part 7516575 > 19044 (conductor of 2.22.a): true
+SUTHERLAND_2_22_CHECK_DONE

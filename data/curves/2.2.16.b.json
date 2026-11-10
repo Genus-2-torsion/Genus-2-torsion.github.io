@@ -1,0 +1,244 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.16.b",
+  "group": [
+    2,
+    2,
+    16
+  ],
+  "group_key": "2.2.16",
+  "group_bracket": "[2,2,16]",
+  "order": 64,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "-284225007",
+      "519681459",
+      "166739244",
+      "-496170642",
+      "128899980",
+      "-11736600",
+      "360000"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "360000*x^6 - 11736600*x^5 + 128899980*x^4 - 496170642*x^3 + 166739244*x^2 + 519681459*x - 284225007",
+    "h_str": "x^2 + x",
+    "g": [
+      "-1136900028",
+      "2078725836",
+      "666956977",
+      "-1984682566",
+      "515599921",
+      "-46946400",
+      "1440000"
+    ],
+    "g_str": "1440000*x^6 - 46946400*x^5 + 515599921*x^4 - 1984682566*x^3 + 666956977*x^2 + 2078725836*x - 1136900028",
+    "g_scale": "1",
+    "discriminant": "7772796516032018937652769517842389304044107699223282175230963875840000000000000000",
+    "discriminant_digits": 82,
+    "igusa_clebsch": [
+      "14621026758469669064",
+      "60760031464812847471078607317270564",
+      "298555470608393610043371064697495313251269388559834536",
+      "7772796516032018937652769517842389304044107699223282175230963875840000000000000000"
+    ],
+    "g2_invariants": [
+      "20391042259042508183302375667620927548300084866317150945742968724108623464949845362242438393/1897655399421879623450383183066989576182643481255684124812247040000000000000000",
+      "9076064583943568167165093231630465590705693448641207178938247175491738627128223843/20364148107613864908472803802032880337440947129907937280000000000000000",
+      "8241372612628040897570319118865864692112498470152908005060832042539671841/336014882931802695958803457142534742891830439837696000000000000"
+    ],
+    "rational_weierstrass_points": 4,
+    "minimal_model": {
+      "f": [
+        "-4837915775",
+        "-1775208435",
+        "458065650",
+        "149173042",
+        "-19432020",
+        "-3096600",
+        "360000"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "1897655399421879623450383183066989576182643481255684124812247040000000000000000",
+    "minimal_discriminant_factored": "2^34 * 3^13 * 5^16 * 7^10 * 11^10 * 13^10 * 19^2 * 31 * 37 * 41^2 * 53^2 * 59^2 * 257^2",
+    "conductor": "",
+    "conductor_factored": "",
+    "conductor_note": "not computed: Magma did not finish the conductor computation within the time limit",
+    "conductor_source": ""
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-284225007%2C519681459%2C166739244%2C-496170642%2C128899980%2C-11736600%2C360000%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      16
+    ],
+    "order": 64,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 871/75*x + 506/75",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 29/75*x - 46/75",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 16,
+        "mumford": [
+          "x^2 - 1131/80*x + 2569/180",
+          "802373/60*x - 568139/45",
+          "2"
+        ]
+      }
+    ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
+    "point_count_gcd": 64,
+    "point_count_primes": [
+      17,
+      23,
+      29,
+      43,
+      47,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137,
+      139,
+      149,
+      151,
+      157
+    ],
+    "claimed": [
+      2,
+      2,
+      16
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 47,
+    "chi": "T^4 - 6*T^3 - 2*T^2 - 282*T + 2209",
+    "primes_tried_below": 500,
+    "admissible_primes": 5,
+    "reducible_chi": 3
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 29,
+    "chi": "T^4 - 10*T^2 + 841"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "isogenous_product": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 34,
+      "reducible_chi": 18
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "A. V. Sutherland",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "A. V. Sutherland, personal communication to F. Najman (November 2026)",
+  "sources": [],
+  "rm": false,
+  "notes": "First geometrically simple Jacobian with torsion [2,2,16] in the census (the group was known only for Jacobians split over Q, 2.2.16.a). Found by A. V. Sutherland and sent to F. Najman as [[-284225007,519681459,166739244,-496170642,128899980,-11736600,360000],[0,1,1]]. End(J_Qbar) = Z: the Frobenius fields at 47 and 71 are quartic CM fields with no common quadratic subfield (data/knowledge/sources/sutherland_2_2_16_check.log). The conductor is still being computed.",
+  "submitter": {
+    "name": "Filip Najman (for A. V. Sutherland)",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "-284225007",
+      "519681459",
+      "166739244",
+      "-496170642",
+      "128899980",
+      "-11736600",
+      "360000"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      16
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/sutherland_2_2_16.json"
+  },
+  "dates": {
+    "submitted": "2026-11-10",
+    "verified": "2026-11-10 08:49:11 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.370000",
+    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "log": "data/logs/2.2.16.b.log",
+    "conductor_log": "data/logs/2.2.16.b.conductor.log",
+    "conductor_cputime_seconds": null
+  }
+}

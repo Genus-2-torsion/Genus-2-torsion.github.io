@@ -177,7 +177,7 @@
     }
     const lm = lmfdbLink(c.lmfdb);
     if (lm) meta.push(lm);
-    if (c.conductor) meta.push(el("span", { title: c.conductor_note || "conductor" }, "N = " + c.conductor));
+    meta.push(el("span", { title: c.conductor_note || "conductor" }, "N = " + (c.conductor || "?")));   // ? = not computed (yet)
     if (mode !== "first") {
       if ((c.sources && c.sources.length) || c.discovered_by) meta.push(el("span", null, creditNodes(sources, c, c.discovered_by, c.year)));
     }
@@ -282,13 +282,13 @@
     const table = el("table", { class: "data" },
       el("thead", null, el("tr", null,
         el("th", { class: "sortable" }, "id"), el("th", null, "curve"),
-        el("th", { class: "num sortable", title: "conductor of the Jacobian (blank when the discriminant could not be factored)" }, "N"),
+        el("th", { class: "num sortable", title: "conductor of the Jacobian (? when it has not been computed)" }, "N"),
         el("th", null, "LMFDB"), el("th", { class: "sortable" }, "source / discovered by"), el("th", { class: "num sortable", title: "year of discovery, when recorded" }, "year"),
         el("th", null, "certificate"), el("th", null, "status"))),
       el("tbody", null, list.map((c) => el("tr", { class: "row-link", onclick: (e) => { if (e.target.tagName !== "A") location.href = "curve.html?id=" + encodeURIComponent(c.id); } },
         el("td", null, el("a", { class: "id", href: "curve.html?id=" + encodeURIComponent(c.id) }, c.id)),
         el("td", { class: "poly", html: eqHtml(c.equation) }),
-        el("td", { class: "num", "data-sort": c.conductor_sort === null ? 1e300 : c.conductor_sort, title: c.conductor_note || "" }, c.conductor || "—"),
+        el("td", { class: "num", "data-sort": c.conductor_sort === null ? 1e300 : c.conductor_sort, title: c.conductor_note || "" }, c.conductor || "?"),
         el("td", null, lmfdbLink(c.lmfdb) || el("span", { class: "empty" }, "—")),
         el("td", null, creditNodes(sources, c, c.discovered_by, null), c.rm ? el("span", { class: "muted" }, " · RM") : null, c.historical ? el("span", { class: "muted" }, " · historical example") : null),
         el("td", { class: "num", "data-sort": c.year === null ? 9999 : c.year }, c.year === null ? "" : c.year),
@@ -401,7 +401,7 @@
         el("dt", null, "f, h"), el("dd", null, "[" + cu.f.join(", ") + "], [" + cu.h.join(", ") + "] (ascending coefficients, LMFDB convention)"),
         el("dt", null, "even model"), el("dd", { class: "poly", html: "y² = " + math(cu.g_str) + (cu.g_scale !== "1" ? " (4f + h² scaled by " + esc(cu.g_scale) + "²)" : " (= 4f + h²)") }),
         el("dt", null, "minimal model"), el("dd", { class: "poly" }, cu.minimal_model ? el("span", { html: eqHtml({ text: eqText(polyStr(cu.minimal_model.f), polyStr(cu.minimal_model.h)) }) }) : el("span", { class: "empty" }, "not computed")),
-        el("dt", null, "conductor"), el("dd", null, cu.conductor ? [el("b", null, cu.conductor), cu.conductor_factored && cu.conductor_factored !== cu.conductor ? " = " + cu.conductor_factored : "", cu.conductor_note ? el("span", { class: "muted" }, " — " + cu.conductor_note) : null] : el("span", { class: "empty" }, cu.conductor_note || "not computed")),
+        el("dt", null, "conductor"), el("dd", null, cu.conductor ? [el("b", null, cu.conductor), cu.conductor_factored && cu.conductor_factored !== cu.conductor ? " = " + cu.conductor_factored : "", cu.conductor_note ? el("span", { class: "muted" }, " — " + cu.conductor_note) : null] : [el("b", null, "?"), el("span", { class: "muted" }, " — " + (cu.conductor_note || "not computed"))]),
         el("dt", null, "minimal discriminant"), el("dd", null, cu.minimal_discriminant ? [cu.minimal_discriminant, cu.minimal_discriminant_factored ? " = " + cu.minimal_discriminant_factored : ""] : el("span", { class: "empty" }, "not computed")),
         el("dt", null, "discriminant of the even model"), el("dd", null, cu.discriminant_digits > 40 ? cu.discriminant_digits + " digits" : cu.discriminant),
         el("dt", null, "Igusa–Clebsch invariants"), el("dd", null, "[" + cu.igusa_clebsch.join(", ") + "]"),

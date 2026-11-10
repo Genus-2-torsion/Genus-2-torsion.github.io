@@ -1,0 +1,22 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "16*x^6 + 588*x^5 + 6942*x^4 + 27097*x^3 - 1242978*x^2 - 18141270*x + 11816100",
+  "h": "x^2 + x",
+  "group": [
+    2,
+    24
+  ],
+  "class": "simple",
+  "submitter": "Filip Najman (for A. V. Sutherland)",
+  "affiliation": "University of Zagreb",
+  "github": "F-Najman",
+  "discoverer": "A. V. Sutherland",
+  "year": 2026,
+  "reference": "A. V. Sutherland, personal communication to F. Najman (November 2026)",
+  "notes": "First geometrically simple Jacobian with torsion [2,24] in the census (the group was known only for Jacobians split over Q, 2.24.a). Found by A. V. Sutherland and sent to F. Najman as [[11816100,-18141270,-1242978,27097,6942,588,16],[0,1,1]]. End(J_Qbar) = Z: the Frobenius fields at 29 and 31 are quartic CM fields with no common quadratic subfield (data/knowledge/sources/sutherland_2_24_check.log). The conductor is still being computed.",
+  "date": "2026-11-10",
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/sutherland_2_24.json"
+  }
+}

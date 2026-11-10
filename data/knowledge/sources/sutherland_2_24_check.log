@@ -1,0 +1,44 @@
+C: Hyperelliptic Curve defined by y^2 + (x^2 + x)*y = 16*x^6 + 588*x^5 + 6942*x^4 + 27097*x^3 - 1242978*x^2 - 18141270*x + 11816100 over Rational Field
+reduced minimal model: Hyperelliptic Curve defined by y^2 + (x^2 + x)*y = 16*x^6 + 12*x^5 - 2058*x^4 + 3043*x^3 - 1190247*x^2 - 3233367*x + 75234825 over Rational Field
+discriminant: [ <2, 54>, <3, 15>, <5, 6>, <7, 5>, <11, 3>, <13, 5>, <17, 7>, <24533, 1> ]
+torsion: [ 2, 24 ]
+C: absolutely strict primes below 200: [ 29, 31, 37, 53, 61, 83, 89, 103, 107, 113, 131, 139, 157, 163, 173, 179, 191, 193, 197, 199 ]
+C: p = 29, chi = x^4 - 2*x^3 - 14*x^2 - 58*x + 841, quadratic subfields of discriminant { 73 }
+C: q = 31, chi = x^4 - 3*x^3 - 2*x^2 - 93*x + 961, quadratic subfields of discriminant { 265 }
+C: K_p and K_q are not isomorphic and have no common quadratic subfield
+End(J_Qbar) = Z: true
+2.22.a: absolutely strict primes below 200: [ 5, 11, 19, 31, 37, 43, 53, 61, 67, 83, 89, 97, 107, 109, 113, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199 ]
+2.22.a: quadratic subfields at the absolutely strict primes: [
+<5, { 5 }>,
+<11, { 5 }>,
+<19, { 5 }>,
+<31, { 5 }>,
+<37, { 5 }>,
+<43, { 5 }>,
+<53, { 5 }>,
+<61, { 5 }>,
+<67, { 5 }>,
+<83, { 5 }>,
+<89, { 5 }>,
+<97, { 5 }>,
+<107, { 5 }>,
+<109, { 5 }>,
+<113, { 5 }>,
+<131, { 5 }>,
+<137, { 5 }>,
+<139, { 5 }>,
+<149, { 5 }>,
+<151, { 5 }>,
+<157, { 5 }>,
+<163, { 5 }>,
+<167, { 5 }>,
+<173, { 5 }>,
+<179, { 5 }>,
+<181, { 5 }>,
+<191, { 5 }>,
+<193, { 5 }>,
+<197, { 5 }>,
+<199, { 5 }>
+]
+control 2.22.a (RM by Z[phi]) certified End = Z: false (expected false)
+SUTHERLAND_2_24_CHECK_DONE

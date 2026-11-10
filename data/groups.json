@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10 11:24 UTC",
+  "generated": "2026-11-10 12:02 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -29,11 +29,11 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 96,
-  "n_curves": 188,
-  "n_certified": 187,
+  "n_curves": 189,
+  "n_certified": 188,
   "n_verified": 1,
   "n_groups_by_class": {
-    "simple": 77,
+    "simple": 78,
     "qsplit": 75,
     "gsplit": 35,
     "undecided": 1
@@ -9377,7 +9377,60 @@
       "order": 48,
       "rank": 2,
       "classes": {
-        "simple": [],
+        "simple": [
+          {
+            "id": "2.24.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "11816100",
+              "-18141270",
+              "-1242978",
+              "27097",
+              "6942",
+              "588",
+              "16"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "16*x^6 + 588*x^5 + 6942*x^4 + 27097*x^3 - 1242978*x^2 - 18141270*x + 11816100",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 16*x^6 + 588*x^5 + 6942*x^4 + 27097*x^3 - 1242978*x^2 - 18141270*x + 11816100"
+            },
+            "conductor": "",
+            "conductor_sort": null,
+            "conductor_note": "not computed: Magma did not finish the conductor computation within the time limit",
+            "discriminant_digits": 58,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B11816100%2C-18141270%2C-1242978%2C27097%2C6942%2C588%2C16%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "A. V. Sutherland",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "A. V. Sutherland, personal communication to F. Najman (November 2026)",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 29 is strict (χ = T^4 - 2*T^3 - 14*T^2 - 58*T + 841)",
+            "verified": "2026-11-10 12:02:24 UTC",
+            "submitted": "2026-11-10",
+            "source_kind": "file"
+          }
+        ],
         "qsplit": [
           {
             "id": "2.24.a",
@@ -9437,7 +9490,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -9449,13 +9502,13 @@
         "undecided": null
       },
       "known": {
-        "simple": false,
+        "simple": true,
         "qsplit": true,
         "gsplit": false,
         "undecided": false
       },
       "exclusions": {},
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "open",

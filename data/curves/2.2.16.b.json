@@ -76,10 +76,10 @@
     },
     "minimal_discriminant": "1897655399421879623450383183066989576182643481255684124812247040000000000000000",
     "minimal_discriminant_factored": "2^34 * 3^13 * 5^16 * 7^10 * 11^10 * 13^10 * 19^2 * 31 * 37 * 41^2 * 53^2 * 59^2 * 257^2",
-    "conductor": "",
-    "conductor_factored": "",
-    "conductor_note": "not computed: Magma did not finish the conductor computation within the time limit",
-    "conductor_source": ""
+    "conductor": "647548862090857026300",
+    "conductor_factored": "2^2 * 3^2 * 5^2 * 7^2 * 11^2 * 13^2 * 19 * 31 * 37 * 41 * 53 * 59 * 257",
+    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous; computed prime by prime (conductor_by_prime.m), the exponent at 2 on the isomorphic model x -> (0 X + 1)/(1 X + 0)",
+    "conductor_source": "magma"
   },
   "lmfdb": {
     "label": "",
@@ -194,7 +194,7 @@
   "reference": "A. V. Sutherland, personal communication to F. Najman (November 2026)",
   "sources": [],
   "rm": false,
-  "notes": "First geometrically simple Jacobian with torsion [2,2,16] in the census (the group was known only for Jacobians split over Q, 2.2.16.a). Found by A. V. Sutherland and sent to F. Najman as [[-284225007,519681459,166739244,-496170642,128899980,-11736600,360000],[0,1,1]]. End(J_Qbar) = Z: the Frobenius fields at 47 and 71 are quartic CM fields with no common quadratic subfield (data/knowledge/sources/sutherland_2_2_16_check.log). The conductor is still being computed.",
+  "notes": "First geometrically simple Jacobian with torsion [2,2,16] in the census (the group was known only for Jacobians split over Q, 2.2.16.a). Found by A. V. Sutherland and sent to F. Najman as [[-284225007,519681459,166739244,-496170642,128899980,-11736600,360000],[0,1,1]]. End(J_Qbar) = Z: the Frobenius fields at 47 and 71 are quartic CM fields with no common quadratic subfield (data/knowledge/sources/sutherland_2_2_16_check.log).",
   "submitter": {
     "name": "Filip Najman (for A. V. Sutherland)",
     "github": "F-Najman",
@@ -239,6 +239,6 @@
     "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
     "log": "data/logs/2.2.16.b.log",
     "conductor_log": "data/logs/2.2.16.b.conductor.log",
-    "conductor_cputime_seconds": null
+    "conductor_cputime_seconds": 2.83
   }
 }

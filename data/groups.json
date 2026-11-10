@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10 08:49 UTC",
+  "generated": "2026-11-10 11:24 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -13679,9 +13679,9 @@
               "h": "x^2 + x",
               "text": "y^2 + (x^2 + x)*y = 360000*x^6 - 11736600*x^5 + 128899980*x^4 - 496170642*x^3 + 166739244*x^2 + 519681459*x - 284225007"
             },
-            "conductor": "",
-            "conductor_sort": null,
-            "conductor_note": "not computed: Magma did not finish the conductor computation within the time limit",
+            "conductor": "647548862090857026300",
+            "conductor_sort": 647548862090857026300,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous; computed prime by prime (conductor_by_prime.m), the exponent at 2 on the isomorphic model x -> (0 X + 1)/(1 X + 0)",
             "discriminant_digits": 82,
             "lmfdb": {
               "label": "",

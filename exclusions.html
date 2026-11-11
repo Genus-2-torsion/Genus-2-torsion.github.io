@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exclusions beyond the census — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="Six exact torsion groups of order 256 excluded for genus 2 Jacobians split over Q, with a complete proof at every splitting degree.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css?v=6">
+</head>
+<body data-page="exclusions">
+<main>
+  <div class="page-nav"><a href="index.html">groups</a><span class="sep">›</span>exclusions beyond the census</div>
+  <h2>Exclusions beyond the census</h2>
+  <p class="src">11 November 2026</p>
+  <p>The census lists groups with recorded curves. This page records proved exclusions for groups
+    that have no census row. Each statement concerns the <strong>exact rational torsion group</strong>.</p>
+  <h3>Six groups excluded for Jacobians split over ℚ</h3>
+  <p>If a principally polarized abelian surface over ℚ is isogenous over ℚ to a product of elliptic
+    curves and its rational torsion has order 256, then all of its 2-torsion is rational.
+    Its torsion therefore has four generators. The following six groups are impossible
+    for a genus-2 Jacobian <strong>split over ℚ</strong>, at every splitting degree.</p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th scope="col">Exact torsion group</th><th scope="col">Order</th><th scope="col">Split over ℚ</th></tr></thead>
+      <tbody>
+      <tr><th scope="row"><span class="m">[4,64]</span></th><td>256</td><td><a href="proofs/qsplit-order-256-obstruction.html">impossible</a></td></tr>
+      <tr><th scope="row"><span class="m">[8,32]</span></th><td>256</td><td><a href="proofs/qsplit-order-256-obstruction.html">impossible</a></td></tr>
+      <tr><th scope="row"><span class="m">[16,16]</span></th><td>256</td><td><a href="proofs/qsplit-order-256-obstruction.html">impossible</a></td></tr>
+      <tr><th scope="row"><span class="m">[2,2,64]</span></th><td>256</td><td><a href="proofs/qsplit-order-256-obstruction.html">impossible</a></td></tr>
+      <tr><th scope="row"><span class="m">[2,4,32]</span></th><td>256</td><td><a href="proofs/qsplit-order-256-obstruction.html">impossible</a></td></tr>
+      <tr><th scope="row"><span class="m">[2,8,16]</span></th><td>256</td><td><a href="proofs/qsplit-order-256-obstruction.html">impossible</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="proofs/qsplit-order-256-obstruction.html">Read the complete proof</a>, or download the
+    <a href="data/knowledge/sources/qsplit_order256_obstruction.pdf">PDF</a> and
+    <a href="data/knowledge/sources/qsplit_order256_obstruction.tex">LaTeX source</a>.
+    The proof uses Mazur's elliptic torsion theorem, the Rouse–Zureick-Brown bound for 2-adic images,
+    and a matrix argument uniform in the gluing degree. Supplementary
+    <a href="data/knowledge/sources/qsplit_order256_matrix_checks.py">exact matrix checks</a>
+    and their <a href="data/knowledge/sources/qsplit_order256_matrix_checks.log">log</a> are included.</p>
+  <p>This result makes no exclusion claim for <strong>geometrically simple</strong> Jacobians or
+    for Jacobians that are <strong>simple over ℚ but split over ℚ̄</strong>.</p>
+  <h3>What the theorem leaves open</h3>
+  <p>The three groups of order 256 left by the theorem and the Weil pairing are
+    <span class="m">[2,2,2,32]</span>, <span class="m">[2,2,4,16]</span>, and
+    <span class="m">[2,2,8,8]</span>. <strong>No existence assertion is made for these groups.</strong></p>
+  <p>For class-specific exclusions of groups already represented in the census, see the
+    <a href="index.html">group table</a> and the <a href="about.html#impossible-examples">explanation of impossible entries</a>.</p>
+</main>
+<script src="assets/app.js?v=20261111-exclusions"></script>
+</body>
+</html>

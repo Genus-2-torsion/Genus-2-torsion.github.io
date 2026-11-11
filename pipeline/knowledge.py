@@ -85,6 +85,31 @@ SOURCES = {
         "url": "proofs/qsplit-two-rank-obstruction.html",
         "used_for": "impossibility of [2,2,14] and [2,2,2,10] in the split-over-ℚ class: a rational point of order 7 forces 2-rank at most 2, and 2-rank 4 excludes points of order 5 and 7",
     },
+    "QSplitOrder256Obstruction": {
+        "short": "order-256 obstruction for splitting over ℚ", "year": 2026,
+        "kind": "proof",
+        "cite": "Six exclusions at rational torsion order 256, census proof of 11 November 2026. A principally polarized abelian surface split over Q with rational torsion of order 256 has full rational 2-torsion, at every splitting degree.",
+        "url": "proofs/qsplit-order-256-obstruction.html",
+        "used_for": "excludes the exact groups [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16] in the split-over-ℚ class, including groups not represented in the census; complete PDF/LaTeX and supplementary exact matrix checks",
+    },
+    "Olson1974": {
+        "short": "Olson 1974", "year": 1974,
+        "cite": "L. D. Olson, Points of finite order on elliptic curves with complex multiplication, Manuscripta Math. 14 (1974), 195–205.",
+        "url": "https://doi.org/10.1007/BF01171442",
+        "used_for": "a CM elliptic curve over ℚ has no rational point of order 8",
+    },
+    "RouseZureickBrown2015": {
+        "short": "Rouse–Zureick-Brown 2015", "year": 2015,
+        "cite": "J. Rouse and D. Zureick-Brown, Elliptic curves over Q and 2-adic images of Galois, Research in Number Theory 1 (2015), article 12.",
+        "url": "https://arxiv.org/abs/1402.5997",
+        "used_for": "Corollary 1.3: the index of a non-CM elliptic 2-adic image divides 64 or 96; rational torsion [2,8] therefore forces the full pointwise stabilizer of that torsion",
+    },
+    "BruinDoerksen2011": {
+        "short": "Bruin–Doerksen 2011", "year": 2011,
+        "cite": "N. Bruin and K. Doerksen, The arithmetic of genus two curves with (4,4)-split Jacobians, Canad. J. Math. 63 (2011).",
+        "url": "https://arxiv.org/abs/0902.3480",
+        "used_for": "Section 2, especially Proposition 2.8 and Lemma 2.6: complementary elliptic curves and gluing along an anti-isometry in a principally polarized abelian surface",
+    },
     "Mazur1977": {
         "short": "Mazur 1977", "year": 1977,
         "cite": "B. Mazur, Modular curves and the Eisenstein ideal, Publ. Math. IHÉS 47 (1977), 33–186.",
@@ -386,6 +411,13 @@ QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2214Obstruction", "QSimple30Obst
                 "QSimpleRankTwoObstruction"}
 
 
+# These exact groups need no census row for the exclusion to apply to a future entry.
+# This is a qsplit result only, and makes no existence assertion for rank-four groups.
+QSPLIT_ORDER256_EXCLUSIONS = frozenset({
+    "4.64", "8.32", "16.16", "2.2.64", "2.4.32", "2.8.16",
+})
+
+
 def exclusions_record(key: str) -> dict:
     """Class-specific impossibility, separate from existence and infinitude records."""
     # All prime divisors of the order occur in the last invariant factor.
@@ -416,6 +448,11 @@ def exclusions_record(key: str) -> dict:
             "QSplitTwoRankObstruction",
             "A Jacobian split over ℚ contains an elliptic curve over ℚ with an elliptic quotient over ℚ. By Mazur's theorem, a rational point of order 7 then forces rational 2-rank at most 2, and rational 2-rank 4 excludes rational points of orders 5 and 7.",
             ["Mazur1977"])
+    elif key in QSPLIT_ORDER256_EXCLUSIONS:
+        exclusions["qsplit"] = record(
+            "QSplitOrder256Obstruction",
+            "A principally polarized abelian surface split over ℚ with rational torsion of order 256 has full rational 2-torsion. This exact group has fewer than four generators, so it is impossible at every splitting degree.",
+            ["Mazur1977", "Olson1974", "RouseZureickBrown2015", "BruinDoerksen2011"])
     if exponent % 23 == 0 or exponent % 29 == 0:
         exclusions["gsplit"] = record(
             "Geometric2329Obstruction",

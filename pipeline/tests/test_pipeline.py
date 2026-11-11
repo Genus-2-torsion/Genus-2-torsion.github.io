@@ -220,6 +220,46 @@ class KnowledgeTests(unittest.TestCase):
         self.assertIn("Mazur1977", rec["sources"])
         self.assertTrue(rec["note"].startswith(knowledge.exclusions_record("13")["qsplit"]["reason"]))
 
+    def test_order256_exclusions_beyond_census(self):
+        """The new exact-group exclusions apply without census rows and only to qsplit."""
+        excluded = {"4.64", "8.32", "16.16", "2.2.64", "2.4.32", "2.8.16"}
+        self.assertEqual(knowledge.QSPLIT_ORDER256_EXCLUSIONS, excluded)
+        for key in excluded:
+            with self.subTest(key=key):
+                rec = knowledge.exclusions_record(key)
+                self.assertEqual(set(rec), {"qsplit"})
+                self.assertEqual(rec["qsplit"]["sources"][0], "QSplitOrder256Obstruction")
+                self.assertTrue((ROOT / rec["qsplit"]["proof_url"]).exists())
+                self.assertTrue(set(rec["qsplit"]["sources"]) <= set(knowledge.SOURCES))
+                self.assertNotEqual(knowledge.infinite_record("split", key)["grade"], "impossible")
+        # The theorem does not settle these rank-four groups, or proper subgroups.
+        for key in ("2.2.2.32", "2.2.4.16", "2.2.8.8", "4.32", "8.16", "2.4.16"):
+            self.assertNotIn("qsplit", knowledge.exclusions_record(key), key)
+        log = (KNOWLEDGE_DIR / "sources" / "qsplit_order256_matrix_checks.log").read_text()
+        self.assertTrue(log.rstrip().endswith("ORDER256_TRACE_CERTIFICATE_DONE"))
+        for suffix in ("md", "tex", "pdf"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsplit_order256_obstruction.{suffix}").exists())
+
+    def test_order256_future_qsplit_entries_rejected(self):
+        """The build catches each future contradiction even when its group is currently absent."""
+        import build
+        import copy
+        import json
+        import tempfile
+        from unittest.mock import patch
+        template = next(read_json(p) for p in sorted(CURVES_DIR.glob("*.json"))
+                        if read_json(p)["class"] == "qsplit")
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "future.json"
+            for key in ("4.64", "8.32", "16.16", "2.2.64", "2.4.32", "2.8.16"):
+                c = copy.deepcopy(template)
+                c.update(id=f"{key}.future", group_key=key, group=[int(n) for n in key.split(".")])
+                c["torsion"]["invariants"] = c["group"]
+                path.write_text(json.dumps(c))
+                with self.subTest(key=key), patch.object(build, "CURVES_DIR", Path(d)):
+                    with self.assertRaisesRegex(ValueError, "recorded qsplit example contradicts"):
+                        build.build()
+
     def test_certificate_logs_complete(self):
         # every certificate log ends in its CERTIFIED marker and records no Magma error (a failed assert stops
         # `magma -b script.m` before the marker, but the exit status is 0, so the log is what must be checked)

@@ -90,7 +90,8 @@
 
   // ---------------------------------------------------------------- header / footer
   function chrome() {
-    const nav = [["index.html", "groups", "index"], ["submit.html", "submit a curve", "submit"],
+    const nav = [["index.html", "groups", "index"], ["exclusions.html", "exclusions", "exclusions"],
+                 ["submit.html", "submit a curve", "submit"],
                  ["about.html", "about & sources", "about"], [REPO, "github", ""]];
     const header = el("header", { class: "site" },
       el("div", { class: "inner" },

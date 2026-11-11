@@ -68,6 +68,11 @@ Mazur's theorem excludes the 14 census groups whose order has a prime divisor gr
 from the **split over ℚ** class; the proof is in `proofs/qsplit-prime-obstruction.html`.
 The same argument excludes [2,2,14] and [2,2,2,10] from that class
 (`proofs/qsplit-two-rank-obstruction.html`).
+The page `exclusions.html` lists six further exact groups of order 256 excluded in the
+**split over ℚ** class, with a full proof at `proofs/qsplit-order-256-obstruction.html`.
+They have no census rows. `QSPLIT_ORDER256_EXCLUSIONS` records them in `pipeline/knowledge.py`
+so the build also rejects any future contradictory entry. The theorem makes no existence
+claim for the three rank-four groups of order 256 that it does not exclude.
 The groups [17], [22], [23], [26], [29], [31], [33], [34], [39], [2,22], and [2,26] are excluded
 for all **geometrically split** abelian surfaces over ℚ. Complete proofs and downloadable LaTeX
 are available from `proofs/geometric-17-obstruction.html`, `proofs/geometric-22-obstruction.html`,

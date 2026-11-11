@@ -62,6 +62,13 @@ The exclusions for [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7
 grades. The `qsplit` exclusion of [2,2,2,10] leaves its combined record unchanged, because its
 `gsplit` class is open.
 
+`QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
+they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].
+They appear separately on `exclusions.html`; no artificial curve or census row is created.
+The same `exclusions_record` check rejects any future contradictory `qsplit` entry.
+Their combined split infinitude grades are unchanged. The proof and its downloadable
+PDF/LaTeX are at `proofs/qsplit-order-256-obstruction.html`.
+
 Facts about infinitely many realisations live in `knowledge.py` (`_SIMPLE_EXACT`, `_SIMPLE_FAMILY`,
 `_SIMPLE_OPEN_NOTES`, `_SPLIT_FAMILY`, `_SPLIT_OPEN_NOTES`) with their sources in `SOURCES`; copies of
 the source tables go to `data/knowledge/sources/` with a line in `PROVENANCE.md`.  After editing, run

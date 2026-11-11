@@ -564,3 +564,30 @@ The LMFDB labels in `table1.txt`/`table2.txt` are of two kinds: production label
 pipeline re-resolves production labels by asking www.lmfdb.org to look the curve
 up by its equation (`/Genus2Curve/Q/?jump=[[f],[h]]`) and records the label it
 redirects to; extended-database rows are linked by equation.
+
+## Six order-256 exclusions for splitting over ℚ (11 November 2026)
+
+The complete, independently reviewed proof is published at
+[`qsplit-order-256-obstruction.html`](../../../proofs/qsplit-order-256-obstruction.html),
+with [PDF](qsplit_order256_obstruction.pdf), [LaTeX](qsplit_order256_obstruction.tex),
+and [Markdown](qsplit_order256_obstruction.md). These public versions have the same mathematical
+argument; the HTML adds navigation and the scope of the exclusion.
+
+A principally polarized abelian surface split over ℚ with rational torsion of order 256
+has full rational 2-torsion. This excludes the exact groups [4,64], [8,32], [16,16],
+[2,2,64], [2,4,32], and [2,8,16] at every splitting degree. The proof uses Mazur's
+theorem, Olson's rational CM torsion classification, Rouse–Zureick-Brown, Corollary 1.3,
+and complementary elliptic curves as in Bruin–Doerksen, Section 2. A trace-pairing
+argument treats all powers of 2 uniformly, including the nonadapted basis needed
+for small gluing degrees.
+
+The standard-library Python script [`qsplit_order256_matrix_checks.py`](qsplit_order256_matrix_checks.py)
+and its successful [log](qsplit_order256_matrix_checks.log) check the stabilizer index 96,
+nondegeneracy of the trace pairing, 2,560 determinant controls and 9,216 exact
+rational-matrix identities (7,680 with a fractional upper-right entry). These are
+supplementary checks, not a bounded search on which the theorem depends.
+
+The six groups have no census rows and appear on [`exclusions.html`](../../../exclusions.html).
+Their structured records in `pipeline/knowledge.py` also apply to future census entries.
+Only the `qsplit` class is excluded; neither other class receives an impossibility claim.
+No existence claim is made for [2,2,2,32], [2,2,4,16], or [2,2,8,8].

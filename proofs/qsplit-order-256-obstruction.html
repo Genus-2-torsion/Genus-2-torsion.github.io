@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Six exclusions at rational torsion order 256 — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="Complete proof that rational torsion of order 256 on a principally polarized abelian surface split over Q forces full rational 2-torsion, excluding six exact groups at every splitting degree.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', NS: '\\operatorname{NS}',
+          Sym: '\\operatorname{Sym}', tr: '\\operatorname{tr}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../exclusions.html">exclusions</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../exclusions.html">exclusions beyond the census</a><span class="sep">›</span>order 256</div>
+<h2 id="six-exclusions-at-rational-torsion-order-256">Six exclusions at
+rational torsion order 256</h2>
+<p class="src">11 November 2026 · Split over ℚ · Every splitting degree</p>
+  <p>Here “split over ℚ” means isogenous over ℚ to a product of elliptic curves defined over ℚ.
+    The six exclusions concern the <strong>exact</strong> rational torsion group.
+    They make no exclusion claim for geometrically simple Jacobians or for Jacobians that are
+    simple over ℚ and split only over an extension.</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsplit_order256_obstruction.pdf">Complete proof (PDF)</a>,
+      <a href="../data/knowledge/sources/qsplit_order256_obstruction.tex">LaTeX source</a>, and
+      <a href="../data/knowledge/sources/qsplit_order256_obstruction.md">Markdown source</a></li>
+    <li><a href="../data/knowledge/sources/qsplit_order256_matrix_checks.py">Supplementary matrix checks (Python)</a>
+      and <a href="../data/knowledge/sources/qsplit_order256_matrix_checks.log">successful log</a></li>
+  </ul>
+<div class="theorem" id="theorem">
+<p><strong>Theorem.</strong> Let <span class="math inline">\(A/\mathbb
+Q\)</span> be a principally polarized abelian surface that is split over
+<span class="math inline">\(\mathbb Q\)</span>. If <span
+class="math display">\[
+\#A(\mathbb Q)_{\mathrm{tors}}=256,
+\]</span> then <span class="math inline">\(A[2]\subseteq A(\mathbb
+Q)\)</span>. Consequently its rational torsion group is one of <span
+class="math display">\[
+C_2^3\times C_{32},\qquad
+C_2^2\times C_4\times C_{16},\qquad
+C_2^2\times C_8^2.
+\]</span> No existence assertion is made for these three groups. In
+particular, the six groups <span class="math display">\[
+[4,64],\quad[8,32],\quad[16,16],\quad
+[2,2,64],\quad[2,4,32],\quad[2,8,16]
+\]</span> are impossible for genus-2 Jacobians split over <span
+class="math inline">\(\mathbb Q\)</span>, at every splitting degree.</p>
+</div>
+<h3 id="the-full-elliptic-2-adic-image">1. The full elliptic 2-adic
+image</h3>
+<p>Let <span class="math inline">\(E/\mathbb Q\)</span> have rational
+torsion <span class="math inline">\(C_8\times C_2\)</span>. Choose a
+basis of its Tate module in which <span class="math display">\[
+T=E(\mathbb Q)_{\mathrm{tors}}
+=\left\langle \frac{e_1}{8},\frac{e_2}{2}\right\rangle
+\subseteq (\mathbb Q_2/\mathbb Z_2)^2,
+\qquad D=\operatorname{diag}(8,2).
+\]</span> The pointwise stabilizer of <span
+class="math inline">\(T\)</span> is <span class="math display">\[
+H_0=\{I+MD:M\in M_2(\mathbb Z_2)\}.
+\]</span> All these matrices are invertible. The group has index 96 in
+<span class="math inline">\(\operatorname{GL}_2(\mathbb Z_2)\)</span>:
+its reduction modulo 8 has order 16, while <span
+class="math inline">\(\#\operatorname{GL}_2(\mathbb
+Z/8)=1536\)</span>.</p>
+<p>The curve <span class="math inline">\(E\)</span> is non-CM, since
+Olson’s classification of rational torsion on CM elliptic curves
+excludes a point of order 8. By Rouse–Zureick-Brown, Corollary 1.3, the
+index of its 2-adic image divides 64 or 96. Since that image is
+contained in <span class="math inline">\(H_0\)</span>, its index is a
+multiple of 96. Hence its image is exactly <span
+class="math inline">\(H_0\)</span>.</p>
+<h3 id="a-matrix-lemma-for-maximal-gluing">2. A matrix lemma for maximal
+gluing</h3>
+<p><strong>Lemma.</strong> Let <span class="math inline">\(E,F/\mathbb
+Q\)</span> have exact rational torsion <span
+class="math inline">\(C_8\times C_2\)</span>. Let <span
+class="math inline">\(q\ge2\)</span> be a power of 2 and let <span
+class="math inline">\(\psi:E[q]\to F[q]\)</span> be a Galois-equivariant
+isomorphism. Put <span class="math display">\[
+B=(E\times F)/\operatorname{graph}(\psi).
+\]</span> If <span class="math inline">\(\#B(\mathbb
+Q)_{\mathrm{tors}}=256\)</span>, then <span
+class="math inline">\(B[2]\)</span> is rational.</p>
+<p><strong>Proof.</strong> Choose a basis of <span
+class="math inline">\(T_2E\)</span> adapted to <span
+class="math inline">\(T\)</span> as above. Choose a basis of <span
+class="math inline">\(T_2F\)</span> lifting its image under <span
+class="math inline">\(\psi\)</span>. Thus the gluing is the identity
+modulo <span class="math inline">\(q\)</span>. This second basis need
+not be adapted to the rational torsion of <span
+class="math inline">\(F\)</span>. Choose <span
+class="math inline">\(P\in\operatorname{GL}_2(\mathbb Z_2)\)</span> so
+that multiplication by <span class="math inline">\(P\)</span> converts
+its coordinates to an adapted basis. The rational torsion of <span
+class="math inline">\(F\)</span>, in the gluing coordinates, is
+therefore <span class="math inline">\(P^{-1}T\)</span>.</p>
+<p>For a Galois element, write <span class="math inline">\(g,h\)</span>
+for its matrices in the gluing coordinates. We have <span
+class="math display">\[
+h\equiv g\pmod q,
+\qquad g\equiv h\equiv I\pmod2,
+\qquad \det h=\det g.
+\]</span> The first image is exactly <span
+class="math inline">\(H_0\)</span>. We write <span
+class="math display">\[
+M=(g-I)D^{-1},\qquad V=(h-g)/q.
+\]</span> Both are integral, and <span class="math inline">\(M\)</span>
+ranges over every element of <span class="math inline">\(M_2(\mathbb
+Z_2)\)</span>.</p>
+<p>The two elliptic quotient maps from <span
+class="math inline">\(B\)</span> are surjective on rational torsion:
+each kernel on rational torsion has order 16 and the proposed total
+order is 256. Consider <span class="math display">\[
+\tau:B\longrightarrow E\times F,
+\qquad [X,Y]\longmapsto(qX,qY).
+\]</span> Its image on rational torsion projects onto both elliptic
+torsion groups. The kernel of either projection is the corresponding
+subgroup <span class="math inline">\(qT\)</span>. After using adapted
+coordinates on both factors, this image modulo <span
+class="math inline">\(qT\times qT\)</span> is therefore the graph of an
+isomorphism <span class="math display">\[
+\varphi:T/qT\longrightarrow T/qT.
+\]</span></p>
+<p>Choose rational lifts under the first elliptic quotient of the
+generators <span class="math inline">\(e_1/8\)</span> and <span
+class="math inline">\(e_2/2\)</span>. By adding graph elements to
+representatives, we may write them as <span class="math display">\[
+\left(\frac{e_1}{8q},\frac{Ne_1}{8q}\right),
+\qquad
+\left(\frac{e_2}{2q},\frac{Ne_2}{2q}\right).
+\]</span> Here <span class="math display">\[
+N=P^{-1}L,
+\qquad
+L=\begin{pmatrix}a&amp;c/4\\4b&amp;d\end{pmatrix},
+\qquad a,b,c,d\in\mathbb Z_2.
+\]</span> Indeed, the second elliptic images are linear combinations of
+the two adapted generators with coefficient columns <span
+class="math inline">\((a,b)\)</span> and <span
+class="math inline">\((c,d)\)</span>. Changing a representative by a
+point of <span class="math inline">\(F[q]\)</span> changes these
+coefficients by even integers, so their reductions modulo 2 represent
+the induced automorphism of <span class="math inline">\(T/2T\)</span>.
+Consequently <span class="math inline">\(ad-bc\)</span> is odd. In
+particular, <span class="math display">\[
+DN^{-1}
+=\frac1{ad-bc}
+\begin{pmatrix}8d&amp;-2c\\-8b&amp;2a\end{pmatrix}P
+\in 2M_2(\mathbb Z_2).                                  \tag{1}
+\]</span> This holds even if <span class="math inline">\(L\)</span> has
+a nonintegral upper-right entry.</p>
+<p>Rationality of the two chosen lifts says that, for every Galois
+element, there is an integral matrix <span
+class="math inline">\(W\)</span> such that <span class="math display">\[
+(h-I)N-(g-I)=qWD.                                       \tag{2}
+\]</span> Put <span class="math display">\[
+K=\frac Dq(I-N^{-1})\in M_2(\mathbb Q_2).
+\]</span> Rearranging (2) gives <span class="math display">\[
+V=WDN^{-1}-MK.                                         \tag{3}
+\]</span> Choose a Galois element for which <span
+class="math inline">\(M=I\)</span>, which exists by the full-image
+result. Then (1) and (3), together with the integrality of <span
+class="math inline">\(V\)</span>, show that <span
+class="math inline">\(K\)</span> is integral.</p>
+<p>For every Galois element, <span class="math inline">\(\det(g+qV)=\det
+g\)</span>. Since <span class="math inline">\(q\)</span> is even and
+<span class="math inline">\(g\equiv I\pmod2\)</span>, expansion of the
+determinant gives <span class="math display">\[
+\operatorname{tr}(V)\equiv0\pmod2.
+\]</span> Reducing (3) modulo 2 and using (1), we obtain <span
+class="math display">\[
+\operatorname{tr}(MK)\equiv0\pmod2
+\qquad\text{for all }M\in M_2(\mathbb F_2).
+\]</span> The trace pairing on <span class="math inline">\(M_2(\mathbb
+F_2)\)</span> is nondegenerate, so <span
+class="math inline">\(K\equiv0\pmod2\)</span>. Equation (3) now shows
+that <span class="math inline">\(V\equiv0\pmod2\)</span> for every
+Galois element. Thus <span class="math display">\[
+h\equiv g\pmod{2q}.
+\]</span></p>
+<p>Explicitly, identify the 2-primary torsion of <span
+class="math inline">\(B\)</span> with two copies of <span
+class="math inline">\((\mathbb Q_2/\mathbb Z_2)^2\)</span> through <span
+class="math display">\[
+\theta(x,z)=\left[\frac{\widetilde x}{q},
+                         \frac{\widetilde x}{q}+\widetilde z\right],
+\]</span> where tildes denote lifts. Changing a lift of <span
+class="math inline">\(x\)</span> changes the representative by a graph
+element, so this is well defined. Its inverse is induced by <span
+class="math inline">\((X,Y)\mapsto(qX,Y-X)\)</span>. The Galois action
+in these coordinates is <span class="math display">\[
+(x,z)\longmapsto(gx,Vx+hz).
+\]</span> Equivalently, on <span class="math inline">\(T_2B\)</span> it
+has block matrix <span class="math display">\[
+\begin{pmatrix}g&amp;0\\(h-g)/q&amp;h\end{pmatrix}.
+\]</span> Its reduction modulo 2 is the identity. Hence all of <span
+class="math inline">\(B[2]\)</span> is rational. <span
+class="math inline">\(\square\)</span></p>
+<h3 id="proof-of-the-theorem">3. Proof of the theorem</h3>
+<p>Choose complementary elliptic subvarieties <span
+class="math inline">\(E,F\)</span> of <span
+class="math inline">\(A\)</span>. Their torsion groups embed in <span
+class="math inline">\(A(\mathbb Q)_{\mathrm{tors}}\)</span>, and the
+elliptic quotient sequences give <span class="math display">\[
+256\mid\#E(\mathbb Q)_{\mathrm{tors}}\,
+          \#F(\mathbb Q)_{\mathrm{tors}}.
+\]</span> Mazur’s theorem bounds each factor by 16. Thus both groups are
+<span class="math inline">\(C_8\times C_2\)</span>.</p>
+<p>The complementary elliptic decomposition writes <span
+class="math inline">\(A\)</span> as a quotient by the graph of an
+anti-isometry <span class="math inline">\(E[n]\to F[n]\)</span>. Put
+<span class="math inline">\(q=2^{v_2(n)}\)</span>. Passing to the graph
+of its restriction to <span class="math inline">\(E[q]\)</span>
+preserves rational 2-primary torsion, since the discarded isogeny degree
+is odd. If <span class="math inline">\(q=1\)</span>, the rational
+torsion is the direct product of the two elliptic groups, with full
+rational 2-torsion. If <span class="math inline">\(q\ge2\)</span>, the
+intermediate quotient has rational 2-primary torsion of order 256; the
+same elliptic quotient bound shows that its entire rational torsion
+group has order 256. Thus the lemma applies. In either case <span
+class="math inline">\(A[2]\)</span> is rational.</p>
+<p>Write its rational torsion as <span
+class="math inline">\(C_{d_1}\times C_{d_2}\times C_{d_3}\times
+C_{d_4}\)</span>, with <span class="math inline">\(d_1\mid d_2\mid
+d_3\mid d_4\)</span>. Full rational 2-torsion gives <span
+class="math inline">\(2\mid d_i\)</span>, while the Weil pairing over
+<span class="math inline">\(\mathbb Q\)</span> forces <span
+class="math inline">\(d_1,d_2\mid2\)</span>. Thus <span
+class="math inline">\(d_1=d_2=2\)</span> and <span
+class="math inline">\(d_3d_4=64\)</span>, giving precisely the three
+groups in the statement. <span
+class="math inline">\(\square\)</span></p>
+<h3 id="references-and-verification">References and verification</h3>
+<ol type="1">
+<li>B. Mazur, <em>Modular curves and the Eisenstein ideal</em>, Publ.
+Math. IHES 47 (1977), Theorem (8). <a
+href="https://www.numdam.org/item/PMIHES_1977__47__33_0/">Primary
+paper</a>.</li>
+<li>L. D. Olson, <em>Points of finite order on elliptic curves with
+complex multiplication</em>, Manuscripta Math. 14 (1974), 195–205. <a
+href="https://doi.org/10.1007/BF01171442">Published paper</a>. Rational
+CM torsion excludes order 8.</li>
+<li>J. Rouse and D. Zureick-Brown, <em>Elliptic curves over Q and 2-adic
+images of Galois</em>, Research in Number Theory 1 (2015), article 12,
+Corollary 1.3. <a href="https://arxiv.org/pdf/1402.5997">Primary
+paper</a>, page 2. The source uses row vectors; transposing to column
+conventions leaves its index result unchanged.</li>
+<li>N. Bruin and K. Doerksen, <em>The arithmetic of genus two curves
+with (4,4)-split Jacobians</em>, Canad. J. Math. 63 (2011), Section 2,
+especially Proposition 2.8 and Lemma 2.6. <a
+href="https://arxiv.org/pdf/0902.3480">Primary paper</a>.</li>
+</ol>
+<p>The proof applies to every splitting degree and does not depend on a
+bounded search or a finite-level gluing classification.</p>
+<p>The supplementary <a
+href="https://genus-2-torsion.github.io/data/knowledge/sources/qsplit_order256_matrix_checks.py">exact
+matrix checks</a>, with <a
+href="https://genus-2-torsion.github.io/data/knowledge/sources/qsplit_order256_matrix_checks.log">completed
+log</a>, verify the stabilizer index, the nondegenerate trace pairing,
+2,560 determinant calculations, and 9,216 rational-matrix identities,
+including 7,680 cases with a fractional upper-right entry. These are
+ancillary checks of the displayed identities; they are not a finite
+search for all gluing degrees.</p>
+</main>
+<footer class="site"><div class="links"><a href="../exclusions.html">exclusions beyond the census</a><span class="sep">·</span><a href="../about.html#sources">sources</a><span class="sep">·</span><a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io">source &amp; data on GitHub</a></div></footer>
+</body>
+</html>

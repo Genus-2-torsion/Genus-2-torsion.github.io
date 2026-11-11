@@ -151,6 +151,13 @@ SOURCES = {
         "url": "proofs/qsimple-2214-obstruction.html",
         "used_for": "impossibility of [2,2,14] in the geometrically split, simple-over-ℚ class; with QSplitTwoRankObstruction, on the whole geometrically split side",
     },
+    "QSimple228Obstruction": {
+        "short": "ℚ-simple geometric [2,28] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Rational 7-torsion and the 2-primary torsion of geometrically split principally polarized abelian surfaces, census proof of 11 November 2026. If the surface is simple over Q and has a rational point of order 7, its rational 2-primary torsion has order at most four. A 3-adic polarization obstruction handles cyclic cubic endomorphism fields; a discriminant cover of X_0(21) and Frobenius at 29 handle cyclic sextic fields.",
+        "url": "proofs/qsimple-228-obstruction.html",
+        "used_for": "impossibility of [2,28] only in the geometrically split, simple-over-ℚ class, at every geometric splitting degree; also excludes any group with 7-torsion and 2-primary order at least eight in that class, including groups outside the census; requires a principal polarization",
+    },
     "QSimple35Obstruction": {
         "short": "ℚ-simple geometric [35] and [70] exclusion proof (2026)", "year": 2026,
         "kind": "proof",
@@ -407,7 +414,7 @@ GSPLIT_SOURCES = {"17": ["Mazur1977", "Kamienny1992", "SerreTate1968"], "22": ["
 
 
 # gsplit proofs that need simplicity over ℚ (the others apply to every geometrically split surface)
-QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2214Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
+QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2214Obstruction", "QSimple228Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
                 "QSimpleRankTwoObstruction"}
 
 
@@ -489,6 +496,11 @@ def exclusions_record(key: str) -> dict:
         exclusions["gsplit"] = record("QSimple2214Obstruction", GSPLIT_REASON["2.2.14"], GSPLIT_SOURCES["2.2.14"])
     elif any(rank(p) >= 2 for p in range(5, exponent + 1) if all(p % q for q in range(2, p))):
         exclusions["gsplit"] = record("QSimpleRankTwoObstruction", GSPLIT_REASON["p.p"], GSPLIT_SOURCES["p.p"])
+    elif exponent % 7 == 0 and order % 8 == 0:
+        exclusions["gsplit"] = record(
+            "QSimple228Obstruction",
+            "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-primary torsion of order at most four if it has a rational point of order 7. This group has 7-torsion and 2-primary order at least eight, so it is impossible in that class at every geometric splitting degree.",
+            ["QSimple2214Obstruction", "QSimple63Obstruction", "Geometric2639Obstruction", "Faltings1983", "KenkuMomose1988"])
     return exclusions
 
 

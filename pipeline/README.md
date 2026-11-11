@@ -62,6 +62,15 @@ The exclusions for [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7
 grades. The `qsplit` exclusion of [2,2,2,10] leaves its combined record unchanged, because its
 `gsplit` class is open.
 
+`QSimple228Obstruction` adds the principal-polarization bound that rational 7-torsion forces
+rational 2-primary torsion of order at most four on a geometrically split surface simple over ℚ.
+The predicate applies to any group with 7-torsion and order divisible by eight, including future
+entries, while retaining earlier proof sources for already excluded groups. It newly marks
+[2,28] impossible only in `gsplit`; its `qsplit` case and combined split grade stay open.
+The proof is in `proofs/qsimple-228-obstruction.html`, with PDF/LaTeX and checks under
+`data/knowledge/sources/qsimple_228_*`. Examples beyond the census, such as [56], are documented
+on `exclusions.html` rather than added as curve records.
+
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].
 They appear separately on `exclusions.html`; no artificial curve or census row is created.

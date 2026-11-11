@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rational 7-torsion and the 2-primary torsion of geometrically split Jacobians — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A principally polarized geometrically split abelian surface over Q that is simple over Q and has rational 7-torsion has rational 2-primary torsion of order at most four. Complete proof excluding [2,28] in the Q-simple geometrically split class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .math.display { display: block; overflow-x: auto; }
+    .proof h3 { scroll-margin-top: 1rem; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', tr: '\\operatorname{tr}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site"><div class="inner">
+  <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+  <nav aria-label="Main navigation">
+    <a href="../index.html">groups</a>
+    <a href="../exclusions.html">exclusions</a>
+    <a href="../submit.html">submit a curve</a>
+    <a href="../about.html">about &amp; sources</a>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+  </nav>
+</div></header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=2.28">[2,28]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>Rational \(7\)-torsion and the \(2\)-primary torsion of geometrically split Jacobians</h2>
+  <p class="src">11 November 2026 · Geometrically split, simple over ℚ · Principal polarization required</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsimple_228_obstruction.pdf">Complete proof (PDF)</a> · <a href="../data/knowledge/sources/qsimple_228_obstruction.tex">LaTeX</a> · <a href="../data/knowledge/sources/qsimple_228_obstruction.md">Markdown</a></li>
+    <li><a href="../data/knowledge/sources/qsimple_228_checks.m">Standalone Magma certificate</a> · <a href="../data/knowledge/sources/qsimple_228_checks.log">Successful verification log</a></li>
+  </ul>
+<nav aria-label="Proof contents"><ol class="contents">
+      <li><a href="#theorem-and-scope">Theorem and scope</a></li>
+      <li><a href="#conventions-and-the-existing-reduction">1. Conventions and the existing reduction</a></li>
+      <li><a href="#cyclic-cubic-endomorphism-field-polarization-at-3">2. Cyclic cubic endomorphism field: polarization at 3</a></li>
+      <li><a href="#cyclic-sextic-field-a-level-21-point-with-square-discriminant">3. Cyclic sextic field: a level-21 point with square discriminant</a></li>
+      <li><a href="#the-discriminant-cover-and-its-rank-zero-quotients">4. The discriminant cover and its rank-zero quotients</a></li>
+      <li><a href="#frobenius-at-29">5. Frobenius at 29</a></li>
+      <li><a href="#conclusion">6. Conclusion</a></li>
+      <li><a href="#verification">7. Verification</a></li>
+      <li><a href="#references">References</a></li>
+    </ol></nav>
+<h3 id="theorem-and-scope">Theorem and scope</h3>
+<div class="theorem" id="theorem"><p><strong>Theorem.</strong> Let <span class="math inline">\(A/\mathbb
+Q\)</span> be a principally polarized abelian surface that is simple
+over <span class="math inline">\(\mathbb Q\)</span> and geometrically
+split. If <span class="math inline">\(A(\mathbb Q)\)</span> has a point
+of order <span class="math inline">\(7\)</span>, then <span
+class="math display">\[
+\#A(\mathbb Q)[2^\infty]\leq 4.
+\]</span></p>
+<p><strong>Corollary.</strong> No genus-<span
+class="math inline">\(2\)</span> Jacobian in this class has rational
+torsion containing <span class="math inline">\(C_2\times
+C_{28}\)</span>. In particular, the exact group <span
+class="math inline">\([2,28]\)</span> is impossible in the census column
+<strong>geometrically split, simple over <span
+class="math inline">\(\mathbb Q\)</span></strong>. More generally, every
+group with <span class="math inline">\(7\)</span>-torsion and <span
+class="math inline">\(2\)</span>-primary subgroup of order at least
+eight is excluded in this class, including <span
+class="math inline">\([56]\)</span> and <span
+class="math inline">\([2,2,14]\)</span>.</p></div>
+<p>Here geometrically split means that <span
+class="math inline">\(A_{\overline{\mathbb Q}}\)</span> is isogenous to
+a product of elliptic curves. There is no restriction on the splitting
+degree or the integral endomorphism ring. The principal polarization is
+used in the cyclic cubic case. The theorem does not exclude <span
+class="math inline">\([2,28]\)</span> for Jacobians split over <span
+class="math inline">\(\mathbb Q\)</span>, or for geometrically simple
+Jacobians. The combined geometrically split existence and infinitude
+question for <span class="math inline">\([2,28]\)</span> therefore
+remains open. The bound also leaves <span
+class="math inline">\([28]\)</span> and <span
+class="math inline">\([2,14]\)</span> unexcluded.</p>
+<p>The complete proof is available as <a
+href="../data/knowledge/sources/qsimple_228_obstruction.pdf">PDF</a>
+and <a
+href="../data/knowledge/sources/qsimple_228_obstruction.tex">LaTeX</a>.
+The exact <a
+href="../data/knowledge/sources/qsimple_228_checks.m">Magma
+certificate</a> and its <a
+href="../data/knowledge/sources/qsimple_228_checks.log">completed
+log</a> accompany the proof.</p>
+<h3 id="conventions-and-the-existing-reduction">1. Conventions and the
+existing reduction</h3>
+<p>For a number field <span class="math inline">\(k\)</span>, put <span
+class="math inline">\(G_k=\operatorname{Gal}(\overline{\mathbb
+Q}/k)\)</span>. Write <span class="math inline">\(T_\ell\)</span> for
+the Tate module, <span class="math inline">\(V_\ell=T_\ell\otimes\mathbb
+Q_\ell\)</span>, and <span class="math inline">\(\chi_\ell\)</span> for
+the cyclotomic character. We use residual semisimplification to compare
+different stable lattices in one rational Tate representation; rational
+torsion is not moved along arbitrary isogenies.</p>
+<p>The <a
+href="qsimple-2214-obstruction.html">published
+rational-<span class="math inline">\(7\)</span>-torsion and <span
+class="math inline">\(2\)</span>-rank proof</a>, especially Proposition
+2, the cyclic-field reduction, and its remarks on <span
+class="math inline">\([2,28]\)</span>, gives the following inputs.</p>
+<ul>
+<li>If the geometric elliptic factors are nonisogenous, or form a non-CM
+square with quadratic endomorphism field, rational <span
+class="math inline">\(7\)</span>-torsion forces the entire rational
+<span class="math inline">\(2\)</span>-primary torsion to have order at
+most four. This uses Kenku–Momose’s quadratic elliptic torsion
+theorem.</li>
+<li>For a CM elliptic square, a point count at <span
+class="math inline">\(3\)</span> gives the same bound.</li>
+<li>The only remaining endomorphism fields are cyclic of degree <span
+class="math inline">\(3\)</span> or <span
+class="math inline">\(6\)</span>.</li>
+</ul>
+<p>In these last two cases put <span class="math display">\[
+D=\operatorname{End}^0(A_{\overline{\mathbb Q}})\simeq M_2(\mathbb Q),
+\qquad F=\operatorname{End}^0_{\mathbb Q}(A)=\mathbb Q(\sqrt{-3}),
+\]</span> and let <span class="math inline">\(L\)</span> be the smallest
+field over which all geometric endomorphisms are defined. The
+normalization and cubic untwisting below are those proved in the <a
+href="qsimple-63-obstruction.html">order-<span
+class="math inline">\(63\)</span> proof</a>, Sections 5–7 and 10.2, and
+the <a
+href="geometric-26-39-obstruction.html">order-<span
+class="math inline">\(26/39\)</span> proof</a>, Section 8. We show that,
+in either remaining case, rational <span
+class="math inline">\(7\)</span>-torsion is incompatible with rational
+<span class="math inline">\(2\)</span>-torsion.</p>
+<h3 id="cyclic-cubic-endomorphism-field-polarization-at-3">2. Cyclic
+cubic endomorphism field: polarization at 3</h3>
+<p>Suppose <span class="math inline">\(\operatorname{Gal}(L/\mathbb
+Q)=C_3\)</span>. Cubic untwisting expresses the rational Tate
+representation as <span class="math display">\[
+V_\ell(A)\simeq V_\ell(E_0)\otimes_{\mathbb Q_\ell}W_\ell,
+\]</span> where <span class="math inline">\(E_0/\mathbb Q\)</span> is
+non-CM and <span class="math inline">\(W\)</span> is the two-dimensional
+rational representation given by a faithful character <span
+class="math display">\[
+\psi:G_{\mathbb Q}\longrightarrow\mu_3\subset F^\times,
+\qquad \ker\psi=G_L.
+\]</span> This is the construction in Section 10.2 of the order-<span
+class="math inline">\(63\)</span> proof before its specialization to an
+elliptic isogeny class. Replacing <span
+class="math inline">\(\psi\)</span> by its inverse does not affect the
+argument.</p>
+<h4 id="principal-polarization-forces-a-rational-3-isogeny-on-e_0">2.1.
+Principal polarization forces a rational 3-isogeny on <span
+class="math inline">\(E_0\)</span></h4>
+<p>Suppose that <span class="math inline">\(E_0[3]\)</span> is
+irreducible over <span class="math inline">\(\mathbb F_3\)</span>. Let
+<span class="math display">\[
+\mathcal O=\mathbb Z_3[\zeta_3],\qquad \pi=\zeta_3-1,
+\qquad T_0=T_3(E_0)\otimes_{\mathbb Z_3}\mathcal O.
+\]</span> The lattice <span class="math inline">\(T_0\)</span> is <span
+class="math inline">\(G_{\mathbb Q}\)</span>-stable, with <span
+class="math inline">\(G_{\mathbb Q}\)</span> acting on its second factor
+by <span class="math inline">\(\psi\)</span>. Since <span
+class="math inline">\(\pi^2\)</span> is a unit times <span
+class="math inline">\(3\)</span>, the module <span
+class="math inline">\(T_0/3T_0\)</span> is an extension of <span
+class="math inline">\(W_0=E_0[3]\)</span> by itself, with natural
+submodule <span class="math inline">\(\pi T_0/3T_0\)</span>.</p>
+<p>This extension is nonsplit. Modulo <span
+class="math inline">\(\pi^2\)</span>, write <span
+class="math display">\[
+\psi(g)=1+c(g)\pi,
+\]</span> where <span class="math inline">\(c:G_{\mathbb Q}\to\mathbb
+F_3\)</span> is a nonzero additive character. A <span
+class="math inline">\(G_{\mathbb Q}\)</span>-linear splitting would give
+an <span class="math inline">\(\mathbb F_3\)</span>-linear endomorphism
+<span class="math inline">\(S\)</span> of <span
+class="math inline">\(W_0\)</span> satisfying, up to an irrelevant
+overall sign, <span class="math display">\[
+\rho(g)^{-1}S\rho(g)-S=c(g)I.
+\]</span> Taking traces gives <span
+class="math inline">\(2c(g)=0\)</span> in <span
+class="math inline">\(\mathbb F_3\)</span>, a contradiction. As <span
+class="math inline">\(W_0\)</span> is irreducible, a nonsplit length-two
+self-extension has a unique proper nonzero submodule.</p>
+<p>It follows that every <span class="math inline">\(G_{\mathbb
+Q}\)</span>-stable <span class="math inline">\(\mathbb
+Z_3\)</span>-lattice in this rational representation is <span
+class="math inline">\(\pi^jT_0\)</span> for some integer <span
+class="math inline">\(j\)</span>. Indeed, scale such a lattice <span
+class="math inline">\(T\)</span> by a power of <span
+class="math inline">\(3\)</span> so that <span
+class="math inline">\(T\subseteq T_0\)</span> but <span
+class="math inline">\(T\nsubseteq3T_0\)</span>. If its image modulo
+<span class="math inline">\(3T_0\)</span> is the whole module, Nakayama
+gives <span class="math inline">\(T=T_0\)</span>. Otherwise its image is
+the unique proper nonzero submodule, so <span
+class="math inline">\(T\subseteq\pi T_0\)</span>. Then <span
+class="math inline">\(\pi^{-1}T\subseteq T_0\)</span> but <span
+class="math inline">\(\pi^{-1}T\nsubseteq\pi T_0\)</span>. Its reduction
+cannot be that proper submodule, and Nakayama gives <span
+class="math inline">\(\pi^{-1}T=T_0\)</span>.</p>
+<p>The space of <span class="math inline">\(G_{\mathbb
+Q}\)</span>-equivariant alternating forms on <span
+class="math inline">\(V_3(A)\)</span> with cyclotomic similitude is
+one-dimensional over <span class="math inline">\(\mathbb Q_3\)</span>.
+To see this, restrict first to <span class="math inline">\(G_L\)</span>.
+By Faltings’s theorem and <span
+class="math inline">\(\operatorname{End}_L(E_0)=\mathbb Z\)</span>,
+equivariant bilinear forms on <span
+class="math inline">\(V_3(E_0)\)</span> with cyclotomic multiplier form
+the line spanned by the elliptic Weil pairing <span
+class="math inline">\(e\)</span>. Thus the alternating forms on <span
+class="math inline">\(V_3(A)\)</span> have the form <span
+class="math inline">\(e\otimes b\)</span>, with <span
+class="math inline">\(b\)</span> symmetric on the multiplicity space.
+Invariance under <span class="math inline">\(\mu_3\)</span> forces <span
+class="math inline">\(b\)</span> to be a scalar multiple of <span
+class="math display">\[
+b_0(a,b)=\operatorname{Tr}_{\mathbb Q_3(\zeta_3)/\mathbb Q_3}(a\overline
+b).
+\]</span></p>
+<p>For this trace pairing, the dual of <span
+class="math inline">\(\mathcal O\)</span> is the inverse different <span
+class="math inline">\(\pi^{-1}\mathcal O\)</span>. Since <span
+class="math inline">\(T_3(E_0)\)</span> is self-dual for <span
+class="math inline">\(e\)</span>, the dual of <span
+class="math inline">\(\pi^jT_0\)</span> under <span
+class="math inline">\(q(e\otimes b_0)\)</span>, for <span
+class="math inline">\(q\in\mathbb Q_3^\times\)</span>, is <span
+class="math display">\[
+\pi^{-j-1-2v_3(q)}T_0.
+\]</span> Self-duality would require <span class="math display">\[
+2j=-1-2v_3(q),
+\]</span> which is impossible by parity. A principal polarization
+supplies exactly such a perfect alternating form on <span
+class="math inline">\(T_3(A)\)</span>. Hence <span
+class="math inline">\(E_0[3]\)</span> is reducible, and <span
+class="math inline">\(E_0\)</span> has a rational cyclic <span
+class="math inline">\(3\)</span>-isogeny. The argument in fact excludes
+every polarization of degree prime to <span
+class="math inline">\(3\)</span> in the isogeny class under the
+irreducibility hypothesis.</p>
+<h4 id="rational-7-torsion-and-x_021">2.2. Rational 7-torsion and <span
+class="math inline">\(X_0(21)\)</span></h4>
+<p>Since <span class="math inline">\(7\)</span> splits in <span
+class="math inline">\(F\)</span>, the two characters of <span
+class="math inline">\(W\)</span> over <span
+class="math inline">\(\mathbb F_7\)</span> are <span
+class="math inline">\(\psi\)</span> and <span
+class="math inline">\(\psi^{-1}\)</span>. A trivial constituent coming
+from <span class="math inline">\(A(\mathbb Q)[7]\ne0\)</span> forces
+<span class="math inline">\(E_0[7]\)</span> to have one of these
+character constituents. Thus <span class="math inline">\(E_0[7]\)</span>
+is reducible and <span class="math inline">\(E_0\)</span> has a rational
+cyclic <span class="math inline">\(7\)</span>-isogeny. The coprime
+kernels of the <span class="math inline">\(3\)</span>- and <span
+class="math inline">\(7\)</span>-isogenies give a rational cyclic <span
+class="math inline">\(21\)</span>-isogeny.</p>
+<p>The exact certificate enumerates all rational points of <span
+class="math inline">\(X_0(21)\)</span>, using algebraic rank zero and
+its torsion group <span class="math inline">\(C_2\times C_4\)</span>.
+Its four noncuspidal <span class="math inline">\(j\)</span>-invariants
+are <span class="math display">\[
+-\frac{189613868625}{128},\qquad \frac{3375}{2},\qquad
+-\frac{1159088625}{2097152},\qquad -\frac{140625}{8}.
+\]</span> For each, the elliptic <span
+class="math inline">\(2\)</span>-division polynomial is irreducible with
+nonsquare discriminant, so its splitting field has Galois group <span
+class="math inline">\(S_3\)</span>. These properties are unchanged by
+quadratic twists; none of the four values is <span
+class="math inline">\(0\)</span> or <span
+class="math inline">\(1728\)</span>.</p>
+<p>An <span class="math inline">\(S_3\)</span> extension has no cyclic
+cubic subextension, so it is linearly disjoint from <span
+class="math inline">\(L\)</span>. Therefore <span
+class="math inline">\(E_0[2]\)</span> remains irreducible on <span
+class="math inline">\(G_L\)</span>. The representation <span
+class="math inline">\(W\)</span> becomes trivial there, so the residual
+semisimplification of <span class="math inline">\(A[2]\)</span>
+restricted to <span class="math inline">\(G_L\)</span> has two copies of
+this nontrivial irreducible constituent and has no trivial constituent.
+In particular <span class="math inline">\(A(\mathbb Q)[2]=0\)</span>.
+This completes the cubic case.</p>
+<h3
+id="cyclic-sextic-field-a-level-21-point-with-square-discriminant">3.
+Cyclic sextic field: a level-21 point with square discriminant</h3>
+<p>Suppose <span class="math inline">\(\operatorname{Gal}(L/\mathbb
+Q)=C_6\)</span>, and let <span class="math inline">\(K\)</span> be its
+quadratic subfield. The construction in Section 8 of the order-<span
+class="math inline">\(26/39\)</span> proof gives the following facts
+without a torsion assumption.</p>
+<ol type="1">
+<li>Both <span class="math inline">\(L\)</span> and <span
+class="math inline">\(K\)</span> are totally real.</li>
+<li>After an isogeny normalizing the action of <span
+class="math inline">\(\mathbb Z[\zeta_3]\)</span> and a cubic twist, one
+obtains <span class="math inline">\(B/\mathbb Q\)</span> whose geometric
+endomorphisms are all defined over <span
+class="math inline">\(K\)</span>.</li>
+<li>There is <span
+class="math inline">\(\theta\in\operatorname{End}_{\mathbb
+Q}(B)\)</span> with <span class="math inline">\(\theta^2=-3\)</span>.
+For each elliptic <span class="math inline">\(E_0\subset B_K\)</span>,
+the restriction of <span class="math inline">\(\theta\)</span> gives a
+cyclic <span class="math inline">\(K\)</span>-isogeny of degree <span
+class="math inline">\(3\)</span> to its distinct conjugate <span
+class="math inline">\(E_0^\tau\)</span>.</li>
+<li>On <span class="math inline">\(G_K\)</span>, the original
+representation differs from that of <span
+class="math inline">\(B\)</span> by a faithful cubic multiplicity
+character <span class="math inline">\(\psi\)</span>, with kernel <span
+class="math inline">\(G_L\)</span>.</li>
+</ol>
+<h4 id="the-level-7-structure-and-its-conjugation">3.1. The level-7
+structure and its conjugation</h4>
+<p>Rational <span class="math inline">\(7\)</span>-torsion supplies a
+one-dimensional constituent in one of the two <span
+class="math inline">\(7\)</span>-adic <span
+class="math inline">\(F\)</span>-blocks. The lattice argument in
+Proposition 9.1 of the order-<span class="math inline">\(26/39\)</span>
+proof applies with <span class="math inline">\(7\)</span> in place of
+<span class="math inline">\(13\)</span>. Here are the steps needed for
+this application.</p>
+<ul>
+<li>In a chosen <span class="math inline">\(F\)</span>-block of the
+normalized surface, cubic twisting preserves reducibility modulo <span
+class="math inline">\(7\)</span>. Choose a <span
+class="math inline">\(G_{\mathbb Q}\)</span>-stable line in that
+residual block of <span class="math inline">\(B\)</span>.</li>
+<li>Inclusion of <span class="math inline">\(E_0\)</span> followed by
+projection to the chosen block is a <span
+class="math inline">\(G_K\)</span>-equivariant isomorphism on rational
+Tate modules. Faltings’s theorem gives irreducibility of <span
+class="math inline">\(V_7(E_0)\)</span>, and the projection cannot
+vanish: otherwise <span class="math inline">\(V_7(E_0)\)</span> would be
+stable under <span class="math inline">\(\theta\)</span>, contradicting
+<span class="math inline">\(\theta E_0\ne E_0\)</span>.</li>
+<li>Realize the block lattice by a <span
+class="math inline">\(K\)</span>-isogeny <span
+class="math inline">\(h:E_0\to E\)</span> of degree <span
+class="math inline">\(7^b\)</span> and pull the residual line back to a
+<span class="math inline">\(G_K\)</span>-stable subgroup <span
+class="math inline">\(C_7\subset E[7]\)</span>.</li>
+<li>Galois action outside <span class="math inline">\(G_K\)</span> gives
+a <span class="math inline">\(G_K\)</span>-equivariant isomorphism <span
+class="math inline">\(T_7(E^\tau)\to T_7(E)\)</span>. By Faltings’s
+theorem it is a <span class="math inline">\(\mathbb Z_7\)</span>-unit
+times a primitive generator of <span
+class="math inline">\(\operatorname{Hom}_K(E^\tau,E)\)</span>, whose
+degree is prime to <span class="math inline">\(7\)</span>.</li>
+<li>Transporting the degree-three isogeny through <span
+class="math inline">\(h\)</span> gives an isogeny of degree <span
+class="math inline">\(3\cdot7^{2b}\)</span>. Its primitive generator
+must consequently have degree <span class="math inline">\(3\)</span>.
+The Galois-stable residual line is respected by this generator.</li>
+</ul>
+<p>Reversing the direction if necessary, we obtain a cyclic isogeny
+<span class="math inline">\(\nu:E\to E^\tau\)</span> of degree <span
+class="math inline">\(3\)</span> with <span
+class="math inline">\(\nu(C_7)=\tau C_7\)</span>. Its kernel and <span
+class="math inline">\(C_7\)</span> define <span class="math display">\[
+x=(E,\ker\nu+C_7)\in Y_0(21)(K),\qquad \tau(x)=w_3(x).
+\]</span> The last equality is the moduli definition of <span
+class="math inline">\(w_3\)</span>: quotient by <span
+class="math inline">\(\ker\nu\)</span> sends <span
+class="math inline">\(E[3]/\ker\nu\)</span> to the kernel of the
+conjugate degree-three isogeny, and sends <span
+class="math inline">\(C_7\)</span> to <span class="math inline">\(\tau
+C_7\)</span>. This is the same compatibility argument used at level
+<span class="math inline">\(39\)</span>. The point <span
+class="math inline">\(x\)</span> cannot be rational, since a <span
+class="math inline">\(w_3\)</span>-fixed point would give a degree-three
+endomorphism of a non-CM elliptic curve.</p>
+<h4 id="the-elliptic-2-division-field">3.2. The elliptic 2-division
+field</h4>
+<p>Suppose <span class="math inline">\(A(\mathbb Q)[2]\ne0\)</span>.
+After extension of scalars to <span class="math inline">\(\mathbb
+F_4\)</span>, the multiplicity characters on <span
+class="math inline">\(G_K\)</span> are <span
+class="math inline">\(\psi\)</span> and <span
+class="math inline">\(\psi^{-1}\)</span>. A trivial residual constituent
+forces <span class="math inline">\(E[2]\otimes\mathbb F_4\)</span> to
+have one of these nontrivial cubic characters as a constituent. Its
+determinant over <span class="math inline">\(\mathbb F_2\)</span> is
+<span class="math inline">\(1\)</span>, so its two characters are <span
+class="math inline">\(\psi\)</span> and <span
+class="math inline">\(\psi^{-1}\)</span>. The only subgroup of <span
+class="math inline">\(\operatorname{GL}_2(\mathbb F_2)=S_3\)</span> with
+these constituents is <span class="math inline">\(C_3\)</span>; the
+natural <span class="math inline">\(S_3\)</span> module remains
+irreducible over <span class="math inline">\(\mathbb F_4\)</span>. The
+intervening <span class="math inline">\(7\)</span>-power isogeny leaves
+<span class="math inline">\(E[2]\)</span> unchanged. Thus the <span
+class="math inline">\(2\)</span>-division field of <span
+class="math inline">\(E\)</span> is exactly <span
+class="math inline">\(L/K\)</span>, and its discriminant is a square in
+<span class="math inline">\(K\)</span>.</p>
+<p>For <span class="math inline">\(j(E)\notin\{0,1728\}\)</span> the
+identity <span class="math display">\[
+j(E)-1728=\frac{c_6(E)^2}{\Delta(E)}
+\]</span> shows that <span class="math inline">\(j(E)-1728\)</span> is a
+square in <span class="math inline">\(K\)</span>. Hence <span
+class="math inline">\(x\)</span> lifts to a <span
+class="math inline">\(K\)</span>-point of the double cover of <span
+class="math inline">\(X_0(21)\)</span> obtained by adjoining <span
+class="math inline">\(\sqrt{j-1728}\)</span>. The next section
+determines the relevant points of this genus-three cover.</p>
+<h3 id="the-discriminant-cover-and-its-rank-zero-quotients">4. The
+discriminant cover and its rank-zero quotients</h3>
+<p>Use the standard model <span class="math display">\[
+X_0(21):y^2+xy=x^3-4x-1,
+\qquad t=\frac{y-x-3}{x+1}.
+\]</span> The certificate checks that the <span
+class="math inline">\(j\)</span>-map has degree <span
+class="math inline">\(32\)</span>, that its four cusp pole orders are
+<span class="math inline">\(21,7,3,1\)</span>, and that the designated
+<span class="math inline">\(w_3\)</span> satisfies <span
+class="math inline">\(\Phi_3(j,j\circ w_3)=0\)</span>, whereas <span
+class="math inline">\(w_7\)</span> and <span
+class="math inline">\(w_{21}\)</span> do not. It also checks the point
+counts against the Hecke traces at primes through <span
+class="math inline">\(43\)</span> away from <span
+class="math inline">\(3\)</span> and <span
+class="math inline">\(7\)</span>.</p>
+<p>In the function field one has <span class="math display">\[
+x^2-(t^2+3t+3)x-t^2-6t-10=0,
+\qquad j-1728=H\cdot(\text{a rational function})^2,
+\qquad H=t(x+2).
+\]</span> Write the cover as <span class="math inline">\(z^2=H\)</span>.
+The involution <span class="math inline">\(w_3\)</span> fixes <span
+class="math inline">\(t\)</span>. Put <span
+class="math inline">\(q=t/(x+2)\)</span>. Then <span
+class="math display">\[
+\frac{w_3(H)}{H}=q^2,\qquad q\,w_3(q)=1.
+\]</span> The two involutions lifting <span
+class="math inline">\(w_3\)</span> have the elliptic quotients <span
+class="math display">\[
+\begin{aligned}
+C_+:&amp;\quad U^2=t(t^2+5t+7),&amp; U&amp;=z(1+q),\\
+C_-:&amp;\quad U^2=t(t^2+t+7),&amp; U&amp;=z(1-q).
+\end{aligned}
+\]</span> The identities defining these quotients are checked exactly.
+Both elliptic curves have rank zero by algebraic higher <span
+class="math inline">\(2\)</span>-isogeny descent. Their full rational
+torsion groups and the corresponding finite <span
+class="math inline">\(t\)</span>-values are</p>
+<div class="table-wrap"><table class="data">
+<thead>
+<tr>
+<th>Curve</th>
+<th>Rational torsion</th>
+<th>Finite <span class="math inline">\(t\)</span>-values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math inline">\(C_+\)</span></td>
+<td><span class="math inline">\(C_2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="math inline">\(C_-\)</span></td>
+<td><span class="math inline">\(C_6\)</span></td>
+<td><span class="math inline">\(0,1,7\)</span></td>
+</tr>
+</tbody>
+</table></div>
+<p>Each also has the point at infinity. The fibers <span
+class="math inline">\(t=0,\infty\)</span> on <span
+class="math inline">\(X_0(21)\)</span> are exactly its four cusps. At
+the remaining values the two <span
+class="math inline">\(x\)</span>-coordinates are <span
+class="math display">\[
+\begin{array}{c|c}
+t&amp;x\\\hline
+1&amp;(7\pm3\sqrt{13})/2\\
+7&amp;(73\pm21\sqrt{13})/2.
+\end{array}
+\]</span></p>
+<p>Since <span class="math inline">\(\tau(x)=w_3(x)\)</span>,
+conjugation of any lift to the cover agrees with one of the two lifts of
+<span class="math inline">\(w_3\)</span>. Its image on the corresponding
+elliptic quotient is rational. The complete rational point sets above
+therefore force <span class="math display">\[
+K=\mathbb Q(\sqrt{13}),\qquad t\in\{1,7\}.
+\]</span> The corresponding <span
+class="math inline">\(j\)</span>-invariants are <span
+class="math display">\[
+\begin{aligned}
+t=1:&amp;\quad6565897584689283072\pm1821052339310297088\sqrt{13},\\
+t=7:&amp;\quad75497472\pm20938752\sqrt{13}.
+\end{aligned}
+\]</span> They are neither <span class="math inline">\(0\)</span> nor
+<span class="math inline">\(1728\)</span>. Thus every elliptic curve
+over <span class="math inline">\(K\)</span> with one of these values is
+a quadratic twist of the model <span
+class="math inline">\(E_j=\operatorname{EllipticCurveFromjInvariant}(j)\)</span>.</p>
+<h3 id="frobenius-at-29">5. Frobenius at 29</h3>
+<p>The prime <span class="math inline">\(29\)</span> splits in <span
+class="math inline">\(\mathbb Q(\sqrt{13})\)</span>. For both displayed
+<span class="math inline">\(j\)</span>-invariants and both primes above
+<span class="math inline">\(29\)</span>, the certificate checks that
+<span class="math inline">\(E_j\)</span> has good reduction, its <span
+class="math inline">\(2\)</span>-division polynomial splits completely,
+and its Frobenius trace has absolute value <span
+class="math inline">\(6\)</span>.</p>
+<p>The actual <span class="math inline">\(E\)</span> is a quadratic
+twist of <span class="math inline">\(E_j\)</span>, with unchanged <span
+class="math inline">\(2\)</span>-division field. Therefore <span
+class="math inline">\(\psi\)</span> is unramified and trivial on
+Frobenius at these primes: it is the faithful cubic <span
+class="math inline">\(2\)</span>-division character. If the quadratic
+twist were ramified, inertia would act on the original mod-<span
+class="math inline">\(7\)</span> representation as <span
+class="math inline">\(-I\)</span>, since <span
+class="math inline">\(E_j\)</span> and <span
+class="math inline">\(\psi\)</span> are both unramified. This
+contradicts the trivial constituent supplied by rational <span
+class="math inline">\(7\)</span>-torsion. Hence the quadratic twist is
+unramified and its trace is <span
+class="math inline">\(a\in\{6,-6\}\)</span>.</p>
+<p>A rational Frobenius at <span class="math inline">\(29\)</span>
+belongs to <span class="math inline">\(G_K\)</span>, where the cubic
+multiplicity twist is now trivial. The Frobenius polynomial of <span
+class="math inline">\(A\)</span> is consequently <span
+class="math display">\[
+P_{29}(T)=(T^2-aT+29)^2.
+\]</span> The same representation is unramified, so <span
+class="math inline">\(A\)</span> has good reduction at <span
+class="math inline">\(29\)</span>. Prime-to-<span
+class="math inline">\(29\)</span> rational torsion injects into its
+reduction, and its order must divide <span class="math display">\[
+P_{29}(1)=(30-a)^2\in\{576,1296\}.
+\]</span> Neither integer is divisible by <span
+class="math inline">\(7\)</span>. This contradiction completes the
+sextic case.</p>
+<h3 id="conclusion">6. Conclusion</h3>
+<p>In both the cubic and sextic cases, rational <span
+class="math inline">\(7\)</span>-torsion precludes rational <span
+class="math inline">\(2\)</span>-torsion. The entire rational <span
+class="math inline">\(2\)</span>-primary group is then trivial, because
+every nontrivial finite <span class="math inline">\(2\)</span>-group has
+an element of order two. In all other geometric cases the existing
+argument bounds its order by four. This proves the theorem.</p>
+<p>The exclusion of <span class="math inline">\([2,28]\)</span> concerns
+only the Q-simple geometrically split column. Its geometrically simple
+example is retained, its split-over-<span class="math inline">\(\mathbb
+Q\)</span> case is not settled here, and the combined geometrically
+split infinitude grade remains open. The same general bound excludes
+groups outside the census, such as cyclic <span
+class="math inline">\([56]\)</span>, in the Q-simple geometrically split
+class.</p>
+<h3 id="verification">7. Verification</h3>
+<p>The standalone certificate <a
+href="../data/knowledge/sources/qsimple_228_checks.m">qsimple_228_checks.m</a>
+checks every new numerical input with an assertion: the modular model
+and <span class="math inline">\(j\)</span>-map, cusps and Hecke traces,
+identification of <span class="math inline">\(w_3\)</span>, the genus of
+the discriminant cover, the exact quotient identities, algebraic
+rank-zero upper bounds, complete elliptic torsion sets, the four
+rational <span class="math inline">\(j\)</span>-classes and their <span
+class="math inline">\(S_3\)</span> <span
+class="math inline">\(2\)</span>-division groups, and both embeddings
+above <span class="math inline">\(29\)</span> for each remaining
+quadratic fiber. Its <a
+href="../data/knowledge/sources/qsimple_228_checks.log">log</a>
+ends with <code>VERIFIED_228_MODULAR_CERTIFICATE_DONE</code>.</p>
+<p>The proof has been independently reviewed, and the final certificate
+was independently rerun. The finite-field calculations at <span
+class="math inline">\(29\)</span> were also recomputed separately. The
+completeness statements use algebraic descent and complete torsion
+enumeration, with no analytic-rank or BSD assumption. No bounded search
+is used as a nonexistence proof.</p>
+<h3 id="references">References</h3>
+<ol type="1">
+<li><a
+href="qsimple-2214-obstruction.html">Rational
+7-torsion and the 2-rank of geometrically split abelian surfaces</a>,
+census proof of 10 November 2026: Proposition 2, the cyclic-field
+reduction, and the remarks on <span
+class="math inline">\([2,28]\)</span>.</li>
+<li><a
+href="qsimple-63-obstruction.html">No
+rational 63-torsion on a geometrically split abelian surface simple over
+Q</a>, census proof of 21 October 2026: Sections 5–7 and 10.2, including
+the general cubic untwisting construction.</li>
+<li><a
+href="geometric-26-39-obstruction.html">No
+rational points of order 26 or 39 on geometrically split abelian
+surfaces</a>, census proof of 21 October 2026: Section 8 and the lattice
+and level-structure steps of Proposition 9.1. The present proof repeats
+the transfer at <span class="math inline">\(7\)</span> and supplies the
+new modular-cover calculation.</li>
+<li>G. Faltings, <em>Endlichkeitssätze für abelsche Varietäten über
+Zahlkörpern</em>, Invent. Math. <strong>73</strong> (1983), 349–366. <a
+href="https://doi.org/10.1007/BF01388432">Published paper</a>. We use
+the isogeny and Tate-module endomorphism theorems; in Section 2.1 the
+required consequence is <span
+class="math inline">\(\operatorname{End}_{G_L}(V_3(E_0))=\mathbb
+Q_3\)</span> for non-CM <span class="math inline">\(E_0\)</span>.</li>
+<li>J.-P. Serre and J. Tate, <em>Good reduction of abelian
+varieties</em>, Ann. of Math. <strong>88</strong> (1968), 492–517. <a
+href="https://doi.org/10.2307/1970722">Primary paper</a>: the
+good-reduction criterion and prime-to-residue-characteristic torsion
+injection.</li>
+<li>Magma’s <a
+href="https://magma.maths.usyd.edu.au/magma/handbook/modular_curves">small
+modular curve and j-map tools</a>. The model and involution conventions
+are checked in the accompanying script. Its
+<code>TwoPowerIsogenyDescentRankBound</code> computations are algebraic
+upper bounds.</li>
+</ol>
+</main>
+<footer class="site"><div class="links">
+  <a href="../index.html">groups</a><span class="sep">·</span>
+  <a href="../exclusions.html">exclusions</a><span class="sep">·</span>
+  <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+  <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsimple-228-obstruction.html">proof source on GitHub</a>
+</div></footer>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exclusions beyond the census — Torsion of genus 2 Jacobians over ℚ</title>
-  <meta name="description" content="Six exact torsion groups of order 256 excluded for genus 2 Jacobians split over Q, with a complete proof at every splitting degree.">
+  <meta name="description" content="Torsion exclusions beyond the genus-2 census: six order-256 groups for Jacobians split over Q, and the 7-torsion/2-primary bound for geometrically split Jacobians simple over Q.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css?v=6">
 </head>
@@ -42,10 +42,26 @@
     and their <a href="data/knowledge/sources/qsplit_order256_matrix_checks.log">log</a> are included.</p>
   <p>This result makes no exclusion claim for <strong>geometrically simple</strong> Jacobians or
     for Jacobians that are <strong>simple over ℚ but split over ℚ̄</strong>.</p>
-  <h3>What the theorem leaves open</h3>
+  <h3>What the order-256 theorem leaves open</h3>
   <p>The three groups of order 256 left by the theorem and the Weil pairing are
     <span class="m">[2,2,2,32]</span>, <span class="m">[2,2,4,16]</span>, and
     <span class="m">[2,2,8,8]</span>. <strong>No existence assertion is made for these groups.</strong></p>
+  <h3>7-torsion and the 2-primary part for Jacobians simple over ℚ</h3>
+  <p>A principally polarized abelian surface over ℚ that is <strong>simple over ℚ but geometrically
+    split</strong> has rational 2-primary torsion of order at most four if it has a rational point of
+    order 7. This <a href="proofs/qsimple-228-obstruction.html">theorem of 11 November 2026</a> applies
+    at every geometric splitting degree.</p>
+  <p>It excludes every exact group with 7-torsion and 2-primary order at least eight in that class.
+    For example, <span class="m">[56]</span>, which has no census row, is impossible there.
+    The census group <a href="group.html?g=2.28">[2,28]</a> is likewise impossible in the
+    “geometrically split, simple over ℚ” column. Its split-over-ℚ case remains open.
+    The theorem leaves <span class="m">[28]</span> and <span class="m">[2,14]</span> open in the
+    ℚ-simple geometrically split class, and makes no exclusion claim for geometrically simple Jacobians.</p>
+  <p><a href="proofs/qsimple-228-obstruction.html">Read the complete proof</a>, or download its
+    <a href="data/knowledge/sources/qsimple_228_obstruction.pdf">PDF</a> and
+    <a href="data/knowledge/sources/qsimple_228_obstruction.tex">LaTeX source</a>.
+    The <a href="data/knowledge/sources/qsimple_228_checks.m">exact Magma checks</a> and
+    <a href="data/knowledge/sources/qsimple_228_checks.log">completed log</a> are included.</p>
   <p>For class-specific exclusions of groups already represented in the census, see the
     <a href="index.html">group table</a> and the <a href="about.html#impossible-examples">explanation of impossible entries</a>.</p>
 </main>

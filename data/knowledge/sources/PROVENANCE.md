@@ -591,3 +591,52 @@ The six groups have no census rows and appear on [`exclusions.html`](../../../ex
 Their structured records in `pipeline/knowledge.py` also apply to future census entries.
 Only the `qsplit` class is excluded; neither other class receives an impossibility claim.
 No existence claim is made for [2,2,2,32], [2,2,4,16], or [2,2,8,8].
+
+
+## [2,28] in the geometrically split, ℚ-simple class (11 November 2026)
+
+[`qsimple-228-obstruction.html`](../../../proofs/qsimple-228-obstruction.html), with
+[PDF](qsimple_228_obstruction.pdf), [LaTeX](qsimple_228_obstruction.tex), and
+[Markdown](qsimple_228_obstruction.md), publishes the complete reviewed proof that
+for a principally polarized abelian surface over ℚ, simple over ℚ and geometrically
+split, a rational point of order 7 forces the entire rational 2-primary torsion
+to have order at most four. The new census exclusion is [2,28] in `gsplit` only.
+Its geometrically simple example is retained, the `qsplit` case is still open,
+and its combined split infinitude grade remains open. The general theorem also
+excludes groups outside the census, such as cyclic [56], in `gsplit` only.
+
+The public proof retypesets the independently reviewed argument of 11 November
+2026 with mathematical notation and public links. It closes the two cases left
+by the earlier [2,2,14] proof: a 3-adic polarization parity argument in the cyclic
+cubic case, and a genus-three discriminant cover of X₀(21), its rank-zero elliptic
+quotients, and Frobenius at 29 in the cyclic sextic case. It uses the published
+[63], [26,39], and [2,2,14] arguments for the stated reductions and untwisting;
+these dependencies are linked explicitly. The new theorem needs principal
+polarization in the cubic case, unlike the earlier rational 2-rank bound.
+
+The standalone [`qsimple_228_checks.m`](qsimple_228_checks.m) and successful
+[log](qsimple_228_checks.log) are byte-identical copies of the final reviewed
+certificate and its log. The original script's introductory reference to
+`proof.md` denotes the mathematical argument now published as
+`qsimple_228_obstruction.md` and its HTML/PDF counterparts. The script verifies
+its modular model using the j-map degree, four cusp widths, Hecke traces, and
+modular-polynomial identities. Algebraic higher 2-isogeny descent and full
+elliptic torsion enumeration determine the quotient rational point sets;
+no BSD assumption or bounded search establishes completeness. Both embeddings
+of ℚ(√13) at 29 are checked. The log ends in
+`VERIFIED_228_MODULAR_CERTIFICATE_DONE`. The final certificate was independently
+rerun, and the finite-field calculations at 29 were separately recomputed.
+
+The prior [2,2,14] HTML proof and LaTeX source receive a dated editorial forward
+reference from their former open-case remark to this new proof. Their original
+unpolarized theorem and mathematical argument are preserved.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_228_obstruction.md` | `bdee02500d198d571657f1f10cd196163eabe4a3bd157d3b58008bb53916ebd2` |
+| `qsimple_228_obstruction.tex` | `a51926d857584363bd37a3ea140f8c5c43e933f1f81d5881d1c9d1abce127f79` |
+| `qsimple_228_obstruction.pdf` | `7b2cb92beb29a589dc630ec8273c4a38c981497db0a79671ee62f04deff29a00` |
+| `qsimple_228_checks.m` | `3f4a09b4d7d48fc1d487375ce192b27d5c2ea52899dd727c0321264afc9502af` |
+| `qsimple_228_checks.log` | `97addcc880eaf9f77d1d6cf23c1132a52669ec3ac75944d5e16098e84aeabd93` |

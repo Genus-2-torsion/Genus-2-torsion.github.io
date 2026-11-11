@@ -85,6 +85,12 @@ abelian surface that is simple over ℚ forces rational 2-rank at most 2
 (`proofs/qsimple-2214-obstruction.html`), so with the 2-rank obstruction over ℚ, [2,2,14] is
 excluded on the whole geometrically split side. These thirteen groups have combined split infinitude records
 `impossible`, and their badges link directly to the corresponding proof.
+For principally polarized surfaces that are **geometrically split and simple over ℚ**, rational
+7-torsion forces the entire rational 2-primary torsion to have order at most four
+(`proofs/qsimple-228-obstruction.html`, with PDF/LaTeX and exact modular-curve checks).
+This marks [2,28] impossible only in that class; its split-over-ℚ case and combined split
+infinitude grade remain open. The generic condition also records exclusions beyond the census,
+such as [56], on `exclusions.html` without creating artificial example rows.
 The groups [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] are excluded only in
 the **geometrically split, simple over ℚ** class, by `proofs/qsimple-30-obstruction.html`,
 `proofs/qsimple-35-obstruction.html`, `proofs/qsimple-63-obstruction.html`, and

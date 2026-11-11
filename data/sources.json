@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11 09:01 UTC",
+  "generated": "2026-11-11 19:02 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -142,6 +142,14 @@
       "cite": "Rational 7-torsion and the 2-rank of geometrically split abelian surfaces, census proof of 10 November 2026. On a geometrically split abelian surface over Q that is simple over Q, a rational point of order 7 forces rational 2-torsion of rank at most 2: Kenku–Momose over the quadratic field of definition of the elliptic curves, a point count at 3 for CM squares, and a determinant argument modulo 2 for cyclic cubic and sextic endomorphism fields.",
       "url": "proofs/qsimple-2214-obstruction.html",
       "used_for": "impossibility of [2,2,14] in the geometrically split, simple-over-ℚ class; with QSplitTwoRankObstruction, on the whole geometrically split side"
+    },
+    "QSimple228Obstruction": {
+      "short": "ℚ-simple geometric [2,28] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 7-torsion and the 2-primary torsion of geometrically split principally polarized abelian surfaces, census proof of 11 November 2026. If the surface is simple over Q and has a rational point of order 7, its rational 2-primary torsion has order at most four. A 3-adic polarization obstruction handles cyclic cubic endomorphism fields; a discriminant cover of X_0(21) and Frobenius at 29 handle cyclic sextic fields.",
+      "url": "proofs/qsimple-228-obstruction.html",
+      "used_for": "impossibility of [2,28] only in the geometrically split, simple-over-ℚ class, at every geometric splitting degree; also excludes any group with 7-torsion and 2-primary order at least eight in that class, including groups outside the census; requires a principal polarization"
     },
     "QSimple35Obstruction": {
       "short": "ℚ-simple geometric [35] and [70] exclusion proof (2026)",

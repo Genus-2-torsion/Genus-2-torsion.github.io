@@ -211,6 +211,7 @@ class KnowledgeTests(unittest.TestCase):
             "35": "QSimple35Obstruction", "70": "QSimple35Obstruction",
             "63": "QSimple63Obstruction",
             "2.2.14": "QSimple2214Obstruction",
+            "2.28": "QSimple228Obstruction",
             "5.5": "QSimpleRankTwoObstruction", "5.10": "QSimpleRankTwoObstruction", "7.7": "QSimpleRankTwoObstruction"})
         impossible = sorted(k for k in keys if knowledge.infinite_record("split", k)["grade"] == "impossible")
         self.assertEqual(impossible, sorted(["13", "17", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26", "2.2.14"]))
@@ -219,6 +220,55 @@ class KnowledgeTests(unittest.TestCase):
         rec = knowledge.infinite_record("split", "13")
         self.assertIn("Mazur1977", rec["sources"])
         self.assertTrue(rec["note"].startswith(knowledge.exclusions_record("13")["qsplit"]["reason"]))
+
+    def test_qsimple_seven_two_primary_bound(self):
+        """The principal-polarization bound changes only the Q-simple split class."""
+        for key in ("2.28", "56", "112", "2.56"):
+            with self.subTest(key=key):
+                rec = knowledge.exclusions_record(key)
+                self.assertEqual(set(rec), {"gsplit"})
+                self.assertEqual(rec["gsplit"]["sources"][0], "QSimple228Obstruction")
+                self.assertTrue((ROOT / rec["gsplit"]["proof_url"]).exists())
+                self.assertIn("principal", rec["gsplit"]["reason"])
+                self.assertIn("QSimple228Obstruction", knowledge.QSIMPLE_ONLY)
+                self.assertNotEqual(knowledge.infinite_record("split", key)["grade"], "impossible")
+        for key in ("7", "14", "28", "2.14"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
+        # Keep the older proof for groups that already had an exclusion.
+        self.assertEqual(knowledge.exclusions_record("2.2.14")["gsplit"]["sources"][0], "QSimple2214Obstruction")
+        groups = read_json(ROOT / "data" / "groups.json")["groups"]
+        group = next(g for g in groups if g["key"] == "2.28")
+        self.assertTrue(group["known"]["simple"])
+        self.assertFalse(group["known"]["qsplit"])
+        self.assertFalse(group["known"]["gsplit"])
+        self.assertEqual(group["infinite"]["split"]["grade"], "open")
+        self.assertEqual(group["exclusions"], knowledge.exclusions_record("2.28"))
+        log = (KNOWLEDGE_DIR / "sources" / "qsimple_228_checks.log").read_text()
+        self.assertTrue(log.rstrip().endswith("VERIFIED_228_MODULAR_CERTIFICATE_DONE"))
+        for bad in ("Runtime error", "Assertion failed", "User error", "Internal error"):
+            self.assertNotIn(bad, log)
+        for suffix in ("md", "tex", "pdf"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_228_obstruction.{suffix}").exists())
+
+    def test_qsimple_seven_two_primary_future_entries_rejected(self):
+        """The build rejects future contradictory Q-simple split examples."""
+        import build
+        import copy
+        import json
+        import tempfile
+        from unittest.mock import patch
+        template = next(read_json(p) for p in sorted(CURVES_DIR.glob("*.json"))
+                        if read_json(p)["class"] == "gsplit")
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "future.json"
+            for key in ("2.28", "56", "112", "2.56"):
+                c = copy.deepcopy(template)
+                c.update(id=f"{key}.future", group_key=key, group=[int(n) for n in key.split(".")])
+                c["torsion"]["invariants"] = c["group"]
+                path.write_text(json.dumps(c))
+                with self.subTest(key=key), patch.object(build, "CURVES_DIR", Path(d)):
+                    with self.assertRaisesRegex(ValueError, "recorded gsplit example contradicts"):
+                        build.build()
 
     def test_order256_exclusions_beyond_census(self):
         """The new exact-group exclusions apply without census rows and only to qsplit."""

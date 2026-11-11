@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10 22:56 UTC",
+  "generated": "2026-11-11 19:02 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -9773,7 +9773,20 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-primary torsion of order at most four if it has a rational point of order 7. This group has 7-torsion and 2-primary order at least eight, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple228Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "Geometric2639Obstruction",
+            "Faltings1983",
+            "KenkuMomose1988"
+          ],
+          "proof_url": "proofs/qsimple-228-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {

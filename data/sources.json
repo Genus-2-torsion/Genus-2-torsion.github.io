@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11 19:02 UTC",
+  "generated": "2026-11-12 06:42 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -276,6 +276,35 @@
       "cite": "S. Le Fourn, F. Najman, Torsion of Q-curves over quadratic fields, Math. Res. Lett. 27 (2020), no. 1, 209–225 (arXiv:1803.03460).",
       "url": "https://arxiv.org/abs/1803.03460",
       "used_for": "Theorem 1.1 and Proposition 3.2: no ℚ-curve over a quadratic field has a point of order 11; used in the geometric [22] exclusion"
+    },
+    "QSimple2210Obstruction": {
+      "short": "ℚ-simple geometric [2,2,10] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 5-torsion and the 2-rank of geometrically split Jacobians, census proof of 11 November 2026. On a principally polarized abelian surface over Q that is simple over Q and geometrically split, a rational point of order 5 forces rational 2-torsion of rank at most 2: a point count at 3 for CM squares, residual representations at 5 for the endomorphism field, a Frobenius count modulo 8 for cyclic quartic endomorphism fields (where the 2-primary torsion has order at most four even without 5-torsion or a polarization), and, over the quadratic field of definition of the elliptic curves, Frobenius counts at inert primes against the quadratic points of X1(2,10), an elliptic curve of rank 0; Magma checks in qsimple_2210_checks.log.",
+      "url": "proofs/qsimple-2210-obstruction.html",
+      "used_for": "impossibility of [2,2,10], [2,2,20] and [2,2,2,10] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 5-torsion and 2-rank at least three in that class, including groups outside the census; with QSplitTwoRankObstruction, [2,2,2,10] on the whole geometrically split side; requires a principal polarization"
+    },
+    "Kubert1976": {
+      "short": "Kubert 1976",
+      "year": 1976,
+      "cite": "D. S. Kubert, Universal bounds on the torsion of elliptic curves, Proc. London Math. Soc. (3) 33 (1976), 193–237.",
+      "url": "https://doi.org/10.1112/plms/s3-33.2.193",
+      "used_for": "Table 3: the normal form of elliptic curves with a point of order 10, used for the quadratic points of X1(2,10) in the [2,2,10] exclusion"
+    },
+    "Knapp1992": {
+      "short": "Knapp 1992",
+      "year": 1992,
+      "cite": "A. W. Knapp, Elliptic Curves, Mathematical Notes 40, Princeton University Press, 1992.",
+      "url": "https://doi.org/10.1515/9780691186900",
+      "used_for": "Theorem 4.2 (pp. 85–87): over a field of characteristic not 2 or 3, a rational point of an elliptic curve with full rational 2-torsion is divisible by 2 iff its differences with the 2-torsion abscissae are squares; used in the [2,2,10] exclusion"
+    },
+    "Milne1972": {
+      "short": "Milne 1972",
+      "year": 1972,
+      "cite": "J. S. Milne, On the arithmetic of abelian varieties, Invent. Math. 17 (1972), 177–190.",
+      "url": "https://doi.org/10.1007/BF01425446",
+      "used_for": "§1: Weil restriction of scalars of abelian varieties and its ℓ-adic representations; used in the [2,2,10] exclusion"
     },
     "BourdonClark2020": {
       "short": "Bourdon–Clark 2020",

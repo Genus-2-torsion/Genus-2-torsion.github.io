@@ -55,12 +55,11 @@ example in that class. These records are separate from the combined geometricall
 infinitude status. If both split classes are excluded, `infinite_record("split", key)` returns
 `grade: "impossible"` with a proof URL, and the build also rejects a geometrically split example
 whose class over ℚ is undecided. This currently applies to [13], [17], [22], [23], [26], [29], [31],
-[33], [34], [39], [2,22], [2,26], and [2,2,14]. For [13] and [2,2,14] the `gsplit` proofs need
-simplicity over ℚ (`QSIMPLE_ONLY`), so their combined notes also state the `qsplit` reason.
+[33], [34], [39], [2,22], [2,26], [2,2,14], and [2,2,2,10]. For [13], [2,2,14], and [2,2,2,10] the
+`gsplit` proofs need simplicity over ℚ (`QSIMPLE_ONLY`), so their combined notes also state the `qsplit` reason.
 The exclusions for [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] apply only to
 `gsplit`; all have `qsplit` examples, so their combined infinitude records retain their existing
-grades. The `qsplit` exclusion of [2,2,2,10] leaves its combined record unchanged, because its
-`gsplit` class is open.
+grades.
 
 `QSimple228Obstruction` adds the principal-polarization bound that rational 7-torsion forces
 rational 2-primary torsion of order at most four on a geometrically split surface simple over ℚ.
@@ -70,6 +69,15 @@ entries, while retaining earlier proof sources for already excluded groups. It n
 The proof is in `proofs/qsimple-228-obstruction.html`, with PDF/LaTeX and checks under
 `data/knowledge/sources/qsimple_228_*`. Examples beyond the census, such as [56], are documented
 on `exclusions.html` rather than added as curve records.
+
+`QSimple2210Obstruction` (11 November 2026) proves that rational 5-torsion forces rational 2-rank at
+most 2 on a principally polarized, geometrically split abelian surface simple over ℚ. The predicate
+`order % 5 == 0 and rank(2) >= 3` applies to [2,2,10], [2,2,20] and [2,2,2,10] in the census and to
+future entries such as [2,2,40]; groups that already had a `gsplit` exclusion (such as [2,2,30]) keep
+their earlier proof. With the `qsplit` 2-rank obstruction, [2,2,2,10] becomes impossible on the
+whole split side; [2,2,10] (with `qsplit` examples) and [2,2,20] (open in `qsplit`) keep their combined
+grades. The proof is in `proofs/qsimple-2210-obstruction.html`, with PDF/LaTeX, the Magma certificate
+and a supplementary validation under `data/knowledge/sources/qsimple_2210_*`.
 
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].

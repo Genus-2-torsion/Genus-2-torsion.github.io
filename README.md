@@ -83,8 +83,16 @@ A geometrically split Jacobian with a rational point of order 13 is not simple o
 geometrically split side as well. Likewise, a rational point of order 7 on a geometrically split
 abelian surface that is simple over ℚ forces rational 2-rank at most 2
 (`proofs/qsimple-2214-obstruction.html`), so with the 2-rank obstruction over ℚ, [2,2,14] is
-excluded on the whole geometrically split side. These thirteen groups have combined split infinitude records
+excluded on the whole geometrically split side. A rational point of order 5 on a principally polarized
+abelian surface that is geometrically split and simple over ℚ forces rational 2-rank at most 2
+(`proofs/qsimple-2210-obstruction.html`), so with the 2-rank obstruction over ℚ, [2,2,2,10] is
+excluded on the whole geometrically split side as well. These fourteen groups have combined split infinitude records
 `impossible`, and their badges link directly to the corresponding proof.
+The same theorem makes [2,2,10] and [2,2,20] impossible in the **geometrically split, simple over ℚ**
+class; [2,2,10] has split-over-ℚ examples and the split-over-ℚ case of [2,2,20] is open, so their
+combined split infinitude grades are unchanged. It also excludes groups beyond the census, such as
+[2,2,40], and its proof shows that a surface whose endomorphism field is cyclic of degree 4 has at
+most four rational 2-primary torsion points (see `exclusions.html`).
 For principally polarized surfaces that are **geometrically split and simple over ℚ**, rational
 7-torsion forces the entire rational 2-primary torsion to have order at most four
 (`proofs/qsimple-228-obstruction.html`, with PDF/LaTeX and exact modular-curve checks).

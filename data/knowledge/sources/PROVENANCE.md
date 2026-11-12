@@ -640,3 +640,54 @@ SHA-256 of the publication artifacts:
 | `qsimple_228_obstruction.pdf` | `7b2cb92beb29a589dc630ec8273c4a38c981497db0a79671ee62f04deff29a00` |
 | `qsimple_228_checks.m` | `3f4a09b4d7d48fc1d487375ce192b27d5c2ea52899dd727c0321264afc9502af` |
 | `qsimple_228_checks.log` | `97addcc880eaf9f77d1d6cf23c1132a52669ec3ac75944d5e16098e84aeabd93` |
+
+## [2,2,10], [2,2,20] and [2,2,2,10] in the geometrically split, ℚ-simple class (11 November 2026)
+
+[`qsimple-2210-obstruction.html`](../../../proofs/qsimple-2210-obstruction.html), with
+[PDF](qsimple_2210_obstruction.pdf) and [LaTeX](qsimple_2210_obstruction.tex), proves that
+a principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split,
+with a rational point of order 5, has rational 2-torsion of rank at most 2. The new census
+exclusions are [2,2,10], [2,2,20] and [2,2,2,10] in `gsplit` only. [2,2,2,10] was already
+excluded in `qsplit` by the 2-rank obstruction, so its combined geometrically split cell becomes
+impossible. [2,2,10] keeps its examples split over ℚ (2.2.10.b and the certified infinite family
+of `family_2210_split_certificate.log`), and the `qsplit` case of [2,2,20] stays open, so the
+combined split grades of these two groups are unchanged. The theorem also excludes groups
+outside the census, such as [2,2,40] and [2,10,10], in `gsplit` only.
+
+CM squares fail a point count over 𝔽₃: no abelian surface over 𝔽₃ has exactly 40 points. For
+non-CM squares, the residual-representation lemmas of `qsimple_63_obstruction.tex` at the prime 5
+leave only cyclic endomorphism fields of degree 2 or 4. In the cyclic quartic case the
+determinant character of order 4 makes #A(𝔽_p) ≢ 0 mod 8 at a positive density of primes
+(Proposition A: at most four rational 2-primary torsion points, with no polarization and no
+5-torsion hypothesis). In the remaining cases the surface is isogenous to the Weil restriction
+of an elliptic curve E over a quadratic field K. The principal polarization and 2-rank 3 give
+such an E with full K-rational 2-torsion and, after a K-isogeny, a subgroup ℤ/2 × ℤ/10. The
+modular curve X₁(2,10) ≅ 20a2 has rank 0, so the K-point lies on one of five pencils of rational
+lines. At inert primes 8 must divide #E(𝔽_{p²}); by Chebotarev this forces norm square classes
+that hold only at the rational points of five rank-0 curves of genus 1 (Jacobians 40a3 and
+20a2), and these give reducible quadratics or cusps. The inputs from the published
+[order-63](../../../proofs/qsimple-63-obstruction.html) and
+[[2,2,14]](../../../proofs/qsimple-2214-obstruction.html) proofs are cited by section and lemma.
+
+The certificate [`qsimple_2210_checks.m`](qsimple_2210_checks.m) and its
+[log](qsimple_2210_checks.log) (Magma V2.30-1, 12 November 2026, under a second) consist of
+assertions and end with `ALL_CHECKS_PASSED`. The supplementary
+[`qsimple_2210_validation.m`](qsimple_2210_validation.m) and its
+[log](qsimple_2210_validation.log) check Lemmas 4–6 on the eight LMFDB curves of Remark 2 and the
+example after Lemma 6; they end with `VAL_DONE` and are not used in the proof. Three independent
+referee reports of 11 November 2026 (two on the mathematics, one auditing the computations) found
+the proof sound. All of their corrections are in this version. The computational audit reran the
+certificate with byte-identical logs, recomputed Lemma 1, Lemma 7 and the table of Proposition 8
+independently in Sage, PARI and mwrank, and tested 219,245 slopes in the five families by brute
+force without finding a counterexample.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_2210_obstruction.tex` | `c0e6ee94e0814da7245ec1f58d74136e2c39ccb1f790669a6083ea4166fb0415` |
+| `qsimple_2210_obstruction.pdf` | `c1a9cc779b960b64713d1ff7928c82e6db90a1dc4e855f8628f4a03ebfdbbcba` |
+| `qsimple_2210_checks.m` | `b5ee08ba8354b767816e762666e18aa2177c000fd03fd2b897f8d6d86f01bc05` |
+| `qsimple_2210_checks.log` | `29c3bc4a93d8034376ee575ce865fecbff3ebcbabce9e83470a1e0dd9ff070ee` |
+| `qsimple_2210_validation.m` | `40a978f9af77173faa5b066aa5010675dc3ff48304a43f4045fa7a738c8e6ed0` |
+| `qsimple_2210_validation.log` | `2b9d901e8b15d5a46d675579a0fbb970cba186639e7ce4df7466ffedd254fb9c` |

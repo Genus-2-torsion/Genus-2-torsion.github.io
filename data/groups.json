@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11 19:02 UTC",
+  "generated": "2026-11-12 06:42 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -49,8 +49,8 @@
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 13,
-      "impossible": 13
+      "open": 12,
+      "impossible": 14
     }
   },
   "n_rejected": 0,
@@ -13417,7 +13417,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-rank at most 2 if it has a rational point of order 5. This group has 5-torsion and 2-rank at least three, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple2210Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "Kubert1976",
+            "Knapp1992",
+            "Milne1972",
+            "SerreTate1968",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsimple-2210-obstruction.html"
+        }
+      },
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -13991,7 +14006,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-rank at most 2 if it has a rational point of order 5. This group has 5-torsion and 2-rank at least three, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple2210Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "Kubert1976",
+            "Knapp1992",
+            "Milne1972",
+            "SerreTate1968",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsimple-2210-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -15526,6 +15556,20 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-two-rank-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-rank at most 2 if it has a rational point of order 5. This group has 5-torsion and 2-rank at least three, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple2210Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "Kubert1976",
+            "Knapp1992",
+            "Milne1972",
+            "SerreTate1968",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsimple-2210-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -15541,9 +15585,20 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "QSimple2210Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "Kubert1976",
+            "Knapp1992",
+            "Milne1972",
+            "SerreTate1968",
+            "Mazur1977",
+            "QSplitTwoRankObstruction"
+          ],
+          "note": "A Jacobian split over ℚ contains an elliptic curve over ℚ with an elliptic quotient over ℚ. By Mazur's theorem, a rational point of order 7 then forces rational 2-rank at most 2, and rational 2-rank 4 excludes rational points of orders 5 and 7. A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-rank at most 2 if it has a rational point of order 5. This group has 5-torsion and 2-rank at least three, so it is impossible in that class at every geometric splitting degree.",
+          "proof_url": "proofs/qsimple-2210-obstruction.html",
           "inherited_from": null
         }
       }

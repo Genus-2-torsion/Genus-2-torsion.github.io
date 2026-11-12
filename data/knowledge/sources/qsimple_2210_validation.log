@@ -1,0 +1,40 @@
+==== 2457.b.199017.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-3))
+  #J(F_p) = #E0(F_p^2) at 39 inert p: true; = product at 35 split p: true
+  2-isogeny class over K: 8 curves; with full K-rational 2-torsion: 3
+    squarefree N12,N13,N23 = [ 1, 273, 1 ], d = -3: two norms squares true, N_ij and d*N_ik*N_jk squares false
+    squarefree N12,N13,N23 = [ 1, 1, 1 ], d = -3: two norms squares true, N_ij and d*N_ik*N_jk squares false
+    squarefree N12,N13,N23 = [ 1, 13, 1 ], d = -3: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 2560.a.5120.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-1))
+  #J(F_p) = #E0(F_p^2) at 40 inert p: true; = product at 36 split p: true
+  2-isogeny class over K: 6 curves; with full K-rational 2-torsion: 2
+    squarefree N12,N13,N23 = [ 5, 1, 1 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+    squarefree N12,N13,N23 = [ 1, 2, 1 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 2169.a.175689.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-3))
+  #J(F_p) = #E0(F_p^2) at 39 inert p: true; = product at 36 split p: true
+  2-isogeny class over K: 4 curves; with full K-rational 2-torsion: 1
+    squarefree N12,N13,N23 = [ 241, 1, 1 ], d = -3: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 2560.a.819200.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-1))
+  #J(F_p) = #E0(F_p^2) at 40 inert p: true; = product at 36 split p: true
+  2-isogeny class over K: 6 curves; with full K-rational 2-torsion: 2
+    squarefree N12,N13,N23 = [ 1, 2, 1 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+    squarefree N12,N13,N23 = [ 1, 1, 5 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 4096.b.65536.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(2))
+  #J(F_p) = #E0(F_p^2) at 42 inert p: true; = product at 35 split p: true
+  2-isogeny class over K: 6 curves; with full K-rational 2-torsion: 2
+    squarefree N12,N13,N23 = [ 1, 1, 1 ], d = 2: two norms squares true, N_ij and d*N_ik*N_jk squares false
+    squarefree N12,N13,N23 = [ 1, 1, 1 ], d = 2: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 4352.b.278528.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-1))
+  #J(F_p) = #E0(F_p^2) at 40 inert p: true; = product at 36 split p: true
+  2-isogeny class over K: 4 curves; with full K-rational 2-torsion: 1
+    squarefree N12,N13,N23 = [ 1, 1, 17 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 25600.f.512000.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-1))
+  #J(F_p) = #E0(F_p^2) at 40 inert p: true; = product at 36 split p: true
+  2-isogeny class over K: 6 curves; with full K-rational 2-torsion: 2
+    squarefree N12,N13,N23 = [ 1, 5, 1 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+    squarefree N12,N13,N23 = [ 1, 1, 5 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== 8192.b.131072.1: J(Q)_tors = [ 2, 2, 2 ], K = Q(sqrt(-1))
+  #J(F_p) = #E0(F_p^2) at 40 inert p: true; = product at 37 split p: true
+  2-isogeny class over K: 4 curves; with full K-rational 2-torsion: 1
+    squarefree N12,N13,N23 = [ 1, 1, 2 ], d = -1: two norms squares true, N_ij and d*N_ik*N_jk squares false
+==== Lemma 6 example y^2 = x(x-1)(x-sqrt 2): N12,N13,N23 = [ 1, -2, -1 ], d = 2; 8 | #E(F_p^2) at all 42 inert p < 400
+VAL_DONE

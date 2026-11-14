@@ -1,0 +1,20 @@
+BFT identities over Q(r) verified; f_r=-q_r b_r is smooth generically
+g1 (4*r - 8)/r*x^3 + (3*r - 12)*x^2 + (3*r^2 - 12*r)*x + 1/2*r^3 - 5*r^2 + r
+g2 (2*r - 4)*x^3 + (3*r - 12)*x^2 + (3*r^2 - 12*r)*x - 3*r^2 - r
+lambda1 (-16*r^2 + 64*r - 64)/r^2
+lambda2 -4*r^2 + 16*r - 16
+Two order-6 generators: D=[(-r/2,g1(-r/2))-infinity] and W=B+S; 3D=T
+Over Q(u), two independent order-3 and two independent order-2 classes generate [6,6]
+r(u) 4/(u^3 + 3*u + 2)
+rational branch point (u^2 - 2*u - 1)/(u^4 + 3*u^2 + 2*u)
+u=1/2 is Q-isomorphic to census curve 6.6.a
+All displayed coefficients and torsion representatives are regular at u=1/2 modulo 7 and 37
+The four marked classes generate all 36 points modulo 7
+p=7 #J=36 chi=x^4 - 4*x^3 + 18*x^2 - 28*x + 49
+p=37 #J=1044 chi=x^4 - 10*x^3 + 54*x^2 - 370*x + 1369
+Geometric simplicity certificate: pi^j has degree 4 for 1<=j<=12
+Absolute simplicity independently certified: no quotient of distinct Frobenius roots is a root of unity
+The geometric moduli map is nonconstant: u=1/2 and u=519/2 have distinct G2 invariants
+Independent TorsionSubgroup check u=1/2: [6,6]
+Independent TorsionSubgroup check u=519/2: [6,6]
+FAMILY_66_SIMPLE_CERTIFIED: every u=1/2+259*k, k integral, gives exact [6,6] and geometric simplicity; infinitely many geometric isomorphism classes

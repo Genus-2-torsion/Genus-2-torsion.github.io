@@ -1,0 +1,20 @@
+Loading "pipeline/magma/family_cert_lib.m"
+(0) f_lambda = A^2 - x^4 (x - 1) = A'^2 - x q^2 with A(1) = 0, A'(0) = -A(0); f = -(x - 1)(x - x1)(x - x2) q2,
+    x1 = (1/16*lam^12 - 1/4*lam^11 + 1/8*lam^10 + 3/4*lam^9 - 9/16*lam^8 - 3/2*lam^7 + 5/4*lam^6 + 3/2*lam^5 - 9/16*lam^4 - 1/4*lam^3 + 5/8*lam^2 - 1/4*lam + 1/16)/(lam^8 - 2*lam^7 - lam^6 + 4*lam^5 - lam^4 - 2*lam^3 + lam^2),
+    x2 = (1/4*lam^16 - lam^15 + lam^14 + lam^13 - lam^12 - lam^11 + lam^10 - 3*lam^9 + 11/2*lam^8 + 5*lam^7 + 3*lam^6 + 3*lam^5 + 3*lam^4 - 3*lam^3 + 3*lam^2 - lam + 1/4)/(lam^14 - 6*lam^12 + 7*lam^10 + 4*lam^8 + 7*lam^6 + 2*lam^4 + lam^2)
+    max degree in lambda of the coefficients of f: 56
+(1) over Q(lambda): 2H = Q, 4Q = [x - 1, 0] != 0, so H has order 16; [x - x1, 0], [x - x2, 0] have order 2;
+    the 64 sums i H + j T1 + k T2 are distinct: [2,2,16] is marked over Q(lambda)
+p = 31, t = 12 mod 31: reduction 30*$.1^5 + 11*$.1^4 + 13*$.1^3 + 3*$.1^2 + 8*$.1 + 28 (squarefree, degree 5), #J(F_31) = 1088, chi = X^4 + 4*X^3 - 2*X^2 + 124*X + 961 (strict)
+p = 37, t = 8 mod 37: reduction 36*$.1^5 + 12*$.1^4 + 18*$.1^3 + $.1^2 + 11*$.1 + 33 (squarefree, degree 5), #J(F_37) = 1216, chi = X^4 - 4*X^3 - 2*X^2 - 148*X + 1369 (strict)
+gcd of #J(F_p) = 64; #G = 64
+sanity: t = -23/11 has TorsionSubgroup [ 2, 2, 16 ]
+G2-invariants of the members [ -23/11, 52/25, 29/36 ] are not all equal
+    p = 31: J(F_31) = [ 2, 2, 272 ]; reduction factors as [ 1, 1, 1, 2 ]
+    p = 37: J(F_37) = [ 2, 2, 304 ]; reduction factors as [ 1, 1, 1, 2 ]
+(2) every 31- and 37-integral lambda = 415 mod 1147 has J(Q)_tors exactly [2,2,16] and a geometrically simple Jacobian
+sanity: lambda = 52/25 has TorsionSubgroup [ 2, 2, 16 ]
+sanity: lambda = 29/36 has TorsionSubgroup [ 2, 2, 16 ]
+(3) the member lambda = 2 (outside the class) is isomorphic to the census curve 2.2.16.b
+time 2.210 s
+FAMILY_2_2_16_CERTIFIED: infinitely many geometrically simple Jacobians with J(Q)_tors exactly [2,2,16]

@@ -1,0 +1,455 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+\newenvironment{statement}[1]{\par\medskip\noindent\phantomsection\textbf{#1}\ }{\par\medskip}
+\setlength{\emergencystretch}{3em}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\disc}{disc}
+\title{Rational \(5\)-torsion and the \(2\)-primary torsion of geometrically split abelian surfaces}
+\author{}
+\date{14 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem*}
+Let \(A/\Q\) be an abelian surface that is simple over \(\Q\) and geometrically split. If \(A(\Q)\)
+has a point of order \(5\), then
+\[\#A(\Q)[2^\infty]\le4 .\]
+\end{theorem*}
+
+\begin{corollary*}
+No genus-\(2\) Jacobian over \(\Q\) that is geometrically split and simple over \(\Q\) has a rational
+point of order \(5\) and at least \(8\) rational points of \(2\)-power order. In particular
+\href{https://genus-2-torsion.github.io/group.html?g=40}{\([40]\)} and
+\href{https://genus-2-torsion.github.io/group.html?g=2.20}{\([2,20]\)} do not occur as the rational
+torsion subgroup of such a Jacobian. Neither do \([2,2,10]\), \([2,2,20]\) and \([2,2,2,10]\), which
+the census proof \cite{P2210} had already excluded.
+\end{corollary*}
+
+Here ``geometrically split'' means that \(A_{\bar\Q}\) is isogenous to a product of two elliptic
+curves. We impose no restriction on the degree of this isogeny, on the field of definition of the
+geometric endomorphisms or on the integral endomorphism ring, and we assume no polarization. The
+bound \(4\) is attained, by Jacobians with rational torsion subgroup \([2,10]\)
+(Remark~4). The theorem strengthens the result of \cite{P2210} (a point of order \(5\)
+forces rational \(2\)-rank at most \(2\), for principally polarized surfaces).
+
+\emph{Outline.} We follow the case distinction of \cite{P2210}. In the CM case, and when the field of
+definition of the geometric endomorphisms is not quadratic, the arguments of \cite{P2210} need only
+\(40\mid\#\widetilde A(\F_3)\) or no information about the \(2\)-primary part at all
+(Section~\ref{other}). In the remaining cases \(A\) contains, over a quadratic field \(K\), an elliptic
+curve \(E\) with \(E^\sigma\ne E\). In \cite{P2210} a principal polarization and rational \(2\)-rank
+\(3\) were used to find an elliptic curve in \(A_K\) with full \(K\)-rational \(2\)-torsion. Here a
+curve with full \(K\)-rational \(2\)-torsion and a \(K\)-point of order \(5\), \(K\)-isogenous to \(E\),
+comes from \(\#A(\Q)[2^\infty]\ge8\) alone. The exact sequence
+used for \([2,2,14]\) \cite[Proposition~2]{P2214} puts \(2\)-primary torsion of order at least \(4\) on
+\(E\) or on \(A_K/E^\sigma\). By Kenku--Momose no elliptic curve over a quadratic field has a point of
+order \(20\), so with the point of order \(5\) this torsion is the full \(2\)-torsion of a curve in the
+isogeny class (Lemma~9). From there the analysis of quadratic points on \(X_1(2,10)\) in
+\cite{P2210} goes through with \(8\) in place of \(40\) (Section~\ref{quadratic}).
+
+\section{Conventions and inputs}\label{inputs}
+
+We use the conventions of \cite[Section~1]{P2210}. For a number field \(k\), \(G_k=\Gal(\bar\Q/k)\).
+For a quadratic field \(K\), \(\sigma\) is its nontrivial automorphism and \(\tilde\sigma\in G_{\Q}\)
+a lift of \(\sigma\). For an elliptic curve \(E\subset A_K\) defined over \(K\),
+\(E^\sigma=\tilde\sigma(E)\subset A_K\) is its conjugate; it is defined over \(K\) and does not depend
+on the lift. We use the following results; the labels (I1)--(I4), (I7) and (I9) are those of
+\cite[Section~1]{P2210}, and (I10) and (I11) are added here.
+
+\begin{itemize}
+\item \textbf{(I1) Reduction} \cite[(I1)]{P2210}, from Serre--Tate \cite{ST}. Let \(K'\) be a finite
+extension of \(\Q_p\) with residue field \(k\) and \(A\) an abelian variety over \(K'\).
+(a) Good reduction is preserved by \(K'\)-isogenies. (b) If \(A\) has good reduction
+\(\widetilde A\) and \(m\) is prime to \(p\), then \(A(K')[m]\) injects into \(\widetilde A(k)\).
+(c) If \(A\) has potentially good reduction, then it has good reduction over a finite extension of
+\(K'\) with residue field \(k\). (d) An abelian surface \(B\) over \(\F_q\) has
+\(\#B(\F_q)\le(1+\sqrt q)^4\).
+
+\item \textbf{(I2) The case distinction} \cite[(I2)]{P2210}. A geometrically split abelian surface
+\(A/\Q\) is of exactly one of the types \textbf{(N)} (\(A_{\bar\Q}\) is isogenous to \(E_1\times
+E_2\) with \(E_1\), \(E_2\) not isogenous), \textbf{(CM)} (\(A_{\bar\Q}\) is isogenous to \(E^2\)
+with \(E\) a CM curve) and \textbf{(S)} (\(A_{\bar\Q}\) is isogenous to \(E^2\) with \(E\) without
+CM). In case (S), \(L\) is the smallest field over which all geometric endomorphisms are defined,
+\(\Gamma=\Gal(L/\Q)\), and \(\Gamma\ne1\) if \(A\) is simple over \(\Q\).
+
+\item \textbf{(I3)} \cite[Lemma~2]{P63}. Let \(X\) be an abelian surface over a number field
+\(k\), \(C\subset X\) an elliptic curve defined over \(k\), and \(Q\in X(k)\) of prime order \(q\).
+Then either \(Q\in C(k)\), or the image of \(Q\) in \((X/C)(k)\) has order \(q\).
+
+\item \textbf{(I4)} \cite[Lemma~3]{P63}. In case (S), every elliptic curve in \(A_{\bar\Q}\) is
+defined over \(L\).
+
+\item \textbf{(I7) Weil restriction} \cite[(I7)]{P2210}. For an elliptic curve \(E\) over a
+quadratic field \(K\), \((\Res_{K/\Q}E)(\Q)=E(K)\) and \((\Res_{K/\Q}E)_K\cong E\times E^\sigma\). If
+\(E\) is the base change of an elliptic curve \(E_0/\Q\), then \(\Res_{K/\Q}E\) is isogenous over
+\(\Q\) to \(E_0\times E_0^{(K)}\).
+
+\item \textbf{(I9) Kubert's normal form} \cite[(I9)]{P2210}, from \cite[Table~3]{Ku}. For \(t\) in a
+field \(k\) of characteristic \(0\) put
+\[c=-\frac{t(t-1)(2t-1)}{t^2-3t+1},\qquad b=\frac{t^3(t-1)(2t-1)}{(t^2-3t+1)^2},\qquad
+E_t:\ y^2+(1-c)xy-by=x^3-bx^2 .\]
+If \(E_t\) is an elliptic curve, \((0,0)\) has order \(10\), and every pair \((E',P)\) of an
+elliptic curve over \(k\) and a point \(P\in E'(k)\) of order \(10\) is isomorphic over \(k\) to
+\((E_t,(0,0))\) for some such \(t\in k\).
+
+\item \textbf{(I10) Torsion over quadratic fields} \cite[Theorem~(0.1)]{KM}, in the form quoted in
+\cite[(I1)]{P2214}. Let \(N\) be a product of powers of \(2,3,5,7,11,13\) and \(m\mid N\). If
+\(X_1(m,N)\) has positive genus and \((m,N)\) is not one of \((1,11)\), \((1,13)\), \((1,14)\), \((1,15)\),
+\((1,16)\), \((1,18)\), \((2,10)\), \((2,12)\), then \(Y_1(m,N)(k)=\emptyset\) for every quadratic field \(k\). The curve \(X_1(20)\) has
+genus \(3\) (certificate, part K). Hence \emph{no elliptic curve over a quadratic field has a point of
+order \(20\).}
+
+\item \textbf{(I11)} \cite[Section~3]{P63}, \cite[Section~5]{P2210}. If \(A\) is of type (N) and
+simple over \(\Q\), the two elliptic curves of \(A_{\bar\Q}\) are defined over a quadratic field
+\(K\) and exchanged by \(\sigma\). An elliptic curve \(E\subset A_K\) with \(E^\sigma=E\) is stable
+under \(G_{\Q}\), hence an elliptic curve in \(A\) defined over \(\Q\) \cite[Section~2]{P2214}.
+\end{itemize}
+
+From \cite{P2210} we use the following results, with its numbering.
+\begin{itemize}
+\item \textbf{Lemma 1.} No abelian surface over \(\F_3\) has exactly \(40\) points.
+
+\item \textbf{Proposition 2.} If \(A\) is of type (S), simple over \(\Q\), and \(A(\Q)[5]\ne0\),
+then \(\Gamma\) is cyclic of order \(2\) or \(4\).
+
+\item \textbf{Proposition A.} If \(A_{\bar\Q}\) is isogenous to the square of an elliptic curve
+without CM and the field of definition of the geometric endomorphisms of \(A\) is a cyclic quartic
+extension of \(\Q\), then \(\#A(\Q)[2^\infty]\le4\).
+\end{itemize}
+Neither Lemma~1, nor Proposition~2, nor Proposition~A uses a principal polarization
+\cite[Remark~3]{P2210}. Proposition~2 rests on the residual-representation lemmas of
+\cite[Section~6]{P63}, which use a polarization of \(A\) over \(\Q\) of arbitrary degree; every abelian
+variety over \(\Q\) has one.
+
+The following results of the quadratic case of \cite[Section~5]{P2210} concern an abelian surface
+\(A/\Q\) that is simple over \(\Q\), a quadratic field \(K\), and an elliptic curve \(E\subset A_K\)
+defined over \(K\) with \(E^\sigma\neq E\). In \cite{P2210} they are stated under the standing
+assumption of that section. The proof of Lemma~5 uses only these hypotheses \cite[Remark~2]{P2210},
+and Lemmas~6, 7 and Proposition~8 concern elliptic curves over \(K\) only.
+\begin{itemize}
+\item \textbf{Lemma 5 (Weil restriction).} (a) \(A\) is isogenous over \(\Q\) to
+\(\Res_{K/\Q}E'\) for every elliptic curve \(E'\) over \(K\) that is \(K\)-isogenous to \(E\).
+(b) If \(p\) is an odd prime, inert in \(K\), at which \(A\) has good reduction, then every such
+\(E'\) has good reduction at \(pO_K\), and \(\#\widetilde A(\F_p)=\#\widetilde{E'}(O_K/pO_K)\).
+
+\item \textbf{Lemma 6 (a Chebotarev criterion).} Let \(K=\Q(\sqrt d)\) and
+\(E:y^2=(x-e_1)(x-e_2)(x-e_3)\) with \(e_i\in K\) distinct, \(N_{ij}=N_{K/\Q}(e_i-e_j)\). If
+\(8\mid\#\widetilde E(O_K/pO_K)\) for all but finitely many primes \(p\) inert in \(K\), then for a
+suitable numbering \(N_{ij}\in\Q^{\times2}\), and \(N_{ik}\in\Q^{\times2}\) or
+\(N_{jk}\in\Q^{\times2}\) or \(dN_{ik}N_{jk}\in\Q^{\times2}\).
+
+\item \textbf{Lemma 7 (\(\Z/2\times\Z/10\) over quadratic fields).} Let \(\mathcal X\) be the elliptic
+curve \(y^2=x^3-2x^2+1\) over \(\Q\), with origin the point at infinity \(O\) (Cremona \(20a2\)), let
+\(E_t\) be as in (I9), and put
+\[
+e_1=-\frac{t^3(t-1)}{t^2-3t+1},\qquad
+B_t=\frac{-8t^4+12t^3-4t+1}{(t^2-3t+1)^2},
+\]
+\[
+\rho=\frac{(2t-1)^2s}{(t^2-3t+1)^2},\qquad
+e_{2,3}=\frac{-B_t\pm\rho}{8}.
+\]
+(a) \(\mathcal X\) has rank \(0\) and \(\mathcal X(\Q)=\{O,(0,\pm1),(1,0),(2,\pm1)\}\). (b) Let \(K\) be a
+quadratic field and \(E'\) an elliptic curve over \(K\) with \(E'(K)\supseteq\Z/2\times\Z/10\). Then
+\(E'\cong E_t\) over \(K\) for some \(t\in K\) such that \(s^2=(2t-1)(4t^2-2t-1)\) for some \(s\in K\),
+and \(E'\) is isomorphic over \(K\) to \(y^2=(x-e_1)(x-e_2)(x-e_3)\). The point \(Q=(2t,s)\in\mathcal X(K)\)
+does not lie in \(\mathcal X(\Q)\). (c) Put \(R=Q+Q^\sigma\in\mathcal X(\Q)\). If \(R=O\), then \(t\in\Q\).
+If \(R\neq O\), then the line through \(Q\) and \(Q^\sigma\) passes through \(-R\) and has a slope
+\(m\in\Q\); the \(x\)-coordinates of \(Q\) and \(Q^\sigma\) are the roots of the monic quadratic
+\[q_{R,m}(X)=\frac{X^3-2X^2+1-\bigl(y(-R)+m(X-x(-R))\bigr)^2}{X-x(-R)}\in\Q[X],\]
+which is irreducible over \(\Q\), and \(K=\Q\bigl(\sqrt{\disc q_{R,m}}\bigr)\).
+
+\item \textbf{Proposition 8.} Let \(R\in\mathcal X(\Q)\setminus\{O\}\) and \(m\in\Q\) be such that
+\(q_{R,m}\) is irreducible over \(\Q\). Let \(x_Q\) be a root of \(q_{R,m}\), \(K=\Q(x_Q)\), \(t=x_Q/2\) and
+\(s=y(-R)+m(x_Q-x(-R))\), so that \(Q=(x_Q,s)\in\mathcal X(K)\), and suppose that \(E_t\) is an
+elliptic curve. Then the conclusion of Lemma~6 fails for \(y^2=(x-e_1)(x-e_2)(x-e_3)\) over \(K\), with
+\(e_1,e_2,e_3\) as above.
+\end{itemize}
+The computational inputs of Lemma~1, Lemma~7 and Proposition~8 are certified by
+\texttt{qsimple\_2210\_checks.m} of \cite{P2210}.
+
+\section{The CM case and endomorphism fields that are not quadratic}\label{other}
+
+\textbf{Type (CM).} Let \(A\) be of type (CM) with a point \(P_5\in A(\Q)\) of order \(5\), and suppose
+that \(\#A(\Q)[2^\infty]=2^k\ge8\). As in \cite[Section~2]{P2210}, \(A\) has potentially good reduction
+at \(3\), and by (I1)(c) good reduction \(\widetilde A\) over a finite extension of \(\Q_3\) with
+residue field \(\F_3\). The subgroup of \(A(\Q)\) generated by \(P_5\) and \(A(\Q)[2^\infty]\) has order
+\(5\cdot2^k\), prime to \(3\), so by (I1)(b) \(5\cdot2^k\) divides \(\#\widetilde A(\F_3)\), which is at
+most \((1+\sqrt3)^4<56\) by (I1)(d). Since \(5\cdot16=80>56\), this forces \(2^k=8\) and
+\(\#\widetilde A(\F_3)=40\), contradicting Lemma~1. So \(\#A(\Q)[2^\infty]\le4\). This case uses neither
+simplicity over \(\Q\) nor a polarization.
+
+\textbf{Type (S).} Let \(A\) be of type (S), simple over \(\Q\), with a point of order \(5\). By
+Proposition~2, \(\Gamma\cong C_2\) or \(\Gamma\cong C_4\). If \(\Gamma\cong C_4\), then
+\(\#A(\Q)[2^\infty]\le4\) by Proposition~A.
+
+It remains to treat type (S) with \(\Gamma\cong C_2\) and type (N).
+
+\section{Moving \(2\)-primary torsion to an elliptic curve}\label{lemma}
+
+\begin{statement}{Lemma 9.}\label{lemma-4prime}
+Let \(A/\Q\) be an abelian surface, \(K\) a quadratic field and \(E\subset A_K\) an elliptic curve
+defined over \(K\) with \(E^\sigma\neq E\). Put \(Y=A_K/E^\sigma\), and suppose that \(A(\Q)\) has a point
+of order \(5\). Then:
+\begin{enumerate}
+\item[(a)] \(E(K)[2^\infty]\) and \(Y(K)[2^\infty]\) are killed by \(2\);
+\item[(b)] \(A(\Q)[2^\infty]\) is killed by \(4\) and has order at most \(16\); in particular
+\(A(\Q)\) has no point of order \(8\);
+\item[(c)] if \(\#A(\Q)[2^\infty]\ge8\), there is an elliptic curve \(E'\) over \(K\), \(K\)-isogenous
+to \(E\), such that \(E'(K)\supseteq\Z/2\times\Z/10\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} \emph{Step 1: an exact sequence} (as in \cite[Proposition~2]{P2214}). The curves \(E\)
+and \(E^\sigma\) are distinct elliptic curves in \(A_K\), so \(E\cap E^\sigma\) is finite. Let
+\(\pi:A_K\to Y\) be the quotient map, defined over \(K\). Its restriction to \(E\) has the finite
+kernel \(E\cap E^\sigma\), so it is a \(K\)-isogeny \(E\to Y\). If \(P\in A(\Q)\) and \(\pi(P)=0\),
+then \(P\in E^\sigma\), hence \(P=\tilde\sigma(P)\in\tilde\sigma(E^\sigma)=\tilde\sigma^2(E)=E\), as
+\(\tilde\sigma^2\in G_K\); so \(P\in E(\bar\Q)\cap A(K)=E(K)\). Therefore
+\[
+0\to A(\Q)[2^\infty]\cap E(K)\to A(\Q)[2^\infty]\xrightarrow{\ \pi\ }Y(K)[2^\infty]
+\]
+is exact, and \(\#A(\Q)[2^\infty]\le\#E(K)[2^\infty]\cdot\#Y(K)[2^\infty]\).
+
+\emph{Step 2: a point of order \(5\).} Let \(P_5\in A(\Q)\) have order \(5\). By (I3) over \(K\),
+applied to \(E^\sigma\subset A_K\), either \(P_5\in E^\sigma\), and then \(P_5\in E(K)\) as in Step 1,
+or \(\pi(P_5)\in Y(K)\) has order \(5\). So for some \(C'\in\{E,Y\}\) there is a point
+\(P\in C'(K)\) of order \(5\).
+
+\emph{Step 3: combining} (as in \cite[Lemma~1]{P63}, with a group in place of a point). Let
+\(C\in\{E,Y\}\) and \(T=C(K)[2^\infty]\). If \(C'=C\), put \(E'=C\), let \(a\) be the identity of
+\(C\), and put \(T'=T\) and \(P'=P\). Otherwise let \(f:C\to C'\) be
+the \(K\)-isogeny \(\pi|_E\) or its dual. Let \(H\) be the \(5\)-primary part of \(\ker f\); it is a
+characteristic subgroup of the \(G_K\)-stable group \(\ker f\), hence \(G_K\)-stable. Put
+\(E'=C/H\), let \(a:C\to E'\) be the quotient map and write \(f=b\circ a\) with \(b:E'\to C'\) defined
+over \(K\). The degree of \(a\) is a power of \(5\), so \(a\) is injective on \(C[2^\infty]\) and
+\(a(T)\subseteq E'(K)\) is isomorphic to \(T\). The degree of \(b\) is prime to \(5\); since \(b\circ\hat
+b=[\deg b]\) is injective on \(C'[5]\), so is the dual isogeny \(\hat b:C'\to E'\), which is defined
+over \(K\), and \(\hat b(P)\in E'(K)\) has order \(5\); put \(T'=a(T)\) and \(P'=\hat b(P)\). In both cases \(E'\) is \(K\)-isogenous to
+\(E\), and
+\[
+E'(K)\supseteq T'\oplus\langle P'\rangle,\qquad T'\cong T,\quad P'\text{ of order }5 .
+\]
+
+\emph{(a)} If \(T\) had an element of order \(4\), then \(E'(K)\) would have a point of order \(20\),
+contradicting (I10). So \(T\) is killed by \(2\), for \(C=E\) and for \(C=Y\).
+
+\emph{(b)} By (a) and Step 1, \(\#A(\Q)[2^\infty]\le4\cdot4\). For \(x\in A(\Q)[2^\infty]\) we have
+\(2\pi(x)=0\) by (a), so \(2x\in A(\Q)[2^\infty]\cap\ker\pi\subseteq E(K)[2^\infty]\), and \(4x=0\) by
+(a).
+
+\emph{(c)} If \(\#A(\Q)[2^\infty]\ge8\), Step 1 and (a) give \(C\in\{E,Y\}\) with \(\#T\ge4\) and \(T\)
+killed by \(2\), so \(T=C[2]\). With \(E'\) and \(a\) as in Step 3, \(T'=a(T)\) is a subgroup of \(E'[2]\) of order
+\(4\), so \(T'=E'[2]\). Hence \(E'[2]\subseteq E'(K)\) and \(E'(K)\supseteq\Z/2\times\Z/2\times\Z/5\cong
+\Z/2\times\Z/10\). \qed
+
+\medskip
+Part (b) already excludes rational \(2\)-primary subgroups containing \(\Z/8\), without any Frobenius
+argument; in particular it excludes \([40]\) in the cases of this section. The \(2\)-primary groups
+\(\Z/2\times\Z/4\), \((\Z/2)^3\), \((\Z/4)^2\), \((\Z/2)^2\times\Z/4\) and \((\Z/2)^4\) need part (c) and
+Section~\ref{quadratic}.
+
+\section{The quadratic case}\label{quadratic}
+
+\begin{statement}{Theorem Q.}\label{thm-Qprime}
+Let \(A/\Q\) be an abelian surface that is simple over \(\Q\). Suppose that there are a quadratic
+field \(K\) and an elliptic curve \(E\subset A_K\) defined over \(K\) with \(E^\sigma\neq E\). If
+\(A(\Q)\) has a point of order \(5\), then \(\#A(\Q)[2^\infty]\le4\).
+\end{statement}
+
+\emph{Proof.} Suppose that \(\#A(\Q)[2^\infty]\ge8\). By
+\hyperref[lemma-4prime]{Lemma~9(c)} there is an elliptic curve \(E'\) over \(K\), \(K\)-isogenous
+to \(E\), with \(E'(K)\supseteq\Z/2\times\Z/10\). By Lemma~5(a), \(A\) is isogenous over \(\Q\) to
+\(\Res_{K/\Q}E'\). Let \(p\) be an odd prime, inert in \(K\), at which \(A\) has good reduction. By
+(I1)(b), \(A(\Q)[2^\infty]\) injects into \(\widetilde A(\F_p)\), so
+\(8\mid\#\widetilde A(\F_p)=\#\widetilde{E'}(O_K/pO_K)\) by Lemma~5(b). This holds for all but
+finitely many primes \(p\) inert in \(K\). Let \(E'\cong E_t\) and \(Q\in\mathcal X(K)\) be as in
+Lemma~7.
+\begin{itemize}
+\item If \(Q+Q^\sigma=O\), then \(t\in\Q\), and \(E'\) is the base change of the elliptic curve
+\(E_t\) over \(\Q\). By (I7), \(\Res_{K/\Q}E'\) is isogenous over \(\Q\) to \(E_t\times E_t^{(K)}\),
+so \(A\) is not simple over \(\Q\). This is a contradiction.
+\item Otherwise \(R=Q+Q^\sigma\neq O\). By Lemma~7(c), \(q_{R,m}\) is irreducible over \(\Q\), with
+roots \(x(Q)\) and \(x(Q^\sigma)\), and \(K=\Q(x(Q))\) because \(x(Q)\notin\Q\). (If \(x(Q)\in\Q\), then
+\(Q^\sigma\neq Q\) has the same \(x\)-coordinate, so \(Q^\sigma=-Q\) and \(R=O\).) As \(Q=(2t,s)\) lies on
+the line through \(-R\) with slope \(m\), we have \(t=x(Q)/2\) and \(s=y(-R)+m(x(Q)-x(-R))\), and
+\(E_t\cong E'\) is an elliptic curve. So the hypotheses of Proposition~8 hold with \(x_Q=x(Q)\). The
+curve \(E'\) is isomorphic over \(K\) to \(y^2=(x-e_1)(x-e_2)(x-e_3)\), so the two curves have
+isomorphic reductions at all but finitely many primes of \(K\), and Lemma~6 applies to
+\(y^2=(x-e_1)(x-e_2)(x-e_3)\). Its conclusion contradicts Proposition~8.
+\end{itemize}
+Hence \(\#A(\Q)[2^\infty]\le4\). \qed
+
+\medskip
+\textbf{Type (S) with \(\Gamma\cong C_2\), and type (N).} Let \(A\) be simple over \(\Q\). If \(A\) is
+of type (S) with \(\Gamma\cong C_2\), put \(K=L\); by (I4) every elliptic curve \(E\subset A_{\bar\Q}\)
+is defined over \(K\). If \(A\) is of type (N), let \(K\) be the quadratic field of (I11) and \(E\) one
+of the two elliptic curves of \(A_{\bar\Q}\). In both cases \(E^\sigma\ne E\) by (I11), since \(A\) is
+simple over \(\Q\). So Theorem~Q applies.
+
+\section{Proof of the Theorem and consequences for the census}\label{census}
+
+\emph{Proof of the Theorem.} Let \(A/\Q\) be simple over \(\Q\) and geometrically split, with a
+rational point of order \(5\). By (I2), \(A\) is of type (N), (CM) or (S). In type (CM),
+\(\#A(\Q)[2^\infty]\le4\) by Section~\ref{other}. In type (S), \(\Gamma\cong C_2\) or \(C_4\) by
+Proposition~2; for \(\Gamma\cong C_4\) the bound holds by Proposition~A, and for \(\Gamma\cong C_2\) by
+Theorem~Q. In type (N) the bound holds by Theorem~Q. \qed
+
+\medskip
+\emph{Proof of the Corollary.} The Jacobian of a curve of genus \(2\) over \(\Q\) is an abelian surface.
+The groups \([40]\) and \([2,20]\) have a point of order \(5\) and \(2\)-primary parts \(\Z/8\) and
+\(\Z/2\times\Z/4\) of order \(8\); the groups \([2,2,10]\), \([2,2,20]\) and \([2,2,2,10]\) have
+\(2\)-primary parts of orders \(8\), \(16\) and \(16\). \qed
+
+\medskip
+On the census, \([40]\) and \([2,20]\) become impossible in the class ``geometrically split, simple
+over \(\Q\)''. Both have examples split over \(\Q\) (the census curves 40.b and 2.20.b), so their
+combined geometrically split cells keep their grades. For \([2,2,10]\), \([2,2,20]\) and
+\([2,2,2,10]\) the census entries already cite \cite{P2210}; the theorem removes its principal
+polarization hypothesis. In the class ``geometrically split, simple over \(\Q\)'', the group \([20]\)
+(\(2\)-primary part \(\Z/4\)) is not decided by this argument.
+
+\section{Remarks}\label{remarks}
+
+\begin{enumerate}
+\item \emph{Where the hypotheses are used.} Simplicity over \(\Q\) gives \(E^\sigma\neq E\) in the
+quadratic case, excludes the base-change alternative in Theorem~Q, and enters
+Proposition~2. It is needed: the census lists examples split over \(\Q\) of \([40]\), \([2,20]\) and
+\([2,2,10]\). The point of order \(5\) is also needed: the census curves 2.2.8.c and 2.2.2.4.c are
+geometrically split and simple over \(\Q\), with rational torsion subgroups \([2,2,8]\) and
+\([2,2,2,4]\), whose \(2\)-primary parts have order \(32\). In the quadratic case the rational point of
+order \(5\) of \(A\) is used only in Step~2 of Lemma~9, to put a \(K\)-point of order \(5\) on \(E\) or
+\(Y\).
+
+\item \emph{The polarization in the earlier theorem.} By \cite[Remark~3]{P2210}, the principal
+polarization was used there only in Lemma~4. Rational \(2\)-rank at least \(3\) gives
+\(\#A(\Q)[2^\infty]\ge8\). So in the last paragraph of \cite[Section~5]{P2210}, Lemma~9(c) can
+replace Lemma~4 and Lemma~5(c) together, with Lemma~5(a) applied to the original curve \(E\) (the
+curve \(E'\) of Lemma~9 need not lie in \(A_K\)); the argument then becomes the proof of Theorem~Q.
+Hence the theorem of \cite{P2210} holds for every abelian surface over \(\Q\)
+that is simple over \(\Q\) and geometrically split; it is also a special case of the theorem above.
+
+\item \emph{Isogenies and \(\Q\)-curves.} Rational \(2\)-primary torsion is not an isogeny invariant,
+and \(\Q\)-isogenies of a Weil restriction \(\Res_{K/\Q}E'\) of a \(\Q\)-curve, for instance
+\((2,2)\)-isogenies, can enlarge it. Lemma~9 bounds the \(2\)-primary torsion of every surface in
+the \(\Q\)-isogeny class by that of two curves in the \(K\)-isogeny class of \(E\). If
+\(E'(K)\supseteq\Z/2\times\Z/10\) and \(E'\) is not a base change, Proposition~8 and Lemma~6 give
+infinitely many inert \(p\) with \(8\nmid\#\widetilde{E'}(\F_{p^2})=\#\widetilde A(\F_p)\), for every
+\(A\) isogenous to \(\Res_{K/\Q}E'\). For example, the two elliptic curves over quadratic fields in the
+LMFDB with torsion \(\Z/2\times\Z/10\) that are not base changes, \(2.2.13.1\text{-}36.1\text{-}a3\) and
+\(2.2.17.1\text{-}36.1\text{-}a4\), have \(\#\widetilde E(\F_{121})=100\) (certificate, part S).
+
+\item \emph{Sharpness.} Let \(E\) be the curve \(2.2.13.1\text{-}36.1\text{-}a3\),
+\(y^2+(1+w)xy+(1+w)y=x^3+(-115+48w)x+(218-96w)\) over \(K=\Q(w)\), \(w^2-w-3=0\), and
+\(A=\Res_{K/\Q}E\). The certificate (part S) checks that \(E(K)_{\mathrm{tors}}\cong\Z/2\times\Z/10\),
+that \(j(E)=476379541/236196\) is not integral (so \(E\) has no CM), that \(E\cong E^\sigma\) over
+\(K\), and that the Frobenius polynomial \(T^4-10T^2+49\) of \(A\) at the inert prime \(7\) is
+irreducible. Hence \(A\) is simple over \(\Q\). As \(\End(E_{\bar\Q})=\Z\) and \(E\cong E^\sigma\) over
+\(K\), every geometric endomorphism of \(A\) is defined over \(K\), so \(L\subseteq K\), and \(L\neq\Q\)
+by (I2); thus \(A\) is of type (S) with \(\Gamma\cong C_2\). It is
+principally polarized (the product polarization of \(E\times E^\sigma\) descends), and
+\(A(\Q)_{\mathrm{tors}}=E(K)_{\mathrm{tors}}\cong\Z/2\times\Z/10\) by (I7). This \(A\) is not a Jacobian:
+as \(\End(E_{\bar\Q})=\Z\), the principal polarizations of \(A_{\bar\Q}\cong E^2\) correspond to
+positive definite unimodular binary quadratic forms over \(\Z\), each equivalent to \(x^2+y^2\), the
+product polarization.
+
+The bound is also attained by a Jacobian. Gluing \(E\) and \(E^\sigma\) along
+\(\psi(\alpha_i,0)=(\sigma(\alpha_i),0)\), where \(\alpha_1,\alpha_2,\alpha_3\in K\) are the
+\(x\)-coordinates of the points of order \(2\) of \(E\) \cite[Proposition~4]{HLP}, gives a curve over
+\(K\) that descends to the genus-\(2\) curve
+\[
+C:\ y^2=63x^6+6x^5+184x^4+184x^2-6x+63
+\]
+over \(\Q\), the curve \(6084.d1\) of the LMFDB table \texttt{g2c\_curves\_new}. The certificate (part J)
+checks that \(J(\Q)_{\mathrm{tors}}\cong\Z/2\times\Z/10\) for \(J=\mathrm{Jac}(C)\); that the
+\(L\)-polynomial \(49T^4-10T^2+1\) of \(C\) at \(7\) is irreducible, so \(J\) is simple over \(\Q\); and
+that over \(K\), \(C\) is isomorphic to the curve \(y^2=h(X)\) of \cite[Proposition~4]{HLP} with \(h\)
+even, whose two elliptic quotients \((X,y)\mapsto(X^2,y)\) and \((X,y)\mapsto(1/X^2,y/X^3)\) are
+\(K\)-isomorphic to \(E\) and to \(E^\sigma\cong E\); it also checks the non-degeneracy condition of
+\cite[Proposition~4]{HLP}. The two quotient maps are defined over \(K\), so \(J_K\) is
+\(K\)-isogenous to \(E^2\) and, as \(\End(E_{\bar\Q})=\Z\), every geometric endomorphism of \(J\) is
+defined over \(K\). Since \(J\) is simple over \(\Q\), it is of type (S) with \(\Gamma\cong C_2\). The census lists \([2,10]\) in the class ``geometrically split, simple over \(\Q\)'' through
+2.10.b (LMFDB 256.a.512.1), whose endomorphism field is cyclic quartic. In the LMFDB table
+\texttt{g2c\_curves\_new}, five curves with torsion \([2,10]\) are simple over \(\Q\) and geometrically
+split: \(6084.d1\), with Sato--Tate group \(E_2\), and \(256.a1\) (that is, 256.a.512.1), \(16900.i1\),
+\(28900.u1\) and \(57600.gw1\), with Sato--Tate group \(E_4\); in the table \texttt{g2c\_curves} only
+256.a.512.1 occurs.
+
+\item \emph{Validation (not used in the proof).} Every curve in the class ``geometrically split,
+simple over \(\Q\)'' with a rational point of order \(5\), in the census and in both LMFDB genus-\(2\)
+tables, has \(2\)-primary torsion of order at most \(4\). Among the \(2795\) LMFDB elliptic curves \(E\)
+over quadratic fields with \(5\mid\#E(K)_{\mathrm{tors}}\), each of the \(2108\) for which
+\(\Res_{K/\Q}E\) is certified simple over \(\Q\) has a good odd prime \(p\le23\) with
+\(8\nmid\#\widetilde{\Res_{K/\Q}E}(\F_p)\). Across the
+\(2403\) isogeny classes of LMFDB elliptic curves over quadratic fields that contain a curve with a
+point of order \(5\), no curve has a point of order \(4\), as (I10) predicts.
+
+\item \emph{Two derivations.} The argument of Sections~\ref{lemma} and~\ref{quadratic} was found
+independently in two separate analyses, of type (N) and of type (S) with \(\Gamma\cong C_2\); each
+checked the other.
+\end{enumerate}
+
+\section{Computations}\label{computations}
+
+All scripts run in Magma V2.30-1 and consist of assertions.
+\begin{itemize}
+\item \texttt{qsimple\_40\_checks.m}, which runs in under a second. Its log
+\texttt{qsimple\_40\_checks.log} ends with \texttt{ALL\_T5SQ\_CHECKS\_PASSED}. Part K:
+\(X_1(20)\) has genus \(3\) and \((1,20)\) is not among the exceptions of (I10). Parts S and J: the facts of
+Remarks~3 and~4. The SHA-256 hash of the script is
+\texttt{2a06ab43a45d3617\allowbreak f00cc3ffc82b5e88\allowbreak e5ebaf7c255e5805\allowbreak 1c8bd966ace1fce2}, and that of the log is
+\texttt{a7ff82365c9fcddc\allowbreak f8b598df50a23a56\allowbreak abf8afa71192bced\allowbreak c1778c1a9dc43535}.
+\item The published certificate \texttt{qsimple\_2210\_checks.m} of \cite{P2210} certifies Lemma~1,
+Lemma~7 and Proposition~8. Rerun unchanged, it gives a log byte-identical to the published one.
+\end{itemize}
+
+\begin{thebibliography}{P2214}
+
+\bibitem[HLP]{HLP}
+E. W. Howe, F. Leprévost and B. Poonen, \emph{Large torsion subgroups of split Jacobians of curves of
+genus two or three}, Forum Math. \textbf{12} (2000), 315--364, Proposition~4.
+
+\bibitem[KM]{KM}
+M. A. Kenku and F. Momose, \emph{Torsion points on elliptic curves defined over quadratic fields},
+Nagoya Math. J. \textbf{109} (1988), 125--149, Theorem~(0.1).
+\href{https://doi.org/10.1017/S0027763000002816}{doi:10.1017/S0027763000002816}.
+
+\bibitem[Ku]{Ku}
+D. S. Kubert, \emph{Universal bounds on the torsion of elliptic curves}, Proc. London Math. Soc. (3)
+\textbf{33} (1976), 193--237, Table~3.
+\href{https://doi.org/10.1112/plms/s3-33.2.193}{doi:10.1112/plms/s3-33.2.193}.
+
+\bibitem[P63]{P63}
+Census proof of 21 October 2026, \emph{An obstruction to rational \(63\)-torsion on geometrically
+split abelian surfaces},
+\url{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html}: Lemmas~1--3 and
+Sections~3 and~6.
+
+\bibitem[P2210]{P2210}
+Census proof of 11 November 2026, \emph{Rational \(5\)-torsion and the \(2\)-rank of geometrically
+split Jacobians},
+\url{https://genus-2-torsion.github.io/proofs/qsimple-2210-obstruction.html}: Sections~1, 2 and 5,
+Lemma~1, Propositions~2, A and 8, Lemmas~5--7, Remarks~2 and~3.
+
+\bibitem[P2214]{P2214}
+Census proof of 10 November 2026, \emph{Rational \(7\)-torsion and the \(2\)-rank of
+geometrically split abelian surfaces},
+\url{https://genus-2-torsion.github.io/proofs/qsimple-2214-obstruction.html}: (I1), Section~2 and
+Proposition~2.
+
+\bibitem[ST]{ST}
+J.-P. Serre and J. Tate, \emph{Good reduction of abelian varieties}, Ann. of Math. (2)
+\textbf{88} (1968), 492--517. \href{https://doi.org/10.2307/1970722}{doi:10.2307/1970722}.
+
+\end{thebibliography}
+
+\end{document}

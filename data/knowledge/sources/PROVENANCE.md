@@ -691,3 +691,48 @@ SHA-256 of the publication artifacts:
 | `qsimple_2210_checks.log` | `29c3bc4a93d8034376ee575ce865fecbff3ebcbabce9e83470a1e0dd9ff070ee` |
 | `qsimple_2210_validation.m` | `40a978f9af77173faa5b066aa5010675dc3ff48304a43f4045fa7a738c8e6ed0` |
 | `qsimple_2210_validation.log` | `2b9d901e8b15d5a46d675579a0fbb970cba186639e7ce4df7466ffedd254fb9c` |
+
+## [40] and [2,20] in the geometrically split, ℚ-simple class (14 November 2026)
+
+[`qsimple-40-obstruction.html`](../../../proofs/qsimple-40-obstruction.html), with
+[PDF](qsimple_40_obstruction.pdf) and [LaTeX](qsimple_40_obstruction.tex), proves that an abelian
+surface over ℚ that is simple over ℚ and geometrically split, with a rational point of order 5, has
+at most four rational points of 2-power order. No polarization is assumed. The new census
+exclusions are [40] and [2,20] in `gsplit` only. Both groups have examples split over ℚ (40.b and
+2.20.b), so their combined split grades are unchanged ([40] exact, [2,20] open). The theorem also
+excludes groups outside the census, such as [80], [2,40] and [4,20], in `gsplit` only, and it
+removes the principal-polarization hypothesis of the [2,2,10] exclusion of 11 November 2026, whose
+census entries keep citing that proof. The group [20] is not decided in `gsplit`.
+
+The CM case, the cyclic quartic case and the other endomorphism fields that are not quadratic are
+handled by the arguments of `qsimple_2210_obstruction.tex` (its Lemma 1, Proposition 2 and
+Proposition A), which use only 40 | #A(𝔽₃) or no 2-primary information. In the remaining cases A
+contains, over a quadratic field K, an elliptic curve E with E^σ ≠ E. The exact sequence of the
+[[2,2,14]](../../../proofs/qsimple-2214-obstruction.html) proof bounds the rational 2-primary
+torsion by that of E and of A_K/E^σ, and since no elliptic curve over a quadratic field has a point
+of order 20 (Kenku–Momose), both are killed by 2: [40] is excluded at once, and 2-primary order 8
+or 16 yields a curve with ℤ/2 × ℤ/10 over K in the K-isogeny class of E. Lemmas 5–7 and
+Proposition 8 of the [2,2,10] proof then exclude it, as there. The argument was found
+independently in two separate analyses (of the non-isogenous and of the quadratic geometric-square
+case), each of which checked the other.
+
+The certificate [`qsimple_40_checks.m`](qsimple_40_checks.m) and its
+[log](qsimple_40_checks.log) (Magma V2.30-1, 14 November 2026, under a second) consist of
+assertions and end with `ALL_T5SQ_CHECKS_PASSED`; they check the genus of X₁(20) and the
+sharpness examples (the Weil restriction of 2.2.13.1-36.1-a3, the Jacobian of
+y² = 63x⁶ + 6x⁵ + 184x⁴ + 184x² − 6x + 63 with torsion [2,10], and the point counts of Remark 3).
+The computational inputs reused from the [2,2,10] proof are certified by
+[`qsimple_2210_checks.m`](qsimple_2210_checks.m). Two independent reports of 14 November 2026 (one
+on the mathematics, one auditing the computations) found the proof correct. All of their
+corrections are in this version. The audit reran both certificates with byte-identical logs, ran
+negative tests, rechecked every certified fact in Sage and PARI, and re-derived the LMFDB
+validation counts of Remark 5 independently.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_40_obstruction.tex` | `d5cc18fd5e6f700f3d7cc88c2fcd77b2e923b4c075ee00ae147b741325ac425f` |
+| `qsimple_40_obstruction.pdf` | `16dcfd6cd1e968167f565079d4bc69582480a21d14f952fbdf205ea548b365ab` |
+| `qsimple_40_checks.m` | `2a06ab43a45d3617f00cc3ffc82b5e88e5ebaf7c255e58051c8bd966ace1fce2` |
+| `qsimple_40_checks.log` | `a7ff82365c9fcddcf8b598df50a23a56abf8afa71192bcedc1778c1a9dc43535` |

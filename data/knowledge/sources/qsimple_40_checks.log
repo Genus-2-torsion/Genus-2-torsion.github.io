@@ -1,0 +1,7 @@
+K: genus X_1(20) = 3 > 0 and (1,20) is not a Kenku-Momose exception: no point of order 20 over quadratic fields
+S: E = 2.2.13.1-36.1-a3: E(K)_tors = Z/2 x Z/10, j = 476379541/236196 (no CM), E ~= E^sigma over K, chi_7(Res E) = T^4 - 10*T^2 + 49 irreducible
+S: #E(F_121) = 100, not divisible by 8
+S: E = 2.2.17.1-36.1-a4 over Q(sqrt 17): E(K)_tors = Z/2 x Z/10, 11 inert, #E(F_121) = 100, not divisible by 8
+J: C : y^2 = 63*x^6 + 6*x^5 + 184*x^4 + 184*x^2 - 6*x + 63; J(Q)_tors = Z/2 x Z/10; L_7(T) = 49*x^4 - 10*x^2 + 1 irreducible, so J is simple over Q
+J: over K, C ~= y^2 = h(X) (HLP gluing of E and E^sigma), h even; both quotients are K-isomorphic to E ~= E^sigma (no CM): type (S), Gamma = C_2
+ALL_T5SQ_CHECKS_PASSED

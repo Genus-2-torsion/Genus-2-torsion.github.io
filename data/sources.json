@@ -285,6 +285,14 @@
       "url": "proofs/qsimple-2210-obstruction.html",
       "used_for": "impossibility of [2,2,10], [2,2,20] and [2,2,2,10] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 5-torsion and 2-rank at least three in that class, including groups outside the census; with QSplitTwoRankObstruction, [2,2,2,10] on the whole geometrically split side; requires a principal polarization"
     },
+    "QSimple40Obstruction": {
+      "short": "ℚ-simple geometric [40] and [2,20] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 5-torsion and the 2-primary torsion of geometrically split abelian surfaces, census proof of 14 November 2026. An abelian surface over Q that is simple over Q and geometrically split, with a rational point of order 5, has at most four rational points of 2-power order; no polarization is assumed. The CM case and the endomorphism fields that are not quadratic are those of the [2,2,10] proof; in the quadratic case an exact sequence through an elliptic curve and its conjugate, together with the absence of points of order 20 on elliptic curves over quadratic fields (Kenku–Momose), produces a curve with Z/2×Z/10 over the quadratic field, which the analysis of the quadratic points of X1(2,10) in the [2,2,10] proof excludes; Magma checks in qsimple_40_checks.log.",
+      "url": "proofs/qsimple-40-obstruction.html",
+      "used_for": "impossibility of [40] and [2,20] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 5-torsion and 2-primary part of order at least 8 in that class, including groups outside the census; it also removes the principal polarization hypothesis of the [2,2,10] exclusion"
+    },
     "Kubert1976": {
       "short": "Kubert 1976",
       "year": 1976,

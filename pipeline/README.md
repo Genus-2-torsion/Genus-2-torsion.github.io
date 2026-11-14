@@ -80,6 +80,14 @@ whole split side; [2,2,10] (with `qsplit` examples) and [2,2,20] (open in `qspli
 grades. The proof is in `proofs/qsimple-2210-obstruction.html`, with PDF/LaTeX, the Magma certificate
 and a supplementary validation under `data/knowledge/sources/qsimple_2210_*`.
 
+`QSimple40Obstruction` (14 November 2026) proves that rational 5-torsion forces at most four rational
+2-power torsion points on a geometrically split abelian surface simple over ℚ, with no polarization
+hypothesis. The predicate `exponent % 5 == 0 and order % 8 == 0`, placed after the [2,2,10] branch,
+applies to [40] and [2,20] in the census and to future entries such as [80], [2,40] and [4,20];
+groups that already had a `gsplit` exclusion keep their earlier proof. Both census groups have `qsplit`
+examples, so their combined grades are unchanged. The proof is in `proofs/qsimple-40-obstruction.html`,
+with PDF/LaTeX and the Magma certificate under `data/knowledge/sources/qsimple_40_*`.
+
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].
 They appear separately on `exclusions.html`; no artificial curve or census row is created.

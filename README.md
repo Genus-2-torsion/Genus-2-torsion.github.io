@@ -93,6 +93,12 @@ class; [2,2,10] has split-over-ℚ examples and the split-over-ℚ case of [2,2,
 combined split infinitude grades are unchanged. It also excludes groups beyond the census, such as
 [2,2,40], and its proof shows that a surface whose endomorphism field is cyclic of degree 4 has at
 most four rational 2-primary torsion points (see `exclusions.html`).
+More generally, a rational point of order 5 on an abelian surface that is geometrically split and simple
+over ℚ forces at most four rational points of 2-power order, with no polarization hypothesis
+(`proofs/qsimple-40-obstruction.html`). This makes [40] and [2,20] impossible in the **geometrically
+split, simple over ℚ** class; both have split-over-ℚ examples, so their combined split infinitude
+grades are unchanged. The theorem also removes the principal-polarization hypothesis from the
+[2,2,10] result.
 For principally polarized surfaces that are **geometrically split and simple over ℚ**, rational
 7-torsion forces the entire rational 2-primary torsion to have order at most four
 (`proofs/qsimple-228-obstruction.html`, with PDF/LaTeX and exact modular-curve checks).

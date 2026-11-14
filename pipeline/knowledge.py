@@ -274,6 +274,13 @@ SOURCES = {
         "url": "proofs/qsimple-2210-obstruction.html",
         "used_for": "impossibility of [2,2,10], [2,2,20] and [2,2,2,10] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 5-torsion and 2-rank at least three in that class, including groups outside the census; with QSplitTwoRankObstruction, [2,2,2,10] on the whole geometrically split side; requires a principal polarization",
     },
+    "QSimple40Obstruction": {
+        "short": "ℚ-simple geometric [40] and [2,20] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Rational 5-torsion and the 2-primary torsion of geometrically split abelian surfaces, census proof of 14 November 2026. An abelian surface over Q that is simple over Q and geometrically split, with a rational point of order 5, has at most four rational points of 2-power order; no polarization is assumed. The CM case and the endomorphism fields that are not quadratic are those of the [2,2,10] proof; in the quadratic case an exact sequence through an elliptic curve and its conjugate, together with the absence of points of order 20 on elliptic curves over quadratic fields (Kenku–Momose), produces a curve with Z/2×Z/10 over the quadratic field, which the analysis of the quadratic points of X1(2,10) in the [2,2,10] proof excludes; Magma checks in qsimple_40_checks.log.",
+        "url": "proofs/qsimple-40-obstruction.html",
+        "used_for": "impossibility of [40] and [2,20] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 5-torsion and 2-primary part of order at least 8 in that class, including groups outside the census; it also removes the principal polarization hypothesis of the [2,2,10] exclusion",
+    },
     "Kubert1976": {
         "short": "Kubert 1976", "year": 1976,
         "cite": "D. S. Kubert, Universal bounds on the torsion of elliptic curves, Proc. London Math. Soc. (3) 33 (1976), 193–237.",
@@ -435,12 +442,13 @@ GSPLIT_REASON = {
     "2.2.14": "If a geometrically split abelian surface over ℚ is simple over ℚ and has a rational point of order 7, its rational 2-torsion has rank at most 2. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
     "p.p": "If a geometrically split abelian surface over ℚ is simple over ℚ, its rational p-torsion has rank at most 1 for every prime p ≥ 5. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
     "2.2.10": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-rank at most 2 if it has a rational point of order 5. This group has 5-torsion and 2-rank at least three, so it is impossible in that class at every geometric splitting degree.",
+    "40": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if it has a rational point of order 5. This group has 5-torsion and a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
 }
-GSPLIT_SOURCES = {"17": ["Mazur1977", "Kamienny1992", "SerreTate1968"], "22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "2.2.14": ["QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "p.p": ["Beauville2010", "MilneAV2008"], "2.2.10": ["QSimple63Obstruction", "QSimple2214Obstruction", "Kubert1976", "Knapp1992", "Milne1972", "SerreTate1968", "Mazur1977"]}
+GSPLIT_SOURCES = {"17": ["Mazur1977", "Kamienny1992", "SerreTate1968"], "22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "2.2.14": ["QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "p.p": ["Beauville2010", "MilneAV2008"], "2.2.10": ["QSimple63Obstruction", "QSimple2214Obstruction", "Kubert1976", "Knapp1992", "Milne1972", "SerreTate1968", "Mazur1977"], "40": ["QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"]}
 
 
 # gsplit proofs that need simplicity over ℚ (the others apply to every geometrically split surface)
-QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple228Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
+QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple40Obstruction", "QSimple228Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
                 "QSimpleRankTwoObstruction"}
 
 
@@ -522,6 +530,8 @@ def exclusions_record(key: str) -> dict:
         exclusions["gsplit"] = record("QSimple2214Obstruction", GSPLIT_REASON["2.2.14"], GSPLIT_SOURCES["2.2.14"])
     elif order % 5 == 0 and rank(2) >= 3:
         exclusions["gsplit"] = record("QSimple2210Obstruction", GSPLIT_REASON["2.2.10"], GSPLIT_SOURCES["2.2.10"])
+    elif exponent % 5 == 0 and order % 8 == 0:
+        exclusions["gsplit"] = record("QSimple40Obstruction", GSPLIT_REASON["40"], GSPLIT_SOURCES["40"])
     elif any(rank(p) >= 2 for p in range(5, exponent + 1) if all(p % q for q in range(2, p))):
         exclusions["gsplit"] = record("QSimpleRankTwoObstruction", GSPLIT_REASON["p.p"], GSPLIT_SOURCES["p.p"])
     elif exponent % 7 == 0 and order % 8 == 0:

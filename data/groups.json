@@ -6750,7 +6750,20 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if it has a rational point of order 5. This group has 5-torsion and a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple40Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "KenkuMomose1988",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-40-obstruction.html"
+        }
+      },
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -9225,7 +9238,20 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if it has a rational point of order 5. This group has 5-torsion and a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple40Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "KenkuMomose1988",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-40-obstruction.html"
+        }
+      },
       "n_curves": 2,
       "infinite": {
         "simple": {

@@ -1,0 +1,1034 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No rational point of order 45 on a geometrically split abelian surface simple over ℚ — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that a principally polarized abelian surface over Q that is simple over Q and geometrically split has no rational point of order 45; for geometric squares neither simplicity over Q nor a polarization is needed. This excludes [45], and every group with an element of order 45, in the geometrically split, Q-simple class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', Res: '\\operatorname{Res}',
+          Ind: '\\operatorname{Ind}', tr: '\\operatorname{tr}',
+          disc: '\\operatorname{disc}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=45">[45]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>No rational point of order \(45\) on a geometrically split abelian surface simple over \(\Q\)</h2>
+  <p class="src">14 November 2026 · Geometrically split, simple over ℚ</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be a principally polarized abelian surface that is simple over \(\Q\) and
+      geometrically split. Then \(A(\Q)\) has no point of order \(45\).</p>
+    <p><strong>Corollary.</strong> No genus-\(2\) Jacobian over \(\Q\) that is geometrically split and simple over \(\Q\) has a
+      rational torsion subgroup containing an element of order \(45\). In particular
+      <a href="../group.html?g=45">[45]</a> does not occur as the rational
+      torsion subgroup of such a Jacobian.</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\bar\Q}\) is isogenous to a product of two elliptic
+    curves. We impose no restriction on the degree of this isogeny, on the field of definition of the
+    geometric endomorphisms or on the integral endomorphism ring. The principal polarization and the
+    simplicity over \(\Q\) are used only in <a href="#parents">Section 4</a>. The theorem says nothing about
+    surfaces split over \(\Q\): a product of elliptic curves over \(\Q\) with rational points of orders
+    \(5\) and \(9\) has a rational point of order \(45\), and the census contains Jacobians split over
+    \(\Q\) with torsion subgroup \([45]\). For geometric squares we prove a stronger statement, which
+    needs neither simplicity over \(\Q\) nor a polarization:</p>
+  <div class="theorem" id="prop-A">
+    <p><strong>Proposition A.</strong> Let \(A/\Q\) be an abelian surface such that \(A_{\bar\Q}\) is isogenous to the square of an
+      elliptic curve. Then \(A(\Q)\) has no point of order \(45\).</p>
+  </div>
+  <p><em>Outline.</em> <a href="#lemmas">Section 2</a> proves two lemmas on elliptic curves: coprime torsion can be
+    combined in an isogeny class, and when \(E[p]^{\mathrm{ss}}\) is a sum of two distinct characters,
+    every Galois-stable lattice in \(V_p(E)^r\) splits into lattices of rank \(2\).
+    <a href="#square">Section 3</a> proves Proposition A: CM squares by a point count over \(\F_2\), non-CM
+    squares by the residual-representation lemmas of <a href="#p63">[P63]</a> at the primes \(5\) and \(3\) and, when
+    the endomorphism field is quadratic, by moving rational \(9\)-torsion to an elliptic curve over that
+    field. In the remaining case \(A_{\bar\Q}\) is isogenous to \(E\times F\) with \(E\) and \(F\) not
+    isogenous. Then \(E\) and \(F\) are conjugate over a quadratic field \(K\), and the principal
+    polarization identifies each of them with the quotient of \(A_K\) by the other. <a href="#parents">Section 4</a>
+    shows that \(E(K)_{\mathrm{tors}}\cong\Z/15\), that \(A_K\) is an \((n,n)\)-gluing of \(E\) and
+    \(E^\sigma\) with \(v_3(n)=1\), and that its \(3\)-part is a conjugate \((3,3)\)-gluing \(B\) over
+    \(\Q\) with a rational point of order \(9\). <a href="#conditions">Section 5</a> turns this into two conditions
+    on \(E\): the norm of its discriminant is a rational cube, and its flex coefficient \(a_3\)
+    satisfies \(a_3/\sigma(a_3)\in K^{\times3}\). <a href="#families">Section 7</a> shows that no quadratic point
+    of \(X_1(15)\) satisfies both. On each of the four families of quadratic points, the second
+    condition forces a primitive value of a cyclotomic binary quartic to be a cube or five times a cube;
+    a descent in \(\Q(\zeta_5)\) following Poonen and elliptic Chabauty over \(\Q(\zeta_5)\)
+    (<a href="#cyclotomic">Section 6</a>) leave four parameter values, where the point is a cusp or the first
+    condition fails.</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsimple_45_obstruction.tex">Complete proof (LaTeX source)</a></li>
+    <li><a href="../data/knowledge/sources/qsimple_45_checks.m">Magma script <code>qsimple_45_checks.m</code></a> and its <a href="../data/knowledge/sources/qsimple_45_checks.log">log</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#inputs">Conventions and inputs</a></li>
+      <li><a href="#lemmas">Two lemmas on elliptic curves</a></li>
+      <li><a href="#square">The geometric-square case</a></li>
+      <li><a href="#parents">Nonisogenous factors: the elliptic curves and the gluing</a></li>
+      <li><a href="#conditions">Two necessary conditions</a></li>
+      <li><a href="#cyclotomic">A primitive cyclotomic equation</a></li>
+      <li><a href="#families">The quadratic points of \(X_1(15)\)</a></li>
+      <li><a href="#census">Proof of the Theorem and consequences for the census</a></li>
+      <li><a href="#remarks">Remarks</a></li>
+      <li><a href="#computations">Computations</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="inputs">
+    <h3>1. Conventions and inputs</h3>
+    <p>All number fields are subfields of a fixed algebraic closure \(\bar\Q\). For a number field \(k\)
+      we write \(G_k=\Gal(\bar\Q/k)\), and \(\bar\chi_\ell\) for the mod-\(\ell\) cyclotomic character.
+      For an abelian variety \(X\), \(T_\ell(X)\) is the Tate module, \(V_\ell(X)=T_\ell(X)\otimes\Q_\ell\),
+      \(X[n]\) is the kernel of multiplication by \(n\) and \(\End^0=\End\otimes\Q\). For an elliptic curve
+      \(E\), \(e_n\) is the Weil pairing on \(E[n]\); an <em>anti-isometry</em> \(E[n]\to E'[n]\) is an
+      isomorphism \(\psi\) with \(e_n(\psi x,\psi y)=e_n(x,y)^{-1}\). For a quadratic field \(K\) we write
+      \(\sigma\) for its nontrivial automorphism and \(\tilde\sigma\in G_{\Q}\) for a lift of \(\sigma\);
+      for a variety \(Y\) over \(K\), \(Y^\sigma\) is the conjugate variety and
+      \(\sigma:Y(\bar\Q)\to Y^\sigma(\bar\Q)\) the bijection induced by \(\tilde\sigma\)
+      <a href="#p2214">[P2214, Section 1]</a>. We write \(k^{\times3}\) for the nonzero cubes of a field \(k\), and
+      \(v_\ell\) for the \(\ell\)-adic valuation. We use the functoriality of the Weil pairing and Galois
+      descent for morphisms of varieties without further comment.</p>
+    <ul>
+      <li>
+        <p><strong>(I1) Torsion of elliptic curves over \(\Q\) and over quadratic fields.</strong> By Mazur
+          <a href="#ma">[Ma, Theorem (8)]</a>, no elliptic curve over \(\Q\) has a rational point of order \(15\). By
+          Kenku–Momose <a href="#km">[KM, Theorem (0.1)]</a> and Kamienny <a href="#ka">[Ka]</a> (see the statement in
+          <a href="#na">[Na, Section 1]</a>), the torsion subgroup of an elliptic curve over a quadratic field is
+          isomorphic to \(\Z/m\) with \(1\le m\le16\) or \(m=18\), to \(\Z/2\times\Z/2m\) with \(1\le m\le6\),
+          to \(\Z/3\times\Z/3m\) with \(m\in\{1,2\}\), or to \(\Z/4\times\Z/4\). In particular there is no
+          point of order \(45\), and a torsion subgroup containing a point of order \(15\) is isomorphic to
+          \(\Z/15\). Over \(\Q(\sqrt{-3})\) only Mazur's groups, \(\Z/3\times\Z/3\) and \(\Z/3\times\Z/6\)
+          occur <a href="#na">[Na, Theorem 2(ii)]</a>; in particular there is no point of order \(15\). (The finite checks
+          in this item are part A of the certificate.)</p>
+      </li>
+      <li>
+        <p><strong>(I2) Reduction</strong> <a href="#st">[ST]</a>, as stated in <a href="#p63">[P63, Section 1]</a>: let \(K'\) be a finite
+          extension of \(\Q_p\) with residue field \(k\) and \(X\) an abelian variety over \(K'\). (a) Good
+          reduction is detected by the inertia action on \(T_\ell(X)\), \(\ell\neq p\)
+          <a href="#st">[ST, §1, Theorem 1]</a>; in particular it is preserved by isogenies <a href="#st">[ST, §1, Corollary 2]</a>.
+          (b) If \(X\) has good reduction \(\widetilde X\) and \(m\) is prime to \(p\), then \(X(K')[m]\)
+          injects into \(\widetilde X(k)\) <a href="#st">[ST, Lemma 2]</a>. (c) If \(X\) has potentially good reduction,
+          then it has good reduction over a finite extension of \(K'\) with residue field \(k\)
+          <a href="#st">[ST, §2]</a>. (d) (Weil.) An abelian surface \(Y\) over \(\F_q\) has at most \((1+\sqrt q)^4\)
+          points.</p>
+      </li>
+      <li>
+        <p><strong>(I3) The case distinction</strong> <a href="#p63">[P63, Sections 2 and 5]</a>. A geometrically split abelian
+          surface \(A/\Q\) is of exactly one of the types <strong>(N)</strong> (\(A_{\bar\Q}\) is isogenous to
+          \(E_1\times E_2\) with \(E_1\), \(E_2\) not isogenous), <strong>(CM)</strong> (\(A_{\bar\Q}\) is isogenous to
+          \(E^2\) with \(E\) a CM curve) and <strong>(S)</strong> (\(A_{\bar\Q}\) is isogenous to \(E^2\) with \(E\)
+          without CM). In case (S), \(D=\End^0(A_{\bar\Q})\cong M_2(\Q)\); \(L\) is the smallest field over
+          which all geometric endomorphisms are defined; \(\Gamma=\Gal(L/\Q)\) embeds in \(\PGL_2(\Q)\), the
+          element \(g\) acting on \(D\) by conjugation with \(R_g\in D^\times\); and \(\Gamma\) is one of
+          \(C_1\), \(C_2\), \(C_3\), \(C_4\), \(C_6\), \(V_4\), \(D_6\), \(D_8\), \(D_{12}\) (\(D_{2m}\) is
+          dihedral of order \(2m\)). An element of \(\Gamma\) of order \(m\in\{3,4,6\}\) has a unique
+          representative \(R\) with \(\tr R=1\), and \(R^2-R+1/c=0\) with \(c=1,2,3\) respectively.</p>
+      </li>
+      <li>
+        <p><strong>(I4)</strong> <a href="#p63">[P63, Lemma 2]</a>. Let \(X\) be an abelian surface over a field \(k\),
+          \(C\subset X\) an elliptic curve defined over \(k\), and \(Q\in X(k)\) of prime order \(q\). Then
+          either \(Q\in C(k)\), or the image of \(Q\) in \((X/C)(k)\) has order \(q\).</p>
+      </li>
+      <li>
+        <p><strong>(I5)</strong> <a href="#p63">[P63, Lemma 3]</a>. In case (S), every elliptic curve \(C\subset A_{\bar\Q}\) is
+          defined over \(L\), any two of them are \(L\)-isogenous, and \(A_L/C\) is \(L\)-isogenous to \(C\).</p>
+      </li>
+      <li>
+        <p><strong>(I6) Residual representations</strong> <a href="#p63">[P63, Section 6]</a>. Let \(A\) be of type (S), \(p\)
+          an odd prime with \(A(\Q)[p]\neq0\), and \(D_p=D\otimes\Q_p\).</p>
+        <ol type="a">
+          <li>
+            <p>(<em>Unramified order</em>, <a href="#p63">[P63, Lemma 6]</a>.) Suppose that a \(\Z_p\)-order
+              \(\mathcal B\subset D_p\), isomorphic to the ring of integers of the unramified quadratic extension
+              of \(\Q_p\), is preserved by \(\Gamma\), and that some \(g_0\in\Gamma\) has a representative
+              \(R_{g_0}\in\mathcal B^\times\) whose reduction in \(\mathcal B/p\mathcal B\cong\F_{p^2}\) is not in
+              \(\F_p\). Then \(\Q(\zeta_p)\subseteq L\).</p>
+          </li>
+          <li>
+            <p>(<em>Split blocks</em>, <a href="#p63">[P63, Lemma 7]</a>.) Suppose that
+              \(\mathcal B=\Z_pe_1\oplus\Z_pe_2\subset D_p\), with orthogonal idempotents \(e_1,e_2\) of rank one
+              and \(e_1+e_2=1\), is preserved by \(\Gamma\), and that some element of \(\Gamma\) exchanges \(e_1\)
+              and \(e_2\). Let \(\Gamma_0\) be the stabilizer of \(e_1\) and \(K_0=L^{\Gamma_0}\). If the character
+              \(\eta\) by which \(G_{K_0}\) acts on the line \(e_1D_pe_2\) has nontrivial reduction modulo \(p\),
+              then \(\Q(\zeta_p)\subseteq L\).</p>
+          </li>
+        </ol>
+        <p>In (a) the proof replaces \(T_p(A)\) by the lattice generated over the \(\Gamma\)-stable maximal
+          order \(\End_{\Z_p}(\Lambda)\supset\mathcal B\), where \(\Lambda\subset\Q_p^2\) is a
+          \(\mathcal B\)-stable lattice, and in (b) by \(\mathcal B\,T_p(A)\). Both proofs end with the
+          polarization duality of <a href="#p63">[P63, Lemma 5]</a> (<a href="#p30">[P30, Lemma 3]</a>), which needs only a polarization of
+          \(A\) over \(\Q\), of any degree. The proofs use nothing else about \(A\): neither the simplicity
+          over \(\Q\) nor the point of order \(63\) assumed in <a href="#p63">[P63, Section 2]</a>. The same arguments appear
+          in <a href="#p30">[P30, Lemma 4 and Section 8]</a>.</p>
+      </li>
+      <li>
+        <p><strong>(I7) Weil restriction</strong> <a href="#mi">[Mi, §1]</a>. Let \(K\) be a quadratic field and \(E\) an
+          elliptic curve over \(K\). The Weil restriction \(\Res_{K/\Q}E\) is an abelian surface over \(\Q\)
+          with \((\Res_{K/\Q}E)(\Q)=E(K)\) and \((\Res_{K/\Q}E)_K\cong E\times E^\sigma\). Its
+          \(\bar\Q\)-points are the pairs \((x,y)\) with \(x\in E(\bar\Q)\) and \(y\in E^\sigma(\bar\Q)\); an
+          element \(g\in G_K\) maps \((x,y)\) to \((gx,gy)\), an element \(g\notin G_K\) maps it to
+          \((gy,gx)\), and the rational points are the pairs \((P,\sigma P)\) with \(P\in E(K)\).</p>
+      </li>
+      <li>
+        <p><strong>(I8) Complements and gluing</strong> <a href="#bl">[BL, Section 5.3 and Corollary 12.1.5]</a>, <a href="#fk">[FK]</a>,
+          <a href="#ka97">[Ka97]</a>. For an elliptic curve \(C\) in an abelian surface \(X\) with a polarization \(\lambda\),
+          the complement of \(C\) is the connected component of the kernel of \(i_C^\vee\circ\lambda\), where
+          \(i_C\) is the inclusion. A principally polarized abelian surface containing two complementary
+          elliptic curves \(E\), \(F\) is the quotient of \(E\times F\) by the graph of an anti-isometry
+          \(E[n]\to F[n]\) (an \((n,n)\)-gluing). We prove the parts of this that we use in
+          <a href="#parents">Section 4</a>.</p>
+      </li>
+      <li>
+        <p><strong>(I9) Tate normal form</strong> <a href="#ku">[Ku, Table 3, the entry for \(\Z/5\)]</a>. Let \(k\) be a field
+          of characteristic \(0\) and put \(E_d:\ y^2+(1-d)xy-dy\)<wbr>\({}=x^3-dx^2\), whose discriminant is
+          \(d^5(d^2-11d-1)\). Every pair \((E,P)\) of an elliptic curve over \(k\) and a point \(P\in E(k)\) of
+          order \(5\) is isomorphic over \(k\) to \((E_d,(0,0))\) for some \(d\in k\) with
+          \(d^5(d^2-11d-1)\neq0\). Kubert works over \(\Q\), but his derivation from the Tate normal form uses
+          only field operations.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="lemmas">
+    <h3>2. Two lemmas on elliptic curves</h3>
+    <div class="theorem" id="lemma-coprime">
+      <p><strong>Lemma 1 (combining coprime torsion).</strong> Let \(k\) be a number field and \(m\), \(n\) coprime positive integers. If a \(k\)-isogeny class of
+        elliptic curves over \(k\) contains a curve with a \(k\)-rational point of order \(m\) and a curve
+        with a \(k\)-rational point of order \(n\), then it contains a curve with a \(k\)-rational point of
+        order \(mn\).</p>
+    </div>
+    <p><strong>Proof.</strong> This is <a href="#p63">[P63, Lemma 1]</a>. Let \(f:E_m\to E_n\) be a \(k\)-isogeny between the two
+      curves and \(H\) the subgroup of \(\ker f\) of elements whose order involves only primes dividing
+      \(n\); it is characteristic, hence defined over \(k\), and \(f=b\circ a\) with
+      \(a:E_m\to E'=E_m/H\). As \(\deg a\) is prime to \(m\), \(a\) maps the point of order \(m\) to a point
+      of order \(m\) in \(E'(k)\); as \(\deg b\) is prime to \(n\), the dual isogeny \(\hat b\) maps the
+      point of order \(n\) to a point of order \(n\) in \(E'(k)\). Their sum has order \(mn\). ∎</p>
+    <div class="theorem" id="lemma-lattice">
+      <p><strong>Lemma 2 (stable lattices).</strong> Let \(k\) be a number field, \(p\) a prime, and \(E/k\) an elliptic curve such that
+        \(E[p]^{\mathrm{ss}}\cong\alpha\oplus\beta\) for two distinct characters
+        \(\alpha,\beta:G_k\to\F_p^\times\). Put \(T=T_p(E)\) and \(V=V_p(E)\), and let \(r\ge1\).</p>
+      <ol type="a">
+        <li>
+          <p>Every \(G_k\)-stable \(\Z_p\)-lattice in \(V^r\) is a direct sum of \(r\) \(G_k\)-stable
+            lattices of rank \(2\), each contained in a \(G_k\)-subrepresentation of \(V^r\) isomorphic to \(V\).</p>
+        </li>
+        <li>
+          <p>If an abelian variety \(Y\) over \(k\) is \(k\)-isogenous to \(E^r\), then there are
+            elliptic curves \(E_1,\dots,E_r\) over \(k\), each \(k\)-isogenous to \(E\), such that
+            \(Y[p^\infty]\cong\bigoplus_jE_j[p^\infty]\) as \(G_k\)-modules. In particular,
+            if \(Y(k)\) has a point of order \(p^e\), then so has some \(E_j(k)\).</p>
+        </li>
+      </ol>
+    </div>
+    <p><strong>Proof.</strong> Let \(\mathcal R\) be the \(\Z_p\)-span of the image of \(G_k\) in
+      \(\End_{\Z_p}(T)\cong M_2(\Z_p)\). It is a finitely generated, hence free, \(\Z_p\)-submodule of
+      \(\End_{\Z_p}(T)\), and a subring containing \(1\). Choose \(g\in G_k\) with
+      \(\alpha(g)\neq\beta(g)\). The characteristic polynomial of \(g\) on \(T\) has the distinct roots
+      \(\alpha(g)\), \(\beta(g)\) modulo \(p\), so by Hensel's lemma it has roots \(\lambda_1,\lambda_2\in\Z_p\)
+      with \(\lambda_1-\lambda_2\in\Z_p^\times\). By the Cayley–Hamilton theorem,
+      \(\epsilon_1=(g-\lambda_2)/(\lambda_1-\lambda_2)\) and \(\epsilon_2=1-\epsilon_1\) are orthogonal
+      idempotents, and they lie in \(\mathcal R\). They have rank one, since \(g\) is not a scalar, so
+      \(T=\Z_pv_1\oplus\Z_pv_2\) with \(\epsilon_iT=\Z_pv_i\). In this basis \(\epsilon_i\mathcal R\epsilon_i\)
+      contains \(\epsilon_i\) and is contained in \(\Z_p\epsilon_i\), and the corners
+      \(\epsilon_1\mathcal R\epsilon_2\), \(\epsilon_2\mathcal R\epsilon_1\) are \(\Z_p\)-submodules of the
+      off-diagonal lines. As \(\epsilon_1+\epsilon_2=1\), \(\mathcal R\) is the sum of its four corners, so</p>
+    <div class="equation">\[
+      \mathcal R=\begin{pmatrix}\Z_p&amp;p^a\Z_p\\ p^b\Z_p&amp;\Z_p\end{pmatrix}\qquad\text{with }
+      a,b\in\{0,1,2,\dots\}\cup\{\infty\},\ p^\infty=0.
+    \]</div>
+    <p>(a) Write \(V^r=V\otimes_{\Q_p}U\) with \(U=\Q_p^r\), where \(G_k\) acts on the first factor. A
+      \(G_k\)-stable lattice \(T'\subset V^r\) is stable under \(\mathcal R\otimes1\), so
+      \(T'=\epsilon_1T'\oplus\epsilon_2T'\) with \(\epsilon_iT'=v_i\otimes\Lambda_i\) for lattices
+      \(\Lambda_1,\Lambda_2\subset U\). The off-diagonal elements of \(\mathcal R\) give
+      \(p^a\Lambda_2\subseteq\Lambda_1\) and \(p^b\Lambda_1\subseteq\Lambda_2\), and conversely every lattice
+      \(v_1\otimes\Lambda_1\oplus v_2\otimes\Lambda_2\) with these two inclusions is \(\mathcal R\)-stable,
+      hence \(G_k\)-stable. By the elementary divisor theorem there are a basis \(w_1,\dots,w_r\) of
+      \(\Lambda_1\) and integers \(d_1,\dots,d_r\) with \(\Lambda_2=\bigoplus_j p^{d_j}\Z_pw_j\). The two
+      inclusions say \(a+d_j\ge0\) and \(d_j\le b\) for all \(j\), so each
+      \(T'_j\)<wbr>\({}=\Z_p(v_1\otimes w_j)\)<wbr>\({}\oplus p^{d_j}\Z_p(v_2\otimes w_j)\) is \(G_k\)-stable, and
+      \(T'=\bigoplus_jT'_j\) with \(T'_j\subset V\otimes w_j\cong V\).</p>
+    <p>(b) An isogeny identifies \(V_p(Y)\) with \(V^r\) \(G_k\)-equivariantly, and \(T_p(Y)\) with a lattice
+      \(T'=\bigoplus_jT'_j\) as in (a). Identify \(V\otimes w_j\) with \(V\) and choose \(c_j\ge0\) with
+      \(p^{c_j}T'_j\supseteq T\). Then \(C_j=p^{c_j}T'_j/T\) is a finite \(G_k\)-stable subgroup of
+      \(V/T=E[p^\infty]\), and \(E_j=E/C_j\) is an elliptic curve over \(k\), \(k\)-isogenous to \(E\),
+      with \(T_p(E_j)=p^{c_j}T'_j\cong T'_j\). Hence
+      \(Y[p^\infty]=V_p(Y)/T_p(Y)\)<wbr>\({}\cong\bigoplus_j(V\otimes w_j)/T'_j\)<wbr>\({}\cong\bigoplus_jE_j[p^\infty]\). Taking
+      \(G_k\)-invariants, \(Y(k)[p^\infty]\cong\bigoplus_jE_j(k)[p^\infty]\), and a point of order \(p^e\)
+      in the sum has a coordinate of order \(p^e\). ∎</p>
+    <p>The lemma needs neither the irreducibility of \(V\) nor any hypothesis on complex multiplication:
+      only the two idempotents \(\epsilon_1,\epsilon_2\) of \(\mathcal R\) are used. They exist because
+      \(\alpha\neq\beta\); this is why the field \(\Q(\sqrt{-3})\) has to be excluded in the case
+      \(\Gamma=C_2\) of <a href="#square">Section 3</a>.</p>
+  </section>
+
+  <section id="square">
+    <h3>3. The geometric-square case</h3>
+    <p><em>Proof of <a href="#prop-A">Proposition A</a>.</em> Let \(A_{\bar\Q}\) be isogenous to \(E^2\), and
+      suppose that \(R_{45}\in A(\Q)\) has order \(45\). Put \(R_9=5R_{45}\), \(R_5=9R_{45}\) and
+      \(R_3=15R_{45}\), of orders \(9\), \(5\) and \(3\).</p>
+    <p><em>The CM case.</em> Suppose that \(E\) has complex multiplication. As in
+      <a href="#p63">[P63, Section 4]</a>, \(E\) has potentially good reduction at \(2\), because its \(j\)-invariant is an
+      algebraic integer <a href="#st">[ST, §2]</a>; so \(A_{\Q_2}\) acquires good reduction over a finite extension by
+      (I2)(a), and by (I2)(c) over a finite extension \(K'\) of \(\Q_2\) with residue field \(\F_2\). By
+      (I2)(b) the subgroup generated by \(R_{45}\), of odd order, injects into the reduction, whose number
+      of points is at most \((1+\sqrt2)^4=17+12\sqrt2\)<wbr>\({}&lt;34\) by (I2)(d). This contradicts \(45\le34\).
+      (<a href="#p30">[P30, Proposition 2]</a> shows more: \(A(\Q_2)\) has no point of order \(15\).)</p>
+    <p><em>The non-CM case.</em> Now \(A\) is of type (S), with \(D\), \(L\), \(\Gamma\) as in (I3). Since
+      \(R_5\) and \(R_3\) are rational, (I6) applies with \(p=5\) and with \(p=3\). Modulo \(5\) the
+      discriminants \(-3\), \(-1\), \(-\tfrac13\) of the polynomials \(X^2-X+\tfrac1c\) of (I3) are \(2\),
+      \(4=2^2\) and \(3\); the nonzero squares modulo \(5\) are \(1\) and \(4\). The field \(\Q(\zeta_5)\) is
+      cyclic of degree \(4\), so if \(\Q(\zeta_5)\subseteq L\), then \(\Gamma\) has a quotient isomorphic
+      to \(C_4\). We go through the groups of (I3).</p>
+    <ol type="i">
+      <li>
+        <p>\(\Gamma=C_1\). Then \(L=\Q\), and by (I5) every elliptic curve \(C\subset A\) is defined
+          over \(\Q\), with \(A/C\) \(\Q\)-isogenous to \(C\). By (I4), applied to \(R_3\) and \(R_5\), the
+          \(\Q\)-isogeny class of \(C\) contains curves with rational points of orders \(3\) and \(5\), and
+          <a href="#lemma-coprime">Lemma 1</a> gives an elliptic curve over \(\Q\) with a rational point of order
+          \(15\), contrary to (I1).</p>
+      </li>
+      <li>
+        <p>\(\Gamma\in\{C_3,C_6,D_6,D_{12}\}\). Let \(r\) be a rotation of order \(3\) or \(6\)
+          generating the rotation subgroup and \(R\) its trace-one representative, with \(c\in\{1,3\}\). Every
+          element of \(\Gamma\) maps \(R\) to \(R\) or \(1-R\) <a href="#p63">[P63, Section 7]</a>, so
+          \(\mathcal B=\Z_5[R]\) is preserved by \(\Gamma\). Its discriminant is a non-square unit modulo \(5\),
+          so \(\mathcal B\) is the ring of integers of the unramified quadratic extension of \(\Q_5\);
+          \(R\in\mathcal B^\times\) because \(\det R=1/c\) is a unit, and its reduction is a root of an
+          irreducible quadratic over \(\F_5\). By (I6)(a), \(\Q(\zeta_5)\subseteq L\). But \(C_3\), \(C_6\) and
+          the abelianizations \(C_2\) and \(C_2\times C_2\) of \(D_6\) and \(D_{12}\) have no quotient \(C_4\).</p>
+      </li>
+      <li>
+        <p>\(\Gamma=D_8\). Let \(r\) be a rotation of order \(4\) and \(R\) its trace-one
+          representative, \(R^2-R+\tfrac12=0\). Again \(\mathcal B=\Z_5[R]\) is preserved by \(\Gamma\). The
+          discriminant \(-1\equiv2^2\) is a square modulo \(5\), so the roots \(\lambda_1,\lambda_2\) of
+          \(X^2-X+\tfrac12\) lie in \(\Z_5^\times\), with \(\lambda_1-\lambda_2\) a unit, and
+          \(\mathcal B=\Z_5e_1\oplus\Z_5e_2\) with \(e_1=(R-\lambda_2)/(\lambda_1-\lambda_2)\) and
+          \(e_2=1-e_1\). The rotations fix \(e_1\) and \(e_2\), and the reflections, which map \(R\) to
+          \(1-R\), exchange them because \(\lambda_1+\lambda_2=1\). The stabilizer of \(e_1\) is the rotation
+          subgroup, and \(RXR^{-1}=(\lambda_1/\lambda_2)X\) for \(X\in e_1D_5e_2\), so \(\eta\) maps a lift of
+          \(r\) to \(\lambda_1/\lambda_2\), a primitive fourth root of unity, whose reduction modulo \(5\) still
+          has order \(4\). By (I6)(b), \(\Q(\zeta_5)\subseteq L\); but the abelianization of \(D_8\) is
+          \(C_2\times C_2\).</p>
+      </li>
+      <li>
+        <p>\(\Gamma=V_4\). The map \([M]\mapsto v_5(\det M)\bmod2\) is a homomorphism
+          \(\Gamma\to\Z/2\); choose \(r\neq1\) in its kernel and a representative \(R\) of trace \(0\),
+          scaled by a power of \(5\) so that \(\det R\in\Z_5^\times\). Then \(R^2=a\) with
+          \(a\in\Q^\times\cap\Z_5^\times\). As \(\Gamma\) is abelian, every \(R_g\) conjugates \(R\) to
+          \(\pm R\), so \(\mathcal B=\Z_5[R]\) is preserved by \(\Gamma\). If \(a\) is not a square modulo
+          \(5\), then \(\mathcal B\) is the unramified quadratic order, \(R\in\mathcal B^\times\), its reduction
+          is not in \(\F_5\), and (I6)(a) applies. If \(a=b^2\) with \(b\in\Z_5^\times\), then
+          \(\mathcal B=\Z_5e_+\oplus\Z_5e_-\) with \(e_\pm=(1\pm R/b)/2\). Some element of \(\Gamma\) conjugates
+          \(R\) to \(-R\): otherwise \(\Gamma\) would embed in the image of the centralizer
+          \(\Q_5[R]^\times\cong\Q_5^\times\times\Q_5^\times\) in \(\PGL_2(\Q_5)\), which is
+          \(\cong\Q_5^\times\) and has only cyclic finite subgroups. That element exchanges \(e_+\) and \(e_-\);
+          the stabilizer of \(e_+\) is \(\{1,r\}\), and \(RXR^{-1}=-X\) for \(X\in e_+D_5e_-\), so \(\eta\) is the
+          nontrivial quadratic character and (I6)(b) applies. In both cases \(\Q(\zeta_5)\subseteq L\), which
+          is impossible because \(L\) is biquadratic.</p>
+      </li>
+      <li>
+        <p>\(\Gamma=C_4\). Here we use the prime \(3\). Let \(r\) generate \(\Gamma\) and let \(R\)
+          be its trace-one representative, \(R^2-R+\tfrac12=0\). The discriminant \(-1\equiv2\) is not a square
+          modulo \(3\), so \(\mathcal B=\Z_3[R]\) is the ring of integers of the unramified quadratic extension
+          of \(\Q_3\); it is fixed by \(\Gamma=\langle r\rangle\); \(R\in\mathcal B^\times\) since
+          \(\det R=\tfrac12\) is a \(3\)-adic unit; and its reduction is a root of the irreducible polynomial
+          \(X^2-X+2\) over \(\F_3\). By (I6)(a), \(\Q(\zeta_3)=\Q(\sqrt{-3})\subseteq L\). But a cyclic quartic
+          field \(L\) does not contain \(\Q(\sqrt{-3})\): complex conjugation would restrict to an element of
+          \(\Gal(L/\Q)\cong C_4\) that acts nontrivially on the unique quadratic subfield, hence to an element
+          of order \(4\), whereas complex conjugation has order at most \(2\). (Equivalently, \(L\) is totally
+          real by the argument of <a href="#p63">[P63, Section 9.1]</a>, which uses only that every element of \(\Gamma\) is
+          the class of a power \(R^k\) with \(\det R^k=2^{-k}&gt;0\).)</p>
+      </li>
+      <li>
+        <p>\(\Gamma=C_2\). Then \(L=K\) is a quadratic field. By (I5), an elliptic curve
+          \(C\subset A_{\bar\Q}\) is defined over \(K\), and \(A_K/C\) is \(K\)-isogenous to \(C\); with a
+          complement of \(C\), also \(K\)-isogenous to \(C\), we see that \(A_K\) is \(K\)-isogenous to
+          \(C^2\). By (I4), applied over \(K\) to \(R_3\) and \(R_5\), and by
+          <a href="#lemma-coprime">Lemma 1</a>, the \(K\)-isogeny class of \(C\) contains a curve \(E_0\) with a
+          \(K\)-rational point of order \(15\). By (I1), \(E_0(K)_{\mathrm{tors}}\cong\Z/15\) and
+          \(K\neq\Q(\sqrt{-3})\). The semisimplification of \(E_0[3]\) is \(\mathbf1\oplus\bar\chi_3\) (a
+          rational point of order \(3\) and the Weil pairing), and \(\bar\chi_3\) is nontrivial on \(G_K\)
+          because \(K\neq\Q(\sqrt{-3})\). As \(A_K\) is \(K\)-isogenous to \(E_0^2\),
+          <a href="#lemma-lattice">Lemma 2</a>(b) with \(p=3\) and \(r=2\), applied to the point \(R_9\in A(K)\) of
+          order \(9\), gives an elliptic curve \(E_2\), \(K\)-isogenous to \(E_0\), with a \(K\)-rational point
+          of order \(9\). <a href="#lemma-coprime">Lemma 1</a>, with \(E_2\) and \(E_0\), gives an elliptic curve
+          over \(K\) with a \(K\)-rational point of order \(45\), contrary to (I1).</p>
+      </li>
+    </ol>
+    <p>This covers all groups in (I3). ∎</p>
+    <p>No step uses simplicity over \(\Q\), and the only polarization used is a polarization over \(\Q\) of
+      arbitrary degree, inside (I6).</p>
+  </section>
+
+  <section id="parents">
+    <h3>4. Nonisogenous factors: the elliptic curves and the gluing</h3>
+    <div class="theorem" id="lemma-parents">
+      <p><strong>Lemma 3.</strong> Let \(A/\Q\) be a principally polarized abelian surface that is simple over \(\Q\) and of type (N),
+        and suppose that \(A(\Q)\) has a point of order \(45\). Then there are a quadratic field \(K\), an
+        elliptic curve \(E\) over \(K\) and a point \(P\in E(K)\) of order \(3\) with the following
+        properties.</p>
+      <ol type="a">
+        <li>
+          <p>\(E(K)_{\mathrm{tors}}\cong E^\sigma(K)_{\mathrm{tors}}\cong\Z/15\).</p>
+        </li>
+        <li>
+          <p>There is a \(G_K\)-equivariant anti-isometry \(\psi:E[3]\to E^\sigma[3]\) with
+            \(\psi(P)=-\sigma(P)\).</p>
+        </li>
+        <li>
+          <p>There are an abelian surface \(B\) over \(\Q\), isogenies
+            \(\varphi:\Res_{K/\Q}E\to B\) and \(\Phi:B\to\Res_{K/\Q}E\) over \(\Q\) with \(\Phi\circ\varphi=[3]\),
+            such that \(\ker\varphi\) is the graph of \(\psi\) (over \(K\)), and a point \(R\in B(\Q)\) of order
+            \(9\) with \(\Phi(R)=(P,\sigma P)\).</p>
+        </li>
+      </ol>
+    </div>
+    <p><strong>Proof.</strong> Let \(\lambda:A\to A^\vee\) be the principal polarization, which is defined over
+      \(\Q\), and let \(R_{45}\in A(\Q)\) have order \(45\).</p>
+    <p><em>The two elliptic curves.</em> As in <a href="#p63">[P63, Section 3]</a>, \(A_{\bar\Q}\) contains exactly two
+      elliptic curves, and \(G_{\Q}\) permutes them. If it fixed them, they would be defined over \(\Q\) and
+      \(A\) would not be simple over \(\Q\). So they are defined over a quadratic field \(K\) and exchanged
+      by \(\tilde\sigma\); call them \(E\) and \(F=\tilde\sigma(E)=E^\sigma\).</p>
+    <p><em>Each is the quotient by the other.</em> For an elliptic curve \(C\subset A_K\) let
+      \(i_C:C\to A_K\) be the inclusion and \(\lambda^0_C:C\to C^\vee\) the canonical principal
+      polarization. The dual \(i_E^\vee:A_K^\vee\to E^\vee\) of the inclusion is surjective with connected
+      kernel \((A_K/E)^\vee\), so, \(\lambda\) being an isomorphism, the kernel of \(i_E^\vee\circ\lambda\) is
+      a connected one-dimensional subgroup of \(A_K\), the complement of \(E\) in (I8). It is not \(E\),
+      because \(i_E^\vee\lambda i_E\) is a polarization of \(E\), hence an isogeny. So it is \(F\), the only
+      other elliptic curve. Thus \(\pi_E=(\lambda^0_E)^{-1}i_E^\vee\lambda:A_K\to E\) is surjective with
+      kernel \(F\), and induces \(A_K/F\cong E\); in the same way \(\pi_F=(\lambda^0_F)^{-1}i_F^\vee\lambda\)
+      has kernel \(E\) and induces \(A_K/E\cong F\).</p>
+    <p><em>The gluing.</em> The polarization \(i_E^\vee\lambda i_E\) of \(E\) is \(n\lambda^0_E\) for some
+      \(n\ge1\), with kernel \(E[n]\); this kernel is also \(E\cap\ker(i_E^\vee\lambda)=E\cap F\). Likewise
+      \(E\cap F=F[n']\) with \(i_F^\vee\lambda i_F=n'\lambda^0_F\), and \(n=n'\) by counting. So
+      \(E\cap F=E[n]=F[n]\) inside \(A_K\). Let \(\varphi_n:E\times F\to A_K\) be the addition map. Its kernel
+      is \(\{(x,-x):x\in E\cap F\}\), the graph of \(\psi_n:E[n]\to F[n]\), \(x\mapsto-x\) (using
+      \(E[n]=F[n]\)). The pull-back \(\varphi_n^\vee\lambda\varphi_n\) is \(n\lambda_0\) with
+      \(\lambda_0=\lambda^0_E\times\lambda^0_F\), because \(i_E^\vee\lambda i_E=n\lambda^0_E\),
+      \(i_F^\vee\lambda i_F=n\lambda^0_F\) and \(i_F^\vee\lambda i_E=0\). Hence \(\ker\varphi_n\) is isotropic for
+      the pairing \((x,y)\mapsto e_n(x,\lambda_0y)\) on \((E\times F)[n]\), which is the product of the Weil
+      pairings of \(E\) and \(F\): if \(x,y\in\ker\varphi_n\) and \(y=ny'\), then \(\lambda_0y=\varphi_n^\vee\lambda\varphi_n(y')\)
+      with \(\varphi_n(y')\in A_K[n]\), and \(e_n(x,\varphi_n^\vee\lambda\varphi_ny')\)<wbr>\({}=e_n(\varphi_nx,\lambda\varphi_ny')=1\).
+      For \(x,y\in E[n]\) this reads \(e_n(x,y)\,e_n(\psi_nx,\psi_ny)=1\): \(\psi_n\) is an anti-isometry. Put
+      \(\Phi_n=(\pi_E,\pi_F):A_K\to E\times F\). For \(x\in E\) and \(y\in F\),
+      \(\Phi_n\varphi_n(x,y)=(\pi_Ex,\pi_Fy)\)<wbr>\({}=(nx,ny)\), so \(\Phi_n\varphi_n=[n]\), and
+      \(\varphi_n\Phi_n=[n]\) because \(\varphi_n\) is surjective. Since \(\lambda\) is defined over \(\Q\)
+      and \(\tilde\sigma(E)=F\), both maps commute with the action of \(G_{\Q}\) of (I7) on
+      \(E\times F=E\times E^\sigma\), so they descend to isogenies
+      \(\varphi_n:\Res_{K/\Q}E\to A\) and \(\Phi_n:A\to\Res_{K/\Q}E\) over \(\Q\).</p>
+    <p><em>The torsion of \(E(K)\).</em> Let \(G=\langle R_{45}\rangle\). Since \(\tilde\sigma\) fixes \(G\)
+      pointwise and maps \(E\) onto \(F\), the subgroups \(G\cap E\) and \(G\cap F\) of the cyclic group
+      \(G\) have the same order, hence coincide; call this subgroup \(H\) and put \(d=\#H\). Then \(E(K)\)
+      contains \(H\), of order \(d\), and \(\pi_E(G)\cong G/(G\cap F)=G/H\), of order \(45/d\). For
+      \(d\in\{1,5,9,45\}\) this gives a point of order \(45\) in \(E(K)\), contrary to (I1). Hence
+      \(d\in\{3,15\}\), \(E(K)\) has a point of order \(15\), and \(E(K)_{\mathrm{tors}}\cong\Z/15\) by
+      (I1); the same holds for \(F=E^\sigma\). This is (a).</p>
+    <p><em>The sign.</em> Put \(R_9=5R_{45}\). As \(d\in\{3,15\}\), the point \(P_0=3R_9\) of order \(3\) lies in
+      \(H\subseteq E\cap F=E[n]\); in particular \(3\mid n\). Let \(P\in E(K)\) be \(P_0\) regarded as a point
+      of \(E\). Since \(P_0\) is rational, \(P_0=\tilde\sigma(P_0)\), and \(\tilde\sigma(P_0)\) is the point
+      \(\sigma(P)\) of \(F=E^\sigma\). So \(\varphi_n(P,0)=P_0=\varphi_n(0,\sigma P)\), that is,
+      \((P,-\sigma P)\in\ker\varphi_n\), and as \(E(K)[3]=\langle P\rangle\),</p>
+    <div class="equation">\[
+      \psi_n(Q)=-\sigma(Q)\qquad\text{for every }Q\in E(K)[3].\tag{1}
+    \]</div>
+    <p>With \(+\sigma(Q)\) instead, condition (4) below would become \(a_3\sigma(a_3)\in K^{\times3}\);
+      <a href="#rem-census">Remark 3</a> tests the sign on census curves.</p>
+    <p><em>The \(3\)-adic valuation of \(n\).</em> Over \(K\),
+      \(\ker\Phi_n\)<wbr>\({}=\varphi_n(E[n]\times F[n])\)<wbr>\({}\cong(E[n]\times F[n])/\ker\varphi_n\), and
+      \((U,V)\mapsto V-\psi_n(U)\) identifies it \(G_K\)-equivariantly with \(F[n]\). Its \(K\)-rational
+      points form \(F(K)[n]\), which has no point of order \(9\). So \(\Phi_n(R_9)\neq0\); and
+      \(\Phi_n(R_9)\in(\Res_{K/\Q}E)(\Q)=E(K)\), where the \(3\)-primary torsion is \(\Z/3\). Hence
+      \(\Phi_n(R_9)=(P_1,\sigma P_1)\) with \(P_1\in E(K)\) of order \(3\). If \(9\mid n\), then
+      \(\varphi_n(P_1,\sigma P_1)=\varphi_n\Phi_n(R_9)\)<wbr>\({}=nR_9=0\), so \(\psi_n(P_1)=\sigma(P_1)\), against
+      (1). Therefore</p>
+    <div class="equation">\[
+      v_3(n)=1.\tag{2}
+    \]</div>
+    <p><em>The conjugate \((3,3)\)-gluing.</em> Write \(n=3m\) with \(3\nmid m\). The \(3\)-primary part
+      \(\Gamma_3\) of \(\ker\varphi_n\) is a characteristic subgroup of a subgroup defined over \(\Q\), hence
+      is defined over \(\Q\); by (2), over \(K\) it is the graph of \(\psi=\psi_n|_{E[3]}:E[3]\to F[3]\). Let
+      \(B=\Res_{K/\Q}(E)/\Gamma_3\) with quotient map \(\varphi\), and let \(\Phi:B\to\Res_{K/\Q}E\) be the
+      isogeny with \(\Phi\circ\varphi=[3]\), which exists because \(\Gamma_3\) is killed by \(3\). Both are
+      defined over \(\Q\). The map \(\psi\) is an anti-isometry: if \(m'm\equiv1\pmod3\), then
+      \(e_3(x,y)=e_n(m'x,y)\) for \(x,y\in E[3]\), likewise on \(F\), and \(\psi\) commutes with \(m'\). By (1),
+      \(\psi(P)=-\sigma(P)\), which is (b). As \(\Gamma_3\subseteq\ker\varphi_n\), we have
+      \(\varphi_n=\beta\circ\varphi\) for an isogeny \(\beta:B\to A\) over \(\Q\) whose kernel
+      \(\ker\varphi_n/\Gamma_3\) has exponent \(m\); so there is \(\beta':A\to B\) over \(\Q\) with
+      \(\beta\beta'=[m]\). The point \(R=\beta'(R_9)\in B(\Q)\) has order \(9\), since \(\beta(R)=mR_9\) has order
+      \(9\). Finally, over \(K\), \(\ker\Phi=\varphi(E[3]\times F[3])\)<wbr>\({}\cong(E[3]\times F[3])/\Gamma_3\) is
+      identified with \(F[3]\) as above, so its group of \(K\)-rational points is \(F(K)[3]\), of order \(3\).
+      As for \(R_9\), it follows that \(\Phi(R)=(P_1',\sigma P_1')\) with \(P_1'\in E(K)\) of order \(3\).
+      Replacing \(P\) by \(P_1'\), which also satisfies (b) by (1), gives (c). ∎</p>
+    <p>Nothing later uses that \(B\) is principally polarized, or the description of \(B(\Q)_{\mathrm{tors}}\)
+      (it is \(\Z/45\): its \(3\)-primary part has order at most \(\#F(K)[3]\cdot\#E(K)[3]=9\), and its
+      prime-to-\(3\) part is that of \(E(K)\)). <a href="#conditions">Section 5</a> uses only (a)–(c).</p>
+  </section>
+
+  <section id="conditions">
+    <h3>5. Two necessary conditions</h3>
+    <div class="theorem" id="lemma-conditions">
+      <p><strong>Lemma 4.</strong> In the situation of <a href="#lemma-parents">Lemma 3</a>, choose a model
+        \(E:\ y^2+a_1xy+a_3y=x^3\) over \(K\) with \(P=(0,0)\). Then \(a_3\neq0\),</p>
+      <div class="equation">\[
+        N_{K/\Q}(\Delta(E))\in\Q^{\times3},\tag{3}
+      \]</div>
+      <div class="equation">\[
+        a_3/\sigma(a_3)\in K^{\times3}.\tag{4}
+      \]</div>
+      <p>Condition (3) uses only <a href="#lemma-parents">Lemma 3</a>(b).</p>
+    </div>
+    <p>Such a model exists: \(P\) is a flex because \(3P=0\), and moving \(P\) to \((0,0)\) and its tangent
+      to \(y=0\) forces \(a_2=a_4=a_6=0\). The only changes of variables preserving this shape are
+      \((x,y)\mapsto(u^2x,u^3y)\), which multiply \(a_3\) by \(u^3\) and \(\Delta\) by \(u^{12}\); so (3) and
+      (4) do not depend on the model. The model of \(E^\sigma\) is the conjugate one, with \(\sigma(P)=(0,0)\).
+      By part B of the certificate, \(\Delta(E)=a_3^3(a_1^3-27a_3)\), so \(a_3\neq0\); the
+      \(3\)-division polynomial is \(x\,h(x)\) with \(h(x)\)<wbr>\({}=3x^3+a_1^2x^2+3a_1a_3x\)<wbr>\({}+3a_3^2\); and
+      \(-P=(0,-a_3)\).</p>
+    <p><em>Proof of (3).</em> The extension
+      \(0\to\langle P\rangle\to E[3]\)<wbr>\({}\to E[3]/\langle P\rangle\to0\), with \(\langle P\rangle\cong\Z/3\) by
+      \(P\mapsto1\) and \(E[3]/\langle P\rangle\cong\mu_3\) by \(Q\mapsto e_3(P,Q)\), has a class
+      \(c(E)\) in \(\mathrm{Ext}^1_{G_K}(\mu_3,\Z/3)\)<wbr>\({}=H^1(K,\Hom(\mu_3,\Z/3))\)<wbr>\({}=H^1(K,\mu_3)=K^\times/K^{\times3}\);
+      here \(\Hom(\mu_3,\Z/3)\cong\mu_3\) canonically, as \(\F_3^\times=\{\pm1\}\). We use additive notation in
+      \(K^\times/K^{\times3}\).</p>
+    <ol type="a">
+      <li>
+        <p>\(c(E)=\pm[\Delta(E)]\). Over \(K(\zeta_3)\), \(c(E)\) is the homomorphism describing the
+          unipotent action on \(E[3]\), so \(K(E[3])=K(\zeta_3,\sqrt[3]{c(E)})\). The roots of \(h\), the
+          \(x\)-coordinates of the points of \(E[3]\setminus\langle P\rangle\), are the numbers
+          \(x_k=-(e_k^2+a_1e_k+a_1^2)/9\), where \(e_k=\zeta_3^ke_0\) runs through the cube roots of
+          \(a_1^3-27a_3=\Delta/a_3^3\) (part B of the certificate); they are distinct, since
+          \(x_0-x_1\)<wbr>\({}=-e_0(1-\zeta_3)\bigl(e_0(1\)<wbr>\({}+\zeta_3)+a_1\bigr)/9\) vanishes only if \(e_0^3\in\{0,a_1^3\}\),
+          that is, if \(\Delta=0\). Conversely
+          \(x_0+\zeta_3x_1+\zeta_3^2x_2=-e_0^2/3\), so \(e_0=e_0^3/e_0^2\) lies in \(K(\zeta_3,x_0,x_1,x_2)\).
+          So \(K(E[3])\) contains \(K(\zeta_3,\sqrt[3]\Delta)=K(\zeta_3,e_0)\), and it is generated over it by
+          \(y\)-coordinates, which satisfy quadratic equations; as \([K(E[3]):K(\zeta_3)]\) is \(1\) or \(3\), the two fields coincide. By
+          Kummer theory \(c(E)\) and \([\Delta]\) generate the same subgroup of
+          \(K(\zeta_3)^\times/K(\zeta_3)^{\times3}\), hence of \(K^\times/K^{\times3}\), the restriction map
+          being injective as \([K(\zeta_3):K]\le2\).</p>
+      </li>
+      <li>
+        <p>\(c(E^\sigma)=\sigma(c(E))\), by transport of structure under \(\tilde\sigma\), which maps
+          \(E\), \(P\), \(E[3]\) and \(e_3\) to \(E^\sigma\), \(\sigma(P)\), \(E^\sigma[3]\) and \(e_3\); and
+          \(\Delta(E^\sigma)=\sigma(\Delta(E))\).</p>
+      </li>
+      <li>
+        <p>\(c(E^\sigma)=-c(E)\). By (1), \(\psi\) maps \(\langle P\rangle\) to \(\langle\sigma P\rangle\)
+          by \(\alpha=-1\); it induces on the quotients, identified with \(\mu_3\), multiplication by the exponent
+          \(\beta\) with \(e_3(\sigma P,\psi Q)=e_3(P,Q)^\beta\). As \(\psi\) is an anti-isometry,
+          \(e_3(P,Q)^{-1}=e_3(\psi P,\psi Q)\)<wbr>\({}=e_3(-\sigma P,\psi Q)\)<wbr>\({}=e_3(P,Q)^{-\beta}\), so</p>
+        <div class="equation">\[
+          \beta=+1.
+        \]</div>
+        <p>An isomorphism of extensions that is \(\alpha\) on the subgroups and \(\beta\) on the quotients gives
+          \(\alpha\,c(E)=\beta\,c(E^\sigma)\), so \(c(E^\sigma)=-c(E)\).</p>
+      </li>
+      <li>
+        <p>By (a)–(c), \(c(E)+\sigma(c(E))=0\), that is, \(N_{K/\Q}(\Delta)^{\pm1}\in K^{\times3}\).
+          Finally \(K^{\times3}\cap\Q^\times=\Q^{\times3}\): if \(q=k^3\) with \(k\in K\), then
+          \(q^2=N_{K/\Q}(k)^3\), so \(q=q^3/q^2\) is a rational cube. This proves (3).</p>
+      </li>
+    </ol>
+    <p><em>Proof of (4).</em> Let \(R\), \(\varphi\), \(\Phi\) be as in <a href="#lemma-parents">Lemma 3</a>(c),
+      with \(\Phi(R)=(P,\sigma P)\). For \(U\in E(\bar\Q)\) with \(3U=P\) and \(V\in E^\sigma(\bar\Q)\) with
+      \(3V=\sigma P\) we have \(\Phi\varphi(U,V)=(3U,3V)\). So the fibre
+      \(\Phi^{-1}(P,\sigma P)\)<wbr>\({}=\varphi([3]^{-1}P\times[3]^{-1}\sigma P)\) is a torsor under
+      \(\ker\Phi=\varphi(E[3]\times E^\sigma[3])\) with the \(K\)-rational point \(R\). Transport it by the
+      \(G_K\)-isomorphism \(\theta:\ker\Phi\to E^\sigma[3]\), \(\varphi(U',V')\mapsto V'-\psi(U')\), which is
+      well defined because \(\ker\varphi\) is the graph of \(\psi\). If \(\kappa\) denotes the Kummer map
+      \(E(K)\to H^1(K,E[3])\) of multiplication by \(3\), the class of the transported torsor is
+      \(\kappa(\sigma P)-\psi_*\kappa(P)\)<wbr>\({}\in H^1(K,E^\sigma[3])\). As the torsor has a \(K\)-rational point,</p>
+    <div class="equation">\[
+      \kappa(\sigma P)=\psi_*\kappa(P).
+    \]</div>
+    <p>Let \(\lambda_E:E(K)\to H^1(K,\mu_3)\)<wbr>\({}=K^\times/K^{\times3}\) be \(\kappa\) followed by
+      \(E[3]\to E[3]/\langle P\rangle\cong\mu_3\), and define \(\lambda_{E^\sigma}\) in the same way with
+      \(\sigma P\). Since \(\psi\) induces \(\beta=+1\) on the quotients,
+      \(\lambda_{E^\sigma}(\sigma P)=\lambda_E(P)\); by transport of structure,
+      \(\lambda_{E^\sigma}(\sigma P)=\sigma(\lambda_E(P))\). So \(\lambda_E(P)\) is fixed by \(\sigma\).</p>
+    <p>To compute \(\lambda_E(P)\), let \(\phi:E\to E'=E/\langle P\rangle\) be the quotient isogeny and
+      \(\hat\phi:E'\to E\) its dual, so that \(\hat\phi\phi=[3]\). As \(\phi\) maps \([3]^{-1}(Q)\) onto
+      \(\hat\phi^{-1}(Q)\) and \(E[3]/\langle P\rangle\) isomorphically onto \(\ker\hat\phi\), \(\lambda_E\) is
+      the connecting map \(\delta\) of \(0\to\ker\hat\phi\to E'\to E\to0\), followed by an isomorphism
+      \(\ker\hat\phi\cong\mu_3\). Part B of the certificate checks that
+      \(E':\ y^2+a_1xy+a_3y\)<wbr>\({}=x^3-5a_1a_3x-a_1^3a_3\)<wbr>\({}-7a_3^2\), that \(\hat\phi\phi=[3]\), and that</p>
+    <div class="equation">\[
+      \hat\phi(x,y)=\Bigl(\frac{x^3-9a_1a_3x-a_1^3a_3-27a_3^2}{(3x+a_1^2)^2},\ 
+      \Bigl(\frac{y-4a_3}{3x+a_1^2}\Bigr)^3\Bigr).
+    \]</div>
+    <p>Thus \(y\circ\hat\phi=w^3\) with \(w=(y-4a_3)/(3x+a_1^2)\) in the function field of \(E'\). For
+      \(S\in\ker\hat\phi\) the function \(w(\cdot+S)/w\) has cube \(1\), hence is a constant \(\xi(S)\in\mu_3\),
+      and \(\xi:\ker\hat\phi\to\mu_3\) is a homomorphism; it is injective, since otherwise
+      \(w=w_0\circ\hat\phi\) with \(w_0^3=y\), which is impossible because \(\operatorname{div}(y)=3(P)-3(O)\)
+      and \((P)-(O)\) is not principal. For \(Q\in E(K)\setminus\{O,P\}\) and \(Q'\) with \(\hat\phi(Q')=Q\) we
+      get \(w(Q')^3=y(Q)\in K^\times\) and \(g(w(Q'))/w(Q')\)<wbr>\({}=\xi(gQ'-Q')\) for \(g\in G_K\), so
+      \(\xi_*\delta(Q)=[y(Q)]\). With \(Q=-P\) and \(y(-P)=-a_3\) this gives \(\lambda_E(-P)=\pm[a_3]\) (two
+      isomorphisms \(\ker\hat\phi\cong\mu_3\) differ by a sign, and \(-1\) is a cube), and
+      \(\lambda_E(P)=-\lambda_E(-P)\)<wbr>\({}=\mp[a_3]\). As \(\lambda_E(P)\) is fixed by \(\sigma\), so is \([a_3]\),
+      which is (4). ∎</p>
+    <p>The sign \(\beta=+1\) is where the minus sign in (1) enters: with \(\beta=-1\) the argument would give
+      \(N_{K/\Q}(a_3)\in K^{\times3}\) instead of (4).</p>
+    <p>Put \(S=\operatorname{Tr}_{K/\Q}(a_3)\) and \(N=N_{K/\Q}(a_3)\neq0\). If \(w\in K\) satisfies
+      \(w^3=a_3/\sigma(a_3)\), then \(N_{K/\Q}(w)^3=1\), so \(N_{K/\Q}(w)=1\) as it is rational, and
+      \(r=w+\sigma(w)\in\Q\) satisfies, since \(w\sigma(w)=1\),</p>
+    <div class="equation">\[
+      r^3-3r=w^3+\sigma(w)^3=\frac{a_3}{\sigma(a_3)}+\frac{\sigma(a_3)}{a_3}=\frac{S^2}{N}-2.\tag{5}
+    \]</div>
+    <p>If \(v_\ell(r^3-3r)&lt;0\) for a prime \(\ell\), then \(v_\ell(r)&lt;0\), so \(v_\ell(r^3)=3v_\ell(r)&lt;v_\ell(3r)\)
+      and</p>
+    <div class="equation">\[
+      v_\ell(r^3-3r)=3v_\ell(r)\equiv0\pmod3.\tag{6}
+    \]</div>
+  </section>
+
+  <section id="cyclotomic">
+    <h3>6. A primitive cyclotomic equation</h3>
+    <div class="theorem" id="prop-cyclo">
+      <p><strong>Proposition 5.</strong> Let \(a\), \(b\) be coprime integers with
+        \(\Phi_{10}(a,b)\)<wbr>\({}=a^4-a^3b+a^2b^2\)<wbr>\({}-ab^3+b^4\)<wbr>\({}\in\{c^3,5c^3\}\) for some integer \(c\). Then
+        \((a:b)\) is one of \((0:1)\), \((1:0)\), \((1:1)\), \((-1:1)\).</p>
+    </div>
+    <p><strong>Proof.</strong> The descent follows Poonen <a href="#po">[Po, Section 4]</a>, who applies it to \(x+\zeta y\) for a
+      solution of \(x^5+y^5=z^3\) (<a href="#po">[Po, (15), p. 198, and p. 199]</a>). Let \(L=\Q(\zeta)\) with
+      \(\zeta=\zeta_5\), and \(\tau=-(\zeta^2+\zeta^3)\)<wbr>\({}=(1+\sqrt5)/2\). The ring of integers of \(L\) is
+      \(\Z[\zeta]\), and its Minkowski bound \((4!/4^4)(4/\pi)^2\sqrt{125}\approx1.699\) is less than \(2\),
+      so \(L\) has class number one. Its unit group is \(\mu_{10}\times\tau^{\Z}\): for a unit \(u\),
+      \(u/\bar u\) is an algebraic integer all of whose conjugates have absolute value \(1\), hence a root
+      of unity, and it is \(\equiv1\) modulo \(\pi=1-\zeta\), so it lies in \(\mu_5\); choosing
+      \(\eta\in\mu_5\) with \(\eta^2=u/\bar u\), the unit \(u/\eta\) is real, hence \(\pm\tau^k\).</p>
+    <p>Put \(\alpha=a+b\zeta\). Then \(N_{L/\Q}(\alpha)=\Phi_{10}(a,b)\), a positive integer. If a prime
+      \(\mathfrak p\) divides \(\alpha\) and a conjugate \(a+b\zeta^k\) with \(k\neq1\), then it divides
+      \(b(\zeta-\zeta^k)\), which is \(b\pi\) times a unit; if \(\mathfrak p\neq(\pi)\), it divides \(b\), hence
+      \(a\), which is impossible. So the conjugates of \(\alpha\) are pairwise coprime away from \(\pi\).
+      Now let \(\mathfrak p\nmid\pi\) divide \(\alpha\), above the prime \(\ell\neq5\). No other conjugate of
+      \(\mathfrak p\) divides \(\alpha\): if \(g\mathfrak p\mid\alpha\) with \(g\mathfrak p\neq\mathfrak p\), then
+      \(\mathfrak p\) divides both \(\alpha\) and \(g^{-1}\alpha\). For the same reason no
+      \(g\neq1\) fixes \(\mathfrak p\), so \(\ell\) splits completely, the four primes above \(\ell\) are the
+      conjugates of \(\mathfrak p\), and \(v_{\mathfrak p}(\alpha)=v_\ell(\Phi_{10}(a,b))\)<wbr>\({}\equiv0\pmod3\). At
+      \(\pi\): \(\alpha=(a+b)-b\pi\), so \(v_\pi(\alpha)=0\) if \(5\nmid a+b\), and \(v_\pi(\alpha)=1\) if
+      \(5\mid a+b\) (then \(5\nmid b\) and \(v_\pi(a+b)\ge v_\pi(5)=4\)). By class number one,
+      \(\alpha=\varepsilon\pi^iw_0^3\) with \(\varepsilon\) a unit, \(i\in\{0,1\}\) and \(w_0\in L\). Roots of
+      unity are cubes, since \(\gcd(3,10)=1\), and</p>
+    <div class="equation">\[
+      \pi^4=5\zeta^2\tau^{-2},\qquad\pi=5\tau\Bigl(\frac{\zeta^4}{\tau\pi}\Bigr)^3,
+    \]</div>
+    <p>so</p>
+    <div class="equation">\[
+      \alpha=5^i\tau^jw^3\qquad\text{with }i\in\{0,1\},\ j\in\{0,1,2\},\ w\in L^\times.\tag{7}
+    \]</div>
+    <p><em>Modulo \(2\).</em> The prime \(2\) is inert in \(L\), with residue field \(\F_{16}\), whose
+      multiplicative group is cyclic of order \(15\); its cubes are its elements of order dividing \(5\). As
+      \(a\), \(b\) are coprime, \(\alpha\) is a \(2\)-adic unit, hence so is \(w\). The reduction
+      \(\bar\tau\) is a root of \(X^2+X+1\), of order \(3\), so it is not a cube, and \(\bar5=1\). If exactly
+      one of \(a\), \(b\) is odd, then \(\bar\alpha\in\{1,\bar\zeta\}\) is a cube (\(\bar\zeta^5=1\)), so
+      \(j=0\). If both are odd, then \(\bar\alpha=1+\bar\zeta\), and
+      \((1+\bar\zeta)^5\)<wbr>\({}=(1+\bar\zeta^4)(1+\bar\zeta)\)<wbr>\({}=\bar\zeta+\bar\zeta^4=\bar\tau^2=\bar\tau^5\), so
+      \(1+\bar\zeta\) is \(\bar\tau\) times a cube and \(j=1\). Thus \(j\in\{0,1\}\).</p>
+    <p><em>Two curves over \(L\).</em> The automorphisms \(\zeta\mapsto\zeta^2\) and \(\zeta\mapsto\zeta^3\) map
+      \(\tau\) to \(-\tau^{-1}\). Multiplying (7) and its images under these two automorphisms gives
+      \((a+b\zeta)(a+b\zeta^2)(a+b\zeta^3)\)<wbr>\({}=5^{3i}\tau^{-j}W^3\) with \(W\in L\). If \(b\neq0\), dividing by
+      \(b^3\) shows that \(t=a/b\) is the first coordinate of an \(L\)-point of</p>
+    <div class="equation">\[
+      D_j:\quad Y^3=\tau^j(t+\zeta)(t+\zeta^2)(t+\zeta^3),\qquad j\in\{0,1\};\tag{8}
+    \]</div>
+    <p>the factor \(5^{3i}\) is a cube. The case \(b=0\), that is \((a:b)=(1:0)\) with \(j=0\), is the point \((t:Y:W)=(1:1:0)\) at
+      infinity of the projective model \(Y^3\)<wbr>\({}=\tau^j(t+\zeta W)(t\)<wbr>\({}+\zeta^2W)(t+\zeta^3W)\). Each \(D_j\) is a smooth plane cubic with the
+      \(L\)-rational flex \((-\zeta,0)\), hence an elliptic curve. With this point as origin, \(D_j\) is
+      isomorphic over \(L\) to</p>
+    <div class="equation">\[
+      \begin{aligned}
+      E_0&amp;:\ y^2+(4\zeta^3+3\zeta^2+7\zeta+6)y=x^3-10\zeta^3-5\zeta^2-10\zeta,\\
+      E_1&amp;:\ y^2+(\zeta^3+7\zeta^2+13\zeta+9)y=x^3-35\zeta^3-55\zeta^2-35\zeta.
+      \end{aligned}
+    \]</div>
+    <p>Part C of the certificate proves: \(N_{L/\Q}(\Delta(E_j))=3^{12}5^{12}\); \(E_j\) has rank \(1\) and
+      \(E_j(L)\cong\Z/3\oplus\Z\) with proved generators (Magma's <code>RankBounds</code> and
+      <code>MordellWeilGroup</code>, with class groups computed unconditionally up to the Minkowski bound); and elliptic Chabauty <a href="#br">[Br]</a> at the prime \(11\), which splits
+      completely in \(L\) and is a prime of good reduction, returns an upper bound equal to the number of
+      points found and no unresolved residue classes. The saturation it requires (at \(2\) for \(j=0\), none
+      for \(j=1\)) holds because the Mordell–Weil groups are proved to be complete. The \(L\)-points of
+      \(D_j\) with rational \(t\)-coordinate are therefore exactly those with</p>
+    <div class="equation">\[
+      t\in\{0,\infty\}\ \text{ on } D_0,\qquad t\in\{1,-1\}\ \text{ on } D_1,\tag{9}
+    \]</div>
+    <p>which gives the four values of \((a:b)\). ∎</p>
+    <p>In <a href="#po">[Po, Section 4]</a> the descent (7) is followed by an analysis of the curves
+      \((U+1)(U^5+1)=\eta V^3\) and their elliptic quotients over \(\Q(\sqrt5)\). Here the equation is
+      different (the norm \(\Phi_{10}(a,b)\) itself is a cube or five times a cube); what is new is that the
+      product of three conjugates removes the factor \(5^{3i}\), so that only the two cubic twists
+      \(D_0\), \(D_1\) remain, and these are treated by elliptic Chabauty over \(\Q(\zeta_5)\).</p>
+  </section>
+
+  <section id="families">
+    <h3>7. The quadratic points of \(X_1(15)\)</h3>
+    <div class="theorem" id="prop-families">
+      <p><strong>Proposition 6.</strong> Let \(K\) be a quadratic field, \(E\) an elliptic curve over \(K\) with
+        \(E(K)_{\mathrm{tors}}\cong\Z/15\), and \(P\in E(K)\) a point of order \(3\). Write
+        \(E:\ y^2+a_1xy+a_3y=x^3\) with \(P=(0,0)\). Then (3) and (4) do not both hold.</p>
+    </div>
+    <p><em>A model of \(X_1(15)\).</em> Let \(P_5\in E(K)\) have order \(5\). By (I9),
+      \((E,P_5)\cong(E_d,(0,0))\) over \(K\) for some \(d\in K\) with \(d^5(d^2-11d-1)\neq0\); let
+      \((x_3,y_3)\) be the image of \(P\). The \(3\)-division polynomial of \(E_d\) is</p>
+    <div class="equation">\[
+      \psi_3(X)=3X^4+(d^2-6d+1)X^3+3(d^2-d)X^2+3d^2X-d^3,
+    \]</div>
+    <p>and \(\psi_3(0)=-d^3\neq0\), \(\psi_3(d)=d^5\neq0\). So \(u=x_3/d\) is neither \(0\) nor \(1\), and with
+      \(z=du/(u-1)\) one has \(\psi_3(du)/d^3\)<wbr>\({}=(u-1)^2\bigl(uz^2+3u(u\)<wbr>\({}-1)z+(u-1)\bigr)\) (part D of the
+      certificate). Hence \((u,z,y_3)\) is a \(K\)-point of the affine curve \(X^{\mathrm{aff}}\) given by</p>
+    <div class="equation">\[
+      \begin{aligned}
+      &amp;uz^2+3u(u-1)z+(u-1)=0,\qquad d=\frac{(u-1)z}{u},\qquad x_3=(u-1)z,\\
+      &amp;y_3^2+(1-d)x_3y_3-dy_3=x_3^3-dx_3^2,
+      \end{aligned}\tag{10}
+    \]</div>
+    <p>where the last equation, multiplied by \(u^2\), is a polynomial equation in \(u,z,y_3\). The point
+      \((0,0)\) of \(E_d\) has order \(5\) and \((x_3,y_3)\) has order \(3\). Translating \((x_3,y_3)\) to
+      \((0,0)\) and shearing its tangent to \(y=0\) turns \(E_d\) into a model as in
+      <a href="#prop-families">Proposition 6</a>, with</p>
+    <div class="equation">\[
+      a_3=2y_3+(1-d)x_3-d,\qquad \delta=d^2(d^2-11d-1);\tag{11}
+    \]</div>
+    <p>the translation contributes \(2y_3+(1-d)x_3\) to the coefficient of \(y\) and the shear does not change
+      it, and the discriminant \(d^5(d^2-11d-1)\) is unchanged and differs from \(\delta\) by the cube
+      \(d^3\). So, by the remarks after <a href="#lemma-conditions">Lemma 4</a>, (3) and (4) are conditions on
+      \(\delta\) and \(a_3\) at the point \((u,z,y_3)\). We call a point of (the projective closure of)
+      \(X^{\mathrm{aff}}\) a <em>cusp</em> if \(d\) is \(0\) or \(\infty\) or a root of \(d^2-11d-1\) there;
+      the point \((u,z,y_3)\) is not a cusp. The curve \(X^{\mathrm{aff}}\) is irreducible, and its singular
+      points are \((1,0,0)\), where \(d=0\), and two conjugate points with \(d^2-11d-1=0\) (part D). So \((u,z,y_3)\) is a smooth point of \(X^{\mathrm{aff}}\).</p>
+    <p><em>The curve \(W\).</em> Let \(W:\ y^2+xy+y=x^3+x^2\) (Cremona \(15a8\)), with origin \(O\) and the
+      points \(T_1=(0,0)\), \(T_2=(-1,0)=2T_1\), \(T_3=(0,-1)=3T_1\). It has rank \(0\) and
+      \(W(\Q)=\{O,T_1,T_2,T_3\}\cong\Z/4\) (part D). The rational functions</p>
+    <div class="equation">\[
+      \begin{aligned}
+      u&amp;=\frac{x+1}{x^2+x+1},\qquad z=\frac{x\,(x^2-1-(x+2)y)}{(x+1)(x^2+x+1)},\\
+      y_3&amp;=\frac{x^5\bigl(x-2x^2-2x^3+(x^2+4x+1)y\bigr)}{(x+1)^2(x^2+x+1)^3}
+      \end{aligned}
+    \]</div>
+    <p>on \(W\) define a birational map \(W\to X^{\mathrm{aff}}\), with inverse</p>
+    <div class="equation">\[
+      \begin{aligned}
+      x&amp;=\frac{(u-1)^3(u+1)^2+u^2(u-1)^2z+u^2(-9u^3+3u^2+7u+1)y_3-u^3(3u+2)zy_3}{u(u-1)^2(u^2-u-1)},\\
+      y&amp;=-\frac{(u-1)^4+(u-1)^3z+3u^2(u-1)y_3+u^2zy_3}{u(u-1)^3}
+      \end{aligned}
+    \]</div>
+    <p>(part D checks that the image lies on (10) and that the composite \(W\to X^{\mathrm{aff}}\to W\) is the
+      identity). On \(W\),</p>
+    <div class="equation">\[
+      d=\frac{x^3\bigl(1-x^2+(x+2)y\bigr)}{(x+1)^2(x^2+x+1)},\qquad x_3=du;
+    \]</div>
+    <p>\(d\) has poles at \(O\) and \(T_2\) and zeros at \(T_1\) and \(T_3\), so the four rational points of
+      \(W\) are cusps. As \((u,z,y_3)\) is a smooth point of \(X^{\mathrm{aff}}\), there is a unique point
+      \(Q\in W(K)\) at which the functions \(u\), \(z\), \(y_3\) take these values, and the functions
+      \(a_3\) and \(\delta\) of (11) are regular at \(Q\). Since \(Q\) is not a cusp, \(Q\notin W(\Q)\), so
+      \(Q\) is a quadratic point with residue field \(K\), with conjugate \(Q^\sigma\).</p>
+    <p><em>The four families.</em> The divisor \((Q)+(Q^\sigma)\) is rational of degree \(2\), so it is
+      linearly equivalent to \((O)+(T)\) with \(T=Q+Q^\sigma\in W(\Q)\). For each \(T\in W(\Q)\), by
+      Riemann–Roch, the effective divisors linearly equivalent to \((O)+(T)\) are the fibres of a morphism
+      \(W\to\mathbb P^1\) of degree \(2\), unique up to an automorphism of \(\mathbb P^1\); we fix it as the
+      function \(t_j\) below, whose divisor of poles lies in this class. So \((Q)+(Q^\sigma)\) is the fibre
+      of some \(t_j\) over a point \(t_0\in\mathbb P^1(\Q)\); as \(Q\) is not a cusp and the poles of
+      \(t_j\) are rational points, \(t_0\in\Q\).</p>
+    <ol>
+      <li>
+        <p>The class of \((O)+(T_2)\): \(t_1=y/(x+y+1)\), with divisor \(2(T_1)-2(T_3)\) and
+          \(t_1(O)=t_1(T_2)=1\). Over \(\Q(t_1)\), \((1-t_1)^2x^2-t_1x-t_1=0\) and \(y=t_1(x+1)/(1-t_1)\).</p>
+      </li>
+      <li>
+        <p>The class of \(2(O)\): \(t_2=x+1\), with divisor \(2(T_2)-2(O)\) and
+          \(t_2(T_1)=t_2(T_3)=1\). Over \(\Q(t_2)\), \(y^2+t_2y-t_2(t_2-1)^2=0\) and \(x=t_2-1\).</p>
+      </li>
+      <li>
+        <p>The class of \((O)+(T_3)\): \(t_3=y/x\), with divisor \((T_1)+(T_2)-(T_3)-(O)\),
+          normalized by \(t_3=-1\) at the cusp \((\omega,-\omega)\) of degree \(2\), where \(\omega^2+\omega+1=0\).
+          Over \(\Q(t_3)\), \(x^2+(1-t_3-t_3^2)x-t_3\)<wbr>\({}=0\) and \(y=t_3x\).</p>
+      </li>
+      <li>
+        <p>The class of \((O)+(T_1)\): \(t_4=-(x+y+1)/x\), with divisor \((T_2)+(T_3)-(T_1)-(O)\),
+          normalized by \(t_4=-1\) at the cusp \((\omega,-1)\). Over \(\Q(t_4)\), \(x^2+(1-t_4-t_4^2)x-t_4\)<wbr>\({}=0\)
+          and \(y=-(t_4+1)x-1\).</p>
+      </li>
+    </ol>
+    <p>Each \(t_j\) is determined by its divisor and its normalization, so the families do not depend on
+      any choice (part D checks the divisors and values). The negation of \(W\) exchanges families \(3\)
+      and \(4\) and maps \(t_1\) to \(1/t_1\).</p>
+    <p><em>Traces and norms.</em> In each family the function field \(\Q(W)\) is the quadratic extension of
+      \(\Q(t)\), \(t=t_j\), given above. Computing in it (part D), the function
+      \(R_j=\operatorname{Tr}(a_3)^2/N(a_3)-2\)<wbr>\({}\in\Q(t)\), formed with the trace and norm from \(\Q(W)\) to
+      \(\Q(t)\), is \(R_j=N_j(t)/D_j(t)\), where, with \(B(t)=t^2-t+1\), \(\Phi_{10}(t)\)<wbr>\({}=t^4-t^3+t^2-t+1\)
+      and \(\Phi_5(t)=t^4+t^3+t^2+t+1\),</p>
+    <div class="equation">\[
+      D_1=D_2=B^3\Phi_{10},\qquad D_3=D_4=t^9\Phi_5,
+    \]</div>
+    <div class="equation">\[
+      \begin{aligned}
+      N_1&amp;=-2t^{10}-17t^9+60t^8-30t^7-126t^6+228t^5-126t^4-30t^3+60t^2-17t-2,\\
+      N_2&amp;=2t^{10}+8t^9-24t^8+30t^7-45t^6+60t^5-45t^4+30t^3-24t^2+8t+2,\\
+      N_3&amp;=-t^{22}-6t^{21}-7t^{20}+16t^{19}+21t^{18}-44t^{17}-37t^{16}+88t^{15}+38t^{14}-132t^{13}-17t^{12}\\
+      &amp;\quad+152t^{11}-17t^{10}-132t^9+38t^8+88t^7-37t^6-44t^5+21t^4+16t^3-7t^2-6t-1,\\
+      N_4&amp;=-t^{22}-5t^{21}-2t^{20}+15t^{19}-8t^{18}-37t^{17}+55t^{16}+20t^{15}-119t^{14}+89t^{13}+73t^{12}\\
+      &amp;\quad-170t^{11}+73t^{10}+89t^9-119t^8+20t^7+55t^6-37t^5-8t^4+15t^3-2t^2-5t-1.
+      \end{aligned}
+    \]</div>
+    <p>The \(N_j\) have integer coefficients, are palindromic, and</p>
+    <div class="equation">\[
+      \Res(\Phi_{10},N_1)=\Res(\Phi_{10},N_2)=\Res(\Phi_5,N_3)=\Res(\Phi_5,N_4)=25.
+    \]</div>
+    <p>Moreover the norm of \(\delta\) from \(\Q(W)\) to \(\Q(t)\) is \(F_j(t)\,g_j(t)^3\) with
+      \(g_j\in\Q(t)\) (computed in part D) and</p>
+    <div class="equation">\[
+      \begin{aligned}
+      F_1=F_2&amp;=(t^2-t+1)(t^4-11t^3+21t^2-11t+1),\\
+      F_3=F_4&amp;=(t^2-t+1)^2(t+1)(t^4+t^3-9t^2+t+1).
+      \end{aligned}
+    \]</div>
+    <p><em>Specialization.</em> Let \(\mathcal O\) be the integral closure of the local ring
+      \(\Q[t]_{(t-t_0)}\) in \(\Q(W)\). As \(\{Q,Q^\sigma\}\) is the whole fibre of \(t\) over \(t_0\),
+      \(\mathcal O\) is the local ring of \(W\) at this point of degree \(2\); it is free of rank \(2\) over
+      \(\Q[t]_{(t-t_0)}\), with \(\mathcal O/(t-t_0)\mathcal O\cong K\), and \(a_3,\delta\in\mathcal O\). Traces
+      and norms are traces and determinants of multiplication maps in a basis, so they commute with
+      reduction modulo \(t-t_0\): with \(S\) and \(N\) as in (5), \(S^2/N-2=R_j(t_0)\), and
+      \(N_{K/\Q}(\delta(Q))=F_j(t_0)g_j(t_0)^3\) whenever \(g_j(t_0)\) is finite and nonzero.</p>
+    <p><em>The arithmetic.</em> Suppose that (4) holds. By (5), \(r^3-3r=R_j(t_0)\) for some \(r\in\Q\). Write
+      \(t_0=a/b\) with coprime integers \(a\), \(b\), \(b&gt;0\). In families \(1\) and \(2\),
+      \(R_j(t_0)\)<wbr>\({}=N_j(a,b)/\bigl(B(a,\)<wbr>\({}b)^3\Phi_{10}(a,b)\bigr)\), a quotient of binary forms of degree \(10\).
+      Let \(\ell\neq5\) be a prime dividing \(\Phi_{10}(a,b)\). Then \(\ell\nmid b\) (otherwise \(\ell\mid a\)),
+      and \(\ell\nmid N_j(a,b)\): the resultant of the binary forms \(\Phi_{10}\) and \(N_j\) is
+      \(\Res(\Phi_{10},N_j)=25\), as both have full degree in \(t\), and it times a power of \(a\) and times
+      a power of \(b\) lie in the ideal generated by \(\Phi_{10}(a,b)\) and \(N_j(a,b)\). So \(v_\ell(R_j(t_0))\)<wbr>\({}=-3v_\ell(B(a,b))\)<wbr>\({}-v_\ell(\Phi_{10}(a,b))\)<wbr>\({}&lt;0\), and (6) gives
+      \(v_\ell(\Phi_{10}(a,b))\equiv0\pmod3\). Also \(\Phi_{10}(a,b)=N_{L/\Q}(a+b\zeta)&gt;0\) and
+      \(v_5(\Phi_{10}(a,b))\)<wbr>\({}=v_\pi(a+b\zeta)\in\{0,1\}\) (<a href="#cyclotomic">Section 6</a>). Hence \(\Phi_{10}(a,b)\) is
+      a cube or five times a cube, and <a href="#prop-cyclo">Proposition 5</a> gives
+      \(t_0\in\{0,\infty,1,-1\}\). In families \(3\) and \(4\), if \(t_0\neq0\), then
+      \(R_j(t_0)\)<wbr>\({}=N_j(a,b)/\bigl(a^9b^9\Phi_5(a,b)\bigr)\), a quotient of forms of degree \(22\); a prime
+      \(\ell\neq5\) dividing \(\Phi_5(a,b)\) divides neither \(a\), \(b\) nor \(N_j(a,b)\), so in the same way
+      \(\Phi_5(a,b)=\Phi_{10}(-a,b)\) is a cube or five times a cube, and Proposition 5 for \((-a,b)\) gives
+      the same four values of \(t_0\).</p>
+    <p><em>The four fibres.</em> Part D determines the fibres of \(t_j\) over \(0\), \(1\), \(-1\) and
+      \(\infty\). Three of them consist of cusps, and the fourth, over \(t_0\), is one non-cuspidal point
+      with residue field \(K\), where \(d\) is rational:</p>
+    <div class="equation">\[
+      \begin{array}{c|c|c|c|c|c}
+      j&amp;\text{fibres of cusps}&amp;t_0&amp;K&amp;d&amp;N_{K/\Q}(\Delta)\bmod\Q^{\times3}\\\hline
+      1&amp;0,\ 1,\ \infty&amp;-1&amp;\Q(\sqrt{-15})&amp;-\tfrac18&amp;F_1(-1)=135\\
+      2&amp;0,\ 1,\ \infty&amp;-1&amp;\Q(\sqrt{-15})&amp;8&amp;F_2(-1)=135\\
+      3&amp;0,\ -1,\ \infty&amp;1&amp;\Q(\sqrt5)&amp;\tfrac12&amp;F_3(1)=-10\\
+      4&amp;0,\ -1,\ \infty&amp;1&amp;\Q(\sqrt5)&amp;-2&amp;F_4(1)=-10
+      \end{array}
+    \]</div>
+    <p>At the non-cuspidal point over \(t_0\) the curve \(E_d\) has \(E_d(K)_{\mathrm{tors}}\cong\Z/15\), the
+      cube cofactor \(g_j(t_0)\) is finite and nonzero (it is \(5/768\), \(80/3\), \(-5/8\), \(-10\) in
+      families \(1\)–\(4\)), and \(N_{K/\Q}(\Delta(E_d))\) is \(135\) resp. \(-10\) times a rational cube.
+      Neither \(135\) nor \(-10\) is a rational cube, so (3) fails there. Hence (3) and (4) never hold
+      together. ∎</p>
+  </section>
+
+  <section id="census">
+    <h3>8. Proof of the Theorem and consequences for the census</h3>
+    <p><em>Proof of the Theorem.</em> Let \(A/\Q\) be principally polarized, simple over \(\Q\) and
+      geometrically split, with a rational point of order \(45\). By (I3), \(A\) is of type (N), (CM) or
+      (S). Types (CM) and (S) are excluded by <a href="#prop-A">Proposition A</a>. In type (N),
+      <a href="#lemma-parents">Lemma 3</a> gives a quadratic field \(K\), an elliptic curve \(E\) over \(K\)
+      with \(E(K)_{\mathrm{tors}}\cong\Z/15\) and a point \(P\in E(K)\) of order \(3\), and
+      <a href="#lemma-conditions">Lemma 4</a> shows that (3) and (4) hold for the model of \(E\) with
+      \(P=(0,0)\). This contradicts <a href="#prop-families">Proposition 6</a>. ∎</p>
+    <p><em>Proof of the Corollary.</em> The Jacobian of a curve of genus \(2\) over \(\Q\) is a principally
+      polarized abelian surface, and a group containing an element of order \(45\) contains a cyclic
+      subgroup of order \(45\). ∎</p>
+    <p>Among the groups listed on the census, \([45]\) is the only one with an element of order \(45\). It
+      becomes impossible in the class “geometrically split, simple over \(\Q\)”. Simplicity over \(\Q\)
+      is essential: the class “split over \(\Q\)” contains the curve 45.a and a certified infinite family
+      of Jacobians with exact torsion group \([45]\) (see the
+      <a href="../group.html?g=45">census page</a>), so the combined
+      geometrically split cell of \([45]\) keeps its grade. The class “geometrically simple” is not
+      affected by this proof.</p>
+  </section>
+
+  <section id="remarks">
+    <h3>9. Remarks</h3>
+    <ol>
+      <li id="rem-hyp">
+        <p><em>The hypotheses.</em> The principal polarization and the simplicity over \(\Q\)
+          are used only in <a href="#parents">Section 4</a>. Simplicity makes the two elliptic curves conjugate. The
+          principal polarization identifies \(A_K/F\) with \(E\) itself, so that the torsion of \(G/H\) lands in
+          \(E(K)\), and makes \(A_K\) an \((n,n)\)-gluing with anti-isometric kernel; for a polarization of
+          higher degree \(A_K/F\) is only isogenous to \(E\). Proposition A uses neither hypothesis;
+          Lemma 2 and Propositions 5 and 6 are statements about elliptic curves and a Diophantine equation;
+          and Lemma 4 uses only the output (a)–(c) of Lemma 3.</p>
+      </li>
+      <li id="rem-both">
+        <p><em>Both conditions are needed.</em> At the non-cuspidal points of the table in
+          <a href="#families">Section 7</a>, condition (4) holds (\(a_3/\sigma(a_3)=-1\), so \(r=-2\) and
+          \(R_j(t_0)=-2\)), and only (3) excludes them. There \(d\) is rational: the curves are the base changes
+          to \(\Q(\sqrt{-15})\) of the curve \(50b2\) (\(d=-\tfrac18\), \(8\)) and to \(\Q(\sqrt5)\) of the curve
+          \(50b1\) (\(d=\tfrac12\), \(-2\)), so \(E\cong E^\sigma\). Conversely, at the point of family \(1\)
+          over \(t_1=2\), over \(\Q(\sqrt3)\), condition (3) holds and (4) fails; this point gives the elliptic
+          curve of the census curve 15.c (<a href="#rem-census">Remark 3</a>).</p>
+      </li>
+      <li id="rem-census">
+        <p><em>A consistency check with census curves (not used in the proof).</em> The
+          census curves <a href="../curve.html?id=9.c">9.c</a>,
+          <a href="../curve.html?id=18.c">18.c</a> and
+          <a href="../curve.html?id=15.c">15.c</a> are geometrically split and simple
+          over \(\Q\), with rational torsion subgroups \([9]\), \([18]\) and \([15]\). The census records for each
+          a map of degree \(3\) to an elliptic curve \(E\) over \(K=\Q(i)\), \(\Q(\sqrt6)\) and \(\Q(\sqrt3)\).
+          As \(3\) is prime, the map does not factor through an isogeny, so the induced homomorphism
+          \(E\to J_K\) is injective <a href="#bl">[BL, Proposition 11.4.3]</a>. Part E of the certificate checks that \(E\)
+          has no complex multiplication and is not geometrically isogenous to \(E^\sigma\) (the squares of the
+          traces of Frobenius at two conjugate primes differ), so these Jacobians are of type (N) and \(E\) is one
+          of the two elliptic curves of <a href="#parents">Section 4</a>; and that \(E(K)_{\mathrm{tors}}\) is \(\Z/3\),
+          \(\Z/6\) and \(\Z/15\). For 9.c and
+          18.c the argument of <a href="#parents">Section 4</a>, with the subgroup of order \(9\) in place of the group of
+          order \(45\), forces \(d=3\) and hence (1), (3) and (4); and indeed (3) and (4) hold for both. For
+          15.c, which has no rational point of order \(9\), (3) holds and (4) fails. The variant
+          \(a_3\sigma(a_3)\in K^{\times3}\) of (4) with the opposite sign in (1) fails for all three curves.</p>
+      </li>
+      <li id="rem-rerun">
+        <p><em>What was not used.</em> The proof uses no bound on the height of points, no
+          search for points as a completeness argument and no conjecture: the ranks, the Mordell–Weil groups
+          and the Chabauty bounds of <a href="#cyclotomic">Section 6</a> and the rank of \(W\) are proved.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="computations">
+    <h3>10. Computations</h3>
+    <p>The certificate
+      <a href="../data/knowledge/sources/qsimple_45_checks.m"><code>qsimple_45_checks.m</code></a>
+      (Magma V2.30-1, about \(11\) seconds) consists of assertions and ends with
+      <code>ALL_CHECKS_PASSED</code>; a failed assertion stops it before that line. Its log is
+      <a href="../data/knowledge/sources/qsimple_45_checks.log"><code>qsimple_45_checks.log</code></a>.
+      SHA-256 of the script:
+      <code>3898e5d57d639cd4<wbr>3555feb97c996164<wbr>ef867549fd76b5df<wbr>02bf40c2da0a0fe6</code>;
+      of the log:
+      <code>4681daf8118e304a<wbr>60d91375822b1a88<wbr>74028e922ed94e4e<wbr>a63803f907b3f060</code>.
+      Part A checks the finite statements of (I1), the residues modulo \(5\) and \(3\) used in
+      <a href="#square">Section 3</a> and \((1+\sqrt2)^4&lt;34\). Part B checks, for \(y^2+a_1xy+a_3y=x^3\) over
+      \(\Q(a_1,a_3)\), the discriminant, the \(3\)-division polynomial, \(-P\), the roots of \(h\), the curve
+      \(E'\) and the formula for \(\hat\phi\) of <a href="#conditions">Section 5</a>, including \(\hat\phi\phi=[3]\).
+      Part C proves the statements of <a href="#cyclotomic">Section 6</a>: the Minkowski bound, class number one, the
+      unit group, the action of \(\zeta\mapsto\zeta^2,\zeta^3\) on \(\tau\), the norm form, the identities
+      for \(\pi\), the cube classes modulo \(2\); for \(j=0,1\) that \(D_j\) is smooth of genus \(1\) and
+      isomorphic to \(E_j\), the norm of \(\Delta(E_j)\), the splitting of \(11\), the rank bounds, the
+      Mordell–Weil groups with both proof flags, the map \(E_j\to D_j\to\mathbb P^1\), and that Chabauty at
+      \(11\) returns a bound equal to the number of points found, no unresolved residue classes, the
+      saturation index and the sets (9). Part D treats <a href="#families">Section 7</a>: the Tate normal form,
+      \(\psi_3\) and the identity for \(\psi_3(du)/d^3\); the irreducibility of (10) and its singular points;
+      the rank and torsion of \(W\); the birational map and its inverse; the identities (11) by an explicit
+      translation and shear; the cusps; the divisors of the \(t_j\); in each family the quadratic relation,
+      the identity \(R_j=N_j/D_j\), the integrality, degrees and palindromy of \(N_j\), the resultants, and
+      an explicit cube root \(g_j\) of \(N(\delta)/F_j\) (the leading coefficient is kept, as Magma's
+      factorization drops it); and the fibres over \(0\), \(1\), \(-1\), \(\infty\), including the residue
+      field, \(d\), the torsion, \(a_3/\sigma(a_3)\), \(N_{K/\Q}(\Delta)\) and \(g_j(t_0)\) at the non-cuspidal
+      points. Part E carries out the checks of <a href="#rem-both">Remarks 2</a> and <a href="#rem-census">3</a>
+      from the census data of 9.c, 18.c and 15.c. All computations were rerun, and the new identities of
+      Sections <a href="#conditions">5</a> and <a href="#families">7</a>, the exceptional fibres and the arithmetic of
+      Proposition 5 were cross-checked independently in Sage and PARI.</p>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="bl"><p>[BL] C. Birkenhake and H. Lange, <a href="https://doi.org/10.1007/978-3-662-06307-1"><i>Complex Abelian Varieties</i></a>, 2nd edition, Springer, Berlin,
+        2004 (Grundlehren der mathematischen Wissenschaften 302): Section 5.3, Proposition 11.4.3 and
+        Corollary 12.1.5.
+        <a href="https://doi.org/10.1007/978-3-662-06307-1">doi:10.1007/978-3-662-06307-1</a>.</p></li>
+      <li id="br"><p>[Br] N. Bruin, <i>Chabauty methods using elliptic curves</i>, J. Reine Angew. Math. <b>562</b> (2003),
+        27–49.</p></li>
+      <li id="fk"><p>[FK] G. Frey and E. Kani, <i>Curves of genus 2 covering elliptic curves and an arithmetical
+        application</i>, in: Arithmetic Algebraic Geometry (Texel, 1989), Progress in Mathematics 89,
+        Birkhäuser, Boston, 1991, 153–176.</p></li>
+      <li id="ka"><p>[Ka] S. Kamienny, <a href="https://doi.org/10.1007/BF01232025"><i>Torsion points on elliptic curves and \(q\)-coefficients of modular forms</i></a>, Invent.
+        Math. <b>109</b> (1992), 221–229.
+        <a href="https://doi.org/10.1007/BF01232025">doi:10.1007/BF01232025</a>.</p></li>
+      <li id="ka97"><p>[Ka97] E. Kani, <a href="https://eudml.org/doc/183547"><i>The number of curves of genus two with elliptic differentials</i></a>, J. Reine Angew. Math.
+        <b>485</b> (1997), 93–122. <a href="https://eudml.org/doc/183547">https://eudml.org/doc/183547</a>.</p></li>
+      <li id="km"><p>[KM] M. A. Kenku and F. Momose, <a href="https://doi.org/10.1017/S0027763000002816"><i>Torsion points on elliptic curves defined over quadratic
+        fields</i></a>, Nagoya Mathematical Journal <b>109</b> (1988), 125–149: Theorem (0.1).
+        <a href="https://doi.org/10.1017/S0027763000002816">doi:10.1017/S0027763000002816</a>.</p></li>
+      <li id="ku"><p>[Ku] D. S. Kubert, <a href="https://doi.org/10.1112/plms/s3-33.2.193"><i>Universal bounds on the torsion of elliptic curves</i></a>, Proc. London Math. Soc.
+        (3) <b>33</b> (1976), 193–237: Table 3.
+        <a href="https://doi.org/10.1112/plms/s3-33.2.193">doi:10.1112/plms/s3-33.2.193</a>.</p></li>
+      <li id="ma"><p>[Ma] B. Mazur, <a href="https://doi.org/10.1007/BF02684339"><i>Modular curves and the Eisenstein ideal</i></a>, Publ. Math. IHÉS <b>47</b> (1977),
+        33–186: Theorem (8). <a href="https://doi.org/10.1007/BF02684339">doi:10.1007/BF02684339</a>.</p></li>
+      <li id="mi"><p>[Mi] J. S. Milne, <a href="https://doi.org/10.1007/BF01425446"><i>On the arithmetic of abelian varieties</i></a>, Invent. Math. <b>17</b> (1972),
+        177–190: §1. <a href="https://doi.org/10.1007/BF01425446">doi:10.1007/BF01425446</a>.</p></li>
+      <li id="na"><p>[Na] F. Najman, <a href="https://doi.org/10.1016/j.jnt.2009.12.008"><i>Complete classification of torsion of elliptic curves over quadratic cyclotomic
+        fields</i></a>, J. Number Theory <b>130</b> (2010), 1964–1968: Section 1 and Theorem 2(ii).
+        <a href="https://doi.org/10.1016/j.jnt.2009.12.008">doi:10.1016/j.jnt.2009.12.008</a>;
+        <a href="https://arxiv.org/abs/1005.0560">https://arxiv.org/abs/1005.0560</a>.</p></li>
+      <li id="p30"><p>[P30] Census proof of 21 October 2026, <a href="qsimple-30-obstruction.html"><i>An obstruction to rational \(30\)-torsion on geometrically
+        split abelian surfaces</i></a>,
+        <a href="qsimple-30-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-30-obstruction.html</a>: Proposition 2,
+        Lemmas 3 and 4, Section 8.</p></li>
+      <li id="p63"><p>[P63] Census proof of 21 October 2026, <a href="qsimple-63-obstruction.html"><i>An obstruction to rational \(63\)-torsion on geometrically
+        split abelian surfaces</i></a>,
+        <a href="qsimple-63-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html</a>: Section 1,
+        Lemmas 1–3 and 5–7, Sections 2–5, 7 and 9.1.</p></li>
+      <li id="p2214"><p>[P2214] Census proof of 10 November 2026, <a href="qsimple-2214-obstruction.html"><i>Rational \(7\)-torsion and the \(2\)-rank of
+        geometrically split abelian surfaces</i></a>,
+        <a href="qsimple-2214-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-2214-obstruction.html</a>: Section 1.</p></li>
+      <li id="po"><p>[Po] B. Poonen, <a href="https://doi.org/10.4064/aa-86-3-193-205"><i>Some Diophantine equations of the form \(x^n+y^n=z^m\)</i></a>, Acta Arith. <b>86</b>
+        (1998), 193–205: Section 4.
+        <a href="https://doi.org/10.4064/aa-86-3-193-205">doi:10.4064/aa-86-3-193-205</a>.</p></li>
+      <li id="st"><p>[ST] J.-P. Serre and J. Tate, <a href="https://doi.org/10.2307/1970722"><i>Good reduction of abelian varieties</i></a>, Ann. of Math. (2)
+        <b>88</b> (1968), 492–517: Theorem 1 and Corollary 2 (p. 493), Lemma 2 (p. 495), §2
+        (pp. 496 and 498). <a href="https://doi.org/10.2307/1970722">doi:10.2307/1970722</a>.</p></li>
+    </ol>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsimple-45-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

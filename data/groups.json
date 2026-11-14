@@ -6869,7 +6869,24 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has no rational point of order 45. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+          "sources": [
+            "QSimple45Obstruction",
+            "QSimple30Obstruction",
+            "QSimple63Obstruction",
+            "KenkuMomose1988",
+            "Kamienny1992",
+            "Najman2010",
+            "Poonen1998",
+            "Mazur1977",
+            "Kubert1976",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-45-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {

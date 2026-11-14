@@ -736,3 +736,45 @@ SHA-256 of the publication artifacts:
 | `qsimple_40_obstruction.pdf` | `16dcfd6cd1e968167f565079d4bc69582480a21d14f952fbdf205ea548b365ab` |
 | `qsimple_40_checks.m` | `2a06ab43a45d3617f00cc3ffc82b5e88e5ebaf7c255e58051c8bd966ace1fce2` |
 | `qsimple_40_checks.log` | `a7ff82365c9fcddcf8b598df50a23a56abf8afa71192bcedc1778c1a9dc43535` |
+
+## [45] in the geometrically split, ℚ-simple class (14 November 2026)
+
+[`qsimple-45-obstruction.html`](../../../proofs/qsimple-45-obstruction.html), with
+[PDF](qsimple_45_obstruction.pdf) and [LaTeX](qsimple_45_obstruction.tex), proves that a
+principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has no
+rational point of order 45; for surfaces that are geometrically the square of an elliptic curve
+neither simplicity over ℚ nor a polarization is needed. The new census exclusion is [45] in `gsplit`
+only. Its split-over-ℚ class has examples and a certified infinite family, so its combined split
+grade is unchanged. The theorem also excludes groups outside the census with an element of order 45,
+such as [3,45], in `gsplit` only.
+
+Geometric squares: CM squares fail the Weil bound after potential good reduction at 2; for non-CM
+squares the residual-representation lemmas of the order-30 and order-63 proofs leave a quadratic
+endomorphism field, where an integral lattice lemma at 3 would give an elliptic curve with a point of
+order 45 over a quadratic field. Nonisogenous factors: the principal polarization makes the two
+conjugate elliptic curves over the quadratic field K the quotients of the surface by each other, so
+both have torsion ℤ/15 over K; every gluing degree reduces to a conjugate (3,3)-gluing, and the
+3-torsion satisfies two Kummer conditions (a discriminant norm that is a rational cube, and the flex
+coefficient a₃ fixed by conjugation modulo cubes). The quadratic points of X₁(15) lie in four
+explicit degree-2 families of the elliptic curve 15a8; along them the second condition forces a
+value of a cyclotomic quartic form to be a cube or five times a cube, which a descent following
+Poonen and elliptic Chabauty over ℚ(ζ₅) restrict to four parameters, where the first condition
+fails.
+
+The certificate [`qsimple_45_checks.m`](qsimple_45_checks.m) and its
+[log](qsimple_45_checks.log) (Magma V2.30-1, 14 November 2026, about 11 s) consist of assertions,
+end with `ALL_CHECKS_PASSED`, and replace three earlier research scripts. Three independent reports
+of 14 November 2026 (two on the mathematics, one auditing the computations) found no error and
+asked for minor revisions; all of them are in this version. The audit reran the earlier
+certificates with byte-identical logs, ran 13 negative tests, recomputed the families, resultants
+and cube classes in Sage, and checked the cyclotomic equation by brute force up to 3·10⁴; the final
+certificate was rerun with a byte-identical log and passes 12 further negative tests.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_45_obstruction.tex` | `f9614c48609c9c26052aebb0af553bb664953101704be7b8e93f35cfe886d4ea` |
+| `qsimple_45_obstruction.pdf` | `6e7bba789ca55a352a511a6cfce62d28174b871536400327d6d1b02e21f93a4c` |
+| `qsimple_45_checks.m` | `3898e5d57d639cd43555feb97c996164ef867549fd76b5df02bf40c2da0a0fe6` |
+| `qsimple_45_checks.log` | `4681daf8118e304a60d91375822b1a8874028e922ed94e4ea63803f907b3f060` |

@@ -99,6 +99,10 @@ over ℚ forces at most four rational points of 2-power order, with no polarizat
 split, simple over ℚ** class; both have split-over-ℚ examples, so their combined split infinitude
 grades are unchanged. The theorem also removes the principal-polarization hypothesis from the
 [2,2,10] result.
+A principally polarized abelian surface that is geometrically split and simple over ℚ has no rational
+point of order 45 (`proofs/qsimple-45-obstruction.html`, with PDF/LaTeX and a Magma certificate), so
+[45] is impossible in the **geometrically split, simple over ℚ** class. It has split-over-ℚ examples
+and a certified infinite family, so its combined split infinitude grade is unchanged.
 For principally polarized surfaces that are **geometrically split and simple over ℚ**, rational
 7-torsion forces the entire rational 2-primary torsion to have order at most four
 (`proofs/qsimple-228-obstruction.html`, with PDF/LaTeX and exact modular-curve checks).

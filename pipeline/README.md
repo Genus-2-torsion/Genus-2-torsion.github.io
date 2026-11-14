@@ -87,6 +87,13 @@ applies to [40] and [2,20] in the census and to future entries such as [80], [2,
 groups that already had a `gsplit` exclusion keep their earlier proof. Both census groups have `qsplit`
 examples, so their combined grades are unchanged. The proof is in `proofs/qsimple-40-obstruction.html`,
 with PDF/LaTeX and the Magma certificate under `data/knowledge/sources/qsimple_40_*`.
+`QSimple45Obstruction` (14 November 2026) proves that a principally polarized, geometrically split
+abelian surface simple over ℚ has no rational point of order 45. The predicate `exponent % 45 == 0`,
+placed after the order-63 branch, applies to [45] in the census and to future entries such as
+[3,45]; groups that already had a `gsplit` exclusion (such as [90], by the order-30 proof) keep their
+earlier proof. [45] has `qsplit` examples and an exact family, so its combined grade is unchanged.
+The proof is in `proofs/qsimple-45-obstruction.html`, with PDF/LaTeX and the Magma certificate under
+`data/knowledge/sources/qsimple_45_*`.
 
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].

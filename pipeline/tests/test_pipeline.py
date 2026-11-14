@@ -210,6 +210,7 @@ class KnowledgeTests(unittest.TestCase):
             "30": "QSimple30Obstruction", "60": "QSimple30Obstruction", "2.30": "QSimple30Obstruction",
             "35": "QSimple35Obstruction", "70": "QSimple35Obstruction",
             "63": "QSimple63Obstruction",
+            "45": "QSimple45Obstruction",
             "2.2.14": "QSimple2214Obstruction",
             "2.28": "QSimple228Obstruction",
             "2.2.10": "QSimple2210Obstruction", "2.2.20": "QSimple2210Obstruction",
@@ -291,6 +292,31 @@ class KnowledgeTests(unittest.TestCase):
             self.assertNotIn(bad, log)
         for suffix in ("tex", "pdf"):
             self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_40_obstruction.{suffix}").exists())
+    def test_qsimple_45(self):
+        """No rational point of order 45 on a principally polarized, Q-simple, geometrically split abelian surface
+        (2026-11-14)."""
+        for key in ("45", "3.45"):
+            with self.subTest(key=key):
+                rec = knowledge.exclusions_record(key)
+                self.assertEqual(set(rec), {"gsplit"})
+                self.assertEqual(rec["gsplit"]["sources"][0], "QSimple45Obstruction")
+                self.assertTrue((ROOT / rec["gsplit"]["proof_url"]).exists())
+                self.assertIn("principal", rec["gsplit"]["reason"])
+        self.assertIn("QSimple45Obstruction", knowledge.QSIMPLE_ONLY)
+        for key in ("9", "15", "3.9", "3.15"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
+        # keep the older proof for groups that already had an exclusion
+        self.assertEqual(knowledge.exclusions_record("90")["gsplit"]["sources"][0], "QSimple30Obstruction")
+        group = next(g for g in read_json(ROOT / "data" / "groups.json")["groups"] if g["key"] == "45")
+        self.assertTrue(group["known"]["qsplit"])
+        self.assertEqual(group["infinite"]["split"]["grade"], "exact")
+        self.assertEqual(group["exclusions"], knowledge.exclusions_record("45"))
+        log = (KNOWLEDGE_DIR / "sources" / "qsimple_45_checks.log").read_text()
+        self.assertTrue(log.rstrip().endswith("ALL_CHECKS_PASSED"))
+        for bad in ("Runtime error", "Assertion failed", "User error", "Internal error"):
+            self.assertNotIn(bad, log)
+        for suffix in ("tex", "pdf"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_45_obstruction.{suffix}").exists())
         # 2-rank at most 2, or no 5-torsion: no exclusion from this proof
         for key in ("5", "10", "20", "40", "2.10", "2.20", "2.2.2", "2.2.8"):
             with self.subTest(key=key):

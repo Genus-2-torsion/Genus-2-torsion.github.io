@@ -10,10 +10,10 @@
   "group_key": "2.2.2.2",
   "group_bracket": "[2,2,2,2]",
   "order": 16,
-  "class": "split_undecided_over_Q",
-  "class_certified": false,
-  "class_text": "geometrically split; whether it splits over ℚ is undecided",
-  "status": "verified",
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
   "new_group": false,
   "new_for_class": false,
   "accepted_because": "new for this class",
@@ -95,33 +95,33 @@
       {
         "order": 2,
         "mumford": [
+          "x^2 - 5/2*x - 3/2",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 13/2*x + 21/2",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 - 19/4*x + 35/8",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
           "x - 5/4",
           "0",
           "1"
-        ]
-      },
-      {
-        "order": 2,
-        "mumford": [
-          "x + 1/2",
-          "0",
-          "1"
-        ]
-      },
-      {
-        "order": 2,
-        "mumford": [
-          "x - 3",
-          "0",
-          "1"
-        ]
-      },
-      {
-        "order": 2,
-        "mumford": [
-          "x^2 - 2*x - 3",
-          "0",
-          "2"
         ]
       }
     ],
@@ -173,9 +173,11 @@
     "reducible_chi": 92
   },
   "q_simple": {
-    "certified": false,
-    "prime": 0,
-    "chi": ""
+    "certified": true,
+    "prime": 5,
+    "chi": "T^4 - 10*T^2 + 25",
+    "method": "chi_not_elliptic_product",
+    "detail": "chi_5 = T^4 - 10*T^2 + 25 is not of the form (T^2 - a*T + 5)*(T^2 - b*T + 5) with integers a, b (s1 = 0, s2 = -10: s1^2 - 4*(s2 - 2*p) = 80 is not a square)"
   },
   "split": {
     "geometrically_split": true,
@@ -244,15 +246,15 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-18 17:41:11 UTC"
+    "verified": "2026-11-14 09:04:54 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
-    "magma_version": "2.29-4",
-    "cputime_seconds": "1.04000",
-    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "1.58000",
+    "verify_lib_sha256": "2bd4260c7c09399616ed067de2390ec8b9ad0304dc8d03ab6bbf0a079ff35eb1",
     "log": "data/logs/2.2.2.2.b.log",
     "conductor_log": "data/logs/2.2.2.2.b.conductor.log",
-    "conductor_cputime_seconds": 7.58
+    "conductor_cputime_seconds": 11.53
   }
 }

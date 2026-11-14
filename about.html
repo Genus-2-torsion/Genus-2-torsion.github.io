@@ -61,7 +61,8 @@
   </dl>
 
   <h3>How a curve is certified</h3>
-  <p>Every submission is verified from scratch by <code>pipeline/magma/verify_lib.m</code> on Mordell, with Magma V2.29-4 (the 160 curves verified up to 16 October 2026) or V2.30-1 (all later verifications);
+  <p>Every submission is verified from scratch by <code>pipeline/magma/verify_lib.m</code> on Mordell, with Magma V2.29-4 (159 curves verified up to 16 October 2026) or V2.30-1 (all later verifications, including the re-verification of
+    2.2.2.2.b on 14 November 2026);
     each curve's page records the version used.</p>
   <ol class="steps">
     <li><b>Torsion.</b> First the gcd of <span class="m">#J(𝔽<sub>p</sub>)</span> over 25 good primes <span class="m">p ≥ 3</span> is computed (reduction is injective on
@@ -82,8 +83,16 @@
       group is <span class="m">C₄</span>, <span class="m">V₄</span> or <span class="m">D₄</span>, and the roots of unity in such a field have order at most 12 (orders 5, 8 and 10
       occur, and are covered because every <span class="m">n ≤ 12</span> is tested). This is the criterion
       of <code>verify_simple_certificates.m</code> in the paper's repository (Leprévost's root-power criterion). Primes up to 500 are tried.</li>
-    <li><b>Simplicity over ℚ.</b> If <span class="m">J ~ E × E′</span> over <span class="m">ℚ</span> then <span class="m">χ<sub>p</sub> = χ<sub>E,p</sub>·χ<sub>E′,p</sub></span>
-      is reducible at every good prime, so one irreducible <span class="m">χ<sub>p</sub></span> proves that <span class="m">J</span> is simple over <span class="m">ℚ</span>.</li>
+    <li><b>Simplicity over ℚ.</b> If <span class="m">J</span> is not simple over <span class="m">ℚ</span>, then <span class="m">J ~ E × E′</span> over <span class="m">ℚ</span>
+      for elliptic curves <span class="m">E, E′</span> over <span class="m">ℚ</span>, and at every good prime
+      <span class="m">χ<sub>p</sub> = χ<sub>E,p</sub>·χ<sub>E′,p</sub> = (T² − aT + p)(T² − bT + p)</span> with integers <span class="m">a, b</span>.
+      So one irreducible <span class="m">χ<sub>p</sub></span> proves that <span class="m">J</span> is simple over <span class="m">ℚ</span>. When every
+      <span class="m">χ<sub>p</sub></span> is reducible (as for 2.2.2.2.b, which is (2,2)-isogenous over <span class="m">ℚ</span> to the Weil restriction of an elliptic
+      curve over <span class="m">ℚ(√7)</span>), the stronger test is used: writing
+      <span class="m">χ<sub>p</sub> = T⁴ − s₁T³ + s₂T² − ps₁T + p²</span>, such <span class="m">a, b</span> exist exactly when
+      <span class="m">s₁² − 4(s₂ − 2p) = (a − b)²</span> is a perfect square, so one good prime <span class="m">p &lt; 500</span> where it is not proves that
+      <span class="m">J</span> is simple over <span class="m">ℚ</span>. This test is used since 14 November 2026; for 2.2.2.2.b,
+      <span class="m">χ₅ = T⁴ − 10T² + 25 = (T² − 5)²</span> gives <span class="m">s₁² − 4(s₂ − 2p) = 80</span>.</li>
     <li><b>Splitness.</b> A certificate is an explicit geometric object, checked exactly: an involution of the curve over <span class="m">ℚ</span> other than the
       hyperelliptic one (its quotient has genus 1, so <span class="m">J</span> is split over <span class="m">ℚ</span>); a chain of at most two Richelot
       <span class="m">(2,2)</span>-isogenies over <span class="m">ℚ</span> (Magma's <code>RichelotIsogenousSurfaces</code>) reaching a product of two elliptic curves
@@ -98,7 +107,8 @@
       polynomials never prove that an endomorphism exists.</li>
   </ol>
   <p>Consistency checks abort the verification if both a simplicity and a splitness certificate are found, or if a certificate over <span class="m">ℚ</span>
-    coexists with an irreducible <span class="m">χ<sub>p</sub></span>. The torsion subgroups, geometric simplicity and geometric splitness of all 150 seed curves
+    coexists with an irreducible <span class="m">χ<sub>p</sub></span> or with a <span class="m">χ<sub>p</sub></span> that is not of the form
+    <span class="m">(T² − aT + p)(T² − bT + p)</span>. The torsion subgroups, geometric simplicity and geometric splitness of all 150 seed curves
     were re-derived by this pipeline and agree with the paper's tables; the class over <span class="m">ℚ</span> of the split curves is new information
     computed here.</p>
 
@@ -319,6 +329,6 @@
     The design of this site follows the census of <a href="https://x1mn-sporadic.github.io/">sporadic points on X₁(m,n)</a> and the
     <a href="https://elliptic-rank.icarm.cloud/">Elliptic Curve Rank Leaderboard</a>.</p>
 </main>
-<script src="assets/app.js?v=20261111-exclusions"></script>
+<script src="assets/app.js?v=20261114-qsimple"></script>
 </body>
 </html>

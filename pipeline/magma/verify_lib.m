@@ -41,7 +41,14 @@
         in the Galois closure of a quartic CM field) -- the criterion of the paper's
         verify_simple_certificates.m;
      4. Q-simplicity: a good prime with chi_p irreducible over Q (a Q-split surface has
-        chi_p = chi_E * chi_E' at every good prime);
+        chi_p = chi_E * chi_E' at every good prime); failing that, a good prime p < StrictPrimeMax at
+        which chi_p = T^4 - s1 T^3 + s2 T^2 - p s1 T + p^2 is not of the form (T^2 - a T + p)(T^2 - b T + p)
+        with a, b in Z, i.e. s1^2 - 4(s2 - 2p) is not a perfect square (if J is not simple over Q, it is
+        isogenous over Q to E1 x E2 with elliptic curves E1, E2 over Q, so chi_p = chi_{E1,p} chi_{E2,p}
+        has that form at every good prime; an irreducible chi_p is the special case).  The JSON block
+        "q_simple" then has "method": "chi_not_elliptic_product" and the checkable statement in "detail";
+        without "method" the certificate is an irreducible chi_p.  The test is also run for surfaces
+        certified split over Q, where a failure aborts the verification (internal inconsistency);
      5. splitness certificates: (a) an extra involution over Q (AutomorphismGroup) => split
         over Q; (b) Richelot (2,2)-isogenies over Q, depth <= RichelotDepth: a product of
         elliptic curves over Q => split over Q, an elliptic curve over a quadratic field
@@ -380,6 +387,39 @@ else
 end if;
 if qsimplep ne 0 then Log(Sprintf("Q-simple: chi irreducible at p = %o", qsimplep)); end if;
 
+// Q-simplicity without an irreducible chi_p (the "elliptic product" test).  If J is not simple over Q, then
+// J ~ E1 x E2 over Q with elliptic curves E1, E2 over Q (Poincare reducibility), so at every good prime
+//   chi_p = T^4 - s1 T^3 + s2 T^2 - p s1 T + p^2 = (T^2 - a T + p)(T^2 - b T + p),  a, b in Z,
+// i.e. a + b = s1 and ab = s2 - 2p, i.e. s1^2 - 4(s2 - 2p) = (a - b)^2 is a perfect square.  A good prime where
+// it is not certifies simplicity over Q.  Run whenever no chi_p is irreducible (then the loop above went through
+// every prime below StrictPrimeMax), also for surfaces certified split over Q below, where such a prime would be
+// an internal inconsistency.
+function EllipticProductDisc(chi, p)   // s1^2 - 4(s2 - 2p), s1, s2 for chi = T^4 - s1 T^3 + s2 T^2 - p s1 T + p^2
+  s1 := -Z!Coefficient(chi, 3); s2 := Z!Coefficient(chi, 2);
+  return s1^2 - 4*(s2 - 2*p), s1, s2;
+end function;
+nonprodp := 0; nonprodchi := Tp!0; nonprod_detail := ""; nprod := 0;
+if qsimplep eq 0 then
+  for p in PrimesInInterval(3, StrictPrimeMax) do
+    if not IsDefined(chis, p) then ChiInto(~chis, g, D, p); end if;
+    chi := chis[p];
+    if chi eq 0 then continue; end if;
+    disc, s1, s2 := EllipticProductDisc(chi, p);
+    if not IsSquare(disc) then   // false for disc < 0 as well
+      nonprodp := p; nonprodchi := chi;
+      nonprod_detail := Sprintf("chi_%o = %o is not of the form (T^2 - a*T + %o)*(T^2 - b*T + %o) with integers a, b (s1 = %o, s2 = %o: s1^2 - 4*(s2 - 2*p) = %o is not a square)",
+                                p, PolyString(chi, "T"), p, p, s1, s2, disc);
+      break;
+    end if;
+    nprod +:= 1;
+  end for;
+  if nonprodp ne 0 then
+    Log("Q-simple: " cat nonprod_detail);
+  else
+    Log(Sprintf("chi_p = (T^2 - a*T + p)*(T^2 - b*T + p) with integers a, b at all %o admissible primes below %o: no certificate of simplicity over Q", nprod, StrictPrimeMax));
+  end if;
+end if;
+
 // split signature: every good prime < 200 fails the strictness test
 sig_all_fail := true; sig_n := 0; sig_red := 0;
 for p in PrimesInInterval(3, 200) do
@@ -581,9 +621,10 @@ if assigned Cover then
 end if;
 
 // the class
+qsimple := qsimplep ne 0 or nonprodp ne 0;   // a certificate of simplicity over Q (irreducible chi_p, or the elliptic product test)
 if strictp ne 0 then cls := "simple";
 elif q_split then cls := "qsplit";
-elif geom_split and qsimplep ne 0 then cls := "gsplit";
+elif geom_split and qsimple then cls := "gsplit";
 elif geom_split then cls := "split_undecided_over_Q";
 else cls := "undecided"; end if;
 if strictp ne 0 and (geom_split or q_split) then
@@ -591,6 +632,9 @@ if strictp ne 0 and (geom_split or q_split) then
 end if;
 if q_split and qsimplep ne 0 then
   Fail("internal inconsistency: split over Q but chi_p irreducible at some good prime", [* *]); quit;
+end if;
+if q_split and nonprodp ne 0 then
+  Fail("internal inconsistency: split over Q but " cat nonprod_detail, [* *]); quit;
 end if;
 Log("class: " cat cls);
 
@@ -615,6 +659,16 @@ end for;
 
 v1, v2, v3 := GetVersion();
 ver := Sprintf("%o.%o-%o", v1, v2, v3);
+
+// the "q_simple" block: unchanged for an irreducible chi_p (no "method" key) and for no certificate
+if qsimplep ne 0 then
+  qsimple_block := [* <"certified", true>, <"prime", qsimplep>, <"chi", PolyString(qsimplechi, "T")> *];
+elif nonprodp ne 0 then
+  qsimple_block := [* <"certified", true>, <"prime", nonprodp>, <"chi", PolyString(nonprodchi, "T")>,
+                      <"method", "chi_not_elliptic_product">, <"detail", nonprod_detail> *];
+else
+  qsimple_block := [* <"certified", false>, <"prime", 0>, <"chi", ""> *];
+end if;
 
 // ---------------------------------------------------------------- 6. output
 emitted := false;
@@ -641,8 +695,7 @@ Emit([*
       <"chi", strictp ne 0 select PolyString(strictchi, "T") else "">,
       <"primes_tried_below", StrictPrimeMax>, <"admissible_primes", nadm>, <"reducible_chi", nred>
   *]>,
-  <"q_simple", [* <"certified", qsimplep ne 0>, <"prime", qsimplep>,
-                  <"chi", qsimplep ne 0 select PolyString(qsimplechi, "T") else ""> *]>,
+  <"q_simple", qsimple_block>,
   <"split", [*
       <"geometrically_split", geom_split>, <"split_over_Q", q_split>,
       <"certificate", cert>,

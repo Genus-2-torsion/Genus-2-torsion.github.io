@@ -527,6 +527,90 @@ class CertificateTests(unittest.TestCase):
             self.assertTrue((ROOT / c["verification"]["log"]).exists(), c["verification"]["log"])
             self.assertIn("VERIFY_DONE", (ROOT / c["verification"]["log"]).read_text())
 
+    def test_no_curve_left_undecided(self):
+        """Every census curve has a certified class; the last undecided one, 2.2.2.2.b, was certified simple over Q
+        by the elliptic product test on 2026-11-14."""
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            c = read_json(p)
+            self.assertIn(c["class"], CLASSES, c["id"])
+        groups = read_json(ROOT / "data" / "groups.json")
+        self.assertEqual(groups["n_verified"], 0)
+        self.assertEqual([g["key"] for g in groups["groups"] if g["classes"]["undecided"]], [])
+
+    def test_2222b_simple_over_Q(self):
+        """2.2.2.2.b (784.c.1) is (2,2)-isogenous over Q to the Weil restriction of an elliptic curve over Q(sqrt(7)), and
+        every chi_p is reducible; chi_5 = (T^2 - 5)^2 is not (T^2 - aT + 5)(T^2 - bT + 5) with integers a, b, so the
+        Jacobian is simple over Q.  Re-verified with `verify.py --reverify 2.2.2.2.b` on 2026-11-14."""
+        c = read_json(CURVES_DIR / "2.2.2.2.b.json")
+        self.assertEqual((c["class"], c["class_certified"], c["status"]), ("gsplit", True, "certified"))
+        self.assertTrue(c["split"]["geometrically_split"])
+        self.assertFalse(c["split"]["split_over_Q"])
+        self.assertIn("Weil restriction of an elliptic curve E over Q(sqrt(7))", c["split"]["certificate"]["detail"])
+        self.assertEqual(c["simplicity"]["reducible_chi"], c["simplicity"]["admissible_primes"])
+        qs = c["q_simple"]
+        self.assertEqual((qs["certified"], qs["prime"], qs["chi"], qs["method"]),
+                         (True, 5, "T^4 - 10*T^2 + 25", "chi_not_elliptic_product"))
+        self.assertEqual(qs["detail"], "chi_5 = T^4 - 10*T^2 + 25 is not of the form (T^2 - a*T + 5)*(T^2 - b*T + 5) "
+                                       "with integers a, b (s1 = 0, s2 = -10: s1^2 - 4*(s2 - 2*p) = 80 is not a square)")
+        log = (ROOT / c["verification"]["log"]).read_text()
+        self.assertIn("Q-simple: " + qs["detail"], log)
+        self.assertIn("class: gsplit", log)
+        # the curated fields and the acceptance record survive the re-verification
+        self.assertEqual((c["sources"], c["discovery"]["by"], c["lmfdb"]["label"], c["accepted_because"], c["dates"]["submitted"]),
+                         (["BookerSutherland"], "Booker–Sutherland (extended database)", "784.c.1", "new for this class", "2026-08-30"))
+        g = {e["key"]: e for e in read_json(ROOT / "data" / "groups.json")["groups"]}["2.2.2.2"]
+        row = next(s for s in g["classes"]["gsplit"] if s["id"] == "2.2.2.2.b")
+        self.assertIn("simple over ℚ: χ_5 = T^4 - 10*T^2 + 25 is not of the form", row["certificate"])
+
+    def test_elliptic_product_certificates(self):
+        """Every certificate of simplicity over Q by the elliptic product test is rechecked: p is a good prime of the
+        even model, chi_p = T^4 - s1 T^3 + s2 T^2 - p s1 T + p^2, and s1^2 - 4(s2 - 2p) is not a perfect square, so no
+        integers a, b give chi_p = (T^2 - aT + p)(T^2 - bT + p), as they would at every good prime if J ~ E x E' over Q."""
+        import math
+        n = 0
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            c = read_json(p)
+            qs = c["q_simple"]
+            if "method" not in qs:
+                continue   # an irreducible chi_p (the certificates verified before 2026-11-14 have no "method")
+            n += 1
+            self.assertEqual((qs["method"], qs["certified"]), ("chi_not_elliptic_product", True), c["id"])
+            q = qs["prime"]
+            disc_g, g = int(c["curve"]["discriminant"]), [int(a) for a in c["curve"]["g"]]
+            self.assertTrue(q % 2 and disc_g % q and g[-1] % q and len(g) in (6, 7), c["id"])
+            cs = [int(a) for a in coeffs_to_strings(parse_poly(qs["chi"].replace("T", "x")))]
+            self.assertEqual((len(cs), cs[4], cs[1], cs[0]), (5, 1, q * cs[3], q * q), c["id"])
+            s1, s2 = -cs[3], cs[2]
+            disc = s1 * s1 - 4 * (s2 - 2 * q)
+            self.assertFalse(disc >= 0 and math.isqrt(disc) ** 2 == disc, c["id"])
+            self.assertFalse(any(a * (s1 - a) == s2 - 2 * q for a in range(-4 * q, 4 * q + 1)), c["id"])
+            self.assertIn(f"chi_{q} = {qs['chi']} is not of the form", qs["detail"])
+            self.assertIn(f"(s1 = {s1}, s2 = {s2}: s1^2 - 4*(s2 - 2*p) = {disc} is not a square)", qs["detail"])
+            self.assertNotEqual(c["class"], "qsplit", c["id"])
+        self.assertGreaterEqual(n, 1)
+
+
+class ReverifyTests(unittest.TestCase):
+    def test_reverify_finds_every_submission(self):
+        """`verify.py --reverify ID` finds the accepted submission of every census curve by its equation, keeps its Magma
+        inputs and takes the curated fields from the certificate (61 certificates had their credits or notes corrected
+        after their submission was processed)."""
+        for p in sorted(CURVES_DIR.glob("*.json")):
+            c = read_json(p)
+            path, sub, cert = verify.reverify_submission(c["id"])
+            self.assertEqual(cert["id"], c["id"])
+            self.assertTrue(path.name.endswith(".accepted.json"), path.name)
+            v = verify.validate(sub)
+            self.assertEqual((v["f"], v["h"], v.get("group"), v.get("cover")),
+                             (c["submitted"]["f"], c["submitted"]["h"], c["submitted"]["claimed_group"], c["submitted"]["cover"]), c["id"])
+            self.assertEqual((v.get("sources", []), v.get("discoverer", ""), v.get("year"), v["historical"], v.get("notes", ""),
+                              v.get("reference", ""), v.get("date", ""), v.get("lmfdb_label", "")),
+                             (c["sources"], c["discovery"]["by"], c["discovery"]["year"], c["discovery"]["historical"], c["notes"],
+                              c["reference"], c["dates"]["submitted"], c["submitted"]["lmfdb_label_given"]), c["id"])
+        self.assertEqual(verify.reverify_submission("2.2.2.2.b")[0].name, "paper-t2-072.accepted.json")
+        with self.assertRaises(SystemExit):
+            verify.reverify_submission("2.2.2.2.zz")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)

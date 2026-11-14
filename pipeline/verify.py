@@ -5,6 +5,7 @@ Usage
 -----
   python3 pipeline/verify.py                 # process every file in submissions/inbox/
   python3 pipeline/verify.py FILE [FILE...]  # process the given submission files
+  python3 pipeline/verify.py --reverify ID [ID...]   # verify census curves again, in place (see below)
   options: --timeout SECONDS (default 3600)  --mem-gb N (default 16)  --no-github
            --conductor-timeout SECONDS (default 600)  --no-conductor  --no-lmfdb
            --keep (do not move processed submissions)  --dry-run  --require-claim
@@ -32,6 +33,15 @@ torsion subgroup (see pipeline/magma/prepare_submission.m) let Magma certify the
 running TorsionSubgroup when the point-count bound is sharp.
 Magma exits with status 0 even after an error, so success is judged from the JSON it wrote
 (`ok: true`) and the VERIFY_DONE marker in the log, never from the exit code.
+
+--reverify ID re-runs both Magma jobs for a census curve (e.g. after verify_lib.m gained a certificate) and
+rewrites data/curves/ID.json and data/logs/ID.log (+ ID.conductor.log) in place.  The Magma inputs (curve,
+claimed group, route, generators, cover) are those of the curve's accepted submission in submissions/processed/
+(found by its equation); the curated fields (credits, sources, reference, notes, dates, LMFDB record) and the
+reason it was accepted are kept from the certificate.  The acceptance rule is not applied again, the computed
+group must be the recorded one, the recorded minimal model and conductor are kept if the conductor job does
+not finish, and nothing is written to data/rejected/, moved, or posted on GitHub; on failure the census curve
+is left unchanged and the exit status is 1.
 """
 
 from __future__ import annotations
@@ -496,12 +506,50 @@ def site_url(pid: str) -> str:
     return f"{SITE_URL}/curve.html?id={pid}"
 
 
+# --------------------------------------------------------------------------- re-verification
+
+CONDUCTOR_FIELDS = ("minimal_model", "minimal_discriminant", "minimal_discriminant_factored", "conductor",
+                    "conductor_factored", "conductor_note", "conductor_source", "conductor_magma")
+
+
+def reverify_submission(cid: str) -> tuple[Path, dict, dict]:
+    """--reverify: (the accepted submission file of the census curve cid, the submission to verify again, its
+    certificate).  The submission file is the one in submissions/processed/ with the same normalised equation;
+    its Magma inputs (curve, claimed group, route, generators, cover) are kept, and the curated fields are taken
+    from the certificate, where credits and notes may have been corrected after the submission was processed."""
+    path = CURVES_DIR / f"{cid}.json"
+    if not path.exists():
+        raise SystemExit(f"no census curve {cid}")
+    cert = read_json(path)
+    want = (cert["submitted"]["f"], cert["submitted"]["h"])
+    found = []
+    for p in sorted(SUBMISSIONS_PROCESSED.glob("*.accepted.json")):
+        try:
+            if coeff_lists_from_submission(read_json(p)) == want:
+                found.append(p)
+        except Exception:
+            continue
+    if len(found) != 1:
+        raise SystemExit(f"{cid}: expected one accepted submission with its equation in {SUBMISSIONS_PROCESSED}, found {len(found)}")
+    sub = read_json(found[0])
+    sub.update({"discoverer": cert["discovery"]["by"], "year": cert["discovery"]["year"],
+                "historical": cert["discovery"]["historical"], "reference": cert["reference"],
+                "sources": cert["sources"], "rm": cert["rm"], "notes": cert["notes"],
+                "submitter": cert["submitter"]["name"], "github": cert["submitter"]["github"],
+                "affiliation": cert["submitter"]["affiliation"], "source": cert["source"],
+                "date": cert["dates"]["submitted"], "lmfdb_label": cert["submitted"]["lmfdb_label_given"]})
+    return found[0], sub, cert
+
+
 # --------------------------------------------------------------------------- main
 
-def process(path: Path, args) -> str:
-    name = path.stem
-    log(f"== {path.name}")
-    sub = read_json(path)
+def process(path: Path, args, replace: dict | None = None, sub: dict | None = None) -> str:
+    """Verify one submission file.  With replace (the certificate of a census curve; --reverify), the submission
+    sub is verified again in place of that curve, as described in the module docstring."""
+    name = path.stem if replace is None else f"reverify-{replace['id']}"
+    log(f"== {path.name}" + (f" (re-verification of {replace['id']})" if replace is not None else ""))
+    if sub is None:
+        sub = read_json(path)
     jobdir = WORK / name
     if jobdir.exists():
         shutil.rmtree(jobdir)
@@ -509,7 +557,7 @@ def process(path: Path, args) -> str:
     v = None
     try:
         v = validate(sub)
-        curves = existing_curves()
+        curves = [c for c in existing_curves() if replace is None or c["id"] != replace["id"]]
         existing = [{"id": c["id"], "f": c["curve"]["f"], "h": c["curve"]["h"]} for c in curves]
         job = write_job(v, jobdir, args.mem_gb, existing)
         if args.dry_run:
@@ -532,6 +580,8 @@ def process(path: Path, args) -> str:
         if "VERIFY_DONE" not in mlog:
             raise Reject("Magma did not reach VERIFY_DONE (see log)")
         inv = res["torsion"]["invariants"]
+        if replace is not None and inv != replace["group"]:
+            raise Reject(f"Magma computes J(Q)_tors = {group_bracket(inv)}, but {replace['id']} records {group_bracket(replace['group'])}")
         claim_note = ""
         if v.get("group") is not None and not res["torsion"]["claim_matches"]:
             claim_note = f"the submission claimed J(Q)_tors = {group_bracket(v['group'])}, but Magma computes {group_bracket(inv)}"
@@ -560,24 +610,42 @@ def process(path: Path, args) -> str:
                 if cfile.exists() and "MINIMAL_MODEL_DONE" in clog:
                     cond_partial = read_json(cfile)
                 log("  conductor not computed: " + cond_missing)
-        lmfdb = lmfdb_record(v, res, not args.no_lmfdb)
+        lmfdb = lmfdb_record(v, res, not args.no_lmfdb) if replace is None else replace["lmfdb"]
         log(f"  LMFDB: {lmfdb['label'] or '-'} ({lmfdb['kind']})")
         cond_str = cond["conductor"] if cond else (lmfdb["label"].split(".")[0] if lmfdb.get("label") else "")
         if lmfdb_conductor_override(cond, lmfdb):
             cond_str = lmfdb_conductor_override(cond, lmfdb)
             log(f"  conductor at 2 from Ogg's formula disagrees with the LMFDB label; using {cond_str}")
-        accept, why, rival = acceptance(res["class"], res["class"] in CLASSES, inv, cond_str, curves, v.get("historical", False))
-        if not accept:
-            raise Reject(why)
+        if replace is None:
+            accept, why, rival = acceptance(res["class"], res["class"] in CLASSES, inv, cond_str, curves, v.get("historical", False))
+            if not accept:
+                raise Reject(why)
+        else:
+            why = replace.get("accepted_because", "")   # already in the census: the acceptance rule is not applied again
         v["_accepted_because"] = why
         now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-        pid = next_id(group_key(inv), curves)
+        pid = next_id(group_key(inv), curves) if replace is None else replace["id"]
         cert = build_certificate(v, res, cond, curves, pid, now, lmfdb, cond_missing, cond_partial)
+        if replace is not None and not cond:
+            # the conductor job did not finish this time (some took hours, see fill_conductors.py): keep the recorded
+            # minimal model and conductor
+            for k in CONDUCTOR_FIELDS:
+                if k in replace["curve"]:
+                    cert["curve"][k] = replace["curve"][k]
+                else:
+                    cert["curve"].pop(k, None)
+            for k in ("conductor_log", "conductor_cputime_seconds"):
+                cert["verification"][k] = replace["verification"].get(k)
+            log("  the recorded minimal model and conductor are kept")
         write_json(CURVES_DIR / f"{pid}.json", cert)
         LOGS_DIR.mkdir(exist_ok=True)
         shutil.copy(jobdir / "magma.log", LOGS_DIR / f"{pid}.log")
-        if (cond or cond_partial) and (jobdir / "conductor.log").exists():
+        if (cond or (cond_partial and replace is None)) and (jobdir / "conductor.log").exists():
             shutil.copy(jobdir / "conductor.log", LOGS_DIR / f"{pid}.conductor.log")
+        if replace is not None:
+            log(f"  RE-VERIFIED {pid} [{cert['status']}] {group_bracket(inv)} class={cert['class']}"
+                + (f" (was {replace['class']})" if cert["class"] != replace["class"] else " (unchanged)"))
+            return "reverified"
         log(f"  ACCEPTED as {pid} [{cert['status']}] {group_bracket(inv)} class={cert['class']}"
             + (" NEW GROUP" if cert["new_group"] else " new for this class" if cert["new_for_class"] else " (" + why + ")")
             + (f" torsion by {res['torsion']['method']}" if res['torsion'].get('method') == 'generators' else ""))
@@ -602,6 +670,9 @@ def process(path: Path, args) -> str:
         outcome = "accepted"
     except Reject as e:
         reason = str(e)
+        if replace is not None:
+            log(f"  RE-VERIFICATION FAILED: {reason}; {replace['id']} is unchanged")
+            return "failed"
         log(f"  REJECTED: {reason}")
         rec = {"schema": SCHEMA_REJECTED, "source_file": path.name, "reason": reason, "submission": sub,
                "date": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")}
@@ -630,9 +701,14 @@ def main():
     ap.add_argument("--keep", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--require-claim", action="store_true", help="reject when the computed group differs from the claimed one (validation runs)")
+    ap.add_argument("--reverify", nargs="+", default=[], metavar="ID",
+                    help="verify these census curves again and rewrite their certificates and logs in place")
     args = ap.parse_args()
-    files = [Path(f) for f in args.files] or sorted(SUBMISSIONS_INBOX.glob("*.json"))
-    if not files:
+    if args.reverify and args.files:
+        ap.error("give submission files or --reverify IDs, not both")
+    again = [reverify_submission(cid) for cid in args.reverify]
+    files = [Path(f) for f in args.files] or ([] if again else sorted(SUBMISSIONS_INBOX.glob("*.json")))
+    if not files and not again:
         log("nothing to verify")
         return
     WORK.mkdir(exist_ok=True)
@@ -642,9 +718,14 @@ def main():
     summary = {}
     for f in files:
         summary[f.name] = process(f, args)
+    for path, sub, cert in again:
+        summary[cert["id"]] = process(path, args, replace=cert, sub=sub)
     log("summary: " + ", ".join(f"{k}: {v}" for k, v in summary.items()))
     n_rej = sum(1 for v in summary.values() if v == "rejected")
-    log(f"{len(summary)} processed, {n_rej} rejected")
+    n_fail = sum(1 for v in summary.values() if v == "failed")
+    log(f"{len(summary)} processed, {n_rej} rejected" + (f", {n_fail} re-verifications failed" if n_fail else ""))
+    if n_fail:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

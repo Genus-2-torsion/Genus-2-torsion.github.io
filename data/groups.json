@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12 06:42 UTC",
+  "generated": "2026-11-14 10:52 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -30,13 +30,13 @@
   },
   "n_groups": 96,
   "n_curves": 189,
-  "n_certified": 188,
-  "n_verified": 1,
+  "n_certified": 189,
+  "n_verified": 0,
   "n_groups_by_class": {
     "simple": 78,
     "qsplit": 75,
     "gsplit": 35,
-    "undecided": 1
+    "undecided": 0
   },
   "n_groups_any_split": 78,
   "n_infinite": {
@@ -14708,6 +14708,58 @@
         ],
         "gsplit": [
           {
+            "id": "2.2.2.2.b",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "26",
+              "41",
+              "-44",
+              "-30",
+              "25",
+              "-4"
+            ],
+            "h": [
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-4*x^5 + 25*x^4 - 30*x^3 - 44*x^2 + 41*x + 26",
+              "h": "x + 1",
+              "text": "y^2 + (x + 1)*y = -4*x^5 + 25*x^4 - 30*x^3 - 44*x^2 + 41*x + 26"
+            },
+            "conductor": "784",
+            "conductor_sort": 784,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 16,
+            "lmfdb": {
+              "label": "784.c.1",
+              "kind": "alpha-snapshot",
+              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B26%2C41%2C-44%2C-30%2C25%2C-4%5D%2C%5B1%2C1%5D%5D",
+              "snapshot_label": "784.c.1"
+            },
+            "sources": [
+              "BookerSutherland"
+            ],
+            "rm": false,
+            "discovered_by": "Booker–Sutherland (extended database)",
+            "credit_differs": false,
+            "year": null,
+            "historical": false,
+            "first_source": "BookerSutherland",
+            "first_source_year": 2026,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 72 (source: \\cite{BookerSutherland})",
+            "new_group": false,
+            "new_for_class": false,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - 10*T^2 + 25 is not of the form (T^2 - a*T + 5)*(T^2 - b*T + 5) with integers a, b (s1 = 0, s2 = -10: s1^2 - 4*(s2 - 2*p) = 80 is not a square)",
+            "verified": "2026-11-14 09:04:54 UTC",
+            "submitted": "2026-08-30",
+            "source_kind": "import"
+          },
+          {
             "id": "2.2.2.2.d",
             "class": "gsplit",
             "class_certified": true,
@@ -14761,78 +14813,25 @@
             "source_kind": "file"
           }
         ],
-        "undecided": [
-          {
-            "id": "2.2.2.2.b",
-            "class": "split_undecided_over_Q",
-            "class_certified": false,
-            "status": "verified",
-            "class_text": "geometrically split; whether it splits over ℚ is undecided",
-            "f": [
-              "26",
-              "41",
-              "-44",
-              "-30",
-              "25",
-              "-4"
-            ],
-            "h": [
-              "1",
-              "1"
-            ],
-            "equation": {
-              "f": "-4*x^5 + 25*x^4 - 30*x^3 - 44*x^2 + 41*x + 26",
-              "h": "x + 1",
-              "text": "y^2 + (x + 1)*y = -4*x^5 + 25*x^4 - 30*x^3 - 44*x^2 + 41*x + 26"
-            },
-            "conductor": "784",
-            "conductor_sort": 784,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-            "discriminant_digits": 16,
-            "lmfdb": {
-              "label": "784.c.1",
-              "kind": "alpha-snapshot",
-              "url": "https://alpha.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B26%2C41%2C-44%2C-30%2C25%2C-4%5D%2C%5B1%2C1%5D%5D",
-              "snapshot_label": "784.c.1"
-            },
-            "sources": [
-              "BookerSutherland"
-            ],
-            "rm": false,
-            "discovered_by": "Booker–Sutherland (extended database)",
-            "credit_differs": false,
-            "year": null,
-            "historical": false,
-            "first_source": "BookerSutherland",
-            "first_source_year": 2026,
-            "torsion_method": "TorsionSubgroup",
-            "reference": "Balakrishnan–Najman–Shnidman–Sutherland 2026, Table 2, row 72 (source: \\cite{BookerSutherland})",
-            "new_group": false,
-            "new_for_class": false,
-            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma)",
-            "verified": "2026-09-18 17:41:11 UTC",
-            "submitted": "2026-08-30",
-            "source_kind": "import"
-          }
-        ]
+        "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": 0,
-        "gsplit": 0,
+        "gsplit": 1,
         "undecided": null
       },
       "first_source": {
         "simple": "BookerSutherland",
         "qsplit": null,
         "gsplit": "BookerSutherland",
-        "undecided": "BookerSutherland"
+        "undecided": null
       },
       "known": {
         "simple": true,
         "qsplit": true,
         "gsplit": true,
-        "undecided": true
+        "undecided": false
       },
       "exclusions": {},
       "n_curves": 4,

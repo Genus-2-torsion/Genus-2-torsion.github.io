@@ -49,7 +49,11 @@ def cert_summary(c: dict) -> str:
     if c["split"]["certificate"]:
         parts.append(c["split"]["certificate"]["detail"])
     if c["q_simple"]["certified"]:
-        parts.append(f"simple over ℚ: χ_{c['q_simple']['prime']} = {c['q_simple']['chi']} is irreducible")
+        if c["q_simple"].get("method") == "chi_not_elliptic_product":
+            # "chi_p = ... is not of the form (T^2 - a*T + p)*(T^2 - b*T + p) with integers a, b (...)"
+            parts.append("simple over ℚ: " + c["q_simple"]["detail"].replace("chi_", "χ_"))
+        else:
+            parts.append(f"simple over ℚ: χ_{c['q_simple']['prime']} = {c['q_simple']['chi']} is irreducible")
     if not parts:
         sig = c["split"]["signature"]
         parts.append("no certificate; " + ("the split signature holds (no good prime below 200 is strict)" if sig["all_good_primes_fail_strictness"] else "inconclusive Frobenius data"))

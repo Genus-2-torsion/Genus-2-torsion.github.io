@@ -55,7 +55,7 @@
     t = t.replace(/\*/g, "·");
     t = t.replace(/(^|[\s(=])-/g, "$1−").replace(/ - /g, " − ");
     t = t.replace(/\bQ\b/g, "ℚ").replace(/Qbar/g, "ℚ̄").replace(/sqrt\((-?\d+)\)/g, "√$1");
-    t = t.replace(/[−-]&gt;/g, "→").replace(/E x E\^sigma/g, "E × E<sup>σ</sup>").replace(/\bchi\b/g, "χ").replace(/\bpi\b/g, "π");
+    t = t.replace(/[−-]&gt;/g, "→").replace(/E x E\^sigma/g, "E × E<sup>σ</sup>").replace(/\bchi_(\d+|p)\b/g, "χ<sub>$1</sub>").replace(/\bchi\b/g, "χ").replace(/\bpi\b/g, "π");
     return '<span class="m">' + t + "</span>";
   }
   const eqHtml = (eq) => math(eq.text);
@@ -371,6 +371,12 @@
 
     // status panel
     const cert = c.split.certificate;
+    // certificate of simplicity over Q: an irreducible chi_p, or (method "chi_not_elliptic_product") a chi_p that is not
+    // (T^2 - aT + p)(T^2 - bT + p) with integers a, b, as it would be at every good prime if J were isogenous over Q to E x E'
+    const qs = c.q_simple;
+    const qsimpleText = qs.method === "chi_not_elliptic_product"
+      ? ["; simple over ℚ, since ", el("span", { html: math(qs.detail) }), " (a product of two elliptic curves over ℚ would have this form at every good prime)"]
+      : ["; simple over ℚ because χ at p = " + qs.prime + " is irreducible: ", el("span", { html: math(qs.chi) })];
     body.append(el("div", { class: "panel " + (c.status === "certified" ? "accepted" : "open") },
       el("h3", null, chip(c.status), " ", c.new_group ? el("span", { class: "chip new" }, "first curve with this group") : c.new_for_class ? el("span", { class: "chip new" }, "first curve with this group in this class") : null),
       el("dl", { class: "facts" },
@@ -380,10 +386,10 @@
         el("dt", null, "certificate"), el("dd", null,
           c.simplicity.geometrically_simple
             ? ["the Frobenius polynomial at p = " + c.simplicity.strict_prime + " is ", el("span", { html: math(c.simplicity.chi) }), ": irreducible, and no power πⁿ (n ≤ 12) of a root generates a proper subfield, so the Jacobian is geometrically simple"]
-            : cert ? [el("span", { html: math(cert.detail) }), c.q_simple.certified ? ["; simple over ℚ because χ at p = " + c.q_simple.prime + " is irreducible: ", el("span", { html: math(c.q_simple.chi) })] : (c.split.split_over_Q ? "" : "; whether it splits over ℚ is undecided (χ is reducible at every good prime tried, and no certificate over ℚ was found)")]
+            : cert ? [el("span", { html: math(cert.detail) }), qs.certified ? qsimpleText : (c.split.split_over_Q ? "" : "; whether it splits over ℚ is undecided (at every good prime tried, χ is reducible and of the form (T² − aT + p)(T² − bT + p), and no certificate over ℚ was found)")]
             : ["none found: no strict prime below " + c.simplicity.primes_tried_below + " (" + c.simplicity.admissible_primes + " good primes, χ reducible at " + c.simplicity.reducible_chi + " of them)",
                c.split.signature.all_good_primes_fail_strictness ? "; every good prime below 200 fails the strictness test, the signature of a geometrically split Jacobian (evidence, not a proof)" : "",
-               c.q_simple.certified ? ["; simple over ℚ (χ at p = " + c.q_simple.prime + " is irreducible)"] : ""]),
+               qs.certified ? qsimpleText : ""]),
         c.split.cover_submitted ? el("dt", null, "submitted cover") : null,
         c.split.cover_submitted ? el("dd", null, c.split.cover_accepted ? "accepted (the polynomial identity holds)" : "rejected: " + c.split.cover_error) : null,
         el("dt", null, "LMFDB"), el("dd", null, lmfdbLink(c.lmfdb, true) || el("span", { class: "empty" }, "not in the LMFDB"),

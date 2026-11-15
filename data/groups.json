@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 11:40 UTC",
+  "generated": "2026-11-15 11:51 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -29,13 +29,13 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 96,
-  "n_curves": 189,
-  "n_certified": 189,
+  "n_curves": 190,
+  "n_certified": 190,
   "n_verified": 0,
   "n_groups_by_class": {
     "simple": 78,
     "qsplit": 75,
-    "gsplit": 35,
+    "gsplit": 36,
     "undecided": 0
   },
   "n_groups_any_split": 78,
@@ -3313,13 +3313,64 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "16.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "-5010129230343195963886957065223936",
+              "4639564394768856571455257269104960",
+              "-6051549719303019724765641656567388",
+              "5882775146606773159718193350847504",
+              "-769220462943689753469976777135143",
+              "-309261949361774794558368494037090",
+              "249520219335191939660053094309589"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "249520219335191939660053094309589*x^6 - 309261949361774794558368494037090*x^5 - 769220462943689753469976777135143*x^4 + 5882775146606773159718193350847504*x^3 - 6051549719303019724765641656567388*x^2 + 4639564394768856571455257269104960*x - 5010129230343195963886957065223936",
+              "h": "0",
+              "text": "y^2 = 249520219335191939660053094309589*x^6 - 309261949361774794558368494037090*x^5 - 769220462943689753469976777135143*x^4 + 5882775146606773159718193350847504*x^3 - 6051549719303019724765641656567388*x^2 + 4639564394768856571455257269104960*x - 5010129230343195963886957065223936"
+            },
+            "conductor": "337089359271768221454336",
+            "conductor_sort": 337089359271768221454336,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 344,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-5010129230343195963886957065223936%2C4639564394768856571455257269104960%2C-6051549719303019724765641656567388%2C5882775146606773159718193350847504%2C-769220462943689753469976777135143%2C-309261949361774794558368494037090%2C249520219335191939660053094309589%5D%2C%5B0%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-87)) (the surface is E x E^sigma); simple over ℚ: χ_23 = T^4 - 2*T^2 + 529 is irreducible",
+            "verified": "2026-11-15 11:45:40 UTC",
+            "submitted": "2026-11-15",
+            "source_kind": ""
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
@@ -3331,11 +3382,11 @@
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
       "exclusions": {},
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",

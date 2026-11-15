@@ -1,0 +1,25 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "249520219335191939660053094309589*x^6 - 309261949361774794558368494037090*x^5 - 769220462943689753469976777135143*x^4 + 5882775146606773159718193350847504*x^3 - 6051549719303019724765641656567388*x^2 + 4639564394768856571455257269104960*x - 5010129230343195963886957065223936",
+ "h": "0",
+ "group": [
+  16
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x^2 - 37996154601/61260414193*x + 8223674296/16707385689",
+   "33077466295052859501448672399907193144/341167122463446894659*x - 834507626764723747255605347610298368/31015192951222444969",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "new",
+ "discoverer": "F. Najman",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [16] for the census (the gsplit cell was empty). The curve is y^2 = 36106861993*q2(x)*q4(x) with q2 = 1329879x^2 + 2641584x - 4867136 and q4 = 5196415497521787x^4 - 16762391873288622x^3 + 36294227199512151x^2 - 10927535587547712x + 28509243963738332. Construction: quadratic-conjugate (2,2)-gluing over K = Q(sqrt(-87)) of E = E_{2,8}(t) (HLP Table 3) at t = (z - 1)/4, z = (-1 + 3*sqrt(-87))/22, where E(K) has a point P of order 8 and full 2-torsion; E is glued with its conjugate along the moving transposition of the 2-torsion labels, and the exact square condition a(z)b_0(z^sigma) = ((20958 + 4354*sqrt(-87))/14641)^2 (a(z) = -z(z^2 - 1), b_0(z) = -z(z^2 + 1)(z^2 - 2z - 1)) lifts (P, sigma P) to a rational point of order 16 (the order-8 point of the elliptic parent gains a factor 2). Exact checks: the divisor D above has 16D = 0 and 8D = [q2/1329879, 0] != 0; good reduction with #J(F_5) = 32 and #J(F_23) = 528 bounds the torsion by 16; chi_23 = T^4 - 2T^2 + 529 is irreducible, so J is simple over Q; the involution (x, y) -> ((x - 16/3)/(2x - 1), (29*sqrt(-87)/9) y/(2x - 1)^3) of C over K has a genus-1 quotient, so J is geometrically split (the geometric automorphism group has order 4).",
+ "date": "2026-11-15",
+ "sources": []
+}

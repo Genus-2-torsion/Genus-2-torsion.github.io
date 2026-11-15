@@ -1,0 +1,264 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.4.4.c",
+  "group": [
+    2,
+    4,
+    4
+  ],
+  "group_key": "2.4.4",
+  "group_bracket": "[2,4,4]",
+  "order": 32,
+  "class": "gsplit",
+  "class_certified": true,
+  "class_text": "geometrically split, simple over ℚ",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": true,
+  "accepted_because": "new for this class",
+  "curve": {
+    "f": [
+      "8507720964932",
+      "47684550498328",
+      "68901687077013",
+      "-9648736327897",
+      "-37412417350364",
+      "10747300112640"
+    ],
+    "h": [
+      "0"
+    ],
+    "f_str": "10747300112640*x^5 - 37412417350364*x^4 - 9648736327897*x^3 + 68901687077013*x^2 + 47684550498328*x + 8507720964932",
+    "h_str": "0",
+    "g": [
+      "34030883859728",
+      "190738201993312",
+      "275606748308052",
+      "-38594945311588",
+      "-149649669401456",
+      "42989200450560"
+    ],
+    "g_str": "42989200450560*x^5 - 149649669401456*x^4 - 38594945311588*x^3 + 275606748308052*x^2 + 190738201993312*x + 34030883859728",
+    "g_scale": "1",
+    "discriminant": "310645870641672374950774313048397723485267953083805244304474521216167771707194565202345332884328215583129600",
+    "discriminant_digits": 108,
+    "igusa_clebsch": [
+      "996836071090186905411433858656",
+      "2207853644882326871062170062728374444691569937289094119424",
+      "699705787081649338290776672951710877670312310984175426691800111694880795564319930056704",
+      "574095735199467314216980497208962220848052678552069348691171543788176548761643212298414047411714274397604448430349473854406587842560000"
+    ],
+    "g2_invariants": [
+      "231699360694835791261892807152837796735305559357215594702644112135760001582961646257899792236995694929888684888411123315467010333173788681/1081136224690756749198319841673864920318334637349892986657892566066052460627803962898095541863914930500423880890258554880000",
+      "223462388312069937719749618731775884637745133352582733340443559476345866342974538878145939137016668524932550294500178988393760020648382217/25947269392578161980759676200172758087640031296397431679789421585585259055067295109554293004733958332010173141366205317120000",
+      "8401397793821129591544846792840518871555977639849986253375459905279205037827167986390171304638128770457267280206262732306535406428648049/18682033962656276626146966864124385823100822533406150809448383541621386519648452478879090963408449999047324661783667828326400"
+    ],
+    "rational_weierstrass_points": 4,
+    "minimal_model": {
+      "f": [
+        "8507720964932",
+        "-47684550498328",
+        "68901687077013",
+        "9648736327897",
+        "-37412417350364",
+        "-10747300112640"
+      ],
+      "h": []
+    },
+    "minimal_discriminant": "140160091601432449760005004201406792199231610974626305832805552682660290225010549877542492043875555272852648542565789515235983360000",
+    "minimal_discriminant_factored": "2^36 * 3^32 * 5^4 * 7^12 * 13^10 * 17^2 * 41^2 * 101 * 421^12 * 521 * 1801^12",
+    "conductor": "22314187630800",
+    "conductor_factored": "2^4 * 3^2 * 5^2 * 13^2 * 17 * 41 * 101 * 521",
+    "conductor_note": "Magma's genus-2 Conductor gave 23398121609153740800 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (-4)^2 * 1394636726925 for the elliptic curve E over Q(sqrt(-1)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
+    "conductor_source": "Weil restriction of an elliptic curve",
+    "conductor_magma": "23398121609153740800"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B8507720964932%2C47684550498328%2C68901687077013%2C-9648736327897%2C-37412417350364%2C10747300112640%5D%2C%5B0%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      4,
+      4
+    ],
+    "order": 32,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x + 19/49",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 4,
+        "mumford": [
+          "x^2 - 413535877/33847632*x + 382434649/16923816",
+          "258203724834599/2417688*x - 288964721535011/1208844",
+          "2"
+        ]
+      },
+      {
+        "order": 4,
+        "mumford": [
+          "x^2 + 226479089/210896784*x + 137782691/527241960",
+          "1875225173873/557928*x + 1631454953123/1394820",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 3,
+    "point_count_gcd": 32,
+    "point_count_primes": [
+      11,
+      19,
+      23,
+      29,
+      31,
+      37,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      103,
+      107,
+      109,
+      113,
+      127,
+      131,
+      137
+    ],
+    "claimed": [
+      2,
+      4,
+      4
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": false,
+    "strict_prime": 0,
+    "chi": "",
+    "primes_tried_below": 500,
+    "admissible_primes": 86,
+    "reducible_chi": 49
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 19,
+    "chi": "T^4 - 10*T^2 + 361"
+  },
+  "split": {
+    "geometrically_split": true,
+    "split_over_Q": false,
+    "certificate": {
+      "kind": "richelot",
+      "over": "Q",
+      "detail": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma)"
+    },
+    "isogenous_product": null,
+    "weil_restriction": {
+      "field": "Q(sqrt(-1))",
+      "field_discriminant": "-4",
+      "field_polynomial": "x^2 + 5174091763569/333975344836",
+      "ainvs": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "-54070952480682091739170261853585687/82419764114772983808",
+          "101648480239193894165071632036634939/353227560491884216320"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "-130062239862360556863953809111493383574329629290301055168469771734161839329/399429429984007444884629785648056094634803200",
+          "-6022312941399914240062020655909655983387262142583198429254900255465293/43669398321866703157940574232659194019840"
+        ],
+        [
+          "11167347567789461691302082734878881713798380700548120983575810404837509030256885826356579899357689877062750423/98762638199340374644882050993535311584462996599922350040599756800",
+          "-559956425528255950177673877541501415999360145665069573929652463211349454972878539858750498601226402946023931/1269805348277233388291340655631168291800238527713287357664854016000"
+        ]
+      ],
+      "conductor_norm": "1394636726925",
+      "conductor": "22314187630800",
+      "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+    },
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": true,
+      "primes_checked": 38,
+      "reducible_chi": 22
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "F. Najman",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "new",
+  "sources": [],
+  "rm": false,
+  "notes": "First Q-simple, geometrically split example of [2,4,4] for the census (the gsplit cell was empty). The curve is y^2 = (49x + 19)(3136x + 2593)(10660x - 28421)(6561x^2 - 13316x - 6076). Construction: over K = Q(i) the curve E_m: Y^2 = X(X - (m^2 + 1)^2)(X - (m^2 - 1)^2) has E_m[4] in E_m(K) for every m (the differences of the abscissas of the points of order 2 are (m^2 + 1)^2, (m^2 - 1)^2 and (2m)^2, and -1 is a square in K). A quadratic-conjugate (2,2)-gluing of E_m with its Galois conjugate E_m^sigma descends to Q, and the census curve is a Richelot neighbour over Q of such a gluing, at m = (189 + 130i)/202. The parameter was found by a search for m such that two of the three norms N(m), N(m^2 + 1), N(m^2 - 1) (norms from K) are squares in Q: here N(m^2 + 1) = (765/404)^2 and N(m^2 - 1) = (533/404)^2, while N(m) = 521/404 is not a square. For each of the 489 such parameters that were examined, the gluings of E_m and their Richelot neighbours over Q to depth 2 contain Jacobians with torsion [2,4,4] and [2,2,2,4] and none with torsion of order greater than 32. Exact checks: three independent generators of orders 2, 4, 4; #J(F_19) = 352 and #J(F_23) = 544 bound the torsion by 32, so J(Q)_tors = [2,4,4]; chi_19 = T^4 - 10T^2 + 361 is irreducible, so J is simple over Q; a chain of two (2,2)-isogenies over Q leads from J to the Weil restriction of an elliptic curve over K (Magma's Richelot search), and the L-polynomials of J and of Res_{K/Q} E_m agree at every good prime below 200. j(E_m) is not rational. Conductor: J is isogenous over Q to Res_{K/Q} E_m, so N(J) = 4^2 * N(f_{E_m}) = 16 * 1394636726925 = 22314187630800 = 2^4 * 3^2 * 5^2 * 13^2 * 17 * 41 * 101 * 521 (the conductor is an isogeny invariant; Magma's genus-2 Conductor, whose exponent at 2 is not guaranteed, returns 2^24 in place of 2^4).",
+  "submitter": {
+    "name": "Filip Najman",
+    "github": "F-Najman",
+    "affiliation": "University of Zagreb"
+  },
+  "submitted": {
+    "f": [
+      "8507720964932",
+      "47684550498328",
+      "68901687077013",
+      "-9648736327897",
+      "-37412417350364",
+      "10747300112640"
+    ],
+    "h": [
+      "0"
+    ],
+    "claimed_group": [
+      2,
+      4,
+      4
+    ],
+    "claimed_class": "split",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {},
+  "dates": {
+    "submitted": "2026-11-15",
+    "verified": "2026-11-15 18:47:36 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "1.35000",
+    "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+    "log": "data/logs/2.4.4.c.log",
+    "conductor_log": "data/logs/2.4.4.c.conductor.log",
+    "conductor_cputime_seconds": 0.65
+  }
+}

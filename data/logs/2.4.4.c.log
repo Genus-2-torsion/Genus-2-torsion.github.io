@@ -1,0 +1,10 @@
+[0.0100000 s] start
+[0.0100000 s] curve: y^2 + (0) y = 10747300112640*x^5 - 37412417350364*x^4 - 9648736327897*x^3 + 68901687077013*x^2 + 47684550498328*x + 8507720964932; working model y^2 = 42989200450560*x^5 - 149649669401456*x^4 - 38594945311588*x^3 + 275606748308052*x^2 + 190738201993312*x + 34030883859728
+[0.0600000 s] #J(Q)_tors divides gcd #J(F_p) = 32 (p = [ 11, 19, 23, 29, 31, 37, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 103, 107, 109, 113, 127, 131, 137 ])
+[0.0700001 s] J(Q)_tors = [ 2, 4, 4 ]: the 3 submitted generators are independent torsion points generating a group of order 32 = gcd #J(F_p)
+[0.950000 s] no strict prime below 500 (86 admissible primes, 49 with reducible chi)
+[0.950000 s] Q-simple: chi irreducible at p = 19
+[1.08000 s] Weil restriction conductor: d_K = -4, N(f_E) = 1394636726925, N(J) = 22314187630800
+[1.08000 s] geometrically split: a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma)
+[1.08000 s] class: gsplit
+[1.35000 s] VERIFY_DONE

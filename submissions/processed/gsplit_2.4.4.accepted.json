@@ -1,0 +1,37 @@
+{
+ "schema": "genus-2-torsion/submission/1",
+ "f": "10747300112640*x^5 - 37412417350364*x^4 - 9648736327897*x^3 + 68901687077013*x^2 + 47684550498328*x + 8507720964932",
+ "h": "0",
+ "group": [
+  2,
+  4,
+  4
+ ],
+ "class": "split",
+ "generators": [
+  [
+   "x + 19/49",
+   "0",
+   1
+  ],
+  [
+   "x^2 - 413535877/33847632*x + 382434649/16923816",
+   "258203724834599/2417688*x - 288964721535011/1208844",
+   2
+  ],
+  [
+   "x^2 + 226479089/210896784*x + 137782691/527241960",
+   "1875225173873/557928*x + 1631454953123/1394820",
+   2
+  ]
+ ],
+ "submitter": "Filip Najman",
+ "affiliation": "University of Zagreb",
+ "github": "F-Najman",
+ "reference": "new",
+ "discoverer": "F. Najman",
+ "year": 2026,
+ "notes": "First Q-simple, geometrically split example of [2,4,4] for the census (the gsplit cell was empty). The curve is y^2 = (49x + 19)(3136x + 2593)(10660x - 28421)(6561x^2 - 13316x - 6076). Construction: over K = Q(i) the curve E_m: Y^2 = X(X - (m^2 + 1)^2)(X - (m^2 - 1)^2) has E_m[4] in E_m(K) for every m (the differences of the abscissas of the points of order 2 are (m^2 + 1)^2, (m^2 - 1)^2 and (2m)^2, and -1 is a square in K). A quadratic-conjugate (2,2)-gluing of E_m with its Galois conjugate E_m^sigma descends to Q, and the census curve is a Richelot neighbour over Q of such a gluing, at m = (189 + 130i)/202. The parameter was found by a search for m such that two of the three norms N(m), N(m^2 + 1), N(m^2 - 1) (norms from K) are squares in Q: here N(m^2 + 1) = (765/404)^2 and N(m^2 - 1) = (533/404)^2, while N(m) = 521/404 is not a square. For each of the 489 such parameters that were examined, the gluings of E_m and their Richelot neighbours over Q to depth 2 contain Jacobians with torsion [2,4,4] and [2,2,2,4] and none with torsion of order greater than 32. Exact checks: three independent generators of orders 2, 4, 4; #J(F_19) = 352 and #J(F_23) = 544 bound the torsion by 32, so J(Q)_tors = [2,4,4]; chi_19 = T^4 - 10T^2 + 361 is irreducible, so J is simple over Q; a chain of two (2,2)-isogenies over Q leads from J to the Weil restriction of an elliptic curve over K (Magma's Richelot search), and the L-polynomials of J and of Res_{K/Q} E_m agree at every good prime below 200. j(E_m) is not rational. Conductor: J is isogenous over Q to Res_{K/Q} E_m, so N(J) = 4^2 * N(f_{E_m}) = 16 * 1394636726925 = 22314187630800 = 2^4 * 3^2 * 5^2 * 13^2 * 17 * 41 * 101 * 521 (the conductor is an isogeny invariant; Magma's genus-2 Conductor, whose exponent at 2 is not guaranteed, returns 2^24 in place of 2^4).",
+ "date": "2026-11-15",
+ "sources": []
+}

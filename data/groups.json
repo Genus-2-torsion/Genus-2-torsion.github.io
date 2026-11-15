@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 13:17 UTC",
+  "generated": "2026-11-15 18:47 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -29,13 +29,13 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 96,
-  "n_curves": 191,
-  "n_certified": 191,
+  "n_curves": 192,
+  "n_certified": 192,
   "n_verified": 0,
   "n_groups_by_class": {
     "simple": 78,
     "qsplit": 75,
-    "gsplit": 37,
+    "gsplit": 38,
     "undecided": 0
   },
   "n_groups_any_split": 78,
@@ -14491,13 +14491,63 @@
             "source_kind": "import"
           }
         ],
-        "gsplit": [],
+        "gsplit": [
+          {
+            "id": "2.4.4.c",
+            "class": "gsplit",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically split, simple over ℚ",
+            "f": [
+              "8507720964932",
+              "47684550498328",
+              "68901687077013",
+              "-9648736327897",
+              "-37412417350364",
+              "10747300112640"
+            ],
+            "h": [
+              "0"
+            ],
+            "equation": {
+              "f": "10747300112640*x^5 - 37412417350364*x^4 - 9648736327897*x^3 + 68901687077013*x^2 + 47684550498328*x + 8507720964932",
+              "h": "0",
+              "text": "y^2 = 10747300112640*x^5 - 37412417350364*x^4 - 9648736327897*x^3 + 68901687077013*x^2 + 47684550498328*x + 8507720964932"
+            },
+            "conductor": "22314187630800",
+            "conductor_sort": 22314187630800,
+            "conductor_note": "Magma's genus-2 Conductor gave 23398121609153740800 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (-4)^2 * 1394636726925 for the elliptic curve E over Q(sqrt(-1)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
+            "discriminant_digits": 108,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B8507720964932%2C47684550498328%2C68901687077013%2C-9648736327897%2C-37412417350364%2C10747300112640%5D%2C%5B0%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "F. Najman",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "new",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
+            "verified": "2026-11-15 18:47:36 UTC",
+            "submitted": "2026-11-15",
+            "source_kind": ""
+          }
+        ],
         "undecided": []
       },
       "first_dated": {
         "simple": null,
         "qsplit": null,
-        "gsplit": null,
+        "gsplit": 0,
         "undecided": null
       },
       "first_source": {
@@ -14509,11 +14559,11 @@
       "known": {
         "simple": true,
         "qsplit": true,
-        "gsplit": false,
+        "gsplit": true,
         "undecided": false
       },
       "exclusions": {},
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",

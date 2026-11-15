@@ -109,6 +109,14 @@ The predicate `rank(3) >= 2 and order % 8 == 0`, placed after the [28] branch, a
 census groups have `qsplit` examples and exact split grades, so their combined grades are unchanged.
 The proof is in `proofs/qsimple-612-obstruction.html`, with PDF/LaTeX and the Magma certificate under
 `data/knowledge/sources/qsimple_612_*`.
+`QSimple96Obstruction` (15 November 2026) proves that a rational point of order 3 forces at most 16
+rational 2-power torsion points on a geometrically split abelian surface simple over ℚ, with no
+polarization hypothesis. The predicate `exponent % 3 == 0 and order % 32 == 0`, placed after the
+[6,12] branch, applies to [2,48], [2,2,24] and [2,2,2,12] in the census and to future entries such as
+[96], [4,24] and [8,12]. [2,48] and [2,2,24] have `qsplit` examples and exact split grades, so their
+combined grades are unchanged; [2,2,2,12] has no `qsplit` example or exclusion, so its split grade
+stays open. The proof is in `proofs/qsimple-96-obstruction.html`, with PDF/LaTeX, the Magma
+certificate and the validation scripts under `data/knowledge/sources/qsimple_96_*`.
 `QSPLIT_CONDITION_KEYS` lists the five groups with neither an example nor an exclusion in `qsplit`
 ([25], [32], [2,28], [2,2,20], [2,2,2,12]). Their `_SPLIT_OPEN_NOTES` entries state proved necessary
 conditions for a genus-2 Jacobian split over ℚ with that torsion, citing `QSplitConditions`

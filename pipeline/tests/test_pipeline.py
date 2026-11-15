@@ -257,6 +257,7 @@ class KnowledgeTests(unittest.TestCase):
             "2.28": "QSimple228Obstruction",
             "28": "QSimple28Obstruction", "2.14": "QSimple28Obstruction",
             "6.12": "QSimple612Obstruction", "3.24": "QSimple612Obstruction", "2.6.6": "QSimple612Obstruction",
+            "2.48": "QSimple96Obstruction", "2.2.24": "QSimple96Obstruction", "2.2.2.12": "QSimple96Obstruction",
             "2.2.10": "QSimple2210Obstruction", "2.2.20": "QSimple2210Obstruction",
             "2.2.2.10": "QSimple2210Obstruction",
             "40": "QSimple40Obstruction", "2.20": "QSimple40Obstruction",
@@ -358,6 +359,45 @@ class KnowledgeTests(unittest.TestCase):
             self.assertNotIn(bad, log)
         for suffix in ("tex", "pdf"):
             self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_612_obstruction.{suffix}").exists())
+
+    def test_qsimple_three_two_primary(self):
+        """A rational point of order 3 forces at most 16 rational 2-power torsion points on Q-simple, geometrically
+        split abelian surfaces, with no polarization hypothesis (2026-11-15)."""
+        for key in ("2.48", "2.2.24", "2.2.2.12", "96", "4.24", "8.12", "2.2.2.24"):
+            with self.subTest(key=key):
+                rec = knowledge.exclusions_record(key)
+                self.assertEqual(set(rec), {"gsplit"})
+                self.assertEqual(rec["gsplit"]["sources"][0], "QSimple96Obstruction")
+                self.assertTrue((ROOT / rec["gsplit"]["proof_url"]).exists())
+                self.assertNotIn("principal", rec["gsplit"]["reason"])
+        self.assertIn("QSimple96Obstruction", knowledge.QSIMPLE_ONLY)
+        # groups with 3-torsion and 2-primary part of order at most 16 stay open or known in this class
+        for key in ("3", "6", "12", "24", "48", "2.24", "4.12", "2.2.12", "2.2.2.6"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
+        # groups without 3-torsion are not affected
+        for key in ("32", "2.2.8", "2.4.4", "2.2.2.4", "2.2.2.8", "2.2.4.4"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
+        # keep the older proof for groups that already had an exclusion
+        self.assertEqual(knowledge.exclusions_record("6.48")["gsplit"]["sources"][0], "QSimple612Obstruction")
+        groups = {g["key"]: g for g in read_json(ROOT / "data" / "groups.json")["groups"]}
+        for key, cls, grade in (("2.48", "qsplit", "exact"), ("2.2.24", "qsplit", "exact"),
+                                ("2.2.2.12", "simple", "open")):
+            self.assertTrue(groups[key]["known"][cls])
+            self.assertFalse(groups[key]["known"]["gsplit"])
+            self.assertEqual(groups[key]["infinite"]["split"]["grade"], grade)
+            self.assertEqual(groups[key]["exclusions"], knowledge.exclusions_record(key))
+        self.assertFalse(groups["2.2.2.12"]["known"]["qsplit"])
+        # the bound 16 is attained in the class
+        self.assertTrue(groups["2.2.2.6"]["known"]["gsplit"])
+        for name, marker in (("qsimple_96_checks.log", "ALL_CHECKS_PASSED"), ("qsimple_96_validation.log", "VAL_DONE"),
+                             ("qsimple_96_lmfdb.log", "LMFDB_CHECK_OK")):
+            log = (KNOWLEDGE_DIR / "sources" / name).read_text()
+            self.assertTrue(log.rstrip().endswith(marker), name)
+            for bad in ("Runtime error", "Assertion failed", "User error", "Internal error", "Traceback"):
+                self.assertNotIn(bad, log, name)
+        for name in ("qsimple_96_obstruction.tex", "qsimple_96_obstruction.pdf", "qsimple_96_checks.m",
+                     "qsimple_96_validation.m", "qsimple_96_lmfdb.py"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / name).exists(), name)
 
     def test_qsplit_necessary_conditions(self):
         """Proved necessary conditions, shown as notes, for the five groups with neither an example nor an exclusion

@@ -1,0 +1,14 @@
+VAL 576.a.576.1  ST=E_2  Gamma=C2  good primes below 500: 93;  fits:  trivial: 45  involution c=-1: 48
+VAL 25600.f.512000.1  ST=J(E_1)  Gamma=C2  good primes below 500: 93;  fits:  trivial: 45  involution c=2: 50
+VAL 3969.d.250047.1  ST=J(E_1)  Gamma=C2  good primes below 500: 92;  fits:  trivial: 47  involution c=3: 48
+VAL 324.a.648.1  ST=E_3  Gamma=C3  good primes below 500: 93;  fits:  trivial: 28  order 3: 65
+VAL 1296.a.20736.1  ST=E_3  Gamma=C3  good primes below 500: 93;  fits:  trivial: 28  order 3: 65
+VAL 256.a.512.1  ST=E_4  Gamma=C4  good primes below 500: 94;  fits:  trivial: 24  order 4: 49  involution c=-1: 21
+VAL 169.a.169.1  ST=E_6  Gamma=C6  good primes below 500: 93;  fits:  trivial: 13  order 3: 29  order 6: 35  involution c=-3: 16
+VAL 8192.b.131072.1  ST=J(E_2)  Gamma=V4  good primes below 500: 94;  fits:  trivial: 24  involution c=1: 49  involution c=-1: 28
+VAL 102400.b.102400.1  ST=J(E_2)  Gamma=V4  good primes below 500: 93;  fits:  trivial: 20  involution c=2: 51  involution c=-1: 25
+VAL 262144.a.262144.1  ST=J(E_2)  Gamma=V4  good primes below 500: 94;  fits:  trivial: 21  involution c=2: 53  involution c=-1: 24
+VAL 2187.a.6561.1  ST=J(E_3)  Gamma=D6  good primes below 500: 93;  fits:  trivial: 14  order 3: 34  involution c=3: 48
+VAL 12800.c.128000.1  ST=J(E_4)  Gamma=D8  good primes below 500: 93;  fits:  trivial: 12  order 4: 24  involution c=-1: 12  involution c=1: 27  involution c=2: 26
+VAL 6075.a.18225.1  ST=J(E_6)  Gamma=D12  good primes below 500: 92;  fits:  trivial: 10  order 3: 14  order 6: 16  involution c=-3: 9  involution c=1: 28  involution c=3: 24
+VAL_DONE

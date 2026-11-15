@@ -917,3 +917,69 @@ SHA-256 of the publication artifacts:
 | `qsplit_necessary_conditions.pdf` | `a16e350589094280d4488095e7fd320a6c7c68c34913de9a8b0dc3c9cd0e3a8a` |
 | `qsplit_conditions_checks.m` | `3fee4d4ed8ad51026d21db91e4ad840a3f82a785d4c5bd9ea18283a40d31188d` |
 | `qsplit_conditions_checks.log` | `1044cef3965daad4e5237230414e90a46622943733e4c7de16c207b34484793a` |
+
+## [2,48], [2,2,24] and [2,2,2,12] in the geometrically split, ℚ-simple class (15 November 2026)
+
+[`qsimple-96-obstruction.html`](../../../proofs/qsimple-96-obstruction.html), with
+[PDF](qsimple_96_obstruction.pdf) and [LaTeX](qsimple_96_obstruction.tex), proves that an abelian
+surface over ℚ that is simple over ℚ and geometrically split, with a rational point of order 3, has
+at most 16 rational points of 2-power order. No polarization is assumed. The new census exclusions
+are [2,48], [2,2,24] and [2,2,2,12] in `gsplit` only; they are the only census groups of order
+divisible by 96. [2,48] and [2,2,24] have examples split over ℚ (2.48.a and 2.2.24.a) and exact
+split grades, which are unchanged. [2,2,2,12] has only a geometrically simple example (2.2.2.12.a);
+its `qsplit` class has neither an example nor an exclusion, so its split grade stays open. The
+theorem also excludes groups outside the census, such as [96], [4,24] and [8,12], in `gsplit` only.
+It does not decide [24], [48], [2,24], [4,12] or [2,2,12] in `gsplit`. The bound 16 is attained by
+2.2.2.6.c.
+
+The endomorphism algebra of A over the algebraic closure gives three types, as in the
+[[2,2,14]](../../../proofs/qsimple-2214-obstruction.html) proof: (N), the product of two elliptic
+curves that are not isogenous; (CM); and (S), the square of a curve without CM, where the
+endomorphism field L has Galois group Γ = C₂, C₃, C₄, C₆, V₄, D₆, D₈ or D₁₂. In type (CM) the surface
+has potentially good reduction at 5, the torsion injects into the points of the reduction over 𝔽₅,
+and no abelian surface over 𝔽₅ has exactly 96 points. In type (N), and in type (S) with Γ = C₂, an
+elliptic curve in A is defined over a quadratic field K. Dividing the rational torsion between this
+curve and the quotient by its conjugate, and moving it along isogenies defined over K, gives an
+elliptic curve over K with a subgroup ℤ/2 × ℤ/12 of K-rational points. Such curves are parametrized by the curve s² = 48t⁴ − 96t³ + 80t² − 32t + 4, which
+is the elliptic curve 24a4, of rank 0 with four rational points, all cusps. The eight automorphisms
+that preserve the level structure up to sign and Hilbert's Theorem 90 show that every such curve
+over a quadratic field is a base change from ℚ; the sum of the two conjugate maps is then a nonzero
+homomorphism from an elliptic curve over ℚ to A, against simplicity. In type (S), a Frobenius element
+of order 3, 4 or 6 in Γ forces p ≡ 1 (mod 8) when 32 divides the number of points, which is impossible
+by Chebotarev's theorem; so Γ = C₂ or V₄. For Γ = V₄ the three involutions have squares c₁, c₂, c₃
+with c₁c₂c₃ = −1 up to squares, the point counts (1 ± p)² − cᵢw² force L = ℚ(ζ₁₂), and the
+parametrizing curve has only its 16 cusps over ℚ(ζ₁₂).
+
+The certificate [`qsimple_96_checks.m`](qsimple_96_checks.m) and its
+[log](qsimple_96_checks.log) (Magma V2.30-1, 15 November 2026, about 2 seconds) consist of
+assertions and end with `ALL_CHECKS_PASSED`. Parts A–F and H carry the proof: the point counts over
+𝔽₅, Kubert's family and its division polynomials, the curve 24a4 and its points over ℚ and ℚ(ζ₁₂),
+the eight automorphisms, and the congruences for the Frobenius elements. Parts G and S check the
+examples of the remarks and are not used in the proof; neither are
+[`qsimple_96_validation.m`](qsimple_96_validation.m) with its
+[log](qsimple_96_validation.log) (the L-polynomials of thirteen Jacobians of type (S) from the
+LMFDB against the shapes used in the proof) and [`qsimple_96_lmfdb.py`](qsimple_96_lmfdb.py) with
+its [log](qsimple_96_lmfdb.log) (a search of the two LMFDB tables of genus-2 curves). The base-change
+lemma disagrees, for the torsion group ℤ/2 × ℤ/12, with a sentence in the introduction of Bruin and
+Najman, *Fields of definition of elliptic curves with prescribed torsion* (Acta Arith. 181 (2017)),
+which reports examples and is not used in the proofs of that paper; Remark 5 of the proof page
+discusses this, and Part G tests the lemma on explicit curves. Two independent reports of
+15 November 2026 found no mathematical error in the proof, and all their corrections are in this
+version. Both tested the base-change lemma with their own code, on more than 6000 quadratic points
+in all, and every curve was a base change; one report first checked that its tests detect curves
+that are not base changes. A further review checked the changes made after these reports; its
+corrections (one sentence of Remark 5, the edition of a reference, and notation) are in this
+version.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_96_obstruction.tex` | `418ba2948c05f98a521418c8c5ee59c69151928ad968cc2d2d465df24d5662dd` |
+| `qsimple_96_obstruction.pdf` | `b9e13bcdb1f77fe4bdd020602c56c6b0f4b812ac79bbc8417601f6b938bda0cb` |
+| `qsimple_96_checks.m` | `ad292a2a65541a3aac660e5f2e75f0d5895eca399cdaf5ec45c09b39c507b42f` |
+| `qsimple_96_checks.log` | `cba1080698adef8403d4f152b9a0d2ae3b38cbd64cf541d0593dea0498ba389a` |
+| `qsimple_96_validation.m` | `79be01f86f8c843d705acc2122abdaab0c9b89607e4cc05d61a79cd91010261e` |
+| `qsimple_96_validation.log` | `ec47ac83f747dff8048c9dc2c18c605010c4959fd66174649637022c9014bfd5` |
+| `qsimple_96_lmfdb.py` | `3fbba27e552b4a77bfbd82593c2d3f722d78cff15c12aafa1ccca17d6baead15` |
+| `qsimple_96_lmfdb.log` | `ac51cb4ac42d425b51c30ff2ac5f4012e36a0c1dbc0b1e3a6c02c7014aec0b0e` |

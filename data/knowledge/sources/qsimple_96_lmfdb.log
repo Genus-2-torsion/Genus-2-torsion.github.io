@@ -1,0 +1,26 @@
+date 2026-11-15
+TABLE g2c_curves rows 66158
+  (1) geometrically split, simple over Q, 3 | #torsion: 30 curves; 2-part of the torsion order -> number of curves: [(1, 17), (2, 9), (4, 4)]
+      torsion subgroups with 2-part >= 8: []
+      largest 2-part: 4 (the Theorem predicts <= 16)
+  (2) st_group E_3           7 curves; largest torsion order 21; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group E_4          10 curves; largest torsion order 20; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group E_6          51 curves; largest torsion order 19; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group J(E_3)        4 curves; largest torsion order 9; largest 2-part 2 (Proposition 8 predicts <= 16)
+  (2) st_group J(E_4)       17 curves; largest torsion order 12; largest 2-part 8 (Proposition 8 predicts <= 16)
+  (2) st_group J(E_6)       17 curves; largest torsion order 6; largest 2-part 2 (Proposition 8 predicts <= 16)
+  (3) geometrically split, simple over Q, 32 | #torsion: (st_group, torsion order, curves): []
+  (4) curves with 96 | #torsion (is_simple_geom, is_simple_base, torsion, curves): []
+TABLE g2c_curves_new rows 6216959
+  (1) geometrically split, simple over Q, 3 | #torsion: 1913 curves; 2-part of the torsion order -> number of curves: [(1, 1352), (2, 478), (4, 79), (8, 4)]
+      torsion subgroups with 2-part >= 8: [('[2,2,6]', 4)]
+      largest 2-part: 8 (the Theorem predicts <= 16)
+  (2) st_group E_3         294 curves; largest torsion order 21; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group E_4         413 curves; largest torsion order 20; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group E_6         365 curves; largest torsion order 19; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group J(E_3)     1276 curves; largest torsion order 18; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (2) st_group J(E_4)     1429 curves; largest torsion order 12; largest 2-part 8 (Proposition 8 predicts <= 16)
+  (2) st_group J(E_6)     1774 curves; largest torsion order 6; largest 2-part 4 (Proposition 8 predicts <= 16)
+  (3) geometrically split, simple over Q, 32 | #torsion: (st_group, torsion order, curves): [('N(SU(2)xSU(2))', 32, 2)]
+  (4) curves with 96 | #torsion (is_simple_geom, is_simple_base, torsion, curves): [(False, False, '[2,48]', 1)]
+LMFDB_CHECK_OK

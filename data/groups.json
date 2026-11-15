@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 18:47 UTC",
+  "generated": "2026-11-15 22:23 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -10199,7 +10199,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most 16 rational points of 2-power order if it has a rational point of order 3. This group has 3-torsion and a 2-primary part of order at least 32, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple96Obstruction",
+            "QSimple63Obstruction",
+            "QSimple612Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple40Obstruction",
+            "Kubert1976",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-96-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -14350,7 +14365,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most 16 rational points of 2-power order if it has a rational point of order 3. This group has 3-torsion and a 2-primary part of order at least 32, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple96Obstruction",
+            "QSimple63Obstruction",
+            "QSimple612Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple40Obstruction",
+            "Kubert1976",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-96-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -15980,7 +16010,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most 16 rational points of 2-power order if it has a rational point of order 3. This group has 3-torsion and a 2-primary part of order at least 32, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple96Obstruction",
+            "QSimple63Obstruction",
+            "QSimple612Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple40Obstruction",
+            "Kubert1976",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-96-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {

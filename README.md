@@ -118,6 +118,12 @@ Rational torsion containing (ℤ/3)² forces at most four rational points of 2-p
 surfaces (`proofs/qsimple-612-obstruction.html`, with PDF/LaTeX and a Magma certificate). This makes
 [6,12], [3,24] and [2,6,6] impossible in the **geometrically split, simple over ℚ** class; all three
 have split-over-ℚ examples and exact split grades, which are unchanged.
+A rational point of order 3 forces at most 16 rational points of 2-power order on a geometrically
+split abelian surface simple over ℚ, with no polarization hypothesis
+(`proofs/qsimple-96-obstruction.html`, with PDF/LaTeX and a Magma certificate). This makes [2,48],
+[2,2,24] and [2,2,2,12], the census groups of order divisible by 96, impossible in the
+**geometrically split, simple over ℚ** class. [2,48] and [2,2,24] have split-over-ℚ examples and
+exact split grades, which are unchanged; for [2,2,2,12] the split-over-ℚ class is still open.
 The five groups with neither an example nor an exclusion in the **split over ℚ** class, [25], [32],
 [2,28], [2,2,20] and [2,2,2,12], carry notes with proved necessary conditions for a genus-2 Jacobian
 split over ℚ with that torsion (`proofs/qsplit-necessary-conditions.html`, with PDF/LaTeX and a Magma

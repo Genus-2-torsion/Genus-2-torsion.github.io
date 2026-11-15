@@ -1,0 +1,809 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{corollary*}{Corollary}
+\newenvironment{statement}[1]{\par\medskip\noindent\phantomsection\textbf{#1}\ }{\par\medskip}
+\setlength{\emergencystretch}{3em}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Norm}{N}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\ord}{ord}
+
+\title{Rational \(3\)-torsion and the \(2\)-primary torsion of geometrically split abelian surfaces}
+\author{}
+\date{15 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem*}
+Let \(A\) be an abelian surface over \(\Q\) that is simple over \(\Q\) and geometrically split. If \(A(\Q)\) has a
+point of order \(3\), then \(A(\Q)\) has at most \(16\) points of \(2\)-power order:
+\(\#A(\Q)[2^\infty]\le16\).
+\end{theorem*}
+
+\begin{corollary*}
+No abelian surface over \(\Q\) that is simple over \(\Q\) and geometrically split has a rational torsion subgroup
+of order divisible by \(96\). In particular
+\href{https://genus-2-torsion.github.io/group.html?g=2.48}{\([2,48]\)},
+\href{https://genus-2-torsion.github.io/group.html?g=2.2.24}{\([2,2,24]\)} and
+\href{https://genus-2-torsion.github.io/group.html?g=2.2.2.12}{\([2,2,2,12]\)} do not occur as the rational
+torsion subgroup of the Jacobian of a curve of genus \(2\) over \(\Q\) that is geometrically split and simple over
+\(\Q\).
+\end{corollary*}
+
+Here ``geometrically split'' means that \(A_{\bar\Q}\) is isogenous to a product of two elliptic curves. We impose
+no restriction on the degree of this isogeny, on the field of definition of the geometric endomorphisms or on the
+integral endomorphism ring, and we assume no polarization. The bound \(16\) is attained, by the Jacobian of the
+census curve 2.2.2.6.c, whose rational torsion subgroup is \([2,2,2,6]\) (\hyperref[rem-sharp]{Remark~2}). On
+15 November 2026 the three groups of the Corollary are the only groups of the census whose order is divisible by
+\(96\).
+
+\emph{Outline.} We use the case distinction of \cite{P63}: \(A\) is of type (N), (CM) or (S). In type (CM) the
+surface has potentially good reduction at \(5\), and no abelian surface over \(\F_5\) has a number of points
+divisible by \(96\) (Section~\ref{five}). In the other types we move the torsion to one elliptic curve: in the
+situations of Sections~\ref{quadratic} and~\ref{v4}, where \(F\) is a number field and \(A_F\) contains an
+elliptic curve defined over \(F\), \(32\) rational points of \(2\)-power order and a rational point of order \(3\) give an elliptic curve
+over \(F\) with a subgroup \(\Z/2\times\Z/12\) of \(F\)-rational points (Section~\ref{moving}). Over a quadratic field such curves exist, but each of them is the base
+change of an elliptic curve over \(\Q\) (\hyperref[lemma-basechange]{Lemma~3}), and this contradicts the simplicity
+of \(A\) over \(\Q\) (Section~\ref{quadratic}). This settles type (N), and type (S) when the field \(L\) of
+definition of the geometric endomorphisms is quadratic. In type (S), the Frobenius polynomials at primes whose
+Frobenius elements have order \(3\), \(4\) or \(6\) in \(\Gamma=\Gal(L/\Q)\) show that \(32\) rational points of
+\(2\)-power order force \(\Gamma\cong C_2\) or \(\Gamma\cong V_4\) (Section~\ref{frobenius}). If
+\(\Gamma\cong V_4\), the Frobenius polynomials at the involutions give \(\Q(i)\subset L\) from the \(2\)-primary
+torsion and \(\Q(\sqrt{-3})\subset L\) from the point of order \(3\); so \(L=\Q(\zeta_{12})\), and no elliptic
+curve over \(\Q(\zeta_{12})\) has a subgroup \(\Z/2\times\Z/12\) of rational points (Section~\ref{v4}).
+
+\section{Conventions and inputs}\label{inputs}
+
+All number fields lie in a fixed algebraic closure \(\bar\Q\), and \(G_k=\Gal(\bar\Q/k)\). For a prime \(\ell\),
+\(\chi_\ell\) is the \(\ell\)-adic cyclotomic character, \(T_\ell\) the Tate module and
+\(V_\ell=T_\ell\otimes\Q_\ell\). For an abelian variety \(X\), \(\End^0=\End\otimes\Q\) and
+\(\Hom^0=\Hom\otimes\Q\). For a variety \(Y\) over \(\bar\Q\) and \(g\in G_{\Q}\), \(Y^g\) is the conjugate
+variety, \(g\colon Y(\bar\Q)\to Y^g(\bar\Q)\) the induced bijection, and a morphism \(f\colon Y\to Z\) has the
+conjugate \(g(f)\colon Y^g\to Z^g\), characterized by \(g(f)(g(P))=g(f(P))\) \cite[Section~1]{P2214}; so \(g\) acts
+on the geometric endomorphisms of an abelian variety over \(\Q\) by \(g(\varphi)=g\circ\varphi\circ g^{-1}\). For
+a quadratic field \(K\), \(\sigma\) is its nontrivial automorphism and \(\tilde\sigma\in G_{\Q}\) a lift of
+\(\sigma\). For an abelian surface \(A\) over \(\Q\) and an elliptic curve \(E\subset A_K\) defined over \(K\),
+\(E^\sigma=\tilde\sigma(E)\subset A_K\) is its conjugate; it is defined over \(K\) and does not depend on the lift
+\cite[Section~1]{P40}. An elliptic curve in an abelian surface is an abelian subvariety of dimension \(1\). We write
+\(\zeta_m\) for a primitive \(m\)-th root of unity, \(\Q^{\times2}\) for the set of nonzero rational squares, and
+\([n_1,\dots,n_r]\) for the group \(\Z/n_1\times\dots\times\Z/n_r\), as on the census. We use the following
+results.
+
+\begin{itemize}
+\item \textbf{(I1) Reduction} \cite{ST}; parts (a)--(c), and in (d) the absolute value of the roots, the number of
+points and its bound, are as stated in \cite[(I2)]{P612} and \cite[(I1)]{P2210}. Let \(K'\) be a
+finite extension of \(\Q_p\) with residue field \(k\), \(X\) an abelian variety over \(K'\), and \(\ell\neq p\) a
+prime. (a) Good reduction is detected by the inertia action on \(T_\ell(X)\) \cite[\S1, Theorem~1]{ST}; it is
+preserved by \(K'\)-isogenies \cite[\S1, Corollary~2]{ST}. (b) If \(X\) has good reduction \(\widetilde X\) and
+\(m\) is prime to \(p\), then \(X(K')[m]\) injects into \(\widetilde X(k)\) \cite[Lemma~2]{ST}. (c) If \(X\) has
+potentially good reduction, then it has good reduction over a finite extension of \(K'\) with residue field \(k\)
+\cite[\S2]{ST}. (d) (Weil.) For an abelian surface \(B\) over \(\F_q\) and a prime \(\ell\nmid q\), the
+characteristic polynomial \(P\in\Z[X]\) of the Frobenius endomorphism on \(V_\ell(B)\) does not depend on
+\(\ell\); its complex roots have absolute value \(\sqrt q\); \(P(0)=q^2\), the degree of the Frobenius
+endomorphism; and \(\#B(\F_q)=P(1)\). As \(P\) has real coefficients and \(P(0)>0\), its roots form two pairs
+\(\alpha_i,\bar\alpha_i=q/\alpha_i\) (\(i=1,2\)): the roots that are not real come in conjugate pairs, and the
+real roots \(\sqrt q\) and \(-\sqrt q\) each have even multiplicity, because the number of real roots is even and
+the product of all roots is positive. So
+\[P(X)=(X^2-\beta_1X+q)(X^2-\beta_2X+q)\]
+with the real numbers \(\beta_i=\alpha_i+\bar\alpha_i\) of absolute value at most \(2\sqrt q\). Expanding,
+\(P(X)=X^4+a_1X^3+a_2X^2+qa_1X+q^2\) with \(a_1=-(\beta_1+\beta_2)\) and \(a_2=2q+\beta_1\beta_2\), so the
+polynomial \(h(y)=(y-\beta_1)(y-\beta_2)=y^2+a_1y+a_2-2q\) has integer coefficients; and
+\[\#B(\F_q)=P(1)=h(1+q)\le(1+\sqrt q)^4.\]
+If an abelian surface \(X\) over a number field \(k\) has good reduction \(\widetilde X\) at a prime
+\(\mathfrak p\nmid\ell\), then \(P\) is the characteristic polynomial on \(V_\ell(X)\) of every arithmetic
+Frobenius element in \(G_k\) at a place of \(\bar k\) above \(\mathfrak p\). For a prime \(p\neq\ell\) and an arithmetic
+Frobenius element \(g\in G_{\Q}\) at \(p\), \(\chi_\ell(g)=p\).
+
+\item \textbf{(I2) The case distinction} \cite[(I3)]{P612}, from \cite[Sections~2--5]{P63}. A geometrically split
+abelian surface \(A/\Q\) is of exactly one of the types \textbf{(N)} (\(A_{\bar\Q}\) is isogenous to
+\(E_1\times E_2\) with \(E_1\), \(E_2\) not isogenous), \textbf{(CM)} (\(A_{\bar\Q}\) is isogenous to \(E^2\) with
+\(E\) a CM curve) and \textbf{(S)} (\(A_{\bar\Q}\) is isogenous to \(E^2\) with \(E\) without CM). In type (S),
+\(D=\End^0(A_{\bar\Q})\cong M_2(\Q)\); \(L\) is the smallest field over which all geometric endomorphisms are
+defined, a finite Galois extension of \(\Q\); \(\Gamma=\Gal(L/\Q)\) acts faithfully on \(D\), the element \(g\)
+acting by \(\Ad(R_g)\colon\varphi\mapsto R_g\varphi R_g^{-1}\) with \(R_g\in D^\times\) unique up to
+\(\Q^\times\); so \(\Gamma\) embeds in \(\PGL_2(\Q)\). The group \(\Gamma\) is one of \(C_1\), \(C_2\), \(C_3\),
+\(C_4\), \(C_6\), \(V_4\), \(D_6\), \(D_8\), \(D_{12}\) (\(D_{2m}\) is dihedral of order \(2m\), and
+\(V_4=C_2\times C_2\)), and \(\Gamma\neq C_1\) if \(A\) is simple over \(\Q\). In type (S), every elliptic curve
+in \(A_{\bar\Q}\) is defined over \(L\), any two of them are \(L\)-isogenous, and for an elliptic curve
+\(E\subset A_L\) the quotient \(A_L/E\) is \(L\)-isogenous to \(E\) \cite[Lemma~3]{P63}. In type (N), if \(A\) is
+simple over \(\Q\), then \(A_{\bar\Q}\) contains exactly two elliptic curves; they are defined over a quadratic
+field \(K\) and exchanged by \(\tilde\sigma\) \cite[Section~3]{P63}.
+
+\item \textbf{(I3)} \cite[Lemma~2]{P63} Let \(X\) be an abelian surface over a number field \(k\), \(C\subset X\)
+an elliptic curve defined over \(k\), and \(Q\in X(k)\) of prime order \(q\). Then either \(Q\in C(k)\), or the
+image of \(Q\) in \((X/C)(k)\) has order \(q\).
+
+\item \textbf{(I4) Frobenius elements of order \(3\), \(4\), \(6\)} \cite[Lemma~2]{P612}. Let \(A/\Q\) be of type
+(S), \(\gamma\in\Gamma\) of order \(n\in\{3,4,6\}\), and \(p\) a prime of good reduction for \(A\), unramified in
+\(L\), whose Frobenius class in \(\Gamma\) contains \(\gamma\). Then, for a primitive cube root of unity \(\zeta\)
+and suitable integers \(a\), \(u\), \(b\),
+\[\begin{array}{ll}
+n=3\colon & \#\widetilde A(\F_p)=\Norm\bigl((1+a)+(a+p)\zeta\bigr),\\[2pt]
+n=4\colon & \#\widetilde A(\F_p)=(1-u)^2+(p-u)^2,\\[2pt]
+n=6\colon & \#\widetilde A(\F_p)=\Norm\bigl((1+2b+p)+(b+p)\zeta\bigr),
+\end{array}\]
+where \(\Norm(x+y\zeta)=x^2-xy+y^2\) is the norm of \(\Q(\zeta)/\Q\).
+
+\item \textbf{(I5) Weil pairing} \cite[(I7)]{P2214}. For an isogeny \(u\colon E\to E'\) of elliptic curves and the
+Weil pairings \(e\) on \(V_\ell\), \(e(ux,uy)=\deg(u)\,e(x,y)\); this extends to quasi-isogenies, with
+\(\deg(u/m)=\deg(u)/m^2\). Moreover \(e(gx,gy)=\chi_\ell(g)\,e(x,y)\) for \(g\in G_{\Q}\), where
+\(g\colon V_\ell(E)\to V_\ell(E^g)\).
+
+\item \textbf{(I6) A Chebotarev criterion.} \emph{Let \(L/\Q\) be a finite Galois extension,
+\(\gamma\in\Gal(L/\Q)\), \(m\ge1\) and \(a\) an integer prime to \(m\). Suppose that \(p\equiv a\bmod m\) for all
+but finitely many primes \(p\) that are unramified in \(L\) and whose Frobenius class in \(\Gal(L/\Q)\) contains
+\(\gamma\). Then \(\zeta_m\in L\) and \(\gamma(\zeta_m)=\zeta_m^a\).} Indeed, let \(M=L(\zeta_m)\) and let
+\(\tau\in\Gal(M/\Q)\) be an extension of \(\gamma\). By Chebotarev's density theorem there are infinitely many
+primes \(p\), unramified in \(M\), whose Frobenius class in \(\Gal(M/\Q)\) contains \(\tau\). For such \(p\) the
+Frobenius class in \(\Gal(L/\Q)\) contains \(\tau|_L=\gamma\), and \(\tau(\zeta_m)=\zeta_m^p\) if \(p\nmid m\).
+With finitely many exceptions these primes satisfy \(p\nmid m\) and \(p\equiv a\bmod m\), so
+\(\tau(\zeta_m)=\zeta_m^a\). Hence all extensions of \(\gamma\) to \(M\) agree
+on \(L\) and on \(\Q(\zeta_m)\), so \(\gamma\) has only one extension to \(M\). The number of extensions is
+\([M:L]\), so \(M=L\).
+
+\item \textbf{(I7) Elliptic curves.} Let \(k\) be a field of characteristic \(0\). (a) An elliptic curve over
+\(k\) with invariants \(c_4\), \(c_6\) is isomorphic over \(k\) to \(y^2=x^3-27c_4x-54c_6\), and its discriminant
+is \(\Delta=(c_4^3-c_6^2)/1728\) \cite[Section~III.1]{Si1}. The curve \(y^2=x^3+ax+b\) has invariants
+\(c_4=-48a\), \(c_6=-864b\), and it is isomorphic over \(k\) to \(y^2=x^3+w^4ax+w^6b\) for every \(w\in k^\times\),
+by \((x,y)\mapsto(w^2x,w^3y)\). (b) Division polynomials \cite[Exercise~III.3.7]{Si1}: for a Weierstrass equation
+with coefficients \(a_1,\dots,a_6\) and \(n\ge1\) there is \(\psi_n\in\Z[a_1,\dots,a_6,x,y]\) such that, for every
+elliptic curve \(E\) given by such an equation and every point \(P\neq O\) of \(E\), \(nP=O\) if and only if
+\(\psi_n(P)=0\). (By part~(f) of the exercise, the divisor of the function \(\psi_n\) on \(E\) is the sum of the
+points \(T\) with \(nT=O\), minus \(n^2\) times \(O\); so \(\psi_n\) vanishes exactly at the points \(P\neq O\)
+with \(nP=O\).) On the curve, \(\psi_n\) is equal to a polynomial \(g_n\) in \(x\) for odd \(n\), and
+to \(\psi_2g_n\) with \(g_n\) a polynomial in \(x\) for even \(n\), where \(\psi_2=2y+a_1x+a_3\) and, on the curve,
+\(\psi_2^2=F(x)=4x^3+b_2x^2+2b_4x+b_6\). Put \(f_n=g_n\) for odd \(n\) and \(f_n=Fg_n\) for even \(n\). Then
+\(nP=O\) if and only if \(f_n(x(P))=0\). The roots of \(F\) are the \(x\)-coordinates of the points of order
+\(2\). (c) If \(X\) is an elliptic curve over a number field \(F\) with good reduction at a prime \(\mathfrak p\)
+of residue characteristic \(p\), then the points of \(X(F)\) of finite order prime to \(p\) inject into the group
+of points of the reduction over the residue field \cite[Proposition~VII.3.1]{Si1}. (d) For an elliptic curve \(X\)
+over \(\Q\) and a biquadratic field \(L=\Q(\sqrt{d_1},\sqrt{d_2})\), the rank of \(X(L)\) is the sum of the ranks
+over \(\Q\) of the quadratic twists of \(X\) by \(1\), \(d_1\), \(d_2\) and \(d_1d_2\): the
+\(\Q\)-vector space \(X(L)\otimes\Q\) is the direct sum of the eigenspaces of the four characters of
+\(\Gal(L/\Q)\), and the eigenspace of the character with kernel \(\Gal(L/\Q(\sqrt d))\) is isomorphic to
+\(X^{(d)}(\Q)\otimes\Q\), since the twist \(X^{(d)}\) is isomorphic to \(X\) over \(\Q(\sqrt d)\) by an isomorphism
+that the nontrivial automorphism of \(\Q(\sqrt d)\) maps to its negative. (e) A CM elliptic curve over a number
+field has an integral \(j\)-invariant \cite[Theorem~II.6.1]{Si2}, hence potentially good reduction at every prime
+\cite[Proposition~VII.5.5]{Si1}.
+\end{itemize}
+
+\section{A point count at \(5\)}\label{five}
+
+\begin{statement}{Lemma 1 (point count at \(5\)).}\label{lemma-five}
+(a) No abelian surface over \(\F_5\) has exactly \(96\) points over \(\F_5\).
+(b) Let \(A\) be an abelian surface over \(\Q\) with potentially good reduction at \(5\). Then \(A(\Q)\) has no
+subgroup of order \(96\).
+\end{statement}
+
+\emph{Proof.} (a) Let \(B\) be an abelian surface over \(\F_5\). By (I1)(d), \(\#B(\F_5)=h(6)\) with
+\(h(y)=(y-\beta_1)(y-\beta_2)=y^2-sy+t\), where \(s,t\in\Z\) and \(\beta_1,\beta_2\) are real with
+\(|\beta_i|\le2\sqrt5\). Suppose \(h(6)=36-6s+t=96\). Then \(t=60+6s\). As the roots of \(h\) are real,
+\(s^2\ge4t=240+24s\), that is, \((s-12)^2\ge384\); as \(19^2=361<384\), this gives \(|s-12|\ge20\), so
+\(s\le-8\) or \(s\ge32\). But \(|s|=|\beta_1+\beta_2|\le4\sqrt5<9\). Hence \(s=-8\), \(t=12\) and
+\(h(y)=(y+2)(y+6)\), with the root \(-6<-2\sqrt5\), a contradiction. (Part~A of the certificate lists all values
+of \(h(6)\) for polynomials \(h\) of this kind; the largest is \(100\), and \(96\) is not among them.)
+
+(b) By (I1)(c) there is a finite extension \(K'\) of \(\Q_5\) with residue field \(\F_5\) over which \(A\) has good
+reduction \(\widetilde A\). A subgroup of \(A(\Q)\subseteq A(K')\) of order \(96\) has order prime to \(5\), so by
+(I1)(b) it injects into \(\widetilde A(\F_5)\), and \(96\) divides \(\#\widetilde A(\F_5)\). By (I1)(d),
+\(\#\widetilde A(\F_5)\le(1+\sqrt5)^4=56+24\sqrt5<110<192\). So \(\#\widetilde A(\F_5)=96\), which contradicts
+(a). \qed
+
+\medskip
+The prime \(5\) is special here: there are abelian surfaces over \(\F_7\) with \(96\) points, for instance the
+products of an elliptic curve with \(8\) points and one with \(12\) points (Part~A). Lemma~1 uses neither
+simplicity nor a polarization.
+
+\section{Elliptic curves with a subgroup \(\Z/2\times\Z/12\)}\label{curves}
+
+Let \(k\) be a field of characteristic \(0\). For \(t\in k\), \(t\neq1\), put
+\[c(t)=-\frac{t(2t-1)(3t^2-3t+1)}{(t-1)^3},\qquad
+b(t)=\frac{t(2t-1)(2t^2-2t+1)(3t^2-3t+1)}{(t-1)^4},\]
+\[E_t\colon\ y^2+(1-c(t))xy-b(t)y=x^3-b(t)x^2.\]
+This is Kubert's parametrization of the elliptic curves with a point of order \(12\) \cite[Table~3]{Ku}, in
+factored form (Part~B of the certificate). The discriminant of this equation is
+\[\Delta(E_t)=\frac{t^{12}(2t-1)^6(6t^2-6t+1)(3t^2-3t+1)^4(2t^2-2t+1)^3}{(t-1)^{24}}\]
+(Part~B). So \(E_t\) is an elliptic curve if and only if \(D(t)\neq0\), where
+\[D(t)=t(2t-1)(6t^2-6t+1)(3t^2-3t+1)(2t^2-2t+1).\]
+Let \(X\) be the smooth projective curve over \(\Q\) with the affine equation
+\[s^2=q(t),\qquad q(t)=4(6t^2-6t+1)(2t^2-2t+1)=48t^4-96t^3+80t^2-32t+4.\]
+The polynomial \(q\) has four distinct roots, so \(X\) has genus \(1\), and it has two points at infinity, which
+are conjugate over \(\Q(\sqrt3)\) because \(48=3\cdot4^2\). Let \(\Sigma\subset X(\bar\Q)\) be the set consisting of
+the two points at infinity and of the affine points \((t,s)\) with \(t=1\) or \(D(t)=0\). We call the points of
+\(\Sigma\) the \emph{cusps} of \(X\). The set \(\Sigma\) is stable under \(G_{\Q}\). It has \(16\) elements: the
+points \((0,\pm2)\) and \((1,\pm2)\); the two points with \(t=1/2\), where \(q=-1\); the two points with \(s=0\) and
+\(6t^2-6t+1=0\); the two points with \(s=0\) and \(2t^2-2t+1=0\); the four points with \(3t^2-3t+1=0\), where
+\(q=-4/3\); and the two points at infinity. All of them are defined over \(\Q(i,\sqrt3)=\Q(\zeta_{12})\).
+
+\begin{statement}{Lemma 2 (the curve \(X\)).}\label{lemma-curve}
+(a) Let \(k\) be a field of characteristic \(0\) and \(E\) an elliptic curve over \(k\) such that \(E(k)\) has a
+subgroup isomorphic to \(\Z/2\times\Z/12\). Then there is a point \((t_0,s_0)\in X(k)\) that is not a cusp such
+that \(E\) is isomorphic over \(k\) to \(E_{t_0}\).
+(b) The curve \(X\) is isomorphic over \(\Q\) to the elliptic curve with Cremona label \(24a4\), by an isomorphism
+that maps \((0,2)\) to the origin. Its rank over \(\Q\) is \(0\), and
+\(X(\Q)=\{(0,2),(0,-2),(1,2),(1,-2)\}\) is cyclic of order \(4\); all four rational points are cusps.
+(c) \(X(\Q(\zeta_{12}))=\Sigma\). Hence no elliptic curve over \(\Q(\zeta_{12})\) has a subgroup of rational points
+isomorphic to \(\Z/2\times\Z/12\).
+\end{statement}
+
+\emph{Proof.} (a) The group \(E(k)\) contains a point \(P\) of order \(12\) and all of \(E[2]\).
+\begin{enumerate}
+\item \emph{Tate normal form.} Choose a Weierstrass equation of \(E\) over \(k\) in which \(P=(0,0)\); then
+\(a_6=0\). The tangent line at \(P\) is \(a_3y=a_4x\), and \(a_3\neq0\) because \(P\) is not of order \(2\).
+Replacing \(y\) by \(y+(a_4/a_3)x\) gives an equation with \(a_4=a_6=0\), in which the tangent line \(y=0\) at
+\(P\) meets the curve again in \((-a_2,0)=-2P\). As \(3P\neq O\), \(a_2\neq0\). The substitution
+\((x,y)\mapsto(w^2x,w^3y)\) with \(w=a_3/a_2\) makes the coefficients \(a_2\) and \(a_3\) equal. So \(E\) is
+isomorphic over \(k\) to a curve
+\[E(b,c)\colon\ y^2+(1-c)xy-by=x^3-bx^2,\qquad b,c\in k,\]
+by an isomorphism that maps \(P\) to \((0,0)\).
+
+\item \emph{The order of \((0,0)\).} The discriminant of \(E(b,c)\) is a polynomial in \(b\) and \(c\) that is
+divisible by \(b\), so \(b\neq0\). By (I7)(b), \(n\cdot(0,0)=O\) if and only if \(f_n(0)=0\), and \(f_n(0)\) is
+a polynomial in \(b\) and \(c\). Part~B of the certificate computes the polynomials \(f_n\) for \(n\le12\) from
+the recursion of \cite[Exercise~III.3.7]{Si1}, compares them with Magma's division polynomials, and factors
+\(f_n(0)\): the irreducible factors of \(f_4(0)\), \(f_5(0)\), \(f_6(0)\) and \(f_{12}(0)\) are
+\[\{b,\ c\},\qquad\{b,\ b-c\},\qquad\{b,\ b-c^2-c\},\qquad\{b,\ c,\ b-c^2-c,\ \Phi\},\]
+respectively, where
+\[\Phi=b^4-\tfrac13b^3c^2-3b^3c+\tfrac{10}3b^2c^2+\tfrac13bc^4-\tfrac53bc^3+\tfrac13c^6+\tfrac13c^4.\]
+As \((0,0)\) has exact order \(12\) on \(E(b,c)\), we get \(c\neq0\), \(b\neq c\), \(b\neq c^2+c\) and
+\(\Phi(b,c)=0\).
+
+\item \emph{The parameter.} Put
+\[T(b,c)=\frac{b^2-bc-c^3}{c(b-c^2-c)},\qquad\text{so that}\qquad T(b,c)-1=\frac{(b-c)^2}{c(b-c^2-c)}.\]
+In \(\Q(b,c)\), the rational functions \(b(T(b,c))-b\) and \(c(T(b,c))-c\) have numerators divisible by \(\Phi\),
+and denominators whose irreducible factors are among \(b\), \(c\), \(b-c\), \(b-c^2-c\) (Part~B). Let \(\Lambda\) be the
+ring obtained from \(\Q[b,c]\) by inverting \(b\), \(c\), \(b-c\) and \(b-c^2-c\). It contains \(T(b,c)\) and the
+inverse of \(T(b,c)-1\), hence also \(b(T(b,c))\) and \(c(T(b,c))\), because the denominators of \(b(t)\) and
+\(c(t)\) are powers of \(t-1\); and \(b(T(b,c))-b\) and \(c(T(b,c))-c\) are multiples of \(\Phi\) in \(\Lambda\).
+Evaluation at our pair \((b,c)\) is a ring homomorphism from \(\Lambda\) to \(k\), and \(\Phi\) vanishes at our pair.
+Hence the element \(t_0=T(b,c)\in k\) is defined, \(t_0\neq1\), and \((b,c)=(b(t_0),c(t_0))\). So \(E\)
+is isomorphic over \(k\) to \(E_{t_0}\), and \(D(t_0)\neq0\) because \(E_{t_0}\) is an elliptic curve.
+
+\item \emph{The \(2\)-torsion.} For the equation of \(E_t\) over \(\Q(t)\), the polynomial \(F\) of (I7)(b)
+factors as \(F(x)=(x-e_1(t))(4x^2+B(t)x+C(t))\), where \(e_1(t)=t(3t^2-3t+1)/(t-1)\) is the \(x\)-coordinate of
+\(6\cdot(0,0)\), and the discriminant of the quadratic factor is
+\[B(t)^2-16C(t)=q(t)\,\kappa(t)^2,\qquad\kappa(t)=\frac{(2t-1)^3(2t^2-2t+1)}{2(t-1)^6}\]
+(Part~C). The coefficients of the equation of \(E_t\) and the rational functions \(e_1\), \(B\), \(C\) and
+\(\kappa\) have denominators that are powers of \(t-1\) (Part~C), so these identities hold for \(t=t_0\). As
+\(D(t_0)\neq0\), we have \(\kappa(t_0)\neq0\). All points of order \(2\) of \(E_{t_0}\) are defined over \(k\), so
+the three roots of \(F\) lie in \(k\); hence the quadratic factor has its roots in \(k\), its discriminant is a
+square in \(k\), and therefore \(q(t_0)=s_0^2\) with \(s_0\in k\). The point \((t_0,s_0)\in X(k)\) is not a cusp,
+since \(t_0\neq1\) and \(D(t_0)\neq0\).
+\end{enumerate}
+
+(b) Part~D of the certificate: the elliptic curve \((X,(0,2))\) has Cremona label \(24a4\), rank \(0\) and torsion
+subgroup \(\Z/4\) over \(\Q\), and the four points listed are rational. They are cusps, as \(t=0\) or \(t=1\).
+
+(c) Let \(L=\Q(\zeta_{12})=\Q(i,\sqrt3)\). By (I7)(d) the rank of \(X(L)\) is the sum of the ranks over \(\Q\) of
+the twists of \(X\) by \(1\), \(-1\), \(-3\) and \(3\); these are the curves \(24a4\), \(48a4\), \(72a1\) and
+\(144b1\), all of rank \(0\) (Parts~D and~F). So \(X(L)\) is finite. The primes \(13\) and \(37\) split completely
+in \(L\), and the Weierstrass model of \(X\) used in the certificate has good reduction at both (Part~F). By (I7)(c), a point of order \(13\) in \(X(L)\) would give a point
+of order \(13\) in \(X(\F_{37})\); but \(13\nmid\#X(\F_{37})\) (Part~F). So \(X(L)\) has order prime to \(13\), and
+by (I7)(c) it injects into \(X(\F_{13})\), a group of order \(16\) (Part~F). As \(\Sigma\subseteq X(L)\) has
+\(16\) elements, \(X(L)=\Sigma\). (Part~F also computes the \(16\) points of \(X(L)\) and checks that each of them
+is a cusp.) The last assertion follows from (a). \qed
+
+\begin{statement}{Lemma 3 (base change).}\label{lemma-basechange}
+Let \(K\) be a quadratic field and \(E\) an elliptic curve over \(K\) such that \(E(K)\) has a subgroup isomorphic
+to \(\Z/2\times\Z/12\). Then \(E\) is isomorphic over \(K\) to the base change \((E_0)_K\) of an elliptic curve
+\(E_0\) over \(\Q\).
+\end{statement}
+
+\emph{Proof.} By \hyperref[lemma-curve]{Lemma~2}(a), \(E\) is isomorphic over \(K\) to \(E_{t_0}\) for a point
+\(Q=(t_0,s_0)\in X(K)\) that is not a cusp. We use the group law of \(X\) with origin \(O=(0,2)\). The point
+\(R=Q+\sigma(Q)\) is fixed by \(\sigma\), so \(R\in X(\Q)\), and \(\sigma(Q)=\iota_R(Q)\), where
+\(\iota_R\colon X\to X\), \(P\mapsto R-P\), is an involution of \(X\) defined over \(\Q\). Let \(c_4\), \(c_6\)
+and \(\Delta\) be the invariants and the discriminant of \(E_t\), which are elements of \(\Q(t)\subset\Q(X)\) whose
+denominators are powers of \(t-1\) (Part~B).
+
+\emph{The functions \(\lambda_R\).} For each of the four points \(R\in X(\Q)\), Part~E of the certificate computes
+\(\iota_R\) and a function \(\lambda_R\in\Q(X)\) with
+\[c_4\circ\iota_R=\lambda_R^4\,c_4,\qquad c_6\circ\iota_R=\lambda_R^6\,c_6,\qquad
+\lambda_R\cdot(\lambda_R\circ\iota_R)=1.\]
+Explicitly, with \(w_0=s/(4(6t^2-6t+1))\), \(l_0=(3t^2-3t+1)/(2t^3)\) and
+\(l_1=(5t^2-5t+1)s/(4t^3(6t^2-6t+1))\):
+\[\begin{array}{lll}
+R=(0,2)\colon & t\circ\iota_R=\tfrac12-w_0, & \lambda_R=l_0-l_1;\\[2pt]
+R=(0,-2)\colon & \iota_R(t,s)=(t,-s), & \lambda_R=1;\\[2pt]
+R=(1,2)\colon & \iota_R(t,s)=(1-t,s), & \lambda_R=(t-1)^3/t^3;\\[2pt]
+R=(1,-2)\colon & t\circ\iota_R=\tfrac12+w_0, & \lambda_R=l_0+l_1.
+\end{array}\]
+Consequently \(\Delta\circ\iota_R=\lambda_R^{12}\,\Delta\).
+
+\emph{The value of \(\lambda_R\) at \(Q\).} At a point of \(X\) that is not a cusp, the functions \(c_4\), \(c_6\)
+and \(\Delta\) are regular and \(\Delta\) does not vanish, by the formula for \(\Delta(E_t)\). As \(\Sigma\) is
+stable under \(G_{\Q}\), the point \(\iota_R(Q)=\sigma(Q)\) is not a cusp either. So
+\(\ord_Q(\Delta\circ\iota_R)=\ord_{\iota_R(Q)}(\Delta)=0\) and \(\ord_Q(\Delta)=0\), hence
+\(\ord_Q(\lambda_R)=0\): the function \(\lambda_R\) is regular at \(Q\) and \(u=\lambda_R(Q)\in K^\times\).
+The same holds at \(\sigma(Q)\). As \(c_4\), \(c_6\), \(\lambda_R\) and \(\iota_R\) are defined over \(\Q\),
+\[\sigma\bigl(c_4(Q)\bigr)=c_4(\sigma(Q))=c_4(\iota_R(Q))=u^4c_4(Q),\qquad
+\sigma\bigl(c_6(Q)\bigr)=u^6c_6(Q),\]
+\[u\,\sigma(u)=\lambda_R(Q)\,\lambda_R(\sigma(Q))=\lambda_R(Q)\,\lambda_R(\iota_R(Q))=1.\]
+
+\emph{Descent.} By Hilbert's Theorem~90 there is \(w\in K^\times\) with \(u=w/\sigma(w)\); explicitly \(w=1+u\) if
+\(u\neq-1\), and \(w=\sqrt d\) if \(u=-1\) and \(K=\Q(\sqrt d)\). Then \(A_4=w^4c_4(Q)\) and \(A_6=w^6c_6(Q)\) are
+fixed by \(\sigma\), so they are rational. Let \(E_0\) be the curve \(y^2=x^3-27A_4x-54A_6\) over \(\Q\). By
+(I7)(a) its invariants are \((6w)^4c_4(Q)\) and \((6w)^6c_6(Q)\), and its discriminant is
+\(6^{12}w^{12}\Delta(Q)\neq0\); so \(E_0\) is an elliptic curve, and \((E_0)_K\) is isomorphic over \(K\) to
+\(y^2=x^3-27c_4(Q)x-54c_6(Q)\), that is, to \(E_{t_0}\), and so to \(E\). \qed
+
+\medskip
+Part~G of the certificate carries out this descent for one quadratic point \(Q\) for each of the four points
+\(R\). It also checks the statement of Lemma~3 in a way that does not use the involutions \(\iota_R\), for twelve
+points of \(X\) over \(\Q(\sqrt{13})\), a field over which \(X\) has positive rank
+(\hyperref[rem-bn]{Remark~5}).
+
+\section{Moving the torsion to one elliptic curve}\label{moving}
+
+\begin{statement}{Lemma 4 (splitting the torsion).}\label{lemma-split}
+Let \(F\) be a number field, \(X\) an abelian surface over \(F\), \(C\subset X\) an elliptic curve defined over
+\(F\), and \(\pi\colon X\to Y=X/C\) the quotient map, so that \(Y\) is an elliptic curve over \(F\).
+(a) Let \(G\subseteq X(F)\) be a finite \(2\)-group of order at least \(32\). Then \(G\cap C(F)\) or
+\(\pi(G)\subseteq Y(F)\) has a subgroup isomorphic to \(\Z/8\) or to \(\Z/2\times\Z/4\).
+(b) Let \(P\in X(F)\) be a point of order \(3\). Then \(P\in C(F)\), or \(\pi(P)\in Y(F)\) has order \(3\).
+\end{statement}
+
+\emph{Proof.} (a) The kernel of \(\pi\) on \(G\) is \(G\cap C(\bar\Q)=G\cap C(F)\), so
+\(\#G=\#(G\cap C(F))\cdot\#\pi(G)\), and one of the two groups has order at least \(8\). It is a finite
+\(2\)-group of rational points of an elliptic curve, so it is isomorphic to \(\Z/2^\alpha\times\Z/2^\beta\) with
+\(\alpha\le\beta\) and \(\alpha+\beta\ge3\). If \(\alpha=0\), it contains \(\Z/8\); if \(\alpha\ge1\), then
+\(\beta\ge2\) and it contains \(\Z/2\times\Z/4\). (b) This is (I3). \qed
+
+\begin{statement}{Lemma 5 (combining).}\label{lemma-combine}
+Let \(F\) be a number field and \(E_a\), \(E_b\) elliptic curves over \(F\) that are \(F\)-isogenous or equal.
+Suppose that \(E_a(F)\) has a subgroup \(T\) isomorphic to \(\Z/8\) or to \(\Z/2\times\Z/4\), and that \(E_b(F)\)
+has a point \(P\) of order \(3\). Then there is an elliptic curve \(E_3\) over \(F\), \(F\)-isogenous to \(E_a\),
+such that \(E_3(F)\) has a subgroup isomorphic to \(\Z/2\times\Z/12\).
+\end{statement}
+
+\emph{Proof.} Let \(f\colon E_a\to E_b\) be an \(F\)-isogeny (the identity if \(E_a=E_b\)). Let \(H\) be the
+\(3\)-primary part of \(\ker f\); it is a characteristic subgroup of the \(G_F\)-stable group \(\ker f\), hence
+\(G_F\)-stable. Put \(E'=E_a/H\), let \(a\colon E_a\to E'\) be the quotient map and write \(f=b\circ a\) with
+\(b\colon E'\to E_b\) defined over \(F\); the degree of \(a\) is a power of \(3\) and the degree of \(b\) is prime
+to \(3\). The map \(a\) is injective on the points of \(2\)-power order, so \(a(T)\subseteq E'(F)\) is isomorphic
+to \(T\). Since \(b\circ\hat b=[\deg b]\) is injective on \(E_b[3]\), so is the dual isogeny
+\(\hat b\colon E_b\to E'\), which is defined over \(F\); so \(\hat b(P)\in E'(F)\) has order \(3\). Hence \(E'(F)\)
+contains \(a(T)\times\langle\hat b(P)\rangle\), which is isomorphic to \(\Z/24\) or to \(\Z/2\times\Z/12\). In the
+second case put \(E_3=E'\).
+
+In the first case let \(Q\in E'(F)\) be a point of order \(24\), put \(E_3=E'/\langle12Q\rangle\), and let
+\(\varphi\colon E'\to E_3\) be the quotient map; it is defined over \(F\). Then \(\varphi(Q)\in E_3(F)\) has order
+\(12\), because \(n\varphi(Q)=O\) if and only if \(nQ\in\{O,12Q\}\). Write \(E'[2]=\{O,12Q,T_1,T_2\}\). The group
+\(G_F\) fixes \(O\) and \(12Q\), so it preserves \(\{T_1,T_2\}\); and \(T_2=T_1+12Q\), so
+\(\varphi(T_1)=\varphi(T_2)\). Hence \(W=\varphi(T_1)\) is fixed by \(G_F\): \(W\in E_3(F)\). It has order \(2\),
+as \(T_1\notin\ker\varphi\). Moreover \(W\neq6\varphi(Q)\): otherwise \(T_1-6Q\in\ker\varphi=\{O,12Q\}\), but
+\(2(T_1-6Q)=12Q\neq O\), so \(T_1-6Q\) has order \(4\). As \(6\varphi(Q)\) is the only point of order \(2\) in
+\(\langle\varphi(Q)\rangle\), the group \(E_3(F)\) contains
+\(\langle W\rangle\times\langle\varphi(Q)\rangle\cong\Z/2\times\Z/12\). In both cases \(E_3\) is \(F\)-isogenous
+to \(E'\), hence to \(E_a\). \qed
+
+\section{The quadratic case}\label{quadratic}
+
+\begin{statement}{Theorem 6 (quadratic case).}\label{thm-quadratic}
+Let \(A\) be an abelian surface over \(\Q\) that is simple over \(\Q\), and \(K\) a quadratic field such that
+\(A_K\) contains an elliptic curve \(E\) defined over \(K\). If \(A(\Q)\) has a point of order \(3\), then
+\(\#A(\Q)[2^\infty]\le16\).
+\end{statement}
+
+\emph{Proof.} Suppose that \(A(\Q)\) has a point \(P_3\) of order \(3\) and that \(G=A(\Q)[2^\infty]\) has order
+at least \(32\).
+
+\emph{Step 1: the curves \(E\) and \(Y\).} An elliptic curve \(E\subset A_K\) with \(E^\sigma=E\) is stable under
+\(G_{\Q}\), hence an elliptic curve in \(A\) defined over \(\Q\) \cite[Section~2]{P2214}; as \(A\) is simple over
+\(\Q\), \(E^\sigma\neq E\). So \(E\) and \(E^\sigma\) are distinct elliptic curves in \(A_K\), and \(E\cap E^\sigma\)
+is finite. Let \(\pi\colon A_K\to Y=A_K/E^\sigma\) be the quotient map, defined over \(K\). Its restriction to
+\(E\) has the finite kernel \(E\cap E^\sigma\), so it is a \(K\)-isogeny \(E\to Y\). If \(P\in A(\Q)\) lies in
+\(E^\sigma\), then \(P=\tilde\sigma(P)\in\tilde\sigma(E^\sigma)=\tilde\sigma^2(E)=E\), as \(\tilde\sigma^2\in G_K\);
+so \(P\in E(\bar\Q)\cap A(K)=E(K)\). Thus \(A(\Q)\cap E^\sigma(K)\subseteq E(K)\).
+
+\emph{Step 2: an elliptic curve over \(K\) with a subgroup \(\Z/2\times\Z/12\).} We apply
+\hyperref[lemma-split]{Lemma~4} to \(X=A_K\), \(C=E^\sigma\) and \(G\). By (a) and Step~1, one of \(E(K)\),
+\(Y(K)\) has a subgroup \(T\) isomorphic to \(\Z/8\) or to \(\Z/2\times\Z/4\); by (b) and Step~1, one of \(E(K)\),
+\(Y(K)\) has a point of order \(3\). As \(E\) and \(Y\) are \(K\)-isogenous,
+\hyperref[lemma-combine]{Lemma~5} gives an elliptic curve \(E_3\) over \(K\), \(K\)-isogenous to \(E\), such that
+\(E_3(K)\) has a subgroup isomorphic to \(\Z/2\times\Z/12\).
+
+\emph{Step 3: descent.} By \hyperref[lemma-basechange]{Lemma~3}, \(E_3\) is isomorphic over \(K\) to \((E_0)_K\)
+for an elliptic curve \(E_0\) over \(\Q\). So there is a \(K\)-isogeny \(\psi\colon(E_0)_K\to E\). Let
+\(h_1\colon(E_0)_K\to A_K\) be the composition of \(\psi\) with the inclusion of \(E\); it is a homomorphism
+defined over \(K\) with image \(E\). As \(E_0\) and \(A\) are defined over \(\Q\), the conjugate
+\(\tilde\sigma(h_1)\colon(E_0)_K\to A_K\) is a homomorphism defined over \(K\), with image
+\(\tilde\sigma(E)=E^\sigma\), and \(\tilde\sigma(\tilde\sigma(h_1))=h_1\) because \(\tilde\sigma^2\in G_K\). Hence
+\(\Psi=h_1+\tilde\sigma(h_1)\) is fixed by \(G_K\) and by \(\tilde\sigma\), so by \(G_{\Q}\): it is a homomorphism
+\(E_0\to A\) defined over \(\Q\). If \(\Psi=0\), then \(h_1=-\tilde\sigma(h_1)\), and the images \(E\) and
+\(E^\sigma\) of these two maps would be equal. So \(\Psi\neq0\), and the image of \(\Psi\) is an elliptic curve in
+\(A\) defined over \(\Q\). This contradicts the simplicity of \(A\) over \(\Q\). \qed
+
+\section{Type (S): Frobenius elements}\label{frobenius}
+
+In this section and the next, \(A/\Q\) is of type (S) and simple over \(\Q\), with \(D\), \(L\) and \(\Gamma\) as
+in (I2).
+
+\begin{statement}{Lemma 7 (Frobenius at involutions).}\label{lemma-inv}
+Let \(\gamma\in\Gamma\) be an element of order \(2\).
+(a) Every \(R\in D^\times\) with \(\gamma=\Ad(R)\) satisfies \(\tr R=0\) and \(R^2\in\Q^\times\), and the class of
+\(R^2\) in \(\Q^\times/\Q^{\times2}\) depends only on \(\gamma\). We choose \(R\) such that \(c=R^2\) is a
+squarefree integer, and let \(\varepsilon\in\{1,-1\}\) be the sign of \(c\).
+(b) Let \(p\) be a prime of good reduction for \(A\), unramified in \(L\), whose Frobenius class in \(\Gamma\)
+contains \(\gamma\). Then the characteristic polynomial \(P\) of Frobenius of \(\widetilde A/\F_p\) and the number
+of points are
+\[P(X)=(X^2+\varepsilon p)^2-cw^2X^2,\qquad\#\widetilde A(\F_p)=(1+\varepsilon p)^2-cw^2,\]
+for an integer \(w\ge0\).
+\end{statement}
+
+\emph{Proof.} (a) As \(\gamma^2=1\), \(\Ad(R^2)\) is the identity, so \(R^2\) lies in the centre \(\Q\) of
+\(D\cong M_2(\Q)\). As \(\Gamma\) acts faithfully, \(R\) is not a scalar. So \(X^2-R^2\) is the minimal polynomial
+of \(R\), hence its characteristic polynomial, and \(\tr R=0\). The elements inducing \(\gamma\) are the multiples
+\(rR\), \(r\in\Q^\times\), and \((rR)^2=r^2R^2\).
+
+(b) Let \(\ell\neq p\) be a prime, \(\mathfrak P\) a prime of \(L\) above \(p\) with Frobenius element \(\gamma\),
+and \(g\in G_{\Q}\) an arithmetic Frobenius element at a place of \(\bar\Q\) above \(\mathfrak P\). Then
+\(g|_L=\gamma\), \(\chi_\ell(g)=p\), and \(P\) is the characteristic polynomial of \(g\) on \(V_\ell(A)\), by
+(I1)(d).
+\begin{enumerate}
+\item \emph{The multiplicity space} \cite[Lemma~3, Step~1]{P2214}. Choose an elliptic curve \(E\subset A_L\); it
+is defined over \(L\) by (I2). Put \(H=\Hom^0(E_{\bar\Q},A_{\bar\Q})\), a \(\Q\)-vector space of dimension \(2\).
+The algebra \(D\) acts on \(H\) by composition, faithfully because \(D\) is simple and the action is unital; so
+\(D=\End_{\Q}(H)\), as \(\dim_{\Q}H=2\). The evaluation map
+\[\mathrm{ev}\colon V_\ell(E)\otimes_{\Q}H\to V_\ell(A),\qquad v\otimes h\mapsto h(v),\]
+is an isomorphism: for a basis \(h_1,h_2\) of \(H\), a nonzero integer multiple of
+\((h_1,h_2)\colon E^2\to A_{\bar\Q}\) is a homomorphism, and it is an isogeny (otherwise its image would be an
+elliptic curve \(E_1\), and \(h_1,h_2\) would be linearly dependent in the one-dimensional space
+\(\Hom^0(E,E_1)\)); \(\mathrm{ev}\) is the map it induces, up to that integer.
+
+\item \emph{The action of \(g\)} \cite[Lemma~3, Step~2]{P2214}. The curve \(E^g\subset A_{\bar\Q}\) is defined over
+\(L\) and \(L\)-isogenous to \(E\) by (I2); choose an invertible \(u\in\Hom^0(E,E^g)\). Define
+\(B\colon V_\ell(E)\to V_\ell(E)\) by \(B(v)=u^{-1}(g(v))\) and \(C\colon H\to H\) by \(C(h)=g(h)\circ u\). For
+\(v\in V_\ell(E)\) and \(h\in H\),
+\[g\bigl(h(v)\bigr)=g(h)\bigl(g(v)\bigr)=g(h)\bigl(u(Bv)\bigr)=C(h)(Bv),\]
+so \(g\circ\mathrm{ev}=\mathrm{ev}\circ(B\otimes C)\). The map \(C\) is \(\Q\)-linear and invertible, with inverse
+\(h\mapsto g^{-1}(h\circ u^{-1})\). For \(\varphi\in D\) we have \(C(\varphi\circ h)=g(\varphi)\circ C(h)\); so
+\(C\in\GL(H)=D^\times\) satisfies \(g(\varphi)=C\varphi C^{-1}\). By (I5),
+\(e(Bv,Bv')=\deg(u)^{-1}e(g(v),g(v'))=\deg(u)^{-1}\chi_\ell(g)\,e(v,v')\) for \(v,v'\in V_\ell(E)\) and the Weil
+pairing \(e\) of \(E\), so
+\[\delta:=\det B=p/\deg(u)\]
+is a positive rational number.
+
+\item \emph{The shape of \(P\).} The action of \(g\) on \(D\) is that of \(g|_L=\gamma\). So \(\Ad(C)=\Ad(R)\),
+and \(C=rR\) with \(r\in\Q^\times\). Hence \(C^2=r^2c\) and \(\tr C=0\): the eigenvalues of \(C\) are
+\(\pm\rho\) with \(\rho^2=r^2c\). Let \(\beta_1,\beta_2\) be the eigenvalues of \(B\), so
+\(\beta_1\beta_2=\delta\). By Step~2 the eigenvalues of \(g\) on \(V_\ell(A)\) are \(\pm\rho\beta_1\),
+\(\pm\rho\beta_2\), so
+\[P(X)=(X^2-r^2c\beta_1^2)(X^2-r^2c\beta_2^2)=(X^2+r^2c\delta)^2-c\,\theta^2X^2\]
+with \(\theta=r(\beta_1+\beta_2)=r\tr B\in\Q_\ell\) (the identity is checked in Part~H). As \(P(0)=p^2\), \(r^2c\delta=\pm p\); as \(r^2\delta>0\), the sign is that of
+\(c\). So \(P(X)=(X^2+\varepsilon p)^2-c\,\theta^2X^2\).
+
+\item \emph{\(\theta^2\) is the square of an integer.} Write \(P(X)=X^4+a_1X^3+a_2X^2+\dots\) with \(a_i\in\Z\); these
+coefficients do not depend on \(\ell\). By Step~3, \(a_1=0\) and \(m:=(2\varepsilon p-a_2)/c=\theta^2\). So the rational number
+\(m\) is a square in \(\Q_\ell\) for every prime \(\ell\neq p\). Then \(m\) is a square in \(\Q\): otherwise
+\(\Q(\sqrt m)\) would be a quadratic field, and \(m\) would not be a square in \(\Q_\ell\) for the infinitely many
+primes \(\ell\) that are inert in it. Write \(m=w^2\) with \(w\in\Q\), \(w\ge0\). As \(cw^2=2\varepsilon p-a_2\) is an integer
+and \(c\) is squarefree, \(w\) is an integer. Finally \(\#\widetilde A(\F_p)=P(1)=(1+\varepsilon p)^2-cw^2\). \qed
+\end{enumerate}
+
+\begin{statement}{Proposition 8 (rotations).}\label{prop-rot}
+If \(\#A(\Q)[2^\infty]\ge32\), then \(\Gamma\) has no element of order \(3\), \(4\) or \(6\); so
+\(\Gamma\cong C_2\) or \(\Gamma\cong V_4\).
+\end{statement}
+
+\emph{Proof.} Suppose that \(\gamma\in\Gamma\) has order \(n\in\{3,4,6\}\). Let \(p\) be an odd prime of good
+reduction for \(A\), unramified in \(L\), whose Frobenius class in \(\Gamma\) contains \(\gamma\). By (I1)(b),
+\(A(\Q)[2^\infty]\) injects into \(\widetilde A(\F_p)\), so \(32\) divides \(\#\widetilde A(\F_p)\), which is given
+by (I4). We claim that \(p\equiv1\bmod8\).
+
+For \(n=4\): \(x^2+y^2\equiv0\bmod32\) with \(x=1-u\), \(y=p-u\). A sum of two integer squares that is divisible
+by \(4\) has both terms even; applying this twice, \(x=4x''\) and \(y=4y''\) with \(x''^2+y''^2\) even. So
+\(x''\equiv y''\bmod2\), and \(8\) divides \(y-x=p-1\).
+For \(n=3\) and \(n=6\): the prime \(2\) is inert in \(\Z[\zeta]\), so the \(2\)-adic valuation of
+\(\Norm(x+y\zeta)\) is twice the largest \(v\) with \(2^v\mid x\) and \(2^v\mid y\). If \(32\) divides the norm,
+then \(v\ge3\): \(8\mid x\) and \(8\mid y\). For \(n=3\), \(x=1+a\) and \(y=a+p\), so \(8\) divides \(y-x=p-1\).
+For \(n=6\), \(x=1+2b+p\) and \(y=b+p\), so \(8\) divides \(x-y=1+b\), and \(p\equiv-b\equiv1\bmod8\).
+(Part~H checks the three cases over all residues modulo \(32\).)
+
+So \(p\equiv1\bmod8\) for all but finitely many primes \(p\) that are unramified in \(L\) and whose Frobenius class
+contains \(\gamma\). By (I6) with \(m=8\) and \(a=1\), \(\zeta_8\in L\) and \(\gamma\) fixes \(\zeta_8\). Hence
+all elements of \(\Gamma\) of order \(3\), \(4\) or \(6\) lie in \(\Gal(L/\Q(\zeta_8))\), a subgroup of index
+\(4\). But in each of the groups \(C_3\), \(C_4\), \(C_6\), \(D_6\), \(D_8\), \(D_{12}\) the elements of order
+\(3\), \(4\) or \(6\) generate a subgroup of index at most \(2\) (the group itself, or its cyclic subgroup of
+index \(2\)). This is a contradiction. By (I2), \(\Gamma\) is then \(C_1\), \(C_2\) or \(V_4\), and
+\(\Gamma\neq C_1\) because \(A\) is simple over \(\Q\). \qed
+
+\section{Type (S) with \(\Gamma\cong V_4\)}\label{v4}
+
+\begin{statement}{Proposition 9 (\(\Gamma\cong V_4\)).}\label{prop-v4}
+Suppose that \(\Gamma\cong V_4\).
+(a) If \(\#A(\Q)[2^\infty]\ge32\), then \(\Q(i)\subset L\).
+(b) If \(A(\Q)\) has a point of order \(3\), then \(\Q(\sqrt{-3})\subset L\).
+(c) If \(A(\Q)\) has a point of order \(3\), then \(\#A(\Q)[2^\infty]\le16\).
+\end{statement}
+
+\emph{Proof.} Let \(\gamma_1,\gamma_2,\gamma_3\) be the elements of order \(2\) of \(\Gamma\), and let \(R_i\),
+\(c_i=R_i^2\) and \(\varepsilon_i\) be as in \hyperref[lemma-inv]{Lemma~7}(a) for \(\gamma_i\).
+
+\emph{The classes \(c_i\).} As \(\gamma_1\gamma_2=\gamma_2\gamma_1\), we have \(R_1R_2=\mu R_2R_1\) with
+\(\mu\in\Q^\times\), and \(\mu^2=1\) by taking determinants. If \(\mu=1\), then \(R_2\) lies in the centralizer
+\(\Q+\Q R_1\) of the non-scalar matrix \(R_1\); as \(\tr R_2=\tr R_1=0\), \(R_2\in\Q R_1\) and
+\(\gamma_2=\gamma_1\), which is false. So \(R_1R_2=-R_2R_1\) and \((R_1R_2)^2=-R_1^2R_2^2=-c_1c_2\). As \(R_1R_2\)
+induces \(\gamma_1\gamma_2=\gamma_3\), Lemma~7(a) gives \(c_3\in-c_1c_2\,\Q^{\times2}\). Hence
+\[c_1c_2c_3\in-\Q^{\times2}.\]
+
+(a) As \(-1\) is not a square in \(\Q_2\), some \(c_i\) is not a square in \(\Q_2\). This \(c_i\) is a
+squarefree integer, so \(c_i\not\equiv0\bmod4\), and \(c_i\not\equiv1\bmod8\) because the integers congruent to
+\(1\) modulo \(8\) are squares in \(\Q_2\). We use: \emph{if \(c\not\equiv0\bmod4\), \(c\not\equiv1\bmod8\) and
+\(8\mid x^2-cy^2\), then \(x\) and \(y\) are even.} Indeed, if \(y\) were odd, then \(x^2\equiv c\bmod8\), but the
+squares modulo \(8\) are \(0\), \(1\) and \(4\); so \(y\) is even, \(4\mid x^2\), and \(x\) is even. Now let \(p\)
+be an odd prime of good reduction for \(A\), unramified in \(L\), whose Frobenius class contains \(\gamma_i\). By
+(I1)(b) and Lemma~7(b), \(32\) divides \(x^2-c_iw^2\) with \(x=1+\varepsilon_ip\). Applying the statement in italics to
+\((x,w)\) and then to \((x/2,w/2)\), we get \(4\mid x\), that is, \(p\equiv-\varepsilon_i\bmod4\) (Part~H checks this over
+all residues modulo \(32\)). By (I6) with \(m=4\) and \(a=-\varepsilon_i\), \(i\in L\).
+
+(b) As \(-1\) is not a square in \(\Q_3\), some \(c_j\) is not a square in \(\Q_3\), so \(c_j\not\equiv1\bmod3\).
+Let \(p\neq3\) be a prime of good reduction for \(A\), unramified in \(L\), whose Frobenius class contains
+\(\gamma_j\). By (I1)(b) and Lemma~7(b), \(3\) divides \(x^2-c_jw^2\) with \(x=1+\varepsilon_jp\). If \(c_j\equiv0\bmod3\),
+then \(3\mid x\). If \(c_j\equiv2\bmod3\), then \(x^2\equiv2w^2\bmod3\), and \(3\mid x\) because \(2\) is not a
+square modulo \(3\). So \(p\equiv-\varepsilon_j\bmod3\), and by (I6) with \(m=3\) and \(a=-\varepsilon_j\), \(\zeta_3\in L\).
+
+(c) Suppose that \(A(\Q)\) has a point of order \(3\) and that \(G=A(\Q)[2^\infty]\) has order at least \(32\).
+By (a) and (b), \(L\) contains \(\Q(i,\sqrt{-3})=\Q(\zeta_{12})\); as \([L:\Q]=4\), \(L=\Q(\zeta_{12})\). Choose an
+elliptic curve \(E\subset A_L\); it is defined over \(L\), and \(Y=A_L/E\) is \(L\)-isogenous to \(E\), by (I2).
+By \hyperref[lemma-split]{Lemma~4} for \(X=A_L\) and \(C=E\), one of \(E(L)\), \(Y(L)\) has a subgroup
+isomorphic to \(\Z/8\) or to \(\Z/2\times\Z/4\), and one of them has a point of order \(3\). By
+\hyperref[lemma-combine]{Lemma~5} there is an elliptic curve over \(L=\Q(\zeta_{12})\) with a subgroup of
+rational points isomorphic to \(\Z/2\times\Z/12\). This contradicts
+\hyperref[lemma-curve]{Lemma~2}(c). \qed
+
+\section{Proof of the Theorem and consequences for the census}\label{census}
+
+\emph{Proof of the Theorem.} Let \(A/\Q\) be simple over \(\Q\) and geometrically split, with a rational point of
+order \(3\), and suppose that \(\#A(\Q)[2^\infty]\ge32\). By (I2), \(A\) is of type (N), (CM) or (S).
+
+\emph{Type (N).} By (I2), \(A_{\bar\Q}\) contains an elliptic curve \(E\) that is defined over a quadratic field
+\(K\). This contradicts \hyperref[thm-quadratic]{Theorem~6}.
+
+\emph{Type (CM).} Here \(A_{\bar\Q}\) is isogenous to \(E^2\) for a CM elliptic curve \(E\), which has potentially
+good reduction at \(5\) by (I7)(e). Over a finite extension of \(\Q_5\), \(A\) becomes isogenous to \(E^2\) and
+\(E\) acquires good reduction; by (I1)(a), \(A\) acquires good reduction there. So \(A\) has potentially good
+reduction at \(5\). The group \(A(\Q)\) contains a subgroup of order \(32\) of \(A(\Q)[2^\infty]\) and a point of
+order \(3\), hence a subgroup of order \(96\). This contradicts \hyperref[lemma-five]{Lemma~1}(b).
+
+\emph{Type (S).} By \hyperref[prop-rot]{Proposition~8}, \(\Gamma\cong C_2\) or \(\Gamma\cong V_4\). If
+\(\Gamma\cong C_2\), then \(K=L\) is a quadratic field, and by (I2) every elliptic curve in \(A_{\bar\Q}\) is
+defined over \(K\); this contradicts \hyperref[thm-quadratic]{Theorem~6}. If \(\Gamma\cong V_4\), we have a
+contradiction with \hyperref[prop-v4]{Proposition~9}(c). \qed
+
+\medskip
+\emph{Proof of the Corollary.} Let \(A\) be simple over \(\Q\) and geometrically split, and suppose that \(96\)
+divides the order of the torsion subgroup of \(A(\Q)\). Then \(A(\Q)\) has a point of order \(3\), and
+\(\#A(\Q)[2^\infty]\) is a power of \(2\) divisible by \(32\). This contradicts the Theorem. The Jacobian of a
+curve of genus \(2\) over \(\Q\) is an abelian surface, and the groups \([2,48]\), \([2,2,24]\) and
+\([2,2,2,12]\) have order \(96\). \qed
+
+\medskip
+On the census, \([2,48]\), \([2,2,24]\) and \([2,2,2,12]\) become impossible in the class ``geometrically split,
+simple over \(\Q\)''. The groups \([2,48]\) and \([2,2,24]\) have examples split over \(\Q\) (the census curves
+\href{https://genus-2-torsion.github.io/curve.html?id=2.48.a}{2.48.a} and
+\href{https://genus-2-torsion.github.io/curve.html?id=2.2.24.a}{2.2.24.a}), so their combined geometrically split
+cells keep their grades. For \([2,2,2,12]\) the census has only a geometrically simple example
+(\href{https://genus-2-torsion.github.io/curve.html?id=2.2.2.12.a}{2.2.2.12.a}); the class ``split over \(\Q\)''
+remains open for this group, and with it the combined geometrically split cell.
+
+\section{Remarks}\label{remarks}
+
+\begin{enumerate}
+\item\label{rem-where} \emph{Where the hypotheses are used.} Simplicity over \(\Q\) gives \(E^\sigma\neq E\) and
+the final contradiction in \hyperref[thm-quadratic]{Theorem~6}; \(\Gamma\neq C_1\) in type (S); and, in type (N),
+that the two elliptic curves are defined over a quadratic field and exchanged by \(\tilde\sigma\) ((I2)). It is
+needed:
+the Jacobians of the census curves 2.48.a and 2.2.24.a are split over \(\Q\), with rational torsion subgroups of
+order \(96\). The point of order \(3\) is needed: the census curves
+\href{https://genus-2-torsion.github.io/curve.html?id=2.2.8.c}{2.2.8.c},
+\href{https://genus-2-torsion.github.io/curve.html?id=2.4.4.c}{2.4.4.c} and
+\href{https://genus-2-torsion.github.io/curve.html?id=2.2.2.4.c}{2.2.2.4.c} are geometrically split and simple
+over \(\Q\), with rational torsion subgroups \([2,2,8]\), \([2,4,4]\) and \([2,2,2,4]\) of order \(32\). Geometric
+splitness is needed: the Jacobian of the census curve 2.2.2.12.a is geometrically simple, with rational torsion
+subgroup \([2,2,2,12]\). No polarization is used. \hyperref[lemma-five]{Lemma~1},
+\hyperref[lemma-curve]{Lemma~2}, \hyperref[lemma-basechange]{Lemma~3}, \hyperref[lemma-split]{Lemma~4} and
+\hyperref[lemma-combine]{Lemma~5} do not involve the surface \(A\) of the Theorem.
+
+\item\label{rem-sharp} \emph{Sharpness.} The census curve
+\href{https://genus-2-torsion.github.io/curve.html?id=2.2.2.6.c}{2.2.2.6.c},
+\[\begin{aligned}y^2+(x^2+x)y={}&6993x^5-25655829x^4+14380189111x^3\\
+&+16095094765893x^2+2757085929534360x+1355999975081200,\end{aligned}\]
+has a Jacobian that is geometrically split and simple over \(\Q\), with rational torsion subgroup \([2,2,2,6]\):
+by its census record, the Jacobian is isogenous over \(\Q\) to the Weil restriction of an elliptic curve over
+\(\Q(\sqrt{-11})\); Part~S of the certificate checks the torsion subgroup and that the Frobenius polynomial at
+\(29\) is irreducible, which gives simplicity over \(\Q\). So the bound \(16\) of the Theorem is attained.
+
+\item\label{rem-open} \emph{What the Theorem does not decide.} A rational torsion subgroup of order \(48\) has a
+point of order \(3\) and \(2\)-primary part of order \(16\), which the Theorem allows. So the Theorem says nothing
+about the groups \([48]\), \([2,24]\), \([4,12]\) and \([2,2,12]\), for which the census has no example in the
+class ``geometrically split, simple over \(\Q\)'' on 15 November 2026, nor about \([24]\).
+
+\item\label{rem-two} \emph{Without the point of order \(3\).} \hyperref[prop-rot]{Proposition~8} and
+\hyperref[prop-v4]{Proposition~9}(a) do not use a point of order \(3\): if \(A/\Q\) is of type (S), simple over
+\(\Q\), and \(\#A(\Q)[2^\infty]\ge32\), then \(\Gamma\cong C_2\), or \(\Gamma\cong V_4\) and \(\Q(i)\subset L\).
+
+\item\label{rem-bn} \emph{Lemma~3 and the literature.} \hyperref[lemma-basechange]{Lemma~3} is the analogue for
+\(\Z/2\times\Z/12\) of \cite[Theorem~1.1]{BN}, by which every elliptic curve over a quadratic field with a point of
+order \(16\) is the base change of an elliptic curve over \(\Q\). The introduction of \cite{BN} contains a
+sentence that begins ``We found examples of elliptic curves that are not base changes of elliptic curves over
+\(\Q\) with all possible torsion groups over quadratic fields apart from \(C_{16}\)'' (it continues with the
+torsion groups over cubic fields). By Lemma~3 there is no such example with the torsion group
+\(\Z/2\times\Z/12\), so this statement is not correct for that group. The sentence reports examples and is not
+used in the proofs of \cite{BN}; Theorem~1.1 of \cite{BN} is not affected. Because of this
+disagreement, Part~G of the certificate tests Lemma~3 in a second way, which uses neither the involutions
+\(\iota_R\) nor the functions \(\lambda_R\): over \(K=\Q(\sqrt{13})\) the curve \(X\) has the point \(P_0\) of
+infinite order with \(t=2\sqrt{13}-7\), and for each of the twelve points \(nP_0+T\) (\(1\le n\le3\),
+\(T\in X(\Q)\)) the parameter \(t\) is not rational, the curve \(E_t\) has torsion subgroup \(\Z/2\times\Z/12\)
+over \(K\), its \(j\)-invariant is rational, and \(E_t\) is isomorphic over \(K\) to the base change of an
+elliptic curve over \(\Q\).
+
+Two facts lie behind Lemma~3. First, for each of the four involutions \(\iota_R\), \(R\in X(\Q)\), there is a
+function \(\lambda_R\in\Q(X)\) with \(c_4\circ\iota_R=\lambda_R^4c_4\) and \(c_6\circ\iota_R=\lambda_R^6c_6\)
+(Part~E). So if \(Q\) is a quadratic point of \(X\), not a cusp, with \(\sigma(Q)=\iota_R(Q)\), then the
+invariants of the conjugate of \(E_{t(Q)}\) are \(u^4c_4(Q)\) and \(u^6c_6(Q)\) with \(u=\lambda_R(Q)\in K^\times\),
+and \(E_{t(Q)}\) is isomorphic over \(K\) to its conjugate by (I7)(a). (That \(\iota_R\) preserves the
+\(j\)-invariant of \(E_t\) shows only that the \(j\)-invariant of \(E_{t(Q)}\) is rational, which is weaker.) This
+alone does not make \(E_{t(Q)}\) a base change. Second,
+\(\lambda_R\cdot(\lambda_R\circ\iota_R)=1\) (Part~E); this gives \(u\,\sigma(u)=1\) in the proof, which is the
+condition for the descent to \(\Q\).
+
+In modular terms (this description is not proved here and it is not used), a point of \(X\) that is not a cusp
+is a pair \((E,\varphi)\) up to isomorphism, where \(\varphi\) is an embedding of \(G=\Z/2\times\Z/12\) into
+\(E\). The group of automorphisms of \(G\) modulo \(\pm1\) has order \(8\) and acts on \(X\) by
+\((E,\varphi)\mapsto(E,\varphi\circ a)\); these are the eight automorphisms \(P\mapsto\pm P+R\) of \(X\) with
+\(R\in X(\Q)\). If \(\sigma(Q)=\iota_R(Q)\) and \(\iota_R\) is given by the automorphism \(a\) of \(G\), there is
+an isomorphism \(\mu\colon E^\sigma\to E\) over \(K\) with \(\mu\circ\varphi^\sigma=\varphi\circ a\), and
+\(\mu\circ\mu^\sigma\) acts on \(\varphi(G)\) as \(a^2\), where \(a^2=\pm1\) because \(\iota_R\) is an involution.
+Every automorphism of \(G\) acts as \(\pm1\) on the subgroup of order \(3\), so \(a^2\neq-1\). Hence \(a^2=1\) and
+\(\mu\circ\mu^\sigma\) is the identity, which is the condition for the descent of \(E\) to \(\Q\). The proof of
+\cite[Theorem~1.1]{BN} has this form, with \(a\) the multiplication by \(9\) on \(\Z/16\), and
+\(9^2\equiv1\bmod16\). For the group \(\Z/2\times\Z/10\) there are automorphisms \(a\) with \(a^2=-1\), for
+instance the multiplication by \(2\) on the subgroup of order \(5\) together with the identity on the
+\(2\)-torsion, and the analogue of Lemma~3 is false. An example (Part~G): over \(\Q(\sqrt{17})\), the curve
+\(E(b,c)\) with \(b=(5-3\sqrt{17})/72\) and \(c=(\sqrt{17}-7)/24\) has torsion subgroup \(\Z/2\times\Z/10\), its
+\(j\)-invariant \(141420761/9216\) is rational, and it is isomorphic to its conjugate, but it is not the base
+change of an elliptic curve over \(\Q\). Indeed, the invariants of a curve isomorphic to \((E_0)_K\) are
+\(v^4c_4(E_0)\) and \(v^6c_6(E_0)\) with \(v\in K^\times\), so the norm of \(c_6/c_4\) is the square of a
+rational number if \(c_4\neq0\); for this curve \(c_4\neq0\), and the norm of \(c_6/c_4\) is \(17\) times the
+square of a nonzero rational number. So for \(\Z/2\times\Z/10\) the statement of \cite{BN} is correct.
+
+\item\label{rem-val} \emph{Validation (not used in the proof).} (i) The script
+\texttt{qsimple\_96\_validation.m} takes thirteen curves of the LMFDB \cite{LMFDB} whose Jacobians are of type
+(S), with Sato--Tate groups \(E_2\), \(J(E_1)\), \(E_3\), \(E_4\), \(E_6\), \(J(E_2)\), \(J(E_3)\), \(J(E_4)\) and
+\(J(E_6)\), which correspond to \(\Gamma=C_2\), \(C_2\), \(C_3\), \(C_4\), \(C_6\), \(V_4\), \(D_6\), \(D_8\) and
+\(D_{12}\). For each curve and each prime \(3\le p<500\) of good reduction for the given model, the
+\(L\)-polynomial at \(p\) has one of the shapes allowed for that curve: the square of a quadratic polynomial (for a
+Frobenius element in \(G_L\)), one of the polynomials of \cite[Lemma~2]{P612} behind (I4), or a polynomial
+\((X^2+\varepsilon p)^2-cw^2X^2\) of \hyperref[lemma-inv]{Lemma~7} with \(c\) in a list of at most three squarefree integers
+that depends on the curve; every shape allowed for a curve occurs; and the congruences of
+\hyperref[prop-rot]{Proposition~8} and \hyperref[prop-v4]{Proposition~9} hold whenever \(32\) or \(3\) divides
+the number of points. For the three curves with \(\Gamma=V_4\) the classes \(c\) that occur are \(1,-1\) (once)
+and \(2,-1\) (twice); this is consistent with \(c_1c_2c_3\in-\Q^{\times2}\), which then gives the classes
+\(1,-1,1\) and \(2,-1,2\) for the three involutions. (ii) The script
+\texttt{qsimple\_96\_lmfdb.py} queries the LMFDB tables \texttt{g2c\_curves} (\(66158\) curves) and
+\texttt{g2c\_curves\_new} (\(6216959\) curves). Among the curves that are geometrically split and simple over
+\(\Q\) and have a rational torsion point of order \(3\) (\(30\) and \(1913\) curves), the \(2\)-primary part of
+the rational torsion has order at most \(4\) and at most \(8\) respectively; the four curves with \(2\)-primary
+part of order \(8\) have torsion \([2,2,6]\). The curves with Sato--Tate group \(E_n\) or \(J(E_n)\),
+\(n\in\{3,4,6\}\), have \(2\)-primary torsion of order at most \(8\), in agreement with
+\hyperref[prop-rot]{Proposition~8}. The only curves that are geometrically split and simple over \(\Q\) with
+\(32\) dividing the order of the rational torsion are two curves of \texttt{g2c\_curves\_new} with Sato--Tate
+group \(N(\mathrm{SU}(2)\times\mathrm{SU}(2))\) (for a geometrically split surface this means type (N)) and torsion of order \(32\). The only curve in
+either table with rational torsion of order divisible by \(96\) has torsion \([2,48]\) and a Jacobian that is not
+simple over \(\Q\).
+\end{enumerate}
+
+\section{Computations}\label{computations}
+
+The certificate
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_96_checks.m}{\texttt{qsimple\_96\_checks.m}}
+(Magma V2.30-1, about \(2\) seconds) consists of assertions and ends with \texttt{ALL\_CHECKS\_PASSED}; a failed
+assertion stops it before that line. Its log is
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_96_checks.log}{\texttt{qsimple\_96\_checks.log}}.
+
+Part~A: \hyperref[lemma-five]{Lemma~1}(a), by enumeration of all polynomials \(h\), and the elliptic curves over
+\(\F_7\) with \(8\) and \(12\) points. Part~B: Kubert's family, the exact order of \((0,0)\), the discriminant
+and the invariants of \(E_t\); the division polynomials of \(E(b,c)\), their values at \(x=0\), and the inverse
+map \(T(b,c)\). Part~C: the \(2\)-division polynomial of \(E_t\) and its discriminant. Part~D: the curve \(X\)
+over \(\Q\). Part~E: the involutions \(\iota_R\) and the functions \(\lambda_R\) of
+\hyperref[lemma-basechange]{Lemma~3}. Part~F: the three quadratic twists, the reductions at \(13\) and \(37\),
+and the \(16\) points of \(X(\Q(\zeta_{12}))\). Part~G: the examples for
+\hyperref[lemma-basechange]{Lemma~3}, including those over \(\Q(\sqrt{13})\), and the curve over
+\(\Q(\sqrt{17})\) of \hyperref[rem-bn]{Remark~5}. Part~H: the congruences of
+\hyperref[prop-rot]{Proposition~8} and \hyperref[prop-v4]{Proposition~9}, and the polynomial identity of
+\hyperref[lemma-inv]{Lemma~7}. Part~S: the curve of \hyperref[rem-sharp]{Remark~2}. Every value quoted in the
+text from the certificate is asserted, not only printed. Parts~A, B, C, E and H are exact computations with
+integers, polynomials and rational functions. Parts~D and~F use Magma's \texttt{CremonaReference} and \texttt{Rank}
+(with the flag that the rank is proved) for elliptic curves over \(\Q\), and \texttt{TorsionSubgroup} over \(\Q\)
+and, only as a cross-check of \hyperref[lemma-curve]{Lemma~2}(c), over \(\Q(\zeta_{12})\); Part~G uses \texttt{TorsionSubgroup} and \texttt{IsIsomorphic} for elliptic curves over
+quadratic fields; Part~S uses \texttt{TorsionSubgroup} and \texttt{LPolynomial} for a curve of genus \(2\). Parts~G
+and~S are not used in the proof.
+
+The validation of \hyperref[rem-val]{Remark~6} is not used in the proof. The script
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_96_validation.m}{\texttt{qsimple\_96\_\allowbreak validation.m}}
+(Magma V2.30-1, about \(3\) minutes) ends with \texttt{VAL\_DONE}; its log is
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsimple_96_validation.log}{\texttt{qsimple\_96\_\allowbreak validation.log}}.
+The script \texttt{qsimple\_96\_lmfdb.py} (Python with \texttt{psycopg2}, through the mirror
+devmirror.lmfdb.xyz) ends with \texttt{LMFDB\_CHECK\_OK}; its log \texttt{qsimple\_96\_lmfdb.log} was produced on
+15 November 2026.
+
+The SHA-256 hashes of the scripts and logs are:
+\begin{itemize}
+\item \texttt{qsimple\_96\_checks.m}: \texttt{ad292a2a\allowbreak 65541a3a\allowbreak ac660e5f\allowbreak 2e75f0d5\allowbreak 895eca39\allowbreak 9cdaf5ec\allowbreak 45c09b39\allowbreak c507b42f}
+\item \texttt{qsimple\_96\_checks.log}: \texttt{cba10806\allowbreak 98adef84\allowbreak 03d4f152\allowbreak b9a0d2ae\allowbreak 3b38cbd6\allowbreak 4cf541d0\allowbreak 593dea04\allowbreak 98ba389a}
+\item \texttt{qsimple\_96\_validation.m}: \texttt{79be01f8\allowbreak 6f8c843d\allowbreak 705acc21\allowbreak 22abdaab\allowbreak 0c9b8960\allowbreak 7e4cc05d\allowbreak 61a79cd9\allowbreak 1010261e}
+\item \texttt{qsimple\_96\_validation.log}: \texttt{ec47ac83\allowbreak f747dff8\allowbreak 048c9dc2\allowbreak c18c6050\allowbreak 10c4959f\allowbreak d6617464\allowbreak 9637022c\allowbreak 9014bfd5}
+\item \texttt{qsimple\_96\_lmfdb.py}: \texttt{3fbba27e\allowbreak 552b4a77\allowbreak bfbd8259\allowbreak 3c2d3f72\allowbreak 2d78cff1\allowbreak 5c12aafa\allowbreak 1ccca17d\allowbreak 6baead15}
+\item \texttt{qsimple\_96\_lmfdb.log}: \texttt{ac51cb4a\allowbreak c42d425b\allowbreak 51c30ff2\allowbreak ac5f4012\allowbreak e36a0c1d\allowbreak bc0b1e3a\allowbreak 6c02c701\allowbreak 4aec0b0e}
+\end{itemize}
+
+\begin{thebibliography}{LMFDB}
+
+\bibitem[BN]{BN}
+P. Bruin and F. Najman, \emph{Fields of definition of elliptic curves with prescribed torsion}, Acta Arith.
+\textbf{181} (2017), 85--95: Theorem~1.1, its proof, and the introduction.
+\url{https://doi.org/10.4064/aa170323-20-9}, \url{https://arxiv.org/abs/1607.05394}.
+
+\bibitem[Ku]{Ku}
+D. S. Kubert, \emph{Universal bounds on the torsion of elliptic curves}, Proc. London Math. Soc. (3)
+\textbf{33} (1976), 193--237: Table~3.
+\href{https://doi.org/10.1112/plms/s3-33.2.193}{doi:10.1112/plms/s3-33.2.193}.
+
+\bibitem[LMFDB]{LMFDB}
+The LMFDB Collaboration, \emph{The L-functions and modular forms database}, \url{https://www.lmfdb.org}, 2026: the
+tables \texttt{g2c\_curves} and \texttt{g2c\_curves\_new} (the extended genus-\(2\) data of Booker and
+Sutherland), read through the mirror devmirror.lmfdb.xyz.
+
+\bibitem[P40]{P40}
+Census proof of 14 November 2026, \emph{Rational \(5\)-torsion and the \(2\)-primary torsion of geometrically split
+abelian surfaces}, \url{https://genus-2-torsion.github.io/proofs/qsimple-40-obstruction.html}: Section~1.
+
+\bibitem[P63]{P63}
+Census proof of 21 October 2026, \emph{An obstruction to rational \(63\)-torsion on geometrically split abelian
+surfaces}, \url{https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html}: Sections~2--5 and
+Lemmas~2 and~3.
+
+\bibitem[P612]{P612}
+Census proof of 15 November 2026, \emph{Rational torsion containing \((\Z/3)^2\) forces \(2\)-primary torsion of
+order at most \(4\) on principally polarized abelian surfaces that are geometrically split and simple over
+\(\Q\)}, \url{https://genus-2-torsion.github.io/proofs/qsimple-612-obstruction.html}: (I2), (I3) and Lemma~2.
+
+\bibitem[P2210]{P2210}
+Census proof of 11 November 2026, \emph{Rational \(5\)-torsion and the \(2\)-rank of geometrically split
+Jacobians}, \url{https://genus-2-torsion.github.io/proofs/qsimple-2210-obstruction.html}: (I1).
+
+\bibitem[P2214]{P2214}
+Census proof of 10 November 2026, \emph{Rational \(7\)-torsion and the \(2\)-rank of geometrically split abelian
+surfaces}, \url{https://genus-2-torsion.github.io/proofs/qsimple-2214-obstruction.html}: Section~1 (with (I7)),
+Section~2 and Lemma~3.
+
+\bibitem[Si1]{Si1}
+J. H. Silverman, \emph{The Arithmetic of Elliptic Curves}, second edition, Graduate Texts in Mathematics~106,
+Springer, Dordrecht, 2009: Section~III.1, Exercise~III.3.7, Proposition~VII.3.1 and Proposition~VII.5.5.
+
+\bibitem[Si2]{Si2}
+J. H. Silverman, \emph{Advanced Topics in the Arithmetic of Elliptic Curves}, Graduate Texts in Mathematics~151,
+Springer, New York, 1994: Theorem~II.6.1.
+
+\bibitem[ST]{ST}
+J.-P. Serre and J. Tate, \emph{Good reduction of abelian varieties}, Ann. of Math. (2) \textbf{88} (1968),
+492--517: \S1 (Theorem~1, Corollary~2 and Lemma~2) and \S2.
+\href{https://doi.org/10.2307/1970722}{doi:10.2307/1970722}.
+
+\end{thebibliography}
+
+\end{document}

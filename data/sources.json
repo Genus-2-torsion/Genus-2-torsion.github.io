@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 18:47 UTC",
+  "generated": "2026-11-15 22:23 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -324,6 +324,14 @@
       "cite": "Rational torsion containing (Z/3)^2 forces 2-primary torsion of order at most 4 on principally polarized abelian surfaces that are geometrically split and simple over Q, census proof of 15 November 2026. Rational (Z/3)^2 is Lagrangian in A[3], so the 3-division field is a Kummer extension of Q(zeta_3) with Galois group U ⋊ C2; every elliptic curve and endomorphism is defined over it, the quadratic field of type (N), the CM field and the quadratic subfield of the endomorphism field are Q(sqrt(-3)), and the endomorphism field has Galois group C2 or D6. Type (N): a curve over Q(sqrt(-3)) with full 3-torsion and the exact sequence of the [2,2,14] proof; CM: reduction at an inert prime p ≡ 5, 7 (mod 12) shows that 72 does not divide the torsion order; D6: Frobenius of order 3 at p ≡ 3 (mod 4); C2: complex conjugation gives real multiplication, a Tate-curve valuation lemma gives potentially good reduction at 3, and an element of the inertia group at 3 squares to -1 on every Tate module, so it fixes at most four points of 2-power order; Magma checks in qsimple_612_checks.log",
       "url": "proofs/qsimple-612-obstruction.html",
       "used_for": "impossibility of [6,12], [3,24] and [2,6,6] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 3-rank 2 and 2-primary part of order at least 8 in that class, including groups outside the census such as [6,24], [12,12] and [2,6,12]; requires a principal polarization"
+    },
+    "QSimple96Obstruction": {
+      "short": "ℚ-simple geometric [2,48], [2,2,24] and [2,2,2,12] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 3-torsion and the 2-primary torsion of geometrically split abelian surfaces, census proof of 15 November 2026. An abelian surface over Q that is simple over Q and geometrically split, with a rational point of order 3, has at most 16 rational points of 2-power order; no polarization is assumed. No abelian surface over F_5 has 96 points, which settles the CM case. The elliptic curves with a subgroup Z/2×Z/12 of rational points are parametrized by the curve 24a4, whose points over Q(zeta_12) are cusps, and every such curve over a quadratic field is a base change from Q; with an exact sequence through an elliptic curve in the surface, this settles the cases in which that curve is defined over a quadratic field. Otherwise the surface is geometrically the square of a curve without CM: Frobenius elements of order 3, 4 or 6 in the Galois group of the endomorphism field are excluded by 32 dividing the number of points, and for the Klein four-group the Frobenius polynomials (X^2 ± p)^2 − c w^2 X^2 at the involutions force the endomorphism field to be Q(zeta_12); Magma checks in qsimple_96_checks.log.",
+      "url": "proofs/qsimple-96-obstruction.html",
+      "used_for": "impossibility of [2,48], [2,2,24] and [2,2,2,12] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group of order divisible by 96 in that class, including groups outside the census such as [96], [4,24] and [8,12]; no polarization is assumed"
     },
     "Najman2010": {
       "short": "Najman 2010",

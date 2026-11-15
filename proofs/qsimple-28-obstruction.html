@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rational 7-torsion forces 2-primary torsion of order at most 2 on principally polarized abelian surfaces that are geometrically split and simple over ℚ — Torsion of genus 2 Jacobians</title>
+  <meta name="description" content="A proof that an abelian surface over Q with a principal polarization defined over Q, simple over Q and geometrically split, with a rational point of order 7, has at most two rational points of 2-power order. This excludes [28] and [2,14] in the geometrically split, Q-simple class.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          Hom: '\\operatorname{Hom}', Res: '\\operatorname{Res}',
+          Norm: '\\operatorname{N}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=28">[28]</a><span class="sep">›</span>impossibility proof</div>
+  <h2>Rational \(7\)-torsion forces \(2\)-primary torsion of order at most \(2\) on principally polarized abelian surfaces that are geometrically split and simple over \(\Q\)</h2>
+  <p class="src">14 November 2026 · Geometrically split, simple over ℚ</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be an abelian surface with a principal polarization defined over \(\Q\), and suppose that \(A\) is
+      simple over \(\Q\) and geometrically split. If \(A(\Q)\) has a point of order \(7\), then</p>
+    <div class="equation">\[
+      \#A(\Q)[2^\infty]\le2 .
+    \]</div>
+    <p><strong>Corollary.</strong> No genus-\(2\) Jacobian over \(\Q\) that is geometrically split and simple over \(\Q\) has a rational point of
+      order \(7\) and at least four rational points of \(2\)-power order. In particular
+      <a href="../group.html?g=28">[28]</a> and
+      <a href="../group.html?g=2.14">[2,14]</a> do not occur as the rational torsion
+      subgroup of such a Jacobian. Neither do \([2,28]\) and \([2,2,14]\), which the census proofs <a href="#p228">[P228]</a> and
+      <a href="#p2214">[P2214]</a> had already excluded.</p>
+  </div>
+  <p>Here “geometrically split” means that \(A_{\bar\Q}\) is isogenous to a product of two elliptic curves; we impose
+    no restriction on the degree of this isogeny or on the field of definition of the geometric endomorphisms. The
+    Jacobian of a curve of genus \(2\) over \(\Q\) carries its canonical principal polarization, which is defined over
+    \(\Q\). The bound is sharp: the census curve 14.c (LMFDB 9604.b3) is geometrically split and simple over \(\Q\),
+    with rational torsion subgroup \([14]\). The theorem sharpens the bound \(\#A(\Q)[2^\infty]\le4\) of <a href="#p228">[P228]</a>.
+    The principal polarization is needed: <a href="#rem-pp">Remark 1</a> gives an abelian surface over \(\Q\), simple over
+    \(\Q\) and geometrically split, with rational torsion subgroup exactly \(\Z/2\times\Z/14\), whose polarizations over
+    \(\Q\) all have type \((k,2k)\).</p>
+  <p><em>Outline.</em> We follow the case distinction of <a href="#p2214">[P2214]</a> and <a href="#p228">[P228]</a>. In the CM case we reduce at a prime
+    \(p\ge5\) with \(p\not\equiv\pm1\pmod7\) that is inert in the CM field; this gives a supersingular abelian surface over \(\F_p\),
+    and for such \(p\) no supersingular abelian surface over \(\F_p\) has a number of points divisible by \(28\)
+    (<a href="#cm">Section 2</a>). Cyclic endomorphism fields of degree \(3\) and \(6\) were settled in <a href="#p228">[P228]</a>. In the
+    remaining (quadratic) case, a curve in the \(K\)-isogeny class of an elliptic curve \(E\subset A_K\) has a
+    \(K\)-point of order \(14\), so it comes from a quadratic point of the elliptic modular curve \(X_1(14)\). These lie
+    in finitely many one-parameter families, and up to diamond operators in two of them, \(\mathcal A\) and
+    \(\mathcal B\) (<a href="#x114">Section 5</a>). When the complement of \(E\) for the principal polarization is \(E^\sigma\), the
+    surface is a conjugate gluing of \(E\) with \(E^\sigma\); then the descent of the gluing and the existence of a
+    fourth rational \(2\)-power point force two norm conditions on the \(2\)-division data of \(E\)
+    (<a href="#lemma-glue">Lemma 8</a>). In family \(\mathcal B\) the first condition already has no solutions; in family
+    \(\mathcal A\) the two conditions together have none (<a href="#families">Section 9</a>, Chabauty and elliptic Chabauty). When
+    \(A_{\bar\Q}\) is a square, the curve is a \(\Q\)-curve; on family \(\mathcal A\) it reduces to a cusp modulo every
+    prime above \(3\), and the valuations of the \(j\)-invariants there show that its \(\Q\)-curve degree is a square.
+    This forces \(\End^0_{\Q}(A)\cong\Q(i)\), and then again \(E^\sigma\) is the complement of \(E\)
+    (<a href="#qcurves">Section 8</a>).</p>
+  <ul class="downloads">
+    <li><a href="../data/knowledge/sources/qsimple_28_obstruction.tex">Complete proof (LaTeX source)</a></li>
+    <li><a href="../data/knowledge/sources/qsimple_28_checks.m">Magma script <code>qsimple_28_checks.m</code></a> and its <a href="../data/knowledge/sources/qsimple_28_checks.log">log</a></li>
+  </ul>
+  <nav aria-label="Proof contents">
+    <ol class="contents">
+      <li><a href="#inputs">Conventions and inputs</a></li>
+      <li><a href="#cm">The CM case</a></li>
+      <li><a href="#cyclic">Endomorphism fields of degree 3 and 6</a></li>
+      <li><a href="#quadratic">The quadratic case: a quadratic point of \(X_1(14)\)</a></li>
+      <li><a href="#x114">The modular curve \(X_1(14)\)</a></li>
+      <li><a href="#invariants">Two-division invariants</a></li>
+      <li><a href="#complements">Conjugate complements</a></li>
+      <li><a href="#qcurves">Geometric squares: \(\Q\)-curves of square degree</a></li>
+      <li><a href="#families">The two families</a></li>
+      <li><a href="#proof">Proof of the Theorem and consequences for the census</a></li>
+      <li><a href="#remarks">Remarks</a></li>
+      <li><a href="#computations">Computations</a></li>
+      <li><a href="#references">References</a></li>
+    </ol>
+  </nav>
+
+  <section id="inputs">
+    <h3>1. Conventions and inputs</h3>
+    <p>All number fields lie in a fixed \(\bar\Q\); \(G_k=\Gal(\bar\Q/k)\). For a quadratic field \(K=\Q(\sqrt d)\),
+      \(\sigma\) is its nontrivial automorphism and \(\tilde\sigma\in G_{\Q}\) a lift; for a variety \(Y\) over \(K\),
+      \(Y^\sigma\) is the conjugate variety and \(\tilde\sigma:Y(\bar\Q)\to Y^\sigma(\bar\Q)\) the induced bijection
+      <a href="#p2214">[P2214, Section 1]</a>. \(\Q^{\times2}\), \(K^{\times2}\) are the nonzero squares, and \(e_2\) is the Weil pairing
+      on \(2\)-torsion. A polarization \(\lambda:A\to A^\vee\) is defined over \(\Q\) if the isogeny \(\lambda\) is.</p>
+    <ul>
+      <li>
+        <p><strong>(I1) Quadratic torsion</strong> <a href="#km">[KM, Theorem (0.1)]</a>, in the form of <a href="#p2214">[P2214, (I1) and Lemma 1]</a>: no
+          elliptic curve over a quadratic field \(K\) has a subgroup \(\Z/28\) or \(\Z/2\times\Z/14\); and if a \(K\)-isogeny
+          class contains a curve with a \(K\)-point of order \(7\), every curve \(E''\) in it has
+          \(\#E''(K)[2^\infty]\le2\).</p>
+      </li>
+      <li>
+        <p><strong>(I2) Reduction</strong> <a href="#st">[ST]</a>, as in <a href="#p2214">[P2214, (I2)]</a>: good reduction is detected by inertia and
+          preserved by isogenies; prime-to-\(p\) torsion injects into the reduction; potentially good reduction becomes good
+          over a finite extension with the same residue field.</p>
+      </li>
+      <li>
+        <p><strong>(I3) Case distinction</strong> <a href="#p2214">[P2214, (I3)]</a>: a geometrically split abelian surface \(A/\Q\) is of
+          exactly one of the types <strong>(N)</strong> (\(A_{\bar\Q}\) is isogenous to \(E_1\times E_2\) with \(E_1\), \(E_2\) not
+          isogenous), <strong>(CM)</strong> (\(A_{\bar\Q}\) is isogenous to \(E^2\) with \(E\) a CM curve) and <strong>(S)</strong>
+          (\(A_{\bar\Q}\) is isogenous to \(E^2\) with \(E\) without CM). In type (S), \(L\) is the smallest field over which
+          all geometric endomorphisms are defined and \(\Gamma=\Gal(L/\Q)\). <strong>(I4)</strong> <a href="#p63">[P63, Lemma 2]</a>: a point of
+          prime order \(q\) of an abelian surface \(X\) over \(k\) lies on a given elliptic curve \(C\subset X\) over \(k\) or
+          maps to a point of order \(q\) of \(X/C\). <strong>(I5)</strong> <a href="#p63">[P63, Lemma 3]</a>: in type (S) every elliptic curve in
+          \(A_{\bar\Q}\) is defined over \(L\), and any two are \(L\)-isogenous.</p>
+      </li>
+      <li>
+        <p><strong>(I6)</strong> <a href="#p2214">[P2214, (I6)]</a> (<a href="#p63">[P63, Proposition 8]</a>): in type (S), simple over \(\Q\), with a rational
+          point of order \(7\), \(\Gamma\) is cyclic of order \(2\), \(3\) or \(6\). <strong>(I7)</strong> <a href="#p228">[P228, Sections 2–5]</a>:
+          if moreover \(A\) has a principal polarization defined over \(\Q\) and \(\Gamma\) is cyclic of order \(3\) or \(6\),
+          then \(A(\Q)[2]=0\). Also \(\#A(\Q)[2^\infty]\le4\) in all types <a href="#p228">[P228, Theorem]</a>.</p>
+      </li>
+      <li>
+        <p><strong>(I8) Weil restriction</strong> <a href="#p2210">[P2210, (I7) and Lemma 5]</a>: for an elliptic curve \(E\) over \(K\),
+          \((\Res_{K/\Q}E)(\bar\Q)=E(\bar\Q)\times E^\sigma(\bar\Q)\), where \(g\in G_K\) acts by \((x,y)\mapsto(gx,gy)\) and
+          \(g\in G_{\Q}\setminus G_K\) by \((x,y)\mapsto(gy,gx)\), and \((\Res_{K/\Q}E)(\Q)=E(K)\). If \(E\subset A_K\) is an
+          elliptic curve over \(K\) with \(E^\sigma\neq E\) and \(E'\) is \(K\)-isogenous to \(E\), then \(A\) is
+          \(\Q\)-isogenous to \(\Res_{K/\Q}E'\), and \(\#\widetilde A(\F_p)=\#\widetilde{E'}(\F_{p^2})\) at every odd prime
+          \(p\) inert in \(K\) of good reduction for \(A\). The map \((x,y)\mapsto x+y\) is an isogeny \(\Res_{K/\Q}E\to A\)
+          over \(\Q\) with kernel \(\{(x,-x):x\in E\cap E^\sigma\}\).</p>
+      </li>
+      <li>
+        <p><strong>(I9) Complements</strong> <a href="#bl">[BL, Section 5.3]</a>, <a href="#p45">[P45, proof of Lemma 3]</a>. Let \(\lambda\) be a principal
+          polarization of an abelian surface \(X\) over \(k\), \(E\subset X\) an elliptic curve, \(i_E\) the inclusion and
+          \(i_E^\vee\lambda i_E=n\lambda_E\), with \(\lambda_E\) the canonical principal polarization of \(E\). The complement
+          \(E^\perp\) (the connected component of \(\ker(i_E^\vee\lambda)\)) is an elliptic curve; \(E\cap E^\perp=E[n]=
+          E^\perp[n]\); \(\pi_E=\lambda_E^{-1}i_E^\vee\lambda:X\to E\) has kernel \(E^\perp\) and \(\pi_Ei_E=n\); the addition
+          map \(E\times E^\perp\to X\) has kernel \(\{(x,-x):x\in E[n]\}\); the norm endomorphism \(N_E=i_E\pi_E\) is symmetric
+          for the Rosati involution <a href="#bl">[BL, Lemma 5.3.1]</a>, with image \(E\) and kernel \(\ker(i_E^\vee\lambda)\). If \(X\)
+          and \(\lambda\) are defined over \(\Q\), then \(g(E^\perp)=(gE)^\perp\) and \(g(N_E)=N_{gE}\) for \(g\in G_{\Q}\),
+          since these constructions commute with conjugation: \(g(i_E)=i_{gE}\), \(g(\lambda_E)=\lambda_{gE}\) and
+          \(g(\lambda)=\lambda\).</p>
+      </li>
+      <li>
+        <p><strong>(I10) Kubert's normal form for \(\Z/7\)</strong> <a href="#ku">[Ku, Table 3]</a>: every pair \((E,P)\) of an elliptic curve
+          over a field \(k\) of characteristic \(0\) and \(P\in E(k)\) of order \(7\) is isomorphic to \((E_7(t),(0,0))\),
+          \(E_7(t):y^2+(1-c)xy-by\)<wbr>\({}=x^3-bx^2\), \(b=t^3-t^2\), \(c=t^2-t\), for some \(t\in k\) with \(E_7(t)\) nonsingular.</p>
+      </li>
+      <li>
+        <p><strong>(I11) The \(j\)-function at a prime</strong> <a href="#si">[Si, Theorem V.3.1(b) and Lemma V.5.1]</a>. Let
+          \(j=q^{-1}+\sum_{n\ge0}c(n)q^n\), \(c(n)\in\Z\), be the \(q\)-expansion of the elliptic modular function. Let \(L\) be
+          a finite extension of \(\Q_p\) and \(v\) the valuation of \(\bar L\) with \(v(p)=1\). For \(q\) in a finite extension
+          of \(L\) with \(v(q)&gt;0\), the series \(j(q)=q^{-1}+\sum c(n)q^n\) converges, and \(v(j(q))=-v(q)\). Every
+          \(\alpha\in\bar L\) with \(v(\alpha)&lt;0\) equals \(j(q)\) for a unique \(q\in\Q_p(\alpha)\) with \(v(q)&gt;0\).</p>
+      </li>
+      <li>
+        <p><strong>(I12) Deuring's criterion</strong> <a href="#la">[La, Chapter 13, Theorem 12]</a>, due to Deuring <a href="#de">[De]</a>: an elliptic
+          curve over a number field with complex multiplication by an order in an imaginary quadratic field \(M\), with good
+          reduction at a prime above a prime \(p\) that is inert in \(M\), has supersingular reduction there.</p>
+      </li>
+      <li>
+        <p><strong>(I13) The modular polynomial</strong> <a href="#la">[La, Chapter 5, Sections 1–3]</a>. For \(N\ge1\) the modular
+          polynomial \(\Phi_N\in\Z[X,Y]\) satisfies, in \(\Q(\zeta_N)((q^{1/N}))[X]\),</p>
+        <div class="equation">\[
+          \Phi_N(X,j(q))=\prod_{a,b,d}\bigl(X-j(\zeta_d^b\,q^{a/d})\bigr),
+        \]</div>
+        <p>the product over the integers \(a,d&gt;0\) with \(ad=N\) and \(0\le b&lt;d\) with \(\gcd(a,b,d)=1\), where
+          \(\zeta_d=\zeta_N^{N/d}\) and \(j(\zeta_d^bq^{a/d})\) is the series of (I11) evaluated at \(\zeta_d^bq^{a/d}\)
+          (formula (1) of <a href="#la">[La, Chapter 5, Section 2]</a>). If \(B\to A\) is a cyclic isogeny of degree \(N\) of elliptic curves over a field
+          of characteristic \(0\), then \(\Phi_N(j(B),j(A))=0\) <a href="#la">[La, Chapter 5, Theorem 5 and the remark following it]</a>.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="cm">
+    <h3>2. The CM case</h3>
+    <div class="theorem" id="lemma-ss">
+      <p><strong>Lemma 1.</strong> Let \(p\ge5\) be prime and \(B\) an abelian surface over \(\F_p\) whose Frobenius eigenvalues are \(\sqrt p\) times
+        roots of unity. Then \(\#B(\F_p)\)<wbr>\({}\in\{(p+1)^2-kp:0\le k\)<wbr>\({}\le4\}\), or \(p=5\) and \(\#B(\F_5)\in\{11,71\}\). In
+        particular, if \(28\mid\#B(\F_p)\), then \(p\equiv\pm1\pmod7\).</p>
+    </div>
+    <p><strong>Proof.</strong> Write the eigenvalues as \(\alpha_i,p/\alpha_i\) (\(i=1,2\)) and \(\beta_i=\alpha_i+p/\alpha_i=\sqrt
+      p\,\gamma_i\), where \(\gamma_i=\zeta_i+\zeta_i^{-1}\) for roots of unity \(\zeta_i\) of order \(n_i\). Then
+      \(h(y)=(y-\beta_1)(y-\beta_2)\)<wbr>\({}=y^2+a_1y+c\in\Z[y]\) and \(\#B(\F_p)=h(p+1)\). Since \(c=p\gamma_1\gamma_2\) and
+      \(\gamma_1\gamma_2\) is an algebraic integer, \(p\mid c\).</p>
+    <ul>
+      <li>
+        <p>If \(\beta_1\in\Z\), then \(\beta_2\in\Z\) and \(\gamma_1^2=\beta_1^2/p\in\Q\); so
+          \(\zeta_1^2+\zeta_1^{-2}\in\Q\) is one of \(0,\pm1,\pm2\) and \(\gamma_1^2\in\{0,1,2,3,4\}\). As \(p\ge5\),
+          \(p\gamma_1^2\) is a perfect square only for \(\gamma_1=0\). So \(\beta_1=\beta_2=0\) and \(h=y^2\).</p>
+      </li>
+      <li>
+        <p>If \(\beta_1\notin\Z\) and \(\beta_1+\beta_2=0\), then \(\gamma_1^2=-c/p\in\Q\setminus\{0\}\), so
+          \(\gamma_1^2\in\{1,2,3,4\}\) and \(h=y^2-kp\) with \(1\le k\le4\).</p>
+      </li>
+      <li>
+        <p>If \(\beta_1+\beta_2\ne0\), let \(\rho\) be an automorphism of the abelian field \(\Q(\sqrt p,\zeta_{n_1})\)
+          with \(\rho(\beta_1)=\beta_2\) (such a \(\rho\) exists: \(\beta_1,\beta_2\) are conjugate). Then
+          \(\rho(\sqrt p)=\pm\sqrt p\) and \(\rho(\gamma_1)=\gamma_1'\) is a conjugate of \(\gamma_1\), so
+          \(-a_1=\beta_1+\beta_2\)<wbr>\({}=\sqrt p(\gamma_1\pm\gamma_1')\)<wbr>\({}\in\Z\setminus\{0\}\) and \(\sqrt p\in\Q(\zeta_{n_1})\) (the
+          conjugate \(\gamma_1'\) lies in the Galois field \(\Q(\zeta_{n_1})\)). Moreover \(\gamma_1=\beta_1/\sqrt p\) lies in a
+          field of degree at most \(4\), so \(\varphi(n_1)=2[\Q(\gamma_1):\Q]\le8\) (or \(\gamma_1\in\Q\)). As \(p\) ramifies
+          in \(\Q(\sqrt p)\subseteq\Q(\zeta_{n_1})\), \(p\mid n_1\), hence \(p-1\le\varphi(n_1)\le8\) and \(p\in\{5,7\}\);
+          and \(\Q(\sqrt7)\), of conductor \(28\), lies only in cyclotomic fields of degree at least \(\varphi(28)=12\). So
+          \(p=5\). Then \(a_1/\sqrt5\) is an algebraic integer, so \(5\mid a_1\); with
+          \(|a_1|=|\beta_1+\beta_2|\le4\sqrt5\) this gives \(a_1=\pm5\). Real roots in \([-2\sqrt5,2\sqrt5]\) require
+          \(25-4c\ge0\) and \(20+c\ge10\sqrt5\), and \(5\mid c\), so \(c=5\) and \(h=y^2\pm5y+5\).</p>
+      </li>
+    </ul>
+    <p>Hence \(\#B(\F_p)=(p+1)^2-kp\) with \(0\le k\le4\), or \(p=5\) and \(\#B(\F_5)=36\pm30+5\)<wbr>\({}\in\{11,71\}\). As \(p\) is
+      odd, \(4\mid(p+1)^2-kp\) forces \(4\mid kp\), so \(k\in\{0,4\}\) and \(\#B(\F_p)=(p\pm1)^2\); then
+      \(7\mid\#B(\F_p)\) gives \(p\equiv\mp1\pmod7\). Neither \(11\) nor \(71\) is divisible by \(7\). ∎</p>
+    <p>Part A of the certificate lists, for \(p\in\{5,7,11,13,17,19,23\}\), all integer pairs \((a_1,a_2)\) with
+      \(p\mid a_1\), \(p\mid a_2\) and real roots of \(y^2+a_1y+a_2-2p\) in \([-2\sqrt p,2\sqrt p]\), and checks that they
+      are among the polynomials of the lemma, that the values \(P(1)\) are those of the lemma (with \(11\) and \(71\) for
+      \(p=5\)), and that \(28\nmid P(1)\) when \(p\not\equiv\pm1\pmod7\).</p>
+    <div class="theorem" id="prop-cm">
+      <p><strong>Proposition 2.</strong> If \(A\) is of type (CM) and \(A(\Q)\) has a point of order \(7\), then \(\#A(\Q)[2^\infty]\le2\).</p>
+    </div>
+    <p><strong>Proof.</strong> By <a href="#p2214">[P2214, Section 3]</a>, \(\#A(\Q)[2^\infty]\le4\); suppose it is \(4\). Let \(M\) be the CM field
+      of the elliptic curve \(E\) with \(A_{\bar\Q}\) isogenous to \(E^2\). Choose a prime \(p\ge5\), \(p\ne7\), inert in
+      \(M\), with \(p\not\equiv\pm1\pmod 7\): if \(M\ne\Q(\sqrt{-7})\), then \(M\) and \(\Q(\zeta_7)\) are linearly
+      disjoint (the only quadratic subfield of \(\Q(\zeta_7)\) is \(\Q(\sqrt{-7})\)), and Chebotarev's theorem gives
+      infinitely many primes inert in \(M\) and \(\equiv2\pmod7\); if \(M=\Q(\sqrt{-7})\), take \(p=5\), which is inert
+      since \(\bigl(\frac{-7}5\bigr)=-1\). As in <a href="#p2214">[P2214, Section 3]</a>, \(A\) has good reduction \(\widetilde A\) over a
+      finite extension of \(\Q_p\) with residue field \(\F_p\), and the subgroup of \(A(\Q)\) generated by the point of
+      order \(7\) and \(A(\Q)[2^\infty]\), of order \(28\), injects into \(\widetilde A(\F_p)\) by (I2). Over a further
+      finite extension, \(A\) is isogenous to \(E^2\) and \(E\) has good reduction \(\widetilde E\), which is supersingular
+      by (I12); reductions of isogenous abelian varieties with good reduction are isogenous, so \(\widetilde A\) is
+      isogenous over \(\bar\F_p\) to \(\widetilde E^2\). Over a finite field \(\F_{p^{2r}}\) over which this isogeny and all
+      endomorphisms of \(\widetilde E\) are defined, the Frobenius of \(\widetilde E\) is \(\pm p^r\), so every Frobenius
+      eigenvalue \(\alpha\) of \(\widetilde A\) over \(\F_p\) satisfies \(\alpha^{2r}=\pm p^r\).
+      <a href="#lemma-ss">Lemma 1</a> with \(28\mid\#\widetilde A(\F_p)\) gives \(p\equiv\pm1\pmod7\), a contradiction. ∎</p>
+  </section>
+
+  <section id="cyclic">
+    <h3>3. Endomorphism fields of degree 3 and 6</h3>
+    <p>If \(A\) is of type (S), simple over \(\Q\), with a rational point of order \(7\), then \(\Gamma\) is cyclic of order
+      \(2\), \(3\) or \(6\) by (I6). For order \(3\) or \(6\), and \(A\) with a principal polarization defined over \(\Q\),
+      \(A(\Q)[2]=0\) by (I7), so \(A(\Q)[2^\infty]=0\). It remains to treat type (N) and type (S) with
+      \(\Gamma\cong C_2\).</p>
+  </section>
+
+  <section id="quadratic">
+    <h3>4. The quadratic case: a quadratic point of \(X_1(14)\)</h3>
+    <p><strong>Setting (Q).</strong> \(A/\Q\) is simple over \(\Q\) and either of type (N), with \(K\) the quadratic field over
+      which the two elliptic curves of \(A_{\bar\Q}\) are defined, or of type (S) with \(\Gamma\cong C_2\) and \(K=L\).
+      Every elliptic curve \(E\subset A_{\bar\Q}\) is defined over \(K\) and \(E^\sigma\neq E\) <a href="#p2214">[P2214, Section 2]</a>.</p>
+    <div class="theorem" id="lemma-x114">
+      <p><strong>Lemma 3.</strong> In setting (Q), suppose that \(A(\Q)\) has a point \(P_7\) of order \(7\) and \(\#A(\Q)[2^\infty]=4\). Let
+        \(E\subset A_K\) be an elliptic curve. Then \(E(K)[2^\infty]=\langle T\rangle\cong\Z/2\); \(E\) has no
+        \(K\)-rational cyclic subgroup of order \(4\); and there is a \(K\)-isogeny \(E\to E'\) of degree a power of \(7\)
+        with \(E'(K)\) containing a point of order \(14\).</p>
+    </div>
+    <p><strong>Proof.</strong> Put \(Y=A_K/E^\sigma\). By <a href="#p2214">[P2214, Proposition 2, step 1]</a>,
+      \(\#A(\Q)[2^\infty]\)<wbr>\({}\le\#E(K)[2^\infty]\cdot\#Y(K)[2^\infty]\), and by (I4) \(E(K)\) or \(Y(K)\) has a point of order
+      \(7\). By (I1) both factors are at most \(2\), so both equal \(2\). If \(C_4\subset E\) were a \(K\)-rational cyclic
+      subgroup of order \(4\), then \(2C_4=\langle T\rangle\) and \(E_1=E/\langle T\rangle\) would have the two
+      \(K\)-rational subgroups \(E[2]/\langle T\rangle\) and \(C_4/\langle T\rangle\) of order \(2\), hence
+      \(E_1[2]\subseteq E_1(K)\), against (I1). The isogeny \(E\to E'\) is that of <a href="#p40">[P40, Lemma 9, Step 3]</a> (the
+      quotient by the \(7\)-primary part of the kernel of \(E\to Y\), or the identity); it maps \(T\) to a point of order
+      \(2\) and \(E'(K)\) receives a point of order \(7\). ∎</p>
+  </section>
+
+  <section id="x114">
+    <h3>5. The modular curve \(X_1(14)\)</h3>
+    <p>Let \(X\) be the elliptic curve \(Y^2+XY+Y=X^3-X\) (Cremona \(14a4\)). On \(X\) put</p>
+    <div class="equation">\[
+      t=1-\frac{X(X-1)^2}{Y^2},\qquad s=-\frac{(X-1)^2}{2Y},\qquad e=\frac{b}{1-c-2ts},\qquad b=t^3-t^2,\ c=t^2-t .
+    \]</div>
+    <div class="theorem" id="lemma-model">
+      <p><strong>Lemma 4.</strong></p>
+      <ol type="a">
+        <li>
+          <p>\(X(\Q)\)<wbr>\({}=\{O,(0,0),(0,-1),(1,\)<wbr>\({}0),(1,-2),(-1,0)\}\)<wbr>\({}\cong\Z/6\), and \(X\) has rank \(0\); \((0,0)\) has order
+            \(3\) and \((-1,0)\) order \(2\).</p>
+        </li>
+        <li>
+          <p>For every field \(k\supseteq\Q\) and elliptic curve \(E/k\) with a point \(P\) of order \(14\) there is a
+            point \(x\in X(k)\setminus X(\Q)\) such that \((E,8P)\cong(E_7(t(x)),(0,0))\) and \(7P\) corresponds to the
+            \(2\)-torsion point of \(E_7(t(x))\) with \(x\)-coordinate \(e(x)\). The points of \(X(\Q)\) are the poles of
+            \(j(E_7(t))\) on \(X\) (the rational cusps), with pole orders \(7\) at \(O,(0,0),(0,-1)\) and \(14\) at
+            \((1,0),(1,-2),(-1,0)\).</p>
+        </li>
+        <li>
+          <p>If \(x\in X(k)\) and \(j(E_7(t(x)))\notin\{0,1728,\infty\}\), then \(E_7(t(x+(0,0)))\cong E_7(t(x))\)
+            over \(k\) (translation by \((0,0)\) is a diamond operator); \(x\mapsto-x\) does not preserve \(j\).</p>
+        </li>
+        <li>
+          <p>The zeros of \(j(E_7(t))\) on \(X\) are places of degree \(6\) and \(18\), and those of
+            \(j(E_7(t))-1728\) places of degree \(12\) and \(24\). So \(j(E_7(t(x)))\notin\{0,1728\}\) at every point \(x\) of
+            \(X\) of degree at most \(2\).</p>
+        </li>
+      </ol>
+    </div>
+    <p><strong>Proof.</strong> Part B of the certificate checks (a) (the \(2\)-Selmer group has order \(2=\#X(\Q)[2]\)); that \(e\)
+      is a root of the \(2\)-division polynomial of \(E_7(t)\) identically on \(X\); that \(X\) and \(Y\) are rational
+      functions of \((t,e)\), so that \(\Q(X)=\Q(t,e)\); that \(t\) has degree \(3\) on \(X\); that the plane curve
+      \(G(t,e)=0\) given by the \(2\)-division polynomial is absolutely irreducible, and that its singular points satisfy
+      \(b\,\Delta(E_7(t))=0\); the pole orders of \(j\); (c): the \(j\)-invariants agree in \(\Q(X)\) and the ratio
+      \(c_4'c_6/(c_4c_6')\) is a square \(u^2\) in \(\Q(X)\); and the degrees in (d). At a point with
+      \(j\notin\{0,1728,\infty\}\) the four values \(c_4,c_6,c_4',c_6'\) are finite and nonzero, so \(u\) is regular and
+      nonzero there and the two curves are isomorphic over \(k\). Since \(t\) has degree \(3\), \(G\) has degree \(3\) in
+      \(e\) and \(\Q(X)=\Q(t,e)\), the map \(x\mapsto(t(x),e(x))\) is birational onto \(G=0\), and \(X\) is the
+      normalization of its projective closure. For (b), (I10) gives \(t_0\in k\) with \((E,8P)\cong(E_7(t_0),(0,0))\),
+      and \(7P\) gives a root \(e_0\in k\) of the \(2\)-division polynomial. As \(b(t_0)\Delta(E_7(t_0))\ne0\), the point
+      \((t_0,e_0)\) is a smooth point of \(G=0\), so it has a unique preimage \(x\) on \(X\), which is therefore
+      \(k\)-rational; \(x\notin X(\Q)\) because \(j(E)\) is finite. ∎</p>
+    <p><strong>Quadratic points.</strong> Let \(x\in X(K)\setminus X(\Q)\), \(K\) quadratic, and \(R=x+x^\sigma\in X(\Q)\). If
+      \(R=O\), then \(x^\sigma=-x\), i.e. \(x=(m,y)\) with \(m\in\Q\) and \(q_{O,m}(y)=0\), where
+      \(q_{O,m}(Y)\)<wbr>\({}=Y^2+(m+1)Y-(m^3-m)\). If \(R\ne O\), the line through \(x\), \(x^\sigma\) and \(-R\) is defined over
+      \(\Q\) and not vertical, of slope \(m\in\Q\), and \(X(x)\) is a root of a monic quadratic \(q_{R,m}\in\Q[X]\) (as in
+      <a href="#p2210">[P2210, Lemma 7(c)]</a>). In both cases \(q_{R,m}\) is irreducible and \(K\) is its splitting field. Translation by
+      the \(3\)-torsion point \(\tau=(0,0)\) replaces \(R\) by \(R+2\tau\) and, by <a href="#lemma-model">Lemma 4</a>(c) and (d),
+      does not change the curve \(E_7(t(x))\); and \(2k\tau\) (\(k=0,1,2\)) runs through the \(3\)-torsion
+      \(\{O,(0,0),(0,-1)\}\). Hence every elliptic curve over a quadratic field with a point of order \(14\) is
+      \(E_7(t(x))\) for a point \(x\) of</p>
+    <div class="equation">\[
+      \mathcal A:\ x^\sigma=-x,\quad x=(m,y),\ m\in\Q,\qquad\text{or}\qquad
+      \mathcal B:\ x+x^\sigma=(-1,0).
+    \]</div>
+    <p>In setting (Q) the elliptic curves \(E\subset A_K\) have no CM, which gives \(j(E)\notin\{0,1728\}\) independently
+      of <a href="#lemma-model">Lemma 4</a>(d): in type (S) by definition, and in type (N) because if \(E\) had CM by an order in an
+      imaginary quadratic field \(M\), then \(E^\sigma\) would have CM by an order in \(M\) as well, and \(E^\sigma\) would
+      be isogenous to \(E\) over \(\bar\Q\), contrary to type (N).</p>
+  </section>
+
+  <section id="invariants">
+    <h3>6. Two-division invariants</h3>
+    <p>Let \(E/K\) have \(E(K)[2]=\langle T\rangle\cong\Z/2\). In a model \(y^2=x(x^2+ax+\beta)\) with \(T=(0,0)\) put
+      \(\Delta_E=a^2-4\beta\) and \(\beta_E=\beta\). Their classes in \(K^\times/K^{\times2}\) do not depend on the model;
+      \(K(E[2])=K(\sqrt{\Delta_E})\) is quadratic over \(K\), and \(K(E_1[2])=K(\sqrt{\beta_E})\) for
+      \(E_1=E/\langle T\rangle\), whose \(2\)-division quadratic has discriminant \(16\beta\). A \(K\)-isogeny of odd degree
+      \(E\to E''\) preserves both classes, since it identifies \(E[2^\infty]\) with \(E''[2^\infty]\) and induces an odd
+      isogeny \(E_1\to E''_1\).</p>
+    <div class="theorem" id="lemma-descent">
+      <p><strong>Lemma 5 (descent forces a biquadratic two-division field).</strong> Let \(\psi:E[2]\to E^\sigma[2]\) be a \(G_K\)-equivariant isomorphism with
+        \(\psi(\tilde\sigma\psi(P))=\tilde\sigma(P)\) for all \(P\in E[2]\). Then \(\Norm_{K/\Q}(\Delta_E)\in\Q^{\times2}\).</p>
+    </div>
+    <p><strong>Proof.</strong> Put \(M=K(E[2])\). Isomorphic \(G_K\)-modules have the same splitting field, so
+      \(M=K(E^\sigma[2])=\tilde\sigma M\), \(M/\Q\) is Galois, \(\Delta_E/\sigma(\Delta_E)\in K^{\times2}\) and
+      \(\Norm(\Delta_E)\in\Q^{\times2}\cup d\Q^{\times2}\). If \(\Norm(\Delta_E)\in d\Q^{\times2}\setminus\Q^{\times2}\),
+      then \(\Gal(M/\Q)\) is cyclic of order \(4\) (write \(\sigma(\Delta_E)=\gamma^2\Delta_E\); a lift of \(\sigma\) maps
+      \(\sqrt{\Delta_E}\mapsto\gamma\sqrt{\Delta_E}\), and its square multiplies \(\sqrt{\Delta_E}\) by \(\Norm(\gamma)\);
+      from \((\gamma\Delta_E)^2=\Norm(\Delta_E)=dr^2\) one gets \(\gamma=\pm r\sqrt d/\Delta_E\) and
+      \(\Norm(\gamma)=-1\)); choose \(\tilde\sigma\) generating it, so that \(\tilde\sigma^2\) swaps the two points
+      \(P_1,P_2\in E[2]\setminus\{0,T\}\). As \(\psi(T)=\tilde\sigma T\), either \(\psi(P_i)=\tilde\sigma P_i\), and then
+      \(\psi(\tilde\sigma\psi P_1)=\psi(P_2)=\tilde\sigma P_2\)<wbr>\({}\neq\tilde\sigma P_1\), or \(\psi(P_1)=\tilde\sigma P_2\), and
+      then \(\psi(\tilde\sigma\psi P_1)=\psi(P_1)=\tilde\sigma P_2\)<wbr>\({}\neq\tilde\sigma P_1\). ∎</p>
+    <div class="theorem" id="lemma-cheb">
+      <p><strong>Lemma 6 (point counts at inert primes).</strong> If \(4\mid\#\widetilde E(O_K/pO_K)\) for all but finitely many primes \(p\) inert in \(K\), then
+        \(\Norm(\Delta_E)\in\Q^{\times2}\), or \(\Norm(\beta_E)\in\Q^{\times2}\), or
+        \(d\,\Norm(\Delta_E)\Norm(\beta_E)\in\Q^{\times2}\).</p>
+    </div>
+    <p><strong>Proof.</strong> For almost all inert \(p\), with \(k=O_K/pO_K\cong\F_{p^2}\) and the reduction
+      \(y^2=x(x^2+\bar ax+\bar\beta)\), \(4\mid\#\widetilde E(k)\) iff \(\bar\Delta\in k^{\times2}\) (full \(2\)-torsion) or
+      \((0,0)\in2\widetilde E(k)\). If \(\bar\Delta\notin k^{\times2}\): a point \(U\) with \(2U=(0,0)\) has
+      \(x(U)^2=\bar\beta\) (the tangent at \(U\) passes through \((0,0)\)), so \(\bar\beta\in k^{\times2}\) is necessary;
+      conversely if \(\bar\beta=r^2\), exactly one of \(\bar a\pm2r\) is a nonzero square, since their product is
+      \(\bar\Delta\), say \(\bar a+2\epsilon r=\mu^2\), and \(U=(\epsilon r,\epsilon r\mu)\) satisfies \(2U=(0,0)\). An
+      element of \(k^\times\) is a square iff its norm to \(\F_p\) is, and \(\sigma\) induces the Frobenius of \(k\), so
+      for almost all inert \(p\): \(\Norm(\Delta_E)\) or \(\Norm(\beta_E)\) is a square mod \(p\). Chebotarev's theorem as
+      in <a href="#p2210">[P2210, Lemma 6]</a> (the system \(\phi(d)=\phi(\Norm\Delta_E)\)<wbr>\({}=\phi(\Norm\beta_E)=1\) is unsolvable only if
+      \(\Norm\Delta_E\), \(\Norm\beta_E\) or the sum of the three classes is trivial) gives the claim. ∎</p>
+  </section>
+
+  <section id="complements">
+    <h3>7. Conjugate complements</h3>
+    <div class="theorem" id="lemma-char">
+      <p><strong>Lemma 7 (a character).</strong> Let \(U\in E(\bar\Q)\) with \(2U=T\). Then \(g\mapsto e_2(gU-U,T)\) is the quadratic character of \(G_K\) cutting
+        out \(K(\sqrt{\beta_E})\).</p>
+    </div>
+    <p><strong>Proof.</strong> The halves of \(T=(0,0)\) on \(y^2=x(x^2+ax+\beta)\) have \(x^2=\beta\) (proof of
+      <a href="#lemma-cheb">Lemma 6</a>), and \(U+T=3U=-U\) has the same \(x\)-coordinate as \(U\). So \(gU-U\in\{0,T\}\),
+      i.e. \(e_2(gU-U,T)=1\), iff \(gU=\pm U\) iff \(g\) fixes \(x(U)=\pm\sqrt\beta\). ∎</p>
+    <div class="theorem" id="lemma-glue">
+      <p><strong>Lemma 8.</strong> In setting (Q), let \(A\) have a principal polarization defined over \(\Q\), suppose that \(A(\Q)\) has a point of
+        order \(7\) and \(\#A(\Q)[2^\infty]=4\), and let \(E\subset A_K\) be an elliptic curve whose complement is
+        \(E^\perp=E^\sigma\). Then \(E(K)\) has a point of order \(14\), \(E(K)[2^\infty]=\langle T\rangle\cong\Z/2\), and</p>
+      <div class="equation">\[
+        \text{(N1)}\quad\Norm_{K/\Q}(\Delta_E)\in\Q^{\times2},\qquad\qquad
+        \text{(N2)}\quad\Norm_{K/\Q}(\beta_E)\in\Q^{\times2}\cup d\,\Q^{\times2}.
+      \]</div>
+    </div>
+    <p><strong>Proof.</strong> By (I9), \(E\cap E^\sigma=E[n]=E^\sigma[n]\), and with \(\psi_n(x)=-x\) the addition map
+      \(\varphi:B=\Res_{K/\Q}E\to A\) is an isogeny over \(\Q\) with kernel \(\Gamma_n=\{(x,\psi_nx):x\in E[n]\}\) (I8),
+      which is \(G_{\Q}\)-stable. Let \(G=A(\Q)[2^\infty]\), \(H=G\cap E=G\cap E^\sigma\) (\(\tilde\sigma\) fixes \(G\) and
+      swaps \(E\), \(E^\sigma\)), and \(\pi_E\) as in (I9), with kernel \(E^\sigma\). Then \(H\) and \(\pi_E(G)\cong G/H\) lie
+      in \(E(K)[2^\infty]\), and \(E(K)\) has a point of order \(7\) (the point \(P_7\) lies in \(E\), or
+      \(\pi_E(P_7)\ne0\)). By (I1), \(\#E(K)[2^\infty]\le2\), so \(\#H=\#G/H=2\): this gives the first assertion, and
+      \(T\in E\cap E^\sigma=E[n]\), so \(n\) is even. Let \(2^a\| n\), \(\Gamma=\Gamma_n[2^\infty]=\{(x,\psi
+      x):x\)<wbr>\({}\in E[2^a]\}\), \(\psi=\psi_n|_{E[2^a]}\). Then \(\varphi\) identifies \(A[2^\infty]\) with
+      \(B[2^\infty]/\Gamma\) as \(G_{\Q}\)-modules, and multiplication by \(2^a\) gives an exact sequence</p>
+    <div class="equation">\[
+      0\to W^{G_{\Q}}\to G\to B(\Q)[2^\infty]=\{0,(T,\sigma T)\},\qquad W=B[2^a]/\Gamma .
+    \]</div>
+    <p>Here \((u,v)\mapsto v-\psi(u)\) identifies \(W\) with \(E^\sigma[2^a]\) as \(G_K\)-modules, so
+      \(\#W^{G_{\Q}}\le\#E^\sigma(K)[2^a]=2\). As \(\#G=4\), there are \(U\in E\), \(V\in E^\sigma\) with \(2^aU=T\),
+      \(2^aV=\sigma T\) and \(g(U,V)-(U,V)\in\Gamma\) for all \(g\in G_{\Q}\). Put \(U_1=2^{a-1}U\), \(V_1=2^{a-1}V\) and
+      \(\psi_1=\psi|_{E[2]}\). Then \(2U_1=T\), \(2V_1=\sigma T\), and for \(g\in G_K\): \(\psi_1(gU_1-U_1)=gV_1-V_1\).</p>
+    <p>(N1) \(\Gamma\cap B[2]\) is the graph of \(\psi_1\) and is \(G_{\Q}\)-stable; for \(g=\tilde\sigma\) this says
+      \(\psi_1(\tilde\sigma\psi_1(P))=\tilde\sigma P\) (I8). <a href="#lemma-descent">Lemma 5</a> applies. (Directly: as \(n\) is even,
+      \(E[2]=E^\sigma[2]\subseteq E\cap E^\sigma\) is \(G_{\Q}\)-stable and contains \(T\in A(\Q)\), so \(G_{\Q}\) acts on
+      \(E[2]\) through the stabiliser of \(T\), of order \(2\); hence \(K(E[2])=K(\sqrt r)\) for some \(r\in\Q^\times\), and
+      \(\Norm(\Delta_E)\in r^2\Q^{\times2}=\Q^{\times2}\).)</p>
+    <p>(N2) \(\psi_1\) is an isomorphism of \(2\)-dimensional \(\F_2\)-spaces, hence symplectic, and \(\psi_1(T)=\sigma T\)
+      (the unique \(G_K\)-fixed nonzero points). So \(e_2(gV_1-V_1,\sigma T)\)<wbr>\({}=e_2(\psi_1(gU_1-U_1),\psi_1T)\)<wbr>\({}=e_2(gU_1-U_1,T)\).
+      By <a href="#lemma-char">Lemma 7</a>, applied to \(E\) and to \(E^\sigma\) (with \(\beta_{E^\sigma}=\sigma(\beta_E)\)),
+      \(K(\sqrt{\beta_E})=K(\sqrt{\sigma(\beta_E)})\), i.e. \(\beta_E\sigma(\beta_E)\in K^{\times2}\cap\Q\)<wbr>\({}=\Q^{\times2}\cup
+      d\Q^{\times2}\). ∎</p>
+  </section>
+
+  <section id="qcurves">
+    <h3>8. Geometric squares: \(\Q\)-curves of square degree</h3>
+    <div class="theorem" id="lemma-qcurve">
+      <p><strong>Lemma 9.</strong> In setting (Q) of type (S), suppose that \(A(\Q)\) has a point of order \(7\) and \(\#A(\Q)[2^\infty]=4\). Let
+        \(E\subset A_K\) and \(E'\) be as in <a href="#lemma-x114">Lemma 3</a>. Then \(E'\) has no CM, \(E'^\sigma\) is
+        \(K\)-isogenous to \(E'\), \(\Hom_K(E',E'^\sigma)=\Z\mu\) with \(\mu\) cyclic of degree \(\delta\) and
+        \(\mu^\sigma\mu=\epsilon\delta\), \(\epsilon=\pm1\), \(\End^0_{\Q}(A)\cong\Q(\sqrt{\epsilon\delta})\),
+        \(v_2(\delta)\le1\), and \(\Norm(\Delta_{E'})\in\Q^{\times2}\).</p>
+    </div>
+    <p><strong>Proof.</strong> By (I5), \(E'\sim_KE\sim_KE^\sigma\sim_KE'^\sigma\). As \(\End(E'_{\bar\Q})=\Z\),
+      \(\Hom_K(E',E'^\sigma)\) has rank one; a generator \(\mu\) is cyclic, and \(\mu^\sigma\mu\in\End(E')=\Z\) has
+      absolute value \(\delta\). By (I8), \(\End^0_{\Q}(A)\)<wbr>\({}\cong\End^0_{\Q}(\Res_{K/\Q}E')\)<wbr>\({}=\Q[s]\),
+      \(s(x,y)=(\mu^\sigma y,\mu x)\), \(s^2=\epsilon\delta\). A \(K\)-rational cyclic subgroup of order \(4\) in
+      \(\ker\mu\) is excluded by <a href="#lemma-x114">Lemma 3</a> (its proof applies to \(E'\), whose \(2\)-power torsion is
+      \(G_K\)-isomorphic to that of \(E\)), so \(v_2(\delta)\le1\). If \(\delta\) is odd, \(\psi=\mu|_{E'[2]}\) satisfies
+      \(\psi(\tilde\sigma\psi P)=\mu\mu^\sigma(\tilde\sigma P)\)<wbr>\({}=\epsilon\delta\,\tilde\sigma P=\tilde\sigma P\), and
+      <a href="#lemma-descent">Lemma 5</a> applies. If \(\delta\equiv2\pmod4\), then \(\mu\) factors through
+      \(E'\to E'_1=E'/\langle T\rangle\) (the unique \(K\)-rational subgroup of order \(2\)), followed by an isogeny of odd
+      degree to \(E'^\sigma\); so \(K(\sqrt{\beta_{E'}})=K(\sqrt{\sigma(\Delta_{E'})})\) and
+      \(\Norm(\beta_{E'})\Norm(\Delta_{E'})\in\Q^{\times2}\). By (I8) and (I2),
+      \(4\mid\#\widetilde A(\F_p)=\#\widetilde{E'}(\F_{p^2})\) at almost all inert \(p\), and <a href="#lemma-cheb">Lemma 6</a>
+      leaves only \(\Norm(\Delta_{E'})\in\Q^{\times2}\) (and \(\Norm(\beta_{E'})\in\Q^{\times2}\)), because \(d\) is not a
+      square. ∎</p>
+    <div class="theorem" id="lemma-tate">
+      <p><strong>Lemma 10 (cyclic isogenies and the valuation of j).</strong> Let \(L\) be a finite extension of \(\Q_p\), \(v\) the valuation of \(\bar L\) with \(v(p)=1\), and \(f:E\to E'\) a
+        cyclic isogeny of degree \(N\) of elliptic curves over \(L\) with \(v(j(E))&lt;0\). Then \(v(j(E'))=(a/d)\,v(j(E))\)
+        for positive integers \(a,d\) with \(ad=N\). In particular, if \(v(j(E'))=v(j(E))\), then \(N\) is a square.</p>
+    </div>
+    <p><strong>Proof.</strong> By (I11) there is \(q\in L\) with \(v(q)=-v(j(E))&gt;0\) and \(j(E)=j(q)\). Fix \(Q_0\in\bar L\) with
+      \(Q_0^N=q\) and a primitive \(N\)-th root of unity \(\zeta\in\bar L\), and put \(L'=L(Q_0,\zeta)\), a complete
+      field. A Laurent series in \(T\) with coefficients in \(\Z[\zeta_N]\) and finitely many negative terms converges at
+      \(T=Q_0\) in \(L'\), since \(v(Q_0)&gt;0\), and evaluation at \(T=Q_0\), \(\zeta_N\mapsto\zeta\), is a ring homomorphism
+      on these series. As polynomials in \(X\), both sides of the identity of (I13) have such series as coefficients,
+      since \(c(n)\in\Z\) and \(\Phi_N\in\Z[X,Y]\). Applied to that identity with \(q^{1/N}=T\), so that \(q^{a/d}=T^{a^2}\) and
+      \(\zeta_d^b=\zeta_N^{ab}\) when \(ad=N\), it gives</p>
+    <div class="equation">\[
+      \Phi_N(X,j(E))=\prod_{a,b,d}\bigl(X-j(\zeta^{ab}Q_0^{a^2})\bigr)\qquad\text{in }L'[X].
+    \]</div>
+    <p>The dual isogeny \(\hat f:E'\to E\) is cyclic of degree \(N\), so \(\Phi_N(j(E'),j(E))=0\) by (I13), and
+      \(j(E')=j(\zeta^{ab}Q_0^{a^2})\) for some \(a,b,d\). By (I11),
+      \(v(j(E'))=-a^2v(Q_0)\)<wbr>\({}=-(a^2/N)\,v(q)\)<wbr>\({}=(a/d)\,v(j(E))\). If \(v(j(E'))=v(j(E))\neq0\), then \(a=d\) and \(N=a^2\).
+      ∎</p>
+    <div class="theorem" id="prop-square">
+      <p><strong>Proposition 11.</strong> Let \(E'\) be an elliptic curve without CM over a quadratic field \(K\), with a point of order \(14\) whose point on
+        \(X\) lies in family \(\mathcal A\). If \(E'^\sigma\) is \(K\)-isogenous to \(E'\), then the degree \(\delta\) of a
+        cyclic generator of \(\Hom_K(E',E'^\sigma)\) is a perfect square.</p>
+    </div>
+    <p><strong>Proof.</strong> After a diamond operator (<a href="#lemma-model">Lemma 4</a>(c) and (d)), \(x=(m,y)\) with \(m\in\Q\) and
+      \(x^\sigma=-x\), so \(j(E'^\sigma)=J(-x)\) for
+      \(J=j(E_7(t))\in\Q(X)\). For \(m=a/b\) in lowest terms, the classes of \(m\) in
+      \(\mathbb P^1(\F_3)=\{0,1,-1,\infty\}\) are \(X\)-coordinates of rational cusps, so \(x\) reduces to a cusp modulo
+      every prime \(\mathfrak p\mid3\) of \(K\). Concretely, Part E of the certificate writes \(J(x)J(-x)\) and
+      \(\rho\)<wbr>\({}=J(x)/J(-x)\)<wbr>\({}+J(-x)/J(x)\) as rational functions of \(m\) and checks, on homogenized numerators and denominators,
+      that for every \((a:b)\in\mathbb P^1(\F_3)\) the numerator of \(J(x)J(-x)\) is prime to \(3\) and its denominator
+      divisible by \(3\), and that the denominator of \(\rho\) is prime to \(3\). Hence \(v_3(J(x)J(-x))&lt;0\) and
+      \(v_3(\rho)\ge0\) for every \(m\in\Q\). If \(3\) is not split in \(K\), then
+      \(v_{\mathfrak p}(J(-x))=v_{\mathfrak p}(\sigma J(x))\)<wbr>\({}=v_{\mathfrak p}(J(x))\); if it splits, \(J(x)/J(-x)\in\Q_3\)
+      is a root of \(z^2-\rho z+1\) and hence a unit. In both cases
+      \(v_{\mathfrak p}(j(E'))=v_{\mathfrak p}(j(E'^\sigma))&lt;0\). The generator \(\mu\) is a cyclic isogeny of degree
+      \(\delta\) from \(E'\) to \(E'^\sigma\) over \(K\subset K_{\mathfrak p}\), so <a href="#lemma-tate">Lemma 10</a>, with
+      \(L=K_{\mathfrak p}\), shows that \(\delta\) is a square. ∎</p>
+    <div class="theorem" id="cor-imag">
+      <p><strong>Corollary 12.</strong> In setting (Q) of type (S), suppose that \(A\) has a principal polarization \(\lambda\) defined over \(\Q\), that
+        \(A(\Q)\) has a point of order \(7\) and that \(\#A(\Q)[2^\infty]=4\). Then \(\End^0_{\Q}(A)\cong\Q(i)\), and every
+        elliptic curve \(E\subset A_K\) satisfies \(E^\sigma=E^\perp\).</p>
+    </div>
+    <p><strong>Proof.</strong> By <a href="#lemma-qcurve">Lemma 9</a>, \(\Norm(\Delta_{E'})\in\Q^{\times2}\). As \(E'\) has no CM, its point on
+      \(X\) lies in family \(\mathcal A\) or \(\mathcal B\) (<a href="#x114">Section 5</a>), and <a href="#prop-B">Proposition 13</a> below
+      excludes \(\mathcal B\); so <a href="#prop-square">Proposition 11</a> gives \(\delta=r^2\) with \(r\in\Z\). As \(A\) is simple,
+      \(\End^0_{\Q}(A)\cong\Q(\sqrt{\epsilon r^2})\) is a field, so \(\epsilon=-1\). Since \(\lambda\) is defined over
+      \(\Q\), the Rosati involution \(\varphi\mapsto\lambda^{-1}\varphi^\vee\lambda\) of \(\End^0(A_{\bar\Q})\) commutes
+      with the action of \(G_{\Q}\), so it preserves \(F=\End^0_{\Q}(A)\). It is a positive involution, so on the imaginary
+      quadratic field \(F\) it is complex conjugation (the identity is not positive, as \(\mathrm{Tr}(i\cdot i)&lt;0\)), and
+      the Rosati-symmetric elements of \(F\) are \(\Q\). For \(E\subset A_K\), the norm endomorphism \(N_E\) of (I9) is
+      symmetric, and \(\tilde\sigma(N_E)=N_{E^\sigma}\) by (I9). Hence \(N_E+N_{E^\sigma}\) is \(G_{\Q}\)-invariant and
+      symmetric, so it equals some \(c\in\Z\). On \(E\), \(N_E=n\), so \(N_{E^\sigma}|_E=c-n\); if \(c\ne n\) then
+      \(E\subseteq N_{E^\sigma}(A)=E^\sigma\), contradicting \(E\ne E^\sigma\). So \(E\subseteq\ker(N_{E^\sigma})^0=
+      (E^\sigma)^\perp\), and \(E=(E^\sigma)^\perp\), both being elliptic curves. Applying \(\tilde\sigma\) and (I9), and as
+      \(\tilde\sigma(E^\sigma)=E\), we get \(E^\sigma=\tilde\sigma((E^\sigma)^\perp)=E^\perp\). ∎</p>
+  </section>
+
+  <section id="families">
+    <h3>9. The two families</h3>
+    <p>For a point of a family over \(K=\Q(\sqrt{d})\) let \(E=E_7(t(x))\). Part C of the certificate computes, over the
+      function field \(\Q(m)\) and the quadratic extension defined by \(q_{R,m}\), the discriminant \(d\) of \(q_{R,m}\),
+      \(\Delta_E\) and \(\beta_E\) (as the discriminant of the quadratic factor of the \(2\)-division polynomial and its
+      value at \(e\)), their norms, and the square classes:</p>
+    <div class="equation">\[
+      \begin{array}{c|l}
+      \mathcal A &amp; d=(m+1)(4m^2-3m+1),\quad \Norm(\Delta_E)\sim-(m^3-2m^2-m+1),\\
+      &amp; \Norm(\beta_E)\sim(m+1)(m^3-9m^2-m+1);\\[2pt]\hline
+      \mathcal B &amp; d=m^4+2m^3+7m^2+6m+1,\quad \Norm(\Delta_E)\sim m(m+1)(m^3+5m^2+6m+1),\\
+      &amp; \Norm(\beta_E)\sim-m(m+1)(m^3-2m^2-m+1)
+      \end{array}
+    \]</div>
+    <p>(\(\sim\): equality up to nonzero squares in \(\Q(m)\); \(\mathcal A\) with \(R=O\), \(\mathcal B\) with
+      \(R=(-1,0)\)). Call \(m_0\in\Q\) exceptional for \(R\) if it is a rational zero or pole of \(d\), of the norms of
+      \(\Delta_E\), \(\beta_E\), \(t\), \(1-t\), \(e\) and \(\Delta(E_7(t))\), or of a coordinate of \(t\), \(s\), \(e\),
+      \(\Delta_E\), \(\beta_E\) in the basis \(1,w\), where \(w\) is a root of \(q_{R,m}\). For family \(\mathcal A\) the
+      exceptional values are \(-1,0,\frac12,1\), and for family \(\mathcal B\) they are \(-1,-\frac12,0\). For
+      \(m_0\) not exceptional with \(q_{R,m_0}\) irreducible, the classes specialize, by the local-ring argument of
+      <a href="#p2210">[P2210, Proposition 8]</a>. At every exceptional value the certificate either finds \(q_{R,m_0}\) reducible (no
+      quadratic point) or checks the conditions directly. Exactly three genuine quadratic points occur at exceptional
+      values of the six families, for \(R=O\), \((-1,0)\), \((1,0)\) and \(m_0=\frac12\), \(-\frac12\), \(-3\), over
+      \(\Q(\sqrt3)\), \(\Q(\sqrt{-7})\) and \(\Q(\sqrt{17})\), with \(\Norm(\Delta_E)\) of class \(-2\), \(14\) and \(2\);
+      so (N1) fails at all three.</p>
+    <div class="theorem" id="prop-B">
+      <p><strong>Proposition 13.</strong> No quadratic point of family \(\mathcal B\) gives \(\Norm(\Delta_E)\in\Q^{\times2}\).</p>
+    </div>
+    <p><strong>Proof.</strong> Let \(x\) be a quadratic point of family \(\mathcal B\), with \(R=(-1,0)\) and slope \(m_0\in\Q\), so
+      that \(q_{R,m_0}\) is irreducible. If \(m_0\) is exceptional, then \(m_0=-\frac12\) and \(\Norm(\Delta_E)\) has class
+      \(14\). Otherwise \(\Norm(\Delta_E)\in\Q^{\times2}\) means that \(m_0(m_0+1)(m_0^3+5m_0^2\)<wbr>\({}+6m_0+1)\) is a nonzero
+      square. The curve \(y^2\)<wbr>\({}=m(m+1)(m^3+5m^2\)<wbr>\({}+6m+1)\) has genus \(2\) and its Jacobian has rank \(0\); <code>Chabauty0</code>
+      shows that its rational points are the point at infinity and the points with \(m\in\{-1,0\}\), where \(q_{R,m}\) is
+      reducible (Part D; the same holds for the other two points \(R=(1,0),(1,-2)\) of the coset of \((-1,0)\)). ∎</p>
+    <div class="theorem" id="prop-A">
+      <p><strong>Proposition 14.</strong> No quadratic point of family \(\mathcal A\) satisfies (N1) and (N2).</p>
+    </div>
+    <p><strong>Proof.</strong> Let \(x=(m_0,y)\) be a quadratic point of family \(\mathcal A\), so that \(q_{O,m_0}\) is irreducible.
+      If \(m_0\) is exceptional, then \(m_0=\frac12\) and \(\Norm(\Delta_E)\) has class \(-2\), so (N1) fails. Otherwise,
+      by the table, (N1) says \(g_D(m_0)\in\Q^{\times2}\), and (N2) says \((m_0+1)c(m_0)\in\Q^{\times2}\) or
+      \((4m_0^2-3m_0+1)c(m_0)\in\Q^{\times2}\), where \(g_D(m)\)<wbr>\({}=-(m^3-2m^2-m+1)\) and \(c(m)=m^3-9m^2-m+1\). Put
+      \(\tau(m)=(1-m)/(1+m)\).</p>
+    <p><em>Second alternative.</em> The curve \(w^2=(4m^2-3m+1)c(m)\) has genus \(2\) and its Jacobian has rank \(1\);
+      <code>Chabauty</code> shows that its rational points are the point at infinity and the points with \(m=0\), where
+      \(q_{O,0}(Y)=Y^2+Y\) is reducible (Part D).</p>
+    <p><em>First alternative.</em> The identity \((m+1)^4g_D(\tau m)\)<wbr>\({}=(m+1)c(m)\) shows that \(x_1=-m_0\) and
+      \(x_2=-\tau(m_0)\) are the \(x\)-coordinates of rational points of \(C_D:Y^2=H(x)\)<wbr>\({}=x^3+2x^2-x-1\) (note that
+      \(g_D(m)=H(-m)\), and \(m_0\ne-1\)), an elliptic curve of rank \(1\) without rational \(2\)-torsion. Let
+      \(L=\Q(\alpha)\), \(H(\alpha)=0\) (the cubic field \(\Q(\zeta_7)^+\)). The \(2\)-descent map
+      \(C_D(\Q)/2C_D(\Q)\to L^\times/L^{\times2}\), \(P\mapsto x(P)-\alpha\), is injective, and \(C_D(\Q)/2C_D(\Q)\) has
+      order \(2\), generated by \(P_0=(-1,-1)\) with \(\kappa_0=-1-\alpha\notin L^{\times2}\). As
+      \((x_1-\alpha)(x_2-\alpha)(m_0+1)^2\)<wbr>\({}=(m_0+\alpha)((\alpha-1)m_0\)<wbr>\({}+\alpha+1)(m_0+1)\), we get</p>
+    <div class="equation">\[
+      (m_0+\alpha)\bigl((\alpha-1)m_0+\alpha+1\bigr)(m_0+1)\in\delta L^{\times2},\qquad\delta\in\{1,\kappa_0\},
+    \]</div>
+    <p>so \(m_0\) is the value of the function \(m\) at an \(L\)-point of
+      \(E_\delta:\ \delta v^2\)<wbr>\({}=(\alpha-1)(m+\alpha)\bigl(m\)<wbr>\({}+\tfrac{\alpha+1}{\alpha-1}\bigr)(m+1)\). Over \(L\),
+      \(E_{\kappa_0}\) has rank \(0\) and torsion \((\Z/2)^2\), whose points have
+      \(m\)<wbr>\({}\in\{\infty,-1,-\alpha,2\alpha^2\)<wbr>\({}+6\alpha+3\}\); \(E_1\) has rank \(1&lt;[L:\Q]\), and elliptic Chabauty <a href="#br">[Br]</a>
+      (Magma, on a subgroup of finite odd index that is also \(5\)-saturated, which covers the primes dividing the integer
+      \(R=10\) that Magma returns) shows that its only points with \(m\in\mathbb P^1(\Q)\) have \(m\in\{\infty,-1\}\). So
+      \(m_0=-1\), which is exceptional: a contradiction. ∎</p>
+  </section>
+
+  <section id="proof">
+    <h3>10. Proof of the Theorem and consequences for the census</h3>
+    <p><em>Proof of the Theorem.</em> Let \(A\) be as in the Theorem, with principal polarization \(\lambda\) defined over
+      \(\Q\) and a point of order \(7\) in \(A(\Q)\). By (I7), \(\#A(\Q)[2^\infty]\le4\); suppose it equals \(4\). Type
+      (CM) is excluded by <a href="#prop-cm">Proposition 2</a>, and type (S) with \(\Gamma\) of order \(3\) or \(6\) by
+      <a href="#cyclic">Section 3</a>. In setting (Q), choose an elliptic curve \(E\subset A_K\) with \(E^\perp=E^\sigma\): in type
+      (N) either of the two curves works, as \(E^\perp\neq E\) is an elliptic curve in \(A_K\) <a href="#p45">[P45, proof of
+      Lemma 3]</a>; in type (S) any \(E\) works by <a href="#cor-imag">Corollary 12</a>. By <a href="#lemma-glue">Lemma 8</a>, \(E\) has a point
+      of order \(14\) over \(K\) and satisfies (N1) and (N2). The curve \(E\) has no CM, so \(j(E)\notin\{0,1728\}\)
+      (<a href="#x114">Section 5</a>; also <a href="#lemma-model">Lemma 4</a>(d)), and its point on \(X\) lies in family \(\mathcal A\) or
+      \(\mathcal B\), as the diamond operator of <a href="#lemma-model">Lemma 4</a>(c) does not change \(E\).
+      <a href="#prop-B">Proposition 13</a> excludes \(\mathcal B\) by (N1), and <a href="#prop-A">Proposition 14</a> excludes \(\mathcal A\). Hence
+      \(\#A(\Q)[2^\infty]\le2\). ∎</p>
+    <p><em>Proof of the Corollary.</em> The Jacobian of a curve of genus \(2\) over \(\Q\) is an abelian surface with a
+      principal polarization defined over \(\Q\). The groups \([28]\) and \([2,14]\) have a point of order \(7\) and
+      \(2\)-primary parts \(\Z/4\) and \(\Z/2\times\Z/2\) of order \(4\); the groups \([2,28]\) and \([2,2,14]\) have
+      \(2\)-primary parts of order \(8\). ∎</p>
+    <p>On the census, \([28]\) and \([2,14]\) become impossible in the class “geometrically split, simple over \(\Q\)”
+      (before this proof both cells were empty and unexcluded). Both groups have examples split over \(\Q\) (the census curves
+      28.b and 2.14.b), so their combined geometrically split cells keep the grades of the class “split over \(\Q\)” (at
+      present “open” for \([28]\) and “exact” for \([2,14]\)). For \([2,28]\) and \([2,2,14]\) the census entries
+      already cite <a href="#p228">[P228]</a> and <a href="#p2214">[P2214]</a>.</p>
+  </section>
+
+  <section id="remarks">
+    <h3>11. Remarks</h3>
+    <ol>
+      <li id="rem-pp">
+        <p><em>The principal polarization is needed.</em> Let \(E\) be the curve of family \(\mathcal A\) at
+          \(m=2\), over \(K=\Q(\sqrt{33})\). The certificate (part V) checks that \(E(K)_{\mathrm{tors}}\cong\Z/14\); that
+          \(\Norm(\Delta_E)\in\Q^{\times2}\), so that \(K(E[2])\) is biquadratic over \(\Q\); that \(j(E)\) is not integral, so
+          that \(E\) has no CM; and that the two primes \(\mathfrak p\), \(\mathfrak p'\) of \(K\) above \(31\) are of good
+          reduction with \(a_{\mathfrak p}(E)=4\) and \(a_{\mathfrak p'}(E)=-10\). Hence \(E\) is not geometrically isogenous
+          to \(E^\sigma\): otherwise, as \(\End(E_{\bar\Q})=\Z\), \(E^\sigma\) would be \(K\)-isogenous to a quadratic twist of
+          \(E\), and \(|a_{\mathfrak p'}(E)|=|a_{\mathfrak p}(E^\sigma)|\)<wbr>\({}=|a_{\mathfrak p}(E)|\). Let
+          \(B=\Res_{K/\Q}E/\langle(T,\sigma T)\rangle\). Writing \(E[2]=\{0,T,P_1,P_2\}\), \(E^\sigma[2]=\{0,\sigma
+          T,Q_1,Q_2\}\) with \(Q_i=\tilde\sigma P_i\) for a lift \(\tilde\sigma\) of order \(2\) on \(K(E[2])\), the classes of
+          \((T,0)\), \((P_1,Q_1)\), \((P_1,Q_2)\) are fixed by \(G_K\) and by \(\tilde\sigma\)
+          (e.g. \(\tilde\sigma(P_1,Q_1)=(\tilde\sigma^2P_1,Q_1)\)<wbr>\({}=(P_1,Q_1)\), and the nontrivial element \(\theta\) of
+          \(\Gal(K(E[2])/K)\) moves \((P_1,Q_1)\) by \((T,\sigma T)\)), so \(B(\Q)[2]\supseteq(\Z/2)^2\); the odd part of \(B(\Q)_{\mathrm{tors}}\) is
+          \(E(K)[7]\); and \(\#B(\Q)[2^\infty]\le4\) by <a href="#p2214">[P2214, Proposition 2]</a>, which needs no polarization. So
+          \(B(\Q)_{\mathrm{tors}}\cong\Z/2\times\Z/14\). As \(E\) and \(E^\sigma\) are not geometrically isogenous,
+          \(\End^0_{\Q}(B)=\Q\): \(B\) is simple over \(\Q\), geometrically split, and the classes of polarizations over \(\Q\)
+          form a rank-one lattice. The descent \(\lambda'\) of \(2\lambda_0\) along \(\Res_{K/\Q}E\to B\) has degree
+          \(16/4=4\), so it is primitive, and every polarization of \(B\) over \(\Q\) is \(k\lambda'\), of degree
+          \(4k^4\ne1\): \(B\) is not principally polarizable over \(\Q\).</p>
+      </li>
+      <li>
+        <p><em>\(\Q\)-curves with a point of order \(14\).</em> Among the \(14\) elliptic curves over quadratic fields with
+          torsion subgroup \(\Z/14\) in the LMFDB <a href="#lmfdb">[LMFDB]</a>, exactly two are \(\Q\)-curves: 2.0.7.1-196.2-a3 and
+          2.0.7.1-196.2-a4, over \(K=\Q(\sqrt{-7})\). Let \(E\) be the first,
+          \(y^2+xy+(a+1)y\)<wbr>\({}=x^3+(a-1)x^2+(6\)<wbr>\({}-5a)x+2a-1\) with \(a^2-a+2=0\). The certificate (part V) checks that
+          \(E(K)_{\mathrm{tors}}\cong\Z/14\); that \(j(E)\) is not integral, so that \(E\) has no CM; that
+          \(E/\langle T\rangle\cong E^\sigma\), which is the second curve, so that \(E\) is a \(\Q\)-curve of degree \(2\);
+          that \(E\cong E_7(t(x))\) for a quadratic point \(x\) of family \(\mathcal B\), at the exceptional value
+          \(m=-\frac12\) of <a href="#families">Section 9</a>, with \(\Norm(\Delta_E)\) and \(\Norm(\beta_E)\) of class \(14\); and that
+          \(j(E)\) is a unit at the prime \(3O_K\). This is consistent with <a href="#prop-square">Proposition 11</a>: the degree \(2\) is
+          not a square, and the point is not in family \(\mathcal A\). The census curve 14.c (LMFDB 9604.b3, table
+          <code>g2c_curves_new</code>), which shows that the theorem is sharp, has \(\#J(\F_p)=\#(\Res_{K/\Q}E)(\F_p)\) for its
+          Jacobian \(J\) at every prime \(5\le p&lt;120\), \(p\ne7\) (certificate, part V), as it would if \(J\) were
+          \(\Q\)-isogenous to \(\Res_{K/\Q}E\); the four curves of the LMFDB isogeny class 9604.b have rational torsion
+          \([14]\), \([2]\), \([14]\), \([2]\).</p>
+      </li>
+      <li>
+        <p><em>Validation (not used in the proof).</em> (i) In the LMFDB genus-\(2\) tables <code>g2c_curves</code> and
+          <code>g2c_curves_new</code>, the curves that are simple over \(\Q\), geometrically split and have
+          \(7\mid\#J(\Q)_{\mathrm{tors}}\) have rational torsion \([7]\), \([14]\) or \([21]\), so none has \(2\)-primary
+          torsion of order greater than \(2\). (ii) For the \(44\) quadratic points of family \(\mathcal A\) with \(m=a/b\),
+          \(|a|\le6\), \(1\le b\le6\), the valuations \(v_{\mathfrak p}(j(E))\) and \(v_{\mathfrak p}(j(E^\sigma))\) are equal
+          negative multiples of \(7\) at every prime \(\mathfrak p\) of \(K\) above \(3\) (certificate, part V), in accordance
+          with the proof of <a href="#prop-square">Proposition 11</a>.</p>
+      </li>
+      <li>
+        <p><em>Where the hypotheses are used.</em> The principal polarization, and the fact that it is defined over \(\Q\), enter
+          through (I7) (cyclic cubic case, which needs a \(G_{\Q}\)-equivariant perfect pairing), through the complement
+          \(E^\perp=E^\sigma\) (<a href="#lemma-glue">Lemma 8</a>, type (N), where \(\pi_E\) must be defined over \(K\)) and through
+          the Rosati argument of <a href="#cor-imag">Corollary 12</a>; <a href="#rem-pp">Remark 1</a> shows that it
+          cannot be dropped. Simplicity over \(\Q\) gives \(E^\sigma\ne E\) and the field \(\End^0_{\Q}(A)\).</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="computations">
+    <h3>12. Computations</h3>
+    <p>The certificate
+      <a href="../data/knowledge/sources/qsimple_28_checks.m"><code>qsimple_28_checks.m</code></a>
+      (Magma V2.30-1, about \(4\) seconds) consists of assertions and ends with <code>ALL_28_CHECKS_PASSED</code>; a failed
+      assertion stops it before that line. Its log is
+      <a href="../data/knowledge/sources/qsimple_28_checks.log"><code>qsimple_28_checks.log</code></a>.
+      SHA-256 of the script:
+      <code>9c56c4328b25de70<wbr>d4ce3d28c8be978c<wbr>1fc887f3698fc3f7<wbr>c37fb4c9db88a7b2</code>;
+      of the log:
+      <code>f0e53ff1e0231dd1<wbr>b0a9a28d047c7841<wbr>e9b5d4d729250675<wbr>5aafeb9f00ea8bb0</code>.</p>
+    <p>Part A: supersingular Weil polynomials (<a href="#lemma-ss">Lemma 1</a>). Part B: \(X=14a4\), its rank and rational points, the
+      moduli map, \(\deg t=3\), the absolute irreducibility and the singular locus of \(G=0\), the pole orders of \(j\), the
+      degrees of the zeros of \(j\) and \(j-1728\), and the diamond operators (<a href="#lemma-model">Lemma 4</a>). Part C: the six
+      families, \(d\) for \(\mathcal A\) and \(\mathcal B\), the norm square classes, the exceptional values and the three
+      genuine quadratic points among them (<a href="#families">Section 9</a>). Part D: <a href="#prop-B">Propositions 13</a> and <a href="#prop-A">14</a>: the
+      genus and rank of the genus-\(2\) curves, <code>Chabauty0</code> and <code>Chabauty</code>, the \(2\)-descent on \(C_D\),
+      \(L=\Q(\zeta_7)^+\) (discriminant \(49\)), the curves \(E_\delta\) over \(L\) in the model
+      \(V^2=\prod_i(M-\delta(\alpha-1)r_i)\), \(m=M/(\delta(\alpha-1))\), with
+      \(r_i\)<wbr>\({}\in\{-\alpha,-\frac{\alpha+1}{\alpha-1},\)<wbr>\({}-1\}\), <code>PseudoMordellWeilGroup</code>, elliptic <code>Chabauty</code>
+      and \(5\)-saturation. Part E: the \(3\)-adic input of <a href="#prop-square">Proposition 11</a>. Part V: the checks of
+      Remarks 1–3 (validation, not used in the proof). Every value quoted in the text from the certificate is asserted,
+      not only printed. No result depends on the generalized Riemann hypothesis: Magma's class group computations are
+      rigorous unless <code>SetClassGroupBounds("GRH")</code> is called, which the certificate does not do; this
+      covers the \(2\)-Selmer groups behind the rank bounds of the genus-\(2\) Jacobians over \(\Q\) and of the curves
+      \(E_\delta\) over \(L\). Rank bounds are algebraic (\(2\)-Selmer); no analytic rank or BSD is used, and no bounded
+      search is used as a nonexistence proof.</p>
+  </section>
+
+  <section id="references">
+    <h3>References</h3>
+    <ol>
+      <li id="bl"><p>[BL] C. Birkenhake and H. Lange, <a href="https://doi.org/10.1007/978-3-662-06307-1"><i>Complex Abelian Varieties</i></a>, 2nd edition, Springer, Berlin, 2004 (Grundlehren der
+        mathematischen Wissenschaften 302): Section 5.3 and Lemma 5.3.1.
+        <a href="https://doi.org/10.1007/978-3-662-06307-1">doi:10.1007/978-3-662-06307-1</a>.</p></li>
+      <li id="br"><p>[Br] N. Bruin, <i>Chabauty methods using elliptic curves</i>, J. Reine Angew. Math. <b>562</b> (2003), 27–49.</p></li>
+      <li id="de"><p>[De] M. Deuring, <i>Die Typen der Multiplikatorenringe elliptischer Funktionenkörper</i>, Abh. Math. Sem. Hansischen
+        Univ. <b>14</b> (1941), 197–272.</p></li>
+      <li id="km"><p>[KM] M. A. Kenku and F. Momose, <a href="https://doi.org/10.1017/S0027763000002816"><i>Torsion points on elliptic curves defined over quadratic fields</i></a>, Nagoya Math. J.
+        <b>109</b> (1988), 125–149: Theorem (0.1).
+        <a href="https://doi.org/10.1017/S0027763000002816">doi:10.1017/S0027763000002816</a>.</p></li>
+      <li id="ku"><p>[Ku] D. S. Kubert, <a href="https://doi.org/10.1112/plms/s3-33.2.193"><i>Universal bounds on the torsion of elliptic curves</i></a>, Proc. London Math. Soc. (3) <b>33</b>
+        (1976), 193–237: Table 3.
+        <a href="https://doi.org/10.1112/plms/s3-33.2.193">doi:10.1112/plms/s3-33.2.193</a>.</p></li>
+      <li id="la"><p>[La] S. Lang, <i>Elliptic Functions</i>, 2nd edition, Graduate Texts in Mathematics 112, Springer, New York, 1987:
+        Chapter 5, Sections 1–3 (formula (1) of Section 2, Theorem 5 and the remark following it), and Chapter 13, Theorem 12.</p></li>
+      <li id="lmfdb"><p>[LMFDB] The LMFDB Collaboration, <a href="https://www.lmfdb.org"><i>The L-functions and modular forms database</i></a>, <a href="https://www.lmfdb.org">https://www.lmfdb.org</a>, 2026: the
+        tables <code>ec_nfcurves</code>, <code>g2c_curves</code> and <code>g2c_curves_new</code> (the last with the extended genus-\(2\)
+        data of Booker and Sutherland), read through the mirror devmirror.lmfdb.xyz.</p></li>
+      <li id="p40"><p>[P40] Census proof of 14 November 2026, <a href="qsimple-40-obstruction.html"><i>Rational \(5\)-torsion and the \(2\)-primary torsion of geometrically split
+        abelian surfaces</i></a>, <a href="qsimple-40-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-40-obstruction.html</a>: Lemma 9, Step 3.</p></li>
+      <li id="p45"><p>[P45] Census proof of 14 November 2026, <a href="qsimple-45-obstruction.html"><i>No rational point of order \(45\) on a geometrically split abelian surface
+        simple over \(\Q\)</i></a>, <a href="qsimple-45-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-45-obstruction.html</a>: proof of Lemma 3.</p></li>
+      <li id="p63"><p>[P63] Census proof of 21 October 2026, <a href="qsimple-63-obstruction.html"><i>An obstruction to rational \(63\)-torsion on geometrically split abelian
+        surfaces</i></a>, <a href="qsimple-63-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-63-obstruction.html</a>: Lemmas 2 and 3 and
+        Proposition 8.</p></li>
+      <li id="p228"><p>[P228] Census proof of 11 November 2026, <a href="qsimple-228-obstruction.html"><i>Rational \(7\)-torsion and the \(2\)-primary torsion of geometrically split
+        Jacobians</i></a>, <a href="qsimple-228-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-228-obstruction.html</a>: Theorem and Sections 2–5.</p></li>
+      <li id="p2210"><p>[P2210] Census proof of 11 November 2026, <a href="qsimple-2210-obstruction.html"><i>Rational \(5\)-torsion and the \(2\)-rank of geometrically split
+        Jacobians</i></a>, <a href="qsimple-2210-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-2210-obstruction.html</a>: (I7), Lemmas 5–7 and
+        Proposition 8.</p></li>
+      <li id="p2214"><p>[P2214] Census proof of 10 November 2026, <a href="qsimple-2214-obstruction.html"><i>Rational \(7\)-torsion and the \(2\)-rank of geometrically split abelian
+        surfaces</i></a>, <a href="qsimple-2214-obstruction.html">https://genus-2-torsion.github.io/proofs/qsimple-2214-obstruction.html</a>: Section 1 ((I1)–(I3) and
+        (I6)), Lemma 1, Proposition 2, and Sections 2 and 3.</p></li>
+      <li id="si"><p>[Si] J. H. Silverman, <i>Advanced Topics in the Arithmetic of Elliptic Curves</i>, Graduate Texts in Mathematics 151,
+        Springer, New York, 1994: Theorem V.3.1 and Lemma V.5.1.</p></li>
+      <li id="st"><p>[ST] J.-P. Serre and J. Tate, <a href="https://doi.org/10.2307/1970722"><i>Good reduction of abelian varieties</i></a>, Ann. of Math. (2) <b>88</b> (1968),
+        492–517. <a href="https://doi.org/10.2307/1970722">doi:10.2307/1970722</a>.</p></li>
+    </ol>
+  </section>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/qsimple-28-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

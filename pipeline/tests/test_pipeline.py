@@ -216,6 +216,7 @@ class KnowledgeTests(unittest.TestCase):
             "45": "QSimple45Obstruction",
             "2.2.14": "QSimple2214Obstruction",
             "2.28": "QSimple228Obstruction",
+            "28": "QSimple28Obstruction", "2.14": "QSimple28Obstruction",
             "2.2.10": "QSimple2210Obstruction", "2.2.20": "QSimple2210Obstruction",
             "2.2.2.10": "QSimple2210Obstruction",
             "40": "QSimple40Obstruction", "2.20": "QSimple40Obstruction",
@@ -240,7 +241,8 @@ class KnowledgeTests(unittest.TestCase):
                 self.assertIn("principal", rec["gsplit"]["reason"])
                 self.assertIn("QSimple228Obstruction", knowledge.QSIMPLE_ONLY)
                 self.assertNotEqual(knowledge.infinite_record("split", key)["grade"], "impossible")
-        for key in ("7", "14", "28", "2.14"):
+        # [28] and [2,14] fall to the sharper bound of 14 November 2026 (test_qsimple_seven_two_primary_sharp)
+        for key in ("7", "14", "21", "42"):
             self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
         # Keep the older proof for groups that already had an exclusion.
         self.assertEqual(knowledge.exclusions_record("2.2.14")["gsplit"]["sources"][0], "QSimple2214Obstruction")
@@ -257,6 +259,38 @@ class KnowledgeTests(unittest.TestCase):
             self.assertNotIn(bad, log)
         for suffix in ("md", "tex", "pdf"):
             self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_228_obstruction.{suffix}").exists())
+
+    def test_qsimple_seven_two_primary_sharp(self):
+        """Rational 7-torsion forces at most two rational 2-power torsion points on principally polarized, Q-simple,
+        geometrically split abelian surfaces (2026-11-14)."""
+        for key in ("28", "2.14", "84", "2.42"):
+            with self.subTest(key=key):
+                rec = knowledge.exclusions_record(key)
+                self.assertEqual(set(rec), {"gsplit"})
+                self.assertEqual(rec["gsplit"]["sources"][0], "QSimple28Obstruction")
+                self.assertTrue((ROOT / rec["gsplit"]["proof_url"]).exists())
+                self.assertIn("principal", rec["gsplit"]["reason"])
+        self.assertIn("QSimple28Obstruction", knowledge.QSIMPLE_ONLY)
+        # groups with 7-torsion and 2-primary part of order at most 2 stay open or known in this class
+        for key in ("7", "14", "21", "42"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
+        # keep the older proofs for groups that already had an exclusion
+        for key, proof in (("2.28", "QSimple228Obstruction"), ("56", "QSimple228Obstruction"),
+                           ("2.2.14", "QSimple2214Obstruction"), ("63", "QSimple63Obstruction"),
+                           ("70", "QSimple35Obstruction")):
+            self.assertEqual(knowledge.exclusions_record(key)["gsplit"]["sources"][0], proof, key)
+        groups = {g["key"]: g for g in read_json(ROOT / "data" / "groups.json")["groups"]}
+        for key, grade in (("28", "open"), ("2.14", "exact")):
+            self.assertTrue(groups[key]["known"]["qsplit"])
+            self.assertFalse(groups[key]["known"]["gsplit"])
+            self.assertEqual(groups[key]["infinite"]["split"]["grade"], grade)
+            self.assertEqual(groups[key]["exclusions"], knowledge.exclusions_record(key))
+        log = (KNOWLEDGE_DIR / "sources" / "qsimple_28_checks.log").read_text()
+        self.assertTrue(log.rstrip().endswith("ALL_28_CHECKS_PASSED"))
+        for bad in ("Runtime error", "Assertion failed", "User error", "Internal error"):
+            self.assertNotIn(bad, log)
+        for suffix in ("tex", "pdf"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_28_obstruction.{suffix}").exists())
 
     def test_qsimple_five_two_rank(self):
         """Rational 5-torsion forces 2-rank at most 2 on Q-simple, geometrically split Jacobians (2026-11-11)."""

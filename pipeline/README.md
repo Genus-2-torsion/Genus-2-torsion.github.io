@@ -94,6 +94,14 @@ placed after the order-63 branch, applies to [45] in the census and to future en
 earlier proof. [45] has `qsplit` examples and an exact family, so its combined grade is unchanged.
 The proof is in `proofs/qsimple-45-obstruction.html`, with PDF/LaTeX and the Magma certificate under
 `data/knowledge/sources/qsimple_45_*`.
+`QSimple28Obstruction` (14 November 2026) sharpens the order-7 bound: rational 7-torsion forces at
+most two rational 2-power torsion points on a principally polarized, geometrically split abelian
+surface simple over ℚ. The predicate `exponent % 7 == 0 and order % 4 == 0`, placed after the [2,28]
+branch, applies to [28] and [2,14] in the census and to future entries such as [84] and [2,42];
+groups that already had a `gsplit` exclusion ([2,28], [56], [2,2,14], [63], [70]) keep their earlier
+proof. Both census groups have `qsplit` examples, so their combined grades are unchanged. The proof
+is in `proofs/qsimple-28-obstruction.html`, with PDF/LaTeX and the Magma certificate under
+`data/knowledge/sources/qsimple_28_*`.
 
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].

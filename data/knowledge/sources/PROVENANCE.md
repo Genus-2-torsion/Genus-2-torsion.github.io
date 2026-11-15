@@ -781,3 +781,50 @@ SHA-256 of the publication artifacts:
 | `qsimple_45_obstruction.pdf` | `6e7bba789ca55a352a511a6cfce62d28174b871536400327d6d1b02e21f93a4c` |
 | `qsimple_45_checks.m` | `3898e5d57d639cd43555feb97c996164ef867549fd76b5df02bf40c2da0a0fe6` |
 | `qsimple_45_checks.log` | `4681daf8118e304a60d91375822b1a8874028e922ed94e4ea63803f907b3f060` |
+
+## [28] and [2,14] in the geometrically split, ℚ-simple class (14 November 2026)
+
+[`qsimple-28-obstruction.html`](../../../proofs/qsimple-28-obstruction.html), with
+[PDF](qsimple_28_obstruction.pdf) and [LaTeX](qsimple_28_obstruction.tex), proves that an abelian
+surface over ℚ with a principal polarization defined over ℚ, simple over ℚ and geometrically split,
+with a rational point of order 7, has at most two rational points of 2-power order. This sharpens the
+bound of four of the [[2,28]](../../../proofs/qsimple-228-obstruction.html) proof. The new census
+exclusions are [28] and [2,14] in `gsplit` only. Both groups have examples split over ℚ (28.b and
+2.14.b), so their combined split grades are unchanged ([28] open, [2,14] exact). The theorem also
+excludes groups outside the census, such as [84] and [2,42], in `gsplit` only; groups that already had
+a `gsplit` exclusion ([2,28], [56], [2,2,14], [63], [70]) keep their earlier proofs. The bound is
+sharp: 14.c (LMFDB 9604.b3) has torsion [14] in this class. The principal polarization is needed
+(Remark 1 of the proof).
+
+In the CM case the proof reduces at a prime p ≢ ±1 (mod 7) inert in the CM field, where no
+supersingular abelian surface over 𝔽_p has a number of points divisible by 28. Cyclic cubic and
+sextic endomorphism fields are settled by the [2,28] proof. In the quadratic case a curve in the
+K-isogeny class of an elliptic curve E ⊂ A_K has a K-point of order 14, so it comes from a quadratic
+point of X₁(14) (the elliptic curve 14a4), which lies in one of two one-parameter families up to
+diamond operators. For a conjugate gluing, the descent of the gluing and a fourth rational 2-power
+point force two norm conditions on the 2-division data of E, which have no solutions on either
+family (Chabauty on genus-2 curves and elliptic Chabauty over ℚ(ζ₇)⁺). For a geometric square, the
+j-invariants of E and E^σ have the same negative valuation at every prime above 3, so the ℚ-curve
+degree is a square (an argument with the modular polynomial); this forces End⁰_ℚ(A) ≅ ℚ(i) and leads
+back to the conjugate-complement case.
+
+The certificate [`qsimple_28_checks.m`](qsimple_28_checks.m) and its
+[log](qsimple_28_checks.log) (Magma V2.30-1, 15 November 2026, about 4 seconds) consist of
+assertions and end with `ALL_28_CHECKS_PASSED`. Parts A–E carry the proof: the supersingular lemma,
+the model of X₁(14) and the two families, the square classes and exceptional parameters, the rank and
+Chabauty computations, and the 3-adic check. Part V checks the validation facts of the remarks and is
+not used in the proof. Class groups are computed without GRH. Three independent reports of 14–15
+November 2026 (two on the mathematics, one auditing the computations) found no mathematical error,
+and all their corrections are in this version; a further review checked the changes made for this
+version, and its corrections are included too. The audit reran the certificate with byte-identical logs, ran negative tests, and rechecked
+the computations in PARI/GP and Sage, including an independent 13-adic elliptic Chabauty and a
+search over 7.3 million family parameters. The final certificate passes 23 further negative tests.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_28_obstruction.tex` | `8c6d2c6490c1a9b2126dcbccc5fd90e6f3400ad1195d9eac80a32f7180ccf20e` |
+| `qsimple_28_obstruction.pdf` | `5df247dc2da16c9f7d42e4c4034815d1ae537c1e8081f2ceda982a0016f7b0d6` |
+| `qsimple_28_checks.m` | `9c56c4328b25de70d4ce3d28c8be978c1fc887f3698fc3f7c37fb4c9db88a7b2` |
+| `qsimple_28_checks.log` | `f0e53ff1e0231dd1b0a9a28d047c7841e9b5d4d7292506755aafeb9f00ea8bb0` |

@@ -109,6 +109,11 @@ For principally polarized surfaces that are **geometrically split and simple ove
 This marks [2,28] impossible only in that class; its split-over-ℚ case and combined split
 infinitude grade remain open. The generic condition also records exclusions beyond the census,
 such as [56], on `exclusions.html` without creating artificial example rows.
+A sharper bound (`proofs/qsimple-28-obstruction.html`, with PDF/LaTeX and a Magma certificate)
+shows that on such surfaces rational 7-torsion forces at most two rational points of 2-power order.
+This makes [28] and [2,14] impossible in the **geometrically split, simple over ℚ** class; both have
+split-over-ℚ examples, so their combined split infinitude grades are unchanged (open for [28], exact
+for [2,14]).
 The groups [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] are excluded only in
 the **geometrically split, simple over ℚ** class, by `proofs/qsimple-30-obstruction.html`,
 `proofs/qsimple-35-obstruction.html`, `proofs/qsimple-63-obstruction.html`, and

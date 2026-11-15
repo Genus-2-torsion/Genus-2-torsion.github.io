@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exclusions beyond the census — Torsion of genus 2 Jacobians over ℚ</title>
-  <meta name="description" content="Torsion exclusions beyond the genus-2 census: six order-256 groups for Jacobians split over Q, the 7-torsion/2-primary bound, the 5-torsion/2-rank bound, the 5-torsion/2-primary bound and the 45-torsion obstruction for geometrically split Jacobians simple over Q.">
+  <meta name="description" content="Torsion exclusions beyond the genus-2 census: six order-256 groups for Jacobians split over Q, the 7-torsion/2-primary bounds, the 5-torsion/2-rank bound, the 5-torsion/2-primary bound and the 45-torsion obstruction for geometrically split Jacobians simple over Q.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css?v=6">
 </head>
@@ -55,13 +55,30 @@
     For example, <span class="m">[56]</span>, which has no census row, is impossible there.
     The census group <a href="group.html?g=2.28">[2,28]</a> is likewise impossible in the
     “geometrically split, simple over ℚ” column. Its split-over-ℚ case remains open.
-    The theorem leaves <span class="m">[28]</span> and <span class="m">[2,14]</span> open in the
-    ℚ-simple geometrically split class, and makes no exclusion claim for geometrically simple Jacobians.</p>
+    This theorem alone leaves <span class="m">[28]</span> and <span class="m">[2,14]</span> open in the
+    ℚ-simple geometrically split class; the sharper bound below excludes them. It makes no exclusion claim
+    for geometrically simple Jacobians.</p>
   <p><a href="proofs/qsimple-228-obstruction.html">Read the complete proof</a>, or download its
     <a href="data/knowledge/sources/qsimple_228_obstruction.pdf">PDF</a> and
     <a href="data/knowledge/sources/qsimple_228_obstruction.tex">LaTeX source</a>.
     The <a href="data/knowledge/sources/qsimple_228_checks.m">exact Magma checks</a> and
     <a href="data/knowledge/sources/qsimple_228_checks.log">completed log</a> are included.</p>
+  <h3>7-torsion and a sharp 2-primary bound for Jacobians simple over ℚ</h3>
+  <p>A principally polarized abelian surface over ℚ that is <strong>simple over ℚ but geometrically
+    split</strong> has at most two rational points of 2-power order if it has a rational point of order 7.
+    This <a href="proofs/qsimple-28-obstruction.html">theorem of 14 November 2026</a> applies at every
+    geometric splitting degree and sharpens the bound above.</p>
+  <p>It excludes every exact group with 7-torsion and a 2-primary part of order at least four in that
+    class. Besides the census groups <a href="group.html?g=28">[28]</a> and <a href="group.html?g=2.14">[2,14]</a>,
+    this includes for example <span class="m">[84]</span> and <span class="m">[2,42]</span>, which have no
+    census rows. The bound is sharp: [14] occurs in this class. The theorem makes no exclusion claim for
+    geometrically simple Jacobians or for Jacobians split over ℚ; the census lists split-over-ℚ examples of
+    [28] and [2,14].</p>
+  <p><a href="proofs/qsimple-28-obstruction.html">Read the complete proof</a>, or download its
+    <a href="data/knowledge/sources/qsimple_28_obstruction.pdf">PDF</a> and
+    <a href="data/knowledge/sources/qsimple_28_obstruction.tex">LaTeX source</a>.
+    The <a href="data/knowledge/sources/qsimple_28_checks.m">Magma certificate</a> and its
+    <a href="data/knowledge/sources/qsimple_28_checks.log">log</a> are included.</p>
   <h3>5-torsion and the 2-rank for Jacobians simple over ℚ</h3>
   <p>A principally polarized abelian surface over ℚ that is <strong>simple over ℚ but geometrically
     split</strong> has rational 2-torsion of rank at most 2 if it has a rational point of order 5. This

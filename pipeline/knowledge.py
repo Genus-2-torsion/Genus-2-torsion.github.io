@@ -288,6 +288,13 @@ SOURCES = {
         "url": "proofs/qsimple-45-obstruction.html",
         "used_for": "impossibility of [45], and of every group containing an element of order 45, in the geometrically split, simple-over-ℚ class, at every geometric splitting degree; requires a principal polarization",
     },
+    "QSimple28Obstruction": {
+        "short": "ℚ-simple geometric [28] and [2,14] exclusion proof (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Rational 7-torsion forces 2-primary torsion of order at most 2 on principally polarized abelian surfaces that are geometrically split and simple over Q, census proof of 14 November 2026. In the CM case, reduction at a prime p ≢ ±1 mod 7 that is inert in the CM field gives a supersingular surface whose number of points is not divisible by 28; cyclic cubic and sextic endomorphism fields are those of the [2,28] proof. In the quadratic case a curve in the isogeny class of an elliptic factor has a point of order 14 over the quadratic field, so it comes from a quadratic point of X1(14), which lies in one of two families up to diamond operators. For a conjugate gluing, the descent of the gluing and a fourth rational 2-power point force two norm conditions that have no solutions on either family (Chabauty, and elliptic Chabauty over Q(zeta_7)^+); for a geometric square, the j-invariants have equal negative valuations above 3, so the Q-curve degree is a square and the conjugate gluing case applies; Magma checks in qsimple_28_checks.log",
+        "url": "proofs/qsimple-28-obstruction.html",
+        "used_for": "impossibility of [28] and [2,14] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 7-torsion and 2-primary part of order at least 4 in that class, including groups outside the census such as [84] and [2,42]; requires a principal polarization",
+    },
     "Najman2010": {
         "short": "Najman 2010", "year": 2010,
         "cite": "F. Najman, Complete classification of torsion of elliptic curves over quadratic cyclotomic fields, J. Number Theory 130 (2010), 1964–1968 (arXiv:1005.0560).",
@@ -463,12 +470,13 @@ GSPLIT_REASON = {
     "2.2.10": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-rank at most 2 if it has a rational point of order 5. This group has 5-torsion and 2-rank at least three, so it is impossible in that class at every geometric splitting degree.",
     "40": "An abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if it has a rational point of order 5. This group has 5-torsion and a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
     "45": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has no rational point of order 45. The proof applies to every geometric splitting degree and requires simplicity over ℚ.",
+    "28": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has at most two rational points of 2-power order if it has a rational point of order 7. This group has 7-torsion and a 2-primary part of order at least four, so it is impossible in that class at every geometric splitting degree.",
 }
-GSPLIT_SOURCES = {"17": ["Mazur1977", "Kamienny1992", "SerreTate1968"], "22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "2.2.14": ["QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "p.p": ["Beauville2010", "MilneAV2008"], "2.2.10": ["QSimple63Obstruction", "QSimple2214Obstruction", "Kubert1976", "Knapp1992", "Milne1972", "SerreTate1968", "Mazur1977"], "40": ["QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "45": ["QSimple30Obstruction", "QSimple63Obstruction", "KenkuMomose1988", "Kamienny1992", "Najman2010", "Poonen1998", "Mazur1977", "Kubert1976", "SerreTate1968"]}
+GSPLIT_SOURCES = {"17": ["Mazur1977", "Kamienny1992", "SerreTate1968"], "22": ["Mazur1977", "KenkuMomose1988", "LeFournNajman2020", "BourdonClark2020"], "26": ["Mazur1977", "KenkuMomose1988", "DEvHMZB2021", "DNQuartic2025", "Faltings1983", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "13": ["BBDN2014", "Vukorepa2022", "Box2021", "Mazur1977", "Kenku1979", "Kenku1980", "Faltings1983", "SerreTate1968", "Tate1966"], "30": ["DNQuartic2025", "SerreTate1968", "Tate1966", "Mazur1977", "KenkuMomose1988", "ClarkXarles2008", "Clark2004"], "63": ["KenkuMomose1988", "Mazur1977", "DEvHMZB2021", "SerreTate1968", "Clark2004", "ClarkXarles2008"], "2.2.14": ["QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "p.p": ["Beauville2010", "MilneAV2008"], "2.2.10": ["QSimple63Obstruction", "QSimple2214Obstruction", "Kubert1976", "Knapp1992", "Milne1972", "SerreTate1968", "Mazur1977"], "40": ["QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple63Obstruction", "KenkuMomose1988", "SerreTate1968"], "45": ["QSimple30Obstruction", "QSimple63Obstruction", "KenkuMomose1988", "Kamienny1992", "Najman2010", "Poonen1998", "Mazur1977", "Kubert1976", "SerreTate1968"], "28": ["QSimple228Obstruction", "QSimple2214Obstruction", "QSimple63Obstruction", "QSimple40Obstruction", "KenkuMomose1988", "Kubert1976", "SerreTate1968"]}
 
 
 # gsplit proofs that need simplicity over ℚ (the others apply to every geometrically split surface)
-QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple40Obstruction", "QSimple45Obstruction", "QSimple228Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
+QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2210Obstruction", "QSimple2214Obstruction", "QSimple28Obstruction", "QSimple40Obstruction", "QSimple45Obstruction", "QSimple228Obstruction", "QSimple30Obstruction", "QSimple35Obstruction", "QSimple63Obstruction",
                 "QSimpleRankTwoObstruction"}
 
 
@@ -561,6 +569,8 @@ def exclusions_record(key: str) -> dict:
             "QSimple228Obstruction",
             "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has rational 2-primary torsion of order at most four if it has a rational point of order 7. This group has 7-torsion and 2-primary order at least eight, so it is impossible in that class at every geometric splitting degree.",
             ["QSimple2214Obstruction", "QSimple63Obstruction", "Geometric2639Obstruction", "Faltings1983", "KenkuMomose1988"])
+    elif exponent % 7 == 0 and order % 4 == 0:
+        exclusions["gsplit"] = record("QSimple28Obstruction", GSPLIT_REASON["28"], GSPLIT_SOURCES["28"])
     return exclusions
 
 

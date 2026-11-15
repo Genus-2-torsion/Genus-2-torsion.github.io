@@ -1,0 +1,64 @@
+Part A
+A p = 5 (p mod 7 = 5): supersingular real Weil polynomials (a1, a2 - 2p) = [ <-5, 5>, <0, -20>, <0, -15>, <0, -10>, <0, -5>, <0, 0>, <5, 5> ], values P(1) = { 11, 16, 21, 26, 31, 36, 71 }
+A p = 7 (p mod 7 = 0): supersingular real Weil polynomials (a1, a2 - 2p) = [ <0, -28>, <0, -21>, <0, -14>, <0, -7>, <0, 0> ], values P(1) = { 36, 43, 50, 57, 64 }
+A p = 11 (p mod 7 = 4): supersingular real Weil polynomials (a1, a2 - 2p) = [ <0, -44>, <0, -33>, <0, -22>, <0, -11>, <0, 0> ], values P(1) = { 100, 111, 122, 133, 144 }
+A p = 13 (p mod 7 = 6): supersingular real Weil polynomials (a1, a2 - 2p) = [ <0, -52>, <0, -39>, <0, -26>, <0, -13>, <0, 0> ], values P(1) = { 144, 157, 170, 183, 196 }
+A p = 17 (p mod 7 = 3): supersingular real Weil polynomials (a1, a2 - 2p) = [ <0, -68>, <0, -51>, <0, -34>, <0, -17>, <0, 0> ], values P(1) = { 256, 273, 290, 307, 324 }
+A p = 19 (p mod 7 = 5): supersingular real Weil polynomials (a1, a2 - 2p) = [ <0, -76>, <0, -57>, <0, -38>, <0, -19>, <0, 0> ], values P(1) = { 324, 343, 362, 381, 400 }
+A p = 23 (p mod 7 = 2): supersingular real Weil polynomials (a1, a2 - 2p) = [ <0, -92>, <0, -69>, <0, -46>, <0, -23>, <0, 0> ], values P(1) = { 484, 507, 530, 553, 576 }
+A_DONE
+Part B
+B singular locus of the (t,e)-model lies over b*Delta_7(t) = 0
+B (X, Y) are rational functions of (t, e): the map X1(14) -> {G = 0} is birational
+B zeros of j - 0: places of degrees { 6, 18 }
+B zeros of j - 1728: places of degrees { 12, 24 }
+B_DONE
+Part C
+C family R = (1 : -2 : 1): q = XX^2 + (-mf^2 - mf + 1)*XX + mf^2 - mf, d = m^4 + 2*m^3 - 5*m^2 + 2*m + 1 = 1 * (m^4 + 2*m^3 - 5*m^2 + 2*m + 1); square classes N(Dp) ~ m^5 + 2*m^4 - 7*m^3 + 5*m^2 - m, N(bp) ~ -m^5 + 5*m^4 - 7*m^3 + 2*m^2 + m; exceptional m: { 0, 1 }
+C family R = (0 : 1 : 0): q = XX^2 + (mf + 1)*XX - mf^3 + mf, d = 4*m^3 + m^2 - 2*m + 1 = 4 * (m + 1) * (m^2 - 3/4*m + 1/4); square classes N(Dp) ~ -m^3 + 2*m^2 + m - 1, N(bp) ~ m^4 - 8*m^3 - 10*m^2 + 1; exceptional m: { -1, 0, 1/2, 1 }
+C family R = (0 : -1 : 1): q = XX^2 + (-mf^2 - mf)*XX - mf - 1, d = m^4 + 2*m^3 + m^2 + 4*m + 4 = 1 * (m + 1) * (m + 2) * (m^2 - m + 2); square classes N(Dp) ~ -m^4 - 3*m^3 - m^2 + 2*m + 1, N(bp) ~ m^4 + 4*m^3 - 4*m^2 - 24*m - 16; exceptional m: { -2, -1, 0 }
+C family R = (0 : 0 : 1): q = XX^2 + (-mf^2 - mf)*XX + mf, d = m^4 + 2*m^3 + m^2 - 4*m = 1 * (m - 1) * (m) * (m^2 + 3*m + 4); square classes N(Dp) ~ -m^4 - m^3 + 2*m^2 + m, N(bp) ~ m^4 - 10*m^2 + 8*m + 1; exceptional m: { -1, 0, 1 }
+C family R = (-1 : 0 : 1): q = XX^2 + (-mf^2 - mf - 1)*XX - mf^2 - mf, d = m^4 + 2*m^3 + 7*m^2 + 6*m + 1 = 1 * (m^4 + 2*m^3 + 7*m^2 + 6*m + 1); square classes N(Dp) ~ m^5 + 6*m^4 + 11*m^3 + 7*m^2 + m, N(bp) ~ -m^5 + m^4 + 3*m^3 - m; exceptional m: { -1, -1/2, 0 }
+C family R = (1 : 0 : 1): q = XX^2 + (-mf^2 - mf + 1)*XX + mf^2 + 3*mf + 2, d = m^4 + 2*m^3 - 5*m^2 - 14*m - 7 = 1 * (m^4 + 2*m^3 - 5*m^2 - 14*m - 7); square classes N(Dp) ~ m^5 + 10*m^4 + 37*m^3 + 63*m^2 + 49*m + 14, N(bp) ~ -m^5 - 3*m^4 + 5*m^3 + 28*m^2 + 35*m + 14; exceptional m: { -3, -2, -1 }
+C exceptional R=(1 : -2 : 1) m=1: q reducible
+C exceptional R=(1 : -2 : 1) m=0: q reducible
+C exceptional R=(0 : 1 : 0) m=1: q reducible
+C exceptional R=(0 : 1 : 0) m=0: q reducible
+C exceptional R=(0 : 1 : 0) m=1/2: quadratic point over Q(sqrt 3), class N(Dp) = -2, N(bp) = -39
+C exceptional R=(0 : 1 : 0) m=-1: q reducible
+C exceptional R=(0 : -1 : 1) m=0: q reducible
+C exceptional R=(0 : -1 : 1) m=-2: q reducible
+C exceptional R=(0 : -1 : 1) m=-1: q reducible
+C exceptional R=(0 : 0 : 1) m=1: q reducible
+C exceptional R=(0 : 0 : 1) m=0: q reducible
+C exceptional R=(0 : 0 : 1) m=-1: q reducible
+C exceptional R=(-1 : 0 : 1) m=0: q reducible
+C exceptional R=(-1 : 0 : 1) m=-1/2: quadratic point over Q(sqrt -7), class N(Dp) = 14, N(bp) = 14
+C exceptional R=(-1 : 0 : 1) m=-1: q reducible
+C exceptional R=(1 : 0 : 1) m=-3: quadratic point over Q(sqrt 17), class N(Dp) = 2, N(bp) = 26
+C exceptional R=(1 : 0 : 1) m=-2: q reducible
+C exceptional R=(1 : 0 : 1) m=-1: q reducible
+C genuine points at exceptional values (R, m, d, N(Dp), N(bp) classes): { <1, 0, 1, -3, 17, 2, 26>, <0, 1, 0, 1/2, 3, -2, -39>, <-1, 0, 1, -1/2, -7, 14, 14> }
+C_DONE
+Part D
+D family B, R = (1 : -2 : 1): (N1) curve y^2 = m^5 + 2*m^4 - 7*m^3 + 5*m^2 - m, rank 0, finite m: { 0, 1 }
+D family B, R = (1 : 0 : 1): (N1) curve y^2 = m^5 + 10*m^4 + 37*m^3 + 63*m^2 + 49*m + 14, rank 0, finite m: { -2, -1 }
+D family B, R = (-1 : 0 : 1): (N1) curve y^2 = m^5 + 6*m^4 + 11*m^3 + 7*m^2 + m, rank 0, finite m: { -1, 0 }
+D E_delta, delta = 1: rank bounds over L 1 1, torsion [ 2, 2 ]
+D E_delta, delta = 1: elliptic Chabauty: 2 points, R = 10
+D E_delta, delta = 1: m-values of the points found: [ -1 ] and 1 point(s) with m = oo
+D E_delta, delta = -al - 1: rank bounds over L 0 0, torsion [ 2, 2 ]
+D E_delta, delta = -al - 1: m-values of the points found: [ -1, -al, 2*al^2 + 6*al + 3 ] and 1 point(s) with m = oo
+D (N1)&(N2a): finite rational m-values from E_delta(L): { -1 } (plus m = oo)
+D (N1)&(N2b): genus-2 curve of rank 1, finite m: { 0 }
+D_DONE
+Part E
+E for every m in P^1(Q): v_3(N(J)(m)) < 0 and v_3(rho(m)) >= 0
+E_DONE
+Part V
+V1 m = 2: K = Q(sqrt 33), E(K)_tors = Z/14, j(E) not integral, N(Delta_E) is a square, a_P = [ 4, -10 ] at the two primes above 31
+V2 2.0.7.1-196.2-a3: torsion Z/14, no CM, E/<T> = E^sigma = a4, family B at m = -1/2, N(Delta_E) ~ 14, N(beta_E) ~ 14, v_3(j) = 0
+V3 14.c: #J(F_p) = #(Res E)(F_p) at the 27 primes p < 120 of good reduction for both: [ 5, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113 ]
+V4 family A: 44 quadratic points with |a|, b <= 6; valuations of j at the primes above 3: { -28, -14, -7 }
+V_DONE
+ALL_28_CHECKS_PASSED

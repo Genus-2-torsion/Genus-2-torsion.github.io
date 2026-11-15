@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14 18:50 UTC",
+  "generated": "2026-11-15 04:52 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -5347,7 +5347,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has at most two rational points of 2-power order if it has a rational point of order 7. This group has 7-torsion and a 2-primary part of order at least four, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple28Obstruction",
+            "QSimple228Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "QSimple40Obstruction",
+            "KenkuMomose1988",
+            "Kubert1976",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-28-obstruction.html"
+        }
+      },
       "n_curves": 2,
       "infinite": {
         "simple": {
@@ -8763,7 +8778,22 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has at most two rational points of 2-power order if it has a rational point of order 7. This group has 7-torsion and a 2-primary part of order at least four, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple28Obstruction",
+            "QSimple228Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple63Obstruction",
+            "QSimple40Obstruction",
+            "KenkuMomose1988",
+            "Kubert1976",
+            "SerreTate1968"
+          ],
+          "proof_url": "proofs/qsimple-28-obstruction.html"
+        }
+      },
       "n_curves": 2,
       "infinite": {
         "simple": {

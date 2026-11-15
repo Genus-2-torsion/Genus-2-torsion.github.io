@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-14 18:50 UTC",
+  "generated": "2026-11-15 04:52 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -300,6 +300,14 @@
       "cite": "No rational point of order 45 on a geometrically split abelian surface simple over Q, census proof of 14 November 2026. Geometric squares are excluded without simplicity or a polarization, by an integral lattice lemma at 3 and the residual-representation lemmas of the order-30 and order-63 proofs. For nonisogenous geometric factors the principal polarization makes the conjugate elliptic curves over the quadratic field have torsion Z/15, every gluing degree reduces to a conjugate (3,3)-gluing, and two Kummer conditions on the 3-torsion are incompatible at every quadratic point of X1(15): a cyclotomic descent following Poonen and elliptic Chabauty over Q(zeta_5) leave only four parameters, where the conditions fail; Magma checks in qsimple_45_checks.log.",
       "url": "proofs/qsimple-45-obstruction.html",
       "used_for": "impossibility of [45], and of every group containing an element of order 45, in the geometrically split, simple-over-ℚ class, at every geometric splitting degree; requires a principal polarization"
+    },
+    "QSimple28Obstruction": {
+      "short": "ℚ-simple geometric [28] and [2,14] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 7-torsion forces 2-primary torsion of order at most 2 on principally polarized abelian surfaces that are geometrically split and simple over Q, census proof of 14 November 2026. In the CM case, reduction at a prime p ≢ ±1 mod 7 that is inert in the CM field gives a supersingular surface whose number of points is not divisible by 28; cyclic cubic and sextic endomorphism fields are those of the [2,28] proof. In the quadratic case a curve in the isogeny class of an elliptic factor has a point of order 14 over the quadratic field, so it comes from a quadratic point of X1(14), which lies in one of two families up to diamond operators. For a conjugate gluing, the descent of the gluing and a fourth rational 2-power point force two norm conditions that have no solutions on either family (Chabauty, and elliptic Chabauty over Q(zeta_7)^+); for a geometric square, the j-invariants have equal negative valuations above 3, so the Q-curve degree is a square and the conjugate gluing case applies; Magma checks in qsimple_28_checks.log",
+      "url": "proofs/qsimple-28-obstruction.html",
+      "used_for": "impossibility of [28] and [2,14] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 7-torsion and 2-primary part of order at least 4 in that class, including groups outside the census such as [84] and [2,42]; requires a principal polarization"
     },
     "Najman2010": {
       "short": "Najman 2010",

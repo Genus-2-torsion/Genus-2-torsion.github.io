@@ -77,8 +77,9 @@
     "minimal_discriminant_factored": "2^24 * 3^4 * 5^9 * 7^16 * 11^15 * 17^5 * 127",
     "conductor": "979254391500",
     "conductor_factored": "2^2 * 3^2 * 5^3 * 7^2 * 11^2 * 17^2 * 127",
-    "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-    "conductor_source": "magma"
+    "conductor_note": "N(J) = d_K^2 N(f_E) = (-55)^2 * 323720460 for the elliptic curve E over Q(sqrt(-55)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+    "conductor_source": "Weil restriction of an elliptic curve",
+    "conductor_magma": "979254391500"
   },
   "lmfdb": {
     "label": "",
@@ -104,8 +105,8 @@
       {
         "order": 8,
         "mumford": [
-          "x^2 + 121/7*x - 110",
-          "5456/7*x + 4840",
+          "x^2 - 253/42*x + 55/6",
+          "29722/9*x - 59290/9",
           "2"
         ]
       }
@@ -169,6 +170,36 @@
       "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-55)) (the surface is E x E^sigma)"
     },
     "isogenous_product": null,
+    "weil_restriction": {
+      "field": "Q(sqrt(-55))",
+      "field_discriminant": "-55",
+      "field_polynomial": "x^2 + 55",
+      "ainvs": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "14211/160",
+          "2371/160"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "12459257/12800",
+          "-1521229/12800"
+        ],
+        [
+          "3171571/4000",
+          "66929/4000"
+        ]
+      ],
+      "conductor_norm": "323720460",
+      "conductor": "979254391500",
+      "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -222,15 +253,15 @@
   },
   "dates": {
     "submitted": "2026-10-16",
-    "verified": "2026-10-17 06:12:13 UTC"
+    "verified": "2026-11-15 13:14:51 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
     "magma_version": "2.30-1",
-    "cputime_seconds": "1.60000",
-    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "cputime_seconds": "1.65000",
+    "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
     "log": "data/logs/2.8.c.log",
     "conductor_log": "data/logs/2.8.c.conductor.log",
-    "conductor_cputime_seconds": 0.63
+    "conductor_cputime_seconds": 0.62
   }
 }

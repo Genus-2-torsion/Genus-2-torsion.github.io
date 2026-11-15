@@ -61,7 +61,9 @@
      6. the "split signature" (evidence only): at every good prime below 200 the strictness
         test fails;
      7. invariants: Igusa-Clebsch and G2-invariants, the discriminant of the working model; for a
-        Jacobian isogenous over Q to E1 x E2 (Richelot search), the conductor N(E1) N(E2).
+        Jacobian isogenous over Q to E1 x E2 (Richelot search), the conductor N(E1) N(E2); for a
+        Jacobian isogenous over Q to a Weil restriction Res_{K/Q} E of an elliptic curve over a
+        quadratic field that does not descend to Q (Richelot search), the conductor d_K^2 N(f_E).
    The reduced minimal Weierstrass model and the conductor are computed by conductor_lib.m in a
    separate job (they need the discriminant factored, which may not terminate quickly).
 */
@@ -435,6 +437,8 @@ end for;
 // ---------------------------------------------------------------- 4. splitness certificates
 cert := Null; geom_split := false; q_split := false;
 product := 0;   // [* E1, E2 *] when J is isogenous over Q to E1 x E2 (Richelot search), else 0
+wres_block := Null;   // the conductor of Res_{K/Q} E when J is isogenous over Q to a Weil restriction of an
+                      // elliptic curve E over a quadratic field K that does not descend to Q (Richelot search)
 function SetCert(kind, over, detail)
   return [* <"kind", kind>, <"over", over>, <"detail", detail> *];
 end function;
@@ -500,6 +504,21 @@ if strictp eq 0 then
       elif bestrank eq 2 then
         K0 := BaseRing(best[2]); D0 := Discriminant(MaximalOrder(K0));
         product := [* bestE0, QuadraticTwist(bestE0, D0) *];
+      elif bestrank eq 1 then
+        // J is isogenous over Q to Res_{K/Q} E.  The conductor is an isogeny invariant, and
+        // N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with f_E by Tate's algorithm.
+        try
+          Ew := best[2]; Kw := BaseRing(Ew); dKw := Discriminant(MaximalOrder(Kw));
+          NEw := Norm(Conductor(Ew));
+          wres_block := [* <"field", FieldName(Kw)>, <"field_discriminant", Sprint(dKw)>,
+              <"field_polynomial", Sprint(DefiningPolynomial(Kw))>,
+              <"ainvs", [[Sprint(c) : c in Eltseq(a)] : a in aInvariants(Ew)]>,
+              <"conductor_norm", Sprint(NEw)>, <"conductor", Sprint(dKw^2 * NEw)>,
+              <"note", "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"> *];
+          Log(Sprintf("Weil restriction conductor: d_K = %o, N(f_E) = %o, N(J) = %o", dKw, NEw, dKw^2 * NEw));
+        catch e
+          Log("Weil restriction conductor failed: " cat Sprint(e`Object));
+        end try;
       end if;
       if bestrank gt 0 and not q_split then
         depth := best[1]; s := best[2];
@@ -703,6 +722,7 @@ Emit([*
           <"conductors", [Sprint(Conductor(product[i])) : i in [1..2]]>,
           <"conductor", Sprint(Conductor(product[1])*Conductor(product[2]))>,
           <"note", "J is isogenous over Q to the product of these two elliptic curves (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, so N(J) = N(E1) N(E2), with N(E1), N(E2) computed by Tate's algorithm"> *] else Null>,
+      <"weil_restriction", wres_block>,
       <"cover_submitted", cover_checked>, <"cover_accepted", cover_ok>, <"cover_error", cover_msg>,
       <"signature", [* <"all_good_primes_fail_strictness", sig_all_fail>, <"primes_checked", sig_n>,
                        <"reducible_chi", sig_red> *]>

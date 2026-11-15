@@ -63,6 +63,44 @@ class ValidateTests(unittest.TestCase):
         self.assertEqual(verify.lmfdb_conductor_override(None, {"label": "775.a.1"}), "")
         self.assertEqual(verify._factor_str(176400), "2^4 * 3^2 * 5^2 * 7^2")
 
+    def test_apply_conductor_weil_restriction(self):
+        """A Jacobian isogenous over Q to a Weil restriction Res_{K/Q} E gets the rigorous conductor d_K^2 N(f_E)
+        (Milne 1972, Prop. 1), also when Magma's genus-2 Conductor fails (2026-11-15)."""
+        wres = {"field": "Q(sqrt(-11))", "field_discriminant": "-11", "conductor_norm": "12497190300", "conductor": "1512160026300"}
+        why = verify.conductor_missing_reason(False, "Fibre blowups over number fields not yet implemented")
+        curve = {}
+        verify.apply_conductor(curve, None, {}, None, why, None, wres)
+        self.assertEqual((curve["conductor"], curve["conductor_source"], curve["conductor_factored"]),
+                         ("1512160026300", "Weil restriction of an elliptic curve", "2^2 * 3^4 * 5^2 * 7^2 * 11^2 * 23 * 37^2"))
+        self.assertIn("d_K^2 N(f_E) = (-11)^2 * 12497190300", curve["conductor_note"])
+        self.assertIn("Fibre blowups", curve["conductor_note"])
+        # a different Magma value (Ogg's formula at 2) is recorded, and the rigorous value is used
+        cond = {"minimal_model": None, "minimal_discriminant": "", "minimal_discriminant_factored": "",
+                "conductor": "6048640105200", "conductor_factored": "", "conductor_note": ""}
+        curve = {}
+        verify.apply_conductor(curve, cond, {}, None, "", None, wres)
+        self.assertEqual((curve["conductor"], curve["conductor_magma"]), ("1512160026300", "6048640105200"))
+        self.assertIn("no correctness guarantee", curve["conductor_note"])
+        # an isogenous product over Q takes precedence
+        prod = {"ainvs": [["0", "1", "1", "-9", "-15"], ["0", "1", "1", "1", "0"]], "conductors": ["19", "19"], "conductor": "361"}
+        curve = {}
+        verify.apply_conductor(curve, None, {}, prod, why, None, wres)
+        self.assertEqual(curve["conductor_source"], "isogenous product of elliptic curves")
+        # the census curve 2.12.c, on which Magma's genus-2 Conductor fails
+        cert = read_json(ROOT / "data" / "curves" / "2.12.c.json")
+        self.assertEqual((cert["curve"]["conductor"], cert["curve"]["conductor_source"]),
+                         ("1512160026300", "Weil restriction of an elliptic curve"))
+        self.assertEqual(cert["split"]["weil_restriction"]["conductor_norm"], "12497190300")
+        # re-verified 2026-11-15: 11.b gets its first conductor; 16.c's Ogg-formula value was too large by 2^10;
+        # 4.c and 2.2.2.4.c agree with their LMFDB labels
+        expected = {"11.b": "11712800", "16.c": "329188827413836153764", "4.c": "775", "2.2.2.4.c": "176400",
+                    "2.2.2.2.b": "784", "2.2.4.c": "4752", "2.2.6.c": "6912", "2.8.c": "979254391500", "4.4.c": "48384",
+                    "8.c": "2560"}
+        for cid, n in expected.items():
+            c = read_json(ROOT / "data" / "curves" / f"{cid}.json")
+            self.assertEqual((c["curve"]["conductor"], c["curve"]["conductor_source"]), (n, "Weil restriction of an elliptic curve"), cid)
+        self.assertEqual(read_json(ROOT / "data" / "curves" / "16.c.json")["curve"]["conductor_magma"], "337089359271768221454336")
+
     def test_apply_conductor_without_magma_conductor(self):
         """When Magma's conductor fails, the minimal model it wrote first is kept, the note says why, and an
         isogenous product's conductor is not described as agreeing with a Magma value that does not exist (2026-10-20)."""

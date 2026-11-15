@@ -28,11 +28,15 @@
       over <span class="m">ℚ</span>; the verifier works on the even model <span class="m">y² = 4f + h²</span>, made integral, and records the reduced minimal
       Weierstrass model and the conductor. For a Jacobian isogenous over <span class="m">ℚ</span> to a product
       <span class="m">E₁ × E₂</span> found by the Richelot search, the conductor is <span class="m">N(E₁)N(E₂)</span> (rigorous: an isogeny invariant, with the elliptic
-      conductors from Tate's algorithm). Otherwise the conductor exponent at 2 is computed by Magma with Ogg's formula when <span class="m">v₂(Δ) ≥ 12</span>, without
+      conductors from Tate's algorithm). For a Jacobian isogenous over <span class="m">ℚ</span> to the Weil restriction
+      <span class="m">Res<sub>K/ℚ</sub> E</span> of an elliptic curve over a quadratic field <span class="m">K</span> (found by the same search), the conductor
+      is <span class="m">d<sub>K</sub>² N(f<sub>E</sub>)</span> (rigorous: an isogeny invariant, by Milne's formula for Weil restrictions, with the conductor of
+      <span class="m">E</span> from Tate's algorithm over <span class="m">K</span>); since 15 November 2026 this gives the conductors of
+      <a href="curve.html?id=11.b">11.b</a> and <a href="curve.html?id=2.12.c">2.12.c</a>, on which Magma's genus-2 conductor fails, and it corrected that of
+      <a href="curve.html?id=16.c">16.c</a>. Otherwise the conductor exponent at 2 is computed by Magma with Ogg's formula when <span class="m">v₂(Δ) ≥ 12</span>, without
       a correctness guarantee — an audit found it too large by <span class="m">2¹⁰</span> or <span class="m">2²⁰</span> for nine split curves — and this is flagged on the
       curve's page. Odd exponents are rigorous. When Magma's genus-2 conductor fails or does not finish, or when its exponent at 2 disagrees
-      with the LMFDB label while the odd parts agree, the conductor is read off the LMFDB label. The one curve with neither,
-      <a href="curve.html?id=11.b">11.b</a>, has no conductor yet.</dd>
+      with the LMFDB label while the odd parts agree, the conductor is read off the LMFDB label.</dd>
     <dt>the group</dt>
     <dd><span class="m">J(ℚ)<sub>tors</sub></span>, written as a list of invariant factors <span class="m">[n₁, …, n_r] = ℤ/n₁ ⊕ … ⊕ ℤ/n_r</span> with
       <span class="m">n₁ | … | n_r</span>, <span class="m">[ ]</span> for the trivial group, as in the paper. The groups are listed in the paper's order:

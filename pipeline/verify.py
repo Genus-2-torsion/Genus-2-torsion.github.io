@@ -365,7 +365,7 @@ def conductor_missing_reason(timed_out: bool, error: str) -> str:
 
 
 def apply_conductor(curve: dict, cond: dict | None, lmfdb: dict, prod: dict | None,
-                    missing: str = "", partial: dict | None = None) -> None:
+                    missing: str = "", partial: dict | None = None, wres: dict | None = None) -> None:
     """Fill the minimal model and conductor fields of curve from the conductor job: cond is its result
     (None if it did not finish), partial the minimal model it wrote before the conductor, missing the
     reason the conductor is absent (conductor_missing_reason)."""
@@ -410,6 +410,25 @@ def apply_conductor(curve: dict, cond: dict | None, lmfdb: dict, prod: dict | No
         else:
             curve["conductor_note"] = (f"N(E1) N(E2) = {prod['conductors'][0]} * {prod['conductors'][1]} for the elliptic curves {prod['ainvs'][0]} and "
                                        f"{prod['ainvs'][1]} to whose product J is isogenous over Q" + (" (Magma's genus-2 Conductor agrees)" if magma_val else ""))
+    elif wres:
+        # rigorous: J is isogenous over Q to Res_{K/Q} E, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1)
+        magma_val = cond["conductor"] if cond else ""
+        previous, previous_src = curve.get("conductor") or "", curve.get("conductor_source") or ""
+        curve["conductor_magma"] = magma_val
+        curve["conductor"] = wres["conductor"]
+        curve["conductor_factored"] = _factor_str(int(wres["conductor"]))
+        curve["conductor_source"] = "Weil restriction of an elliptic curve"
+        base = (f"N(J) = d_K^2 N(f_E) = ({wres['field_discriminant']})^2 * {wres['conductor_norm']} for the elliptic curve E over "
+                f"{wres['field']} to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)")
+        if magma_val and magma_val != wres["conductor"]:
+            note = f"Magma's genus-2 Conductor gave {magma_val} (Ogg's formula at 2, no correctness guarantee); the rigorous value is " + base
+        elif magma_val:
+            note = base + " (Magma's genus-2 Conductor agrees)"
+        else:
+            note = base + (f"; {missing}" if missing else "")
+        if previous_src == "lmfdb label" and previous and previous != wres["conductor"]:
+            note += f"; the LMFDB label gives {previous}"
+        curve["conductor_note"] = note
 
 
 def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, now: str, lmfdb: dict,
@@ -421,7 +440,8 @@ def build_certificate(v: dict, res: dict, cond: dict | None, curves, pid: str, n
     known_classes = {c["class"] for c in curves if c["group_key"] == key and c["class"] in CLASSES}
     known_any = any(c["group_key"] == key for c in curves)
     curve = dict(res["curve"])
-    apply_conductor(curve, cond, lmfdb, res["split"].get("isogenous_product"), cond_missing, cond_partial)
+    apply_conductor(curve, cond, lmfdb, res["split"].get("isogenous_product"), cond_missing, cond_partial,
+                    res["split"].get("weil_restriction"))
     sources = v.get("sources") or []
     return {
         "schema": SCHEMA_CERTIFICATE,
@@ -510,6 +530,7 @@ def site_url(pid: str) -> str:
 
 CONDUCTOR_FIELDS = ("minimal_model", "minimal_discriminant", "minimal_discriminant_factored", "conductor",
                     "conductor_factored", "conductor_note", "conductor_source", "conductor_magma")
+MODEL_FIELDS = ("minimal_model", "minimal_discriminant", "minimal_discriminant_factored")
 
 
 def reverify_submission(cid: str) -> tuple[Path, dict, dict]:
@@ -628,15 +649,17 @@ def process(path: Path, args, replace: dict | None = None, sub: dict | None = No
         cert = build_certificate(v, res, cond, curves, pid, now, lmfdb, cond_missing, cond_partial)
         if replace is not None and not cond:
             # the conductor job did not finish this time (some took hours, see fill_conductors.py): keep the recorded
-            # minimal model and conductor
-            for k in CONDUCTOR_FIELDS:
+            # minimal model, and the recorded conductor unless a rigorous one (isogenous product or Weil restriction)
+            # was found by verify_lib.m
+            rigorous = bool(res["split"].get("isogenous_product") or res["split"].get("weil_restriction"))
+            for k in (MODEL_FIELDS if rigorous else CONDUCTOR_FIELDS):
                 if k in replace["curve"]:
                     cert["curve"][k] = replace["curve"][k]
                 else:
                     cert["curve"].pop(k, None)
             for k in ("conductor_log", "conductor_cputime_seconds"):
                 cert["verification"][k] = replace["verification"].get(k)
-            log("  the recorded minimal model and conductor are kept")
+            log("  the recorded minimal model is kept" + ("" if rigorous else ", and the recorded conductor"))
         write_json(CURVES_DIR / f"{pid}.json", cert)
         LOGS_DIR.mkdir(exist_ok=True)
         shutil.copy(jobdir / "magma.log", LOGS_DIR / f"{pid}.log")

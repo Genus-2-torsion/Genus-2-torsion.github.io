@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 13:07 UTC",
+  "generated": "2026-11-15 13:17 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -852,7 +852,7 @@
             },
             "conductor": "775",
             "conductor_sort": 775,
-            "conductor_note": "taken from the LMFDB label 775.a.1: Magma's genus-2 Conductor gave 793600, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
+            "conductor_note": "Magma's genus-2 Conductor gave 793600 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (5)^2 * 31 for the elliptic curve E over Q(sqrt(5)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
             "discriminant_digits": 20,
             "lmfdb": {
               "label": "775.a.1",
@@ -875,7 +875,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 - 2*T^2 + 9 is irreducible",
-            "verified": "2026-10-17 06:28:59 UTC",
+            "verified": "2026-11-15 13:14:56 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }
@@ -1721,7 +1721,7 @@
             },
             "conductor": "2560",
             "conductor_sort": 2560,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (-4)^2 * 160 for the elliptic curve E over Q(sqrt(-1)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 11,
             "lmfdb": {
               "label": "2560.h.3",
@@ -1744,7 +1744,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 - 2*T^2 + 9 is irreducible",
-            "verified": "2026-10-17 06:29:03 UTC",
+            "verified": "2026-11-15 13:14:58 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }
@@ -2314,9 +2314,9 @@
               "h": "0",
               "text": "y^2 = 1204142*x^6 - 5109634*x^5 + 31412066*x^4 - 65405928*x^3 + 99564424*x^2 + 94188680*x + 9471400"
             },
-            "conductor": "",
-            "conductor_sort": null,
-            "conductor_note": "not computed: Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
+            "conductor": "11712800",
+            "conductor_sort": 11712800,
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (44)^2 * 6050 for the elliptic curve E over Q(sqrt(11)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm); Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
             "discriminant_digits": 83,
             "lmfdb": {
               "label": "",
@@ -2339,7 +2339,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(11)) (the surface is E x E^sigma); simple over ℚ: χ_3 = T^4 + T^2 + 9 is irreducible",
-            "verified": "2026-09-18 17:35:59 UTC",
+            "verified": "2026-11-15 13:14:23 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           }
@@ -3337,9 +3337,9 @@
               "h": "0",
               "text": "y^2 = 249520219335191939660053094309589*x^6 - 309261949361774794558368494037090*x^5 - 769220462943689753469976777135143*x^4 + 5882775146606773159718193350847504*x^3 - 6051549719303019724765641656567388*x^2 + 4639564394768856571455257269104960*x - 5010129230343195963886957065223936"
             },
-            "conductor": "337089359271768221454336",
-            "conductor_sort": 337089359271768221454336,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor": "329188827413836153764",
+            "conductor_sort": 329188827413836153764,
+            "conductor_note": "Magma's genus-2 Conductor gave 337089359271768221454336 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (-87)^2 * 43491719832717156 for the elliptic curve E over Q(sqrt(-87)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
             "discriminant_digits": 344,
             "lmfdb": {
               "label": "",
@@ -3360,7 +3360,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-87)) (the surface is E x E^sigma); simple over ℚ: χ_23 = T^4 - 2*T^2 + 529 is irreducible",
-            "verified": "2026-11-15 11:45:40 UTC",
+            "verified": "2026-11-15 13:14:26 UTC",
             "submitted": "2026-11-15",
             "source_kind": ""
           }
@@ -8240,7 +8240,7 @@
             },
             "conductor": "979254391500",
             "conductor_sort": 979254391500,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (-55)^2 * 323720460 for the elliptic curve E over Q(sqrt(-55)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 57,
             "lmfdb": {
               "label": "",
@@ -8261,7 +8261,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-55)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
-            "verified": "2026-10-17 06:12:13 UTC",
+            "verified": "2026-11-15 13:14:51 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }
@@ -8671,9 +8671,9 @@
               "h": "0",
               "text": "y^2 = 401753501475*x^6 - 1959720732180*x^5 - 2175587946309*x^4 + 9428333472288*x^3 + 7060322542317*x^2 - 9993519903906*x - 7548673630806"
             },
-            "conductor": "",
-            "conductor_sort": null,
-            "conductor_note": "not computed: Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
+            "conductor": "1512160026300",
+            "conductor_sort": 1512160026300,
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (-11)^2 * 12497190300 for the elliptic curve E over Q(sqrt(-11)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm); Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
             "discriminant_digits": 132,
             "lmfdb": {
               "label": "",
@@ -8694,7 +8694,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-11)) (the surface is E x E^sigma); simple over ℚ: χ_29 = T^4 - 26*T^2 + 841 is irreducible",
-            "verified": "2026-11-15 13:06:48 UTC",
+            "verified": "2026-11-15 13:14:04 UTC",
             "submitted": "2026-11-15",
             "source_kind": ""
           }
@@ -11318,7 +11318,7 @@
             },
             "conductor": "48384",
             "conductor_sort": 48384,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (-3)^2 * 5376 for the elliptic curve E over Q(sqrt(-3)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 29,
             "lmfdb": {
               "label": "48384.j.5",
@@ -11341,7 +11341,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma); simple over ℚ: χ_17 = T^4 + 14*T^2 + 289 is irreducible",
-            "verified": "2026-10-17 06:28:57 UTC",
+            "verified": "2026-11-15 13:14:52 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }
@@ -12985,7 +12985,7 @@
             },
             "conductor": "4752",
             "conductor_sort": 4752,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (12)^2 * 33 for the elliptic curve E over Q(sqrt(3)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 12,
             "lmfdb": {
               "label": "4752.o.2",
@@ -13008,7 +13008,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(3)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
-            "verified": "2026-10-17 06:12:03 UTC",
+            "verified": "2026-11-15 13:14:47 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }
@@ -13204,7 +13204,7 @@
             },
             "conductor": "6912",
             "conductor_sort": 6912,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (-8)^2 * 108 for the elliptic curve E over Q(sqrt(-2)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 14,
             "lmfdb": {
               "label": "6912.w.4",
@@ -13227,7 +13227,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-2)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - 2*T^2 + 25 is irreducible",
-            "verified": "2026-10-17 06:12:05 UTC",
+            "verified": "2026-11-15 13:14:48 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }
@@ -14971,7 +14971,7 @@
             },
             "conductor": "784",
             "conductor_sort": 784,
-            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "conductor_note": "N(J) = d_K^2 N(f_E) = (28)^2 * 1 for the elliptic curve E over Q(sqrt(7)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
             "discriminant_digits": 16,
             "lmfdb": {
               "label": "784.c.1",
@@ -14994,7 +14994,7 @@
             "new_group": false,
             "new_for_class": false,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma); simple over ℚ: χ_5 = T^4 - 10*T^2 + 25 is not of the form (T^2 - a*T + 5)*(T^2 - b*T + 5) with integers a, b (s1 = 0, s2 = -10: s1^2 - 4*(s2 - 2*p) = 80 is not a square)",
-            "verified": "2026-11-14 09:04:54 UTC",
+            "verified": "2026-11-15 13:14:39 UTC",
             "submitted": "2026-08-30",
             "source_kind": "import"
           },
@@ -15242,7 +15242,7 @@
             },
             "conductor": "176400",
             "conductor_sort": 176400,
-            "conductor_note": "taken from the LMFDB label 176400.cr.1: Magma's genus-2 Conductor gave 184968806400, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
+            "conductor_note": "Magma's genus-2 Conductor gave 184968806400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (-20)^2 * 441 for the elliptic curve E over Q(sqrt(-5)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
             "discriminant_digits": 23,
             "lmfdb": {
               "label": "176400.cr.1",
@@ -15265,7 +15265,7 @@
             "new_group": false,
             "new_for_class": true,
             "certificate": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-5)) (the surface is E x E^sigma); simple over ℚ: χ_19 = T^4 - 10*T^2 + 361 is irreducible",
-            "verified": "2026-10-17 06:01:56 UTC",
+            "verified": "2026-11-15 13:14:41 UTC",
             "submitted": "2026-10-16",
             "source_kind": "file"
           }

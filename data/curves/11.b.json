@@ -68,10 +68,11 @@
     },
     "minimal_discriminant": "9854121338799529276464585699279872951795201301939560120320000000000000000000000",
     "minimal_discriminant_factored": "2^53 * 5^22 * 11^17 * 23^22",
-    "conductor": "",
-    "conductor_factored": "",
-    "conductor_note": "not computed: Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
-    "conductor_source": ""
+    "conductor": "11712800",
+    "conductor_factored": "2^5 * 5^2 * 11^4",
+    "conductor_note": "N(J) = d_K^2 N(f_E) = (44)^2 * 6050 for the elliptic curve E over Q(sqrt(11)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm); Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
+    "conductor_source": "Weil restriction of an elliptic curve",
+    "conductor_magma": ""
   },
   "lmfdb": {
     "label": "",
@@ -152,6 +153,36 @@
       "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(11)) (the surface is E x E^sigma)"
     },
     "isogenous_product": null,
+    "weil_restriction": {
+      "field": "Q(sqrt(11))",
+      "field_discriminant": "44",
+      "field_polynomial": "x^2 - 11/9",
+      "ainvs": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "231127",
+          "245157/2"
+        ],
+        [
+          "0",
+          "0"
+        ],
+        [
+          "35453800064",
+          "32100160128"
+        ],
+        [
+          "-25720176771072",
+          "-23270636126208"
+        ]
+      ],
+      "conductor_norm": "6050",
+      "conductor": "11712800",
+      "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+    },
     "cover_submitted": false,
     "cover_accepted": false,
     "cover_error": "",
@@ -207,13 +238,13 @@
   },
   "dates": {
     "submitted": "2026-08-30",
-    "verified": "2026-09-18 17:35:59 UTC"
+    "verified": "2026-11-15 13:14:23 UTC"
   },
   "verification": {
     "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
-    "magma_version": "2.29-4",
-    "cputime_seconds": "1.18000",
-    "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "1.53000",
+    "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
     "log": "data/logs/11.b.log",
     "conductor_log": "data/logs/11.b.conductor.log",
     "conductor_cputime_seconds": null

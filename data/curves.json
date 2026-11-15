@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 13:07 UTC",
+  "generated": "2026-11-15 13:17 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -2627,8 +2627,8 @@
         "minimal_discriminant_factored": "2^12 * 5^15 * 31",
         "conductor": "775",
         "conductor_factored": "5^2 * 31",
-        "conductor_note": "taken from the LMFDB label 775.a.1: Magma's genus-2 Conductor gave 793600, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
-        "conductor_source": "lmfdb label",
+        "conductor_note": "Magma's genus-2 Conductor gave 793600 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (5)^2 * 31 for the elliptic curve E over Q(sqrt(5)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
+        "conductor_source": "Weil restriction of an elliptic curve",
         "conductor_magma": "793600"
       },
       "lmfdb": {
@@ -2710,6 +2710,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(5)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(5))",
+          "field_discriminant": "5",
+          "field_polynomial": "x^2 - 5/4",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "47/2",
+              "8"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "479/4",
+              "120"
+            ],
+            [
+              "-527/8",
+              "-62"
+            ]
+          ],
+          "conductor_norm": "31",
+          "conductor": "775",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -2763,16 +2793,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:28:59 UTC"
+        "verified": "2026-11-15 13:14:56 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "0.870000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.49000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/4.c.log",
         "conductor_log": "data/logs/4.c.conductor.log",
-        "conductor_cputime_seconds": 1.15
+        "conductor_cputime_seconds": 1.86
       },
       "credit_differs": false
     },
@@ -5417,8 +5447,9 @@
         "minimal_discriminant_factored": "2^20 * 5",
         "conductor": "2560",
         "conductor_factored": "2^9 * 5",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (-4)^2 * 160 for the elliptic curve E over Q(sqrt(-1)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "2560"
       },
       "lmfdb": {
         "label": "2560.h.3",
@@ -5499,6 +5530,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-1)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-1))",
+          "field_discriminant": "-4",
+          "field_polynomial": "x^2 + 1",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "7/16",
+              "-1/8"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "11/256",
+              "-3/64"
+            ],
+            [
+              "5/4096",
+              "-5/2048"
+            ]
+          ],
+          "conductor_norm": "160",
+          "conductor": "2560",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -5551,16 +5612,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:29:03 UTC"
+        "verified": "2026-11-15 13:14:58 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "0.770000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.36000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/8.c.log",
         "conductor_log": "data/logs/8.c.conductor.log",
-        "conductor_cputime_seconds": 0.22
+        "conductor_cputime_seconds": 0.35
       },
       "credit_differs": false
     },
@@ -7279,10 +7340,11 @@
         },
         "minimal_discriminant": "9854121338799529276464585699279872951795201301939560120320000000000000000000000",
         "minimal_discriminant_factored": "2^53 * 5^22 * 11^17 * 23^22",
-        "conductor": "",
-        "conductor_factored": "",
-        "conductor_note": "not computed: Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
-        "conductor_source": ""
+        "conductor": "11712800",
+        "conductor_factored": "2^5 * 5^2 * 11^4",
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (44)^2 * 6050 for the elliptic curve E over Q(sqrt(11)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm); Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": ""
       },
       "lmfdb": {
         "label": "",
@@ -7363,6 +7425,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(11)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(11))",
+          "field_discriminant": "44",
+          "field_polynomial": "x^2 - 11/9",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "231127",
+              "245157/2"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "35453800064",
+              "32100160128"
+            ],
+            [
+              "-25720176771072",
+              "-23270636126208"
+            ]
+          ],
+          "conductor_norm": "6050",
+          "conductor": "11712800",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -7418,13 +7510,13 @@
       },
       "dates": {
         "submitted": "2026-08-30",
-        "verified": "2026-09-18 17:35:59 UTC"
+        "verified": "2026-11-15 13:14:23 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
-        "magma_version": "2.29-4",
-        "cputime_seconds": "1.18000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "magma_version": "2.30-1",
+        "cputime_seconds": "1.53000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/11.b.log",
         "conductor_log": "data/logs/11.b.conductor.log",
         "conductor_cputime_seconds": null
@@ -10324,10 +10416,11 @@
         },
         "minimal_discriminant": "2783666209315048919694303816314238903570205718303550976496753791502809940681747924121413085351605501248072671195412034067467910423431732241351923630268996220265383816003215826011676305950086179271576153850855730158532884174500706748694994705469705448963449078714605441112163559917558045234678138380899360858860099995510170596889591808",
         "minimal_discriminant_factored": "2^28 * 3^23 * 7^12 * 11^16 * 13^4 * 17^10 * 29^15 * 41^7 * 151 * 641 * 1193^22 * 3583^22 * 8447^22",
-        "conductor": "337089359271768221454336",
-        "conductor_factored": "2^12 * 3^3 * 7^2 * 11^2 * 13 * 17^2 * 29^2 * 41^2 * 151 * 641",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor": "329188827413836153764",
+        "conductor_factored": "2^2 * 3^3 * 7^2 * 11^2 * 13 * 17^2 * 29^2 * 41^2 * 151 * 641",
+        "conductor_note": "Magma's genus-2 Conductor gave 337089359271768221454336 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (-87)^2 * 43491719832717156 for the elliptic curve E over Q(sqrt(-87)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "337089359271768221454336"
       },
       "lmfdb": {
         "label": "",
@@ -10408,6 +10501,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-87)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-87))",
+          "field_discriminant": "-87",
+          "field_polynomial": "x^2 + 29/3",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "218235347510160797755247217935061/2",
+              "-62072510794487517458714530799619/2"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "875427891116321483462520649899337855712153145801215022925903872",
+              "787880750765558296650986288327245222694197285733021703778203648"
+            ],
+            [
+              "4988794432547913617534893370162599233322693101785732843256487803374194534232232386860148588544",
+              "883843159355120670719177487950199785770860703361491313506137242912542046520957390464672071680"
+            ]
+          ],
+          "conductor_norm": "43491719832717156",
+          "conductor": "329188827413836153764",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -10455,16 +10578,16 @@
       "source": {},
       "dates": {
         "submitted": "2026-11-15",
-        "verified": "2026-11-15 11:45:40 UTC"
+        "verified": "2026-11-15 13:14:26 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "1.32000",
-        "verify_lib_sha256": "2bd4260c7c09399616ed067de2390ec8b9ad0304dc8d03ab6bbf0a079ff35eb1",
+        "cputime_seconds": "1.27000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/16.c.log",
         "conductor_log": "data/logs/16.c.conductor.log",
-        "conductor_cputime_seconds": 1.23
+        "conductor_cputime_seconds": 1.24
       },
       "credit_differs": false
     },
@@ -22976,8 +23099,9 @@
         "minimal_discriminant_factored": "2^24 * 3^4 * 5^9 * 7^16 * 11^15 * 17^5 * 127",
         "conductor": "979254391500",
         "conductor_factored": "2^2 * 3^2 * 5^3 * 7^2 * 11^2 * 17^2 * 127",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (-55)^2 * 323720460 for the elliptic curve E over Q(sqrt(-55)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "979254391500"
       },
       "lmfdb": {
         "label": "",
@@ -23003,8 +23127,8 @@
           {
             "order": 8,
             "mumford": [
-              "x^2 + 121/7*x - 110",
-              "5456/7*x + 4840",
+              "x^2 - 253/42*x + 55/6",
+              "29722/9*x - 59290/9",
               "2"
             ]
           }
@@ -23068,6 +23192,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-55)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-55))",
+          "field_discriminant": "-55",
+          "field_polynomial": "x^2 + 55",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "14211/160",
+              "2371/160"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "12459257/12800",
+              "-1521229/12800"
+            ],
+            [
+              "3171571/4000",
+              "66929/4000"
+            ]
+          ],
+          "conductor_norm": "323720460",
+          "conductor": "979254391500",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -23121,16 +23275,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:12:13 UTC"
+        "verified": "2026-11-15 13:14:51 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "1.60000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.65000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/2.8.c.log",
         "conductor_log": "data/logs/2.8.c.conductor.log",
-        "conductor_cputime_seconds": 0.63
+        "conductor_cputime_seconds": 0.62
       },
       "credit_differs": false
     },
@@ -24442,10 +24596,11 @@
         },
         "minimal_discriminant": "215887715451228332041764805308940501521976811854682389133336766913428542375726817520503349906001157946570319069184000000000000000",
         "minimal_discriminant_factored": "2^46 * 3^14 * 5^15 * 7^6 * 11^6 * 23 * 37^12 * 61^22 * 163^12",
-        "conductor": "",
-        "conductor_factored": "",
-        "conductor_note": "not computed: Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
-        "conductor_source": ""
+        "conductor": "1512160026300",
+        "conductor_factored": "2^2 * 3^4 * 5^2 * 7^2 * 11^2 * 23 * 37^2",
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (-11)^2 * 12497190300 for the elliptic curve E over Q(sqrt(-11)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm); Magma's genus-2 Conductor failed on this curve: Fibre blowups over number fields not yet implemented",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": ""
       },
       "lmfdb": {
         "label": "",
@@ -24463,7 +24618,7 @@
           {
             "order": 2,
             "mumford": [
-              "x^2 - 98/97*x - 242/97",
+              "x^2 - 2116653/4526545*x - 4606833/4526545",
               "0",
               "2"
             ]
@@ -24471,8 +24626,8 @@
           {
             "order": 12,
             "mumford": [
-              "x^2 - 85407/2155*x + 105077/2155",
-              "-167109329125824/185761*x + 212375755648896/185761",
+              "x^2 + 69903/2405*x + 14399/481",
+              "129063070276032/231361*x + 138100167123072/231361",
               "2"
             ]
           }
@@ -24536,6 +24691,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-11)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-11))",
+          "field_discriminant": "-11",
+          "field_polynomial": "x^2 + 26569/3179",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "147311964927443529/584518",
+              "-1050524685191794565349/15530058742"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "292040741042174645143854847435497111552/24963396908329979",
+              "-32727004743701786900195708588226871296/2269399718939089"
+            ],
+            [
+              "-6875544655247478256096024913803041727002757375721472000/7295777417031611332561",
+              "-155341647100121290709495930528427140577958916257424080896000/193841510193112881494813209"
+            ]
+          ],
+          "conductor_norm": "12497190300",
+          "conductor": "1512160026300",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -24584,13 +24769,13 @@
       "source": {},
       "dates": {
         "submitted": "2026-11-15",
-        "verified": "2026-11-15 13:06:48 UTC"
+        "verified": "2026-11-15 13:14:04 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "1.56000",
-        "verify_lib_sha256": "2bd4260c7c09399616ed067de2390ec8b9ad0304dc8d03ab6bbf0a079ff35eb1",
+        "cputime_seconds": "1.60000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/2.12.c.log",
         "conductor_log": "data/logs/2.12.c.conductor.log",
         "conductor_cputime_seconds": null
@@ -31944,8 +32129,9 @@
         "minimal_discriminant_factored": "-1 * 2^13 * 3^11 * 5^22 * 7",
         "conductor": "48384",
         "conductor_factored": "2^8 * 3^3 * 7",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (-3)^2 * 5376 for the elliptic curve E over Q(sqrt(-3)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "48384"
       },
       "lmfdb": {
         "label": "48384.j.5",
@@ -32036,6 +32222,36 @@
           "detail": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(-3)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-3))",
+          "field_discriminant": "-3",
+          "field_polynomial": "x^2 + 1/12",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "78125/648",
+              "78125/108"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1220703125/69984",
+              "15869140625/104976"
+            ],
+            [
+              "-934600830078125/204073344",
+              "2056121826171875/102036672"
+            ]
+          ],
+          "conductor_norm": "5376",
+          "conductor": "48384",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -32089,16 +32305,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:28:57 UTC"
+        "verified": "2026-11-15 13:14:52 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "0.770000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.34000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/4.4.c.log",
         "conductor_log": "data/logs/4.4.c.conductor.log",
-        "conductor_cputime_seconds": 0.22
+        "conductor_cputime_seconds": 0.36
       },
       "credit_differs": false
     },
@@ -36757,8 +36973,9 @@
         "minimal_discriminant_factored": "2^12 * 3^11 * 11",
         "conductor": "4752",
         "conductor_factored": "2^4 * 3^3 * 11",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (12)^2 * 33 for the elliptic curve E over Q(sqrt(3)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "4752"
       },
       "lmfdb": {
         "label": "4752.o.2",
@@ -36859,6 +37076,36 @@
           "detail": "a chain of two (2,2)-isogenies over Q reaches a Weil restriction of an elliptic curve E over Q(sqrt(3)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(3))",
+          "field_discriminant": "12",
+          "field_polynomial": "x^2 - 12",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "935/384",
+              "595/384"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "106675/147456",
+              "-38675/221184"
+            ],
+            [
+              "-75625/169869312",
+              "105875/509607936"
+            ]
+          ],
+          "conductor_norm": "33",
+          "conductor": "4752",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -36913,16 +37160,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:12:03 UTC"
+        "verified": "2026-11-15 13:14:47 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "0.940000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.37000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/2.2.4.c.log",
         "conductor_log": "data/logs/2.2.4.c.conductor.log",
-        "conductor_cputime_seconds": 3.71
+        "conductor_cputime_seconds": 3.78
       },
       "credit_differs": false
     },
@@ -37523,8 +37770,9 @@
         "minimal_discriminant_factored": "2^20 * 3^9",
         "conductor": "6912",
         "conductor_factored": "2^8 * 3^3",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (-8)^2 * 108 for the elliptic curve E over Q(sqrt(-2)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "6912"
       },
       "lmfdb": {
         "label": "6912.w.4",
@@ -37625,6 +37873,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-2)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-2))",
+          "field_discriminant": "-8",
+          "field_polynomial": "x^2 + 1/2",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "-23/8",
+              "-5/8"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "459/128",
+              "81/32"
+            ],
+            [
+              "-2187/1024",
+              "-2187/1024"
+            ]
+          ],
+          "conductor_norm": "108",
+          "conductor": "6912",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -37679,16 +37957,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:12:05 UTC"
+        "verified": "2026-11-15 13:14:48 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "1.36000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.33000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/2.2.6.c.log",
         "conductor_log": "data/logs/2.2.6.c.conductor.log",
-        "conductor_cputime_seconds": 0.35
+        "conductor_cputime_seconds": 0.34
       },
       "credit_differs": false
     },
@@ -42440,8 +42718,9 @@
         "minimal_discriminant_factored": "2^12 * 3^12 * 7^6",
         "conductor": "784",
         "conductor_factored": "2^4 * 7^2",
-        "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
-        "conductor_source": "magma"
+        "conductor_note": "N(J) = d_K^2 N(f_E) = (28)^2 * 1 for the elliptic curve E over Q(sqrt(7)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm) (Magma's genus-2 Conductor agrees)",
+        "conductor_source": "Weil restriction of an elliptic curve",
+        "conductor_magma": "784"
       },
       "lmfdb": {
         "label": "784.c.1",
@@ -42469,25 +42748,25 @@
           {
             "order": 2,
             "mumford": [
+              "x^2 - 3/4*x - 5/8",
+              "0",
+              "2"
+            ]
+          },
+          {
+            "order": 2,
+            "mumford": [
+              "x + 1/2",
+              "0",
+              "1"
+            ]
+          },
+          {
+            "order": 2,
+            "mumford": [
               "x^2 - 13/2*x + 21/2",
               "0",
               "2"
-            ]
-          },
-          {
-            "order": 2,
-            "mumford": [
-              "x^2 - 19/4*x + 35/8",
-              "0",
-              "2"
-            ]
-          },
-          {
-            "order": 2,
-            "mumford": [
-              "x - 5/4",
-              "0",
-              "1"
             ]
           }
         ],
@@ -42554,6 +42833,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(7)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(7))",
+          "field_discriminant": "28",
+          "field_polynomial": "xx^2 - 63/25",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "-1700/1323"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "1360/83349",
+              "0"
+            ],
+            [
+              "0",
+              "-320/992436543"
+            ]
+          ],
+          "conductor_norm": "1",
+          "conductor": "784",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -42612,16 +42921,16 @@
       },
       "dates": {
         "submitted": "2026-08-30",
-        "verified": "2026-11-14 09:04:54 UTC"
+        "verified": "2026-11-15 13:14:39 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "1.58000",
-        "verify_lib_sha256": "2bd4260c7c09399616ed067de2390ec8b9ad0304dc8d03ab6bbf0a079ff35eb1",
+        "cputime_seconds": "1.61000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/2.2.2.2.b.log",
         "conductor_log": "data/logs/2.2.2.2.b.conductor.log",
-        "conductor_cputime_seconds": 11.53
+        "conductor_cputime_seconds": 11.57
       },
       "credit_differs": false
     },
@@ -43781,8 +44090,8 @@
         "minimal_discriminant_factored": "2^36 * 3^6 * 5^6 * 7^6",
         "conductor": "176400",
         "conductor_factored": "2^4 * 3^2 * 5^2 * 7^2",
-        "conductor_note": "taken from the LMFDB label 176400.cr.1: Magma's genus-2 Conductor gave 184968806400, with the exponent of 2 from Ogg's formula (no correctness guarantee when v_2(disc) >= 12); the odd parts agree",
-        "conductor_source": "lmfdb label",
+        "conductor_note": "Magma's genus-2 Conductor gave 184968806400 (Ogg's formula at 2, no correctness guarantee); the rigorous value is N(J) = d_K^2 N(f_E) = (-20)^2 * 441 for the elliptic curve E over Q(sqrt(-5)) to whose Weil restriction J is isogenous over Q (Milne 1972, Prop. 1; f_E by Tate's algorithm)",
+        "conductor_source": "Weil restriction of an elliptic curve",
         "conductor_magma": "184968806400"
       },
       "lmfdb": {
@@ -43894,6 +44203,36 @@
           "detail": "(2,2)-isogenous over Q to a Weil restriction of an elliptic curve E over Q(sqrt(-5)) (the surface is E x E^sigma)"
         },
         "isogenous_product": null,
+        "weil_restriction": {
+          "field": "Q(sqrt(-5))",
+          "field_discriminant": "-20",
+          "field_polynomial": "x^2 + 5/4",
+          "ainvs": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "49/5",
+              "2577/100"
+            ],
+            [
+              "0",
+              "0"
+            ],
+            [
+              "-2157323/8000",
+              "49931/250"
+            ],
+            [
+              "-51883209/40000",
+              "-570715299/800000"
+            ]
+          ],
+          "conductor_norm": "441",
+          "conductor": "176400",
+          "note": "J is isogenous over Q to the Weil restriction Res_{K/Q} E of an elliptic curve E over the quadratic field K (found by RichelotIsogenousSurfaces); the conductor is an isogeny invariant, and N(Res_{K/Q} E) = d_K^2 N_{K/Q}(f_E) (Milne 1972, Prop. 1), with the conductor f_E of E computed by Tate's algorithm; the a-invariants of E are given in the power basis of K = Q[t]/(field_polynomial)"
+        },
         "cover_submitted": false,
         "cover_accepted": false,
         "cover_error": "",
@@ -43948,16 +44287,16 @@
       },
       "dates": {
         "submitted": "2026-10-16",
-        "verified": "2026-10-17 06:01:56 UTC"
+        "verified": "2026-11-15 13:14:41 UTC"
       },
       "verification": {
         "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
         "magma_version": "2.30-1",
-        "cputime_seconds": "0.820000",
-        "verify_lib_sha256": "96637e64a8daa542581fdf57bbeee1cf9396f1ec9facf171be52daef32912ee9",
+        "cputime_seconds": "1.39000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
         "log": "data/logs/2.2.2.4.c.log",
         "conductor_log": "data/logs/2.2.2.4.c.conductor.log",
-        "conductor_cputime_seconds": 0.28
+        "conductor_cputime_seconds": 0.47
       },
       "credit_differs": false
     },

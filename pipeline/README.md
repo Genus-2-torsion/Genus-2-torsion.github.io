@@ -109,6 +109,11 @@ The predicate `rank(3) >= 2 and order % 8 == 0`, placed after the [28] branch, a
 census groups have `qsplit` examples and exact split grades, so their combined grades are unchanged.
 The proof is in `proofs/qsimple-612-obstruction.html`, with PDF/LaTeX and the Magma certificate under
 `data/knowledge/sources/qsimple_612_*`.
+`QSPLIT_CONDITION_KEYS` lists the five groups with neither an example nor an exclusion in `qsplit`
+([25], [32], [2,28], [2,2,20], [2,2,2,12]). Their `_SPLIT_OPEN_NOTES` entries state proved necessary
+conditions for a genus-2 Jacobian split over ℚ with that torsion, citing `QSplitConditions`
+(`proofs/qsplit-necessary-conditions.html`, with PDF/LaTeX and the Magma certificate under
+`data/knowledge/sources/qsplit_*`). They are notes on the open split grade, not exclusions.
 
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 05:24 UTC",
+  "generated": "2026-11-15 11:40 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -4845,8 +4845,10 @@
         },
         "split": {
           "grade": "open",
-          "sources": [],
-          "note": "",
+          "sources": [
+            "QSplitConditions"
+          ],
+          "note": "necessary conditions, not an exclusion: if a genus-2 Jacobian J/ℚ split over ℚ has torsion [25], its complementary elliptic curves have torsion ℤ/5 and are semistable. At 5 both are good with 5 and 10 points, or both are split multiplicative. 66 divides both conductors, or 210 divides both. Relying on the completeness of Cremona's tables below 500,000, both conductors are at least 8778 and one is at least 500,000, so the conductor of J is at least 4,389,000,000",
           "inherited_from": null
         }
       }
@@ -5934,8 +5936,10 @@
         },
         "split": {
           "grade": "open",
-          "sources": [],
-          "note": "",
+          "sources": [
+            "QSplitConditions"
+          ],
+          "note": "no example or exclusion is known. An abelian surface isogenous over ℚ to the square of an elliptic curve has no rational point of order 32. For a genus-2 Jacobian split over ℚ with torsion [32], the complementary curves are never isogenous over ℚ: either their torsion is ℤ/8 and ℤ/4, with 2-part of the gluing degree 4 and different j-invariants, or it is ℤ/8 and ℤ/8, with 16 dividing the gluing degree and no isogeny over ℚ̄",
           "inherited_from": null
         }
       }
@@ -9872,8 +9876,10 @@
         },
         "split": {
           "grade": "open",
-          "sources": [],
-          "note": "",
+          "sources": [
+            "QSplitConditions"
+          ],
+          "note": "necessary condition, not an exclusion: if a genus-2 Jacobian J/ℚ split over ℚ has torsion [2,28], its complementary elliptic curves have torsion ℤ/7 and ℤ/2×ℤ/4 and are glued in degree prime to 14. Both have split multiplicative reduction at 3 and 5, so 225 divides the conductor of J. This uses that J is a Jacobian (gluing degree at least 2): the product 26b1 × 15a1 with the product polarization has torsion [2,28] but conductor 390, and 26b1 has good reduction at 3 and 5",
           "inherited_from": null
         }
       }
@@ -14147,8 +14153,10 @@
         },
         "split": {
           "grade": "open",
-          "sources": [],
-          "note": "",
+          "sources": [
+            "QSplitConditions"
+          ],
+          "note": "no example or exclusion is known. If a genus-2 Jacobian J/ℚ split over ℚ has torsion [2,2,20], its complementary elliptic curves have torsion ℤ/10 and ℤ/2×ℤ/4 and are glued in odd degree prime to 5 (hence at least 3). No further restriction is proved",
           "inherited_from": null
         }
       }
@@ -15836,8 +15844,10 @@
         },
         "split": {
           "grade": "open",
-          "sources": [],
-          "note": "",
+          "sources": [
+            "QSplitConditions"
+          ],
+          "note": "necessary condition, not an exclusion: if a genus-2 Jacobian J/ℚ split over ℚ has torsion [2,2,2,12], its complementary elliptic curves have torsion ℤ/2×ℤ/6 and ℤ/2×ℤ/4 and are glued in degree prime to 6. Both have multiplicative reduction at 2, 3, 5, 7, 11 and 13, so 30030² = 901800900 divides the conductor of J. For a product with the product polarization this fails: 30a2 × 15a1 has torsion [2,2,2,12] and conductor 450",
           "inherited_from": null
         }
       }

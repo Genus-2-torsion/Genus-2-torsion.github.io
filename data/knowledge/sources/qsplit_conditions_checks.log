@@ -1,0 +1,94 @@
+PART A: parent torsion (Proposition 3)
+PARENT_PAIRS [25] {
+    {
+        [ 5 ]
+    }
+}
+PARENT_PAIRS [32] {
+    {
+        [ 4 ],
+        [ 8 ]
+    },
+    {
+        [ 8 ]
+    }
+}
+PARENT_PAIRS [2,28] {
+    {
+        [ 7 ],
+        [ 2, 4 ]
+    }
+}
+PARENT_PAIRS [2,2,20] {
+    {
+        [ 10 ],
+        [ 2, 4 ]
+    }
+}
+PARENT_PAIRS [2,2,2,12] {
+    {
+        [ 2, 6 ],
+        [ 2, 4 ]
+    }
+}
+PART_A_DONE
+PART B: universal families and the valuation lemma (Lemma 9)
+E_t: Z/2 x Z/6 over Q(t), deg j = 24; Kubert's family has j(s) = j(E_{(s-3)/2})
+F_t: Z/2 x Z/4 over Q(t); Kubert's family has j(v) = j(F_{(4v+1)/(4v-1)})
+VALUATION_LEMMA E_t p = 2 : 5 discs (depth 3 ) and 1 discs (depth 1 )
+VALUATION_LEMMA E_t p = 3 : 5 discs (depth 2 ) and 1 discs (depth 1 )
+VALUATION_LEMMA F_t p = 3 : 3 discs (depth 1 ) and 1 discs (depth 1 )
+PART_B_DONE
+PART C: [2,2,2,12] local data (Theorem 10)
+p = 5  E good traces {}
+ F good traces { -2 }
+ differences { 4, 8 }
+p = 7  E good traces { -4 }
+ F good traces { 0 }
+ differences { 4, 8, 12 }
+p = 11  E good traces { 0 }
+ F good traces { -4, 4 }
+ differences { 4, 8, 12, 16 }
+p = 13  E good traces { 2 }
+ F good traces { -2, 6 }
+ differences { 4, 8, 12, 16 }
+PART_C_DONE
+PART D: [2,28] local data (Theorem 11)
+p = 3  traces with 7 | N: { -3 }
+ traces with 8 | N: {}
+p = 5  traces with 7 | N: { -1 }
+ traces with 8 | N: { -2 }
+PART_D_DONE
+PART E: [32] (Theorem 5(b), Theorems 12 and 13)
+MATRIX_LEMMA: solutions for b = 0 (chi(c) = +1) and b = 1 (chi(c) = -1): [ 8, 4 ]
+PART_E_DONE
+PART F: [25] at the prime 5 (Lemmas 14 and 16)
+PART_F_DONE
+PART G: [25] trace identity and conductor dichotomy (Lemma 15, Theorem 17)
+PART_G_DONE
+PART H: [25] nonsplit obstruction and Cremona's tables (Lemma 18, Theorem 19)
+d = 78 <2, 5, 1, 5, I5, true> <3, 5, 1, 5, I5, true> <19, 1, 1, 1, I1, false>
+d = 2244 <2, 10, 1, 10, I10, true> <3, 5, 1, 5, I5, true> <19, 1, 1, 1, I1, false>
+SCAN 1472509 curves in 980367 classes; 464 with torsion Z/5 and 32 with torsion Z/10
+LOW_PARENT 1254k1 witness 19 <19, 1, 1, 1, I1, false> ; class partner 1254k2 with trivial torsion and <19, 5, 1, 1, I5, false>
+LOW_PARENT 1914o1 witness 29 <29, 1, 1, 1, I1, false> ; class partner 1914o2 with trivial torsion and <29, 5, 1, 1, I5, false>
+LOW_PARENT 1914p1 witness 29 <29, 1, 1, 1, I1, false> ; class partner 1914p2 with trivial torsion and <29, 5, 1, 1, I5, false>
+PAIRS Z/5: 107415 pairs in different classes, all excluded (largest prime needed 59 ); same class: [
+    <"165066d1", "165066d2", { 1 }>
+]
+PAIRS Z/5 and Z/10: 122743 pairs in different classes, all excluded; same class: 17
+PART_H_DONE
+PART P: products with the product polarization (Remark 5)
+PRODUCTS: 26b1 x 15a1 has torsion [2,28]; 30a2 x 15a1 has torsion [2,2,2,12] and conductor 450; 66c1 x 15a1 has torsion [2,2,20]
+PART_P_DONE
+PART V: validation only (not used in the proofs)
+d = 1: additive false, exceptional false, fifth roots of q(d) of degrees [ 1, 1, 1, 1, 1 ]
+d = 2: additive false, exceptional false, fifth roots of q(d) of degrees [ 1, 1, 1, 1, 1 ]
+d = 3: additive true, exceptional false, fifth roots of q(d) of degrees [ 5 ]
+d = 5: additive false, exceptional false, fifth roots of q(d) of degrees [ 1, 1, 1, 1, 1 ]
+d = 18: additive true, exceptional false, fifth roots of q(d) of degrees [ 5 ]
+d = 48: additive true, exceptional false, fifth roots of q(d) of degrees [ 5 ]
+d = 68: additive true, exceptional true, fifth roots of q(d) of degrees [ 1, 1, 1, 1, 1 ]
+d = 193: additive true, exceptional true, fifth roots of q(d) of degrees [ 1, 1, 1, 1, 1 ]
+PART_V_DONE
+ALL_QSPLIT_CONDITIONS_CHECKS_PASSED

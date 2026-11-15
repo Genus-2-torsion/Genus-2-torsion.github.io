@@ -92,6 +92,13 @@ SOURCES = {
         "url": "proofs/qsplit-order-256-obstruction.html",
         "used_for": "excludes the exact groups [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16] in the split-over-ℚ class, including groups not represented in the census; complete PDF/LaTeX and supplementary exact matrix checks",
     },
+    "QSplitConditions": {
+        "short": "necessary conditions for the open split-over-ℚ groups (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Necessary conditions for genus-2 Jacobians split over Q with torsion [25], [32], [2,28], [2,2,20] or [2,2,2,12], census proof of 15 November 2026. The complementary elliptic curves have prescribed torsion and gluing degree; an abelian surface isogenous over Q to the square of an elliptic curve has no rational point of order 25 or 32; local comparisons of the elliptic Galois representations force multiplicative reduction at 2, 3, 5, 7, 11 and 13 for [2,2,2,12] and split multiplicative reduction at 3 and 5 for [2,28]; for [25] a Kummer argument at 5 and a uniform trace relation modulo 25 force semistability and give the 66/210 dichotomy, and a comparison over Cremona's tables below conductor 500,000 gives the conductor bound; Magma checks in qsplit_conditions_checks.log.",
+        "url": "proofs/qsplit-necessary-conditions.html",
+        "used_for": "the notes on the split side of [25], [32], [2,28], [2,2,20] and [2,2,2,12], which have neither an example nor an exclusion in the split-over-ℚ class; necessary conditions only, not exclusions",
+    },
     "Olson1974": {
         "short": "Olson 1974", "year": 1974,
         "cite": "L. D. Olson, Points of finite order on elliptic curves with complex multiplication, Manuscripta Math. 14 (1974), 195–205.",
@@ -490,6 +497,9 @@ QSIMPLE_ONLY = {"QSimple13Obstruction", "QSimple2210Obstruction", "QSimple2214Ob
 
 # These exact groups need no census row for the exclusion to apply to a future entry.
 # This is a qsplit result only, and makes no existence assertion for rank-four groups.
+# Open split-over-Q groups with proved necessary conditions (notes only, not exclusions).
+QSPLIT_CONDITION_KEYS = frozenset({"25", "32", "2.28", "2.2.20", "2.2.2.12"})
+
 QSPLIT_ORDER256_EXCLUSIONS = frozenset({
     "4.64", "8.32", "16.16", "2.2.64", "2.4.32", "2.8.16",
 })
@@ -815,6 +825,12 @@ _SPLIT_EXACT = {
 _SPLIT_OPEN_NOTES = {
     # split [11] (2026-10-19, torsion_jac notes/split11_2026_10_19.md)
     "11": "a single curve is known, 11.b (BNSS2026): the (2,2)-gluing of an elliptic curve E over ℚ(√11) with a point of order 11 to its Galois conjugate E^σ. The gluing needs E[2] ≅ E^σ[2] over the quadratic field, which is not automatic. The curves E over quadratic fields with a point of order 11 are parametrised by s ∈ ℚ (via X₁(11)), and the s for which E[2] ≅ E^σ[2] are the images of the rational points of a curve Y of genus at least 8 (a degree-6 cover of the s-line whose reductions modulo 101, 103 and 107 are absolutely irreducible of genus 8). So this construction gives only finitely many curves; to height 400 in s the only one is 11.b (split_11_remark.log; a remark, not a certificate)",
+    # necessary conditions for the open split-over-Q groups (2026-11-15, proofs/qsplit-necessary-conditions.html)
+    "25": "necessary conditions, not an exclusion: if a genus-2 Jacobian J/ℚ split over ℚ has torsion [25], its complementary elliptic curves have torsion ℤ/5 and are semistable. At 5 both are good with 5 and 10 points, or both are split multiplicative. 66 divides both conductors, or 210 divides both. Relying on the completeness of Cremona's tables below 500,000, both conductors are at least 8778 and one is at least 500,000, so the conductor of J is at least 4,389,000,000",
+    "32": "no example or exclusion is known. An abelian surface isogenous over ℚ to the square of an elliptic curve has no rational point of order 32. For a genus-2 Jacobian split over ℚ with torsion [32], the complementary curves are never isogenous over ℚ: either their torsion is ℤ/8 and ℤ/4, with 2-part of the gluing degree 4 and different j-invariants, or it is ℤ/8 and ℤ/8, with 16 dividing the gluing degree and no isogeny over ℚ̄",
+    "2.28": "necessary condition, not an exclusion: if a genus-2 Jacobian J/ℚ split over ℚ has torsion [2,28], its complementary elliptic curves have torsion ℤ/7 and ℤ/2×ℤ/4 and are glued in degree prime to 14. Both have split multiplicative reduction at 3 and 5, so 225 divides the conductor of J. This uses that J is a Jacobian (gluing degree at least 2): the product 26b1 × 15a1 with the product polarization has torsion [2,28] but conductor 390, and 26b1 has good reduction at 3 and 5",
+    "2.2.20": "no example or exclusion is known. If a genus-2 Jacobian J/ℚ split over ℚ has torsion [2,2,20], its complementary elliptic curves have torsion ℤ/10 and ℤ/2×ℤ/4 and are glued in odd degree prime to 5 (hence at least 3). No further restriction is proved",
+    "2.2.2.12": "necessary condition, not an exclusion: if a genus-2 Jacobian J/ℚ split over ℚ has torsion [2,2,2,12], its complementary elliptic curves have torsion ℤ/2×ℤ/6 and ℤ/2×ℤ/4 and are glued in degree prime to 6. Both have multiplicative reduction at 2, 3, 5, 7, 11 and 13, so 30030² = 901800900 divides the conductor of J. For a product with the product polarization this fails: 30a2 × 15a1 has torsion [2,2,2,12] and conductor 450",
     "7.7": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)",
     "63": "HLP 2000, Table 1: a single curve (parameter space ℙ⁰)",
 }
@@ -917,6 +933,8 @@ def infinite_record(side: str, key: str) -> dict:
     if key in notes:
         if side == "split" and key == "11":
             src = ["BNSS2026", "ThisSite"]
+        elif side == "split" and key in QSPLIT_CONDITION_KEYS:
+            src = ["QSplitConditions"]
         elif side == "simple" and key == "2.22":
             src = ["BNSS2026", RECORD, "Sutherland2026pc"]
         else:

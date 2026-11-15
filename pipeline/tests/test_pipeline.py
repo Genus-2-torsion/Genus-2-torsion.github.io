@@ -155,7 +155,8 @@ class KnowledgeTests(unittest.TestCase):
                 t2.append(group_key(ast.literal_eval(line.split("|")[0])))
         self.assertEqual(len(t2), 77)
         self.assertTrue(set(knowledge._SPLIT_FAMILY) <= set(t2))
-        self.assertEqual(len(knowledge._SPLIT_FAMILY) + len([k for k in knowledge._SPLIT_OPEN_NOTES if k != "11"]), 20)   # HLP Table 1
+        self.assertEqual(len(knowledge._SPLIT_FAMILY) + len([k for k in knowledge._SPLIT_OPEN_NOTES
+                                                             if k != "11" and k not in knowledge.QSPLIT_CONDITION_KEYS]), 20)   # HLP Table 1
         # split [11] (2026-10-20): open, with a remark on why the construction of 11.b gives no family
         rec = knowledge.infinite_record("split", "11")
         self.assertEqual((rec["grade"], rec["sources"]), ("open", ["BNSS2026", "ThisSite"]))
@@ -319,6 +320,29 @@ class KnowledgeTests(unittest.TestCase):
             self.assertNotIn(bad, log)
         for suffix in ("tex", "pdf"):
             self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_612_obstruction.{suffix}").exists())
+
+    def test_qsplit_necessary_conditions(self):
+        """Proved necessary conditions, shown as notes, for the five groups with neither an example nor an exclusion
+        in the split-over-Q class (2026-11-15). They are not exclusions."""
+        keys = ("25", "32", "2.28", "2.2.20", "2.2.2.12")
+        self.assertEqual(knowledge.QSPLIT_CONDITION_KEYS, frozenset(keys))
+        groups = {g["key"]: g for g in read_json(ROOT / "data" / "groups.json")["groups"]}
+        for key in keys:
+            with self.subTest(key=key):
+                rec = knowledge.infinite_record("split", key)
+                self.assertEqual(rec["grade"], "open")
+                self.assertEqual(rec["sources"], ["QSplitConditions"])
+                self.assertIn("genus-2 Jacobian", rec["note"])
+                self.assertNotIn("qsplit", knowledge.exclusions_record(key))
+                self.assertFalse(groups[key]["known"]["qsplit"])
+                self.assertEqual(groups[key]["infinite"]["split"]["note"], rec["note"])
+        self.assertTrue((ROOT / knowledge.SOURCES["QSplitConditions"]["url"]).exists())
+        log = (KNOWLEDGE_DIR / "sources" / "qsplit_conditions_checks.log").read_text()
+        self.assertTrue(log.rstrip().endswith("ALL_QSPLIT_CONDITIONS_CHECKS_PASSED"))
+        for bad in ("Runtime error", "Assertion failed", "User error", "Internal error"):
+            self.assertNotIn(bad, log)
+        for suffix in ("tex", "pdf"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsplit_necessary_conditions.{suffix}").exists())
 
     def test_qsimple_five_two_rank(self):
         """Rational 5-torsion forces 2-rank at most 2 on Q-simple, geometrically split Jacobians (2026-11-11)."""

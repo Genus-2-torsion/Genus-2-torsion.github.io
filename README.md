@@ -118,6 +118,10 @@ Rational torsion containing (ℤ/3)² forces at most four rational points of 2-p
 surfaces (`proofs/qsimple-612-obstruction.html`, with PDF/LaTeX and a Magma certificate). This makes
 [6,12], [3,24] and [2,6,6] impossible in the **geometrically split, simple over ℚ** class; all three
 have split-over-ℚ examples and exact split grades, which are unchanged.
+The five groups with neither an example nor an exclusion in the **split over ℚ** class, [25], [32],
+[2,28], [2,2,20] and [2,2,2,12], carry notes with proved necessary conditions for a genus-2 Jacobian
+split over ℚ with that torsion (`proofs/qsplit-necessary-conditions.html`, with PDF/LaTeX and a Magma
+certificate). These are not exclusions and do not change any grade.
 The groups [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] are excluded only in
 the **geometrically split, simple over ℚ** class, by `proofs/qsimple-30-obstruction.html`,
 `proofs/qsimple-35-obstruction.html`, `proofs/qsimple-63-obstruction.html`, and

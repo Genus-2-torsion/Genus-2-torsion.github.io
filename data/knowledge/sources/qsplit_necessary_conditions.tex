@@ -1,0 +1,1180 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\newtheorem*{theorem*}{Theorem}
+\newenvironment{statement}[1]{\par\medskip\noindent\phantomsection\textbf{#1}\ }{\par\medskip}
+\setlength{\emergencystretch}{3em}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\F}{\mathbb F}
+\newcommand{\tors}{\mathrm{tors}}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Frob}{Frob}
+\title{Necessary conditions for genus-\(2\) Jacobians split over \(\Q\) with torsion \([25]\), \([32]\), \([2,28]\), \([2,2,20]\) or \([2,2,2,12]\)}
+\author{}
+\date{15 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{theorem*}
+Let \(C/\Q\) be a curve of genus \(2\) whose Jacobian \(J\) is split over \(\Q\). Let \(E\subset J\) be an elliptic
+curve over \(\Q\), let \(F=E^\perp\) be its complement for the canonical principal polarization, and let \(n\) be
+the gluing degree, so that \(J\cong(E\times F)/\Gamma_\psi\), where \(\Gamma_\psi\) is the graph of a Galois-equivariant
+anti-isometry \(\psi\colon E[n]\to F[n]\) and \(n\ge2\). Put \(T_E=E(\Q)_\tors\) and \(T_F=F(\Q)_\tors\), and let \(N_X\)
+denote the conductor of \(X\).
+\begin{enumerate}
+\item[(a)] If \(J(\Q)_\tors\cong\Z/2\times\Z/28\), then \(\{T_E,T_F\}=\{\Z/7,\ \Z/2\times\Z/4\}\), \(n\) is prime to
+\(14\), and \(E\) and \(F\) have split multiplicative reduction at \(3\) and at \(5\). In particular
+\(v_3(N_J)=v_5(N_J)=2\), so \(225\mid N_J\).
+\item[(b)] If \(J(\Q)_\tors\cong(\Z/2)^2\times\Z/20\), then \(\{T_E,T_F\}=\{\Z/10,\ \Z/2\times\Z/4\}\) and \(n\) is
+odd and prime to \(5\).
+\item[(c)] If \(J(\Q)_\tors\cong(\Z/2)^3\times\Z/12\), then \(\{T_E,T_F\}=\{\Z/2\times\Z/6,\ \Z/2\times\Z/4\}\),
+\(n\) is prime to \(6\), and \(E\) and \(F\) have multiplicative reduction at \(2\), \(3\), \(5\), \(7\), \(11\) and
+\(13\). In particular \(v_p(N_J)=2\) for these six primes, so \(30030^2=901800900\) divides \(N_J\).
+\item[(d)] If \(J(\Q)_\tors\cong\Z/32\), then \(E\) and \(F\) are not isogenous over \(\Q\), and either
+\(\{T_E,T_F\}=\{\Z/8,\ \Z/4\}\), \(v_2(n)=2\) and \(j(E)\neq j(F)\), or \(T_E\cong T_F\cong\Z/8\), \(16\mid n\) and
+\(E\) and \(F\) are not isogenous over \(\bar\Q\).
+\item[(e)] If \(J(\Q)_\tors\cong\Z/25\), then \(T_E\cong T_F\cong\Z/5\), \(5\mid n\), and:
+(i) \(E\) and \(F\) are semistable;
+(ii) at \(5\), either both have good reduction and \(\{\#\widetilde E(\F_5),\#\widetilde F(\F_5)\}=\{5,10\}\), or both
+have split multiplicative reduction, and the second case holds if \(25\mid n\);
+(iii) \(66\) divides both \(N_E\) and \(N_F\), or \(210\) divides both;
+(iv) relying on the completeness of Cremona's tables below conductor \(500000\), \(N_E\ge8778\), \(N_F\ge8778\) and
+\(\max(N_E,N_F)\ge500000\), so that \(N_J=N_EN_F\ge4389000000\).
+\end{enumerate}
+\end{theorem*}
+
+Here ``split over \(\Q\)'' means that \(J\) is isogenous over \(\Q\) to a product of two elliptic curves over \(\Q\);
+then \(J\) contains elliptic curves over \(\Q\), and (I10) below attaches to each of them its complement, the gluing
+degree and the anti-isometry. For the Jacobian of a curve of genus \(2\) the gluing degree of every elliptic curve
+is at least \(2\). The five groups of the Theorem are the groups of the census that have neither an example nor an
+exclusion in the class split over \(\Q\) (15 November 2026):
+\href{https://genus-2-torsion.github.io/group.html?g=25}{\([25]\)},
+\href{https://genus-2-torsion.github.io/group.html?g=32}{\([32]\)},
+\href{https://genus-2-torsion.github.io/group.html?g=2.28}{\([2,28]\)},
+\href{https://genus-2-torsion.github.io/group.html?g=2.2.20}{\([2,2,20]\)} and
+\href{https://genus-2-torsion.github.io/group.html?g=2.2.2.12}{\([2,2,2,12]\)}. The Theorem excludes none of them:
+it lists conditions that an example must satisfy. Part~(d) rests on a statement about all abelian surfaces,
+\hyperref[thm-isotypic]{Theorem~5}: an abelian surface over \(\Q\) that is isogenous over \(\Q\) to the square of an
+elliptic curve has no rational point of order \(32\); no polarization is needed there.
+
+\emph{Hypotheses.} The condition \(n\ge2\) is needed in (a) and (c): for the product polarization (\(n=1\)) both
+statements are false, as 26b1 \(\times\) 15a1 and 30a2 \(\times\) 15a1 show (\hyperref[rem-products]{Remark~5}).
+Parts~(b), (d) and~(e) hold for every principally polarized abelian surface over \(\Q\) that is split over \(\Q\),
+with the polarization defined over \(\Q\): part~(b) does not use \(n\ge2\), and in (d) and~(e) the torsion forces
+\(4\mid n\) and \(5\mid n\). All parts use that the torsion group is exactly the given one; part~(e)(iv) also uses
+that \(T_E\) and \(T_F\) are exactly \(\Z/5\) (\hyperref[rem-trace]{Remark~4}).
+
+\emph{Outline.} Section~\ref{gluing} recalls the gluing and determines \(T_E\), \(T_F\) and the gluing degree in
+the five cases (\hyperref[prop-parents]{Proposition~3}). In each case a prime \(\ell\mid n\) gives an isomorphism
+\(E[\ell]\cong F[\ell]\) of Galois modules. For \([2,28]\) and \([2,2,2,12]\) we compare \(E[\ell]\) and
+\(F[\ell]\) at small primes \(p\) (Sections~\ref{sec-22212} and~\ref{sec-228}): the torsion of \(E\) and \(F\)
+restricts the reduction types and the traces of Frobenius, and every configuration other than the stated one
+gives traces that differ by an integer prime to \(\ell\) or, when \(\ell=p\), different unramified constituents of
+\(E[p]\) and \(F[p]\). For \([32]\) (Section~\ref{sec-32}) the curves cannot be isogenous over \(\Q\) by a
+lattice argument in the \(2\)-adic Tate module (Section~\ref{sec-isotypic}); two curves with torsion \(\Z/8\)
+glued in degree divisible by \(16\) cannot be quadratic twists of each other, by a congruence of traces modulo
+\(16\); and for \(\Z/8\) and \(\Z/4\) with the same \(j\)-invariant the intermediate quotient by the \(2\)-torsion
+graph is a Weil restriction, whose rational torsion has exponent \(8\). For \([25]\) (Section~\ref{sec-25}) the
+point of order \(25\) gives a relation between the Kummer classes of the rational points of order \(5\) of \(E\)
+and \(F\) (\hyperref[lemma-kummer]{Lemma~15}), hence a congruence modulo \(25\) between the traces of Frobenius of
+\(E\) and \(F\) at all primes, with a scalar that does not depend on the prime. Local arguments at \(5\) and at
+small primes then give (i)--(iii); for (iv) we add an obstruction at nonsplit multiplicative primes and a complete
+computation in Cremona's tables below conductor \(500000\).
+
+\section{Conventions and inputs}\label{inputs}
+
+All fields have characteristic \(0\), and \(G_k=\Gal(\bar k/k)\). For an abelian variety \(X\) over \(k\) and a
+prime \(\ell\), \(T_\ell(X)\) is the Tate module, \(V_\ell(X)=T_\ell(X)\otimes\Q_\ell\) and
+\(X[\ell^\infty]=V_\ell(X)/T_\ell(X)\); \(\chi_\ell\colon G_k\to\Z_\ell^\times\) is the \(\ell\)-adic cyclotomic
+character and \(\bar\chi_\ell\) its reduction modulo \(\ell\). For an abelian group \(M\), \(M[m]\) is its
+\(m\)-torsion and \(M[p^\infty]\) its \(p\)-primary part. We fix embeddings \(\bar\Q\subset\bar\Q_p\), so that
+\(G_{\Q_p}\subset G_{\Q}\), and write \(I_p\subset G_{\Q_p}\) for the inertia group; a Frobenius lift is an element
+of \(G_{\Q_p}\) inducing \(x\mapsto x^p\) on the residue field. For an elliptic curve \(E\) over \(\Q_p\) with good
+reduction, \(\widetilde E\) is its reduction and \(a_p(E)=p+1-\#\widetilde E(\F_p)\); we put \(t_p(E)=a_p(E)\) if
+\(E\) has good reduction, and \(t_p(E)=p+1\) or \(t_p(E)=-(p+1)\) if \(E\) has split or nonsplit multiplicative
+reduction. \(v_p\) is the \(p\)-adic valuation, \(\Delta\) a discriminant and \(c_4\), \(c_6\) the usual invariants
+of a Weierstrass equation.
+
+\begin{itemize}
+\item \textbf{(I1) Mazur's theorem} \cite[Theorem~(8)]{Ma}. For an elliptic curve \(E\) over \(\Q\), \(E(\Q)_\tors\)
+is \(\Z/m\) with \(1\le m\le10\) or \(m=12\), or \(\Z/2\times\Z/2m\) with \(1\le m\le4\).
+
+\item \textbf{(I2) Olson} \cite{Ol}. An elliptic curve over \(\Q\) with complex multiplication has torsion subgroup
+\(0\), \(\Z/2\), \(\Z/3\), \(\Z/4\), \(\Z/6\) or \((\Z/2)^2\); in particular it has no rational point of order \(5\)
+or \(8\).
+
+\item \textbf{(I3) Torsion over quadratic fields.} By Kenku--Momose \cite[Theorem~(0.1)]{KM} and Kamienny
+\cite{Ka} (see the statement in \cite[Section~1]{Na}), the torsion subgroup of an elliptic curve over a quadratic
+field is \(\Z/m\) with \(1\le m\le16\) or \(m=18\), or \(\Z/2\times\Z/2m\) with \(1\le m\le6\), or
+\(\Z/3\times\Z/3\), \(\Z/3\times\Z/6\) or \(\Z/4\times\Z/4\). Hence a torsion subgroup containing \(\Z/2\times\Z/8\)
+is \(\Z/2\times\Z/8\) (certificate, Part~E).
+
+\item \textbf{(I4) Universal families} \cite[Table~3]{Ku}, also in \cite[Table~3]{HLP}. Put
+\(E(b,c)\colon y^2+(1-c)xy-by=x^3-bx^2\). Every pair \((E,P)\) of an elliptic curve over a field \(k\) and a point
+\(P\in E(k)\) of order \(5\) is isomorphic to \((E_d,(0,0))\), where \(E_d=E(d,d)\) and \(d\in k^\times\) with
+\(d^2-11d-1\neq0\). Every elliptic curve over \(\Q\) whose group of rational points contains a subgroup isomorphic
+to \(\Z/2\times\Z/6\) is isomorphic to \(E(c+c^2,c)\) with \(c=(10-2s)/(s^2-9)\) for some \(s\in\Q\).
+
+\item \textbf{(I5) Halving} \cite[Theorem~4.2]{Kn}. If \(E\colon y^2=(x-e_1)(x-e_2)(x-e_3)\) with \(e_i\in k\),
+then a point \((x_0,y_0)\in E(k)\) lies in \(2E(k)\) if and only if \(x_0-e_1\), \(x_0-e_2\) and \(x_0-e_3\) are
+squares in \(k\).
+
+\item \textbf{(I6) Reduction of elliptic curves} \cite[VII.1--VII.7]{Si1}. Let \(E\) be an elliptic curve over
+\(\Q_p\) with a minimal Weierstrass equation (an integral equation with \(v_p(\Delta)<12\) is minimal
+\cite[Remark~VII.1.1]{Si1}). The reduction is good, multiplicative or additive according as \(v_p(\Delta)=0\),
+\(v_p(\Delta)>0=v_p(c_4)\) or \(v_p(\Delta),v_p(c_4)>0\), and multiplicative reduction is split if the tangent lines
+at the node of the reduced curve are defined over \(\F_p\) \cite[Proposition~VII.5.1]{Si1}. There are subgroups
+\(E_1(\Q_p)\subseteq E_0(\Q_p)\subseteq E(\Q_p)\) with \(E_1(\Q_p)\) the kernel of reduction, isomorphic to the
+group of points of the formal group of \(E\) \cite[Propositions~VII.2.1 and~VII.2.2]{Si1}, and
+\(E_0(\Q_p)/E_1(\Q_p)\) is \(\widetilde E(\F_p)\), \(\F_p^\times\), a group of order \(p+1\), or \(\F_p\) in the
+good, split, nonsplit and additive cases \cite[Proposition~VII.5.1]{Si1}, \cite[IV.9.4, Step~2]{Si2}. The group
+\(E(\Q_p)/E_0(\Q_p)\) has order \(1\) or \(2\) in the nonsplit case \cite[IV.9.4, Step~2]{Si2} and at most \(4\) in
+the additive case \cite[Theorem~VII.6.1]{Si1}. The torsion of \(E_1(\Q_p)\) has \(p\)-power order
+\cite[Propositions~IV.3.2(b) and~VII.3.1]{Si1}. \(E\) has potentially good reduction if and only if
+\(v_p(j(E))\ge0\) \cite[Proposition~VII.5.5]{Si1}; the reduction type does not change in an unramified extension
+\cite[Proposition~VII.5.4(a)]{Si1}.
+
+\item \textbf{(I7) The criterion of N\'eron, Ogg and Shafarevich} \cite[Theorem~VII.7.1 and
+Corollary~VII.7.2]{Si1}, \cite[\S1, Theorem~1 and Corollary~2]{ST}. Let \(X\) be an abelian variety over a finite
+extension \(K\) of \(\Q_p\) and \(\ell\neq p\). Then \(X\) has good reduction if and only if the inertia group of
+\(K\) acts trivially on \(T_\ell(X)\), and isogenous abelian varieties over \(K\) have good reduction together.
+
+\item \textbf{(I8) Tate curves} \cite[Theorems~V.3.1 and~V.5.3, Lemma~V.5.2, Corollary~V.5.4 and
+Proposition~V.6.1]{Si2}. If
+\(E/\Q_p\) has split multiplicative reduction, then \(E\cong E_q\) for a \(q\in p\Z_p\) with
+\(v_p(q)=-v_p(j(E))=v_p(\Delta_{\min})\), and \(E(\bar\Q_p)\cong\bar\Q_p^\times/q^{\Z}\) compatibly with
+\(G_{\Q_p}\). Hence for \(m\ge1\) there is an exact sequence of \(G_{\Q_p}\)-modules \(0\to\mu_m\to E[m]\to\Z/m\to0\)
+in which a point represented by an \(m\)-th root of \(q\) maps to a generator, and similarly
+\(0\to\Z_\ell(1)\to T_\ell(E)\to\Z_\ell\to0\). If \(E\) has nonsplit multiplicative reduction, it becomes split
+over the unramified quadratic extension of \(\Q_p\), so \(T_\ell(E)\cong\eta\otimes T_\ell(E_q)\) with \(\eta\) the
+unramified quadratic character. If \(\ell\ge3\) is a prime not dividing \(v_p(q)\), some element of \(I_p\) acts
+on \(E[\ell]\) by a transvection. More generally, if \(v_p(j(E))<0\), then \(E\) is the quadratic twist of the Tate
+curve \(E_q\) with \(j(E_q)=j(E)\) by a quadratic character \(\varepsilon\), so \(T_\ell(E)\cong\varepsilon\otimes
+T_\ell(E_q)\); \(\varepsilon\) is unramified if and only if \(E\) has multiplicative reduction, by
+\cite[Proposition~VII.5.4(a)]{Si1}.
+
+\item \textbf{(I9) Local mod-\(p\) representations} \cite[\S1.11, Propositions~11 and~12, \S1.12,
+Proposition~13 and the Corollaries]{Se}. Let \(E\) be an elliptic curve with good ordinary reduction over a finite
+extension of \(\Q_p\), of any ramification index. Then the kernel of the reduction map \(E[p]\to
+\widetilde E[p](\bar\F_p)\cong\Z/p\) is cyclic of order \(p\), and the map is onto. Now let \(E/\Q_p\) with \(p\ge3\).
+If \(E\) has good ordinary reduction, \(I_p\) acts on this kernel by \(\bar\chi_p\) and trivially on the quotient
+\(\widetilde E[p](\bar\F_p)\). If \(E\) has good
+supersingular reduction, \(I_p\) acts on \(E[p]\) through a cyclic group of order \(p^2-1\), irreducibly. If \(E\)
+has multiplicative reduction, \(E[p]\) is as in (I8).
+
+\item \textbf{(I10) Complements and gluing} \cite[Sections~5.3 and~12.1]{BL}, \cite[Section~2]{BD}. Let
+\((A,\lambda)\) be a principally polarized abelian surface over \(k\), with \(\lambda\) defined over \(k\), and let
+\(E\subset A\) be an elliptic curve over \(k\), with inclusion \(i_E\) and canonical principal polarization
+\(\lambda_E\). There is an integer \(n\ge1\), the gluing degree, with \(i_E^\vee\lambda i_E=n\lambda_E\). The
+complement \(F=E^\perp\) (the connected component of \(\ker(i_E^\vee\lambda)\)) is an elliptic curve over \(k\) with
+\(i_F^\vee\lambda i_F=n\lambda_F\), and \(E\) is the complement of \(F\) \cite[Corollaries~12.1.2
+and~12.1.5]{BL}. The homomorphism \(\pi_E=\lambda_E^{-1}i_E^\vee\lambda\colon A\to E\) has kernel \(F\), and
+\(\pi_F\colon A\to F\), defined in the same way, has kernel \(E\) \cite[Proposition~12.1.3]{BL}; so \(A/F\cong E\)
+and \(A/E\cong F\). Moreover \(\pi_Ei_E=n\), \(\pi_Ei_F=0\), and \(E\cap F=E[n]=F[n]\) inside \(A\)
+\cite[Corollary~12.1.4]{BL}. The addition map \(\sigma\colon E\times F\to A\) and \(\alpha=(\pi_E,\pi_F)\colon
+A\to E\times F\) satisfy \(\alpha\sigma=[n]\) and \(\sigma\alpha=[n]\) \cite[\S12.1, equation~(3)]{BL}; the kernel
+of \(\sigma\) is \(\{(x,-x):x\in E\cap F\}\), the graph \(\Gamma_\psi\) of \(\psi\colon E[n]\to F[n]\),
+\(x\mapsto-x\), and \(\sigma^*\lambda=n\lambda_E\times n\lambda_F\) \cite[Lemma~12.1.6]{BL}. Hence \(\Gamma_\psi\)
+is isotropic for the product of the Weil pairings, that is, \(\psi\) is an anti-isometry \cite[Lemma~2.4 and the
+proof of Lemma~2.6]{BD}. All these maps are defined over \(k\), since the constructions commute with Galois
+conjugation; in particular \(\psi\) is \(G_k\)-equivariant. If \(n=1\), then \(\sigma\) is an isomorphism of
+principally polarized surfaces \((E\times F,\lambda_E\times\lambda_F)\cong(A,\lambda)\). The Jacobian of a curve of
+genus \(2\) is not a polarized product of elliptic curves, since its theta divisor is the irreducible curve
+\cite[Corollary~11.8.2]{BL}; so \(n\ge2\) for every elliptic curve in such a Jacobian.
+
+\item \textbf{(I11) Reduction of abelian varieties.} Let \(X\) be an abelian variety with good reduction over the
+ring of integers \(O\) of a finite extension \(K\) of \(\Q_p\), with residue field \(\kappa\). The kernel of reduction
+\(X(K)\to\widetilde X(\kappa)\) is the group \(\Phi(\mathfrak m)\) of points of a commutative formal group \(\Phi\)
+over \(O\) of dimension \(\dim X\), \(\mathfrak m\) the maximal ideal \cite[Theorem~C.2.6]{HS}, and
+\(\Phi(\mathfrak m)\) has no torsion of order prime to \(p\) \cite[Proposition~C.2.5]{HS}; so the torsion of
+\(X(K)\) of order prime to \(p\) injects into \(\widetilde X(\kappa)\). For an abelian variety over a number field
+and a finite place of good reduction, this injectivity is \cite[Theorem~C.1.4]{HS}.
+
+\item \textbf{(I12) Faltings} \cite[\S5, Satz~3, Satz~4 and Korollar~1]{Fal}. For abelian varieties \(X,Y\) over
+\(\Q\), \(V_\ell(X)\) is a semisimple \(G_{\Q}\)-module and \(\Hom_{\Q}(X,Y)\otimes\Z_\ell\cong
+\Hom_{G_{\Q}}(T_\ell X,T_\ell Y)\). For an elliptic curve \(E_0/\Q\), \(\End_{\Q}(E_0)=\Z\) (complex
+multiplications are not defined over \(\Q\)), so \(V_\ell(E_0)\) is irreducible with commutant \(\Q_\ell\), and the
+\(\Q_\ell\)-span of the image of \(G_{\Q}\) is \(\End(V_\ell(E_0))\) (density theorem).
+
+\item \textbf{(I13) Conductors} \cite[IV~\S10 and Theorem~IV.10.2]{Si2}, \cite{BK}. For an abelian variety \(X\)
+over \(\Q\) and primes \(p\neq\ell\), \(v_p(N_X)=\dim V_\ell(X)-\dim V_\ell(X)^{I_p}+\delta_p(X)\), where the wild
+part \(\delta_p(X)\ge0\) vanishes if \(I_p\) acts unipotently on \(V_\ell(X)\). For an elliptic curve,
+\(v_p(N_E)\) is \(0\), \(1\) or at least \(2\) according as the reduction is good, multiplicative or additive.
+
+\item \textbf{(I14) Cremona's tables} \cite{Cr}, \cite{LMFDB}. We rely on the completeness of Cremona's tables of
+elliptic curves over \(\Q\) of conductor below \(500000\), as recorded by the LMFDB; Magma's
+\texttt{CremonaDatabase}, used in Part~H of the certificate, contains these tables (largest conductor \(499999\)).
+\end{itemize}
+
+\section{The gluing and the torsion of the two elliptic curves}\label{gluing}
+
+Throughout, \((A,\lambda)\) is a principally polarized abelian surface over \(\Q\), split over \(\Q\), with
+\(\lambda\) defined over \(\Q\); \(E\subset A\) is an elliptic curve over \(\Q\), and \(F\), \(n\), \(\psi\),
+\(\sigma\), \(\alpha\), \(\pi_E\), \(\pi_F\) are as in (I10). We identify \(T_E\) and \(T_F\) with their images in
+\(G=A(\Q)_\tors\).
+
+\begin{statement}{Lemma 1 (the gluing).}\label{lemma-gluing}
+\begin{enumerate}
+\item[(a)] The sequences \(0\to T_F\to G\to T_E\) and \(0\to T_E\to G\to T_F\), with the maps \(\pi_E\) and
+\(\pi_F\), are exact; so \(\#G\) divides \(\#T_E\cdot\#T_F\), and if \(G\) has a point of order \(p\), so does
+\(T_E\) or \(T_F\). For a prime \(p\), the \(p\)-rank of \(G\) is at most the sum of those of \(T_E\) and \(T_F\).
+\item[(b)] If a prime \(p\) does not divide \(n\), then \(\sigma\) induces an isomorphism of Galois modules
+\(E[p^\infty]\times F[p^\infty]\cong A[p^\infty]\), and \(G[p^\infty]\cong T_E[p^\infty]\times T_F[p^\infty]\).
+\item[(c)] If \(m\mid n\), then \(\psi\) restricts to an isomorphism of Galois modules \(E[m]\to F[m]\); in
+particular \(T_E[m]\cong T_F[m]\), and \(t_p(E)\equiv t_p(F)\pmod m\) at every prime \(p\nmid m\) of good reduction
+for \(E\) and \(F\).
+\item[(d)] \(V_\ell(A)\cong V_\ell(E)\oplus V_\ell(F)\) as \(G_{\Q}\)-modules for every prime \(\ell\). If \(E\)
+and \(F\) have good or multiplicative reduction at \(p\), then \(v_p(N_A)=v_p(N_E)+v_p(N_F)\).
+\item[(e)] (Kummer relation.) Let \(R\in A(\Q)\) and write \(R=\sigma(U,V)\) with \(U\in E(\bar\Q)\), \(V\in
+F(\bar\Q)\). Then \(\alpha(R)=(nU,nV)\in E(\Q)\times F(\Q)\), and \(gV-V=\psi(gU-U)\) for every \(g\in G_{\Q}\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} (a) Take rational points in the exact sequences of abelian varieties \(0\to F\to A\to E\to0\) and
+\(0\to E\to A\to F\to0\) given by \(\pi_E\) and \(\pi_F\). The \(p\)-rank statement follows from
+\(G/T_E\hookrightarrow T_F\). (b) \(\ker\sigma\subseteq(E\times F)[n]\) has order prime to \(p\), so \(\sigma\) is
+injective on \((E\times F)[p^\infty]\); it is onto \(A[p^\infty]\), because a preimage of a point of \(A[p^\infty]\)
+is a torsion point whose component of order prime to \(p\) maps into \(A[p^\infty]\cap\ker[m]=0\) for some \(m\)
+prime to \(p\). Take Galois invariants. (c) \(\psi\) is a \(G_{\Q}\)-equivariant isomorphism \(E[n]\to F[n]\), and
+maps \(E[m]=E[n][m]\) onto \(F[m]\); a Frobenius element at \(p\) acts on \(E[m]\) and \(F[m]\) with traces
+\(a_p(E)\) and \(a_p(F)\) modulo \(m\). (d) \(\sigma\) is an isogeny over \(\Q\). By (I13), \(\delta_p=0\) for
+\(E\), \(F\) and \(A\) when \(I_p\) acts unipotently on \(V_\ell(E)\) and \(V_\ell(F)\) (\(\ell\neq p\)), which
+holds for good and multiplicative reduction by (I7) and (I8), and the term \(\dim V_\ell-\dim V_\ell^{I_p}\) is
+additive. (e) \(\alpha(R)=\alpha\sigma(U,V)=(nU,nV)\), which is rational since \(\alpha\) is defined over \(\Q\). For
+\(g\in G_{\Q}\), \(gR=R\) gives \(\sigma(gU-U,gV-V)=0\), so \((gU-U,gV-V)\in\ker\sigma=\Gamma_\psi\). \qed
+
+\begin{statement}{Proposition 3 (the torsion of the two curves).}\label{prop-parents}
+Let \(G=A(\Q)_\tors\). After exchanging \(E\) and \(F\) if necessary:
+\begin{enumerate}
+\item[(a)] if \(G\cong\Z/25\), then \(T_E\cong T_F\cong\Z/5\) and \(5\mid n\);
+\item[(b)] if \(G\cong\Z/32\), then either \(T_E\cong\Z/8\), \(T_F\cong\Z/4\) and \(v_2(n)=2\), or
+\(T_E\cong T_F\cong\Z/8\) and \(16\mid n\);
+\item[(c)] if \(G\cong\Z/2\times\Z/28\), then \(T_E\cong\Z/7\), \(T_F\cong\Z/2\times\Z/4\) and \(n\) is prime to
+\(14\);
+\item[(d)] if \(G\cong(\Z/2)^2\times\Z/20\), then \(T_E\cong\Z/10\), \(T_F\cong\Z/2\times\Z/4\) and \(n\) is odd
+and prime to \(5\);
+\item[(e)] if \(G\cong(\Z/2)^3\times\Z/12\), then \(T_E\cong\Z/2\times\Z/6\), \(T_F\cong\Z/2\times\Z/4\) and \(n\)
+is prime to \(6\).
+\end{enumerate}
+If \(A\) is the Jacobian of a curve of genus \(2\), then \(n\ge3\) in (c) and (d), and \(n\ge5\) in (e).
+\end{statement}
+
+\emph{Proof.} By \hyperref[lemma-gluing]{Lemma~1}(a), \(T_E\) and \(T_F\) are subgroups of \(G\) from the list
+(I1), \(\#G\mid\#T_E\#T_F\), and \(G/T_E\) and \(G/T_F\) embed in \(T_F\) and \(T_E\). Part~A of the certificate
+lists, for each of the five groups \(G\), all pairs of groups from (I1) with these properties; they are the pairs
+in (a)--(e). By hand:
+\begin{itemize}
+\item \(G=\Z/25\): \(T_E,T_F\subseteq\Z/25\) are \(0\) or \(\Z/5\) by (I1), and \(25\mid\#T_E\#T_F\).
+\item \(G=\Z/32\): \(T_E\), \(T_F\) are cyclic \(2\)-groups, so of order at most \(8\), with product of orders at
+least \(32\).
+\item \(G=\Z/2\times\Z/28\): one of the curves, say \(E\), has a point of order \(7\), so \(T_E=\Z/7\), of
+\(2\)-rank \(0\); then \(T_F\) has \(2\)-rank \(2\) and embeds in \(G\), so \(T_F\in\{(\Z/2)^2,\Z/2\times\Z/4\}\),
+and \(56\mid7\#T_F\) gives \(T_F=\Z/2\times\Z/4\).
+\item \(G=(\Z/2)^2\times\Z/20\): one curve, say \(E\), has a point of order \(5\), so \(T_E\in\{\Z/5,\Z/10\}\) has
+\(2\)-rank at most \(1\); as \(G\) has \(2\)-rank \(3\), \(T_E=\Z/10\) and \(T_F\) has \(2\)-rank \(2\); it embeds in
+\(G\), whose exponent is \(20\), and \(80\mid10\#T_F\), so \(T_F=\Z/2\times\Z/4\).
+\item \(G=(\Z/2)^3\times\Z/12\): both have \(2\)-rank \(2\), and one, say \(E\), has a point of order \(3\), so
+\(T_E=\Z/2\times\Z/6\). Then \(T_F=\Z/2\times\Z/2m\) embeds in \(G\), so \(m\le3\), and \(\#T_F\ge96/12=8\). If
+\(T_F=\Z/2\times\Z/6\), then \(G/T_E\), of order \(8\), embeds in \(T_F\), whose \(2\)-part has order \(4\), which
+is absurd. So \(T_F=\Z/2\times\Z/4\).
+\end{itemize}
+Gluing degrees. If a prime \(p\) divides \(n\), then \(T_E[p]\cong T_F[p]\) by
+\hyperref[lemma-gluing]{Lemma~1}(c). In (c) this excludes \(p=2\) and \(p=7\); in (d) \(p=2\) and \(p=5\); in (e)
+\(p=3\).
+
+(a) Let \(R\) generate \(G\). Since \(T_E\) and \(T_F\) are killed by \(5\), \(5R\) lies in \(\ker\pi_E=F\) and in
+\(\ker\pi_F=E\), so \(5R\in E\cap F=E[n]\) is a point of order \(5\), and \(5\mid n\).
+
+(b) Both \(T_E\) and \(T_F\) have order at least \(4\), so both contain the unique subgroup of order \(4\) of the
+cyclic group \(G\), which therefore lies in \(E\cap F=E[n]\); so \(4\mid n\). If \(8\mid n\), then
+\(T_E[8]\cong T_F[8]\), so \(T_E\cong T_F\cong\Z/8\). If \(T_E\cong T_F\cong\Z/8\), both equal the subgroup \(H\) of
+order \(8\) of \(G\), and \(H\subseteq E\cap F=E[n]\) gives \(8\mid n\). Suppose \(v_2(n)=3\) and let \(R\) generate
+\(G\). The kernel of \(\pi_E\) on \(G\) is \(T_F=H\), so \(\pi_E(R)\in T_E=H\) has order \(4\) and equals \(8uR\)
+with \(u\) odd; likewise \(\pi_F(R)=8vR\) with \(v\) odd. Then \(nR=\sigma\alpha(R)=8(u+v)R\) has order at most
+\(2\), whereas \(n=8m\) with \(m\) odd and \(8mR\) has order \(4\). So \(16\mid n\).
+
+(e) It remains to show that \(n\) is odd. Suppose not, let \(q=2^{v_2(n)}\ge2\), and let \(\psi_q\colon E[q]\to
+F[q]\) be the restriction of \(\psi\). Choose \(\Z_2\)-bases \((e_1,e_2)\) of \(T_2(E)\) and \((f_1,f_2)\) of
+\(T_2(F)\) with \(\psi_q(e_i/q)=f_i/q\) (lift \(\psi_q(e_i/q)\) and use Nakayama's lemma), where \(v/q\) denotes the
+image of \(v\in T_2\) in \(T_2/qT_2=X[q]\). Let \(M_E(g),M_F(g)\in\GL_2(\Z_2)\) be the matrices of \(g\in G_{\Q}\).
+Equivariance of \(\psi_q\) gives \(M_E(g)\equiv M_F(g)\pmod q\); put \(D(g)=(M_F(g)-M_E(g))/q\). The \(2\)-primary part
+of \(\ker\sigma\) is the graph of \(\psi_q\), and
+\[\theta\colon(\Q_2/\Z_2)^2\times(\Q_2/\Z_2)^2\to A[2^\infty],\qquad
+\theta(x,z)=\sigma\bigl(\tilde x/q,\ \tilde x/q+\tilde z\bigr),\]
+where \(\tilde x,\tilde z\in\Q_2^2\) are lifts and a vector \(w\in\Q_2^2\) stands for the point \(w_1e_1+w_2e_2\) of
+\(E[2^\infty]\), resp.~\(w_1f_1+w_2f_2\) of \(F[2^\infty]\), is a well-defined isomorphism: changing \(\tilde x\) by
+\(u\in\Z_2^2\) changes the pair by \((u/q,u/q)\in\Gamma_{\psi_q}\); \(\theta(x,z)=0\) forces \(\tilde x\in\Z_2^2\)
+and then \(\tilde z\in\Z_2^2\); and \(\sigma(s,t)=\theta(qs,t-s)\). It satisfies
+\(g\,\theta(x,z)=\theta\bigl(M_E(g)x,\ D(g)x+M_F(g)z\bigr)\); this is the model of \cite[Section~2]{P256}. Since \(G\) has \(2\)-rank \(4\), \(A[2]\subseteq
+A(\Q)\), so \(G_{\Q}\) acts trivially on \(\theta\bigl((\tfrac12\Z_2^2/\Z_2^2)^2\bigr)=A[2]\): \(M_E(g)\equiv
+M_F(g)\equiv I\) and \(D(g)\equiv0\pmod 2\). Hence \(M_F(g)-M_E(g)=qD(g)\equiv0\pmod{2q}\), and the identity matrix
+gives an isomorphism of Galois modules \(E[2q]\to F[2q]\). As \(2q\ge4\), \(T_E[4]\cong T_F[4]\); but these groups
+are \((\Z/2)^2\) and \(\Z/2\times\Z/4\).
+
+Finally, if \(A\) is a Jacobian then \(n\ge2\) by (I10); in (c) and (d) \(n\) is odd, and in (e) prime to \(6\).
+\qed
+
+\medskip
+For \([2,2,20]\) we prove nothing beyond \hyperref[prop-parents]{Proposition~3}(d). The condition \(n\ge2\) enters
+\hyperref[prop-parents]{Proposition~3} only in its last sentence.
+
+\section{Surfaces isogenous to a square}\label{sec-isotypic}
+
+\begin{statement}{Lemma 4 (stable lattices).}\label{lemma-lattices}
+Let \(E_0/\Q\) be an elliptic curve, \(p\) a prime, \(V=V_p(E_0)\), \(c\in G_{\Q}\) a complex conjugation and
+\(s_{+},s_{-}\in V\) eigenvectors of \(c\) with eigenvalues \(1\) and \(-1\). Let \(W\) be a finite-dimensional
+\(\Q_p\)-vector space with trivial \(G_{\Q}\)-action, and \(T\subset V\otimes W\) a \(G_{\Q}\)-stable
+\(\Z_p\)-lattice of the form \(T=(s_{+}\otimes\Lambda_{+})\oplus(s_{-}\otimes\Lambda_{-})\) for lattices
+\(\Lambda_\pm\subset W\). Then \(T\cong\bigoplus_jT_p(E_j)\) as \(\Z_p[G_{\Q}]\)-modules, for elliptic curves
+\(E_1,\dots,E_r\) over \(\Q\) that are isogenous over \(\Q\) to \(E_0\), \(r=\dim W\).
+\end{statement}
+
+\emph{Proof.} By elementary divisors there are a basis \(w_1,\dots,w_r\) of \(W\) and integers \(d_j\) with
+\(\Lambda_{+}=\bigoplus\Z_pw_j\) and \(\Lambda_{-}=\bigoplus p^{d_j}\Z_pw_j\). For \(g\in G_{\Q}\) write
+\(gs_{+}=as_{+}+c's_{-}\) and \(gs_{-}=bs_{+}+ds_{-}\) with \(a,b,c',d\in\Q_p\). Since \(g(s_{+}\otimes w_j)\) and
+\(g(p^{d_j}s_{-}\otimes w_j)\) lie in \(T\), we get \(a,d\in\Z_p\), \(c'\in p^{d_j}\Z_p\) and \(p^{d_j}b\in\Z_p\). So
+\(S_j=\Z_p\,s_{+}\otimes w_j\oplus p^{d_j}\Z_p\,s_{-}\otimes w_j\) is \(G_{\Q}\)-stable and \(T=\bigoplus S_j\). Each
+\(S_j\) is a \(G_{\Q}\)-stable lattice in \(V\otimes w_j\cong V\); after scaling it contains \(T_p(E_0)\), and then
+\(S_j/T_p(E_0)\) is a finite Galois-stable subgroup \(C_j\) of \(E_0[p^\infty]\), and \(S_j\cong T_p(E_0/C_j)\).
+\qed
+
+\begin{statement}{Theorem 5 (surfaces isogenous to a square).}\label{thm-isotypic}
+Let \(E_0/\Q\) be an elliptic curve and \(B/\Q\) an abelian surface that is isogenous over \(\Q\) to
+\(E_0\times E_0\).
+\begin{enumerate}
+\item[(a)] For every odd prime \(p\) there are elliptic curves \(E_1,E_2\) over \(\Q\), isogenous over \(\Q\) to
+\(E_0\), with \(B(\Q)[p^\infty]\cong E_1(\Q)[p^\infty]\times E_2(\Q)[p^\infty]\). In particular \(B(\Q)\) has no
+point of order \(25\).
+\item[(b)] The exponent of \(B(\Q)[2^\infty]\) divides \(16\). In particular \(B(\Q)\) has no point of order
+\(32\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} An isogeny \(E_0^2\to B\) over \(\Q\) identifies \(V_p(B)\) with \(V\otimes W\), \(V=V_p(E_0)\),
+\(W=\Q_p^2\) with trivial action; let \(T\) be the image of \(T_p(B)\). Complex conjugation \(c\) has
+\(\det c=\chi_p(c)=-1\) and \(c^2=1\), so it has eigenvalues \(1\) and \(-1\) on \(V\), and \(e_\pm=(1\pm c)/2\)
+act on \(V\otimes W\) through the first factor.
+
+(a) For odd \(p\), \(e_\pm\in\Z_p[G_{\Q}]\) preserve \(T\), so \(T=e_{+}T\oplus e_{-}T\) has the form of
+\hyperref[lemma-lattices]{Lemma~4}, and \(B[p^\infty]=V_p(B)/T\cong E_1[p^\infty]\times E_2[p^\infty]\) as Galois
+modules. By (I1), \(E_i(\Q)[5^\infty]\) has exponent at most \(5\).
+
+(b) If no elliptic curve isogenous over \(\Q\) to \(E_0\) has a rational point of order \(4\), let \(E'\subset B\)
+be the image of \(E_0\times0\); then \(E'\) and \(B/E'\) are elliptic curves over \(\Q\) isogenous to \(E_0\) (by
+(I12), since \(V_2(B/E')\cong V_2(B)/V_2(E')\cong V_2(E_0)\)), their rational \(2\)-primary torsion has exponent at
+most \(2\), and the exact sequence \(0\to E'(\Q)\to B(\Q)\to(B/E')(\Q)\) shows that \(B(\Q)[2^\infty]\) has
+exponent at most \(4\). Otherwise we may replace \(E_0\) by an isogenous curve with a rational point of order \(4\).
+
+\emph{Step 1: a stable lattice on which \(c\) is diagonal.} Let \(e_1\) be a primitive vector of \(T_2(E_0)\) with
+\(ce_1=e_1\), and complete it to a basis \((e_1,e_2)\); then \(c=\left(\begin{smallmatrix}1&b\\0&-1
+\end{smallmatrix}\right)\) (columns are images of basis vectors), and replacing \(e_2\) by \(e_2+ke_1\) changes \(b\)
+by \(2k\), so we may take \(b\in\{0,1\}\). If \(b=0\), put \(S=T_2(E_0)\). If \(b=1\), a rational point of order
+\(4\) is \((v_1e_1+v_2e_2)/4\) with \((v_1,v_2)\) primitive modulo \(4\) and fixed by \(c\); the primitive vectors
+modulo \(4\) fixed by \(c\) are the odd multiples of \(e_1\) (certificate, Part~E), so \(e_1/4\) is rational, and
+every \(g\in G_{\Q}\) has a matrix \(\left(\begin{smallmatrix}a&b_0\\c_0&d\end{smallmatrix}\right)\) with
+\(a\equiv1\), \(c_0\equiv0\pmod4\) and \(d\) odd. In the basis \(s_{+}=e_1\), \(s_{-}=e_2-e_1/2\) of \(V\), \(c\) is
+diagonal and \(g\) has the matrix
+\[\begin{pmatrix}a+c_0/2&b_0+(d-a)/2-c_0/4\\ c_0&d-c_0/2\end{pmatrix},\]
+which is integral (certificate, Part~E). So \(S=\Z_2s_{+}\oplus\Z_2s_{-}\) is \(G_{\Q}\)-stable, with \(cs_\pm=\pm
+s_\pm\).
+
+\emph{Step 2: an overorder.} Let \(R\) be the \(\Z_2\)-span of the image of \(G_{\Q}\) in \(\End(S)\cong M_2(\Z_2)\)
+(matrices in the basis \(s_\pm\)). By (I12), \(R\otimes\Q=M_2(\Q_2)\), so the sets \(I_{12}\), \(I_{21}\) of
+upper-right and lower-left entries of elements of \(R\) are nonzero ideals of \(\Z_2\), and
+\(R_0=\left(\begin{smallmatrix}\Z_2&I_{12}\\ I_{21}&\Z_2\end{smallmatrix}\right)\) is an order containing \(R\)
+and \(e_\pm\). Moreover \(2R_0\subseteq R\): \(2e_{+}=1+c\) and \(2e_{-}=1-c\) lie in \(R\), and for \(r\in R\) with
+diagonal entries \(r_{11}\), \(r_{22}\),
+\[(1+c)r-r_{11}(1+c)=2e_{+}re_{-},\qquad (1-c)r-r_{22}(1-c)=2e_{-}re_{+}\]
+(certificate, Part~E), and these are \(2r_{12}\) and \(2r_{21}\) placed in the corners.
+
+\emph{Step 3.} \(T'=R_0T\) is \(G_{\Q}\)-stable and \(e_\pm\)-stable, and \(T\subseteq T'\subseteq\tfrac12T\) since
+\(2R_0\subseteq R\) and \(RT=T\). By \hyperref[lemma-lattices]{Lemma~4} (with \(V=\Q_2S\)), \(T'\cong
+T_2(E_1)\oplus T_2(E_2)\), so \((V_2(B)/T')^{G_{\Q}}\cong E_1(\Q)[2^\infty]\times E_2(\Q)[2^\infty]\) has exponent
+dividing \(8\) by (I1). For \(x\in B(\Q)[2^\infty]=(V_2(B)/T)^{G_{\Q}}\), the image of \(x\) in \(V_2(B)/T'\) is
+rational, so \(8\tilde x\in T'\) for a lift \(\tilde x\), and \(16\tilde x\in2T'\subseteq T\). \qed
+
+\medskip
+No polarization is used, and (b) also holds when \(E_0\) has complex multiplication.
+
+\section{Local tools}\label{local}
+
+\begin{statement}{Lemma 6 (formal groups).}\label{lemma-formal}
+Let \(O\) be a complete discrete valuation ring of characteristic \(0\) with residue characteristic \(p\),
+normalized valuation \(v\) and \(e=v(p)\), and let \(\Phi\) be a commutative formal group law of dimension \(g\) over
+\(O\). For \(x\in\mathfrak m^g\) put \(v(x)=\min_iv(x_i)\).
+\begin{enumerate}
+\item[(a)] Every coefficient of \([p](X)\) is in \(pO\), except those of the monomials \(X^\gamma\) with
+\(\gamma\in p\mathbb N^g\smallsetminus\{0\}\). Hence \(v([p](x))\ge\min(e+v(x),\ pv(x))\).
+\item[(b)] If \(x\neq0\) and \([p](x)=0\), then \(v(x)\le e/(p-1)\).
+\item[(c)] If \(e<p-1\), then \(\Phi(\mathfrak m)\) has no point of order \(p\); if \(e<p(p-1)\), it has no point of
+order \(p^2\).
+\item[(d)] For an elliptic curve \(E/\Q_p\), \(E_1(\Q_p)\) is torsion-free if \(p\ge3\), and its torsion has order
+at most \(2\) if \(p=2\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} (a) Let \(\Phi_p(X_1,\dots,X_p)=\sum_\beta a_\beta X_1^{\beta_1}\cdots X_p^{\beta_p}\) be the
+\(p\)-fold sum; it has coefficients in \(O\) and is symmetric, by commutativity and associativity. The coefficient
+of \(X^\gamma\) in \([p](X)=\Phi_p(X,\dots,X)\) is \(\sum a_\beta\) over the \(\beta\) with
+\(\beta_1+\dots+\beta_p=\gamma\). The cyclic permutations of the \(p\) factors preserve \(a_\beta\), and their orbits
+have \(p\) elements except for the fixed points \(\beta_1=\dots=\beta_p\), which occur only if \(\gamma\in
+p\mathbb N^g\). So the coefficient lies in \(pO\) unless \(\gamma\in p\mathbb N^g\). A monomial with coefficient in
+\(pO\) and total degree at least \(1\) has valuation at least \(e+v(x)\) at \(x\), and one with \(\gamma\in
+p\mathbb N^g\smallsetminus\{0\}\) has valuation at least \(pv(x)\).
+
+(b) Let \(s=v(x)\) and suppose \(s>e/(p-1)\); choose \(i\) with \(v(x_i)=s\). The \(i\)-th coordinate of \([p](x)\)
+is \(px_i\), of valuation \(e+s\), plus monomials of valuation at least \(e+2s\) (coefficient in \(pO\), degree at
+least \(2\)) or \(ps>e+s\). So it is nonzero.
+
+(c) The first claim follows from (b), since \(v(x)\ge1\). If \(x\) has order \(p^2\), then \(y=[p](x)\ne0\) is
+killed by \(p\), and by (a), (b): \(e/(p-1)\ge v(y)\ge\min(e+1,p)\), so \(e\ge p(p-1)\).
+
+(d) \(E_1(\Q_p)\) is the group of points of the formal group of \(E\) over \(\Z_p\) (I6), and \(e=1\). For \(p\ge3\)
+use (c) and the fact that its torsion has \(p\)-power order (I6). For \(p=2\), the points with \(v\ge2\) form a
+torsion-free group, isomorphic to \(4\Z_2\) by the formal logarithm \cite[Theorem~IV.6.4(b)]{Si1}, of index \(2\)
+\cite[Proposition~IV.3.2(a)]{Si1}. \qed
+
+\begin{statement}{Lemma 7 (local torsion).}\label{lemma-localtorsion}
+Let \(E/\Q_p\) be an elliptic curve.
+\begin{enumerate}
+\item[(a)] If \(E\) has additive reduction, \(E(\Q_p)_\tors\) has order \(ap^k\) with \(a\le4\).
+\item[(b)] If \(E\) has nonsplit multiplicative reduction, the part of \(E(\Q_p)_\tors\) of order prime to \(p\) has
+order dividing \(2(p+1)\); if \(p\ge3\), so does all of \(E(\Q_p)_\tors\); if \(p=2\), \(E(\Q_2)[2^\infty]\) has
+order at most \(4\).
+\item[(c)] If \(E\) has good reduction, \(E(\Q_p)_\tors\) injects into \(\widetilde E(\F_p)\) if \(p\ge3\), and the
+kernel of \(E(\Q_2)_\tors\to\widetilde E(\F_2)\) has order at most \(2\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} Use the filtration of (I6) and \hyperref[lemma-formal]{Lemma~6}(d). (a) \(E_1(\Q_p)\) and
+\(E_0/E_1\cong\F_p\) contribute a power of \(p\) and \(E/E_0\) at most \(4\) (\cite[Remark~IV.9.2.2]{Si2}). (b)
+\(E_0/E_1\) has order \(p+1\) and \(E/E_0\) order at most \(2\); for \(p=2\), \(E_1(\Q_2)\) contributes at most
+\(2\), \(E_0/E_1\) (of order \(3\)) nothing and \(E/E_0\) at most \(2\). (c) The kernel of reduction is \(E_1\). \qed
+
+\begin{statement}{Lemma 8 (comparison of local representations).}\label{lemma-compare}
+Let \(p\) be a prime, \(\ell\ge3\) a prime, and \(E\), \(F\) elliptic curves over \(\Q_p\) with good or
+multiplicative reduction such that \(E[\ell]\cong F[\ell]\) as \(G_{\Q_p}\)-modules.
+\begin{enumerate}
+\item[(a)] If \(\ell\neq p\), then \(t_p(E)\equiv t_p(F)\pmod\ell\).
+\item[(b)] If \(\ell=p\), then \(E\) has good supersingular reduction if and only if \(F\) has. Otherwise
+\(u(E)=u(F)\) in \(\F_p\), where \(u(X)=a_p(X)\bmod p\) if \(X\) has good ordinary reduction and \(u(X)=\pm1\) if
+\(X\) has split, resp.~nonsplit, multiplicative reduction.
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} (a) Let \(\varphi\) be a Frobenius lift. If \(X\in\{E,F\}\) has good reduction, \(X[\ell]\) is
+unramified and \(\varphi\) has trace \(a_p(X)\) on it; if \(X\) has multiplicative reduction, the semisimplification
+of \(X[\ell]\) is \(\varepsilon\oplus\varepsilon\bar\chi_\ell\) with \(\varepsilon\) trivial or \(\eta\) (I8), and
+\(\varphi\) has trace \(\varepsilon(\varphi)(1+p)=t_p(X)\). Isomorphic modules give equal traces. (b) By (I9), if
+\(X\) is supersingular then \(X[p]\) is irreducible, and otherwise the semisimplification of \(X[p]\) is
+\(\psi_X\oplus\bar\chi_p\psi_X^{-1}\) with \(\psi_X\) unramified, \(\bar\chi_p\psi_X^{-1}\) ramified (as
+\(\bar\chi_p\) has order \(p-1\ge2\) on \(I_p\)), and \(\psi_X(\varphi)=u(X)\). In the multiplicative case this is
+(I8). In the ordinary case, \(\psi_X\) is the action on \(\widetilde X[p](\bar\F_p)\), on which \(\varphi\) acts as
+the Frobenius endomorphism \(\pi\); since \(\pi\) is bijective on points and \(\hat\pi\pi=p\), the dual \(\hat\pi\)
+kills \(\widetilde X[p](\bar\F_p)=\pi(\widetilde X[p](\bar\F_p))\), so \(\pi=a_p-\hat\pi\) acts as \(a_p\).
+Isomorphic modules have the same semisimplification, hence the same unramified constituent. \qed
+
+\section{The group \([2,2,2,12]\)}\label{sec-22212}
+
+Let \(A_t\), \(B_t\) and the curves \(E_t\), \(F_t\) over \(\Q(t)\) be
+\[A_t=(t+3)(t-1)^3,\qquad B_t=(t-3)(t+1)^3,\]
+\[E_t\colon y^2=x(x-A_t)(x-B_t),\qquad F_t\colon y^2=x(x+1)(x+t^2).\]
+The curve \(E_t\) is the model \(F_{2,6}^t\) of Howe, Lepr\'evost and Poonen \cite[Tables~6 and~8]{HLP}.
+
+\begin{statement}{Lemma 9 (universal families and valuations).}\label{lemma-hlp}
+\begin{enumerate}
+\item[(a)] \(E_t\) has full rational \(2\)-torsion and the point \((t^4-2t^2+1,4(t^2-1)^2)\) of order \(3\) over
+\(\Q(t)\), and
+\[j(E_t)=\frac{256(A_t^2-A_tB_t+B_t^2)^3}{A_t^2B_t^2(A_t-B_t)^2},\qquad A_t-B_t=16t,\]
+of degree \(24\) in \(t\); \(E_t\) is nonsingular exactly for \(t\notin\{0,\pm1,\pm3\}\), and the poles of
+\(j(E_t)\) are \(t\in\{0,\pm1,\pm3,\infty\}\). Every elliptic curve
+\(E\) over \(\Q\) with \(\Z/2\times\Z/6\subseteq E(\Q)\) satisfies \(j(E)=j(E_t)\) for some \(t\in\Q\smallsetminus
+\{0,\pm1,\pm3\}\).
+\item[(b)] \(F_t\) has full rational \(2\)-torsion and the point \((t,t(t+1))\) of order \(4\), and
+\(j(F_t)=256(t^4-t^2+1)^3/(t^4(t^2-1)^2)\). Every elliptic curve \(F\) over \(\Q\) with \(\Z/2\times\Z/4\subseteq
+F(\Q)\) is isomorphic over \(\Q\) to \(F_t\) for some \(t\in\Q\smallsetminus\{0,\pm1\}\).
+\item[(c)] For every \(t\in\Q\smallsetminus\{0,\pm1,\pm3\}\), \(v_2(j(E_t))<0\) and \(v_3(j(E_t))<0\); for every
+\(t\in\Q\smallsetminus\{0,\pm1\}\), \(v_3(j(F_t))<0\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} The identities and degrees in (a) and (b) are checked in Part~B of the certificate. (a) By (I4),
+\(E\cong E(c+c^2,c)\) with \(c=(10-2s)/(s^2-9)\), and the certificate checks that the \(j\)-invariant of this family is
+\(j(E_{(s-3)/2})\); as \(j(E)\) is finite, \(t=(s-3)/2\) is not a pole of \(j(E_t)\), so
+\(t\notin\{0,\pm1,\pm3\}\).
+Alternatively, \(E_t\) carries a level structure \(\Z/2\times\Z/6\) over \(\Q(t)\), so it defines
+a map from the \(t\)-line to the modular curve \(X_1(2,6)\), the coarse moduli space of curves with such a level
+structure \cite[p.~125]{KM}; the map \(X_1(2,6)\to X(1)\) has degree \([\SL_2(\Z):\{\pm1\}\Gamma]=24\)
+\cite[Exercise~3.1.1]{DS}, where \(\Gamma\) is the group of matrices fixing \(e_1\) modulo \(6\) and \(e_2\) modulo
+\(2\) (certificate, Part~B), so the map from the \(t\)-line has degree \(24/24=1\) and is an isomorphism. (b) Let
+\(P\in F(\Q)\) have order \(4\) and move \(T=2P\) to \((0,0)\): \(F\colon y^2=x(x-e_2)(x-e_3)\) with \(e_2,e_3\in\Q\).
+By (I5), \(-e_2\) and \(-e_3\) are squares, \(-e_2=r^2\), \(-e_3=r^2t^2\), and \((x,y)\mapsto(x/r^2,y/r^3)\) gives
+\(F_t\); \(t\neq0,\pm1\) as \(F\) is nonsingular. (c) For \(F_t\) write \(t=a/b\) in lowest terms:
+\(j(F_t)=256(a^4-a^2b^2+b^4)^3/(a^4b^4(a^2-b^2)^2)\). If \(3\nmid ab\), the numerator is \(\equiv256\not\equiv0\)
+and \(3\mid a^2-b^2\); if \(3\mid ab\), the numerator is prime to \(3\) and the denominator is not. For \(E_t\), with
+\(C=a^4-6a^2b^2-3b^4\) and \(D=8ab^3\), one has \(A=C+D\), \(B=C-D\) and \(A^2-AB+B^2=C^2+3D^2\) for the homogenized
+\(A_t\), \(B_t\) (certificate). At \(2\): if \(a\), \(b\) have opposite parity, \(A\), \(B\) and \(C^2+3D^2\) are odd
+and \(v_2(j)=8-2v_2(16ab^3)<0\); if both are odd, one of \(A\), \(B\) has valuation \(4\) and the other valuation
+\(r\ge9\), and \(v_2(j)=8+24-8-2r-8<0\). At \(3\): if \(3\nmid a\), the numerator is a unit and \(3\) divides
+\((a-b)(a+b)b\), hence the denominator; if \(k=v_3(a)\ge1\), then \(v_3(C)=1\), \(v_3(C^2+3D^2)=2\), and
+\(v_3(j)=6-(4+2k)<0\) for \(k\ge2\), while for \(k=1\) one of \(A\), \(B\) has valuation \(1\), the other at least
+\(2\), and \(v_3(j)\le6-8<0\). Part~B of the certificate also proves (c) mechanically on all of \(\mathbb
+P^1(\Q_2)\) and \(\mathbb P^1(\Q_3)\): it covers them by finitely many discs on each of which \(v_p\) of the
+numerator is constant and smaller than \(v_p\) of the denominator. \qed
+
+\begin{statement}{Theorem 10 (the group [2,2,2,12]).}\label{thm-22212}
+Let \(A\), \(E\), \(F\), \(n\) be as in Section~\ref{gluing} with \(A(\Q)_\tors\cong(\Z/2)^3\times\Z/12\) and
+\(n\ge2\). Then \(E\) and \(F\) have multiplicative reduction at \(2\), \(3\), \(5\), \(7\), \(11\) and \(13\); they
+are split at \(2\), \(3\), \(5\), \(7\), \(13\), and have the same splitting type at \(11\). Hence \(v_p(N_A)=2\) for
+these primes and \(901800900=30030^2\) divides \(N_A\).
+\end{statement}
+
+\emph{Proof.} By \hyperref[prop-parents]{Proposition~3}(e), \(T_E=\Z/2\times\Z/6\), \(T_F=\Z/2\times\Z/4\), and \(n\)
+is prime to \(6\); as \(n\ge2\), it has a prime factor \(\ell\ge5\), and \(E[\ell]\cong F[\ell]\) by
+\hyperref[lemma-gluing]{Lemma~1}(c). We apply \hyperref[lemma-compare]{Lemma~8} to this \(\ell\) at each \(p\), once
+we know that both curves are semistable at \(p\).
+
+\emph{The primes \(2\) and \(3\).} By \hyperref[lemma-hlp]{Lemma~9}(a) and~(c), \(v_2(j(E))<0\) and
+\(v_3(j(E))<0\), and by Lemma~9(b) and~(c), \(v_3(j(F))<0\); so these reductions are multiplicative or additive (I6).
+If \(F\) were additive at \(3\), its \(8\) rational \(2\)-primary points would contradict
+\hyperref[lemma-localtorsion]{Lemma~7}(a); so \(F\) is multiplicative at \(3\). If \(E\) were additive at \(2\),
+then, as \(v_2(j(E))<0\), \(E\) would be the twist of a Tate curve by a ramified quadratic character \(\varepsilon\)
+(I8); an element \(\sigma\in I_2\) with \(\varepsilon(\sigma)=-1\) acts on \(E[3]\) as \(-1\) times a unipotent
+matrix, since \(\chi_3\) is trivial on \(I_2\), so it fixes no nonzero point of \(E[3]\), and \(E(\Q_2)\) would have
+no point of order \(3\). So \(E\) is multiplicative at \(2\). If \(E\) were additive at \(3\),
+then \(v_3(j(E))<0\) makes \(E\) a ramified quadratic twist of a Tate curve (I8), so some element of \(I_3\) acts on
+\(E[\ell]\) with both eigenvalues \(-1\), while \(I_3\) acts unipotently on \(F[\ell]\); so \(E\) is multiplicative
+at \(3\). At \(2\), \(F\) is not additive: in the potentially multiplicative case the argument just given applies
+with \(E\) and \(F\) exchanged, and in
+the potentially good case the image of \(I_2\) in \(\GL_2(\Z_\ell)\) acting on \(T_\ell(F)\) is finite
+\cite[Corollary~VII.7.3]{Si1}, nontrivial (I7) and contained in \(\SL_2(\Z_\ell)\); it has order prime to \(\ell\),
+because an element of order \(\ell\) of \(\SL_2(\Q_\ell)\) would have a primitive \(\ell\)-th root of unity as an
+eigenvalue, of degree \(\ell-1>2\) over \(\Q_\ell\); and it injects into \(\GL_2(\F_\ell)\), as the kernel of
+reduction of \(\GL_2(\Z_\ell)\) is torsion-free. So \(I_2\) acts on \(F[\ell]\) through a nontrivial group of order
+prime to \(\ell\), while it acts on \(E[\ell]\) through a group of order \(1\) or \(\ell\). If \(F\) had good reduction at \(2\),
+then by \hyperref[lemma-localtorsion]{Lemma~7}(c) \(4\mid\#\widetilde F(\F_2)\le5\), so \(a_2(F)=-1\), while
+\(t_2(E)=\pm3\), and \(\ell\nmid-1\mp3\). So \(F\) is multiplicative at \(2\). A nonsplit \(F\) at \(2\) has at most
+\(4\) rational \(2\)-primary points (\hyperref[lemma-localtorsion]{Lemma~7}(b)), so \(F\) is split at \(2\), and
+then \(E\) is split at \(2\) since \(3-(-3)=6\) is prime to \(\ell\). A nonsplit \(E\) at \(3\) has no rational point
+of order \(3\) (Lemma~7(b): the torsion order divides \(8\)), so \(E\) is split at \(3\), and then \(F\) is split at
+\(3\) since \(4-(-4)=8\) is prime to \(\ell\).
+
+\emph{The primes \(5\), \(7\), \(11\), \(13\).} The prime-to-\(p\) torsion of \(E\) and \(F\) has order \(12\) and
+\(8\), so neither curve is additive (\hyperref[lemma-localtorsion]{Lemma~7}(a)). If \(X\in\{E,F\}\) has good
+reduction, \(T_X\) injects into \(\widetilde X(\F_p)\) (Lemma~7(c)), so \(12\), resp.~\(8\), divides
+\(p+1-a_p(X)\); with \(a_p^2\le4p\) this leaves the traces
+\[\begin{array}{c|cccc} p&5&7&11&13\\ \hline a_p(E)&-&-4&0&2\\ a_p(F)&-2&0&\pm4&-2,\ 6\end{array}\]
+(certificate, Part~C, which also checks that these are exactly the traces of the curves over \(\F_p\) with the
+corresponding subgroup). A nonsplit \(E\) at \(7\) or \(13\) has no point of order \(3\) (Lemma~7(b), as
+\(3\nmid16,28\)), so \(t_p(E)=p+1\) there. For \(\ell\neq p\): every difference between a good trace of one curve and
+any possible value of \(t_p\) of the other is a nonzero integer whose prime factors are \(2\) and \(3\); the sets of
+differences are \(\{4,8\}\), \(\{4,8,12\}\), \(\{4,8,12,16\}\), \(\{4,8,12,16\}\) for \(p=5,7,11,13\) (certificate,
+Part~C). So by \hyperref[lemma-compare]{Lemma~8}(a) both curves are multiplicative at \(p\). For \(\ell=p\) we use
+Lemma~8(b): good reduction of \(E\) is supersingular exactly at \(11\) and good reduction of \(F\) exactly at \(7\);
+the values \(u\) of ordinary good reductions are \(3\) for \(F\) at \(5\), \(3\) for \(E\) at \(7\), \(\pm4\) for
+\(F\) at \(11\), and \(2\) for \(E\), \(6\) and \(11\) for \(F\) at \(13\), none of them \(\pm1\), and those of \(E\)
+and \(F\) at the same prime are different. So in every case both curves are multiplicative at \(p\).
+
+Splitting types: at \(5\) and \(13\), a nonsplit \(F\) would have at most \(4\) rational \(2\)-primary points
+(Lemma~7(b): \(2(p+1)=12,28\)), so \(F\) is split; at \(7\) and \(13\), \(E\) is split by its point of order \(3\). At
+\(13\) both are therefore split. At \(5\) (for \(E\)), \(7\) (for \(F\)) and \(11\) (for both), opposite splitting
+types would give \(t_p(E)-t_p(F)=\pm2(p+1)\in\{\pm12,\pm16,\pm24\}\), prime to \(\ell\) if \(\ell\neq p\), and
+different unramified constituents \(\pm1\) if \(\ell=p\). The conductor statement follows from
+\hyperref[lemma-gluing]{Lemma~1}(d) and (I13). \qed
+
+\section{The group \([2,28]\)}\label{sec-228}
+
+\begin{statement}{Theorem 11 (the group [2,28]).}\label{thm-228}
+Let \(A\), \(E\), \(F\), \(n\) be as in Section~\ref{gluing} with \(A(\Q)_\tors\cong\Z/2\times\Z/28\) and \(n\ge2\).
+Then \(E\) and \(F\) have split multiplicative reduction at \(3\) and at \(5\), so \(v_3(N_A)=v_5(N_A)=2\).
+\end{statement}
+
+\emph{Proof.} By \hyperref[prop-parents]{Proposition~3}(c), \(T_E=\Z/7\), \(T_F=\Z/2\times\Z/4\), and \(n\) is prime
+to \(14\); let \(\ell\) be a prime factor of \(n\), so \(\ell\) is odd, \(\ell\neq7\), and \(E[\ell]\cong
+F[\ell]\). By \hyperref[lemma-localtorsion]{Lemma~7}(a), neither curve is additive at \(3\) or \(5\) (\(7>4\) and
+\(8>4\)). Good reduction forces \(7\mid\#\widetilde E(\F_p)\), resp.~\(8\mid\#\widetilde F(\F_p)\) (Lemma~7(c)); with
+the Hasse bound this leaves \(a_3(E)=-3\), no good reduction of \(F\) at \(3\), \(a_5(E)=-1\) and \(a_5(F)=-2\)
+(certificate, Part~D). A nonsplit \(E\) at \(3\) or \(5\) has no point of order \(7\) (Lemma~7(b):
+\(7\nmid8,12\)), and a nonsplit \(F\) at \(5\) has at most \(4\) rational \(2\)-primary points
+(\(2(5+1)=12\)).
+
+\emph{At \(3\).} \(F\) is multiplicative. If \(E\) were good, then \(\ell\neq3\) would divide \(-3-4=-7\) or
+\(-3+4=1\), impossible as \(\ell\neq7\); and \(\ell=3\) is impossible because \(E\) is then supersingular
+(\(a_3=-3\equiv0\)) and \(F\) is not (\hyperref[lemma-compare]{Lemma~8}). So \(E\) is multiplicative, hence split. If
+\(F\) were nonsplit, \(t_3(E)-t_3(F)=8\) would be divisible by \(\ell\neq3\), or the unramified constituents \(1\) and
+\(-1\) would differ if \(\ell=3\). So \(F\) is split.
+
+\emph{At \(5\).} If \(E\) were good, then for \(\ell\neq5\) the differences \(-1-(-2)=1\) and \(-1-6=-7\) leave no
+\(\ell\), and for \(\ell=5\) the unramified constituents \(4\) of \(E\) and \(3\) (good \(F\)) or \(1\) (split \(F\))
+differ. So \(E\) is multiplicative, hence split. If \(F\) were good, then \(6-(-2)=8\) leaves no \(\ell\neq5\), and
+the constituents \(1\) and \(3\) differ for \(\ell=5\); so \(F\) is multiplicative, hence split. The conductor follows
+from \hyperref[lemma-gluing]{Lemma~1}(d). \qed
+
+\section{The group \([32]\)}\label{sec-32}
+
+\begin{statement}{Theorem 12 (two curves with torsion Z/8).}\label{thm-88}
+Let \(A\), \(E\), \(F\), \(n\) be as in Section~\ref{gluing} with \(A(\Q)_\tors\cong\Z/32\) and \(T_E\cong
+T_F\cong\Z/8\). Then \(E\) and \(F\) are not isogenous over \(\bar\Q\).
+\end{statement}
+
+\emph{Proof.} By \hyperref[prop-parents]{Proposition~3}(b), \(16\mid n\), so \(E[16]\cong F[16]\). If \(E\) and \(F\)
+are isogenous over \(\Q\), then \(A\) is isogenous over \(\Q\) to \(E^2\), contradicting
+\hyperref[thm-isotypic]{Theorem~5}(b). Suppose they are isogenous over \(\bar\Q\) but not over \(\Q\). By (I2) they
+have no complex multiplication, so \(\Hom_{\bar\Q}(E,F)=\Z\varphi\), and \(g\varphi g^{-1}=\chi(g)\varphi\) for a
+nontrivial quadratic character \(\chi\); hence \(V_2(F)\cong V_2(E)\otimes\chi\) and \(\tr\rho_F(g)=\chi(g)\tr
+\rho_E(g)\) on \(V_2\). In a basis of \(T_2(E)\) whose first vector maps to a rational point of order \(8\), every
+\(g\) acts by \(\left(\begin{smallmatrix}1&*\\0&\chi_2(g)\end{smallmatrix}\right)\) modulo \(8\), so \(\tr\rho_E(g)
+\equiv1+\chi_2(g)\pmod 8\), and likewise for \(F\). For \(\chi(g)=-1\) this gives \(2(1+\chi_2(g))\equiv0\pmod8\),
+that is \(\chi_2(g)\equiv-1\pmod4\) (certificate, Part~E). So the complement of \(\ker\chi\) is contained in that of
+the kernel of the character \(\chi_{-4}\) of \(\Q(i)\); both kernels have index \(2\), so \(\chi=\chi_{-4}\). By
+Dirichlet's theorem there is a prime \(p\equiv3\pmod8\) of good reduction for \(E\) and \(F\). Then \(a_p(F)=-a_p(E)\), and \(8\mid
+\#\widetilde E(\F_p)\) gives \(a_p(E)\equiv p+1\equiv4\pmod8\), so \(a_p(E)-a_p(F)=2a_p(E)\equiv8\pmod{16}\). This
+contradicts \(a_p(E)\equiv a_p(F)\pmod{16}\) (\hyperref[lemma-gluing]{Lemma~1}(c)). \qed
+
+\begin{statement}{Theorem 13 (torsion Z/8 and Z/4 with the same j-invariant).}\label{thm-samej}
+Let \(A\), \(E\), \(F\), \(n\) be as in Section~\ref{gluing} with \(A(\Q)_\tors\cong\Z/32\), \(T_E\cong\Z/8\) and
+\(T_F\cong\Z/4\). Then \(j(E)\neq j(F)\).
+\end{statement}
+
+\emph{Proof.} Suppose \(j(E)=j(F)\). By (I2), \(E\) has no complex multiplication; fix an isomorphism
+\(\rho\colon E\to F\) over \(\bar\Q\). Then \(g\rho g^{-1}=\chi(g)\rho\) for a quadratic character \(\chi\), with
+field \(K\); \(\chi\neq1\) because \(T_E\not\cong T_F\). Let \(P_4\in T_E\) have order \(4\), let \(Q'\) generate
+\(T_F\), and \(Q_4=\rho^{-1}(Q')\), so that \(gQ_4=\chi(g)Q_4\). Then \(2Q_4\) is a rational point of order \(2\),
+hence the unique one, \(2P_4\), and \(Q_4-P_4\in E[2]\). For \(\chi(g)=-1\), \(g(Q_4-P_4)=(Q_4-P_4)+2P_4\), and for
+\(\chi(g)=1\) it is fixed; so \(Q_4-P_4\) is a point of order \(2\) with field of definition \(K\), and
+\(K=\Q(E[2])\). Thus \(E(K)\supseteq\Z/2\times\Z/8\), and by (I3) \(E(K)_\tors\cong\Z/2\times\Z/8\) has exponent
+\(8\).
+
+By \hyperref[prop-parents]{Proposition~3}(b), \(n=4m\) with \(m\) odd. Let \(\psi_4\colon E[4]\to F[4]\) be the
+restriction of \(\psi\), an anti-isometry, and \(S=\rho^{-1}\psi_4\), so that \(\det S\equiv-1\pmod4\) and
+\(Sg=\chi(g)gS\) on \(E[4]\). In a basis of \(E[4]\) beginning with \(P_4\), complex conjugation is
+\(\left(\begin{smallmatrix}1&b\\0&-1\end{smallmatrix}\right)\) with \(b\in\{0,1\}\) (as in the proof of
+\hyperref[thm-isotypic]{Theorem~5}), and \(\chi(c)=(-1)^b\) since \(K=\Q(E[2])\). The solutions of
+\(Sc=\chi(c)cS\), \(\det S=-1\) in \(M_2(\Z/4)\) are \(8\) for \(b=0\) and \(4\) for \(b=1\) (of the form
+\(\left(\begin{smallmatrix}x&y\\2x&-x\end{smallmatrix}\right)\) with \(x\) odd and \(y\) even), and all are \(\equiv I
+\pmod2\) (certificate, Part~E). Hence \(\psi\) and \(\rho\) agree on \(E[2]\).
+
+The quotient \(A_4=(E\times F)/\Gamma_{\psi_4}\) maps onto \(A\) with kernel \(\Gamma_\psi/\Gamma_{\psi_4}\) of odd
+order \(m^2\), so \(A_4(\Q)[2^\infty]\cong A(\Q)[2^\infty]\) contains a point of order \(32\). Let
+\(B=(E\times F)/\Gamma_{\rho|E[2]}\). Over \(K\), \((P,Q)\mapsto(P+\rho^{-1}Q,\ P-\rho^{-1}Q)\) is an isogeny
+\(E\times F\to E\times E\) with kernel \(\Gamma_{\rho|E[2]}\) (its matrix \(\left(\begin{smallmatrix}1&1\\1&-1
+\end{smallmatrix}\right)\) has determinant \(-2\)), so it induces an isomorphism \(B_K\cong E_K\times E_K\); an
+element \(g\) with \(\chi(g)=-1\) changes \(\rho^{-1}\) into \(-\rho^{-1}\), that is, it exchanges the two factors.
+Hence, for a fixed \(g\) with \(\chi(g)=-1\), \(B(\Q)\cong\{(x,gx):x\in E(K)\}\cong E(K)\), whose torsion has
+exponent \(8\). Since \(\psi\) and \(\rho\)
+agree on \(E[2]\), \(\Gamma_{\rho|E[2]}\subseteq\Gamma_{\psi_4}\), and the induced isogeny \(\beta\colon B\to A_4\) has
+kernel \(\Gamma_{\psi_4}/\Gamma_{\rho|E[2]}\), killed by \(2\); so there is \(\beta'\colon A_4\to B\) over \(\Q\) with
+\(\beta'\beta=[2]\) and \(\beta\beta'=[2]\), and \(\ker\beta'\subseteq A_4[2]\). A rational point \(R\) of order
+\(32\) on \(A_4\) gives \(\beta'(R)\in B(\Q)\) of order at least \(16\): a contradiction. \qed
+
+\medskip
+Together with \hyperref[prop-parents]{Proposition~3}(b) and \hyperref[thm-isotypic]{Theorem~5}(b) this proves
+part~(d) of the Theorem.
+
+\begin{statement}{Remark 1 (what remains for [32]).}\label{rem-32}
+For a principally polarized abelian surface over \(\Q\), split over \(\Q\), with rational torsion \(\Z/32\), the
+complementary curves fall into one of three cases, none of which is excluded here:
+\begin{itemize}
+\item \textbf{(A)} \(T_E\cong\Z/8\), \(T_F\cong\Z/4\), \(v_2(n)=2\), and \(E\), \(F\) are not isogenous over \(\bar\Q\);
+\item \textbf{(B)} \(T_E\cong\Z/8\), \(T_F\cong\Z/4\), \(v_2(n)=2\), and \(F\) is isogenous over \(\Q\) to a nontrivial
+quadratic twist of \(E\), with \(j(F)\neq j(E)\);
+\item \textbf{(C)} \(T_E\cong T_F\cong\Z/8\), \(16\mid n\), and \(E\), \(F\) are not isogenous over \(\bar\Q\).
+\end{itemize}
+In case (B), \(E\) has no complex multiplication, so a curve isogenous to \(E\) over \(\bar\Q\) is isogenous over
+\(\Q\) to a quadratic twist of \(E\), and the trivial twist is excluded by \hyperref[thm-isotypic]{Theorem~5}.
+\end{statement}
+
+\section{The group \([25]\)}\label{sec-25}
+
+In this section \(A\), \(E\), \(F\), \(n\) are as in Section~\ref{gluing} with \(A(\Q)_\tors\cong\Z/25\); by
+\hyperref[prop-parents]{Proposition~3}(a), \(T_E\cong T_F\cong\Z/5\) and \(5\mid n\). For \(d\in\Q^\times\) with
+\(d^2-11d-1\neq0\) let \(E_d\colon y^2+(1-d)xy-dy=x^3-dx^2\) (I4); its invariants are \(\Delta=d^5(d^2-11d-1)\),
+\(c_4=d^4-12d^3+14d^2+12d+1\) and \(c_6=-d^6+18d^5-75d^4-75d^2-18d-1\), and
+\((x,y)\mapsto(x/d^2-1/d,\ y/d^3-x/d^2)\) is an isomorphism \(E_d\to E_{-1/d}\) for every \(d\neq0\) (certificate,
+Part~F).
+
+\begin{statement}{Lemma 14 (local behaviour of a rational point of order 5).}\label{lemma-five}
+Let \(X\) be an elliptic curve over \(\Q\) with a rational point \(P\) of order \(5\).
+\begin{enumerate}
+\item[(a)] Let \(p\neq5\). Then \(X\) is not additive at \(p\); if it is nonsplit multiplicative at \(p\), then
+\(5\mid p+1\); if it is good at \(p\), then \(5\mid\#\widetilde X(\F_p)\).
+\item[(b)] Write \((X,P)\cong(E_d,(0,0))\). If \(v_5(d)\neq0\), \(X\) is split multiplicative at \(5\). If
+\(v_5(d)=0\) and \(d\not\equiv3\pmod5\), \(X\) is good at \(5\), with \(\#\widetilde X(\F_5)=10\) if \(d\equiv2\)
+and \(5\) if \(d\equiv1,4\pmod5\). If \(d\equiv3\pmod5\), \(X\) has additive, potentially good reduction at \(5\);
+the minimal discriminant has valuation \(2\) if \(d\not\equiv18\pmod{25}\), and valuation \(3\), with
+\(v_5(c_6)\ge2\), if \(d\equiv18\pmod{25}\).
+\item[(c)] Suppose \(X\) is good or split multiplicative at \(5\). Then \(X[5]=C\oplus\langle P\rangle\) with \(C\)
+the unique \(G_{\Q_5}\)-stable line on which \(G_{\Q_5}\) acts by \(\bar\chi_5\). Identify \(X[5]/C\) with \(\Z/5\)
+through \(P\mapsto1\), and let \(h_X\in H^1(\Q_5,X[5]/C)=\Hom(G_{\Q_5},\Z/5)\) be the image of the Kummer class
+\(\delta(P)\in H^1(\Q_5,X[5])\). If \(X\) is split multiplicative, \(h_X=0\). If \(X\) is good, \(h_X\) is
+unramified and takes the value \(c(X)=(\alpha-1)/5\bmod5\) at Frobenius, where \(\alpha\in\Z_5^\times\) is the
+unit root of \(Y^2-a_5(X)Y+5\); \(c(X)=4\) if \(\#\widetilde X(\F_5)=5\), and \(c(X)=3\) if
+\(\#\widetilde X(\F_5)=10\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} (a) \hyperref[lemma-localtorsion]{Lemma~7}.
+
+(b) If \(v_5(d)>0\), the equation is integral, \(c_4\equiv1\) and \(v_5(\Delta)=5v_5(d)>0\), so the reduction is
+multiplicative (I6); the reduced curve is \(y^2+xy=x^3\), with tangent lines \(y=0\) and \(y=-x\) at the node, so it
+is split. If \(v_5(d)<0\), use the isomorphism \(E_d\cong E_{-1/d}\). If \(v_5(d)=0\), then \(d^2-11d-1=(d-3)^2-5(d+2)\), so
+\(\Delta\) is a unit unless \(d\equiv3\pmod5\), and the counts are computed over \(\F_5\) (certificate, Part~F). If
+\(d=3+5k\), then \(d^2-11d-1=25(k^2-k-1)\) and \(k^2-k-1=(k-3)^2+5(k-2)\), so \(v_5(\Delta)=2\) unless
+\(k\equiv3\pmod5\); for \(d=18+25k'\), \(d^2-11d-1=125(1+5k'+5k'^2)\) and \(v_5(\Delta)=3\). Moreover
+\(5\mid c_4\), \(5\mid c_6\), and \(25\mid c_6\) if \(d\equiv18\pmod{25}\) (certificate, Part~F). Since
+\(v_5(\Delta)<12\) the equation is minimal; it is additive since \(5\mid c_4\), and \(v_5(j)=3v_5(c_4)-v_5(\Delta)\ge0\)
+gives potentially good reduction (I6).
+
+(c) In the split case, \(X\cong E_q\) with \(q=r^5\) for some \(r\in\Q_5^\times\): if \(P\) is represented by
+\(w\in\Q_5^\times\), then \(w^5=q^k\) with \(5\nmid k\) because \(\mu_5(\Q_5)=1\), and \(r=w^aq^b\) for \(ak+5b=1\).
+So \(X[5]=\mu_5\oplus\langle P\rangle\), \(C=\mu_5\), and the \(5\)-divisions \(U\) of \(P\) are represented by
+fifth roots of \(w\), so \(gU-U\in\mu_5=C\) and \(h_X=0\). In the good case, \(P\) reduces to a point of order \(5\)
+(\hyperref[lemma-localtorsion]{Lemma~7}(c)), so \(\widetilde X\) is ordinary \cite[Theorem~V.3.1]{Si1}, and by (I9)
+the kernel \(C\) of \(X[5]\to\widetilde X[5](\bar\F_5)\cong\Z/5\) is a line with action \(\bar\chi_5\) (the
+determinant), not containing \(P\). The lines \(C\) and \(\langle P\rangle\) are the only stable ones, since
+\(\bar\chi_5\neq1\) on \(G_{\Q_5}\). For \(U\) with \(5U=P\), \(h_X(g)\) is \(g\widetilde U-\widetilde U\in
+\widetilde X[5](\bar\F_5)=\langle\widetilde P\rangle\), which depends only on the image of \(g\) in \(G_{\F_5}\).
+The group \(\widetilde X[5^\infty](\bar\F_5)\) is isomorphic to \(\Q_5/\Z_5\) \cite[Theorem~V.3.1(b)]{Si1}, and the
+Frobenius endomorphism \(\pi\), which satisfies \(\pi^2-a_5\pi+5=0\) \cite[Theorem~V.2.3.1]{Si1}, acts on it by a
+unit root of \(Y^2-a_5Y+5\), that is by \(\alpha\). With \(\widetilde P=1/5\) and \(\widetilde U=1/25+j/5\), and
+\(\alpha\equiv a_5\equiv1\pmod5\), \(\pi\widetilde U-\widetilde U\equiv(\alpha-1)/25=c(X)\widetilde P\). The values
+of \(c(X)\) are computed modulo \(25\) in Part~F of the certificate. \qed
+
+\begin{statement}{Lemma 15 (the Kummer relation and the trace identity).}\label{lemma-kummer}
+Let \(R\) generate \(A(\Q)_\tors\cong\Z/25\), let \(P=\pi_E(R)\) and \(Q=\pi_F(R)\).
+\begin{enumerate}
+\item[(a)] \(P\) and \(Q\) have order \(5\), and \(Q=u\,\psi(P)\) for a unit \(u\in(\Z/5)^\times\), with \(u=1\) if
+and only if \(25\mid n\).
+\item[(b)] \(\psi_*\delta_E(P)=u\,\delta_F(\psi(P))\) in \(H^1(\Q,F[5])\), where \(\delta_E\colon E(\Q)\to
+H^1(\Q,E[5])\) and \(\delta_F\) are the Kummer maps.
+\item[(c)] Put \(\lambda=u^{-1}\). For every \(g\in G_{\Q}\),
+\[\tr\rho_F(g)-1-\chi_5(g)\equiv\lambda\bigl(\tr\rho_E(g)-1-\chi_5(g)\bigr)\pmod{25},\]
+where \(\rho_E\), \(\rho_F\) are the representations on \(T_5(E)\), \(T_5(F)\). In particular
+\(\#\widetilde F(\F_p)\equiv\lambda\,\#\widetilde E(\F_p)\) modulo \(25\) at every prime \(p\neq5\) of good reduction for
+\(E\) and \(F\), and \(\lambda\in\{2,3,4\}\) if \(v_5(n)=1\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} (a) If \(\pi_E(R)=0\), then \(R\in F(\Q)\), which has no point of order \(25\) by (I1); and
+\(5\pi_E(R)=0\) as \(T_E=\Z/5\). So \(P\) has order \(5\), and so has \(Q\). As \(\psi\) is equivariant, \(\psi(P)\)
+generates \(T_F\cong\Z/5\), so \(Q=u\psi(P)\) with \(u\neq0\). Since \(i_F(\psi(x))=-i_E(x)\) for \(x\in E[n]\)
+(I10), \(nR=\sigma\alpha(R)=i_E(P)+u\,i_F(\psi(P))=(1-u)i_E(P)\). If \(25\mid n\), \(nR=0\) and \(u=1\); if
+\(v_5(n)=1\), \(nR=(n/5)\cdot5R\neq0\), so \(u\neq1\).
+
+(b) Write \(R=\sigma(U,V)\); by \hyperref[lemma-gluing]{Lemma~1}(e), \(nU=P\), \(nV=Q\) and \(gV-V=\psi(gU-U)\). With
+\(m=n/5\), \(mU\) and \(mV\) are \(5\)-divisions of \(P\) and \(Q\), and \(g(mV)-mV=\psi(g(mU)-mU)\). So
+\(\delta_F(Q)=\psi_*\delta_E(P)\), and \(\delta_F(Q)=u\,\delta_F(\psi(P))\).
+
+(c) Choose a basis \((e_1,e_2)\) of \(T_5(E)\) with \(e_1/5=P\), and \((f_1,f_2)\) of \(T_5(F)\) with
+\(f_i/5=\psi(e_i/5)\). Then \(\rho_E(g)=\left(\begin{smallmatrix}1+5a&b\\5c&d\end{smallmatrix}\right)\) and
+\(\rho_F(g)=\left(\begin{smallmatrix}1+5a'&b'\\5c'&d'\end{smallmatrix}\right)\) with \(b\equiv b'\), \(d\equiv d'\pmod5\)
+and \(\det\rho_E(g)=\det\rho_F(g)=\chi_5(g)\). For such matrices, exactly,
+\[\tr M-1-\det M=5\bigl(a(1-d)+bc\bigr)\]
+(certificate, Part~G), so \(\tr\rho_E(g)-1-\chi_5(g)\equiv5(a(1-d)+bc)\) and \(\tr\rho_F(g)-1-\chi_5(g)\equiv
+5(a'(1-d)+bc')\pmod{25}\). The cocycle \(g\mapsto(\rho_E(g)-1)e_1/25=(ae_1+ce_2)/5\) represents \(\delta_E(P)\), and
+likewise \((a',c')\) represents \(\delta_F(\psi(P))\) in the basis \(f_i/5\). By (b) there is \(w\in F[5]\), with
+second coordinate \(w_2\), such that \(u(a',c')\equiv(a,c)+(\rho_F(g)-1)w\), that is \(ua'\equiv a+bw_2\) and
+\(uc'\equiv c+(d-1)w_2\pmod5\). Then
+\[u\bigl(a'(1-d)+bc'\bigr)\equiv(a+bw_2)(1-d)+b(c+(d-1)w_2)=a(1-d)+bc\pmod5\]
+(certificate, Part~G), which is the identity. At a prime \(p\neq5\) of good reduction, a Frobenius element has trace
+\(a_p\) and \(\chi_5=p\), so \(\tr\rho-1-\chi_5=-\#\widetilde X(\F_p)\). The last claim follows from (a). \qed
+
+\medskip
+The identity holds for all \(g\in G_{\Q}\), in particular for Frobenius lifts at primes of bad reduction: if
+\(E\) is split multiplicative at \(p\neq5\), any Frobenius lift has trace \(p+1\) on \(T_5(E)\) (I8), so if \(F\) is
+good at \(p\), then \(25\mid\#\widetilde F(\F_p)\); and symmetrically. \(\quad(\ast)\)
+
+\begin{statement}{Lemma 16 (additive reduction at 5).}\label{lemma-additive}
+\begin{enumerate}
+\item[(a)] Let \(B/\Q_5\) be an abelian surface isogenous to \(E'\times F'\), where \(E'\) and \(F'\) are elliptic
+curves with additive, potentially good reduction. Then \(B(\Q_5)\) has no point of order \(25\).
+\item[(b)] Let \(d\in\Z_5\) with \(d\equiv3\pmod5\) and \(v_5(2d-11)\le2\), and let \(K=\Q_5(\zeta_5)\). Then
+\(E_d[5]\not\subseteq E_d(K)\).
+\item[(c)] Let \(d\in\Z_5\) with \(d\equiv18\pmod{25}\) (for instance \(d\equiv68\pmod{125}\)), and \(P=(0,0)\). Then
+the Kummer class \(\delta(P)\in H^1(\Q_5,E_d[5])\) is represented by a homomorphism \(G_{\Q_5}\to\langle P\rangle\)
+that is nonzero on \(I_5\).
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} (a) Let \(M=\Q_5(\zeta_3)\), unramified over \(\Q_5\), and \(L=M(5^{1/12})\), cyclic of degree \(12\)
+and totally ramified over \(M\); let \(\tau\) generate \(\Gal(L/M)\). An elliptic curve over \(\Q_5\) with
+\(v_5(j)\ge0\) has good reduction over \(L\): if \(\varpi=5^{1/12}\) and \(\nu=v_5(\Delta)\) for a minimal model, the
+equation \(y^2=x^3-27c_4\varpi^{-4\nu}x-54c_6\varpi^{-6\nu}\) is integral, because \(3v_5(c_4)\ge\nu\) and
+\(2v_5(c_6)\ge\nu\) by \(c_6^2=c_4^3-1728\Delta\), and its discriminant \(6^{12}\Delta\varpi^{-12\nu}\) is a unit. So
+\(E'\), \(F'\) and \(B\) have good reduction over \(L\) (I7). The group \(I_M\) acts on \(V_\ell(E')\)
+(\(\ell\neq5\)) through \(\Gal(L/M)\), and nontrivially, since \(E'\) is additive over \(M\) (I6), (I7); as
+\(\det\rho_\ell=\chi_\ell\) is trivial on \(I_M\), \(\rho_\ell(\tau)\) is a nontrivial element of finite order of
+\(\SL_2(\Q_\ell)\), so it has no eigenvalue \(1\) and \(V_\ell(E')^{I_M}=0\). The same holds for \(F'\), so
+\(\sum_{i<12}\rho_\ell(\tau)^i\), whose image consists of \(\tau\)-invariant vectors, is \(0\) on \(V_\ell(B)\cong
+V_\ell(E')\oplus V_\ell(F')\). By the N\'eron mapping property, \(\Gal(L/M)\) acts on the N\'eron model of \(B\)
+over the ring of integers of \(L\) (see \cite[\S2]{ST}); as \(L/M\) is totally ramified, \(\tau\) acts on the
+reduction \(\widetilde B\) of \(B\) over \(L\) by an automorphism \([\tau]\), compatibly with reduction and with
+\(V_\ell(B)\cong V_\ell(\widetilde B)\). So \(\sum_{i<12}[\tau]^i=0\), as \(V_\ell\) is faithful on endomorphisms. A point \(R\in B(\Q_5)\) of \(5\)-power order reduces to a point fixed by
+\([\tau]\), hence killed by \(12\), hence zero. So \(R\) lies in the kernel of reduction, the group of points of a
+formal group of dimension \(2\) over the ring of integers of \(L\) (I11), with \(e=v_L(5)=12<20\);
+\hyperref[lemma-formal]{Lemma~6}(c) shows that \(R\) does not have order \(25\).
+
+(b) Let \(\zeta\) be a primitive fifth root of unity, \(\sqrt5=\zeta-\zeta^2-\zeta^3+\zeta^4\),
+\(\varepsilon=(\sqrt5-1)/2\), \(\alpha_0=(11+5\sqrt5)/2\) and \(\beta_0=(11-5\sqrt5)/2\), the roots of
+\(d^2-11d-1\), and \(q(d)=(d-\alpha_0)/(d-\beta_0)\). Part~F of the certificate checks, in \(\Q(\zeta)(u)\) with
+\(d(u)=-(\varepsilon^5u^5-\varepsilon^{-5})/(u^5+1)\): (i) \(u^5=-q(d(u))\); (ii) \(x(u)=N(u)/D(u)\), where
+\(N(u)=-\varepsilon^4\prod_{j=0}^{3}(u-\zeta^j(1+\zeta)^2)\) and \(D(u)=(u+\zeta^2)(u+\zeta^3)(u+1)^2\), is a root of
+the \(5\)-division polynomial of \(E_{d(u)}\); (iii) \(N\) and \(D\) are coprime of degree \(4\). These are the
+formulas of Morton \cite{Mo}. For \(d=3+5k\) one has \(q(d)=(2k-1-\sqrt5)/(2k-1+\sqrt5)\). Normalize the valuation
+\(v\) of \(K\) by \(v(5)=4\), so \(v(\sqrt5)=2\); note \(v_5(2d-11)=1+v_5(2k-1)\). If \(v_5(2k-1)=0\), then
+\(q-1=-2\sqrt5/(2k-1+\sqrt5)\) has valuation \(2\). If \(2k-1=5w\) with \(w\) a unit, then
+\(-q=(1-\sqrt5w)/(1+\sqrt5w)\) and \(v(-q-1)=2\). A unit \(y\equiv1\) that is a fifth power \(x^5\) in \(K\) has
+\(x\equiv1\) (the residue field is \(\F_5\)), so \(v(y-1)\ge\min(4+v(x-1),5v(x-1))\ge5\). Hence \(-q(d)\) is not a
+fifth power in \(K\) (in the first case neither is \(q(d)\), and \(-1\) is a fifth power). As \(\mu_5\subset K\), a
+root \(u_0\) of \(u^5=-q(d)\) has degree \(5\) over \(K\); \(d(u_0)=d\), because \(d\mapsto-q(d)\) is a Möbius
+transformation; \(D(u_0)\neq0\) since the roots of \(D\) lie in \(K\); and \(x(u_0)\) is the \(x\)-coordinate of a
+point of \(E_d[5]\smallsetminus\{0\}\). If \(x(u_0)\) were in \(K\), \(u_0\) would be a root of the nonzero
+polynomial \(N-x(u_0)D\), of degree at most \(4\) over \(K\). So \(x(u_0)\notin K\).
+
+(c) By \hyperref[lemma-five]{Lemma~14}(b), \(E_d\) is additive with \(v_5(\Delta)=3\) and \(v_5(c_6)\ge2\). Let
+\(L_4=\Q_5(5^{1/4})\), cyclic of degree \(4\) and totally ramified over \(\Q_5\) (as \(\mu_4\subset\Q_5\)), with
+generator \(\tau\), and \(\varpi=5^{1/4}\). As in (a), the equation \(y^2=x^3-27(c_4/5)x-54c_6\varpi^{-6}\) is integral
+with unit discriminant, and \(v(c_6\varpi^{-6})>0\), so \(E_d\) has good reduction over \(L_4\), with reduction
+\(\widetilde E\colon y^2=x^3+ax\), \(a\neq0\), of \(j\)-invariant \(1728\); it is ordinary, as \(5\equiv1\pmod4\)
+\cite[Example~V.4.5]{Si1} (certificate, Part~F). As in (a), \(\sum_{i<4}[\tau]^i=0\) on \(\widetilde E\), so \(P\)
+reduces to a point killed by \(4\), that is to \(0\). Let \(E_1\subset E_d(\bar\Q_5)\) be the set of points that
+reduce to \(0\) in this model; as \(x\) in the model above is \(x\varpi^{-2}\) for the coordinate \(x\) of
+\(y^2=x^3-27c_4x-54c_6\), \(E_1\) consists of \(0\) and the points with \(v_5(x)<1/2\) there, so it is a
+\(G_{\Q_5}\)-stable subgroup. By \cite[\S1.11]{Se} (good reduction of height \(1\), any ramification), the kernel of
+reduction \(E_1\cap E_d[5]\) is cyclic of order \(5\) and \(E_d[5]\to\widetilde E[5](\bar\F_5)\) is onto; so
+\(E_1\cap E_d[5]=\langle P\rangle\). Some \(5\)-division \(U\) of \(P\) lies in \(E_1\): if \(5U_0=P\), then
+\(5\widetilde U_0=\widetilde P=0\), so \(\widetilde U_0\) is the reduction of some \(T\in E_d[5]\), and \(U=U_0-T\)
+reduces to \(0\). For \(g\in G_{\Q_5}\), \(gU-U\in E_1\cap
+E_d[5]=\langle P\rangle\), so \(h(g)=gU-U\) is a homomorphism \(G_{\Q_5}\to\langle P\rangle\) representing
+\(\delta(P)\). If \(h\) vanished on \(I_5\), it would vanish on \(G_{M'}\) for the unramified extension \(M'\) of
+\(\Q_5\) of degree \(5\), and \(U\) would be a point of order \(25\) in \(E_d(M')\). Over \(M'L_4\), of ramification
+index \(4\), the argument above (with \(\Gal(M'L_4/M')\cong\Gal(L_4/\Q_5)\)) shows that \(U\) reduces to \(0\), so
+\(U\) lies in a formal group over the ring of integers of \(M'L_4\), with \(e=4<20\), contradicting
+\hyperref[lemma-formal]{Lemma~6}(c). \qed
+
+\begin{statement}{Theorem 17 (the group [25]: reduction types).}\label{thm-25}
+In the setting of this section:
+\begin{enumerate}
+\item[(i)] \(E\) and \(F\) are semistable;
+\item[(ii)] at \(5\), either both have good reduction and \(\{\#\widetilde E(\F_5),\#\widetilde F(\F_5)\}=\{5,10\}\),
+in which case \(v_5(n)=1\), or both have split multiplicative reduction; in particular the second case holds if
+\(25\mid n\);
+\item[(iii)] both \(E\) and \(F\) have split multiplicative reduction at \(2\) and \(3\), and either both have split
+multiplicative reduction at \(11\), or both have split multiplicative reduction at \(5\) and \(7\). Hence \(66\)
+divides both \(N_E\) and \(N_F\), or \(210\) divides both.
+\end{enumerate}
+\end{statement}
+
+\emph{Proof.} Let \(R\), \(P\), \(Q\), \(u\) and \(\lambda\) be as in \hyperref[lemma-kummer]{Lemma~15}, so \(T_E=
+\langle P\rangle\) and \(T_F=\langle\psi(P)\rangle\). Recall \(E[5]\cong F[5]\) (\(5\mid n\)). We use repeatedly:
+if \(E\) and \(F\) have good reduction at a prime \(p\) and \(\#\widetilde E(\F_p)=\#\widetilde F(\F_p)=N\) with
+\(v_5(N)=1\), we get a contradiction. Indeed both Frobenius polynomials equal \(f(Y)=Y^2-(p+1-N)Y+p\), so
+\(f(\varphi)=0\) on \(V_\ell(E)\) and \(V_\ell(F)\) (\(\ell\neq p\), \(\varphi\) a Frobenius lift), hence on
+\(V_\ell(A)\) (\hyperref[lemma-gluing]{Lemma~1}(d)); \(A\) has good reduction at \(p\) (I7), \(\varphi\) acts on
+\(V_\ell(A)\cong V_\ell(\widetilde A)\) as the Frobenius endomorphism \(\pi\), so \(f(\pi)=0\) and \(f(1)=N\) kills
+\(\widetilde A(\F_p)\). But \(A(\Q)[5^\infty]\) injects into \(\widetilde A(\F_p)\): by (I11) if \(p\neq5\), and by
+(I11) and \hyperref[lemma-formal]{Lemma~6}(c) (\(e=1<4\)) if \(p=5\). So \(A(\Q)[5^\infty]\) would be killed by \(5\).
+
+\emph{Primes \(p\neq5\).} By \hyperref[lemma-five]{Lemma~14}(a), neither curve is additive.
+
+\emph{The prime \(5\).} By Lemma~14(b), each of \(E\), \(F\) is good, split multiplicative, or additive with a
+parameter \(d\equiv3\pmod5\). In the good and split cases let \(C_E\subset E[5]\), \(C_F\subset F[5]\) be the lines of
+Lemma~14(c). We push the relation \(\psi_*\delta_E(P)=u\,\delta_F(\psi(P))\) of Lemma~15(b) to
+\(H^1(\Q_5,F[5]/C_F)=\Hom(G_{\Q_5},\Z/5)\), identifying \(F[5]/C_F\) with \(\Z/5\) through \(\psi(P)\mapsto1\).
+\begin{itemize}
+\item Both additive: \(A\) is isogenous over \(\Q_5\) to \(E\times F\), and \(R\) contradicts
+\hyperref[lemma-additive]{Lemma~16}(a).
+\item One additive, say \(E\cong E_d\), the other good or split (the other order is symmetric, as \(u\) is a unit):
+by Lemma~14(c), \(F[5]\cong E[5]\) is the direct sum of \(\bar\chi_5\) and the trivial character, so \(G_K\) acts
+trivially on \(E[5]\), \(K=\Q_5(\zeta_5)\). If \(v_5(2d-11)\le2\), this contradicts Lemma~16(b). Otherwise
+\(d\equiv68\pmod{125}\); by Lemma~16(c), \(\delta_E(P)\) is represented by a homomorphism into \(\langle P\rangle\),
+which \(\psi\) maps isomorphically onto \(F[5]/C_F\) (as \(\psi(P)\notin C_F\)); so the image of the left side is
+nonzero on \(I_5\), while the image \(u\,h_F\) of the right side is unramified or zero by Lemma~14(c).
+\item One good and one split, say \(E\) good: \(\psi(C_E)=C_F\) (the unique lines with action \(\bar\chi_5\)), so the
+image of the left side is \(h_E\), which is nonzero, and that of the right side is \(u\,h_F=0\).
+\item Both good: the counts lie in \(\{5,10\}\) (Lemma~14(b)) and are different by the remark at the beginning of
+the proof. Evaluating the images at a Frobenius lift gives \(c(E)=u\,c(F)\), so \(\lambda=u^{-1}=c(F)/c(E)\) is
+\(3\cdot4^{-1}=2\) or \(4\cdot3^{-1}=3\) in \(\F_5\) (certificate, Part~F); hence \(\lambda\neq1\) and \(v_5(n)=1\)
+by Lemma~15(a).
+\end{itemize}
+This proves (ii), and with the primes \(p\neq5\), (i).
+
+\emph{Small primes.} Let \(p\in\{2,3,7,11,13\}\). Bad reduction at \(p\) is split, since \(5\nmid p+1\)
+(Lemma~14(a)). A good reduction has \(\#\widetilde X(\F_p)\in\{5\}\), \(\{5\}\), \(\{5,10\}\), \(\{10,15\}\),
+\(\{10,15,20\}\) for \(p=2,3,7,11,13\), by Lemma~14(a) and the Hasse bound, so it is never divisible by \(25\)
+(certificate, Part~G). By \((\ast)\) after Lemma~15, \(E\) and \(F\) are both good or both split at \(p\). At \(2\)
+and \(3\) two good reductions would have the same count \(5\), which is excluded; so both curves are split at \(2\)
+and \(3\). At \(11\), if both are good, their counts are \(10\) and \(15\) (equal counts are excluded), and
+Lemma~15(c) gives \(\lambda=4\) (certificate, Part~G). Then at \(7\) two good reductions would have counts \(5\) and
+\(10\) and give \(\lambda\in\{2,3\}\), so both curves are split at \(7\); and at \(5\) two good reductions would give
+\(\lambda\in\{2,3\}\), so by (ii) both are split at \(5\). The conductors follow from (I13). \qed
+
+\begin{statement}{Remark 2 (a second proof at 2 and 3).}\label{rem-route}
+The mixed case at \(p\in\{2,3\}\) can also be excluded with the Kummer relation instead of \((\ast)\). Suppose \(E\)
+is good at \(p\), so \(\#\widetilde E(\F_p)=5\), and \(F\) is split multiplicative at \(p\). Restrict
+\hyperref[lemma-kummer]{Lemma~15}(b) to \(G_{\Q_p}\). The class \(\delta_E(P)\) is unramified, since the
+\(5\)-division points of \(P\) generate an extension unramified at \(p\) \cite[Proposition~VIII.1.5(b)]{Si1}, and
+nonzero, because \(E_1(\Q_p)\) is uniquely \(5\)-divisible and \(\widetilde P\notin5\widetilde E(\F_p)=0\); so
+the left side is a nonzero unramified class (\(F[5]\cong E[5]\) is unramified). On the other side \(F\cong E_q\) with
+\(q=r^5\), \(r\in\Q_p^\times\) (as \(\mu_5(\Q_p)=1\)), \(\psi(P)\) is represented by \(r^k\) with \(5\nmid k\), and
+\(\delta_F(\psi(P))\) is the image of \(k\) times the Kummer class of \(r\) in \(H^1(\Q_p,\mu_5)=
+\Q_p^\times/\Q_p^{\times5}\). It is zero if \(5\mid v_p(r)\), since every unit of \(\Q_2\) or \(\Q_3\) is a fifth
+power, and its restriction to \(I_p\) is nonzero otherwise. Neither is a nonzero unramified class. The two-good case
+is excluded as in the proof of \hyperref[thm-25]{Theorem~17}. The two arguments are independent of each
+other.
+\end{statement}
+
+\begin{statement}{Lemma 18 (nonsplit multiplicative primes).}\label{lemma-nonsplit}
+In the setting of this section, there is no prime \(p\) at which \(E\) has nonsplit multiplicative reduction with
+\(5\nmid v_p(\Delta_{\min}(E))\) and \(v_5(p+1)=1\). The same holds for \(F\).
+\end{statement}
+
+\emph{Proof.} Suppose \(p\) is such a prime; \(p\neq5\) by \hyperref[thm-25]{Theorem~17}(ii). By (I8),
+\(T_5(E)\cong\eta\otimes T_5(E_q)\) with \(v_p(q)=v_p(\Delta_{\min}(E))\) prime to \(5\), so some element of \(I_p\)
+acts on \(E[5]\) by a transvection, \(E[5]^{I_p}\) is a line, and a Frobenius lift \(\varphi\) acts on it by
+\(\eta(\varphi)\bar\chi_5(\varphi)=-p\equiv1\pmod5\). As \(F[5]\cong E[5]\), \(F[5]\) is ramified at \(p\), so \(F\) is
+not good at \(p\) (I7), nor additive (\hyperref[lemma-five]{Lemma~14}(a)). If \(F\) were split, \(F[5]^{I_p}\) would
+be the line \(\mu_5\) (I8), on which \(\varphi\) acts by \(p\equiv-1\pmod5\); but an isomorphism \(E[5]\cong F[5]\)
+maps \(E[5]^{I_p}\) onto \(F[5]^{I_p}\) compatibly with \(\varphi\). So \(F\) is nonsplit, and on \(V_5(E)\) and
+\(V_5(F)\) the characteristic polynomial of \(\varphi\) is \(f(Y)=(Y+1)(Y+p)\) (I8). By Cayley--Hamilton \(f(\varphi)\)
+is \(0\) on \(V_5(E)\oplus V_5(F)\cong V_5(A)\), hence on \(A[5^\infty]=V_5(A)/T_5(A)\). Every point of
+\(A(\Q)[5^\infty]\) is fixed by \(\varphi\), so it is killed by \(f(1)=2(p+1)\), which has \(5\)-adic valuation
+\(1\): a contradiction with \(R\). \qed
+
+\medskip
+The condition concerns the curve \(E\) itself, not its isogeny class: an isogeny of degree \(5\) can multiply
+\(v_p(\Delta_{\min})\) by \(5\).
+
+\begin{statement}{Remark 3 (an infinite family).}\label{rem-family}
+\hyperref[lemma-nonsplit]{Lemma~18} excludes curves that the conditions at \(2\), \(3\) and \(5\) of
+\hyperref[thm-25]{Theorem~17} allow. For every integer \(t\), let \(d=2244+10830t\). Then \(E_d\) has a rational point
+of order \(5\); it has split multiplicative reduction at \(2\) and \(3\), since \(6\mid d\), \(c_4\equiv1\) modulo
+\(2\) and \(3\), and the reduction is \(y^2+xy=x^3\); it has good reduction at \(5\) with \(5\) points, since
+\(d\equiv4\pmod5\) (\hyperref[lemma-five]{Lemma~14}(b)); and it has nonsplit multiplicative reduction of type
+\(I_1\) at \(19\), where \(v_5(19+1)=1\): \(d\equiv78\pmod{361}\), so \(d\equiv2\pmod{19}\),
+\(d^2-11d-1\equiv171=9\cdot19\pmod{361}\), \(19\nmid c_4(2)\), and \(-c_6(2)\) is not a square modulo \(19\). By
+\cite[Lemma~V.5.2 and Theorem~V.5.3]{Si2} the reduction is split if and only if \(\gamma=-c_4/c_6\) is a square in
+\(\Q_{19}\), and \(\gamma\equiv-c_6\) modulo squares because \(c_6^2\equiv c_4^3\pmod{19}\); so it is nonsplit. So no \(E_d\) is \(E\) or \(F\) for a surface as in this section (certificate, Part~H, which
+also checks Magma's local data for \(d=78\) and \(d=2244\)).
+\end{statement}
+
+\begin{statement}{Theorem 19 (the group [25]: conductors).}\label{thm-25cond}
+In the setting of this section, and relying on the completeness of Cremona's tables below conductor \(500000\)
+(I14), \(N_E\ge8778\), \(N_F\ge8778\) and \(\max(N_E,N_F)\ge500000\). Consequently \(N_A=N_EN_F\ge4389000000\).
+\end{statement}
+
+\emph{Proof.} By \hyperref[thm-25]{Theorem~17}, \(N_E\) is squarefree and divisible by \(66\) or by \(210\); \(T_E
+\cong\Z/5\); and by \hyperref[lemma-nonsplit]{Lemma~18}, \(E\) has no witness prime, that is, no prime \(p\) with
+\(v_5(p+1)=1\) at which \(E\) is nonsplit multiplicative with \(5\nmid v_p(\Delta_{\min})\). Part~H of the certificate
+runs through all curves in Cremona's tables with conductor divisible by \(6\), not divisible by \(25\), and below
+\(500000\): there are \(1472509\) of them, in \(980367\) isogeny classes, and exactly \(464\) have torsion
+\(\Z/5\); of these, \(155\) have conductor divisible by \(66\) or \(210\), and \(76\) of those have no witness prime,
+the smallest conductor among them being \(8778\) (the curve 8778x1). Below \(8778\) the curves with torsion \(\Z/5\)
+and conductor divisible by \(66\) or \(210\) are 1254k1, 1914o1 and 1914p1, with witness primes \(19\), \(29\),
+\(29\), where they have type \(I_1\) and are nonsplit, and \(v_5(20)=v_5(30)=1\). So \(N_E\ge8778\), and likewise
+\(N_F\ge8778\). The isogeny class of each of these three curves consists of two curves joined by an isogeny of
+degree \(5\); the other curve (1254k2, 1914o2, 1914p2) has trivial rational torsion, and type \(I_5\) at the witness
+prime, so it is excluded only because it has no rational point of order \(5\); no curve in these classes has a
+rational point of order \(2\).
+
+If \(N_E\) and \(N_F\) are both below \(500000\), both curves are among the \(464\). If they are not isogenous over
+\(\Q\), Part~H shows that no \(\lambda\in\F_5^\times\) satisfies \(\#\widetilde F(\F_p)/5\equiv\lambda\,
+\#\widetilde E(\F_p)/5\) modulo \(5\) at all primes \(7\le p\le59\) of good reduction for both: each of the \(107415\) pairs
+of curves in different isogeny classes fails at some such prime. This contradicts
+\hyperref[lemma-kummer]{Lemma~15}(c). If they are isogenous over \(\Q\) (for instance \(E\cong F\)), \(A\) is
+isogenous over \(\Q\) to \(E^2\), which contradicts \hyperref[thm-isotypic]{Theorem~5}(a). So
+\(\max(N_E,N_F)\ge500000\). Finally \(N_A=N_EN_F\) by \hyperref[lemma-gluing]{Lemma~1}(d), as \(E\) and \(F\) are
+semistable, and \(N_A\ge8778\cdot500000\). \qed
+
+\begin{statement}{Remark 4 (the trace test and the hypotheses of the Theorem for [25]).}\label{rem-trace}
+Curves that are isogenous over \(\Q\) have the same point counts, so they pass the test of
+\hyperref[lemma-kummer]{Lemma~15}(c) with \(\lambda=1\); this is why \hyperref[thm-isotypic]{Theorem~5}(a) is needed.
+In the tables, the pair 165066d1, 165066d2 and the \(464\) pairs \((E,E)\) pass only with \(\lambda=1\). Parts
+(i)--(iii) of \hyperref[thm-25]{Theorem~17}, Lemmas~15 and~18 and the bound \(\max(N_E,N_F)\ge500000\) use only a
+rational point \(R\) of order \(25\); the torsion of \(E\) and \(F\) is then \(\Z/5\) or \(\Z/10\). The bound
+\(N_E\ge8778\) uses \(T_E\cong\Z/5\): the curve 66c1 has torsion \(\Z/10\), conductor \(66\), split multiplicative
+reduction at \(2\), \(3\) and \(11\), and no witness prime. Adding the \(32\) curves with torsion \(\Z/10\) of the
+range of Part~H, none of the \(122743\) pairs in different isogeny classes passes the test (certificate, Part~H), so
+\(\max(N_E,N_F)\ge500000\) holds as soon as \(A(\Q)\) has a point of order \(25\).
+\end{statement}
+
+\section{Further remarks}\label{remarks}
+
+\begin{statement}{Remark 5 (products of elliptic curves).}\label{rem-products}
+The hypothesis \(n\ge2\) of \hyperref[thm-22212]{Theorems~10} and~\hyperref[thm-228]{11} is necessary. For elliptic
+curves \(E\), \(F\) over \(\Q\), the product \(E\times F\) with the product polarization is a principally polarized
+abelian surface over \(\Q\), split over \(\Q\), with gluing degree \(1\) and torsion \(T_E\times T_F\). The curve
+26b1 has torsion \(\Z/7\) and conductor \(26\), 15a1 has torsion \(\Z/2\times\Z/4\) and conductor \(15\), and 30a2
+has torsion \(\Z/2\times\Z/6\) and conductor \(30\). So 26b1 \(\times\) 15a1 with the product polarization has
+torsion \(\Z/2\times\Z/28\) but conductor \(390\), and 26b1 has good reduction at \(3\) and \(5\); and 30a2 \(\times\)
+15a1 with the product polarization has torsion \((\Z/2)^3\times\Z/12\) and conductor \(450\), which is not divisible
+by \(30030^2\) (certificate, Part~P). The proofs need a prime \(\ell\mid n\). For
+\([2,2,20]\), 66c1 \(\times\) 15a1 has torsion \((\Z/2)^2\times\Z/20\), in accordance with
+\hyperref[prop-parents]{Proposition~3}(d), which does not use \(n\ge2\). A product never has a rational point of order
+\(25\) or \(32\) (certificate, Part~A).
+\end{statement}
+
+\begin{statement}{Remark 6 (where the hypotheses are used).}\label{rem-hyp}
+The principal polarization, defined over \(\Q\), enters through (I10): it provides the complement \(F\) with
+\(A/E\cong F\), the gluing \(\psi\), and the Kummer relation of \hyperref[lemma-gluing]{Lemma~1}(e). That \(\psi\) is
+an anti-isometry is used only in \hyperref[thm-samej]{Theorem~13}. \hyperref[thm-isotypic]{Theorem~5} uses no
+polarization. The condition \(n\ge2\) is used only in \hyperref[thm-22212]{Theorems~10} and~\hyperref[thm-228]{11} and in the
+last sentence of \hyperref[prop-parents]{Proposition~3}.
+The exact torsion group is used in \hyperref[prop-parents]{Proposition~3}, which determines \(T_E\) and \(T_F\), and
+for \([25]\) as described in \hyperref[rem-trace]{Remark~4}. Part~(e)(iv) relies on the completeness of Cremona's
+tables below conductor \(500000\) (I14); everything else is proved for all conductors.
+\end{statement}
+
+\section{Computations}\label{computations}
+
+The certificate
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsplit_conditions_checks.m}{\texttt{qsplit\_conditions\_checks.m}}
+(Magma V2.30-1, about \(30\) seconds) consists of assertions and ends with
+\texttt{ALL\_QSPLIT\_CONDITIONS\_CHECKS\_PASSED}; a failed assertion stops it before that line. Magma's exit status is
+\(0\) in both cases, so only the final line certifies a run. Its log is
+\href{https://genus-2-torsion.github.io/data/knowledge/sources/qsplit_conditions_checks.log}{\texttt{qsplit\_conditions\_checks.log}}.
+SHA-256 of the script:
+\texttt{3fee4d4ed8ad5102\allowbreak 6d21db91e4ad840a\allowbreak 3f82a785d4c5bd9e\allowbreak a18283a40d31188d};
+of the log:
+\texttt{1044cef3965daad4\allowbreak e5237230414e90a4\allowbreak 6622943733e4c7de\allowbreak 16c207b34484793a}.
+
+Part~A: \hyperref[prop-parents]{Proposition~3}: for each of the five groups, the pairs of groups from (I1) with the
+properties of \hyperref[lemma-gluing]{Lemma~1}(a); the \(p\)-parts used for the gluing degrees; the elements of order
+\(4\) of \(\Z/32\); products of groups from (I1). Part~B: \hyperref[lemma-hlp]{Lemma~9}: the families \(E_t\) and
+\(F_t\), their torsion points, \(j\)-invariants and singular fibres; Kubert's families for \(\Z/2\times\Z/6\) and
+\(\Z/2\times\Z/4\) and the parameter changes \(t=(s-3)/2\) and \(t=(4v+1)/(4v-1)\); the index \(24\); the identities
+of the hand proof; the covering of \(\mathbb P^1(\Q_2)\) and \(\mathbb P^1(\Q_3)\) by discs. Part~C:
+\hyperref[thm-22212]{Theorem~10}: the traces over \(\F_p\), \(p=5,7,11,13\), by Legendre sums and the halving
+criterion and again from the group structure, the difference sets, the values \(u\), and the arithmetic of the
+torsion bounds at \(2\), \(3\), \(5\), \(7\), \(11\), \(13\). Part~D: \hyperref[thm-228]{Theorem~11}: point counts of
+all curves over \(\F_3\) and \(\F_5\), and the comparisons. Part~E: \hyperref[thm-isotypic]{Theorem~5}(b) and
+\hyperref[thm-88]{Theorems~12} and~\hyperref[thm-samej]{13}: the fixed vectors of \(c\), the basis change, the corner
+identities, the solutions of the matrix equation, the product model, the list (I3), the congruences. Part~F:
+\hyperref[lemma-five]{Lemmas~14} and~\hyperref[lemma-additive]{16}: the invariants of \(E_d\), \(E_d\cong E_{-1/d}\),
+the polynomial identities at \(5\), the counts over \(\F_5\), the ordinarity of \(j=1728\), the unit roots, and
+Morton's formulas. Part~G: \hyperref[lemma-kummer]{Lemma~15} and \hyperref[thm-25]{Theorem~17}: the two polynomial
+identities, the possible point counts, and the scalars \(\lambda\). Part~H: \hyperref[lemma-nonsplit]{Lemma~18},
+\hyperref[thm-25cond]{Theorem~19} and \hyperref[rem-family]{Remarks~3} and~\hyperref[rem-trace]{4}: the family of
+Remark~3, the scan of Cremona's tables, the witness primes, the isogeny classes of 1254k1, 1914o1, 1914p1, and the
+test on the \(107415\) and \(122743\) pairs. Part~P: \hyperref[rem-products]{Remark~5}. Part~V (validation, not used
+in the proofs): the trace relations used in \hyperref[thm-88]{Theorem~12}, for the curve \(E(b,b/u)\) with
+\(b=(2u-1)(u-1)\) and \(u=13/18\) (Kubert's family for \(\Z/8\) \cite[Table~3]{Ku}; torsion \(\Z/8\)) and its twist by
+\(-1\) (torsion \(\Z/4\)), at the \(76\) primes \(p\equiv3\pmod8\) below \(2000\) of good reduction; the valuations of \hyperref[lemma-hlp]{Lemma~9}(c) on a box of
+parameters; the reduction types at \(5\) and the degrees of the fifth roots of \(q(d)\) for \(d=1,2,3,5,18,48,68,
+193\). Every value quoted in the text from the certificate is asserted, not only printed. No result depends on the
+generalized Riemann hypothesis. Apart from the complete enumeration of Cremona's tables in Part~H, which is used only
+for \hyperref[thm-25cond]{Theorem~19}, no search is used.
+
+\begin{thebibliography}{LMFDB}
+
+\bibitem[BD]{BD}
+N. Bruin and K. Doerksen, \emph{The arithmetic of genus two curves with \((4,4)\)-split Jacobians}, Canad. J.
+Math. \textbf{63} (2011): Section~2 (Lemmas~2.4 and~2.6, Proposition~2.8).
+\href{https://arxiv.org/abs/0902.3480}{arXiv:0902.3480}.
+
+\bibitem[BK]{BK}
+A. Brumer and K. Kramer, \emph{The conductor of an abelian variety}, Compositio Math. \textbf{92} (1994),
+227--248.
+
+\bibitem[BL]{BL}
+C. Birkenhake and H. Lange, \emph{Complex Abelian Varieties}, 2nd edition, Springer, Berlin, 2004 (Grundlehren der
+mathematischen Wissenschaften~302): Sections~5.3 and~12.1 (Corollaries~12.1.2, 12.1.4 and~12.1.5,
+Proposition~12.1.3, Lemma~12.1.6) and Corollary~11.8.2.
+\href{https://doi.org/10.1007/978-3-662-06307-1}{doi:10.1007/978-3-662-06307-1}.
+
+\bibitem[Cr]{Cr}
+J. E. Cremona, \emph{Algorithms for Modular Elliptic Curves}, 2nd edition, Cambridge University Press, 1997; the
+tables of elliptic curves over \(\Q\), extended by Cremona to conductor \(500000\), as distributed with Magma.
+
+\bibitem[DS]{DS}
+F. Diamond and J. Shurman, \emph{A First Course in Modular Forms}, Graduate Texts in Mathematics~228, Springer, New
+York, 2005: Exercise~3.1.1.
+
+\bibitem[Fal]{Fal}
+G. Faltings, \emph{Endlichkeitss\"atze f\"ur abelsche Variet\"aten \"uber Zahlk\"orpern}, Invent. Math.
+\textbf{73} (1983), 349--366: \S5, Satz~3, Satz~4 and Korollar~1.
+
+\bibitem[HLP]{HLP}
+E. W. Howe, F. Lepr\'evost and B. Poonen, \emph{Large torsion subgroups of split Jacobians of curves of genus two or
+three}, Forum Math. \textbf{12} (2000), 315--364: Tables~3, 6 and~8.
+\href{https://arxiv.org/abs/math/9809210}{arXiv:math/9809210}.
+
+\bibitem[HS]{HS}
+M. Hindry and J. H. Silverman, \emph{Diophantine Geometry: An Introduction}, Graduate Texts in Mathematics~201,
+Springer, New York, 2000: Theorems~C.1.4 and~C.2.6 and Proposition~C.2.5.
+
+\bibitem[Ka]{Ka}
+S. Kamienny, \emph{Torsion points on elliptic curves and \(q\)-coefficients of modular forms}, Invent. Math.
+\textbf{109} (1992), 221--229.
+\href{https://doi.org/10.1007/BF01232025}{doi:10.1007/BF01232025}.
+
+\bibitem[KM]{KM}
+M. A. Kenku and F. Momose, \emph{Torsion points on elliptic curves defined over quadratic fields}, Nagoya Math. J.
+\textbf{109} (1988), 125--149: Theorem~(0.1) and the definition of \(Y_1(m,N)\) on p.~125.
+\href{https://doi.org/10.1017/S0027763000002816}{doi:10.1017/S0027763000002816}.
+
+\bibitem[Kn]{Kn}
+A. W. Knapp, \emph{Elliptic Curves}, Mathematical Notes~40, Princeton University Press, 1992: Theorem~4.2.
+\href{https://doi.org/10.1515/9780691186900}{doi:10.1515/9780691186900}.
+
+\bibitem[Ku]{Ku}
+D. S. Kubert, \emph{Universal bounds on the torsion of elliptic curves}, Proc. London Math. Soc. (3) \textbf{33}
+(1976), 193--237: Table~3.
+\href{https://doi.org/10.1112/plms/s3-33.2.193}{doi:10.1112/plms/s3-33.2.193}.
+
+\bibitem[LMFDB]{LMFDB}
+The LMFDB Collaboration, \emph{Completeness of elliptic curve data over \(\Q\)},
+\href{https://www.lmfdb.org/knowledge/show/rcs.cande.ec.q}{https://www.lmfdb.org/knowledge/\allowbreak show/\allowbreak rcs.cande.ec.q}, 2026.
+
+\bibitem[Ma]{Ma}
+B. Mazur, \emph{Modular curves and the Eisenstein ideal}, Publ. Math. IH\'ES \textbf{47} (1977), 33--186:
+Theorem~(8). \href{https://www.numdam.org/item/PMIHES_1977__47__33_0/}{Numdam}.
+
+\bibitem[Mo]{Mo}
+P. Morton, \emph{Product formulas for the \(5\)-division points on the Tate normal form and the Rogers--Ramanujan
+continued fraction}, arXiv:1612.06268. The formulas used here are verified directly by the certificate.
+
+\bibitem[Na]{Na}
+F. Najman, \emph{Complete classification of torsion of elliptic curves over quadratic cyclotomic fields}, J. Number
+Theory \textbf{130} (2010), 1964--1968: Section~1.
+\href{https://doi.org/10.1016/j.jnt.2009.12.008}{doi:10.1016/j.jnt.2009.12.008}.
+
+\bibitem[Ol]{Ol}
+L. D. Olson, \emph{Points of finite order on elliptic curves with complex multiplication}, Manuscripta Math.
+\textbf{14} (1974), 195--205. \href{https://doi.org/10.1007/BF01171442}{doi:10.1007/BF01171442}.
+
+\bibitem[P256]{P256}
+Census proof of 11 November 2026, \emph{Six exclusions at rational torsion order \(256\)},
+\href{https://genus-2-torsion.github.io/proofs/qsplit-order-256-obstruction.html}{https://genus-2-torsion.github.io/\allowbreak proofs/\allowbreak qsplit-order-256-obstruction.html}: Section~2.
+
+\bibitem[Se]{Se}
+J.-P. Serre, \emph{Propri\'et\'es galoisiennes des points d'ordre fini des courbes elliptiques}, Invent. Math.
+\textbf{15} (1972), 259--331: \S1.11 (Propositions~11 and~12 and the Corollaries) and \S1.12 (Proposition~13 and its
+Corollary).
+
+\bibitem[Si1]{Si1}
+J. H. Silverman, \emph{The Arithmetic of Elliptic Curves}, 2nd edition, Graduate Texts in Mathematics~106,
+Springer, New York, 2009: Propositions~IV.3.2, VII.2.1, VII.2.2, VII.3.1, VII.5.1, VII.5.4, VII.5.5 and~VIII.1.5,
+Theorems~IV.6.1, IV.6.4, V.2.3.1, V.3.1, VII.6.1 and~VII.7.1, Corollaries~VII.7.2 and~VII.7.3, Remark~VII.1.1 and
+Example~V.4.5.
+
+\bibitem[Si2]{Si2}
+J. H. Silverman, \emph{Advanced Topics in the Arithmetic of Elliptic Curves}, Graduate Texts in Mathematics~151,
+Springer, New York, 1994: IV.9.4 (Tate's algorithm, Step~2), Remark~IV.9.2.2, IV~\S10 and Theorem~IV.10.2,
+Theorems~V.3.1 and~V.5.3, Lemma~V.5.2, Corollary~V.5.4 and Proposition~V.6.1.
+
+\bibitem[ST]{ST}
+J.-P. Serre and J. Tate, \emph{Good reduction of abelian varieties}, Ann. of Math. (2) \textbf{88} (1968),
+492--517: \S1, Theorem~1 and Corollary~2, and \S2. \href{https://doi.org/10.2307/1970722}{doi:10.2307/1970722}.
+
+\end{thebibliography}
+
+\end{document}

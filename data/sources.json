@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 05:24 UTC",
+  "generated": "2026-11-15 11:40 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -74,6 +74,14 @@
       "cite": "Six exclusions at rational torsion order 256, census proof of 11 November 2026. A principally polarized abelian surface split over Q with rational torsion of order 256 has full rational 2-torsion, at every splitting degree.",
       "url": "proofs/qsplit-order-256-obstruction.html",
       "used_for": "excludes the exact groups [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16] in the split-over-ℚ class, including groups not represented in the census; complete PDF/LaTeX and supplementary exact matrix checks"
+    },
+    "QSplitConditions": {
+      "short": "necessary conditions for the open split-over-ℚ groups (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Necessary conditions for genus-2 Jacobians split over Q with torsion [25], [32], [2,28], [2,2,20] or [2,2,2,12], census proof of 15 November 2026. The complementary elliptic curves have prescribed torsion and gluing degree; an abelian surface isogenous over Q to the square of an elliptic curve has no rational point of order 25 or 32; local comparisons of the elliptic Galois representations force multiplicative reduction at 2, 3, 5, 7, 11 and 13 for [2,2,2,12] and split multiplicative reduction at 3 and 5 for [2,28]; for [25] a Kummer argument at 5 and a uniform trace relation modulo 25 force semistability and give the 66/210 dichotomy, and a comparison over Cremona's tables below conductor 500,000 gives the conductor bound; Magma checks in qsplit_conditions_checks.log.",
+      "url": "proofs/qsplit-necessary-conditions.html",
+      "used_for": "the notes on the split side of [25], [32], [2,28], [2,2,20] and [2,2,2,12], which have neither an example nor an exclusion in the split-over-ℚ class; necessary conditions only, not exclusions"
     },
     "Olson1974": {
       "short": "Olson 1974",

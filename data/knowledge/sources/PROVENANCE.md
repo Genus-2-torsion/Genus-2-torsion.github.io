@@ -872,3 +872,48 @@ SHA-256 of the publication artifacts:
 | `qsimple_612_obstruction.pdf` | `0a63db0df18d3c3477887a142e00372ff18e790bbf4104d568cd9b7b12885ce3` |
 | `qsimple_612_checks.m` | `75ed93ac9e13e4561343d07ce7539e94f46d627d3d7b9f77cea8b21ae7ec597a` |
 | `qsimple_612_checks.log` | `c6c60835c24a0751fe023c01beadcee878826e2f50d322ce86f74b88bab12ebc` |
+
+## Necessary conditions for the open split-over-ℚ groups (15 November 2026)
+
+[`qsplit-necessary-conditions.html`](../../../proofs/qsplit-necessary-conditions.html), with
+[PDF](qsplit_necessary_conditions.pdf) and [LaTeX](qsplit_necessary_conditions.tex), proves necessary
+conditions for a genus-2 Jacobian over ℚ, split over ℚ, with rational torsion [25], [32], [2,28],
+[2,2,20] or [2,2,2,12]: the five census groups with neither an example nor an exclusion in the
+split-over-ℚ class. They are shown as notes on the split side of these group pages
+(`QSPLIT_CONDITION_KEYS`). They are not exclusions, and they change no grade.
+
+- [2,28]: the complementary elliptic curves have torsion ℤ/7 and ℤ/2×ℤ/4, the gluing degree is prime to 14,
+  and both curves are split multiplicative at 3 and 5, so 225 divides the conductor.
+- [2,2,2,12]: the curves have torsion ℤ/2×ℤ/6 and ℤ/2×ℤ/4, the gluing degree is prime to 6, and both curves
+  are multiplicative at 2, 3, 5, 7, 11 and 13, so 30030² divides the conductor.
+- Both statements need a genus-2 Jacobian (gluing degree at least 2). The products 26b1 × 15a1 and
+  30a2 × 15a1, with the product polarization, have torsion [2,28] and [2,2,2,12] without these properties.
+- [32]: an abelian surface isogenous over ℚ to the square of an elliptic curve has no rational point of
+  order 32. In a Jacobian the curves have torsion ℤ/8 and ℤ/4 with different j-invariants, or ℤ/8 and ℤ/8
+  with no isogeny over ℚ̄.
+- [2,2,20]: only the torsion ℤ/10 and ℤ/2×ℤ/4 of the curves and the gluing degree (odd, prime to 5).
+- [25]: the curves are semistable; at 5 they are good with 5 and 10 points, or both split multiplicative;
+  and 66 or 210 divides both conductors. Relying on the completeness of Cremona's tables below conductor
+  500,000 (LMFDB knowl rcs.cande.ec.q), both conductors are at least 8778 and one is at least 500,000.
+
+The results are from a Codex session of 11–12 November 2026 (with the parent-torsion lemma of
+21 October). Three independent reports of 15 November 2026 checked them: two on the mathematics, one
+auditing the computations. One report found that the [2,28] and [2,2,2,12] statements as first written
+were false for products, and the hypothesis was corrected. A further review checked the census version.
+
+The certificate [`qsplit_conditions_checks.m`](qsplit_conditions_checks.m) and its
+[log](qsplit_conditions_checks.log) (Magma V2.30-1, 15 November 2026, about 30 seconds) consist of
+assertions and end with `ALL_QSPLIT_CONDITIONS_CHECKS_PASSED`. They include the scan of Cremona's tables
+below 500,000: 1,472,509 curves with 6 | N and 25 ∤ N; 464 with torsion ℤ/5; all 107,415 pairs from
+distinct isogeny classes fail the trace relation modulo 25. The audit reran every computation of the
+sources with byte-identical logs and rederived the Cremona comparison from LMFDB data with PARI. The final
+certificate passes 36 negative tests.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsplit_necessary_conditions.tex` | `9dc472d07914372128fd4c65558848841e765c2c29f2d54e000d90f367724e9e` |
+| `qsplit_necessary_conditions.pdf` | `a16e350589094280d4488095e7fd320a6c7c68c34913de9a8b0dc3c9cd0e3a8a` |
+| `qsplit_conditions_checks.m` | `3fee4d4ed8ad51026d21db91e4ad840a3f82a785d4c5bd9ea18283a40d31188d` |
+| `qsplit_conditions_checks.log` | `1044cef3965daad4e5237230414e90a46622943733e4c7de16c207b34484793a` |

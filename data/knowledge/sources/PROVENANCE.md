@@ -828,3 +828,47 @@ SHA-256 of the publication artifacts:
 | `qsimple_28_obstruction.pdf` | `5df247dc2da16c9f7d42e4c4034815d1ae537c1e8081f2ceda982a0016f7b0d6` |
 | `qsimple_28_checks.m` | `9c56c4328b25de70d4ce3d28c8be978c1fc887f3698fc3f7c37fb4c9db88a7b2` |
 | `qsimple_28_checks.log` | `f0e53ff1e0231dd1b0a9a28d047c7841e9b5d4d7292506755aafeb9f00ea8bb0` |
+
+## [6,12], [3,24] and [2,6,6] in the geometrically split, ℚ-simple class (15 November 2026)
+
+[`qsimple-612-obstruction.html`](../../../proofs/qsimple-612-obstruction.html), with
+[PDF](qsimple_612_obstruction.pdf) and [LaTeX](qsimple_612_obstruction.tex), proves that an abelian
+surface over ℚ with a principal polarization defined over ℚ, simple over ℚ and geometrically split,
+whose rational torsion contains (ℤ/3)², has at most four rational points of 2-power order. The new
+census exclusions are [6,12], [3,24] and [2,6,6] in `gsplit` only; they are the only census groups with
+(ℤ/3)² and a 2-primary part of order at least 8. All three have examples split over ℚ and exact split
+grades, which are unchanged. The theorem also excludes groups outside the census, such as [6,24],
+[12,12] and [2,6,12], in `gsplit` only. It does not decide [3,12] or [6,6] in `gsplit`.
+
+The rational (ℤ/3)² is Lagrangian in A[3], so the 3-division field is a Kummer extension of ℚ(ζ₃) with
+Galois group U ⋊ C₂ (U elementary abelian of order at most 27). Every endomorphism and abelian subvariety
+is defined over it, so the quadratic field of type (N), the CM field and the quadratic subfield of the
+endomorphism field are ℚ(√−3), and the endomorphism field has Galois group C₂ or D₆. Type (N) uses a
+curve over ℚ(√−3) with full rational 3-torsion and the exact sequence of the
+[[2,2,14]](../../../proofs/qsimple-2214-obstruction.html) proof. The CM case reduces at an inert prime
+p ≡ 5, 7 (mod 12), where 72 does not divide the number of points of a supersingular surface. The D₆
+case uses Frobenius elements of order 3 at primes p ≡ 3 (mod 4). In the C₂ case, complex conjugation
+forces real multiplication; a valuation lemma for cyclic isogenies of Tate curves gives potentially good
+reduction at 3; and an element of the inertia group at 3 then acts on every Tate module with square −1,
+so it fixes at most four points of 2-power order.
+
+The certificate [`qsimple_612_checks.m`](qsimple_612_checks.m) and its
+[log](qsimple_612_checks.log) (Magma V2.30-1, 15 November 2026, about 4 seconds) consist of
+assertions and end with `ALL_612_CHECKS_PASSED`. Parts A–F carry the proof: the Galois image on A[3]
+and its quotients, the Frobenius shapes, the supersingular Weil polynomials and their point counts, the
+inertia identities, and the facts about the three groups. Part V checks the validation facts of the
+remarks and is not used in the proof. Three independent reports of 15 November 2026 (two on the
+mathematics, one auditing the computations) found no mathematical error, and all their corrections are
+in this version. A further review checked the changes made for this version. The audit reran the
+certificates of the submission with byte-identical logs under two Magma versions, ran 47 negative tests,
+and rechecked every computation in Sage, GAP, PARI/GP and Python. The final certificate passes 27
+further negative tests.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `qsimple_612_obstruction.tex` | `dcc82f3c795127fd487afa7e013185e6b3507e0e585a5c6bb3f93219f39f536a` |
+| `qsimple_612_obstruction.pdf` | `0a63db0df18d3c3477887a142e00372ff18e790bbf4104d568cd9b7b12885ce3` |
+| `qsimple_612_checks.m` | `75ed93ac9e13e4561343d07ce7539e94f46d627d3d7b9f77cea8b21ae7ec597a` |
+| `qsimple_612_checks.log` | `c6c60835c24a0751fe023c01beadcee878826e2f50d322ce86f74b88bab12ebc` |

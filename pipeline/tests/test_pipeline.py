@@ -217,6 +217,7 @@ class KnowledgeTests(unittest.TestCase):
             "2.2.14": "QSimple2214Obstruction",
             "2.28": "QSimple228Obstruction",
             "28": "QSimple28Obstruction", "2.14": "QSimple28Obstruction",
+            "6.12": "QSimple612Obstruction", "3.24": "QSimple612Obstruction", "2.6.6": "QSimple612Obstruction",
             "2.2.10": "QSimple2210Obstruction", "2.2.20": "QSimple2210Obstruction",
             "2.2.2.10": "QSimple2210Obstruction",
             "40": "QSimple40Obstruction", "2.20": "QSimple40Obstruction",
@@ -291,6 +292,33 @@ class KnowledgeTests(unittest.TestCase):
             self.assertNotIn(bad, log)
         for suffix in ("tex", "pdf"):
             self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_28_obstruction.{suffix}").exists())
+
+    def test_qsimple_three_rank_two_primary(self):
+        """Rational (Z/3)^2 forces at most four rational 2-power torsion points on principally polarized, Q-simple,
+        geometrically split abelian surfaces (2026-11-15)."""
+        for key in ("6.12", "3.24", "2.6.6", "6.24", "12.12", "2.6.12"):
+            with self.subTest(key=key):
+                rec = knowledge.exclusions_record(key)
+                self.assertEqual(set(rec), {"gsplit"})
+                self.assertEqual(rec["gsplit"]["sources"][0], "QSimple612Obstruction")
+                self.assertTrue((ROOT / rec["gsplit"]["proof_url"]).exists())
+                self.assertIn("principal", rec["gsplit"]["reason"])
+        self.assertIn("QSimple612Obstruction", knowledge.QSIMPLE_ONLY)
+        # groups with (Z/3)^2 and 2-primary part of order at most 4 stay open or known in this class
+        for key in ("3.3", "3.6", "6.6", "3.12", "3.9"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
+        groups = {g["key"]: g for g in read_json(ROOT / "data" / "groups.json")["groups"]}
+        for key in ("6.12", "3.24", "2.6.6"):
+            self.assertTrue(groups[key]["known"]["qsplit"])
+            self.assertFalse(groups[key]["known"]["gsplit"])
+            self.assertEqual(groups[key]["infinite"]["split"]["grade"], "exact")
+            self.assertEqual(groups[key]["exclusions"], knowledge.exclusions_record(key))
+        log = (KNOWLEDGE_DIR / "sources" / "qsimple_612_checks.log").read_text()
+        self.assertTrue(log.rstrip().endswith("ALL_612_CHECKS_PASSED"))
+        for bad in ("Runtime error", "Assertion failed", "User error", "Internal error"):
+            self.assertNotIn(bad, log)
+        for suffix in ("tex", "pdf"):
+            self.assertTrue((KNOWLEDGE_DIR / "sources" / f"qsimple_612_obstruction.{suffix}").exists())
 
     def test_qsimple_five_two_rank(self):
         """Rational 5-torsion forces 2-rank at most 2 on Q-simple, geometrically split Jacobians (2026-11-11)."""

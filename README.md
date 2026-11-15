@@ -114,6 +114,10 @@ shows that on such surfaces rational 7-torsion forces at most two rational point
 This makes [28] and [2,14] impossible in the **geometrically split, simple over ℚ** class; both have
 split-over-ℚ examples, so their combined split infinitude grades are unchanged (open for [28], exact
 for [2,14]).
+Rational torsion containing (ℤ/3)² forces at most four rational points of 2-power order on such
+surfaces (`proofs/qsimple-612-obstruction.html`, with PDF/LaTeX and a Magma certificate). This makes
+[6,12], [3,24] and [2,6,6] impossible in the **geometrically split, simple over ℚ** class; all three
+have split-over-ℚ examples and exact split grades, which are unchanged.
 The groups [30], [35], [60], [63], [70], [2,30], [5,5], [5,10], and [7,7] are excluded only in
 the **geometrically split, simple over ℚ** class, by `proofs/qsimple-30-obstruction.html`,
 `proofs/qsimple-35-obstruction.html`, `proofs/qsimple-63-obstruction.html`, and

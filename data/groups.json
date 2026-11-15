@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 04:52 UTC",
+  "generated": "2026-11-15 05:24 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -11024,7 +11024,24 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if its rational torsion contains (ℤ/3)². This group contains (ℤ/3)² and has a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple612Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple45Obstruction",
+            "KenkuMomose1988",
+            "Kamienny1992",
+            "Najman2010",
+            "SerreTate1968",
+            "Tate1966"
+          ],
+          "proof_url": "proofs/qsimple-612-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -12235,7 +12252,24 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if its rational torsion contains (ℤ/3)². This group contains (ℤ/3)² and has a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple612Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple45Obstruction",
+            "KenkuMomose1988",
+            "Kamienny1992",
+            "Najman2010",
+            "SerreTate1968",
+            "Tate1966"
+          ],
+          "proof_url": "proofs/qsimple-612-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {
@@ -14644,7 +14678,24 @@
         "gsplit": false,
         "undecided": false
       },
-      "exclusions": {},
+      "exclusions": {
+        "gsplit": {
+          "reason": "A principally polarized abelian surface over ℚ that is simple over ℚ and geometrically split has at most four rational points of 2-power order if its rational torsion contains (ℤ/3)². This group contains (ℤ/3)² and has a 2-primary part of order at least eight, so it is impossible in that class at every geometric splitting degree.",
+          "sources": [
+            "QSimple612Obstruction",
+            "QSimple63Obstruction",
+            "QSimple2214Obstruction",
+            "QSimple2210Obstruction",
+            "QSimple45Obstruction",
+            "KenkuMomose1988",
+            "Kamienny1992",
+            "Najman2010",
+            "SerreTate1968",
+            "Tate1966"
+          ],
+          "proof_url": "proofs/qsimple-612-obstruction.html"
+        }
+      },
       "n_curves": 1,
       "infinite": {
         "simple": {

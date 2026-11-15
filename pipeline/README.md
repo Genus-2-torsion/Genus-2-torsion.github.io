@@ -102,6 +102,13 @@ groups that already had a `gsplit` exclusion ([2,28], [56], [2,2,14], [63], [70]
 proof. Both census groups have `qsplit` examples, so their combined grades are unchanged. The proof
 is in `proofs/qsimple-28-obstruction.html`, with PDF/LaTeX and the Magma certificate under
 `data/knowledge/sources/qsimple_28_*`.
+`QSimple612Obstruction` (15 November 2026) proves that rational (ℤ/3)² forces at most four rational
+2-power torsion points on a principally polarized, geometrically split abelian surface simple over ℚ.
+The predicate `rank(3) >= 2 and order % 8 == 0`, placed after the [28] branch, applies to [6,12],
+[3,24] and [2,6,6] in the census and to future entries such as [6,24], [12,12] and [2,6,12]. All three
+census groups have `qsplit` examples and exact split grades, so their combined grades are unchanged.
+The proof is in `proofs/qsimple-612-obstruction.html`, with PDF/LaTeX and the Magma certificate under
+`data/knowledge/sources/qsimple_612_*`.
 
 `QSPLIT_ORDER256_EXCLUSIONS` records six exact groups excluded only in `qsplit`, even though
 they have no census entries: [4,64], [8,32], [16,16], [2,2,64], [2,4,32], and [2,8,16].

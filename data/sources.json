@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-15 04:52 UTC",
+  "generated": "2026-11-15 05:24 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -308,6 +308,14 @@
       "cite": "Rational 7-torsion forces 2-primary torsion of order at most 2 on principally polarized abelian surfaces that are geometrically split and simple over Q, census proof of 14 November 2026. In the CM case, reduction at a prime p ≢ ±1 mod 7 that is inert in the CM field gives a supersingular surface whose number of points is not divisible by 28; cyclic cubic and sextic endomorphism fields are those of the [2,28] proof. In the quadratic case a curve in the isogeny class of an elliptic factor has a point of order 14 over the quadratic field, so it comes from a quadratic point of X1(14), which lies in one of two families up to diamond operators. For a conjugate gluing, the descent of the gluing and a fourth rational 2-power point force two norm conditions that have no solutions on either family (Chabauty, and elliptic Chabauty over Q(zeta_7)^+); for a geometric square, the j-invariants have equal negative valuations above 3, so the Q-curve degree is a square and the conjugate gluing case applies; Magma checks in qsimple_28_checks.log",
       "url": "proofs/qsimple-28-obstruction.html",
       "used_for": "impossibility of [28] and [2,14] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 7-torsion and 2-primary part of order at least 4 in that class, including groups outside the census such as [84] and [2,42]; requires a principal polarization"
+    },
+    "QSimple612Obstruction": {
+      "short": "ℚ-simple geometric [6,12], [3,24] and [2,6,6] exclusion proof (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational torsion containing (Z/3)^2 forces 2-primary torsion of order at most 4 on principally polarized abelian surfaces that are geometrically split and simple over Q, census proof of 15 November 2026. Rational (Z/3)^2 is Lagrangian in A[3], so the 3-division field is a Kummer extension of Q(zeta_3) with Galois group U ⋊ C2; every elliptic curve and endomorphism is defined over it, the quadratic field of type (N), the CM field and the quadratic subfield of the endomorphism field are Q(sqrt(-3)), and the endomorphism field has Galois group C2 or D6. Type (N): a curve over Q(sqrt(-3)) with full 3-torsion and the exact sequence of the [2,2,14] proof; CM: reduction at an inert prime p ≡ 5, 7 (mod 12) shows that 72 does not divide the torsion order; D6: Frobenius of order 3 at p ≡ 3 (mod 4); C2: complex conjugation gives real multiplication, a Tate-curve valuation lemma gives potentially good reduction at 3, and an element of the inertia group at 3 squares to -1 on every Tate module, so it fixes at most four points of 2-power order; Magma checks in qsimple_612_checks.log",
+      "url": "proofs/qsimple-612-obstruction.html",
+      "used_for": "impossibility of [6,12], [3,24] and [2,6,6] in the geometrically split, simple-over-ℚ class, at every geometric splitting degree, and of every group with 3-rank 2 and 2-primary part of order at least 8 in that class, including groups outside the census such as [6,24], [12,12] and [2,6,12]; requires a principal polarization"
     },
     "Najman2010": {
       "short": "Najman 2010",

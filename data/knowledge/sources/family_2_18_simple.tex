@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\divi}{\operatorname{div}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newtheorem{theorem}{Theorem}
+\title{An infinite family of geometrically simple genus-two Jacobians\\
+with rational torsion $\Z/2\Z\times\Z/18\Z$}
+\author{}
+\date{16 November 2026}
+\begin{document}
+\maketitle
+
+\noindent
+We construct a rational family containing infinitely many geometrically
+nonisomorphic genus-two curves whose Jacobians are geometrically simple
+and have exact rational torsion $\Z/2\Z\times\Z/18\Z$.
+The family contains the known census curve $\texttt{2.18.a}$.
+
+\begin{theorem}\label{thm}
+For $k\in\Q$, set
+\[
+ s=\frac{k^2+3}{4},\qquad
+ r=\frac{k^2+3}{(k-1)^2},\qquad
+ \lambda=\frac{(s-1)^2}{s^3},
+\]
+and define
+\[
+ R(x)=x^3-(x-1)(x-r)(x-s),\qquad
+ A(x)=\frac{(x-1)^2+\lambda R(x)}2.
+\]
+For every integer $k\equiv0\pmod {85}$, the curve
+\begin{equation}\label{family}
+ C_k:\quad y^2=A(x)^2-\lambda x^3(x-1)^2
+\end{equation}
+is smooth of genus two, its Jacobian is geometrically simple, and
+\[
+ \Jac(C_k)(\Q)_{\mathrm{tors}}
+ \simeq\Z/2\Z\times\Z/18\Z.
+\]
+These curves give infinitely many geometric isomorphism classes.
+\end{theorem}
+
+\section{The rational parameter curve}
+The two desired principal-divisor relations have rows
+\[
+ (3,2;0,0),\qquad(0,3;1,1),
+\]
+where the final two entries record rational Weierstrass classes.
+They are realized by quadratic polynomials $A,B$ satisfying
+\begin{align}
+ f&=A^2-\lambda x^3(x-1)^2,\label{norm1}\\
+ f&=B^2-\lambda(x-1)^3(x-r)(x-s).\label{norm2}
+\end{align}
+Take $A-B=(x-1)^2$ and $A+B=\lambda R(x)$. The condition
+that $r$ and $s$ be Weierstrass points becomes
+\[
+ \lambda r^3=(r-1)^2,\qquad
+ \lambda s^3=(s-1)^2.
+\]
+After setting $\lambda=(s-1)^2/s^3$ and removing $r=s$, the equation is
+\[
+ (s-1)^2r^2+s(1-2s)r+s^2=0.
+\]
+Its discriminant is $s^2(4s-3)$. Thus $k^2=4s-3$ gives precisely
+the rational parametrization used in Theorem~\ref{thm}, with one
+choice of the sign of $k$. This is an explicit genus-zero locus,
+not merely a genus calculation after reduction.
+
+\section{The torsion subgroup}
+Put
+\[
+ B(x)=\frac{\lambda R(x)-(x-1)^2}{2},\qquad
+ f(x)=A(x)^2-\lambda x^3(x-1)^2.
+\]
+The identities \eqref{norm1}--\eqref{norm2} hold identically, and
+$B(r)=B(s)=0$. Let $W$ be the point at infinity and write
+\[
+ P_0=(0,A(0)),\quad P_1=(1,A(1)),\quad
+ W_r=(r,0),\quad W_s=(s,0).
+\]
+The polynomial $R$ has degree two. Consequently $y-A$ and $y-B$
+each have a pole of order five at $W$, and the norm identities give
+\begin{align*}
+ \divi(y-A)&=3P_0+2P_1-5W,\\
+ \divi(y-B)&=3P_1+W_r+W_s-5W.
+\end{align*}
+In the Jacobian put $D_i=[P_i-W]$ and $T_j=[W_j-W]$. Then
+\begin{equation}\label{relations}
+ 3D_0+2D_1=0,\qquad 3D_1+T_r+T_s=0.
+\end{equation}
+The distinct Weierstrass points $W,W_r,W_s$ give independent
+classes $T_r,T_s$ of order two. Moreover,
+\[
+ A(0)=\frac{k^2+k+2}{k^2+3},\qquad A(1)=\frac\lambda2,
+\]
+so $P_1$ is not a Weierstrass point. Hence $2D_1\ne0$: otherwise
+$2P_1\sim2W$ would force $P_1$ to be a branch point of the
+unique degree-two map to $\mathbb P^1$.
+The second relation gives $6D_1=0$, and the first gives
+$9D_0=0$ and $3D_0=-2D_1\ne0$. Thus $D_0$ has order nine.
+It follows that
+\[
+ \langle D_0,T_r,T_s\rangle
+ \simeq\Z/9\Z\times(\Z/2\Z)^2
+ \simeq\Z/2\Z\times\Z/18\Z.
+\]
+All these statements apply to each smooth member under consideration.
+
+\section{Exactness and absolute simplicity}
+For $k\equiv0\pmod {85}$ the denominators of the coefficients are
+units at 5 and 17. The reductions of $f$ are constant on this
+residue class:
+\begin{align*}
+ \overline f_5&=3x^5+2x^3+x^2+4x+1,\\
+ \overline f_{17}&=3x^5+10x^4+16x^3+7x^2+5x+8.
+\end{align*}
+Both are squarefree of degree five, proving smoothness of every
+member in the stated residue class. Direct counts over the prime
+fields and their quadratic extensions give
+\[
+\begin{array}{c|rr|l|r}
+ p&\#C(\F_p)&\#C(\F_{p^2})&\chi_p(X)&\#J(\F_p)\\\hline
+ 5&7&33&X^4+X^3+4X^2+5X+25&36\\
+ 17&19&321&X^4+X^3+16X^2+17X+289&324
+\end{array}
+\]
+Prime-to-$p$ torsion injects under good reduction. The two orders
+therefore bound the rational torsion order by 36, including its
+5-primary and 17-primary parts. The subgroup already exhibited
+has order 36, proving exactness.
+
+For completeness, absolute simplicity can be checked without a
+bound on the extension degree. The polynomial
+\[
+ \chi(X)=X^4+X^3+16X^2+17X+289
+\]
+is irreducible over $\Q$. Its Frobenius-root-ratio polynomial has
+the factorization
+\begin{align*}
+ &\operatorname{Res}_X\bigl(\chi(X),z^4\chi(X/z)\bigr)\\
+ &\qquad=17^4(z-1)^4
+ (289z^4+527z^3+800z^2+527z+289)\\
+ &\hspace{42mm}\cdot(17z^4+18z^3+3z^2+18z+17)^2.
+\end{align*}
+Both displayed quartics are irreducible over $\Q$, primitive over
+$\Z$, and nonmonic; neither is cyclotomic. Therefore no ratio of
+distinct Frobenius roots is a root of unity. If $\pi$ is a root of
+$\chi$, then $\pi^n$ has degree four over $\Q$ for every positive
+integer $n$. The reduction is thus simple over every finite
+extension of $\F_{17}$, hence absolutely simple. A geometric
+isogeny decomposition in characteristic zero would specialize to
+one at this good prime. It follows that every $\Jac(C_k)$ in the
+residue class is geometrically simple.
+
+\section{Infinitely many moduli and a known member}
+There is also a direct argument that the family is not isotrivial.
+On a fixed genus-two curve there are only finitely many choices
+of a Weierstrass point $W$, and for each such $W$ only finitely
+many points $P$ with $18[P-W]=0$. Thus there are only finitely many
+possible marked configurations $(W,P_0,P_1,W_r,W_s)$ of the kind
+above on a fixed geometric curve. The coordinate on its
+hyperelliptic quotient is determined by sending $W,P_0,P_1$ to
+$\infty,0,1$. Consequently the coordinate $r$ can have only
+finitely many values on a fixed geometric isomorphism class.
+But $r=(k^2+3)/(k-1)^2$ is nonconstant and has finite fibers.
+It follows that infinitely many parameters in $85\Z$ give
+infinitely many geometric isomorphism classes.
+
+At $k=0$, a small model is
+\[
+ y^2+(x^2+x)y=x^6+x^5-5x^4-4x^3+x^2-2x+7.
+\]
+It is $\Q$-isomorphic to the existing census curve $\texttt{2.18.a}$,
+whose equation is
+\[
+ y'^2+(x'^2+x')y'=x'^6-x'^5-5x'^4+3x'^3+x'^2+2x'+7,
+\]
+by $x'=-x$, $y'=-x^2-y$. The new assertion is the infinitude of
+geometrically simple examples with exact group $[2,18]$.
+
+\section{Reproducibility}
+The accompanying standalone Magma file
+\texttt{family\_2\_18\_simple\_certificate.m} checks the generic
+relations in $\Jac(C)(\Q(k))$, exact orders and independence of
+the marked classes, the two reductions, the Frobenius calculations,
+the root-ratio factorization, and nonconstant $G_2$-invariants.
+The separate Sage file
+\texttt{family\_2\_18\_independent\_check.py} verifies the polynomial
+identities, counts points directly over $\F_5,\F_{25},\F_{17},\F_{289}$,
+and independently checks the irreducibility and root-ratio test.
+Both programs complete successfully; their logs are supplied.
+\end{document}

@@ -169,7 +169,8 @@ class KnowledgeTests(unittest.TestCase):
         # the groups certified here: [2,2,2,12], [3,12], [19], and the residue-class families of 2026-10-13
         # [13], [15], [16], [17], [24], [25], [26], [2,14], [2,16], [2,2,8], [2,2,14], [2,4,4] (2026-10-14),
         # and [3,6], [2,2,6], [2,2,12] (2026-10-18), [3,9], [4,8], [2,4,8], [28] (2026-10-19)
-        self.assertEqual(len(knowledge._SIMPLE_EXACT), 63)
+        self.assertEqual(len(knowledge._SIMPLE_EXACT), 64)
+        self.assertEqual(knowledge.infinite_record("simple", "2.18")["grade"], "exact")   # rational family of 2026-11-16
         self.assertEqual(knowledge.infinite_record("simple", "40")["grade"], "exact")   # relation-lattice family of 2026-11-14
         self.assertEqual(knowledge.infinite_record("simple", "6.6")["grade"], "exact")   # BFT family of 2026-11-14
         self.assertEqual(knowledge.infinite_record("simple", "2.2.16")["grade"], "exact")   # family of 2026-11-14

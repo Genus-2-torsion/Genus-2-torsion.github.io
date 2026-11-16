@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple [2,18] infinitude — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="An explicit rational family of genus 2 curves with geometrically simple Jacobians and exact rational torsion Z/2Z × Z/18Z, with a complete proof and independent Magma and Sage certificates.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .math.display { display: block; overflow-x: auto; max-width: 100%; }
+    .proof code { overflow-wrap: anywhere; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        tags: 'ams',
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}',
+          tors: '\\mathrm{tors}', Jac: '\\operatorname{Jac}', im: '\\operatorname{im}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../group.html?g=2.18">[2,18]</a><span class="sep">›</span>simple infinitude proof</div>
+  <h2>Infinitely many geometrically simple genus-2 Jacobians with rational torsion \(\Z/2\Z\times\Z/18\Z\)</h2>
+  <p class="src">16 November 2026 · <span class="inf-badge exact">∞</span> exact torsion</p>
+  <ul class="downloads">
+    <li>Complete proof: <a href="../data/knowledge/sources/family_2_18_simple.pdf">PDF</a> · <a href="../data/knowledge/sources/family_2_18_simple.tex">LaTeX source</a></li>
+    <li><a href="../pipeline/magma/family_2_18_simple_certificate.m">Standalone Magma certificate</a> and <a href="../data/knowledge/sources/family_2_18_simple_certificate.log">successful log</a></li>
+    <li><a href="../data/knowledge/sources/family_2_18_independent_check.py">Independent Sage verification</a> and <a href="../data/knowledge/sources/family_2_18_independent_check.log">successful log</a></li>
+  </ul>
+<p>We construct a rational family containing infinitely many
+geometrically nonisomorphic genus-two curves whose Jacobians are
+geometrically simple and have exact rational torsion <span class="math inline">\(\mathbb Z/2\mathbb Z\times\mathbb Z/18\mathbb
+Z\)</span>. The family contains the known census curve <span class="math inline">\(\texttt{2.18.a}\)</span>.</p>
+<div class="theorem" id="thm">
+<p><strong>Theorem 1</strong>. <em>For <span class="math inline">\(k\in\mathbb Q\)</span>, set <span class="math display">\[s=\frac{k^2+3}{4},\qquad
+r=\frac{k^2+3}{(k-1)^2},\qquad
+\lambda=\frac{(s-1)^2}{s^3},\]</span> and define <span class="math display">\[R(x)=x^3-(x-1)(x-r)(x-s),\qquad
+A(x)=\frac{(x-1)^2+\lambda R(x)}2.\]</span> For every integer <span class="math inline">\(k\equiv0\pmod {85}\)</span>, the curve <span class="math display">\[\begin{equation}
+\label{family}
+C_k:\quad y^2=A(x)^2-\lambda x^3(x-1)^2
+\end{equation}\]</span> is smooth of genus two, its Jacobian is
+geometrically simple, and <span class="math display">\[\operatorname{Jac}(C_k)(\mathbb
+Q)_{\mathrm{tors}}
+\simeq\mathbb Z/2\mathbb Z\times\mathbb Z/18\mathbb Z.\]</span> These
+curves give infinitely many geometric isomorphism classes.</em></p>
+</div>
+<section class="level1" id="the-rational-parameter-curve">
+<h3>1. The rational parameter curve</h3>
+<p>The two desired principal-divisor relations have rows <span class="math display">\[(3,2;0,0),\qquad(0,3;1,1),\]</span> where the
+final two entries record rational Weierstrass classes. They are realized
+by quadratic polynomials <span class="math inline">\(A,B\)</span>
+satisfying <span id="norm1"></span><span id="norm2"></span><span class="math display">\[\begin{align}
+f&amp;=A^2-\lambda x^3(x-1)^2,\label{norm1}\\
+f&amp;=B^2-\lambda(x-1)^3(x-r)(x-s).\label{norm2}
+\end{align}\]</span> Take <span class="math inline">\(A-B=(x-1)^2\)</span> and <span class="math inline">\(A+B=\lambda R(x)\)</span>. The condition that
+<span class="math inline">\(r\)</span> and <span class="math inline">\(s\)</span> be Weierstrass points becomes <span class="math display">\[\lambda r^3=(r-1)^2,\qquad
+\lambda s^3=(s-1)^2.\]</span> After setting <span class="math inline">\(\lambda=(s-1)^2/s^3\)</span> and removing <span class="math inline">\(r=s\)</span>, the equation is <span class="math display">\[(s-1)^2r^2+s(1-2s)r+s^2=0.\]</span> Its
+discriminant is <span class="math inline">\(s^2(4s-3)\)</span>. Thus
+<span class="math inline">\(k^2=4s-3\)</span> gives precisely the
+rational parametrization used in Theorem <a data-reference="thm" data-reference-type="ref" href="#thm">1</a>, with one choice of
+the sign of <span class="math inline">\(k\)</span>. This is an explicit
+genus-zero locus, not merely a genus calculation after reduction.</p>
+</section>
+<section class="level1" id="the-torsion-subgroup">
+<h3>2. The torsion subgroup</h3>
+<p>Put <span class="math display">\[B(x)=\frac{\lambda
+R(x)-(x-1)^2}{2},\qquad
+f(x)=A(x)^2-\lambda x^3(x-1)^2.\]</span> The identities <a data-reference="norm1" data-reference-type="eqref" href="#norm1">(2)</a>–<a data-reference="norm2" data-reference-type="eqref" href="#norm2">(3)</a> hold identically, and <span class="math inline">\(B(r)=B(s)=0\)</span>. Let <span class="math inline">\(W\)</span> be the point at infinity and write
+<span class="math display">\[P_0=(0,A(0)),\quad P_1=(1,A(1)),\quad
+W_r=(r,0),\quad W_s=(s,0).\]</span> The polynomial <span class="math inline">\(R\)</span> has degree two. Consequently <span class="math inline">\(y-A\)</span> and <span class="math inline">\(y-B\)</span> each have a pole of order five at
+<span class="math inline">\(W\)</span>, and the norm identities give
+<span class="math display">\[\begin{align*}
+\operatorname{div}(y-A)&amp;=3P_0+2P_1-5W,\\
+\operatorname{div}(y-B)&amp;=3P_1+W_r+W_s-5W.
+\end{align*}\]</span> In the Jacobian put <span class="math inline">\(D_i=[P_i-W]\)</span> and <span class="math inline">\(T_j=[W_j-W]\)</span>. Then <span class="math display">\[\begin{equation}
+\label{relations}
+3D_0+2D_1=0,\qquad 3D_1+T_r+T_s=0.
+\end{equation}\]</span> The distinct Weierstrass points <span class="math inline">\(W,W_r,W_s\)</span> give independent classes <span class="math inline">\(T_r,T_s\)</span> of order two. Moreover, <span class="math display">\[A(0)=\frac{k^2+k+2}{k^2+3},\qquad
+A(1)=\frac\lambda2,\]</span> so <span class="math inline">\(P_1\)</span>
+is not a Weierstrass point. Hence <span class="math inline">\(2D_1\ne0\)</span>: otherwise <span class="math inline">\(2P_1\sim2W\)</span> would force <span class="math inline">\(P_1\)</span> to be a branch point of the unique
+degree-two map to <span class="math inline">\(\mathbb P^1\)</span>. The
+second relation gives <span class="math inline">\(6D_1=0\)</span>, and
+the first gives <span class="math inline">\(9D_0=0\)</span> and <span class="math inline">\(3D_0=-2D_1\ne0\)</span>. Thus <span class="math inline">\(D_0\)</span> has order nine. It follows that <span class="math display">\[\langle D_0,T_r,T_s\rangle
+\simeq\mathbb Z/9\mathbb Z\times(\mathbb Z/2\mathbb Z)^2
+\simeq\mathbb Z/2\mathbb Z\times\mathbb Z/18\mathbb Z.\]</span> All
+these statements apply to each smooth member under consideration.</p>
+</section>
+<section class="level1" id="exactness-and-absolute-simplicity">
+<h3>3. Exactness and absolute simplicity</h3>
+<p>For <span class="math inline">\(k\equiv0\pmod {85}\)</span> the
+denominators of the coefficients are units at 5 and 17. The reductions
+of <span class="math inline">\(f\)</span> are constant on this residue
+class: <span class="math display">\[\begin{align*}
+\overline f_5&amp;=3x^5+2x^3+x^2+4x+1,\\
+\overline f_{17}&amp;=3x^5+10x^4+16x^3+7x^2+5x+8.
+\end{align*}\]</span> Both are squarefree of degree five, proving
+smoothness of every member in the stated residue class. Direct counts
+over the prime fields and their quadratic extensions give <span class="math display">\[\begin{array}{c|rr|l|r}
+p&amp;\#C(\mathbb F_p)&amp;\#C(\mathbb
+F_{p^2})&amp;\chi_p(X)&amp;\#J(\mathbb F_p)\\\hline
+5&amp;7&amp;33&amp;X^4+X^3+4X^2+5X+25&amp;36\\
+17&amp;19&amp;321&amp;X^4+X^3+16X^2+17X+289&amp;324
+\end{array}\]</span> Prime-to-<span class="math inline">\(p\)</span>
+torsion injects under good reduction. The two orders therefore bound the
+rational torsion order by 36, including its 5-primary and 17-primary
+parts. The subgroup already exhibited has order 36, proving
+exactness.</p>
+<p>For completeness, absolute simplicity can be checked without a bound
+on the extension degree. The polynomial <span class="math display">\[\chi(X)=X^4+X^3+16X^2+17X+289\]</span> is
+irreducible over <span class="math inline">\(\mathbb Q\)</span>. Its
+Frobenius-root-ratio polynomial has the factorization <span class="math display">\[\begin{align*}
+&amp;\operatorname{Res}_X\bigl(\chi(X),z^4\chi(X/z)\bigr)\\
+&amp;\qquad=17^4(z-1)^4
+(289z^4+527z^3+800z^2+527z+289)\\
+&amp;\hspace{42mm}\cdot(17z^4+18z^3+3z^2+18z+17)^2.
+\end{align*}\]</span> Both displayed quartics are irreducible over <span class="math inline">\(\mathbb Q\)</span>, primitive over <span class="math inline">\(\mathbb Z\)</span>, and nonmonic; neither is
+cyclotomic. Therefore no ratio of distinct Frobenius roots is a root of
+unity. If <span class="math inline">\(\pi\)</span> is a root of <span class="math inline">\(\chi\)</span>, then <span class="math inline">\(\pi^n\)</span> has degree four over <span class="math inline">\(\mathbb Q\)</span> for every positive integer
+<span class="math inline">\(n\)</span>. The reduction is thus simple
+over every finite extension of <span class="math inline">\(\mathbb
+F_{17}\)</span>, hence absolutely simple. A geometric isogeny
+decomposition in characteristic zero would specialize to one at this
+good prime. It follows that every <span class="math inline">\(\operatorname{Jac}(C_k)\)</span> in the residue
+class is geometrically simple.</p>
+</section>
+<section class="level1" id="infinitely-many-moduli-and-a-known-member">
+<h3>4. Infinitely many moduli and a known member</h3>
+<p>There is also a direct argument that the family is not isotrivial. On
+a fixed genus-two curve there are only finitely many choices of a
+Weierstrass point <span class="math inline">\(W\)</span>, and for each
+such <span class="math inline">\(W\)</span> only finitely many points
+<span class="math inline">\(P\)</span> with <span class="math inline">\(18[P-W]=0\)</span>. Thus there are only finitely
+many possible marked configurations <span class="math inline">\((W,P_0,P_1,W_r,W_s)\)</span> of the kind above on
+a fixed geometric curve. The coordinate on its hyperelliptic quotient is
+determined by sending <span class="math inline">\(W,P_0,P_1\)</span> to
+<span class="math inline">\(\infty,0,1\)</span>. Consequently the
+coordinate <span class="math inline">\(r\)</span> can have only finitely
+many values on a fixed geometric isomorphism class. But <span class="math inline">\(r=(k^2+3)/(k-1)^2\)</span> is nonconstant and has
+finite fibers. It follows that infinitely many parameters in <span class="math inline">\(85\mathbb Z\)</span> give infinitely many
+geometric isomorphism classes.</p>
+<p>At <span class="math inline">\(k=0\)</span>, a small model is <span class="math display">\[y^2+(x^2+x)y=x^6+x^5-5x^4-4x^3+x^2-2x+7.\]</span>
+It is <span class="math inline">\(\mathbb Q\)</span>-isomorphic to the
+existing census curve <span class="math inline">\(\texttt{2.18.a}\)</span>, whose equation is <span class="math display">\[y'^2+(x'^2+x')y'=x'^6-x'^5-5x'^4+3x'^3+x'^2+2x'+7,\]</span>
+by <span class="math inline">\(x'=-x\)</span>, <span class="math inline">\(y'=-x^2-y\)</span>. The new assertion is the
+infinitude of geometrically simple examples with exact group <span class="math inline">\([2,18]\)</span>.</p>
+</section>
+<section class="level1" id="reproducibility">
+<h3>5. Reproducibility</h3>
+<p>The accompanying standalone Magma file
+<code>family_2_18_simple_certificate.m</code> checks the generic
+relations in <span class="math inline">\(\operatorname{Jac}(C)(\mathbb
+Q(k))\)</span>, exact orders and independence of the marked classes, the
+two reductions, the Frobenius calculations, the root-ratio
+factorization, and nonconstant <span class="math inline">\(G_2\)</span>-invariants. The separate Sage file
+<code>family_2_18_independent_check.py</code> verifies the polynomial
+identities, counts points directly over <span class="math inline">\(\mathbb F_5,\mathbb F_{25},\mathbb F_{17},\mathbb
+F_{289}\)</span>, and independently checks the irreducibility and
+root-ratio test. Both programs complete successfully; their logs are
+supplied.</p>
+</section>
+
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../submit.html">submit</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="../data/groups.json">all groups (JSON)</a><span class="sep">·</span>
+    <a href="../data/curves.json">all curves (JSON)</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">source &amp; data on GitHub</a>
+  </div>
+  <div>Submissions are verified with Magma on the Mordell workstation of the Department of Mathematics, University of Zagreb, and stored with their verification logs in the GitHub repository. Please cite the original references of the curves you use.</div>
+</footer>
+</body>
+</html>

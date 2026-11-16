@@ -983,3 +983,41 @@ SHA-256 of the publication artifacts:
 | `qsimple_96_validation.log` | `ec47ac83f747dff8048c9dc2c18c605010c4959fd66174649637022c9014bfd5` |
 | `qsimple_96_lmfdb.py` | `3fbba27e552b4a77bfbd82593c2d3f722d78cff15c12aafa1ccca17d6baead15` |
 | `qsimple_96_lmfdb.log` | `ac51cb4ac42d425b51c30ff2ac5f4012e36a0c1dbc0b1e3a6c02c7014aec0b0e` |
+
+
+## Simple [2,18]: exact infinitude (16 November 2026)
+
+The simple [2,18] infinitude grade changes from `open` to `exact`. The new
+rational family has relation rows `(3,2;0,0)` and `(0,3;1,1)`, with two
+independent rational Weierstrass classes. The remaining parameter equation
+has discriminant `s^2(4s-3)` and is parametrized by `s=(k^2+3)/4`.
+For every integer `k ≡ 0 (mod 85)`, the marked group is exactly [2,18],
+the reductions at 5 and 17 have Jacobian orders 36 and 324, and the reduction
+at 17 is absolutely simple. A root-ratio resultant proves absolute simplicity
+for every finite extension, without a bound on its degree. The proof that
+moduli vary uses finiteness of the marked torsion configurations on a fixed
+geometric curve. The member `k=0` is Q-isomorphic to the existing census
+curve `2.18.a`; no new curve or torsion group is added.
+
+The complete proof is published at `proofs/simple-2-18.html`, with PDF and
+LaTeX downloads under `data/knowledge/sources/`. The standalone Magma
+certificate includes a copy of the existing `family_cert_lib.m` helpers,
+checks the marked orders over Q(k), and ends in
+`FAMILY_2_18_SIMPLE_CERTIFIED`. The independent Sage program verifies the
+norm identities, directly counts points over F5, F25, F17 and F289, and
+checks the Frobenius root-ratio factorization; its log ends in
+`SAGE_INDEPENDENT_CHECK_PASSED`. Both publication copies were rerun
+successfully. Independent mathematical reviews of the divisor algebra and
+full proof found no gap. The source key is `Simple2182026`.
+
+SHA-256 of the publication artifacts:
+
+| File | SHA-256 |
+|---|---|
+| `proofs/simple-2-18.html` | `042a8ef8edb568cd27384e7cbe7daa166cace6a014a580418c2b5bbcae3c0a90` |
+| `data/knowledge/sources/family_2_18_simple.tex` | `c5b72c77c8a04e1bc3154a4300bbfe97c57f36e1dd98b14f4e78fe2006a8ef06` |
+| `data/knowledge/sources/family_2_18_simple.pdf` | `e94cd61693ca8212108181a2ca490cd3d198b6c15bbf0dbc67635662ee20bccd` |
+| `pipeline/magma/family_2_18_simple_certificate.m` | `09d7cc78b70516870b3f14e01aa210cbbe087103d2d48a5a537aeeedd521458b` |
+| `data/knowledge/sources/family_2_18_simple_certificate.log` | `069450afc469754009a3dae993a84c2880563044a84268c8760aa61dc140c0ee` |
+| `data/knowledge/sources/family_2_18_independent_check.py` | `fdb3e343b0e69a782c240c210daad0e02dd987b9b9124598b8cab55314de6dbf` |
+| `data/knowledge/sources/family_2_18_independent_check.log` | `f2fd411a1ade363ae727a706719bb70f8ae1353c1ac72f9fac33caa01bece8f0` |

@@ -1,0 +1,5 @@
+[0.0300000 s] minimal model y^2 + (x^2 + x) y = -935*x^6 - 2475*x^5 - 1743*x^4 - 4952*x^3 - 951*x^2 - 2013*x + 1089, discriminant 871031062321400920095129600000000000000
+[0.0300000 s] discriminant factored: 2^28 * 3^14 * 5^14 * 11^6 * 89^4
+[0.0300000 s] MINIMAL_MODEL_DONE
+[4.69000 s] conductor 862596900 = 2^2 * 3^2 * 5^2 * 11^2 * 89^2
+[4.70000 s] CONDUCTOR_DONE

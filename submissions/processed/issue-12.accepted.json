@@ -1,0 +1,29 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "-935*x^6 - 2475*x^5 - 1743*x^4 - 4952*x^3 - 951*x^2 - 2013*x + 1089",
+  "h": "x^2 + x",
+  "group": [
+    55
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x^2 + 3*x + 99/92",
+      "-3175/46*x + 5775/92",
+      2
+    ]
+  ],
+  "submitter": "Andrew V. Sutherland",
+  "affiliation": "MIT",
+  "github": "AndrewVSutherland",
+  "reference": "",
+  "discoverer": "A.V. Sutherland",
+  "year": 2026,
+  "notes": "Found by GPT 6.2 Astra",
+  "date": "2026-11-18",
+  "source": {
+    "kind": "issue",
+    "number": 12,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/12"
+  }
+}

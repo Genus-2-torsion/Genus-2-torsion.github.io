@@ -1,0 +1,8 @@
+[0.000000 s] start
+[0.000000 s] curve: y^2 + (x^2 + x) y = -935*x^6 - 2475*x^5 - 1743*x^4 - 4952*x^3 - 951*x^2 - 2013*x + 1089; working model y^2 = -3740*x^6 - 9900*x^5 - 6971*x^4 - 19806*x^3 - 3803*x^2 - 8052*x + 4356
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 55 (p = [ 7, 13, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 97, 101, 103, 107, 109, 113, 127 ])
+[0.0700001 s] J(Q)_tors = [ 55 ]: the 1 submitted generators are independent torsion points generating a group of order 55 = gcd #J(F_p)
+[0.0800000 s] geometrically simple: strict prime 7, chi = T^4 - T^3 + 13*T^2 - 7*T + 49
+[0.0800000 s] Q-simple: chi irreducible at p = 7
+[0.160000 s] class: simple
+[0.450000 s] VERIFY_DONE

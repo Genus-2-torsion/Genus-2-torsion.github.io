@@ -240,7 +240,7 @@ class KnowledgeTests(unittest.TestCase):
                 self.assertTrue((ROOT / ex["proof_url"]).exists(), ex["proof_url"])
                 for s in ex["sources"]:
                     self.assertIn(s, knowledge.SOURCES, (key, cls, s))
-        mazur = ["11", "13", "17", "19", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26"]
+        mazur = ["11", "13", "17", "19", "22", "23", "26", "29", "31", "33", "34", "39", "55", "2.22", "2.26"]
         self.assertEqual(found["qsplit"], {**{k: "QSplitPrimeObstruction" for k in mazur},
                                            "2.2.14": "QSplitTwoRankObstruction", "2.2.2.10": "QSplitTwoRankObstruction"})
         self.assertEqual(found["gsplit"], {

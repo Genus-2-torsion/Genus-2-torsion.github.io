@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18 08:52 UTC",
+  "generated": "2026-11-18 13:57 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -28,12 +28,12 @@
     "exclusions": "proved impossibility, indexed by class; each entry has a reason, sources and a proof_url; an absent entry makes no impossibility claim",
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
-  "n_groups": 97,
-  "n_curves": 197,
-  "n_certified": 197,
+  "n_groups": 98,
+  "n_curves": 198,
+  "n_certified": 198,
   "n_verified": 0,
   "n_groups_by_class": {
-    "simple": 80,
+    "simple": 81,
     "qsplit": 75,
     "gsplit": 38,
     "undecided": 0
@@ -43,13 +43,13 @@
     "simple": {
       "exact": 64,
       "family": 0,
-      "open": 33,
+      "open": 34,
       "impossible": 0
     },
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 13,
+      "open": 14,
       "impossible": 14
     }
   },
@@ -7084,6 +7084,118 @@
             "HLP2000"
           ],
           "note": "Howe 2015, Theorems 3.1 and 3.2: the Howe–Leprévost–Poonen (2,2)-gluing (HLP 2000, Prop. 4) of the fixed curve F = 42a1: y² = x³ − 31x² + 256x (Q = (32, 96) of order 8) with E_s: y² = x(x² + a_s x + b_s) (P of order 6), Howe's C^s₂₄: d y² = x⁶ + c₄x⁴ + c₂x² + c₀; (x, y) ↦ (x², y) and (x, y) ↦ (1/x², y/x³) map it onto F and E_s, so J is isogenous over ℚ to E_s × F, and the image of (2P, Q) has order 24 over ℚ(s). On Howe's curve D: w² = z³ + 14z² + 196z (9408q1, rank 2), s = −21[(z² + 196)(z² + 56z + 196) + 32(z + 14)(z − 14)w]/(z⁴ − 896z³ − 24696z² − 175616z + 38416), the identity A(B − 32) = ℓ²n² in ℚ(√−7)(D) and HLP Prop. 12 give a rational point of order 16 whose double is the image of (3P, Q), so ℤ/48 ⊂ J(ℚ). For R_k = (1 + 8k)P₂, P₂ = (7, −49), s(R_k) ≡ 3 (mod 5), where J(𝔽₅) = ℤ/48, so J(ℚ)_tors is exactly [48]; the G2-invariants at s = 3 and s = 21/31 differ. The members over P₁, P₂, P₃ are Howe's Corollary 3.5 curves; the census curve 48.a is not a member (its Jacobian has no factor 42a1) (family_48_split_certificate.log)",
+          "inherited_from": null
+        }
+      }
+    },
+    {
+      "key": "55",
+      "group": [
+        55
+      ],
+      "bracket": "[55]",
+      "label": "ℤ/55",
+      "order": 55,
+      "rank": 1,
+      "classes": {
+        "simple": [
+          {
+            "id": "55.a",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "1089",
+              "-2013",
+              "-951",
+              "-4952",
+              "-1743",
+              "-2475",
+              "-935"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-935*x^6 - 2475*x^5 - 1743*x^4 - 4952*x^3 - 951*x^2 - 2013*x + 1089",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = -935*x^6 - 2475*x^5 - 1743*x^4 - 4952*x^3 - 951*x^2 - 2013*x + 1089"
+            },
+            "conductor": "862596900",
+            "conductor_sort": 862596900,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 43,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B1089%2C-2013%2C-951%2C-4952%2C-1743%2C-2475%2C-935%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "A.V. Sutherland",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "",
+            "new_group": true,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 7 is strict (χ = T^4 - T^3 + 13*T^2 - 7*T + 49)",
+            "verified": "2026-11-18 13:57:06 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "issue"
+          }
+        ],
+        "qsplit": [],
+        "gsplit": [],
+        "undecided": []
+      },
+      "first_dated": {
+        "simple": 0,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "known": {
+        "simple": true,
+        "qsplit": false,
+        "gsplit": false,
+        "undecided": false
+      },
+      "exclusions": {
+        "qsplit": {
+          "reason": "A Jacobian split over ℚ has no rational torsion of prime order greater than 7, by Mazur's theorem applied to an elliptic subvariety and its elliptic quotient.",
+          "sources": [
+            "QSplitPrimeObstruction",
+            "Mazur1977"
+          ],
+          "proof_url": "proofs/qsplit-prime-obstruction.html"
+        }
+      },
+      "n_curves": 1,
+      "infinite": {
+        "simple": {
+          "grade": "open",
+          "sources": [],
+          "note": "",
+          "inherited_from": null
+        },
+        "split": {
+          "grade": "open",
+          "sources": [],
+          "note": "",
           "inherited_from": null
         }
       }

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geometric splitting and rational [3,15] — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="Any genus-2 Jacobian over ℚ whose rational torsion contains [3,3ℓ] for a prime ℓ ≥ 5 is geometrically simple. The first excluded geometrically split case is [3,15].">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}', sd: '\\mathbin{\\rtimes}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', Res: '\\operatorname{Res}',
+          Norm: '\\operatorname{N}', Ad: '\\operatorname{Ad}',
+          tr: '\\operatorname{tr}', Tr: '\\operatorname{Tr}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../exclusions.html#geometric-3-15">exclusions beyond the census</a><span class="sep">›</span>[3,15]</div>
+  <h2>Prime divisors of rational torsion on geometrically split abelian surfaces with rational (ℤ/3)²</h2>
+  <p class="src">18 November 2026</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be an abelian surface admitting a polarization over \(\Q\) of degree prime to \(3\). Suppose that \((\Z/3\Z)^2\subset A(\Q)\). If \(A\) is geometrically split, every prime dividing \(\#A(\Q)_{\mathrm{tors}}\) is \(2\) or \(3\).</p>
+    <p>In particular, if \(C/\Q\) is a genus-two curve and \(\mathrm{Jac}(C)(\Q)\) contains \(\Z/3\Z\times\Z/(3\ell)\Z\) for a prime \(\ell\ge5\), then \(\mathrm{Jac}(C)\) is geometrically simple. The first case is \([3,15]\).</p>
+  </div>
+  <p><a href="../data/knowledge/sources/geometric_315_obstruction.pdf">Download the PDF</a> · <a href="../data/knowledge/sources/geometric_315_obstruction.tex">LaTeX source</a></p>
+  <h3>Proof</h3>
+  <p>Write \(W\) for the rational plane of \(3\)-torsion, and suppose \(P\in A(\Q)\) has prime order \(\ell\ge5\).</p>
+  <p>If \(A\) contains an elliptic subvariety \(E/\Q\), let \(F=A/E\). The Weil pairing bounds the rational \(3\)-rank of each of \(E\) and \(F\) by one. The kernel and the image of \(W\to F(\Q)\) therefore both have dimension one. Either \(P\) belongs to \(E(\Q)\) or its image in \(F(\Q)\) has order \(\ell\). One of the two elliptic curves has a rational point of order \(3\ell\), contrary to Mazur's theorem.</p>
+  <p>Suppose henceforth that \(A\) is simple over \(\Q\) and geometrically split. Put \(K=\Q(\sqrt{-3})\). The structure theorem for a rational plane of \(3\)-torsion (<a href="qsimple-612-obstruction.html#thm-full3">Theorem 1(d)</a>) leaves three geometric possibilities: two nonisogenous conjugate elliptic factors defined over \(K\), a square up to isogeny of a CM elliptic curve, and a square up to isogeny of a non-CM elliptic curve. In the last case the field \(L\) of definition of all geometric endomorphisms is either \(K\) or an \(S_3\)-extension of \(\Q\).</p>
+  <p>First suppose the factors \(E,E^\sigma\) are nonisogenous, where \(\sigma\) generates \(\Gal(K/\Q)\). The inclusion of \(E^\sigma\) followed by \(A_K\to F=A_K/E\) is a \(K\)-isogeny onto \(F\). For \(q=3,\ell\), project a rational \(q\)-point to \(F\). Either \(E(K)\) contains a point of order \(q\) or \(F(K)\) does, in which case \(F^\sigma(K)\) does too. Since \(F^\sigma\) is \(K\)-isogenous to \(E\), the \(K\)-isogeny class of \(E\) supports both orders.</p>
+  <p>Such an elliptic isogeny class contains a curve supporting both orders (<a href="qsimple-45-obstruction.html#lemma-coprime">the coprime torsion lemma</a>). Indeed, factor an isogeny from a curve with a \(3\)-point to one with an \(\ell\)-point by its \(\ell\)-primary kernel first. The first isogeny carries the \(3\)-point to the intermediate curve. The dual of the second isogeny carries the \(\ell\)-point back to it. Their sum has order \(3\ell\). This contradicts the torsion classification over \(K\) (<a href="https://doi.org/10.1016/j.jnt.2009.12.008">Najman, Theorem 2(ii)</a>).</p>
+  <p>If \(A\) is geometrically a CM square up to isogeny, it has potentially good reduction at \(2\). It acquires good reduction over a finite extension of \(\Q_2\) with residue field \(\F_2\) (<a href="qsimple-45-obstruction.html#inputs">the cyclic-45 proof, input (I2)(c)</a>). Indeed, divide the local Galois group by its inertia kernel on a prime-to-\(2\) Tate module. The resulting extension of \(\widehat{\Z}\) by a finite group splits by lifting Frobenius. The image of the section has finite index, maps onto the residue Galois group, and meets the inertia image trivially. Néron–Ogg–Shafarevich gives the assertion over the corresponding field. The prime-to-\(2\) subgroup \(\langle W,P\rangle\) of order \(9\ell\) then injects into the special fiber over \(\F_2\). Its order exceeds the Weil bound \((1+\sqrt{2})^4&lt;34\).</p>
+  <p>Finally consider a non-CM square. If \(L=K\), an elliptic subvariety \(E\subset A_K\) and \(A_K/E\) belong to the same \(K\)-isogeny class (<a href="qsimple-45-obstruction.html#inputs">the cyclic-45 proof, input (I5)</a>). The projection argument again gives orders \(3\) and \(\ell\) in this class, which was just ruled out.</p>
+  <p>If \(\Gal(L/\Q)=S_3\), write its action on \(\mathrm{End}^0(A_{\overline{\Q}})=M_2(\Q)\) by projective matrices. An order-three rotation \(r\) has a trace-one representative \(R\) with \(R^2-R+1=0\). A reflection conjugates \(R\) to \(R^{-1}=1-R\): this holds projectively, and equality of traces determines the scalar. Thus \(\Z_\ell[R]\) is a stable quadratic étale order. If \(-3\) is a nonsquare modulo \(\ell\), this is the unramified quadratic integer ring and the unit \(R\) has nonscalar residue. The rational point \(P\) now gives \(\Q(\zeta_\ell)\subseteq L\) by <a href="qsimple-45-obstruction.html#inputs">input (I6)(a) of the cyclic-45 proof</a>. If \(-3\) is a square modulo \(\ell\), the two integral eigenvalues \(\lambda_1,\lambda_2\) of \(R\) differ by a unit. Their projectors \(e_1,e_2\) split the order. Reflections exchange the two projectors and the stabilizer of either is the rotation subgroup. On \(e_1 M_2(\Q_\ell)e_2\) the rotation acts by \(\lambda_1/\lambda_2\), a primitive cube root whose reduction still has order three. Thus <a href="qsimple-45-obstruction.html#inputs">input (I6)(b) of the same proof</a> gives the same containment. The residual criteria used here apply also when \(\ell\) divides the polarization degree. Indeed the rational polarization identifies \(V_\ell(A)\) with \(V_\ell(A)^\vee(1)\), so the two integral reductions have isomorphic semisimplifications. A rational \(\ell\)-point therefore supplies both the trivial and cyclotomic composition factors used in the criteria. In either case \(S_3\) would have a cyclic quotient of order \(\ell-1\ge4\), whereas its abelianization has order two.</p>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/geometric-3-15-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

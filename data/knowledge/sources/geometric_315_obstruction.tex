@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem*{theorem}{Theorem}
+\newcommand{\Q}{\mathbf Q}
+\newcommand{\Z}{\mathbf Z}
+\newcommand{\F}{\mathbf F}
+\newcommand{\Gal}{\operatorname{Gal}}
+\title{Prime divisors of torsion on geometrically split abelian surfaces with two rational points of order three}
+\author{Genus-two torsion census\quad|\quad Research note}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+\begin{theorem}
+Let $A/\Q$ be an abelian surface admitting a polarization over $\Q$ of degree prime to $3$. Suppose that $(\Z/3\Z)^2\subset A(\Q)$. If $A$ is geometrically split, every prime dividing $\#A(\Q)_{\mathrm{tors}}$ is $2$ or $3$.
+\end{theorem}
+In particular, if $C/\Q$ is a genus-two curve and $\mathrm{Jac}(C)(\Q)$ contains $\Z/3\Z\times\Z/(3\ell)\Z$ for a prime $\ell\ge5$, then $\mathrm{Jac}(C)$ is geometrically simple. The first case is $[3,15]$.
+
+\begin{proof}
+Write $W$ for the rational plane of $3$-torsion, and suppose $P\in A(\Q)$ has prime order $\ell\ge5$.
+
+If $A$ contains an elliptic subvariety $E/\Q$, let $F=A/E$. The Weil pairing bounds the rational $3$-rank of each of $E$ and $F$ by one. The kernel and the image of $W\to F(\Q)$ therefore both have dimension one. Either $P$ belongs to $E(\Q)$ or its image in $F(\Q)$ has order $\ell$. One of the two elliptic curves has a rational point of order $3\ell$, contrary to Mazur's theorem.
+
+Suppose henceforth that $A$ is simple over $\Q$ and geometrically split. Put $K=\Q(\sqrt{-3})$. The structure theorem for a rational plane of $3$-torsion \cite[Theorem 1(d)]{T3} leaves three geometric possibilities: two nonisogenous conjugate elliptic factors defined over $K$, a square up to isogeny of a CM elliptic curve, and a square up to isogeny of a non-CM elliptic curve. In the last case the field $L$ of definition of all geometric endomorphisms is either $K$ or an $S_3$-extension of $\Q$.
+
+First suppose the factors $E,E^\sigma$ are nonisogenous, where $\sigma$ generates $\Gal(K/\Q)$. The inclusion of $E^\sigma$ followed by $A_K\to F=A_K/E$ is a $K$-isogeny onto $F$. For $q=3,\ell$, project a rational $q$-point to $F$. Either $E(K)$ contains a point of order $q$ or $F(K)$ does, in which case $F^\sigma(K)$ does too. Since $F^\sigma$ is $K$-isogenous to $E$, the $K$-isogeny class of $E$ supports both orders.
+
+Such an elliptic isogeny class contains a single curve supporting both orders \cite[Lemma 1]{T45}. Indeed, factor an isogeny from a curve with a $3$-point to one with an $\ell$-point by its $\ell$-primary kernel first. The first isogeny carries the $3$-point to the intermediate curve. The dual of the second isogeny carries the $\ell$-point back to it. Their sum has order $3\ell$. This contradicts the torsion classification over $K$ \cite[Theorem 2(ii)]{Najman}.
+
+If $A$ is geometrically a CM square up to isogeny, it has potentially good reduction at $2$. It acquires good reduction over a finite extension of $\Q_2$ with residue field $\F_2$ \cite[input (I2)(c)]{T45}. Indeed, divide the local Galois group by its inertia kernel on a prime-to-$2$ Tate module. The resulting extension of $\widehat{\Z}$ by a finite group splits by lifting Frobenius. The image of the section has finite index, maps onto the residue Galois group, and meets the inertia image trivially. N\'eron--Ogg--Shafarevich gives the assertion over the corresponding field. The prime-to-$2$ subgroup $\langle W,P\rangle$ of order $9\ell$ then injects into the special fiber over $\F_2$. Its order exceeds the Weil bound $(1+\sqrt{2})^4<34$.
+
+Finally consider a non-CM square. If $L=K$, an elliptic subvariety $E\subset A_K$ and $A_K/E$ belong to the same $K$-isogeny class \cite[input (I5)]{T45}. The projection argument again gives orders $3$ and $\ell$ in this class, which was just ruled out.
+
+If $\Gal(L/\Q)=S_3$, write its action on $\mathrm{End}^0(A_{\overline{\Q}})=M_2(\Q)$ by projective matrices. An order-three rotation $r$ has a trace-one representative $R$ with $R^2-R+1=0$. A reflection conjugates $R$ to $R^{-1}=1-R$: this holds projectively, and equality of traces determines the scalar. Thus $\Z_\ell[R]$ is a stable quadratic \'etale order. If $-3$ is a nonsquare modulo $\ell$, this is the unramified quadratic integer ring and the unit $R$ has nonscalar residue. The rational point $P$ now gives $\Q(\zeta_\ell)\subseteq L$ by \cite[input (I6)(a)]{T45}. If $-3$ is a square modulo $\ell$, the two integral eigenvalues $\lambda_1,\lambda_2$ of $R$ differ by a unit. Their projectors $e_1,e_2$ split the order. Reflections exchange the two projectors and the stabilizer of either is the rotation subgroup. On $e_1 M_2(\Q_\ell)e_2$ the rotation acts by $\lambda_1/\lambda_2$, a primitive cube root whose reduction still has order three. Thus \cite[input (I6)(b)]{T45} gives the same containment. The residual criteria used here apply also when $\ell$ divides the polarization degree. Indeed the rational polarization identifies $V_\ell(A)$ with $V_\ell(A)^\vee(1)$, so the two integral reductions have isomorphic semisimplifications. A rational $\ell$-point therefore supplies both the trivial and cyclotomic composition factors used in the criteria. In either case $S_3$ would have a cyclic quotient of order $\ell-1\ge4$, whereas its abelianization has order two.
+\end{proof}
+\begin{thebibliography}{9}
+\bibitem{T3} Genus-two torsion census, \href{https://genus-2-torsion.github.io/proofs/qsimple-612-obstruction.html}{census proof for $[6,12]$}, Theorem 1(d). Its hypothesis on the polarization is degree prime to $3$.
+\bibitem{T45} Genus-two torsion census, \href{https://genus-2-torsion.github.io/proofs/qsimple-45-obstruction.html}{census proof for cyclic $45$}, Lemma 1 and inputs (I2), (I5), (I6). The residual criteria in (I6) require a rational point of prime order.
+\bibitem{Najman} F.~Najman, \href{https://doi.org/10.1016/j.jnt.2009.12.008}{Complete classification of torsion of elliptic curves over quadratic cyclotomic fields}, J. Number Theory \textbf{130} (2010), 1964--1968.
+\end{thebibliography}
+\end{document}

@@ -8,6 +8,7 @@
                      (from pipeline/knowledge.py), and counts;
   data/curves.json   every accepted curve (the certificates in data/curves/, verbatim);
   data/sources.json  the bibliography.
+  data/discoveries.json and .csv  discoveries since the paper's tables.
 
 Usage:  python3 pipeline/build.py [--check]     (--check: fail if the outputs would change)
 """
@@ -23,6 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import knowledge  # noqa: E402
+from discoveries import build_discoveries, discoveries_csv  # noqa: E402
 from common import (CLASSES, CURVES_DIR, DATA, REJECTED_DIR, UNDECIDED, group_bracket, group_label,  # noqa: E402
                     group_order, group_sort_key, key_to_group, poly_to_string, read_json, write_json)
 
@@ -171,16 +173,23 @@ def main():
     args = ap.parse_args()
     groups_out, curves_out, sources_out = build()
     targets = [(DATA / "groups.json", groups_out), (DATA / "curves.json", curves_out), (DATA / "sources.json", sources_out)]
+    timeline = build_discoveries(curves_out["curves"])
+    targets.append((DATA / "discoveries.json", timeline))
+    csv_path = DATA / "discoveries.csv"
+    csv_text = discoveries_csv(timeline)
     if args.check:
         changed = [str(p) for p, o in targets if not p.exists() or stable(read_json(p)) != stable(o)]
+        if not csv_path.exists() or csv_path.read_text(encoding="utf-8") != csv_text:
+            changed.append(str(csv_path))
         if changed:
             sys.exit("out of date: " + ", ".join(changed))
         print("data files up to date")
         return
     for p, o in targets:
         write_json(p, o)
+    csv_path.write_text(csv_text, encoding="utf-8")
     print(f"wrote data/groups.json ({groups_out['n_groups']} groups), data/curves.json ({groups_out['n_curves']} curves: "
-          f"{groups_out['n_certified']} certified, {groups_out['n_verified']} verified), data/sources.json")
+          f"{groups_out['n_certified']} certified, {groups_out['n_verified']} verified), data/sources.json, and the discovery timeline")
 
 
 if __name__ == "__main__":

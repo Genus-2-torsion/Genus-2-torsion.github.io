@@ -22,6 +22,8 @@ taken from the machine-readable tables of its certification repository
   the generated `data/groups.json` / `data/curves.json` / `data/sources.json` the site reads;
 * the verification pipeline in `pipeline/` (Python + Magma), which runs on the Mordell workstation.
 
+The [discovery timeline](https://genus-2-torsion.github.io/discoveries.html) compares the census with the two paper tables and credits the researchers and AI models where documented. It is also available as [CSV](data/discoveries.csv) and [JSON](data/discoveries.json).
+
 ## Submitting a curve
 
 Run `pipeline/magma/prepare_submission.m` with your own Magma to get the submission JSON (curve,

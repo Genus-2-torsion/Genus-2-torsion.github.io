@@ -135,6 +135,16 @@ Facts about infinitely many realisations live in `knowledge.py` (`_SIMPLE_EXACT`
 the source tables go to `data/knowledge/sources/` with a line in `PROVENANCE.md`.  After editing, run
 `build.py` and the tests.
 
+## Discovery timeline
+
+`build.py` generates `data/discoveries.json` and `data/discoveries.csv`. The first verified curve of
+each group absent from both paper tables enters automatically. Add researcher and model credits
+to `data/knowledge/discovery_credits.json` under the curve ID, using the recorded model name.
+The same file selects new constructions in a previously unrealised class of a group from the
+paper. Set `"class_first": true` for those entries and add `source_url` when there is a
+public record outside the usual GitHub submission issue. Leave missing model credits blank.
+Dates come from the census submission record or, if absent, the verification date.
+
 ## Seed import
 
 The 150 curves of the paper's tables were imported with `import_paper.py` and verified with

@@ -1,5 +1,5 @@
-/* genus-2-torsion: static front end.  Reads data/groups.json, data/curves.json and data/sources.json
-   (built by pipeline/build.py on Mordell) and renders the census.  No framework, no build step. */
+/* genus-2-torsion: static front end. Reads the census and discovery data built
+   by pipeline/build.py on Mordell. No framework, no front-end build step. */
 (function () {
   "use strict";
 
@@ -90,7 +90,7 @@
 
   // ---------------------------------------------------------------- header / footer
   function chrome() {
-    const nav = [["index.html", "groups", "index"], ["exclusions.html", "exclusions", "exclusions"],
+    const nav = [["index.html", "groups", "index"], ["discoveries.html", "discoveries", "discoveries"], ["exclusions.html", "exclusions", "exclusions"],
                  ["submit.html", "submit a curve", "submit"],
                  ["about.html", "about & sources", "about"], [REPO, "github", ""]];
     const header = el("header", { class: "site" },
@@ -464,6 +464,26 @@
     return s;
   }
 
+  // ---------------------------------------------------------------- discovery timeline
+  async function renderDiscoveries() {
+    const data = await load("discoveries");
+    $("#discovery-counts").textContent = `The paper lists ${data.paper_groups} distinct groups across both tables. The census now has ${data.census_groups}.`;
+    for (const entry of data.discoveries) {
+      const body = $(entry.scope === "New group" ? "#new-groups" : "#new-classes");
+      const date = el("time", { datetime: entry.date }, entry.date);
+      const curve = el("a", { href: entry.curve_url }, entry.curve_id);
+      const record = entry.source_url && el("a", { href: entry.source_url },
+        entry.source_url.includes("/issues/") ? "submission" : "record");
+      body.append(el("tr", null,
+        el("td", null, date, entry.date_basis === "Verified" ? " (verified)" : null),
+        el("th", { scope: "row" }, el("span", { class: "m" }, entry.group)),
+        el("td", null, entry.jacobian_class),
+        el("td", null, entry.person || "Unrecorded"),
+        el("td", null, entry.model || "Unrecorded"),
+        el("td", null, curve, record ? [" · ", record] : null)));
+    }
+  }
+
   // ---------------------------------------------------------------- about page: sources
   async function renderAbout() {
     const srcData = await load("sources");
@@ -480,7 +500,7 @@
   chrome();
   const sl = $("#submit-any");
   if (sl) sl.href = prefillIssue();
-  const run = { index: renderIndex, group: renderGroup, curve: renderCurve, about: renderAbout }[pageName];
+  const run = { index: renderIndex, group: renderGroup, curve: renderCurve, discoveries: renderDiscoveries, about: renderAbout }[pageName];
   if (run) run().catch((e) => {
     const main = $("main");
     main.append(el("p", { class: "error" }, "Could not load the census data: " + e.message));

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-16 22:55 UTC",
+  "generated": "2026-11-18 07:48 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -28,12 +28,12 @@
     "exclusions": "proved impossibility, indexed by class; each entry has a reason, sources and a proof_url; an absent entry makes no impossibility claim",
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
-  "n_groups": 96,
-  "n_curves": 192,
-  "n_certified": 192,
+  "n_groups": 97,
+  "n_curves": 194,
+  "n_certified": 194,
   "n_verified": 0,
   "n_groups_by_class": {
-    "simple": 78,
+    "simple": 80,
     "qsplit": 75,
     "gsplit": 38,
     "undecided": 0
@@ -43,13 +43,13 @@
     "simple": {
       "exact": 64,
       "family": 0,
-      "open": 32,
+      "open": 33,
       "impossible": 0
     },
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 12,
+      "open": 13,
       "impossible": 14
     }
   },
@@ -14156,6 +14156,111 @@
       }
     },
     {
+      "key": "2.2.18",
+      "group": [
+        2,
+        2,
+        18
+      ],
+      "bracket": "[2,2,18]",
+      "label": "ℤ/2 ⊕ ℤ/2 ⊕ ℤ/18",
+      "order": 72,
+      "rank": 3,
+      "classes": {
+        "simple": [
+          {
+            "id": "2.2.18.a",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "0",
+              "-189000",
+              "336912",
+              "81775",
+              "588",
+              "399",
+              "49"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "49*x^6 + 399*x^5 + 588*x^4 + 81775*x^3 + 336912*x^2 - 189000*x",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 49*x^6 + 399*x^5 + 588*x^4 + 81775*x^3 + 336912*x^2 - 189000*x"
+            },
+            "conductor": "90667262700",
+            "conductor_sort": 90667262700,
+            "conductor_note": "",
+            "discriminant_digits": 53,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C-189000%2C336912%2C81775%2C588%2C399%2C49%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "A.V. Sutherland",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "",
+            "new_group": true,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 47 is strict (χ = T^4 + 10*T^3 + 46*T^2 + 470*T + 2209)",
+            "verified": "2026-11-18 07:47:49 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "issue"
+          }
+        ],
+        "qsplit": [],
+        "gsplit": [],
+        "undecided": []
+      },
+      "first_dated": {
+        "simple": 0,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "first_source": {
+        "simple": null,
+        "qsplit": null,
+        "gsplit": null,
+        "undecided": null
+      },
+      "known": {
+        "simple": true,
+        "qsplit": false,
+        "gsplit": false,
+        "undecided": false
+      },
+      "exclusions": {},
+      "n_curves": 1,
+      "infinite": {
+        "simple": {
+          "grade": "open",
+          "sources": [],
+          "note": "",
+          "inherited_from": null
+        },
+        "split": {
+          "grade": "open",
+          "sources": [],
+          "note": "",
+          "inherited_from": null
+        }
+      }
+    },
+    {
       "key": "2.2.20",
       "group": [
         2,
@@ -14792,7 +14897,60 @@
       "order": 72,
       "rank": 3,
       "classes": {
-        "simple": [],
+        "simple": [
+          {
+            "id": "2.6.6.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "-2181232729671578775",
+              "-2177314308579710115",
+              "3938006653032285",
+              "19568569786166",
+              "-17021814187",
+              "-30410807",
+              "25921"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "25921*x^6 - 30410807*x^5 - 17021814187*x^4 + 19568569786166*x^3 + 3938006653032285*x^2 - 2177314308579710115*x - 2181232729671578775",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 25921*x^6 - 30410807*x^5 - 17021814187*x^4 + 19568569786166*x^3 + 3938006653032285*x^2 - 2177314308579710115*x - 2181232729671578775"
+            },
+            "conductor": "386273573820088137103497181686900",
+            "conductor_sort": 386273573820088137103497181686900,
+            "conductor_note": "the exponent of 2 in the conductor was computed with Ogg's formula, for which Magma gives no correctness guarantee when v_2(disc) >= 12; odd exponents are rigorous",
+            "discriminant_digits": 136,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-2181232729671578775%2C-2177314308579710115%2C3938006653032285%2C19568569786166%2C-17021814187%2C-30410807%2C25921%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "A.V. Sutherland",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "",
+            "new_group": false,
+            "new_for_class": true,
+            "certificate": "geometrically simple: Frobenius at p = 67 is strict (χ = T^4 - 4*T^3 - 42*T^2 - 268*T + 4489)",
+            "verified": "2026-11-18 07:47:47 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "issue"
+          }
+        ],
         "qsplit": [
           {
             "id": "2.6.6.a",
@@ -14853,7 +15011,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -14865,7 +15023,7 @@
         "undecided": null
       },
       "known": {
-        "simple": false,
+        "simple": true,
         "qsplit": true,
         "gsplit": false,
         "undecided": false
@@ -14888,7 +15046,7 @@
           "proof_url": "proofs/qsimple-612-obstruction.html"
         }
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "open",

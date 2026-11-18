@@ -1,0 +1,41 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "25921*x^6 - 30410807*x^5 - 17021814187*x^4 + 19568569786166*x^3 + 3938006653032285*x^2 - 2177314308579710115*x - 2181232729671578775",
+  "h": "x^2 + x",
+  "group": [
+    2,
+    6,
+    6
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x^2 - 189209/322*x - 80468715/161",
+      "0",
+      2
+    ],
+    [
+      "x^2 - 1010999/11431*x - 1540528320/11431",
+      "-552117880800/5041*x + 21832931673990/5041",
+      2
+    ],
+    [
+      "x^2 - 10488/679*x - 149476210/679",
+      "-626818325525/9409*x - 181572936007400/9409",
+      2
+    ]
+  ],
+  "submitter": "AndrewVSutherland",
+  "affiliation": "",
+  "github": "AndrewVSutherland",
+  "reference": "",
+  "discoverer": "A.V. Sutherland",
+  "year": 2026,
+  "notes": "Found by GPT Astra 6.2",
+  "date": "2026-11-18",
+  "source": {
+    "kind": "issue",
+    "number": 10,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/10"
+  }
+}

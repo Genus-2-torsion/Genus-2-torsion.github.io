@@ -95,7 +95,7 @@
       "group": "[2,2,16]",
       "jacobian_class": "geometrically simple",
       "person": "Andrew V. Sutherland",
-      "model": null,
+      "model": "Claude Fable 5.2",
       "curve_id": "2.2.16.b",
       "curve_url": "https://genus-2-torsion.github.io/curve.html?id=2.2.16.b",
       "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/commit/83e98b1"
@@ -107,7 +107,7 @@
       "group": "[2,24]",
       "jacobian_class": "geometrically simple",
       "person": "Andrew V. Sutherland",
-      "model": null,
+      "model": "Claude Fable 5.2",
       "curve_id": "2.24.b",
       "curve_url": "https://genus-2-torsion.github.io/curve.html?id=2.24.b",
       "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/commit/c2909f9"

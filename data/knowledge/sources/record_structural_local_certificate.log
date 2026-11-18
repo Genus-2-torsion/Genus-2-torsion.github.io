@@ -1,0 +1,14 @@
+ELLIPTIC_DIRECT_DESCENT index=1 a_invariants=[ 0, 2, 0, -3, 0 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=2 a_invariants=[ 0, -2, 0, -3, 0 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=3 a_invariants=[ 0, 20, 0, 64, 0 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=4 a_invariants=[ 0, -44, 0, 576, -2304 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=5 a_invariants=[ 0, 12, 0, 32, 0 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=6 a_invariants=[ -2, 2, 0, 2, 0 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=7 a_invariants=[ 0, -4, 0, 6, -3 ] selmer_order=2 rational_two_torsion_order=2 rank_upper_bound=0
+ELLIPTIC_DIRECT_DESCENT index=8 a_invariants=[ 0, 0, 0, -1, 0 ] selmer_order=4 rational_two_torsion_order=4 rank_upper_bound=0
+EIGHT_ELLIPTIC_DESCENTS_PASSED
+FULL26_J_FORMULA (t^24 - 36*t^22 + 522*t^20 - 3204*t^18 - 729*t^16 + 106488*t^14 - 304020*t^12 - 1262952*t^10 + 4555359*t^8 + 12218796*t^6 + 1410858*t^4 + 55404*t^2 + 729)/(t^18 - 24*t^16 + 204*t^14 - 776*t^12 + 1590*t^10 - 1896*t^8 + 1324*t^6 - 504*t^4 + 81*t^2)
+FULL26_LOCAL_VALUATION_CONTROLS_PASSED count=874
+LOCAL_TWO_ADIC_PROJECTOR_IDENTITIES_PASSED
+STRUCTURAL_LOCAL_CERTIFICATE_DONE
+CERTIFIED structural local checks

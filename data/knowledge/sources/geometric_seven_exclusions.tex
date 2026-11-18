@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,hyperref}
+\title{Seven exclusions for exact rational torsion on geometrically split genus-two Jacobians}
+\author{Genus-two torsion census}
+\date{18 November 2026}
+\begin{document}
+\maketitle
+
+\textbf{Theorem.} Let $J$ be the Jacobian of a genus-two curve over $\mathbf Q$.
+If $J$ is geometrically split, then its exact rational torsion group is different from each of
+\[
+ [4,20],\quad [2,80],\quad [4,40],\quad [2,96],\quad [4,48],\quad [8,24],\quad [2,2,48].
+\]
+Here $C_d=\mathbf Z/d\mathbf Z$ and brackets give invariant factors. The same exclusion holds for every geometrically split abelian surface over $\mathbf Q$ with a principal polarization defined over $\mathbf Q$. The geometric simplicity of a Jacobian realizing one of these groups follows regardless of the degree of a splitting isogeny. Existence in the geometrically simple class is open for each group.
+
+\section*{Surfaces simple over $\mathbf Q$}
+Let $G=J(\mathbf Q)_{\rm tors}$ and write $G_{(2)}$ for its $2$-primary part. For a surface simple over $\mathbf Q$ that splits over $\overline{\mathbf Q}$, a rational point of order $5$ gives $|G_{(2)}|\le4$ by the \href{https://genus-2-torsion.github.io/proofs/qsimple-40-obstruction.html}{rational $5$-torsion theorem}. The first three groups have a point of order $5$ and their $2$-primary orders are $16,32,32$. A rational point of order $3$ gives $|G_{(2)}|\le16$ by the \href{https://genus-2-torsion.github.io/proofs/qsimple-96-obstruction.html}{rational $3$-torsion theorem}. Each of the other four groups has a point of order $3$ and $2$-primary order $64$.
+
+\section*{Surfaces split over $\mathbf Q$}
+Choose an elliptic subvariety $E$ over $\mathbf Q$ and its polarization complement $F$. Dualizing the inclusion and composing with the principal polarization gives a surjection $J\to E^\vee$ with connected kernel $F$. In particular $J/F\simeq E$ and, interchanging the factors, $J/E\simeq F$. The addition map $E\times F\to J$ has kernel the graph of a Galois-equivariant anti-isometry $E[n]\to F[n]$ for some $n\ge1$ (\href{https://msp.org/ant/2017/11-1/ant-v11-n1-p02-p.pdf}{Achter--Howe, Section 5}).
+
+Put $T_E=E(\mathbf Q)_{\rm tors}$ and define $T_F$ similarly. Each embeds in $G$, and $G/T_E$ embeds in $T_F$. Hence $|G|$ divides $|T_E||T_F|$. Each elliptic torsion group has order at most $16$ by \href{https://www.numdam.org/item/PMIHES_1977__47__33_0/}{Mazur's theorem}. If their rational $2$-ranks differ, $n$ is odd because even $n$ would identify their $2$-torsion modules. For odd $n$ the addition map induces an isomorphism on $2$-primary torsion, so $G_{(2)}=(T_E)_{(2)}\times(T_F)_{(2)}$ up to isomorphism.
+
+\paragraph{Order 80.} For $G=[4,20]$, a factor carrying $5$ has torsion $C_5$ or $C_{10}$. In the first case divisibility forces the other factor to have torsion $C_2\times C_8$, which cannot embed in $G$. In the second case its order must be $8$ or $16$. The exponent of $G_{(2)}$ excludes every choice in Mazur's list except $C_2\times C_4$. The two factors then have different $2$-ranks, giving $G_{(2)}=C_2^2\times C_4$, contrary to $G_{(2)}=C_4^2$.
+
+\paragraph{Order 160.} The product $|T_E||T_F|$ is a multiple of $160$ at most $256$, so it equals $160$. Mazur's list forces $C_{10}$ and $C_2\times C_8$. Their $2$-ranks differ, giving $G_{(2)}=C_2^2\times C_8$. The groups $[2,80]$ and $[4,40]$ have $2$-primary parts $C_2\times C_{16}$ and $C_4\times C_8$.
+
+\paragraph{Order 192.} The same divisibility gives $|T_E||T_F|=192$. Up to interchange the possibilities are $T_F=C_2\times C_8$ and $T_E=C_{12}$ or $C_2\times C_6$. For $T_E=C_{12}$ the $2$-ranks differ, and the $2$-primary part is $C_2\times C_4\times C_8$. For $T_E=C_2\times C_6$ and odd $n$ it is $C_2^3\times C_8$. Neither type occurs among the four displayed groups of order $192$. It remains to rule out even $n$ in the latter case.
+
+\section*{Reduction to gluing along the full $2$-torsion}
+For $d\mid n$, let $A_d$ be the quotient of $E\times F$ by the graph of the restricted gluing map on $E[d]$. The projection $\pi_d:A_d\to E$ sending $[P,Q]_d$ to $dP$ has kernel $F$. Multiplication by $n/d$ on the factors induces $\alpha:A_n\to A_d$ satisfying $\pi_d\alpha=\pi_n$. Thus the image of $A_n(\mathbf Q)_{\rm tors}$ in $E(\mathbf Q)$ is contained in the corresponding image for $A_d$. Both restrictions have kernel $T_F$, giving
+\[
+ |A_n(\mathbf Q)_{\rm tors}|\ \mid\ |A_d(\mathbf Q)_{\rm tors}|.
+\]
+When $n$ is even, order $192$ would therefore imply $192\mid |A_2(\mathbf Q)_{\rm tors}|$.
+
+We show that $|A_2(\mathbf Q)_{\rm tors}|\le96$ for the elliptic torsion groups $C_2\times C_6$ and $C_2\times C_8$. Let $W_E,W_F$ be the images of $T_E,T_F$ under their $2$-Kummer maps, with the cohomology groups identified by the gluing map. Both images have order four. The map $A_2\to E\times F$ dual to the gluing has four rational points in its kernel, and a pair of rational points lifts precisely when their Kummer classes agree (\href{https://math.mit.edu/~poonen/papers/large.pdf}{Howe--Leprévost--Poonen, Proposition 12}). A lift of a torsion pair is torsion. Counting fibers gives
+\[
+ |A_2(\mathbf Q)_{\rm tors}|=\frac{|T_E||T_F|}{4}\,|W_E\cap W_F|.
+\]
+It suffices to prove $W_E\ne W_F$ for every identification of the $2$-torsion.
+
+Use the universal models of Howe--Leprévost--Poonen with roots
+\[
+ (0,(t+3)(t-1)^3,(t-3)(t+1)^3),\qquad (0,-16u^4,-(u^2-1)^4)
+\]
+respectively. All parameters here are rational and nonsingular. In the first model write $D_{ij}$ for coordinate $j$ of the Kummer row of the $2$-torsion point with root $e_i$. These are the three nonzero rows of $W_E$. For $i\ne j$, $D_{ij}$ is the square class of $e_i-e_j$, and $D_{ji}=[-1]D_{ij}$. The diagonal entries are represented by
+\[
+ (t^2-1)(t^2-9),\qquad t(t+3)(t-1),\qquad -t(t-3)(t+1).
+\]
+None equals $1$ or $-1$ modulo squares for a nonsingular $t$. The genus-one equations obtained by setting each expression equal to a signed square have rational affine $t$ only in $\{0,1,-1,3,-3\}$.
+
+For the second model put $a=u^2-2u-1$, $b=u^2+2u-1$, and $q=ab$. Its three nonzero Kummer rows are represented by
+\[
+\begin{split}
+ &(-u(u^2-1),-u(u^2+1)a,(u^2-1)(u^2+1)a),\\
+ &(-1,-q,q),\\
+ &(u(u^2-1),u(u^2+1)b,(u^2-1)(u^2+1)b).
+\end{split}
+\]
+An entry has class $[-1]$, and none has class $[1]$. For the latter assertion, the first coordinates and $\pm q$ reduce to the elliptic curves with right sides $u(u^2-1)$ and $\pm(u^4-6u^2+1)$, allowing $u\mapsto -u$. The other coordinates reduce in the same way to the four genus-two curves with right sides
+\[
+ \pm u(u^2+1)(u^2-2u-1),\qquad \pm(u^2-1)(u^2+1)(u^2-2u-1).
+\]
+On these auxiliary curves every affine rational $u$ is $0$ or $\pm1$, all singular parameters of the universal model. The \href{https://genus-2-torsion.github.io/data/knowledge/sources/record_glue2_structure_certificate.m}{Magma structure certificate} verifies these square classes and rational-point computations. The \href{https://genus-2-torsion.github.io/data/knowledge/sources/record_structural_local_certificate.m}{elliptic descent certificate} independently checks the rank bounds. For the elliptic curves, $2$-descent proves rank zero and the finite Mordell--Weil groups give the points. For the four genus-two curves the $2$-Selmer group and rational $2$-torsion each have order four, giving rank zero. The certificates compute all rational points by \texttt{Chabauty0}.
+
+Identifying the elliptic $2$-torsion permutes the three coordinates. If the Kummer images agreed, $[-1]$ would occur in $W_E$. It would have to occur off the diagonal, so the transposed entry would have class $[1]$. This contradicts the second model. Hence $|W_E\cap W_F|\le2$ and $|A_2(\mathbf Q)_{\rm tors}|\le96$. This rules out even $n$ and finishes the proof.
+\end{document}

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exclusions beyond the census — Torsion of genus 2 Jacobians over ℚ</title>
-  <meta name="description" content="Torsion exclusions beyond the genus-2 census: the [3,15] obstruction for all geometrically split Jacobians, six order-256 groups for Jacobians split over Q, the 7-torsion/2-primary bounds, the (ℤ/3)²/2-primary bound, the 3-torsion/2-primary bound, the 5-torsion/2-rank bound, the 5-torsion/2-primary bound and the 45-torsion obstruction for geometrically split Jacobians simple over Q.">
+  <meta name="description" content="Torsion exclusions beyond the genus-2 census: the [3,15] obstruction and seven exclusions at orders 80, 160 and 192 for all geometrically split Jacobians, six order-256 groups for Jacobians split over Q, the 7-torsion/2-primary bounds, the (ℤ/3)²/2-primary bound, the 3-torsion/2-primary bound, the 5-torsion/2-rank bound, the 5-torsion/2-primary bound and the 45-torsion obstruction for geometrically split Jacobians simple over Q.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css?v=6">
 </head>
@@ -26,6 +26,29 @@
   <p><a href="proofs/geometric-3-15-obstruction.html">Read the complete proof</a>, or download the
     <a href="data/knowledge/sources/geometric_315_obstruction.pdf">PDF</a> and
     <a href="data/knowledge/sources/geometric_315_obstruction.tex">LaTeX source</a>.</p>
+  <h3 id="geometric-80-160-192">Seven exclusions at orders 80, 160 and 192 for all geometrically split Jacobians</h3>
+  <p>A genus-2 Jacobian over ℚ with any of the following exact rational torsion groups must
+    be <strong>geometrically simple</strong>. Whether a geometrically simple Jacobian realizes
+    any of these groups remains open.</p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th scope="col">Order</th><th scope="col">Excluded exact rational torsion groups</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">80</th><td><span class="m">[4,20]</span></td></tr>
+        <tr><th scope="row">160</th><td><span class="m">[2,80]</span>, <span class="m">[4,40]</span></td></tr>
+        <tr><th scope="row">192</th><td><span class="m">[2,96]</span>, <span class="m">[4,48]</span>,
+          <span class="m">[8,24]</span>, <span class="m">[2,2,48]</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>For Jacobians split over ℚ, the proof uses the torsion of the two complementary elliptic
+    curves and covers every gluing degree. For Jacobians simple over ℚ that split over ℚ̄,
+    the <a href="proofs/qsimple-40-obstruction.html">5-torsion bound</a> excludes the groups of
+    orders 80 and 160, and the <a href="proofs/qsimple-96-obstruction.html">3-torsion bound</a>
+    excludes the groups of order 192.</p>
+  <p><a href="proofs/geometric-80-160-192-obstruction.html">Read the complete proof and verified computations</a>
+    or download the <a href="data/knowledge/sources/geometric_seven_exclusions.pdf">PDF</a> and
+    <a href="data/knowledge/sources/geometric_seven_exclusions.tex">LaTeX source</a>.</p>
   <h3>Six groups excluded for Jacobians split over ℚ</h3>
   <p>If a principally polarized abelian surface over ℚ is isogenous over ℚ to a product of elliptic
     curves and its rational torsion has order 256, then all of its 2-torsion is rational.
@@ -183,6 +206,14 @@
     <a href="data/knowledge/sources/qsimple_45_obstruction.tex">LaTeX source</a>.
     The <a href="data/knowledge/sources/qsimple_45_checks.m">Magma certificate</a> and its
     <a href="data/knowledge/sources/qsimple_45_checks.log">log</a> are included.</p>
+  <h3 id="other-qsimple-obstructions">Orders 30, 35 and 63 and the rank of rational <i>p</i>-torsion</h3>
+  <p>If an abelian surface over ℚ is <strong>simple over ℚ but geometrically split</strong>,
+    it has no rational point of order <a href="proofs/qsimple-30-obstruction.html">30</a>,
+    <a href="proofs/qsimple-35-obstruction.html">35</a>, or
+    <a href="proofs/qsimple-63-obstruction.html">63</a>. In the same class, for every prime
+    <i>p</i> ≥ 5 the <a href="proofs/qsimple-rank-two-obstruction.html">rational
+    <i>p</i>-torsion has rank at most one</a>. Thus a group containing
+    (ℤ/<i>p</i>ℤ)² is also impossible in this class.</p>
   <p>For class-specific exclusions of groups already represented in the census, see the
     <a href="index.html">group table</a> and the <a href="about.html#impossible-examples">explanation of impossible entries</a>.</p>
 </main>

@@ -1,0 +1,23 @@
+GENUS2_PROOF f=x^5 - 10*x^3 + 9*x selmer_order=16 two_torsion_order=16 torsion=[ 2, 2, 2, 2 ] ALL_POINTS={@ (-3 : 0 : 1), (-1 : 0 : 1), (0 : 0 : 1), (1 : 0 : 1), (3 : 0 : 1), (1 : 0 : 0) @}
+GENUS2_PROOF f=-x^5 + 10*x^3 - 9*x selmer_order=16 two_torsion_order=16 torsion=[ 2, 2, 2, 2 ] ALL_POINTS={@ (-3 : 0 : 1), (-1 : 0 : 1), (0 : 0 : 1), (1 : 0 : 1), (3 : 0 : 1), (1 : 0 : 0) @}
+GENUS2_PROOF f=x^5 - 2*x^4 - 2*x^2 - x selmer_order=4 two_torsion_order=4 torsion=[ 2, 2 ] ALL_POINTS={@ (0 : 0 : 1), (1 : 0 : 0) @}
+GENUS2_PROOF f=-x^6 + 2*x^5 + x^4 + x^2 - 2*x - 1 selmer_order=4 two_torsion_order=4 torsion=[ 2, 2 ] ALL_POINTS={@ (-1 : 0 : 1), (1 : 0 : 1) @}
+GENUS2_PROOF f=-x^5 + 2*x^4 + 2*x^2 + x selmer_order=4 two_torsion_order=4 torsion=[ 2, 10 ] ALL_POINTS={@ (0 : 0 : 1), (1 : 0 : 0), (1 : 2 : 1), (1 : -2 : 1), (-1 : 2 : 1), (-1 : -2 : 1) @}
+GENUS2_PROOF f=x^6 - 2*x^5 - x^4 - x^2 + 2*x + 1 selmer_order=4 two_torsion_order=4 torsion=[ 2, 10 ] ALL_POINTS={@ (-1 : 0 : 1), (1 : 0 : 1), (1 : -1 : 0), (1 : 1 : 0), (0 : 1 : 1), (0 : -1 : 1) @}
+GENUS1_PROOF f=x^3 + 2*x^2 - 3*x rank_bounds=[ 0, 0 ] torsion=[ 2, 4 ] ALL_POINTS={ (-1 : -2 : 1), (3 : 6 : 1), (3 : -6 : 1), (1 : 0 : 0), (0 : 0 : 1), (-1 : 2 : 1), (1 : 0 : 1), (-3 : 0 : 1) }
+GENUS1_PROOF f=x^3 - 2*x^2 - 3*x rank_bounds=[ 0, 0 ] torsion=[ 2, 2 ] ALL_POINTS={ (0 : 0 : 1), (-1 : 0 : 1), (1 : 0 : 0), (3 : 0 : 1) }
+GENUS1_PROOF f=x^4 - 10*x^2 + 9 rank_bounds=[ 0, 0 ] torsion=[ 2, 4 ] ALL_POINTS={ (-3 : 0 : 1), (-1 : 0 : 1), (1 : -1 : 0), (0 : -3 : 1), (3 : 0 : 1), (1 : 1 : 0), (1 : 0 : 1), (0 : 3 : 1) }
+GENUS1_PROOF f=-x^4 + 10*x^2 - 9 rank_bounds=[ 0, 0 ] torsion=[ 2, 2 ] ALL_POINTS={ (-3 : 0 : 1), (-1 : 0 : 1), (3 : 0 : 1), (1 : 0 : 1) }
+GENUS1_PROOF f=x^4 - 6*x^2 + 1 rank_bounds=[ 0, 0 ] torsion=[ 2, 2 ] ALL_POINTS={ (0 : -1 : 1), (1 : -1 : 0), (0 : 1 : 1), (1 : 1 : 0) }
+GENUS1_PROOF f=-x^4 + 6*x^2 - 1 rank_bounds=[ 0, 0 ] torsion=[ 2, 2 ] ALL_POINTS={ (1 : -2 : 1), (-1 : -2 : 1), (1 : 2 : 1), (-1 : 2 : 1) }
+GENUS1_PROOF f=-3*x^4 + 6*x^3 - 4*x^2 + x rank_bounds=[ 0, 0 ] torsion=[ 4 ] ALL_POINTS={ (1 : -1 : 2), (1 : 1 : 2), (0 : 0 : 1), (1 : 0 : 1) }
+GENUS1_PROOF f=x^3 - x rank_bounds=[ 0, 0 ] torsion=[ 2, 2 ] ALL_POINTS={ (0 : 0 : 1), (-1 : 0 : 1), (1 : 0 : 0), (1 : 0 : 1) }
+SYMBOLIC_KUMMER_IDENTITIES_PASSED
+MIXED_192_EXCLUDED: full26 diagonal entries are never +/-1; full28 has one -1 and no +1
+ROW_ROOT_SYNCHRONIZATION_PASSED: all five nonidentity permutations excluded
+GROUP_STRUCTURE_PASSED counts=[ 6, 24, 4 ] full26=[2,2,6,6] mixed_hypothetical_excluded=[2,2,48] full28=[2,2,8,8]
+PARAMETER_RELABELING_IDENTITIES_PASSED
+NORMALIZED_COVER_GENUS block=full26 degree=8 branches=6 genus=5
+NORMALIZED_COVER_GENUS block=full28 degree=8 branches=10 genus=13
+STRUCTURE_CERTIFICATE_DONE
+CERTIFIED gluing structure

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18 07:48 UTC",
+  "generated": "2026-11-18 08:52 UTC",
   "curves": [
     {
       "schema": "genus-2-torsion/curve/1",
@@ -34836,6 +34836,237 @@
     },
     {
       "schema": "genus-2-torsion/curve/1",
+      "id": "6.6.c",
+      "group": [
+        6,
+        6
+      ],
+      "group_key": "6.6",
+      "group_bracket": "[6,6]",
+      "order": 36,
+      "class": "simple",
+      "class_certified": true,
+      "class_text": "geometrically simple",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": false,
+      "accepted_because": "conductor 11337300 < 17506967961600 of the census curve 6.6.a",
+      "curve": {
+        "f": [
+          "0",
+          "1000",
+          "130",
+          "-479",
+          "256",
+          "-8"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "f_str": "-8*x^5 + 256*x^4 - 479*x^3 + 130*x^2 + 1000*x",
+        "h_str": "x^2 + x",
+        "g": [
+          "0",
+          "4000",
+          "521",
+          "-1914",
+          "1025",
+          "-32"
+        ],
+        "g_str": "-32*x^5 + 1025*x^4 - 1914*x^3 + 521*x^2 + 4000*x",
+        "g_scale": "1",
+        "discriminant": "-4882053454626816000000000000",
+        "discriminant_digits": 28,
+        "igusa_clebsch": [
+          "8315976",
+          "78999178614084",
+          "-277733693279528684856",
+          "-4999222737537859584000000000000"
+        ],
+        "g2_invariants": [
+          "-4994705978405795433129232499/5022688739328000000000000",
+          "3121234366795407932617009/4359972864000000000000",
+          "-18153845414388121481/28385240000000000"
+        ],
+        "rational_weierstrass_points": 2,
+        "minimal_model": {
+          "f": [
+            "0",
+            "1000",
+            "130",
+            "-479",
+            "256",
+            "-8"
+          ],
+          "h": [
+            "0",
+            "1",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "-1220513363656704000000000000",
+        "minimal_discriminant_factored": "-1 * 2^30 * 3^8 * 5^12 * 13^3 * 17 * 19",
+        "conductor": "11337300",
+        "conductor_factored": "2^2 * 3^3 * 5^2 * 13 * 17 * 19",
+        "conductor_note": "The semistable fiber at 2 has toric rank 2, giving conductor exponent 2. It consists of two rational components meeting at three nodes. The odd exponents were computed by Magma.",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "",
+        "kind": "jump",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C1000%2C130%2C-479%2C256%2C-8%5D%2C%5B0%2C1%2C1%5D%5D",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          6,
+          6
+        ],
+        "order": 36,
+        "generators": [
+          {
+            "order": 6,
+            "mumford": [
+              "x^2 - x",
+              "60*x",
+              "2"
+            ]
+          },
+          {
+            "order": 6,
+            "mumford": [
+              "x^2 - 11*x - 50",
+              "270*x + 450",
+              "2"
+            ]
+          }
+        ],
+        "method": "generators",
+        "generators_note": "",
+        "generators_submitted": 2,
+        "point_count_gcd": 36,
+        "point_count_primes": [
+          7,
+          11,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107,
+          109,
+          113,
+          127
+        ],
+        "claimed": [
+          6,
+          6
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": true,
+        "strict_prime": 61,
+        "chi": "T^4 - 4*T^3 + 54*T^2 - 244*T + 3721",
+        "primes_tried_below": 500,
+        "admissible_primes": 12,
+        "reducible_chi": 9
+      },
+      "q_simple": {
+        "certified": true,
+        "prime": 23,
+        "chi": "T^4 - 26*T^2 + 529"
+      },
+      "split": {
+        "geometrically_split": false,
+        "split_over_Q": false,
+        "certificate": null,
+        "isogenous_product": null,
+        "weil_restriction": null,
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": false,
+          "primes_checked": 40,
+          "reducible_chi": 16
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "Genus 2 torsion census, specialization of the Bruin–Flynn–Testa construction",
+        "year": 2026,
+        "historical": false
+      },
+      "reference": "Bruin, Flynn and Testa, Descent via (3,3)-isogeny on Jacobians of genus 2 curves, Theorem 6. Take u = 3 in the census [6,6] family.",
+      "sources": [],
+      "rm": false,
+      "notes": "The November 14 family calculation recorded this specialization and its torsion. The Frobenius polynomial at 61 certifies geometric simplicity. At 2 the stable fiber consists of two rational components meeting at three distinct points, so the conductor exponent is 2.",
+      "submitter": {
+        "name": "Genus 2 torsion census",
+        "github": "",
+        "affiliation": ""
+      },
+      "submitted": {
+        "f": [
+          "0",
+          "1000",
+          "130",
+          "-479",
+          "256",
+          "-8"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          6,
+          6
+        ],
+        "claimed_class": "simple",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "file",
+        "path": "submissions/inbox/simple_6_6_u3.json",
+        "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/pipeline/magma/family_6_6_certificate.m"
+      },
+      "dates": {
+        "submitted": "2026-11-18",
+        "verified": "2026-11-18 08:44:10 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.30-1",
+        "cputime_seconds": "0.420000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+        "log": "data/logs/6.6.c.log",
+        "conductor_log": "data/logs/6.6.c.conductor.log",
+        "conductor_cputime_seconds": 0.77
+      },
+      "credit_differs": false
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
       "id": "6.12.a",
       "group": [
         6,
@@ -40029,6 +40260,253 @@
         "log": "data/logs/2.2.14.a.log",
         "conductor_log": "data/logs/2.2.14.a.conductor.log",
         "conductor_cputime_seconds": 0.37
+      },
+      "credit_differs": false
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "2.2.14.b",
+      "group": [
+        2,
+        2,
+        14
+      ],
+      "group_key": "2.2.14",
+      "group_bracket": "[2,2,14]",
+      "order": 56,
+      "class": "simple",
+      "class_certified": true,
+      "class_text": "geometrically simple",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": false,
+      "accepted_because": "conductor 152100 < 38200383011700 of the census curve 2.2.14.a",
+      "curve": {
+        "f": [
+          "-35",
+          "165",
+          "-183",
+          "-95",
+          "123",
+          "69",
+          "9"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "f_str": "9*x^6 + 69*x^5 + 123*x^4 - 95*x^3 - 183*x^2 + 165*x - 35",
+        "h_str": "x^2 + x",
+        "g": [
+          "-140",
+          "660",
+          "-731",
+          "-378",
+          "493",
+          "276",
+          "36"
+        ],
+        "g_str": "36*x^6 + 276*x^5 + 493*x^4 - 378*x^3 - 731*x^2 + 660*x - 140",
+        "g_scale": "1",
+        "discriminant": "69078978109440000000",
+        "discriminant_digits": 20,
+        "igusa_clebsch": [
+          "15119432",
+          "24089644804",
+          "122230905005435912",
+          "69078978109440000000"
+        ],
+        "g2_invariants": [
+          "24111678571283135591307581220649/16864984890000000",
+          "11143992701509242672653634311/187388721000000",
+          "761682323971102727998561/231344100000"
+        ],
+        "rational_weierstrass_points": 4,
+        "minimal_model": {
+          "f": [
+            "-35",
+            "165",
+            "-183",
+            "-95",
+            "123",
+            "69",
+            "9"
+          ],
+          "h": [
+            "0",
+            "1",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "16864984890000000",
+        "minimal_discriminant_factored": "2^7 * 3^10 * 5^7 * 13^4",
+        "conductor": "152100",
+        "conductor_factored": "2^2 * 3^2 * 5^2 * 13^2",
+        "conductor_note": "",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "",
+        "kind": "jump",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-35%2C165%2C-183%2C-95%2C123%2C69%2C9%5D%2C%5B0%2C1%2C1%5D%5D",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          2,
+          2,
+          14
+        ],
+        "order": 56,
+        "generators": [
+          {
+            "order": 2,
+            "mumford": [
+              "x^2 + 11/2*x + 7",
+              "0",
+              "2"
+            ]
+          },
+          {
+            "order": 2,
+            "mumford": [
+              "x^2 + 3*x - 7/4",
+              "0",
+              "2"
+            ]
+          },
+          {
+            "order": 14,
+            "mumford": [
+              "x^2 + 293/84*x - 83/42",
+              "-6721/1176*x + 1807/588",
+              "2"
+            ]
+          }
+        ],
+        "method": "TorsionSubgroup",
+        "generators_note": "",
+        "generators_submitted": 0,
+        "point_count_gcd": 56,
+        "point_count_primes": [
+          7,
+          11,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107,
+          109
+        ],
+        "claimed": [
+          2,
+          2,
+          14
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": true,
+        "strict_prime": 17,
+        "chi": "T^4 + 4*T^3 + 30*T^2 + 68*T + 289",
+        "primes_tried_below": 500,
+        "admissible_primes": 3,
+        "reducible_chi": 0
+      },
+      "q_simple": {
+        "certified": true,
+        "prime": 7,
+        "chi": "T^4 + 6*T^2 + 49"
+      },
+      "split": {
+        "geometrically_split": false,
+        "split_over_Q": false,
+        "certificate": null,
+        "isogenous_product": null,
+        "weil_restriction": null,
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": false,
+          "primes_checked": 42,
+          "reducible_chi": 5
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "Balakrishnan–Najman–Shnidman–Sutherland computation notebook",
+        "year": 2026,
+        "historical": false
+      },
+      "reference": "Genus2TorsionNotebook, July 23 and 25, 2026. The three-root construction at (s,t,u) = (−3, −3/4, −3/5).",
+      "sources": [],
+      "rm": true,
+      "notes": "This real-multiplication example lies in the level-390 modular isogeny class and has conductor 390². The existing example 2.2.14.a has geometric endomorphism ring ℤ. Reduction at 17 certifies geometric simplicity for this curve.",
+      "submitter": {
+        "name": "Genus 2 torsion census",
+        "github": "",
+        "affiliation": ""
+      },
+      "submitted": {
+        "f": [
+          "-35",
+          "165",
+          "-183",
+          "-95",
+          "123",
+          "69",
+          "9"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          2,
+          2,
+          14
+        ],
+        "claimed_class": "simple",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "file",
+        "path": "submissions/inbox/simple_2_2_14_rm.json",
+        "url": "https://github.com/AndrewVSutherland/Genus2TorsionNotebook/blob/main/notes/claude_generic_2214_found_2026_07_23.md"
+      },
+      "dates": {
+        "submitted": "2026-11-18",
+        "verified": "2026-11-18 08:44:12 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.30-1",
+        "cputime_seconds": "0.640000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+        "log": "data/logs/2.2.14.b.log",
+        "conductor_log": "data/logs/2.2.14.b.conductor.log",
+        "conductor_cputime_seconds": 0.31
       },
       "credit_differs": false
     },
@@ -46656,6 +47134,265 @@
         "log": "data/logs/2.2.2.10.a.log",
         "conductor_log": "data/logs/2.2.2.10.a.conductor.log",
         "conductor_cputime_seconds": 0.23
+      },
+      "credit_differs": false
+    },
+    {
+      "schema": "genus-2-torsion/curve/1",
+      "id": "2.2.2.10.b",
+      "group": [
+        2,
+        2,
+        2,
+        10
+      ],
+      "group_key": "2.2.2.10",
+      "group_bracket": "[2,2,2,10]",
+      "order": 80,
+      "class": "simple",
+      "class_certified": true,
+      "class_text": "geometrically simple",
+      "status": "certified",
+      "new_group": false,
+      "new_for_class": false,
+      "accepted_because": "conductor 22406283900 < 319360204800 of the census curve 2.2.2.10.a",
+      "curve": {
+        "f": [
+          "-7791",
+          "-7511",
+          "3544",
+          "3144",
+          "-402",
+          "-246",
+          "36"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "f_str": "36*x^6 - 246*x^5 - 402*x^4 + 3144*x^3 + 3544*x^2 - 7511*x - 7791",
+        "h_str": "x^2 + x",
+        "g": [
+          "-31164",
+          "-30044",
+          "14177",
+          "12578",
+          "-1607",
+          "-984",
+          "144"
+        ],
+        "g_str": "144*x^6 - 984*x^5 - 1607*x^4 + 12578*x^3 + 14177*x^2 - 30044*x - 31164",
+        "g_scale": "1",
+        "discriminant": "5183007022658610571877292441600000000",
+        "discriminant_digits": 37,
+        "igusa_clebsch": [
+          "3573315208",
+          "47444695948255204",
+          "53936072090892475060645608",
+          "5183007022658610571877292441600000000"
+        ],
+        "g2_invariants": [
+          "17778974361218295379670538958916132346922001/1265382573891262346649729600000000",
+          "910039856612122880275342232187267727/1652744586306954901746585600",
+          "2569810926135675415312528924516681/93693003758897670167040000"
+        ],
+        "rational_weierstrass_points": 6,
+        "minimal_model": {
+          "f": [
+            "-7791",
+            "-7511",
+            "3544",
+            "3144",
+            "-402",
+            "-246",
+            "36"
+          ],
+          "h": [
+            "0",
+            "1",
+            "1"
+          ]
+        },
+        "minimal_discriminant": "1265382573891262346649729600000000",
+        "minimal_discriminant_factored": "2^12 * 3^12 * 5^8 * 7^8 * 11^4 * 13^2 * 17^2 * 19^2",
+        "conductor": "22406283900",
+        "conductor_factored": "2^2 * 3^2 * 5^2 * 7^2 * 11^2 * 13 * 17 * 19",
+        "conductor_note": "The semistable fiber at 2 has toric rank 2, giving conductor exponent 2. It is geometrically irreducible with two ordinary nodes. The odd exponents were computed by Magma.",
+        "conductor_source": "magma"
+      },
+      "lmfdb": {
+        "label": "",
+        "kind": "jump",
+        "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-7791%2C-7511%2C3544%2C3144%2C-402%2C-246%2C36%5D%2C%5B0%2C1%2C1%5D%5D",
+        "snapshot_label": ""
+      },
+      "torsion": {
+        "invariants": [
+          2,
+          2,
+          2,
+          10
+        ],
+        "order": 80,
+        "generators": [
+          {
+            "order": 2,
+            "mumford": [
+              "x^2 - 25/12*x - 371/36",
+              "0",
+              "2"
+            ]
+          },
+          {
+            "order": 2,
+            "mumford": [
+              "x^2 - 29/12*x - 53/6",
+              "0",
+              "2"
+            ]
+          },
+          {
+            "order": 2,
+            "mumford": [
+              "x^2 - 31/4*x + 21/2",
+              "0",
+              "2"
+            ]
+          },
+          {
+            "order": 10,
+            "mumford": [
+              "x - 6",
+              "12*x^3 - 2592",
+              "2"
+            ]
+          }
+        ],
+        "method": "TorsionSubgroup",
+        "generators_note": "",
+        "generators_submitted": 0,
+        "point_count_gcd": 80,
+        "point_count_primes": [
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97,
+          101,
+          103,
+          107,
+          109,
+          113,
+          127,
+          131,
+          137
+        ],
+        "claimed": [
+          2,
+          2,
+          2,
+          10
+        ],
+        "claim_matches": true
+      },
+      "simplicity": {
+        "geometrically_simple": true,
+        "strict_prime": 61,
+        "chi": "T^4 + 8*T^3 + 22*T^2 + 488*T + 3721",
+        "primes_tried_below": 500,
+        "admissible_primes": 10,
+        "reducible_chi": 8
+      },
+      "q_simple": {
+        "certified": true,
+        "prime": 59,
+        "chi": "T^4 + 38*T^2 + 3481"
+      },
+      "split": {
+        "geometrically_split": false,
+        "split_over_Q": false,
+        "certificate": null,
+        "isogenous_product": null,
+        "weil_restriction": null,
+        "cover_submitted": false,
+        "cover_accepted": false,
+        "cover_error": "",
+        "signature": {
+          "all_good_primes_fail_strictness": false,
+          "primes_checked": 38,
+          "reducible_chi": 20
+        }
+      },
+      "geometrically_isomorphic_to": [],
+      "discovery": {
+        "by": "Elkies construction, Genus2TorsionNotebook source_4",
+        "year": 2026,
+        "historical": false
+      },
+      "reference": "Elkies’ Clebsch cubic construction, Genus2TorsionNotebook, elkies22210_source_h30.txt, source_4.",
+      "sources": [],
+      "rm": false,
+      "notes": "The signed coordinates (2,4,10,−7,−9) give a model Y² = x(x−4)(x−16)(x−100)(x−49)(x−81). Reduction at 61 certifies geometric simplicity. At 2 the stable fiber is geometrically irreducible with two ordinary nodes, so the conductor exponent is 2.",
+      "submitter": {
+        "name": "Genus 2 torsion census",
+        "github": "",
+        "affiliation": ""
+      },
+      "submitted": {
+        "f": [
+          "-7791",
+          "-7511",
+          "3544",
+          "3144",
+          "-402",
+          "-246",
+          "36"
+        ],
+        "h": [
+          "0",
+          "1",
+          "1"
+        ],
+        "claimed_group": [
+          2,
+          2,
+          2,
+          10
+        ],
+        "claimed_class": "simple",
+        "cover": null,
+        "lmfdb_label_given": ""
+      },
+      "source": {
+        "kind": "file",
+        "path": "submissions/inbox/simple_2_2_2_10_elkies.json",
+        "url": "https://github.com/AndrewVSutherland/Genus2TorsionNotebook/blob/main/data/elkies22210_source_h30.txt"
+      },
+      "dates": {
+        "submitted": "2026-11-18",
+        "verified": "2026-11-18 08:44:13 UTC"
+      },
+      "verification": {
+        "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+        "magma_version": "2.30-1",
+        "cputime_seconds": "0.660000",
+        "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+        "log": "data/logs/2.2.2.10.b.log",
+        "conductor_log": "data/logs/2.2.2.10.b.conductor.log",
+        "conductor_cputime_seconds": 0.39
       },
       "credit_differs": false
     },

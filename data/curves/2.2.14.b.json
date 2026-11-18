@@ -1,0 +1,246 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.14.b",
+  "group": [
+    2,
+    2,
+    14
+  ],
+  "group_key": "2.2.14",
+  "group_bracket": "[2,2,14]",
+  "order": 56,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": false,
+  "accepted_because": "conductor 152100 < 38200383011700 of the census curve 2.2.14.a",
+  "curve": {
+    "f": [
+      "-35",
+      "165",
+      "-183",
+      "-95",
+      "123",
+      "69",
+      "9"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "9*x^6 + 69*x^5 + 123*x^4 - 95*x^3 - 183*x^2 + 165*x - 35",
+    "h_str": "x^2 + x",
+    "g": [
+      "-140",
+      "660",
+      "-731",
+      "-378",
+      "493",
+      "276",
+      "36"
+    ],
+    "g_str": "36*x^6 + 276*x^5 + 493*x^4 - 378*x^3 - 731*x^2 + 660*x - 140",
+    "g_scale": "1",
+    "discriminant": "69078978109440000000",
+    "discriminant_digits": 20,
+    "igusa_clebsch": [
+      "15119432",
+      "24089644804",
+      "122230905005435912",
+      "69078978109440000000"
+    ],
+    "g2_invariants": [
+      "24111678571283135591307581220649/16864984890000000",
+      "11143992701509242672653634311/187388721000000",
+      "761682323971102727998561/231344100000"
+    ],
+    "rational_weierstrass_points": 4,
+    "minimal_model": {
+      "f": [
+        "-35",
+        "165",
+        "-183",
+        "-95",
+        "123",
+        "69",
+        "9"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "16864984890000000",
+    "minimal_discriminant_factored": "2^7 * 3^10 * 5^7 * 13^4",
+    "conductor": "152100",
+    "conductor_factored": "2^2 * 3^2 * 5^2 * 13^2",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-35%2C165%2C-183%2C-95%2C123%2C69%2C9%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      14
+    ],
+    "order": 56,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 11/2*x + 7",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 3*x - 7/4",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 14,
+        "mumford": [
+          "x^2 + 293/84*x - 83/42",
+          "-6721/1176*x + 1807/588",
+          "2"
+        ]
+      }
+    ],
+    "method": "TorsionSubgroup",
+    "generators_note": "",
+    "generators_submitted": 0,
+    "point_count_gcd": 56,
+    "point_count_primes": [
+      7,
+      11,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
+    ],
+    "claimed": [
+      2,
+      2,
+      14
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 17,
+    "chi": "T^4 + 4*T^3 + 30*T^2 + 68*T + 289",
+    "primes_tried_below": 500,
+    "admissible_primes": 3,
+    "reducible_chi": 0
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 7,
+    "chi": "T^4 + 6*T^2 + 49"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "isogenous_product": null,
+    "weil_restriction": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 42,
+      "reducible_chi": 5
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Balakrishnan–Najman–Shnidman–Sutherland computation notebook",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "Genus2TorsionNotebook, July 23 and 25, 2026. The three-root construction at (s,t,u) = (−3, −3/4, −3/5).",
+  "sources": [],
+  "rm": true,
+  "notes": "This real-multiplication example lies in the level-390 modular isogeny class and has conductor 390². The existing example 2.2.14.a has geometric endomorphism ring ℤ. Reduction at 17 certifies geometric simplicity for this curve.",
+  "submitter": {
+    "name": "Genus 2 torsion census",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "-35",
+      "165",
+      "-183",
+      "-95",
+      "123",
+      "69",
+      "9"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      14
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/simple_2_2_14_rm.json",
+    "url": "https://github.com/AndrewVSutherland/Genus2TorsionNotebook/blob/main/notes/claude_generic_2214_found_2026_07_23.md"
+  },
+  "dates": {
+    "submitted": "2026-11-18",
+    "verified": "2026-11-18 08:44:12 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.640000",
+    "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+    "log": "data/logs/2.2.14.b.log",
+    "conductor_log": "data/logs/2.2.14.b.conductor.log",
+    "conductor_cputime_seconds": 0.31
+  }
+}

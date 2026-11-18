@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18 07:48 UTC",
+  "generated": "2026-11-18 08:52 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -29,8 +29,8 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 97,
-  "n_curves": 194,
-  "n_certified": 194,
+  "n_curves": 197,
+  "n_certified": 197,
   "n_verified": 0,
   "n_groups_by_class": {
     "simple": 80,
@@ -12140,6 +12140,57 @@
       "classes": {
         "simple": [
           {
+            "id": "6.6.c",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "0",
+              "1000",
+              "130",
+              "-479",
+              "256",
+              "-8"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "-8*x^5 + 256*x^4 - 479*x^3 + 130*x^2 + 1000*x",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = -8*x^5 + 256*x^4 - 479*x^3 + 130*x^2 + 1000*x"
+            },
+            "conductor": "11337300",
+            "conductor_sort": 11337300,
+            "conductor_note": "The semistable fiber at 2 has toric rank 2, giving conductor exponent 2. It consists of two rational components meeting at three nodes. The odd exponents were computed by Magma.",
+            "discriminant_digits": 28,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C1000%2C130%2C-479%2C256%2C-8%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "Genus 2 torsion census, specialization of the Bruin–Flynn–Testa construction",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "Bruin, Flynn and Testa, Descent via (3,3)-isogeny on Jacobians of genus 2 curves, Theorem 6. Take u = 3 in the census [6,6] family.",
+            "new_group": false,
+            "new_for_class": false,
+            "certificate": "geometrically simple: Frobenius at p = 61 is strict (χ = T^4 - 4*T^3 + 54*T^2 - 244*T + 3721)",
+            "verified": "2026-11-18 08:44:10 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "file"
+          },
+          {
             "id": "6.6.a",
             "class": "simple",
             "class_certified": true,
@@ -12251,7 +12302,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -12269,7 +12320,7 @@
         "undecided": false
       },
       "exclusions": {},
-      "n_curves": 2,
+      "n_curves": 3,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -13870,6 +13921,58 @@
       "classes": {
         "simple": [
           {
+            "id": "2.2.14.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "-35",
+              "165",
+              "-183",
+              "-95",
+              "123",
+              "69",
+              "9"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "9*x^6 + 69*x^5 + 123*x^4 - 95*x^3 - 183*x^2 + 165*x - 35",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 9*x^6 + 69*x^5 + 123*x^4 - 95*x^3 - 183*x^2 + 165*x - 35"
+            },
+            "conductor": "152100",
+            "conductor_sort": 152100,
+            "conductor_note": "",
+            "discriminant_digits": 20,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-35%2C165%2C-183%2C-95%2C123%2C69%2C9%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": true,
+            "discovered_by": "Balakrishnan–Najman–Shnidman–Sutherland computation notebook",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "Genus2TorsionNotebook, July 23 and 25, 2026. The three-root construction at (s,t,u) = (−3, −3/4, −3/5).",
+            "new_group": false,
+            "new_for_class": false,
+            "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + 4*T^3 + 30*T^2 + 68*T + 289)",
+            "verified": "2026-11-18 08:44:12 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "file"
+          },
+          {
             "id": "2.2.14.a",
             "class": "simple",
             "class_certified": true,
@@ -13928,7 +14031,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -13965,7 +14068,7 @@
           "proof_url": "proofs/qsimple-2214-obstruction.html"
         }
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "exact",
@@ -15952,6 +16055,58 @@
       "classes": {
         "simple": [
           {
+            "id": "2.2.2.10.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "-7791",
+              "-7511",
+              "3544",
+              "3144",
+              "-402",
+              "-246",
+              "36"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "36*x^6 - 246*x^5 - 402*x^4 + 3144*x^3 + 3544*x^2 - 7511*x - 7791",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 36*x^6 - 246*x^5 - 402*x^4 + 3144*x^3 + 3544*x^2 - 7511*x - 7791"
+            },
+            "conductor": "22406283900",
+            "conductor_sort": 22406283900,
+            "conductor_note": "The semistable fiber at 2 has toric rank 2, giving conductor exponent 2. It is geometrically irreducible with two ordinary nodes. The odd exponents were computed by Magma.",
+            "discriminant_digits": 37,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B-7791%2C-7511%2C3544%2C3144%2C-402%2C-246%2C36%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "Elkies construction, Genus2TorsionNotebook source_4",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "TorsionSubgroup",
+            "reference": "Elkies’ Clebsch cubic construction, Genus2TorsionNotebook, elkies22210_source_h30.txt, source_4.",
+            "new_group": false,
+            "new_for_class": false,
+            "certificate": "geometrically simple: Frobenius at p = 61 is strict (χ = T^4 + 8*T^3 + 22*T^2 + 488*T + 3721)",
+            "verified": "2026-11-18 08:44:13 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "file"
+          },
+          {
             "id": "2.2.2.10.a",
             "class": "simple",
             "class_certified": true,
@@ -16009,7 +16164,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -16050,7 +16205,7 @@
           "proof_url": "proofs/qsimple-2210-obstruction.html"
         }
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "exact",

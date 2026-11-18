@@ -1,0 +1,7 @@
+MUMFORD_GENERATORS (x^2 - x, 60*x, 2) (x^2 - 11*x - 50, 270*x + 450, 2)
+JACOBIAN_ORDER_7 36 FROBENIUS_61 x^4 - 4*x^3 + 54*x^2 - 244*x + 3721
+FROBENIUS_61_NO_ROOT_OF_UNITY_RATIOS
+WARNING: Using Ogg's formula when v_2(D)>=12, no correctness guarantee
+WARNING: Using Ogg's formula when v_2(disc)>=12, no correctness guarantee
+ODD_CONDUCTOR_FACTORIZATION [ <3, 3>, <5, 2>, <13, 1>, <17, 1>, <19, 1> ]
+SIMPLE_66_CONDUCTOR_11337300_CERTIFIED

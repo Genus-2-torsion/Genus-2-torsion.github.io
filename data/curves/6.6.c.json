@@ -1,0 +1,230 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "6.6.c",
+  "group": [
+    6,
+    6
+  ],
+  "group_key": "6.6",
+  "group_bracket": "[6,6]",
+  "order": 36,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": false,
+  "accepted_because": "conductor 11337300 < 17506967961600 of the census curve 6.6.a",
+  "curve": {
+    "f": [
+      "0",
+      "1000",
+      "130",
+      "-479",
+      "256",
+      "-8"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "-8*x^5 + 256*x^4 - 479*x^3 + 130*x^2 + 1000*x",
+    "h_str": "x^2 + x",
+    "g": [
+      "0",
+      "4000",
+      "521",
+      "-1914",
+      "1025",
+      "-32"
+    ],
+    "g_str": "-32*x^5 + 1025*x^4 - 1914*x^3 + 521*x^2 + 4000*x",
+    "g_scale": "1",
+    "discriminant": "-4882053454626816000000000000",
+    "discriminant_digits": 28,
+    "igusa_clebsch": [
+      "8315976",
+      "78999178614084",
+      "-277733693279528684856",
+      "-4999222737537859584000000000000"
+    ],
+    "g2_invariants": [
+      "-4994705978405795433129232499/5022688739328000000000000",
+      "3121234366795407932617009/4359972864000000000000",
+      "-18153845414388121481/28385240000000000"
+    ],
+    "rational_weierstrass_points": 2,
+    "minimal_model": {
+      "f": [
+        "0",
+        "1000",
+        "130",
+        "-479",
+        "256",
+        "-8"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "-1220513363656704000000000000",
+    "minimal_discriminant_factored": "-1 * 2^30 * 3^8 * 5^12 * 13^3 * 17 * 19",
+    "conductor": "11337300",
+    "conductor_factored": "2^2 * 3^3 * 5^2 * 13 * 17 * 19",
+    "conductor_note": "The semistable fiber at 2 has toric rank 2, giving conductor exponent 2. It consists of two rational components meeting at three nodes. The odd exponents were computed by Magma.",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B0%2C1000%2C130%2C-479%2C256%2C-8%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      6,
+      6
+    ],
+    "order": 36,
+    "generators": [
+      {
+        "order": 6,
+        "mumford": [
+          "x^2 - x",
+          "60*x",
+          "2"
+        ]
+      },
+      {
+        "order": 6,
+        "mumford": [
+          "x^2 - 11*x - 50",
+          "270*x + 450",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 2,
+    "point_count_gcd": 36,
+    "point_count_primes": [
+      7,
+      11,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109,
+      113,
+      127
+    ],
+    "claimed": [
+      6,
+      6
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 61,
+    "chi": "T^4 - 4*T^3 + 54*T^2 - 244*T + 3721",
+    "primes_tried_below": 500,
+    "admissible_primes": 12,
+    "reducible_chi": 9
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 23,
+    "chi": "T^4 - 26*T^2 + 529"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "isogenous_product": null,
+    "weil_restriction": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 40,
+      "reducible_chi": 16
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "Genus 2 torsion census, specialization of the Bruin–Flynn–Testa construction",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "Bruin, Flynn and Testa, Descent via (3,3)-isogeny on Jacobians of genus 2 curves, Theorem 6. Take u = 3 in the census [6,6] family.",
+  "sources": [],
+  "rm": false,
+  "notes": "The November 14 family calculation recorded this specialization and its torsion. The Frobenius polynomial at 61 certifies geometric simplicity. At 2 the stable fiber consists of two rational components meeting at three distinct points, so the conductor exponent is 2.",
+  "submitter": {
+    "name": "Genus 2 torsion census",
+    "github": "",
+    "affiliation": ""
+  },
+  "submitted": {
+    "f": [
+      "0",
+      "1000",
+      "130",
+      "-479",
+      "256",
+      "-8"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      6,
+      6
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/simple_6_6_u3.json",
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/pipeline/magma/family_6_6_certificate.m"
+  },
+  "dates": {
+    "submitted": "2026-11-18",
+    "verified": "2026-11-18 08:44:10 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.420000",
+    "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+    "log": "data/logs/6.6.c.log",
+    "conductor_log": "data/logs/6.6.c.conductor.log",
+    "conductor_cputime_seconds": 0.77
+  }
+}

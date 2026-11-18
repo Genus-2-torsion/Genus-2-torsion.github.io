@@ -1,0 +1,24 @@
+{
+  "f": "9*x^6+69*x^5+123*x^4-95*x^3-183*x^2+165*x-35",
+  "h": "x^2+x",
+  "group": [
+    2,
+    2,
+    14
+  ],
+  "class": "simple",
+  "reference": "Genus2TorsionNotebook, July 23 and 25, 2026. The three-root construction at (s,t,u) = (−3, −3/4, −3/5).",
+  "schema": "genus-2-torsion/submission/1",
+  "year": 2026,
+  "date": "2026-11-18",
+  "submitter": "Genus 2 torsion census",
+  "discoverer": "Balakrishnan–Najman–Shnidman–Sutherland computation notebook",
+  "sources": [],
+  "notes": "This real-multiplication example lies in the level-390 modular isogeny class and has conductor 390². The existing example 2.2.14.a has geometric endomorphism ring ℤ. Reduction at 17 certifies geometric simplicity for this curve.",
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/simple_2_2_14_rm.json",
+    "url": "https://github.com/AndrewVSutherland/Genus2TorsionNotebook/blob/main/notes/claude_generic_2214_found_2026_07_23.md"
+  },
+  "rm": true
+}

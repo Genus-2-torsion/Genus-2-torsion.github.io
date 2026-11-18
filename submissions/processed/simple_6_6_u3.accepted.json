@@ -1,0 +1,34 @@
+{
+  "f": "-8*x^5+256*x^4-479*x^3+130*x^2+1000*x",
+  "h": "x^2+x",
+  "group": [
+    6,
+    6
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x^2-x",
+      "60*x",
+      2
+    ],
+    [
+      "x^2-11*x-50",
+      "270*x+450",
+      2
+    ]
+  ],
+  "reference": "Bruin, Flynn and Testa, Descent via (3,3)-isogeny on Jacobians of genus 2 curves, Theorem 6. Take u = 3 in the census [6,6] family.",
+  "schema": "genus-2-torsion/submission/1",
+  "year": 2026,
+  "date": "2026-11-18",
+  "submitter": "Genus 2 torsion census",
+  "discoverer": "Genus 2 torsion census, specialization of the Bruin–Flynn–Testa construction",
+  "sources": [],
+  "notes": "The November 14 family calculation recorded this specialization and its torsion. The Frobenius polynomial at 61 certifies geometric simplicity. At 2 the stable fiber consists of two rational components meeting at three distinct points, so the conductor exponent is 2.",
+  "source": {
+    "kind": "file",
+    "path": "submissions/inbox/simple_6_6_u3.json",
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/pipeline/magma/family_6_6_certificate.m"
+  }
+}

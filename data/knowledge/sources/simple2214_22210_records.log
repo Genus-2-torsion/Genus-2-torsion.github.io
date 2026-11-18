@@ -1,0 +1,6 @@
+STRICT 17 x^4 + 4*x^3 + 30*x^2 + 68*x + 289
+STRICT 61 x^4 + 8*x^3 + 22*x^2 + 488*x + 3721
+WARNING: Using Ogg's formula when v_2(D)>=12, no correctness guarantee
+CONDUCTOR_FACTORS [ <2, 2>, <3, 2>, <5, 2>, <13, 2> ]
+[ <2, 2>, <3, 2>, <5, 2>, <7, 2>, <11, 2>, <13, 1>, <17, 1>, <19, 1> ]
+SIMPLE_2214_AND_22210_CERTIFIED

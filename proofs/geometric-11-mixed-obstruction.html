@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rational 11-torsion on geometrically split abelian surfaces — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="A geometrically split abelian surface over ℚ with a rational point of order 11 has cyclic rational torsion of order 11 or 121. This excludes orders 55 and 77.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}', sd: '\\mathbin{\\rtimes}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', Res: '\\operatorname{Res}',
+          Norm: '\\operatorname{N}', Ad: '\\operatorname{Ad}',
+          tr: '\\operatorname{tr}', Tr: '\\operatorname{Tr}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../exclusions.html#geometric-11-torsion">exclusions beyond the census</a><span class="sep">›</span>rational 11-torsion</div>
+  <h2>Rational \(11\)-torsion on geometrically split abelian surfaces</h2>
+  <p class="src">19 November 2026</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem.</strong> Let \(A/\Q\) be an abelian surface isogenous over \(\overline{\Q}\) to a product of elliptic curves.
+      If \(A(\Q)\) contains a point of order \(11\), then \(A(\Q)_{\mathrm{tors}}\) is cyclic of order \(11\) or \(121\).
+      In particular, for every prime \(\ell\ne11\), a rational point of order \(11\ell\) is impossible on \(A\).</p>
+  </div>
+  <p><a href="../data/knowledge/sources/geometric_11_mixed_obstruction.pdf">Download the one-page proof (PDF)</a> ·
+    <a href="../data/knowledge/sources/geometric_11_mixed_obstruction.tex">LaTeX source</a></p>
+
+  <h3>Proof</h3>
+  <p>The structural assertion of the <a href="geometric-22-obstruction.html#theorem">order-\(22\) theorem</a>
+    applies as soon as \(A(\Q)[11]\ne0\). It gives simplicity over \(\Q\) and two geometrically nonisogenous
+    elliptic factors. The two geometric elliptic subvarieties are therefore conjugate over a quadratic field \(K\).
+    Write them as \(E,E^\sigma\), where \(\sigma\) generates \(\operatorname{Gal}(K/\Q)\), and put \(F=A_K/E\).
+    The quotient map restricts to a \(K\)-isogeny \(E^\sigma\to F\). Conjugating gives a \(K\)-isogeny \(E\to F^\sigma\).</p>
+  <p>For each prime \(r\) dividing \(\#A(\Q)_{\mathrm{tors}}\), choose a rational point \(P_r\) of order \(r\).
+    Either \(P_r\) lies in \(E(K)\), or its image in \(F(K)\) has order \(r\). In the second case the conjugate image has
+    order \(r\) in \(F^\sigma(K)\). Thus every such prime occurs as a rational point order in the same elliptic
+    \(K\)-isogeny class, that of \(E\).</p>
+  <p>Suppose that a second prime \(\ell\ne11\) divides \(\#A(\Q)_{\mathrm{tors}}\). Choose curves \(B,C\) in this class
+    carrying \(K\)-points of orders \(11,\ell\), respectively. Factor a \(K\)-isogeny \(f:B\to C\) as
+    \[
+      B \longrightarrow B'=B/(\ker f)[\ell^\infty] \longrightarrow C .
+    \]
+    The first isogeny preserves the order of the \(11\)-point. The second has degree prime to \(\ell\), so it identifies
+    \(B'[\ell]\) with \(C[\ell]\) over \(K\). Hence \(B'(K)\) has a point of order \(11\ell\).
+    In the <a href="https://arxiv.org/abs/1103.5906">quadratic elliptic torsion classification</a>
+    (Kamienny–Najman, Theorem&nbsp;1, citing Kamienny, Kenku and Momose), the only group of order divisible by \(11\)
+    is \(\mathbf Z/11\mathbf Z\). This contradiction excludes every second prime.</p>
+  <p>The same classification bounds the orders of \(E(K)[11^\infty]\) and \(F(K)[11^\infty]\) by \(11\).
+    The kernel and image of \(A(\Q)[11^\infty]\to F(K)[11^\infty]\) therefore each have order at most \(11\),
+    so \(\#A(\Q)_{\mathrm{tors}}\le121\). Finally, the <a href="qsimple-rank-two-obstruction.html#theorem">rational
+    \(p\)-rank theorem</a> for geometrically split surfaces simple over \(\Q\) gives
+    \(\dim_{\mathbf F_{11}}A(\Q)[11]\le1\). This proves cyclicity. ∎</p>
+
+  <h3>Consequences for the census</h3>
+  <p>Every genus-2 Jacobian over \(\Q\) with a rational point of order \(55\) or \(77\) is geometrically simple.
+    The <a href="../group.html?g=55">[55] census row</a> contains the certified geometrically simple
+    <a href="../curve.html?id=55.a">curve 55.a</a>. Both split classes are impossible. The exact group \([77]\) has no census row.</p>
+  <p>The geometrically split Jacobian of <a href="../curve.html?id=11.b">curve 11.b</a> realizes exact \([11]\).
+    Existence of a geometrically split Jacobian with exact \([121]\) remains open.</p>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/geometric-11-mixed-obstruction.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

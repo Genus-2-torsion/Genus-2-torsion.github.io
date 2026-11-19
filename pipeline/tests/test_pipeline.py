@@ -254,6 +254,7 @@ class KnowledgeTests(unittest.TestCase):
             "35": "QSimple35Obstruction", "70": "QSimple35Obstruction",
             "63": "QSimple63Obstruction",
             "45": "QSimple45Obstruction",
+            "55": "Geometric11MixedObstruction",
             "2.2.14": "QSimple2214Obstruction",
             "2.28": "QSimple228Obstruction",
             "28": "QSimple28Obstruction", "2.14": "QSimple28Obstruction",
@@ -264,13 +265,22 @@ class KnowledgeTests(unittest.TestCase):
             "40": "QSimple40Obstruction", "2.20": "QSimple40Obstruction",
             "5.5": "QSimpleRankTwoObstruction", "5.10": "QSimpleRankTwoObstruction", "7.7": "QSimpleRankTwoObstruction"})
         impossible = sorted(k for k in keys if knowledge.infinite_record("split", k)["grade"] == "impossible")
-        self.assertEqual(impossible, sorted(["13", "17", "22", "23", "26", "29", "31", "33", "34", "39", "2.22", "2.26", "2.2.14",
+        self.assertEqual(impossible, sorted(["13", "17", "22", "23", "26", "29", "31", "33", "34", "39", "55", "2.22", "2.26", "2.2.14",
                                              "2.2.2.10"]))
         # [17] has its own proof; [34] keeps the earlier proof for orders 33 and 34
         self.assertEqual(knowledge.infinite_record("split", "17")["proof_url"], "proofs/geometric-17-obstruction.html")
         rec = knowledge.infinite_record("split", "13")
         self.assertIn("Mazur1977", rec["sources"])
         self.assertTrue(rec["note"].startswith(knowledge.exclusions_record("13")["qsplit"]["reason"]))
+
+    def test_geometric_eleven_torsion(self):
+        for key in ("55", "77", "1331"):
+            with self.subTest(key=key):
+                self.assertEqual(knowledge.exclusions_record(key)["gsplit"]["sources"][0],
+                                 "Geometric11MixedObstruction")
+                self.assertEqual(knowledge.infinite_record("split", key)["grade"], "impossible")
+        for key in ("11", "121"):
+            self.assertNotIn("gsplit", knowledge.exclusions_record(key), key)
 
     def test_qsimple_seven_two_primary_bound(self):
         """The principal-polarization bound changes only the Q-simple split class."""

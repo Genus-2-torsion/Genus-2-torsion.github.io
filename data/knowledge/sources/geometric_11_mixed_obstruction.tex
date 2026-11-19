@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,hmargin=24mm,vmargin=20mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\Q}{\mathbf Q}
+\newcommand{\F}{\mathbf F}
+\newtheorem*{theorem}{Theorem}
+\title{Rational \(11\)-torsion on geometrically split abelian surfaces}
+\author{}
+\date{19 November 2026}
+\begin{document}
+\maketitle
+
+\begin{theorem}
+Let \(A/\Q\) be an abelian surface isogenous over \(\overline{\Q}\) to a product of elliptic curves. If \(A(\Q)\) contains a point of order \(11\), then \(A(\Q)_{\rm tors}\) is cyclic of order \(11\) or \(121\). In particular, for every prime \(\ell\ne 11\), no such surface has a rational point of order \(11\ell\).
+\end{theorem}
+
+\begin{proof}
+The structural assertion of the census order-\(22\) theorem applies as soon as \(A(\Q)[11]\ne 0\) \cite{C22}. It gives simplicity over \(\Q\) and two geometrically nonisogenous elliptic factors. The two geometric elliptic subvarieties are therefore conjugate over a quadratic field \(K\). Write them as \(E,E^\sigma\), where \(\sigma\) is the nontrivial element of \(\operatorname{Gal}(K/\Q)\). Write \(F=A_K/E\). Restricting the quotient map to \(E^\sigma\) gives a \(K\)-isogeny \(E^\sigma\to F\), so \(E\) and \(F^\sigma\) are \(K\)-isogenous.
+
+For each prime \(r\) dividing \(\# A(\Q)_{\rm tors}\), choose a rational point \(P_r\) of order \(r\). Either \(P_r\) belongs to \(E(K)\), or its image has order \(r\) in \(F(K)\). In the second case the conjugate image has order \(r\) in \(F^\sigma(K)\). Thus every such \(r\) occurs as a rational point order in the \emph{same} elliptic \(K\)-isogeny class, that of \(E\).
+
+Suppose that a second prime \(\ell\ne 11\) divides \(\# A(\Q)_{\rm tors}\). Let \(B,C\) be members of this class carrying \(K\)-points of orders \(11,\ell\), respectively. Choose a \(K\)-isogeny \(f:B\to C\), and factor it as
+\[
+ B \longrightarrow B'=B/(\ker f)[\ell^\infty]\longrightarrow C .
+\]
+The first isogeny preserves the order of the \(11\)-point. The second, of degree prime to \(\ell\), identifies \(B'[\ell]\) with \(C[\ell]\) over \(K\). Hence \(B'(K)\) has a point of order \(11\ell\). The classification of elliptic torsion over quadratic fields states that the only group on its list of order divisible by \(11\) is \(\mathbf Z/11\mathbf Z\) \cite[Theorem 1]{KN}. This contradiction excludes every second prime.
+
+The same classification bounds the orders of \(E(K)[11^\infty]\) and \(F(K)[11^\infty]\) by \(11\). The kernel and image of the map \(A(\Q)[11^\infty]\to F(K)[11^\infty]\) therefore each have order at most \(11\). This bounds the order of \(A(\Q)_{\rm tors}\) by \(121\). Finally the rational \(p\)-rank theorem for geometrically split surfaces simple over \(\Q\) gives \(\dim_{\F_{11}} A(\Q)[11]\le 1\) \cite{Rank}. This proves cyclicity.
+\end{proof}
+
+\paragraph{Census consequence.} Every genus-two Jacobian over \(\Q\) with a rational point of order \(55\) or \(77\) is geometrically simple. The census records a certified geometrically simple example \href{https://genus-2-torsion.github.io/curve.html?id=55.a}{\(55.\mathrm{a}\)} of exact torsion \([55]\). On 19 November 2026 its \(\Q\)-simple geometrically split cell was open, and its split-over-\(\Q\) cell was already excluded. The theorem settles the former cell and hence the combined split infinitude entry. Order \(77\) has no census row. Exact order \(11\) is attained by the geometrically split Jacobian \href{https://genus-2-torsion.github.io/curve.html?id=11.b}{\(11.\mathrm{b}\)}. The possibility of cyclic \(121\)-torsion remains undecided by the argument.
+
+\begin{thebibliography}{3}
+\bibitem{C22} Genus-two torsion census, \href{https://genus-2-torsion.github.io/proofs/geometric-22-obstruction.html}{\emph{No rational points of order \(22\) on geometrically split abelian surfaces}}, theorem, Lemma 1 and Section 10, 21 October 2026.
+\bibitem{KN} S. Kamienny and F. Najman, \href{https://arxiv.org/abs/1103.5906}{\emph{Torsion groups of elliptic curves over quadratic fields}}, Acta Arith.\ \textbf{152} (2012), 291--305, Theorem 1 (Kamienny, Kenku and Momose).
+\bibitem{Rank} Genus-two torsion census, \href{https://genus-2-torsion.github.io/proofs/qsimple-rank-two-obstruction.html}{\emph{Rational \(p\)-torsion of rank two on geometrically split, \(\Q\)-simple abelian surfaces}}, theorem.
+\end{thebibliography}
+\end{document}

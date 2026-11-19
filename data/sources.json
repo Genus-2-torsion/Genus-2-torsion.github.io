@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19 06:49 UTC",
+  "generated": "2026-11-19 06:59 UTC",
   "sources": {
     "BNSS2026": {
       "short": "Balakrishnan–Najman–Shnidman–Sutherland 2026",
@@ -182,6 +182,14 @@
       "cite": "No rational points of order 22 on geometrically split abelian surfaces, census proof of 21 October 2026. A residual tensor argument at 11 for non-CM geometric squares, torsion of quadratic Q-curves and of CM elliptic curves, and coprime torsion in an elliptic isogeny class over a quadratic field.",
       "url": "proofs/geometric-22-obstruction.html",
       "used_for": "impossibility of [22] and [2,22] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree"
+    },
+    "Geometric11MixedObstruction": {
+      "short": "rational 11-torsion on geometrically split surfaces (2026)",
+      "year": 2026,
+      "kind": "proof",
+      "cite": "Rational 11-torsion on geometrically split abelian surfaces, census proof of 19 November 2026.",
+      "url": "proofs/geometric-11-mixed-obstruction.html",
+      "used_for": "a geometrically split abelian surface over ℚ with rational 11-torsion has exact torsion [11] or [121], excluding [55] and [77] at every splitting degree"
     },
     "Geometric2639Obstruction": {
       "short": "geometric [26] and [39] exclusion proof (2026)",

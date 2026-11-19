@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-19 06:49 UTC",
+  "generated": "2026-11-19 06:59 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -49,8 +49,8 @@
     "split": {
       "exact": 70,
       "family": 0,
-      "open": 14,
-      "impossible": 14
+      "open": 13,
+      "impossible": 15
     }
   },
   "n_rejected": 0,
@@ -7182,6 +7182,17 @@
             "Mazur1977"
           ],
           "proof_url": "proofs/qsplit-prime-obstruction.html"
+        },
+        "gsplit": {
+          "reason": "A geometrically split abelian surface over ℚ with a rational point of order 11 has cyclic rational torsion of order 11 or 121.",
+          "sources": [
+            "Geometric11MixedObstruction",
+            "Geometric22Obstruction",
+            "Kamienny1992",
+            "KenkuMomose1988",
+            "QSimpleRankTwoObstruction"
+          ],
+          "proof_url": "proofs/geometric-11-mixed-obstruction.html"
         }
       },
       "n_curves": 1,
@@ -7193,9 +7204,16 @@
           "inherited_from": null
         },
         "split": {
-          "grade": "open",
-          "sources": [],
-          "note": "",
+          "grade": "impossible",
+          "sources": [
+            "Geometric11MixedObstruction",
+            "Geometric22Obstruction",
+            "Kamienny1992",
+            "KenkuMomose1988",
+            "QSimpleRankTwoObstruction"
+          ],
+          "note": "A geometrically split abelian surface over ℚ with a rational point of order 11 has cyclic rational torsion of order 11 or 121.",
+          "proof_url": "proofs/geometric-11-mixed-obstruction.html",
           "inherited_from": null
         }
       }

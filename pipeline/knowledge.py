@@ -186,6 +186,13 @@ SOURCES = {
         "url": "proofs/geometric-22-obstruction.html",
         "used_for": "impossibility of [22] and [2,22] for every geometrically split abelian surface over ℚ, independently of the geometric splitting degree",
     },
+    "Geometric11MixedObstruction": {
+        "short": "rational 11-torsion on geometrically split surfaces (2026)", "year": 2026,
+        "kind": "proof",
+        "cite": "Rational 11-torsion on geometrically split abelian surfaces, census proof of 19 November 2026.",
+        "url": "proofs/geometric-11-mixed-obstruction.html",
+        "used_for": "a geometrically split abelian surface over ℚ with rational 11-torsion has exact torsion [11] or [121], excluding [55] and [77] at every splitting degree",
+    },
     "Geometric2639Obstruction": {
         "short": "geometric [26] and [39] exclusion proof (2026)", "year": 2026,
         "kind": "proof",
@@ -608,6 +615,11 @@ def exclusions_record(key: str) -> dict:
         exclusions["gsplit"] = record("QSimple612Obstruction", GSPLIT_REASON["6.12"], GSPLIT_SOURCES["6.12"])
     elif exponent % 3 == 0 and order % 32 == 0:
         exclusions["gsplit"] = record("QSimple96Obstruction", GSPLIT_REASON["2.48"], GSPLIT_SOURCES["2.48"])
+    elif exponent % 11 == 0 and key not in {"11", "121"}:
+        exclusions["gsplit"] = record(
+            "Geometric11MixedObstruction",
+            "A geometrically split abelian surface over ℚ with a rational point of order 11 has cyclic rational torsion of order 11 or 121.",
+            ["Geometric22Obstruction", "Kamienny1992", "KenkuMomose1988", "QSimpleRankTwoObstruction"])
     return exclusions
 
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18 13:57 UTC",
+  "generated": "2026-11-19 06:49 UTC",
   "conventions": {
     "group": "J(Q)_tors as a list of invariant factors [n1, ..., nr], n1 | ... | nr; [] is the trivial group; key = factors joined by '.', '1' for the trivial group",
     "classes": {
@@ -29,8 +29,8 @@
     "order": "groups are listed as in the paper's tables: by number of invariant factors, then lexicographically"
   },
   "n_groups": 98,
-  "n_curves": 198,
-  "n_certified": 198,
+  "n_curves": 199,
+  "n_certified": 199,
   "n_verified": 0,
   "n_groups_by_class": {
     "simple": 81,
@@ -14489,6 +14489,57 @@
       "classes": {
         "simple": [
           {
+            "id": "2.2.20.b",
+            "class": "simple",
+            "class_certified": true,
+            "status": "certified",
+            "class_text": "geometrically simple",
+            "f": [
+              "25",
+              "105",
+              "-45",
+              "-236",
+              "105",
+              "45"
+            ],
+            "h": [
+              "0",
+              "1",
+              "1"
+            ],
+            "equation": {
+              "f": "45*x^5 + 105*x^4 - 236*x^3 - 45*x^2 + 105*x + 25",
+              "h": "x^2 + x",
+              "text": "y^2 + (x^2 + x)*y = 45*x^5 + 105*x^4 - 236*x^3 - 45*x^2 + 105*x + 25"
+            },
+            "conductor": "759150",
+            "conductor_sort": 759150,
+            "conductor_note": "",
+            "discriminant_digits": 22,
+            "lmfdb": {
+              "label": "",
+              "kind": "jump",
+              "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B25%2C105%2C-45%2C-236%2C105%2C45%5D%2C%5B0%2C1%2C1%5D%5D",
+              "snapshot_label": ""
+            },
+            "sources": [],
+            "rm": false,
+            "discovered_by": "A.V. Sutherland",
+            "credit_differs": false,
+            "year": 2026,
+            "historical": false,
+            "first_source": null,
+            "first_source_year": null,
+            "torsion_method": "generators",
+            "reference": "",
+            "new_group": false,
+            "new_for_class": false,
+            "certificate": "geometrically simple: Frobenius at p = 17 is strict (χ = T^4 + 2*T^3 - 6*T^2 + 34*T + 289)",
+            "verified": "2026-11-19 06:49:26 UTC",
+            "submitted": "2026-11-18",
+            "source_kind": "issue"
+          },
+          {
             "id": "2.2.20.a",
             "class": "simple",
             "class_certified": true,
@@ -14546,7 +14597,7 @@
         "undecided": []
       },
       "first_dated": {
-        "simple": null,
+        "simple": 0,
         "qsplit": null,
         "gsplit": null,
         "undecided": null
@@ -14579,7 +14630,7 @@
           "proof_url": "proofs/qsimple-2210-obstruction.html"
         }
       },
-      "n_curves": 1,
+      "n_curves": 2,
       "infinite": {
         "simple": {
           "grade": "open",

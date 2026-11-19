@@ -1,0 +1,41 @@
+{
+  "schema": "genus-2-torsion/submission/1",
+  "f": "45*x^5 + 105*x^4 - 236*x^3 - 45*x^2 + 105*x + 25",
+  "h": "x^2 + x",
+  "group": [
+    2,
+    2,
+    20
+  ],
+  "class": "simple",
+  "generators": [
+    [
+      "x - 1",
+      "0",
+      1
+    ],
+    [
+      "x^2 + 21/5*x + 2",
+      "0",
+      2
+    ],
+    [
+      "x^2 + x - 2",
+      "-28*x + 28",
+      2
+    ]
+  ],
+  "submitter": "Andrew V. Sutherland",
+  "affiliation": "MIT",
+  "github": "AndrewVSutherland",
+  "reference": "",
+  "discoverer": "A.V. Sutherland",
+  "year": 2026,
+  "notes": "The Jacobian has conductor 759150, much smaller than the current example known for this torsion subgroup.\n\nFound by GPT 6.2 Astra.",
+  "date": "2026-11-18",
+  "source": {
+    "kind": "issue",
+    "number": 13,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/13"
+  }
+}

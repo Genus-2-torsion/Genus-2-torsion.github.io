@@ -1,0 +1,242 @@
+{
+  "schema": "genus-2-torsion/curve/1",
+  "id": "2.2.20.b",
+  "group": [
+    2,
+    2,
+    20
+  ],
+  "group_key": "2.2.20",
+  "group_bracket": "[2,2,20]",
+  "order": 80,
+  "class": "simple",
+  "class_certified": true,
+  "class_text": "geometrically simple",
+  "status": "certified",
+  "new_group": false,
+  "new_for_class": false,
+  "accepted_because": "conductor 759150 < 16897247339672700 of the census curve 2.2.20.a",
+  "curve": {
+    "f": [
+      "25",
+      "105",
+      "-45",
+      "-236",
+      "105",
+      "45"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "f_str": "45*x^5 + 105*x^4 - 236*x^3 - 45*x^2 + 105*x + 25",
+    "h_str": "x^2 + x",
+    "g": [
+      "100",
+      "420",
+      "-179",
+      "-942",
+      "421",
+      "180"
+    ],
+    "g_str": "180*x^5 + 421*x^4 - 942*x^3 - 179*x^2 + 420*x + 100",
+    "g_scale": "1",
+    "discriminant": "1259575507685376000000",
+    "discriminant_digits": 22,
+    "igusa_clebsch": [
+      "9553928",
+      "4333532723524",
+      "10885437897398228168",
+      "40810246449006182400000000"
+    ],
+    "g2_invariants": [
+      "2429181054023447839549839187201/9963439074464400000000",
+      "858199780826838643469623/351444059064000000",
+      "1426211566081/520776900"
+    ],
+    "rational_weierstrass_points": 4,
+    "minimal_model": {
+      "f": [
+        "25",
+        "105",
+        "-45",
+        "-236",
+        "105",
+        "45"
+      ],
+      "h": [
+        "0",
+        "1",
+        "1"
+      ]
+    },
+    "minimal_discriminant": "9963439074464400000000",
+    "minimal_discriminant_factored": "2^10 * 3^16 * 5^8 * 7^4 * 241",
+    "conductor": "759150",
+    "conductor_factored": "2 * 3^2 * 5^2 * 7 * 241",
+    "conductor_note": "",
+    "conductor_source": "magma"
+  },
+  "lmfdb": {
+    "label": "",
+    "kind": "jump",
+    "url": "https://www.lmfdb.org/Genus2Curve/Q/?jump=%5B%5B25%2C105%2C-45%2C-236%2C105%2C45%5D%2C%5B0%2C1%2C1%5D%5D",
+    "snapshot_label": ""
+  },
+  "torsion": {
+    "invariants": [
+      2,
+      2,
+      20
+    ],
+    "order": 80,
+    "generators": [
+      {
+        "order": 2,
+        "mumford": [
+          "x - 1",
+          "0",
+          "1"
+        ]
+      },
+      {
+        "order": 2,
+        "mumford": [
+          "x^2 + 21/5*x + 2",
+          "0",
+          "2"
+        ]
+      },
+      {
+        "order": 20,
+        "mumford": [
+          "x^2 + x - 2",
+          "-28*x + 28",
+          "2"
+        ]
+      }
+    ],
+    "method": "generators",
+    "generators_note": "",
+    "generators_submitted": 3,
+    "point_count_gcd": 80,
+    "point_count_primes": [
+      11,
+      13,
+      17,
+      19,
+      23,
+      29,
+      31,
+      37,
+      41,
+      43,
+      47,
+      53,
+      59,
+      61,
+      67,
+      71,
+      73,
+      79,
+      83,
+      89,
+      97,
+      101,
+      103,
+      107,
+      109
+    ],
+    "claimed": [
+      2,
+      2,
+      20
+    ],
+    "claim_matches": true
+  },
+  "simplicity": {
+    "geometrically_simple": true,
+    "strict_prime": 17,
+    "chi": "T^4 + 2*T^3 - 6*T^2 + 34*T + 289",
+    "primes_tried_below": 500,
+    "admissible_primes": 3,
+    "reducible_chi": 2
+  },
+  "q_simple": {
+    "certified": true,
+    "prime": 17,
+    "chi": "T^4 + 2*T^3 - 6*T^2 + 34*T + 289"
+  },
+  "split": {
+    "geometrically_split": false,
+    "split_over_Q": false,
+    "certificate": null,
+    "isogenous_product": null,
+    "weil_restriction": null,
+    "cover_submitted": false,
+    "cover_accepted": false,
+    "cover_error": "",
+    "signature": {
+      "all_good_primes_fail_strictness": false,
+      "primes_checked": 42,
+      "reducible_chi": 22
+    }
+  },
+  "geometrically_isomorphic_to": [],
+  "discovery": {
+    "by": "A.V. Sutherland",
+    "year": 2026,
+    "historical": false
+  },
+  "reference": "",
+  "sources": [],
+  "rm": false,
+  "notes": "The Jacobian has conductor 759150, much smaller than the current example known for this torsion subgroup.\n\nFound by GPT 6.2 Astra.",
+  "submitter": {
+    "name": "Andrew V. Sutherland",
+    "github": "AndrewVSutherland",
+    "affiliation": "MIT"
+  },
+  "submitted": {
+    "f": [
+      "25",
+      "105",
+      "-45",
+      "-236",
+      "105",
+      "45"
+    ],
+    "h": [
+      "0",
+      "1",
+      "1"
+    ],
+    "claimed_group": [
+      2,
+      2,
+      20
+    ],
+    "claimed_class": "simple",
+    "cover": null,
+    "lmfdb_label_given": ""
+  },
+  "source": {
+    "kind": "issue",
+    "number": 13,
+    "url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/13"
+  },
+  "dates": {
+    "submitted": "2026-11-18",
+    "verified": "2026-11-19 06:49:26 UTC"
+  },
+  "verification": {
+    "host": "Mordell (Dept. of Mathematics, Univ. of Zagreb)",
+    "magma_version": "2.30-1",
+    "cputime_seconds": "0.440000",
+    "verify_lib_sha256": "ea7e783cb70f074211e1009d5aa6277f7c28d9b6eaac7647b9f0e373b9961c8b",
+    "log": "data/logs/2.2.20.b.log",
+    "conductor_log": "data/logs/2.2.20.b.conductor.log",
+    "conductor_cputime_seconds": 0.32
+  }
+}

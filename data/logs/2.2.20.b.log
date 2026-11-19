@@ -1,0 +1,8 @@
+[0.0100000 s] start
+[0.0100000 s] curve: y^2 + (x^2 + x) y = 45*x^5 + 105*x^4 - 236*x^3 - 45*x^2 + 105*x + 25; working model y^2 = 180*x^5 + 421*x^4 - 942*x^3 - 179*x^2 + 420*x + 100
+[0.0500000 s] #J(Q)_tors divides gcd #J(F_p) = 80 (p = [ 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109 ])
+[0.0800000 s] J(Q)_tors = [ 2, 2, 20 ]: the 3 submitted generators are independent torsion points generating a group of order 80 = gcd #J(F_p)
+[0.0800000 s] geometrically simple: strict prime 17, chi = T^4 + 2*T^3 - 6*T^2 + 34*T + 289
+[0.0800000 s] Q-simple: chi irreducible at p = 17
+[0.160000 s] class: simple
+[0.440000 s] VERIFY_DONE

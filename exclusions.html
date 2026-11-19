@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exclusions beyond the census — Torsion of genus 2 Jacobians over ℚ</title>
-  <meta name="description" content="Torsion exclusions beyond the genus-2 census: the rational 11-torsion theorem, the [3,15] obstruction and seven exclusions at orders 80, 160 and 192 for all geometrically split Jacobians, six order-256 groups for Jacobians split over Q, the 7-torsion/2-primary bounds, the (ℤ/3)²/2-primary bound, the 3-torsion/2-primary bound, the 5-torsion/2-rank bound, the 5-torsion/2-primary bound and the 45-torsion obstruction for geometrically split Jacobians simple over Q.">
+  <meta name="description" content="Torsion exclusions beyond the genus-2 census: the exact rational torsion primes of geometrically split genus-2 Jacobians, the 19-torsion and 11-torsion theorems, the [3,15] obstruction and seven exclusions at orders 80, 160 and 192 for all geometrically split Jacobians, six order-256 groups for Jacobians split over Q, the 7-torsion/2-primary bounds, the (ℤ/3)²/2-primary bound, the 3-torsion/2-primary bound, the 5-torsion/2-rank bound, the 5-torsion/2-primary bound and the 45-torsion obstruction for geometrically split Jacobians simple over Q.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/style.css?v=6">
 </head>
@@ -13,8 +13,27 @@
   <div class="page-nav"><a href="index.html">groups</a><span class="sep">›</span>exclusions beyond the census</div>
   <h2>Exclusions beyond the census</h2>
   <p class="src">19 November 2026</p>
-  <p>The census lists groups with recorded curves. This page records proved exclusions for groups
-    that have no census row. Each statement concerns the <strong>exact rational torsion group</strong>.</p>
+  <p>The census lists groups with recorded curves. This page collects restrictions on rational torsion
+    that also apply to groups beyond the census.</p>
+  <h3 id="geometric-torsion-primes">The rational torsion primes of geometrically split genus-2 Jacobians</h3>
+  <p>Let <i>J</i> be the Jacobian of a genus-2 curve over ℚ, isogenous over ℚ̄ to a product of elliptic curves.
+    The primes that occur as orders of points in <i>J</i>(ℚ), as <i>J</i> varies, are exactly
+    <strong>2, 3, 5, 7, 11 and 19</strong>. Every prime on the list occurs as the order of the entire rational
+    torsion group, on curves <a href="curve.html?id=2.c">2.c</a>, <a href="curve.html?id=3.b">3.b</a>,
+    <a href="curve.html?id=5.c">5.c</a>, <a href="curve.html?id=7.c">7.c</a>,
+    <a href="curve.html?id=11.b">11.b</a> and <a href="curve.html?id=19.b">19.b</a>, respectively.</p>
+  <p>The upper bound holds for every geometrically split abelian surface over ℚ. Every prime divisor of its
+    rational torsion order is at most 19. Together with the earlier exclusions at
+    <a href="proofs/qsimple-13-obstruction.html#theorem">13 for genus-2 Jacobians</a> and
+    <a href="proofs/geometric-17-obstruction.html#theorem">17 for abelian surfaces</a>, this gives the exact list above.</p>
+  <h3 id="geometric-19-torsion">A rational point of order 19 determines the full torsion group</h3>
+  <p>If a geometrically split abelian surface <i>A</i> over ℚ has a rational point of order 19,
+    then <strong><i>A</i>(ℚ)<sub>tors</sub> ≅ ℤ/19ℤ</strong>. Thus every genus-2 Jacobian over ℚ with a
+    rational point of order 38, 57, 95 or 361 is geometrically simple. Curve
+    <a href="curve.html?id=19.b">19.b</a> attains exact [19] in the geometrically split class.</p>
+  <p><a href="proofs/geometric-large-primes-19.html">Read the complete proof of both results and the prime list</a>
+    or download the <a href="data/knowledge/sources/geometric_large_primes_19.pdf">PDF</a> and
+    <a href="data/knowledge/sources/geometric_large_primes_19.tex">LaTeX source</a>.</p>
   <h3 id="geometric-11-torsion">Rational 11-torsion excludes orders 55 and 77 on geometrically split Jacobians</h3>
   <p>If a geometrically split abelian surface over ℚ has a rational point of order 11, its entire rational torsion group
     is cyclic of order 11 or 121. Thus for every prime ℓ ≠ 11, a genus-2 Jacobian over ℚ with a rational point of

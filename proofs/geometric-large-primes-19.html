@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rational torsion primes of geometrically split genus-2 Jacobians — Torsion of genus 2 Jacobians over ℚ</title>
+  <meta name="description" content="The rational torsion primes of geometrically split genus-2 Jacobians over ℚ are exactly 2, 3, 5, 7, 11 and 19. A rational point of order 19 forces exact cyclic torsion of order 19.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e2748'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23eef0f8' text-anchor='middle'%3EJ%3Ctspan font-size='10' dy='4'%3E2%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../assets/style.css?v=6">
+  <style>
+    main.proof { max-width: 1000px; }
+    .proof p { max-width: none; }
+    .proof .equation { overflow-x: auto; padding: 0.25rem 0; }
+    .proof .theorem { margin: 1.5rem 0; padding: 1rem 1.25rem; background: var(--accent-soft); border-left: 3px solid var(--accent); }
+    .proof .theorem p { color: var(--fg); }
+    .proof .theorem p:first-child { margin-top: 0; }
+    .proof .theorem p:last-child { margin-bottom: 0; }
+    .proof .downloads, .proof .contents { padding-left: 1.4rem; }
+    .proof .downloads li, .proof .contents li { margin: 0.25rem 0; }
+    .proof section { scroll-margin-top: 1rem; }
+    .proof h4 { scroll-margin-top: 1rem; }
+    .proof mjx-container { color: var(--fg); }
+    .proof mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+    @media print {
+      header.site, footer.site, .page-nav, .contents { display: none; }
+      main.proof { max-width: none; padding: 0; }
+      .proof .equation { overflow: visible; }
+      .proof a { color: inherit; }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+        macros: {
+          Q: '\\mathbb{Q}', Z: '\\mathbb{Z}', F: '\\mathbb{F}', sd: '\\mathbin{\\rtimes}',
+          End: '\\operatorname{End}', Gal: '\\operatorname{Gal}',
+          GL: '\\operatorname{GL}', PGL: '\\operatorname{PGL}',
+          Hom: '\\operatorname{Hom}', Res: '\\operatorname{Res}',
+          Norm: '\\operatorname{N}', Ad: '\\operatorname{Ad}',
+          tr: '\\operatorname{tr}', Tr: '\\operatorname{Tr}'
+        }
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body data-page="proof">
+<header class="site">
+  <div class="inner">
+    <h1><a href="../index.html">Torsion of genus 2 Jacobians over ℚ</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="../index.html">groups</a>
+      <a href="../submit.html">submit a curve</a>
+      <a href="../about.html">about &amp; sources</a>
+      <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io" target="_blank" rel="noopener">github</a>
+    </nav>
+  </div>
+</header>
+<main class="proof">
+  <div class="page-nav"><a href="../index.html">groups</a><span class="sep">›</span><a href="../exclusions.html#geometric-torsion-primes">exclusions beyond the census</a><span class="sep">›</span>rational torsion primes</div>
+  <h2>Rational torsion primes of geometrically split genus-2 Jacobians</h2>
+  <p class="src">19 November 2026</p>
+  <div class="theorem" id="theorem">
+    <p><strong>Theorem 1.</strong> Let \(A/\Q\) be an abelian surface isogenous over \(\overline{\Q}\) to a product of elliptic curves.
+      Every prime divisor of \(\#A(\Q)_{\mathrm{tors}}\) is at most \(19\).
+      If \(19\) divides this order, then \(A(\Q)_{\mathrm{tors}}\simeq\Z/19\Z\).</p>
+  </div>
+  <div class="theorem" id="prime-list">
+    <p><strong>Corollary 2.</strong> The primes occurring as orders of rational points on geometrically split genus-2 Jacobians over \(\Q\) are exactly \(2,3,5,7,11,19\).</p>
+  </div>
+  <p><a href="../data/knowledge/sources/geometric_large_primes_19.pdf">Download the proof (PDF)</a> ·
+    <a href="../data/knowledge/sources/geometric_large_primes_19.tex">LaTeX source</a></p>
+
+  <h3>Elliptic torsion over quartic and sextic fields</h3>
+  <p>Let \(S(d)\) denote the set of primes occurring as point orders on elliptic curves over number fields of degree \(d\).
+    The primes in \(S(4)\) are precisely those at most \(17\). The primes in \(S(6)\) are those at most \(19\), together with \(37\).
+    Every elliptic curve with a point of order \(37\) over a sextic field has \(j=-9317\).
+    <a href="https://arxiv.org/abs/1707.00364">Derickx–Kamienny–Stein–Stoll, Theorem 1.2 and Proposition 1.4</a>.</p>
+  <p>The only elliptic torsion group over a sextic field whose order is divisible by \(19\) is \(\Z/19\Z\).
+    We use this classification in the second part of Theorem 1.
+    <a href="https://arxiv.org/abs/2611.03933">Najman, Theorem 1.1</a>.</p>
+
+  <h3 id="reduction">Reduction to a real field of degree three or six</h3>
+  <div class="theorem">
+    <p><strong>Lemma 3.</strong> Suppose \(A\) is as in Theorem 1 and \(P\in A(\Q)\) has prime order \(p\ge19\).
+      Then \(A\) has everywhere potentially good reduction, or there is a totally real cyclic extension \(L/\Q\) of degree \(3\) or \(6\)
+      over which \(A_L\) is isogenous to the square of an elliptic curve \(E/L\).</p>
+  </div>
+  <p><strong>Proof.</strong> Suppose first that the two geometric elliptic factors are nonisogenous. Their images in
+    \(A_{\overline{\Q}}\) are its only elliptic subvarieties. Indeed, an elliptic subvariety is isogenous to one of
+    the two factors, and its map to the quotient by the image of that factor is zero. Galois therefore permutes
+    the two images, which are both defined over an extension of degree at most two. The point \(P\) either lies
+    on one of these elliptic subvarieties or has order \(p\) in its elliptic quotient. Extending the field to
+    degree four gives \(p\in S(4)\), a contradiction.</p>
+  <p>If \(A\) is geometrically the square up to isogeny of an elliptic curve with CM, it has everywhere potentially good
+    reduction. For a square without CM, put \(D=\End^0(A_{\overline{\Q}})=M_2(\Q)\), let \(L\) be the field of
+    definition of all geometric endomorphisms, and write \(\Gamma=\Gal(L/\Q)\). Its action on \(D\) embeds it in
+    \(\mathrm{PGL}_2(\Q)\). It is cyclic of order \(1,2,3,4,6\), or dihedral of order \(4,6,8,12\).
+    Over \(L\) the diagonal matrix units cut out elliptic subvarieties up to isogeny, and the off-diagonal units
+    give isogenies between them. Thus \(A_L\sim_L E^2\). In degrees \(1,2,4\) the same argument with
+    an elliptic subvariety and its quotient contradicts \(S(4)\).
+    <a href="geometric-31-obstruction.html#endomorphism-field">Classification of the endomorphism field, §2</a>.</p>
+  <p>Suppose \(\Gamma\) is dihedral of order \(2m\), where \(m=3,4,6\). Normalize a matrix \(R\)
+    representing a generating rotation to have trace one. Its eigenvalue ratio is a primitive \(m\)-th root
+    \(\xi\), so \(1/\det R=2+\xi+\xi^{-1}=1,2,3\), respectively. The characteristic polynomial of \(R\)
+    has discriminant \(-3,-1,-1/3\), respectively, and \(B=\Z_p[R]\) is quadratic étale for \(p\ge19\).
+    Reflections carry \(R\) to the trace-one representative of its projective inverse, \(1-R\). Thus \(\Gamma\) normalizes \(B\).</p>
+  <p>If \(B\) is unramified quadratic, \(R\) is a unit with nonscalar residue, so the unramified-order lemma applies.
+    If \(B\) splits, the reflections exchange its idempotents. The rotation acts on the off-diagonal line by \(\xi\),
+    whose reduction still has order \(m\) since \(p\nmid m\). The split-block lemma applies. In each case a rational
+    \(p\)-point forces \(\Q(\zeta_p)\subseteq L\). The dihedral group would then have a cyclic quotient of order \(p-1\),
+    whereas its abelianization has exponent at most two.
+    <a href="qsimple-13-obstruction.html#noncyclic">Lemmas 6 and 7 of the order-13 obstruction</a>.</p>
+  <p>The remaining possibilities for \(\Gamma\) are cyclic of order \(3\) or \(6\).
+    Complex conjugation acts on \(M_2(\mathbb R)\) either trivially or by conjugation by a matrix of negative determinant.
+    A generator of a finite cyclic subgroup of \(\mathrm{PGL}_2(\mathbb R)\) of order greater than two has nonreal
+    conjugate eigenvalues, hence positive determinant. Every element of \(\Gamma\) therefore has positive determinant
+    sign and complex conjugation acts trivially on the endomorphism field. Thus \(L\) is totally real. ∎
+    <a href="qsimple-rank-two-obstruction.html#complex-conjugation">Complex-conjugation lemma</a>.</p>
+
+  <h3 id="prime-bound">Proof of the prime bound</h3>
+  <p>If \(A\) has everywhere potentially good reduction, Clark’s list of possible rational torsion orders
+    contains no order divisible by a prime greater than \(19\). Its only multiple of \(19\) is \(19\) itself.
+    <a href="https://arxiv.org/abs/math/0407264">Clark, Theorem 5</a>,
+    <a href="https://doi.org/10.4153/CJM-2008-026-x">Clark–Xarles, Theorem 1.4</a>.</p>
+  <p>In the other case of Lemma 3 take a sextic field \(H\) containing \(L\), using \(H=L\) when
+    \([L:\Q]=6\). An elliptic subvariety of \(A_L\) or its elliptic quotient has an \(L\)-point of order \(p\),
+    hence \(p\in S(6)\). The only candidate above \(19\) is \(37\). For this prime the elliptic curve carrying
+    the point has integral \(j=-9317\), so has potentially good reduction at every finite place.
+    Since \(A\) is geometrically isogenous to its square, the same holds for \(A\). Clark’s theorem now excludes \(37\).</p>
+
+  <h3 id="torsion-at-19">Proof that a rational point of order 19 forces exact [19]</h3>
+  <p>Suppose \(19\mid\#A(\Q)_{\mathrm{tors}}\). Clark’s list settles the potentially good reduction case.
+    In the remaining case use \(L,E,H\) as above. For each prime \(q\) dividing the rational torsion order,
+    project a rational \(q\)-point to an elliptic quotient, or retain it in the elliptic kernel if its image is zero.
+    Both elliptic curves belong to the \(L\)-isogeny class of \(E\).</p>
+  <p>If \(q\ne19\), choose \(B,C\) in this class carrying \(L\)-points of orders \(19,q\), respectively.
+    Factor an \(L\)-isogeny \(f:B\to C\) through \(B'=B/(\ker f)[q^\infty]\).
+    The first isogeny preserves the order of the \(19\)-point. The second has degree prime to \(q\), so identifies
+    \(B'[q]\) with \(C[q]\) over \(L\). Hence \(B'(L)\), and thus \(B'(H)\), has a point of order \(19q\).
+    The sextic torsion classification excludes this.</p>
+  <p>To bound the exponent, put \(V=V_{19}(E)\). In \(V_{19}(A)=V\otimes W\) the multiplicity space
+    \(W=\Q_{19}^2\) has trivial \(G_L\)-action. Take complex conjugation \(c\in G_L\) at a real embedding of \(L\).
+    It has determinant \(-1\) on \(V\). Choose eigenvectors \(e_+,e_-\) of eigenvalues \(+1,-1\).
+    The projectors \((1\pm c)/2\) preserve \(T=T_{19}(A)\), giving
+    \[
+       T=(e_+\otimes\Lambda_+)\oplus(e_-\otimes\Lambda_-)
+    \]
+    for two full lattices in \(W\). By elementary divisors there is a basis \(w_1,w_2\) of \(W\) in which
+    both lattices are diagonal. Each space \(V_i=V\otimes\Q_{19} w_i\) is \(G_L\)-stable, and
+    \(T=(T\cap V_1)\oplus(T\cap V_2)\).</p>
+  <p>Identify \(V_i\) with \(V\). After scaling, \(T\cap V_i\) contains \(T_{19}(E)\), and its quotient by
+    \(T_{19}(E)\) is a finite \(G_L\)-stable subgroup of \(E[19^\infty]\). Quotienting \(E\) by this subgroup
+    realizes the lattice as the Tate module of an elliptic curve \(E_i/L\). Taking \(G_L\)-invariants in
+    \(V_{19}(A)/T\) gives \(A(L)[19^\infty]\simeq E_1(L)[19^\infty]\oplus E_2(L)[19^\infty]\).
+    Both summands have exponent at most \(19\) by the sextic classification over \(H\).
+    <a href="qsplit-necessary-conditions.html#thm-isotypic">Related odd-prime lattice argument, Theorem 5(a)</a>.</p>
+  <p>Finally \(A\) is simple over \(\Q\). Otherwise a rational elliptic subvariety or its quotient would have
+    a rational \(19\)-point, which Mazur’s theorem excludes. The rational \(p\)-rank bound for geometrically split
+    surfaces simple over \(\Q\) now gives \(\dim_{\F_{19}}A(\Q)[19]\le1\). The exponent bound and the exclusion
+    of all other primes give \(A(\Q)_{\mathrm{tors}}\simeq\Z/19\Z\). ∎
+    <a href="qsimple-rank-two-obstruction.html#theorem">Rational \(p\)-rank theorem</a>.</p>
+
+  <h3 id="examples">Proof of the exact prime list</h3>
+  <p>Of the primes at most \(19\), the
+    <a href="qsimple-13-obstruction.html#theorem">order-13 theorem for genus-2 Jacobians</a> and the
+    <a href="geometric-17-obstruction.html#theorem">order-17 theorem for abelian surfaces</a> exclude \(13\) and \(17\).
+    For each remaining prime the census supplies a geometrically split genus-2 Jacobian whose full rational
+    torsion group is cyclic of that prime order. The examples for \(2,3,5,7,11,19\) are, respectively,
+    <a href="../curve.html?id=2.c">2.c</a>, <a href="../curve.html?id=3.b">3.b</a>,
+    <a href="../curve.html?id=5.c">5.c</a>, <a href="../curve.html?id=7.c">7.c</a>,
+    <a href="../curve.html?id=11.b">11.b</a> and <a href="../curve.html?id=19.b">19.b</a>. ∎</p>
+  <p>In particular, a genus-2 Jacobian over \(\Q\) with a rational point of order \(37,38,41,43,57,95\) or \(361\)
+    is geometrically simple. More generally, this follows whenever its rational torsion has a prime divisor at least
+    \(23\), or properly contains a subgroup of order \(19\).</p>
+</main>
+<footer class="site">
+  <div class="links">
+    <a href="../index.html">groups</a><span class="sep">·</span>
+    <a href="../about.html">about &amp; sources</a><span class="sep">·</span>
+    <a href="https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/blob/main/proofs/geometric-large-primes-19.html">proof source on GitHub</a>
+  </div>
+</footer>
+</body>
+</html>

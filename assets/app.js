@@ -468,8 +468,9 @@
   async function renderDiscoveries() {
     const data = await load("discoveries");
     $("#discovery-counts").textContent = `The paper lists ${data.paper_groups} distinct groups across both tables. The census now has ${data.census_groups}.`;
+    const tables = { "New group": "#new-groups", "New in class": "#new-classes", "Smaller conductor": "#smaller-conductors" };
     for (const entry of data.discoveries) {
-      const body = $(entry.scope === "New group" ? "#new-groups" : "#new-classes");
+      const body = $(tables[entry.scope]);
       const date = el("time", { datetime: entry.date }, entry.date);
       const curve = el("a", { href: entry.curve_url }, entry.curve_id);
       const record = entry.source_url && el("a", { href: entry.source_url },
@@ -478,6 +479,7 @@
         el("td", null, date, entry.date_basis === "Verified" ? " (verified)" : null),
         el("th", { scope: "row" }, el("span", { class: "m" }, entry.group)),
         el("td", null, entry.jacobian_class),
+        entry.scope === "Smaller conductor" ? el("td", { class: "num" }, BigInt(entry.conductor).toLocaleString("en-US")) : null,
         el("td", null, entry.person || "Unrecorded"),
         el("td", null, entry.model || "Unrecorded"),
         el("td", null, curve, record ? [" · ", record] : null)));

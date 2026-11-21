@@ -143,6 +143,8 @@ to `data/knowledge/discovery_credits.json` under the curve ID, using the recorde
 The same file selects new constructions in a previously unrealised class of a group from the
 paper. Set `"class_first": true` for those entries and add `source_url` when there is a
 public record outside the usual GitHub submission issue. Leave missing model credits blank.
+Set `"smaller_conductor": true` to include a selected curve accepted for improving the
+smallest recorded conductor in its group and class.
 Dates come from the census submission record or, if absent, the verification date.
 
 ## Seed import

@@ -13,5 +13,6 @@
   "16.c": {"class_first": true, "person": "Filip Najman", "model": "GPT-6 Astra", "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/commit/19d63b7"},
   "2.12.c": {"class_first": true, "person": "Filip Najman", "model": "GPT-6 Astra", "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/commit/0102a4c"},
   "2.4.4.c": {"class_first": true, "person": "Filip Najman", "model": "Claude Fable 5.2", "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/commit/3329980"},
-  "2.6.6.b": {"class_first": true, "person": "Andrew V. Sutherland", "model": "GPT-6.2 Astra"}
+  "2.6.6.b": {"class_first": true, "person": "Andrew V. Sutherland", "model": "GPT-6.2 Astra"},
+  "2.2.20.b": {"smaller_conductor": true, "person": "Andrew V. Sutherland", "model": "GPT-6.2 Astra"}
 }

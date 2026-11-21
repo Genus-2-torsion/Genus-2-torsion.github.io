@@ -35,6 +35,8 @@ def build_discoveries(curves):
         elif (credit.get("class_first") and c["class_certified"] and c["new_for_class"]
               and tuple(c["group"]) in paper_groups):
             scope = "New in class"
+        elif credit.get("smaller_conductor") and c["accepted_because"].startswith("conductor "):
+            scope = "Smaller conductor"
         else:
             continue
         date = c["dates"].get("submitted")
@@ -54,6 +56,8 @@ def build_discoveries(curves):
             "curve_url": SITE + "curve.html?id=" + c["id"],
             "source_url": credit.get("source_url") or (c.get("source") or {}).get("url"),
         })
+        if scope == "Smaller conductor":
+            entries[-1]["conductor"] = c["curve"]["conductor"]
     entries.sort(key=lambda r: (r["date"], r["source_url"] or "", r["curve_id"]))
     return {"paper": PAPER, "paper_groups": len(paper_groups), "census_groups": len(recorded_groups),
             "new_groups": len(new_groups), "discoveries": entries}
@@ -62,7 +66,7 @@ def build_discoveries(curves):
 def discoveries_csv(timeline):
     output = io.StringIO(newline="")
     fields = ("date", "date_basis", "scope", "group", "jacobian_class", "person", "model",
-              "curve_id", "curve_url", "source_url")
+              "curve_id", "curve_url", "source_url", "conductor")
     writer = csv.DictWriter(output, fieldnames=fields, lineterminator="\n")
     writer.writeheader()
     writer.writerows(timeline["discoveries"])

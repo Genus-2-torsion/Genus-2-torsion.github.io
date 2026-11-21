@@ -183,6 +183,19 @@
       "curve_id": "55.a",
       "curve_url": "https://genus-2-torsion.github.io/curve.html?id=55.a",
       "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/12"
+    },
+    {
+      "date": "2026-11-18",
+      "date_basis": "Reported",
+      "scope": "Smaller conductor",
+      "group": "[2,2,20]",
+      "jacobian_class": "geometrically simple",
+      "person": "Andrew V. Sutherland",
+      "model": "GPT-6.2 Astra",
+      "curve_id": "2.2.20.b",
+      "curve_url": "https://genus-2-torsion.github.io/curve.html?id=2.2.20.b",
+      "source_url": "https://github.com/Genus-2-torsion/Genus-2-torsion.github.io/issues/13",
+      "conductor": "759150"
     }
   ]
 }
